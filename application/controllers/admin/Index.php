@@ -25,6 +25,12 @@ class Index extends MY_Controller {
         $crud->display_as('news_text','متن خبر');
         $crud->display_as('news_date','تاریخ خبر');
 
+        $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
+
+        //$crud->set_field_upload('news_title','assets/uploads/files');
+        $crud->field_type('news_title', 'enum', $news_id);
+
+
         $crud->required_fields('news_title');
 
         $crud->unset_clone();
