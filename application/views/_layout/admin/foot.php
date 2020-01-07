@@ -11,9 +11,12 @@ immediately after the control sidebar -->
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script src="<?=base_url('')?>bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="<?= base_url('') ?>dist/js/jquery-3.4.1.min.js"></script>
+
+<script src="<?= base_url('') ?>dist/js/persian-date.js"></script>
+<script src="<?= base_url('') ?>dist/js/persian-datepicker.js"></script>
 <!-- Bootstrap 3.3.7 -->
-<!--<script src="--><?//=base_url('')?><!--bower_components/bootstrap/dist/js/bootstrap.min.js"></script>-->
+<!-- <script src="<?=base_url('')?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
 <!-- DataTables -->
 <script src="<?=base_url('')?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
 <script src="<?=base_url('')?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
@@ -24,7 +27,31 @@ immediately after the control sidebar -->
 <!-- AdminLTE App -->
 <script src="<?= base_url('') ?>dist/js/adminlte.min.js"></script>
 <script src="<?= base_url('') ?>assets/js/raphael-min.js"></script>
-<script src="<?= base_url('') ?>assets/js/morris.min.js"></script>
+
+<!-- Select2 -->
+<script src="<?= base_url('') ?>bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.js"></script>
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="<?= base_url('') ?>bower_components/moment/min/moment.min.js"></script>
+<script src="<?= base_url('') ?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="<?= base_url('') ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<!-- iCheck 1.0.1 -->
+<script src="<?= base_url('') ?>plugins/iCheck/icheck.min.js"></script>
+<!-- babakhani datepicker -->
+
+
+
+
+
+
+
+
+
 
 
 <!-- Script -->
@@ -40,16 +67,12 @@ immediately after the control sidebar -->
 </script>
 
 <script>
-	
-	Morris.Donut({
-		element: 'graph',
-		data: [
-			{label: "Friends", value: 30},
-			{label: "Allies", value: 15},
-			{label: "Enemies", value: 45},
-			{label: "Neutral", value: 10}
-		]
-	});
+(function($) {
+     /* some code that uses $ */ 
+     $(".datepicker-input").pDatepicker();
+
+    })(jQuery)
+
 </script>
 
 <?php if (isset($home_page) && $home_page !== TRUE):?>

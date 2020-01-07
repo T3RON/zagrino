@@ -37,10 +37,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 
-
+          <link type="text/css" rel="stylesheet" href="<?=base_url('')?>dist/css/persian-datepicker.css" />
     <!-- Include multi.js -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>dist/multi.min.css" />
-
     <?php if (isset($home_page) && $home_page !== TRUE):?>
         <?php
     foreach($css_files as $file): ?>

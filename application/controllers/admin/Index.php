@@ -17,26 +17,26 @@ class Index extends MY_Controller {
 
         $crud = new grocery_CRUD();
 
-        $crud->set_table('news');
-        $crud->set_subject('اخبار باشگاه');
+        $crud->set_table('zgr_users');
+        $crud->set_subject('مديران');
 
-        $crud->columns('news_date','news_text','news_title');
-        $crud->display_as('news_title','عنوان خبر');
-        $crud->display_as('news_text','متن خبر');
-        $crud->display_as('news_date','تاریخ خبر');
+        $crud->columns('company','email','username');
+        $crud->display_as('username','نام كاربري');
+        $crud->display_as('email','ايميل');
+        $crud->display_as('company','كمپاني');
 
         $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
 
         //$crud->set_field_upload('news_title','assets/uploads/files');
-        $crud->field_type('news_title', 'enum', $news_id);
+        //$crud->field_type('username','date');
 
 
-        $crud->required_fields('news_title');
+        $crud->required_fields('username');
 
         $crud->unset_clone();
         //$crud->unset_texteditor('news_title','news_date');
-        $crud->unset_texteditor('news_title','full_text');
-        $crud->unset_texteditor('news_date','full_text');
+        $crud->unset_texteditor('username','full_text');
+        $crud->unset_texteditor('username','full_text');
 
 
         $output = $crud->render();

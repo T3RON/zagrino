@@ -170,7 +170,7 @@
                                     </td>
                                     <?php foreach($columns as $column){?>
                                         <td>
-                                            <input type="text" class="form-control searchable-input floatL" placeholder="Search <?php echo $column->display_as; ?>" name="<?php echo $column->field_name; ?>" />
+                                            <input type="text" class="form-control searchable-input floatL" placeholder="جستجو  <?php echo $column->display_as; ?>" name="<?php echo $column->field_name; ?>" />
                                         </td>
                                     <?php }?>
         						</tr>

@@ -191,7 +191,7 @@
             }
 
             $(this).addClass('value-not-empty');
-            $(this).after('<i class="fa fa-times clear-search"></i>');
+            $(this).after('<i style="float:left;" class="fa fa-times clear-search"></i>');
 
             datagrid_object.gcrud_container.find('.clear-search').click(function () {
                 $(this).closest('td').find('.searchable-input').val('').trigger('keyup');
@@ -502,12 +502,12 @@
             if ($(this).hasClass('ordering-asc')) {
                 $(this).closest('.grocery-crud-table').find('th').removeClass('ordering-desc').removeClass('ordering-asc');
 
-                $(this).html("<div>" + column_title + "</div><i class='fa fa-chevron-down'></i>");
+                $(this).html("<div>" + column_title + "</div><i  style='float:left;' class='fa fa-chevron-down'></i>");
                 $(this).addClass('ordering-desc').removeClass('ordering-asc');
             } else {
                 $(this).closest('.grocery-crud-table').find('th').removeClass('ordering-desc').removeClass('ordering-asc');
 
-                $(this).html("<div>" + column_title + "</div><i class='fa fa-chevron-up'></i>");
+                $(this).html("<div>" + column_title + "</div><i style='float:left;' class='fa fa-chevron-up'></i>");
                 $(this).addClass('ordering-asc').removeClass('ordering-desc');
             }
 

@@ -2486,7 +2486,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 		}
 
 		$input = "<input id='field-{$field_info->name}' name='{$field_info->name}' type='text' value='$date' maxlength='10' class='datepicker-input form-control' />
-		<a class='datepicker-input-clear' tabindex='-1'>".$this->l('form_button_clear')."</a> (".$this->ui_date_format.")";
+		<a class='datepicker-input-clear' style='display: none;' tabindex='-1'>".$this->l('form_button_clear')."</a>";
 		return $input;
 	}
 

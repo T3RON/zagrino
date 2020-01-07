@@ -67,7 +67,7 @@
                                     ?>
                                     <?php if (!$unset_read) { ?>
                                         <li>
-                                            <a class="delete-row" href="<?php echo $row->read_url?>">
+                                            <a href="<?php echo $row->read_url?>">
                                             <span style="float: right;"><?php echo $this->l('list_view')?></span>
                                             <i class="fa fa-eye"></i> 
                                             

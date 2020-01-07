@@ -1,7 +1,8 @@
 .gc-container .clear-search {
-  position: absolute;
-  margin-left: -18px;
-  margin-top: 10px;
+  margin-left: 8px;
+  left: 0px;
+  top: 0px;
+  margin-top: -25px;
   cursor: pointer;
 }
 .gc-container .clear-all-search {
@@ -18,10 +19,10 @@
   border-style: dashed;
 }
 .gc-container .column-with-ordering > div {
-  float: left;
+  float: right;
 }
 .gc-container .column-with-ordering > i {
-  float: right;
+  float: left;
 }
 .gc-container .column-with-ordering {
   cursor: pointer;

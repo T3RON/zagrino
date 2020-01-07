@@ -1,10 +1,12 @@
 $(function(){
-	$('.datepicker-input').datepicker({
-			dateFormat: js_date_format,
-			showButtonPanel: true,
-			changeMonth: true,
-			changeYear: true
-	});
+	// $('.datepicker-input').datepicker({
+	// 		dateFormat: js_date_format,
+	// 		showButtonPanel: true,
+	// 		changeMonth: true,
+	// 		changeYear: true
+	// });
+
+	
 	
 	$('.datepicker-input-clear').button();
 	

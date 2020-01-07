@@ -60,8 +60,7 @@ if ($this->config->environment == 'production') {
                         <!-- End of hidden inputs -->
                     <?php } ?>
                     <?php if ($is_ajax) { ?><input type="hidden" name="is_ajax" value="true" /><?php }?>
-                    <div id='report-error' class='report-div error'></div>
-                    <div id='report-success' class='report-div success'></div>
+                    
 
                     <div class="form-group">
                         <div class="col-sm-7">
