@@ -9,15 +9,17 @@
  * Core: General Layout Style
  * -------------------------
  */
+
 .table-section {
   background: #fff !important;
   direction: ltr !important;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
 }
 .readonly_label {
   text-align: right !important;
 }
 .control-label {
-  text-align: left !important;
+  text-align: right !important;
   direction: rtl !important;
 }
 .form-container {

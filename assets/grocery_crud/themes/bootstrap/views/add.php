@@ -41,12 +41,12 @@
                         <?php foreach($fields as $field) { ?>
                                 <div class="form-group <?php echo $field->field_name; ?>_form_group">
                                 <div class="col-md-12">
-                                                <div class="form-group row">
-                                                <div class="col-md-11">
+                                                <div class="form-group row ">
+                                                <div class="col-md-10">
                                         <?php echo $input_fields[$field->field_name]->input?>
                                         <?php echo ($input_fields[$field->field_name]->required) ? "<span class='required'>پر كردن  ".$input_fields[$field->field_name]->display_as." الزامي مي باشد</span> " : ""; ?>
                                     </div>
-                                    <label style="margin-top: 8px;" class="control-label text-left col-md-1">
+                                    <label style="margin-top: 0px;" class="control-label text-left col-md-2 padding-0">
                                         <?php echo $input_fields[$field->field_name]->display_as; ?>
                                     </label>
                                     

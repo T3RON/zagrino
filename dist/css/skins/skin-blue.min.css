@@ -63,12 +63,14 @@
 .skin-blue .content-header {
     background: #333;
     color: #fff;
+    box-shadow: 1px 0 5px #f39c12;
 }
 
 .skin-blue .wrapper,
 .skin-blue .main-sidebar,
 .skin-blue .left-side {
     background-color: #222d32;
+    box-shadow: 1px 0 12px #000000;
 }
 
 .skin-blue .user-panel>.info,

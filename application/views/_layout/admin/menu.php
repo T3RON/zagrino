@@ -12,204 +12,175 @@
                     <i style="color: #55bcf8;" class="fa fa-dashboard"></i><span style="color: #55bcf8;">داشبــــرد سامانه</span>
                 </a>
             </li>
-            <li class="treeview menu-open">
-                <a href="#">
-                    <i class="fa fa-edit"></i><span>باشگاه ستارگان</span>
-                    <span class="pull-left-container"><i class="fa fa-angle-right pull-left"></i></span>
+            <li class="treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>بانك مشاغل</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> داشبرد اول</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> داشبرد دوم</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>لایه های صفحه</span>
+            <span class="pull-left-container">
+              <span class="label label-primary pull-left">4</span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> نوار بالا</a></li>
+            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> باکس ها</a></li>
+            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> فیکس شده</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> سایدبار</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-th"></i> <span>ویجت ها</span>
+            <span class="pull-left-container">
+              <small class="label pull-left bg-green">جدید</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>نمودارها</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>نمودار ChartJS</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>نمودار Morris</a></li>
+            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>نمودار Flot</a></li>
+            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>نمودار Inline charts</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>اشیای گرافیکی</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> عمومی</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> آیکون</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> دکمه</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> اسلایدر</a></li>
+            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> تایم لاین</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> مدال</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>فرم ها</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> اجزای عمومی</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> پیشرفته</a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> ویرایشگر</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>جداول</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> جدول ساده</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> جدول داده</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/calendar.html">
+            <i class="fa fa-calendar"></i> <span>تقویم</span>
+            <span class="pull-left-container">
+              <small class="label pull-left bg-red">۳</small>
+              <small class="label pull-left bg-blue">۱۷</small>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/mailbox/mailbox.html">
+            <i class="fa fa-envelope"></i> <span>ایمیل ها</span>
+            <span class="pull-left-container">
+              <small class="label pull-left bg-yellow">۱۲</small>
+              <small class="label pull-left bg-green">۱۶</small>
+              <small class="label pull-left bg-red">۵</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>مثال ها</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> سفارش</a></li>
+            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> پروفایل</a></li>
+            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> صفحه ورود</a></li>
+            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> ثبت نام</a></li>
+            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> قفل صفحه</a></li>
+            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> ارور ۴۰۴</a></li>
+            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> ارور ۵۰۰</a></li>
+            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> صفحه خالی</a></li>
+            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> صفحه سریع</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+        <a href="#">
+          <i class="fa fa-share"></i> <span>چندسطحی</span>
+          <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+        </a>
+        <ul class="treeview-menu">
+          <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> سطح اول
+              <span class="pull-left-container">
+                  <i class="fa fa-angle-right pull-left"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#"><i class="fa fa-circle-o"></i> سطح دوم</a></li>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> سطح دوم
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
                 </a>
-                <ul class="treeview-menu" style="display: block;">
-                    <li><a href="<?php echo base_url('People')?>">
-                            <i class="fa fa-circle-o"></i>اعضا باشگاه
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT people_id FROM people ");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-                        </a></li>
-
-
-
-
-
-
-
-
-
-                    <li><a href="<?php echo base_url('Shobe')?>"><i class="fa fa-circle-o"></i>شعبه
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'tablobargh'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Sans')?>"><i class="fa fa-circle-o"></i>سانس
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'telephone'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a> </li>
-                    <li><a href="<?php echo base_url('Jalase')?>"><i class="fa fa-circle-o"></i>جلسات
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'jackbarghi'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Introduction')?>"><i class="fa fa-circle-o"></i>معرفی باشگاه
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'security'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Rules')?>"><i class="fa fa-circle-o"></i>قوانین باشگاه
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'camera'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('News')?>"><i class="fa fa-circle-o"></i>اخبار باشگاه
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'wiring'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Good_to_know')?>"><i class="fa fa-circle-o"></i>خوب است بدانید
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'socket'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                            --><?php //} ?>
-            </span>
-                        </a></li>
-
-                    <li><a href="<?php echo base_url('Article')?>"><i class="fa fa-circle-o"></i>مقالات
-<!--                            --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'socket'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--                --><?php //} ?>
-            </span>
-                        </a></li>
-					<li><a href="<?php echo base_url('Jalase_images')?>"><i class="fa fa-circle-o"></i>تصاوير جلسات
-<!--
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Contact')?>"><i class="fa fa-circle-o"></i>ارتباط با ما
-                           --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'cooler'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--     --><?php //} ?>
-            </span>
-                        </a>
-<!--
-            </span>
-                        </a></li>
-                    <li><a href="<?php echo base_url('Contact')?>"><i class="fa fa-circle-o"></i>ارتباط با ما
-                           --><?php
-//                            $count_request = $this->db->query("SELECT state_id FROM tbl_service WHERE state_id = 2 and service_tag = 'cooler'");
-//                            if ($count_request->num_rows() != 0) { ?>
-<!---->
-<!--                                <span class="pull-left-container">-->
-<!--                        <small class="label pull-left bg-red">--><?php //echo $count_request->num_rows(); ?><!--</small>-->
-<!--                    </span>-->
-<!---->
-<!--     --><?php //} ?>
-            </span>
-                        </a></li>
-					<li><a href="<?php echo base_url('Survey')?>"><i class="fa fa-circle-o"></i>نظرسنجي
-
-            </span>
-                        </a></li>
-					<li>
-						<a href="<?php echo base_url('Hazine')?>"><i class="fa fa-circle-o"></i>هزينه</span>
-
-                        </a></li>
-
-					<li><a href="<?php echo base_url('Rate')?>"><i class="fa fa-circle-o"></i>امتياز
-
-            </span>
-                        </a></li>
-					<li><a href="<?php echo base_url('Angizeshi')?>"><i class="fa fa-circle-o"></i>انگيزشي
-
-            </span>
-                        </a></li>
-
+                <ul class="treeview-menu">
+                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
                 </ul>
-            </li>
-
-
-
-
-            <li><a href="<?php echo base_url('Morabi')?>">
-                    <i class="fa fa-users"></i> <span>مربیان</span></a></li>
-
-            <li>
-			<li><a href="<?php echo base_url('Contact_us')?>">
-                    <i class="fa fa-users"></i> <span>راه های ارتباطی</span></a></li>
-
-            <li>
-                <a href="<?php echo base_url('Main_slider')?>">
-                    <i class="fa fa-table"></i> <span>اسلایدر برنامه</span>
-                </a>
-            </li>
-
-
-
-            <li class="header">دیگر قسمت ها</li>
-            <li><a href="<?php echo base_url('Settings')?>"><i class="fa fa-circle-o text-green"></i> <span>تنظیمات</span></a></li>
-            <li><a href="<?php echo base_url('Auth/logout')?>"><i class="fa fa-circle-o text-yellow"></i> <span>خروج</span></a></li>
+              </li>
+            </ul>
+          </li>
+          <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>
         </ul>
+      </li>
+        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>مستندات</span></a></li>
+        <li class="header">برچسب ها</li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>مهم</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>هشدار</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>اطلاعات</span></a></li>
+      </ul>
     </section>
     <!-- /.sidebar -->
 </aside>
