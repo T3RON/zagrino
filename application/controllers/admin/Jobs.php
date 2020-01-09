@@ -61,11 +61,13 @@ class Jobs extends MY_Controller {
         
         $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
 
+        $this->load->library('gc_dependent_select');
+
         //$crud->set_field_upload('news_title','assets/uploads/files');
         //$crud->field_type('username','date');
 
 
-        $crud->required_fields('username');
+        //$crud->required_fields('username');
 
         $crud->unset_clone();
         $crud->unset_texteditor(
@@ -75,12 +77,41 @@ class Jobs extends MY_Controller {
             'jobs_update_date'
         );
 
+        $fields = array(
 
-        $output = $crud->render();
+            // first field:
+            'ostan_id' => array( // first dropdown name
+            'table_name' => 'ostan', // table of country
+            'title' => 'ostan_title', // country title
+            'relate' => null // the first dropdown hasn't a relation
+            ),
+            // second field
+            'city_id' => array ( // second dropdown name
+            'table_name' => 'city', // table of state
+            'title' => 'city_title', // state title
+            'id_field' => 'city_id', // table of state: primary key
+            'relate' => 'ostan_id', // table of state:
+            'data-placeholder' => 'انتخاب شهر' //dropdown's data-placeholder:
+            )
+                );
 
+                $config = array(
+                    'main_table' => 'zgr_jobs',
+                    'main_table_primary' => 'jobs_id',
+                    "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
+                    'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
+                    'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
+                    );
+                    $categories = new gc_dependent_select($crud, $fields, $config);
+                   
+                    $js = $categories->get_js();
+                    
+                    $output = $crud->render();
+                    $output->output.= $js;
         $this->out_view($output);
     }
     function out_view($output = null) {
+        
         $output->title = "بانك مشاغل";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
         $this->load->view('admin/index',$output);

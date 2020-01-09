@@ -11,7 +11,6 @@ immediately after the control sidebar -->
 <!-- ./wrapper -->
 
 <!-- jQuery 3 -->
-<script type="text/javascript" src="<?= base_url('') ?>dist/js/jquery-3.4.1.min.js"></script>
 
 <script src="<?= base_url('') ?>dist/js/persian-date.js"></script>
 <script src="<?= base_url('') ?>dist/js/persian-datepicker.js"></script>
@@ -46,16 +45,9 @@ immediately after the control sidebar -->
 
 
 
-
-
-
-
-
-
-
-
 <!-- Script -->
 <script>
+console.log(arguments);
     function copy_data(containerid) {
         var range = document.createRange();
         range.selectNode(containerid); //changed here
@@ -75,12 +67,7 @@ immediately after the control sidebar -->
 
 </script>
 
-<?php if (isset($home_page) && $home_page !== TRUE):?>
 
-    <?php foreach($js_files as $file): ?>
-        <script src="<?php echo $file; ?>"></script>
-    <?php endforeach; ?>
-<?php endif;?>
 
 
 
