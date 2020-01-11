@@ -46,7 +46,7 @@ immediately after the control sidebar -->
 
 
 <!-- Script -->
-<script>
+<!-- <script>
 console.log(arguments);
     function copy_data(containerid) {
         var range = document.createRange();
@@ -56,12 +56,15 @@ console.log(arguments);
         document.execCommand("copy");
         window.getSelection().removeAllRanges();
     }
-</script>
+</script> -->
 
 <script>
 (function($) {
      /* some code that uses $ */ 
-     $(".datepicker-input").pDatepicker();
+    //  $("#field-jobs_register_date").pDatepicker();
+    //  $('.datepicker-input').persianDatepicker({
+    //     altField: '.datepicker-input'
+    // });
 
     })(jQuery)
 

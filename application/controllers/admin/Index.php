@@ -25,7 +25,7 @@ class Index extends MY_Controller {
         $crud->display_as('email','ايميل');
         $crud->display_as('company','كمپاني');
 
-        $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
+        //$crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
 
         //$crud->set_field_upload('news_title','assets/uploads/files');
         //$crud->field_type('username','date');

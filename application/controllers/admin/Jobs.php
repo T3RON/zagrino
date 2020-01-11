@@ -54,16 +54,26 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_register_date','تاريخ ثبت شغل');
         $crud->display_as('jobs_update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
+        $crud->display_as('jobs_logo','لوگو');
+        $crud->display_as('jobs_shoar','شعار');
+        $crud->display_as('category_id','گروه بندي');
+        $crud->display_as('jobs_price','قيمت');
 
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
+        $crud->set_relation('category_id','category','category_title');
         
         $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
 
         $this->load->library('gc_dependent_select');
 
-        //$crud->set_field_upload('news_title','assets/uploads/files');
+        $crud->unset_add_fields('jobs_id');
+        $crud->unset_edit_fields('jobs_id');
+        $crud->field_type('jobs_register_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->field_type('jobs_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+
+        $crud->set_field_upload('jobs_logo','assets/uploads/files');
         //$crud->field_type('username','date');
 
 
@@ -74,7 +84,7 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_map_latitude','jobs_map_longitude','jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date'
+            'jobs_update_date','jobs_shoar','jobs_price'
         );
 
         $fields = array(
@@ -98,9 +108,9 @@ class Jobs extends MY_Controller {
                 $config = array(
                     'main_table' => 'zgr_jobs',
                     'main_table_primary' => 'jobs_id',
-                    "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
-                    'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
-                    'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
+                    "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
+                    //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
+                    //'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
                     );
                     $categories = new gc_dependent_select($crud, $fields, $config);
                    
