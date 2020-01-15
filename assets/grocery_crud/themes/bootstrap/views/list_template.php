@@ -235,7 +235,7 @@
                                                     <ul class="dropdown-menu dropdown-menu-right">
                                                         <li>
                                                             <a href="javascript:void(0)" class="clear-filtering">
-                                                                <i class="fa fa-eraser"></i> Clear filtering
+                                                                <i class="fa fa-eraser"></i> پاك كردن فيلتر ها
                                                             </a>
                                                         </li>
                                                     </ul>

@@ -18,7 +18,7 @@ class Jobs extends MY_Controller {
         $crud = new grocery_CRUD();
 
         $crud->set_table('zgr_jobs');
-        $crud->set_subject('مديران');
+        $crud->set_subject('شغل');
 
         $crud->columns('jobs_register_date','jobs_title','account_id');
         $crud->display_as('jobs_id','شناسه');
@@ -64,7 +64,7 @@ class Jobs extends MY_Controller {
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('category_id','category','category_title');
         
-        $crud->add_action('افزودن روز', '', 'Jalase_day/index/add', 'fa-plus');
+        $crud->add_action('افزودن تصوير', '', 'Jobs_images/index', 'fa-photo');
 
         $this->load->library('gc_dependent_select');
 
@@ -123,6 +123,7 @@ class Jobs extends MY_Controller {
     function out_view($output = null) {
         
         $output->title = "بانك مشاغل";
+        $output->des = "مديريت و بررسي مشاغل موجود";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
         $this->load->view('admin/index',$output);
 

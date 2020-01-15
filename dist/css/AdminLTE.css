@@ -1756,6 +1756,7 @@ a:focus {
 }
 .box-header.with-border {
   border-bottom: 1px solid #f4f4f4;
+  text-align: right;
 }
 .collapsed-box .box-header.with-border {
   border-bottom: none;
@@ -2622,6 +2623,7 @@ a:focus {
   list-style: none;
   margin: 0;
   padding: 0;
+  text-align: right;
 }
 .products-list > .item {
   border-radius: 3px;
@@ -4405,6 +4407,7 @@ table.text-center th {
   padding: 0;
   font-weight: 600;
   font-size: 16px;
+  text-align: center;
 }
 .description-block > .description-text {
   text-transform: uppercase;

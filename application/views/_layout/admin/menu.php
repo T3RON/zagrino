@@ -20,81 +20,93 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> داشبرد اول</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i> داشبرد دوم</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-files-o"></i>
-            <span>لایه های صفحه</span>
-            <span class="pull-left-container">
-              <span class="label label-primary pull-left">4</span>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> نوار بالا</a></li>
-            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> باکس ها</a></li>
-            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> فیکس شده</a></li>
-            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> سایدبار</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/widgets.html">
-            <i class="fa fa-th"></i> <span>ویجت ها</span>
-            <span class="pull-left-container">
-              <small class="label pull-left bg-green">جدید</small>
-            </span>
-          </a>
-        </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-pie-chart"></i>
-            <span>نمودارها</span>
+            <span>تخفيفات</span>
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>نمودار ChartJS</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>نمودار Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>نمودار Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>نمودار Inline charts</a></li>
+            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i>ليست تخفيفات</a></li>
+            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i>تخفيفات ويژه</a></li>
+            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> تخفيفات معمولي</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i>كد هاي فروش رفته</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i>كد هاي استفاده شده</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-users"></i> <span>كاربران</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>ليست كاربران</a></li>
+            <li class="active"><a href="index.html">
+            <i class="fa fa-circle-o"></i>كاربران ويژه
+            <span class="label label-primary pull-left">4</span>
+            </a>
+              
+            </li>
+            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>كاربران معمولي</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>كاربران معلق</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>نيازمندي ها</span>
+            <span class="pull-left-container">
+              <i class="fa fa-angle-right pull-left"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>ليست نيازمندي</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
+            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
+            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>معلق</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
-            <span>اشیای گرافیکی</span>
+            <span>رويداد ها</span>
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> عمومی</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> آیکون</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> دکمه</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> اسلایدر</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> تایم لاین</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> مدال</a></li>
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> معلق</a></li>
+        
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>فرم ها</span>
+            <i class="fa fa-city"></i> <span>گردشگري</span>
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> اجزای عمومی</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> پیشرفته</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> ویرایشگر</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i>جاذبه ها</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>اقامتگاه ها</a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> تور ها</a></li>
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-table"></i> <span>جداول</span>
+            <i class="fa fa-table"></i> <span>بازارچه</span>
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
@@ -104,14 +116,17 @@
             <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> جدول داده</a></li>
           </ul>
         </li>
-        <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>تقویم</span>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>مديريت مالي</span>
             <span class="pull-left-container">
-              <small class="label pull-left bg-red">۳</small>
-              <small class="label pull-left bg-blue">۱۷</small>
+              <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i>درآمد سايت</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i>تعداد كد هاي فروخته شده</a></li>
+          </ul>
         </li>
         <li>
           <a href="pages/mailbox/mailbox.html">
@@ -184,3 +199,18 @@
     </section>
     <!-- /.sidebar -->
 </aside>
+
+
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h1>
+            <?= $title; ?>
+            <small><?= $des; ?></small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="<?= base_url('admin/Dashbord'); ?>"><i class="fa fa-dashboard"></i> خانه</a></li>
+            <li class="active"><?= $title; ?></li>
+        </ol>
+    </section>

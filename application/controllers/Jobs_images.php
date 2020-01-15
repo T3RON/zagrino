@@ -12,6 +12,7 @@ class Jobs_images extends MY_Controller {
         parent::__construct();
         $this->load->library('image_CRUD');
         $this->load->helper('url'); 
+        $this->load->library('session');
     }
 
     function index()
@@ -46,17 +47,16 @@ class Jobs_images extends MY_Controller {
 
 
 
-            $image_crud = new image_CRUD();
- 
-            $image_crud->set_table('zgr_jobs_images');
-         
-            //If your table have by default the "id" field name as a primary key this line is not required
-            $image_crud->set_primary_key_field('jobs_image_id');
-         
-            $image_crud->set_url_field('jobs_image_url');
-            $image_crud->set_image_path('assets/uploads');
 
-            
+        $image_crud = new image_CRUD();
+	
+		$image_crud->set_primary_key_field('jobs_image_id');
+		$image_crud->set_url_field('jobs_image_url');
+		$image_crud->set_table('zgr_jobs_images')
+		->set_relation_field('jobs_id')
+		->set_ordering_field('jobs_image_id')
+		->set_image_path('assets/uploads');
+
 
 			
 		$output = $image_crud->render();

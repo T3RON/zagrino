@@ -41,6 +41,11 @@ immediately after the control sidebar -->
 <!-- bootstrap time picker -->
 <!-- iCheck 1.0.1 -->
 <script src="<?= base_url('') ?>plugins/iCheck/icheck.min.js"></script>
+<script src="<?= base_url('') ?>bower_components/Chart.js/Chart.js"></script>
+<script src="<?= base_url('') ?>dist/js/adminlte.min.js"></script>
+<!-- jvectormap  -->
+<script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- babakhani datepicker -->
 
 

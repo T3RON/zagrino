@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>سامانه مدیریت باشگاه ستارگان</title>
+    <title><?= $title; ?></title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
     <!-- Bootstrap 3.3.7 -->
@@ -20,6 +20,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="<?=base_url('')?>bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url('')?>dist/css/AdminLTE.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="<?=base_url('')?>bower_components/jvectormap/jquery-jvectormap.css">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter
           page. However, you can choose any other skin. Make sure you
           apply the skin class to the body tag so the changes take effect. -->
@@ -41,7 +43,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- Include multi.js -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>dist/multi.min.css" />
     <script type="text/javascript" src="<?= base_url('') ?>dist/js/jquery-3.4.1.min.js"></script>
-
+    <?php if (isset($home_page) && $home_page !== TRUE):?>
     <?php foreach($css_files as $file): ?>
       <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
     <?php endforeach; ?>
@@ -49,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <script src="<?php echo $file; ?>"></script>
     <?php endforeach; ?>
 
-
+    <?php endif;?>
 
     
 
