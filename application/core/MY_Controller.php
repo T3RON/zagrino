@@ -21,10 +21,10 @@ class MY_Controller extends CI_Controller
             'home_page' => FALSE
         ));
         $this->load->model('MY_Model');
-        // if (!$this->ion_auth->logged_in())
-        // {
-        //     redirect('auth/login');
-        // }
+        if (!$this->ion_auth->logged_in())
+        {
+            redirect('auth/login');
+        }
     }
 
 

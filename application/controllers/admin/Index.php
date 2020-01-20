@@ -44,7 +44,8 @@ class Index extends MY_Controller {
         $this->out_view($output);
     }
     function out_view($output = null) {
-        $output->title = "اخبار باشگاه";
+        $output->title = "مديران";
+        $output->des = "ليست مديران سامانه زاگرينو";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
         $this->load->view('admin/index',$output);
 

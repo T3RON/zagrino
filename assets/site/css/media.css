@@ -1,0 +1,86 @@
+/* Extra small devices (phones, 600px and down) */
+@media (min-width: 600px) {
+    .slider .container .swiper-container .swiper-wrapper img {
+        width: 100%!important;
+        height: 250px;
+    }
+    .section_head .l {
+        border-radius: 20px!important;
+    }
+    .section_head .l .inner {
+        margin: 0 15px;
+        text-align: center;
+    }
+}
+@media (max-width: 535px) {
+    .slider .container .swiper-container .swiper-wrapper img {
+        height: 250px;
+    }
+    .section_head .l {
+        border-radius: 20px!important;
+    }
+    .section_head .l .inner {
+        margin: 0 15px;
+        text-align: center;
+    }
+}
+@media (max-width: 600px) {
+    .top_header .login {
+        padding: 0 5px 0 0 !important;
+    }
+    .column_left .border_section {
+        margin-right: -3px;
+    }
+    .section_head .l .inner {
+        margin: 0 15px;
+        text-align: center;
+    }
+}
+/* sm */
+@media (min-width: 768px) {
+    .top_header .login {
+        float: right;
+        padding: 0 40px 0 0 !important;
+    }
+    .slider .container .swiper-container .swiper-wrapper img {
+        height: 290px;
+    }
+    .section_head .l {
+        border-top-left-radius: 20px!important;
+        border-top-right-radius: 15px 35%!important;
+        border-bottom-right-radius: 15px 35%!important;
+        border-bottom-left-radius: 20px !important;
+    }
+}
+@media (max-width: 765px) {
+    .top_header .login {
+        float: right;
+        padding: 0 5px 0 0 !important;
+    }
+}
+/* md */
+@media (min-width: 992px) {
+    .slider .container .swiper-container .swiper-wrapper img {
+        height: 330px;
+    }
+}
+@media (max-width: 992px) {
+}
+/* lg */
+@media (max-width: 1200px) {
+    .top_header .menu_top ul{
+        border-left: none;
+    }
+}
+@media (min-width: 1200px) {
+    .top_header .menu_top ul{
+        border-left: 1px solid #e3e3e3;
+    }
+    .top_header .login {
+        float: right;
+        padding: 0 5px 0 0 !important;
+    }
+    .slider .container .swiper-container .swiper-wrapper img {
+        height: 370px;
+    }
+}
