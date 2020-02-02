@@ -6,6 +6,11 @@
     
     
     
+   
+    
+    
+    
+    
     
 
     <!-- column-right -->
@@ -401,35 +406,30 @@
                 </div>
                
                
-
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r text_title">
-                   انتخاب لوگوی کانال یا پیج
-                   
-               </div>
-
-
-               <div class="col-lg-6 col-md-6 hidden-sm hidden-xs text_title">
-                سفارش لینک سایت ، کانال و پیج و . . .                   
-           </div>
-
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild"><div class="t_align fild_title p0">
+                <span class="f_r p0"></span>
+                <label for="upload_img" class="p0">                   انتخاب لوگوی کانال یا پیج
+                </label>
+                <span class="f_l p0"></span>
+            </div>
                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
                        <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                            <img src="img/logo.png" id="imgshow_3">
+                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_3">
                             <div class="f_r img_panel_input_2">
-                                <img src="img/camera.svg">
+                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                 <input id="upload_img_3" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                         </div>
                        </li>
                        
                    </ul>
                </div>
-               
-               <div class="hidden-lg hidden-md col-sm-12 col-xs-12 text_title">
-                سفارش لینک سایت ، کانال و پیج و . . .                   
-           </div>
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild"><div class="t_align fild_title p0">
+                <span class="f_r p0"></span>
+                <label for="upload_img" class="p0">                سفارش لینک سایت ، کانال و پیج و . . .                   
+                </label>
+                <span class="f_l p0"></span>
+            </div>
                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact_lite c_border m_p_5 price_number f_r clr_g_0ac601">
                            ۴۰۰/۰۰۰ تومان
@@ -516,13 +516,13 @@
                                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 today-li-inner today-li_2_li black p_2 p0">
                                                         <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8 f_r p0">
                                                                 <button class="f_l p0">
-                                                                <img src="img/red_x.svg"></button>
+                                                                <img src="<?=base_url('')?>assets/site/img/red_x.svg"></button>
                                                           </div>                                                
                                                 </li>
                                                 <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 today-li-inner today-li_2_li black p_2 p0">
                                                         <div class="col-lg-7 col-md-8 col-sm-8 col-xs-8 f_r p0">
                                                               <button class="f_l p0">
-                                                              <img src="img/add.svg"></button>
+                                                              <img src="<?=base_url('')?>assets/site/img/add.svg"></button>
                                                         </div>
                                                 </li>
                                             </ul>
@@ -564,8 +564,30 @@
     
     
     
+   
     
     
+      
     
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+ 
+<script >
+    $('document').ready(function () {
+        $("#upload_img_3").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_3').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

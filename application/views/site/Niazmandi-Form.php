@@ -3,92 +3,109 @@
     
     
     
-    
-    
-    
-    
 
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
 
-    <!-- column-right -->
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer p0">
+    فرم پنل آگهی و نیازمندی ها
+</div>
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer p0">
-            فرم پنل آگهی و نیازمندی ها
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
+       <span>
+           ثبت فرم پنل آگهی و نیازمندی ها
+       </span>
+   </div>
+
+   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
+       <div class="title ">
+           راهنمای ثبت آگهی
+       </div>
+       <p>
+           متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
+           متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
+           <br>متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
+           <br>متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
+
+       </p>
+   </div>
+
+   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r raigan p0">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 raigan_body p0">
+           <img class="gary_bg_top" src="<?=base_url('')?>assets/site/img//gary_bg_top.jpg" alt="">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
+               آگهی رایگان
+           </div>
+           <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_0_0 line_h_1_0">
+               <li>ثبت ۱ عدد آگهی ساده</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>مدت نمایش سه ماهه</li>
+               <li>نمایش اطلاعات تماس</li>
+               <li>نمایش اطلاعات تماس</li>
+               <li>نمایش اطلاعات تماس</li>
+               <li>نمایش اطلاعات تماس</li>
+               <li>نمایش اطلاعات تماس</li>
+               <li>نمایش 2 عدد عکس</li>
+               <li>نمایش موقعیت بر روی نقشه</li>
+           </ul>
+           <img class="gary_bg_bot" src="<?=base_url('')?>assets/site/img/gary_bg_bot.jpg" alt="">
+
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
+           <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
+               <img src="<?=base_url('')?>assets/site/img/Rounded_blue_ss.png" alt="">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r t_align">
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">سه ماهه</div>
+                   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">رایگان</div>
+               </div>
+           </div>
+       </div>
+   </div>
+
+   <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r vizheh p0">
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 vizheh_body p0">
+           <img class="red_bg_top" src="<?=base_url('')?>assets/site/img/red_bg_top.jpg" alt="">
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
+               آگهی ویژه
+           </div>
+           <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 takhfif f_l">
+               20% تخفیف
+           </div>
+           <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_0_0 line_h_1_0">
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+               <li>ثبت ۱ عدد آگهی ویژه</li>
+           </ul>
+           <img src="<?=base_url('')?>assets/site/img/red_bg_bot.jpg" alt="">
+       </div>
+       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
+        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
+            <img src="<?=base_url('')?>assets/site/img/Rounded_blue_ss.png" alt="">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r t_align">
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">سه ماهه</div>
+                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">رایگان</div>
+            </div>
         </div>
+    </div>
+   </div>
 
-       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
-
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
-               <span>
-                   ثبت فرم پنل آگهی و نیازمندی ها
-               </span>
-           </div>
-
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
-               <div class="title ">
-                   راهنمای ثبت آگهی
-               </div>
-               <p>
-                   متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
-                   متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
-                   <br>متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
-                   <br>متن پیفرض متن اصلی توسط مدیر پنل جایگذاری شودمتن پیفرض متن اصلی توسط مدیر پنل جایگذاری شود
-
-               </p>
-           </div>
-
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r raigan p0">
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 raigan_body">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                       آگهی رایگان
-                   </div>
-                   <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                       <li>ثبت ۱ عدد آگهی ساده</li>
-                       <li>مدت نمایش سه ماهه</li>
-                       <li>نمایش اطلاعات تماس</li>
-                       <li>نمایش 2 عدد عکس</li>
-                       <li>نمایش موقعیت بر روی نقشه</li>
-                   </ul>
-               </div>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
-                   <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
-                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_r t_align">سه ماهه</div>
-                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_l t_align">رایگان</div>
-                   </div>
-               </div>
-           </div>
-
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r vizheh p0">
-               <div class="col-lg-12 vizheh_body">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                       آگهی ویژه
-                   </div>
-                   <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 takhfif f_l">
-                       20% تخفیف
-                   </div>
-                   <ul class="col-lg-12">
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                       <li>ثبت ۱ عدد آگهی ویژه</li>
-                   </ul>
-               </div>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
-                   <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
-                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_r t_align">سه ماهه</div>
-                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_l t_align">10000 تومان</div>
-                   </div>
-               </div>
-           </div>
-
-           <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+   <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
                <!------------------------------------------------------------------  تکمیل فرم سفارش آگهی ------------>
 
@@ -323,15 +340,15 @@
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place">
                        
                        <div class=" f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                     <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
 
@@ -620,54 +637,54 @@
                        <li class="">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_10">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_10">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_10" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
                        <li class="">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_11">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_11">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_11" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
                        <li class="">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_12">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_12">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_12" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
                        <li class="">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_13">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_13">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_13" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
                        <li class="c">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_14">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_14">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_14" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
                        <li class="">
                            
                     <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_15">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_15">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_15" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                        </li>
@@ -700,8 +717,8 @@
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild movafeghat">
-                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                       <span class="col-lg-10 col-md-11 col-sm-11 col-xs-10  p0">
+                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label radio_label_2 p0">
+                       <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
                            شرایط و قوانین درج آگهی را مطالعه نموده ام و موافقت خود را اعلام می کنم
                        </span>
                        <input type="radio" name="">
@@ -967,54 +984,54 @@
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_100">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_100">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_100" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_111">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_111">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_111" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_122">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_122">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_122" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class=" f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_133">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_133">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_133" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_144">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_144">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_144" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="col-lg-2 col-md-3 col-sm-4 col-xs-6">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_155">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_155">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_155" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
@@ -1046,8 +1063,8 @@
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild movafeghat">
-                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                       <span class="col-lg-10 col-md-11 col-sm-11 col-xs-10  p0">
+                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label radio_label_2 p0">
+                       <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
                            شرایط و قوانین درج آگهی را مطالعه نموده ام و موافقت خود را اعلام می کنم
                        </span>
                        <input type="radio" name="">
@@ -1825,54 +1842,54 @@
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1000">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1000">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1000" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1111">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1111">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1111" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1222">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1222">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1222" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1333">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1333">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1333" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1444">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1444">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1444" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_1555">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_1555">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_1555" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
@@ -1904,8 +1921,8 @@
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild movafeghat">
-                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                       <span class="col-lg-10 col-md-11 col-sm-11 col-xs-10  p0">
+                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label radio_label_2 p0">
+                       <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
                            شرایط و قوانین درج آگهی را مطالعه نموده ام و موافقت خود را اعلام می کنم
                        </span>
                        <input type="radio" name="">
@@ -2275,54 +2292,54 @@
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_10000">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_10000">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_10000" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_11111">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_11111">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_11111" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_12222">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_12222">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_12222" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_13333">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_13333">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_13333" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_14444">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_14444">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_14444" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_15555">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_15555">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_15555" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
@@ -2353,8 +2370,8 @@
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild movafeghat">
-                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                       <span class="col-lg-10 col-md-11 col-sm-11 col-xs-10  p0">
+                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label radio_label_2 p0">
+                       <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
                            شرایط و قوانین درج آگهی را مطالعه نموده ام و موافقت خود را اعلام می کنم
                        </span>
                        <input type="radio" name="">
@@ -2736,54 +2753,54 @@
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_100000">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_100000">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_100000" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_111111">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_111111">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_111111" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_122222">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_122222">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_122222" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_133333">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_133333">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_133333" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_144444">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_144444">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_144444" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
                     <li class="">
                         
                  <div class="f_r img_panel_2 p0">
-                     <img src="img/logo.png" id="imgshow_155555">
+                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_155555">
                      <div class="f_r img_panel_input_2">
-                         <img src="img/camera.svg">
+                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
                          <input id="upload_img_155555" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                  </div>
                     </li>
@@ -2817,8 +2834,8 @@
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild movafeghat">
-                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                       <span class="col-lg-10 col-md-11 col-sm-11 col-xs-10  p0">
+                   <label class="col-lg-6 col-md-12 col-sm-12 col-xs-12 radio_label radio_label_2 p0">
+                       <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
                            شرایط و قوانین درج آگهی را مطالعه نموده ام و موافقت خود را اعلام می کنم
                        </span>
                        <input type="radio" name="">
@@ -2863,7 +2880,461 @@
     
     
     
+    
+    
 
 
-
+  
+    
+    
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+      
+   
+    
+<script >
+        $('document').ready(function () {
+            $("#upload_img").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_10").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_10').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_11").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_11').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_12").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_12').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_13").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_13').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_14").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_14').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_15").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_15').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_100").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_100').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_111").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_111').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_122").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_122').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_133").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_133').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_144").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_144').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_155").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_155').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1000").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1000').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1111").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1111').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1222").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1222').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1333").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1333').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1444").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1444').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_1555").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_1555').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_10000").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_10000').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_11111").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_11111').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_12222").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_12222').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_13333").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_13333').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_14444").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_14444').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_15555").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_15555').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_100000").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_100000').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_111111").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_111111').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_122222").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_122222').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_133333").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_133333').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_144444").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_144444').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    <script >
+        $('document').ready(function () {
+            $("#upload_img_155555").change(function () {
+                if (this.files && this.files[0]) {
+                    var reader = new FileReader();
+                    reader.onload = function (e) {
+                        $('#imgshow_155555').attr('src', e.target.result);
+                    }
+                    reader.readAsDataURL(this.files[0]);
+                }
+            });
+        });
+    </script>
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

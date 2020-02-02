@@ -3,6 +3,10 @@
     
     
     
+     
+    
+    
+    
     
     
     
@@ -16,7 +20,7 @@
         
        
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_head p0">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 job_title t_align p0">بانک مشاغل</div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 job_title t_align p0">آگهی و نیازمندی ها</div>
                 <div class="f_l report_violation p0">
                     <a href="">
                         <span>
@@ -69,7 +73,8 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section f-r p0">
             <div class="observe f_r p0">نقدی - اقساط</div>
                 <div class="f_r">
-                    <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                    <button type="button" class="btn_global m0 p0">
+                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
                 </div>
                 <div class="observe f_r">
                     <i class="icon-eye f_r"></i>
@@ -101,21 +106,21 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package right_col f_r flex_box p0">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 right_side flex_item f_r p0" >
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper p0">
-                    <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                    <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                     </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
                     </div>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side m_p_10 p0">
@@ -123,7 +128,8 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info_top p0">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0"><img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
                             
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
                             <div class="p_0_10">خدمات طراحی سایت</div>
@@ -142,7 +148,8 @@
                         </div>
                         </li>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0"><img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
                             
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
                             <div class="p_0_10">خدمات طراحی سایت</div>
@@ -161,7 +168,8 @@
                         </div>
                         </li>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0"><img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
                             
                         <div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
                             <div class="p_0_10">خدمات طراحی سایت</div>
@@ -199,7 +207,7 @@
                                 موقعیت
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="img/map.png" class="img-responsive" alt="">
+                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
                             </div>
                         </div>
         </div>
@@ -296,7 +304,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -343,7 +351,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -390,7 +398,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -445,6 +453,17 @@
     
     
     
+  
     
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+      
+    
+    
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+ 
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

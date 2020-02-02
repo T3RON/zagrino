@@ -5,6 +5,8 @@
     
     
     
+  
+    
     
     
 
@@ -46,11 +48,20 @@
     
     
     
+       
     
     
     
     
     
+      
     
     
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+ 
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

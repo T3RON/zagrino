@@ -3,6 +3,9 @@
     
     
     
+     
+    
+    
     
     
     
@@ -36,7 +39,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 left_side flex_item f_l p0">
 
                     <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 img f_r m0 p0">
-                        <img src="img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
+                        <img src="<?=base_url('')?>assets/site/img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
                     </div>
 
                     <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 info_top f_l p0">
@@ -54,14 +57,14 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section p_8 p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 btn_ekhtesasi f_r p0">
                                 <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12  f_r" type="button" name="">
-                                    <img src="img/chain_white.svg">
+                                    <img src="<?=base_url('')?>assets/site/img/chain_white.svg">
                                     <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 p0">
                                         صفحه اختصاصی در بانک مشاغل
                                     </div>
                                 </a>
                             </div>
                                 <div class="f_r">
-                                    <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                                    <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
                                 </div>
                                 <div class="observe f_r">
                                     <i class="icon-eye f_r"></i>
@@ -100,7 +103,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right_side flex_item f_r p0" >
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper bankmashaghel_img  p0">
-                    <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                    <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         
                                 <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
@@ -115,7 +118,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -127,7 +130,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -139,7 +142,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -151,7 +154,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -163,7 +166,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -175,7 +178,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -187,7 +190,7 @@
                                     
                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                                         
-                              <img src="img/4.png" class="img-responsive" alt="" title="">
+                              <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                                     
                           </div>
                                     
@@ -262,67 +265,63 @@
     
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                                    <img src="img/Resane_bg.jpg">
+                                    <img src="<?=base_url('')?>assets/site/img/Resane_bg.jpg">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2  p0">دسته بندی رسانه ها</div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandi_ghavanin m_5 p0">
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ghavanin_2 p0">
-         
-                        <div   class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
-                            <ul class="p0">
-                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li-tittle_2  p0">
-                                    <ul class="p0">
-                                        <li class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_0_15 p0">نام کالا یا محصول</li>
-                                        <li class="col-lg-2 col-md-2 col-sm-2 col-xs-5 today-li-inner p0">شرح جزئیات تخفیف</li>
-                                        <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner black p0">مبلغ کالا بدون تخفیف به تومان</li>
-                                        <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p0">درصد تخفیف</li>
-                                        <li class="col-lg-1 hidden-md  hidden-sm hidden-xs today-li-inner black p0">مبلغ تخفیف</li>
-                                        <li class="col-lg-1 col-md-2 col-sm-3 hidden-xs today-li-inner green p0">قیمت با تخفیف</li>
-                                        <li class="col-lg-2 col-md-2 col-sm-2 hidden-xs today-li-inner black p0">ظرفیت کد تخفیف</li>
-                                        <li class="col-lg-1  col-md-1 col-sm-2 col-xs-2 today-li-inner green p0">افزودن به علاقمندی ها</li>
-                                        <li class="col-lg-1 col-md-2 hidden-sm hidden-xs today-li-inner black p0">تصویر</li>
-                                    </ul>
-                                </li>
-                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li_2 p0">
-                                    <ul class="ul_buy p0">
-                                        <li  class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_25_0 p0">کفش زنانه</li>
-                                        <li class="col-lg-2 col-md-2 col-sm-2 col-xs-5 today-li-inner black more_info_takhfif p_20_5 m_8 p0">مشاهده جزئیات</li>
-                                        <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner black p_25_0 p0">۲۰۰/۰۰۰</li>
-                                        <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p_25_0 p0">۲۰٪</li>
-                                        <li class="col-lg-1 hidden-md  hidden-sm hidden-xs today-li-inner green p_25_0 p0">۴۰/۰۰۰ </li>
-                                        <li class="col-lg-1 col-md-2 col-sm-2 hidden-xs today-li-inner green p_25_0 p0">۱۶۰/۰۰۰ </li>
-                                        <li class="col-lg-2 col-md-2 col-sm-3 hidden-xs today-li-inner black   p0">
-                                            
-                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r today-li-inner p0">
-                                                    ۱۰ عدد
-                                              </div>
-                                            
-                                                  <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
-                                                      <button class="f_l p0">
-                                                      <img src="img/plus_perp.svg"></button>
-                                                    </div>
-                                                  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4 f_r today-li-inner line_h_5 p0">
-                                                      10
-                                                    </div>
-                                                  <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
-                                                      <button class="f_r p0">
-                                                      <img src="img/minus_perp.svg"></button>
-                                                    </div>
-                                        </li>
-                                        <li  class="col-lg-1  col-md-1 col-sm-2 col-xs-2 today-li-inner p_20_0 p0">
-                                            <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
-                                        </li>
-                                        <li class="col-lg-1 col-md-2 hidden-sm hidden-xs today-li-inner red li_inner_img p_15_0 p0">
-                                            <img src="img/Aquaman.jpg">
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandi_ghavanin m_5 p0">
+        
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ghavanin_2 p0">
+
+            <div   class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p0">
+                <ul class="p0">
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li-tittle_2  p0">
+                        <ul class="p0">
+                            <li class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_0_15 p0">نام کالا یا محصول</li>
+                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-5 today-li-inner p0">شرح جزئیات تخفیف</li>
+                            <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner black p0">مبلغ کالا بدون تخفیف به تومان</li>
+                            <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p0">درصد تخفیف</li>
+                            <li class="col-lg-1 hidden-md  hidden-sm hidden-xs today-li-inner black p0">مبلغ تخفیف</li>
+                            <li class="col-lg-1 col-md-2 col-sm-3 hidden-xs today-li-inner green p0">قیمت با تخفیف</li>
+                            <li class="col-lg-2 col-md-2 col-sm-2 hidden-xs today-li-inner black p0">ظرفیت کد تخفیف</li>
+                            <li class="col-lg-1  col-md-1 col-sm-2 col-xs-2 today-li-inner green p0">افزودن به علاقمندی ها</li>
+                            <li class="col-lg-1 col-md-2 hidden-sm hidden-xs today-li-inner black p0">تصویر</li>
+                        </ul>
+                    </li>
+                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li_2 p0">
+                        <ul class="ul_buy p0">
+                            <li  class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_25_0 p0">کفش زنانه</li>
+                            <li class="col-lg-2 col-md-2 col-sm-2 col-xs-5 today-li-inner black more_info_takhfif p_20_5 m_8 p0">مشاهده جزئیات</li>
+                            <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner black p_25_0 p0">۲۰۰/۰۰۰</li>
+                            <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p_25_0 p0">۲۰٪</li>
+                            <li class="col-lg-1 hidden-md  hidden-sm hidden-xs today-li-inner green p_25_0 p0">۴۰/۰۰۰ </li>
+                            <li class="col-lg-1 col-md-2 col-sm-2 hidden-xs today-li-inner green p_25_0 p0">۱۶۰/۰۰۰ </li>
+                            <li class="col-lg-2 col-md-2 col-sm-3 hidden-xs today-li-inner black   p0">
+                                
+                                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
+                                            <button class="f_l p0">
+                                            <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4 f_r today-li-inner line_h_5 p0">
+                                            10
+                                        </div>
+                                        <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
+                                            <button class="f_r p0">
+                                            <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
+                                        </div>
+                            </li>
+                            <li  class="col-lg-1  col-md-1 col-sm-2 col-xs-2 today-li-inner p_15_0 p0">
+                                <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
+                            </li>
+                            <li class="col-lg-1 col-md-2 hidden-sm hidden-xs today-li-inner red li_inner_img  p0">
+                                <img src="<?=base_url('')?>assets/site/img/Aquaman.jpg">
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
                                                      
                     </div>
                     </div>
@@ -411,35 +410,32 @@
                                         </li>
                                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li_2 p0">
                                             <ul class="ul_buy p0">
-                                                <li  class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_25_0 p0">کفش زنانه</li>
-                                                <li class="col-lg-2 hidden-md hidden-sm hidden-xs today-li-inner black p_25_0 p0">۲۰۰/۰۰۰</li>
-                                                <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p_25_0 p0">۲۰٪</li>
-                                                <li class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner green p_25_0 p0">۱۶۰/۰۰۰ </li>
+                                                <li  class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_20_0 p0">کفش زنانه</li>
+                                                <li class="col-lg-2 hidden-md hidden-sm hidden-xs today-li-inner black p_20_0 p0">۲۰۰/۰۰۰</li>
+                                                <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p_20_0 p0">۲۰٪</li>
+                                                <li class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner green p_20_0 p0">۱۶۰/۰۰۰ </li>
                                                 <li class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner black  p0">
                                                     
-                                                    <div class="ccol-lg-12 col-md-12 col-sm-12 col-xs-12 f_r today-li-inner p0">
-                                                            ۱۰ عدد
-                                                      </div>
                                                     
                                                         <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
                                                               <button class="f_l p0">
-                                                              <img src="img/plus_perp.svg"></button>
+                                                              <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
                                                         </div>
                                                           <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r today-li-inner line_h_5 p0">
                                                               10
                                                             </div>
                                                           <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
                                                               <button class="f_r p0">
-                                                              <img src="img/minus_perp.svg"></button>
+                                                              <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
                                                             </div>
                                                 </li>
-                                                <li  class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner p_20_0 p0">
-                                                    <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
+                                                <li  class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner p_15_0 p0">
+                                                    <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
                                                 </li>
-                                                <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2 today-li-inner p_15_0 p0">
+                                                <li class="col-lg-1 col-md-2 col-sm-2 col-xs-2 today-li-inner  p0">
                                                         <div class="col-lg-10 col-md-8 col-sm-8 col-xs-10 f_r p0">
                                                               <button class="f_l p0">
-                                                              <img src="img/red_x.svg"></button>
+                                                              <img src="<?=base_url('')?>assets/site/img/red_x.svg"></button>
                                                         </div>
                                                 </li>
                                             </ul>
@@ -918,6 +914,33 @@
     
     
     
+      
     
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+<script>
+    var swiper = new Swiper('.swiper_bankMashaghel', {
+      
+          slidesPerView: 2,
+      spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next_bankMashaghel',
+        prevEl: '.swiper-button-prev_bankMashaghel',
+      },
+    });
+  </script>
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
