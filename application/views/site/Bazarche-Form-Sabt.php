@@ -7,6 +7,10 @@
     
     
     
+  
+    
+    
+    
     
     
     <!-- BODY -->
@@ -20,7 +24,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side flex_item f_l b_m_v p0">
 
                         <div class="col-lg-2 col-md-3 col-sm-6 col-xs-12 img f_r m0 pic_size p0">
-                            <img src="img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
+                            <img src="<?=base_url('')?>assets/site/img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
                         </div>
 
                         <div class="col-lg-10 col-md-9 col-sm-6 col-xs-12 info_top title_info_all f_l p0">
@@ -527,10 +531,10 @@
 
 
 
-               <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                <img src="img/logo.png" id="imgshow_2">
+               <div class=" f_r img_panel_2 p0">
+                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_2">
                 <div class="f_r img_panel_input_2">
-                    <img src="img/camera.svg">
+                    <img src="<?=base_url('')?>assets/site/img/camera.svg">
                     <input id="upload_img_2" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
             </div>
             
@@ -576,4 +580,31 @@
     
     
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?
+  
+    
+    
+    
+      
+    
+    
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+      
+<script >
+    $('document').ready(function () {
+        $("#upload_img_2").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_2').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

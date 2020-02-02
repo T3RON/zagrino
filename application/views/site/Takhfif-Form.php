@@ -7,13 +7,14 @@
     
     
     
+    
 
     <!-- column-right -->
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form  p0 ">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer p0">
-            فرم آگهی و نیازمندی ها
+            ثبت فرم تخفیفات
         </div>
 
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all thkfif_form">
@@ -301,15 +302,7 @@
                         مختص فروشندگان کالا - عمده فروشان
                 </p>
  
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input m_p_5">
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>اطلاع رسانی تخفیف </span>
-                            <input type="radio" name="radio_1">
-                            <span class="checkmark"></span>
-                        </label>
-                </div>
- 
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input m_p_5">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input clear m_p_5">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>کد تخفیف </span>
                             <input type="radio" name="radio_1">
@@ -318,12 +311,9 @@
                 </div>
 
 
-                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 f_r m_p_5 ">
-                    مختص اطلاع رسانی تخفیف
-                </p>
 
 
-                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 f_r m_p_5 ">
+                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 clear f_r m_p_5 ">
                     مختص سایت های فروشگاهی
                 </p>
             </div>
@@ -344,7 +334,7 @@
                         <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                                    <img src="img/Rounded%20Rectangle%2047.png">
+                                    <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0"> تخفیف درصدی کالا</div>
                                 </div>
                             </div>
@@ -435,18 +425,18 @@
                                     </div>
                                 </div>
      
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
-                                        تصویر
-                                        
-                                    </div>
-                     
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                                        <div class="t_align fild_title p0">
+                                             <span class="f_r p0"></span>
+                                             <label for="upload_img" class="p0">تصویر</label>
+                                             <span class="f_l p0"></span>
+                                         </div>
                                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
                                             <li class="col-lg-4 col-md-3 col-sm-4 col-xs-6">
                                                 <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                                                    <img src="img/logo.png" id="imgshow_50">
+                                                    <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_50">
                                                     <div class="f_r img_panel_input_2">
-                                                        <img src="img/camera.svg">
+                                                        <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                                         <input id="upload_img_50" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                                                 </div>
                                             </li>
@@ -678,7 +668,7 @@
                         <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                                    <img src="img/Rounded%20Rectangle%2047.png">
+                                    <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0"> تخفیف پکیجی کالا</div>
                                 </div>
                             </div>
@@ -788,19 +778,19 @@
                             <input id="khodro_karkard" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         </div>
                     </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
-                            تصویر
-                            
-                        </div>
             
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                            <div class="t_align fild_title p0">
+                                <span class="f_r p0"></span>
+                                <label for="upload_img" class="p0">تصویر</label>
+                                <span class="f_l p0"></span>
+                            </div>
                             <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
                                 <li class="col-lg-4 col-md-3 col-sm-4 col-xs-6">
                                     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                                        <img src="img/logo.png" id="imgshow_5">
+                                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_5">
                                         <div class="f_r img_panel_input_2">
-                                            <img src="img/camera.svg">
+                                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                             <input id="upload_img_5" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                                     </div>
                                 </li>
@@ -1081,7 +1071,7 @@
                 <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                                <img src="img/Rounded%20Rectangle%2047.png">
+                                <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0"> اطلاع رسانی تخفیفی مشاغل خدماتی</div>
                         </div>
                     </div>
@@ -1223,7 +1213,7 @@
         <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                        <img src="img/Rounded%20Rectangle%2047.png">
+                        <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0">کد تخفیف</div>
                     </div>
                 </div>
@@ -1336,7 +1326,7 @@
                     <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                                    <img src="img/Rounded%20Rectangle%2047.png">
+                                    <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0">تکمیل اطلاعات عمومی تخفیف</div>
                                 </div>
                             </div>
@@ -1698,7 +1688,40 @@
     
     
     
+      
     
     
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+<script >
+    $('document').ready(function () {
+        $("#upload_img_50").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_50').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<script >
+    $('document').ready(function () {
+        $("#upload_img_5").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_5').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

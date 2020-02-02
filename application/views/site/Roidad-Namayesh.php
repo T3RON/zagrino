@@ -4,6 +4,8 @@
     
     
     
+   
+    
     
     
     
@@ -47,9 +49,9 @@
                 </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">آدرس : بروجرد - خیابان صارمی</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 margin_group button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
                         </div>
            </div>
                
@@ -59,14 +61,14 @@
                
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/home_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/home_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    سالن اداره ارشاد
                    </div></a>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/calender_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/calender_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    ۰۵/۰۵/۱۳۹۸ تا ۰۱/۰۱/۱۳۹۸
                    
@@ -74,14 +76,14 @@
                    </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/time_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/time_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    ۲۲:۳۰
                    
                    </div></a></div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/time2_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/time2_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    یک ساعت
                    
@@ -89,7 +91,7 @@
                    </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/user_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/user_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    برگزار کنندگان : احمد یوسف وند
                    
@@ -101,7 +103,7 @@
            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info p0">
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/level_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/level_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    سطح برگزاری : تخصصی
                    
@@ -109,7 +111,7 @@
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/user2_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/user2_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    شرکت کنندگان : کارمندان
                    
@@ -117,14 +119,14 @@
                    </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/cepacity_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/cepacity_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    ظرفیت رویداد : ۲۰ نفر
                    
                    </div></a></div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/cost_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/cost_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    هزینه رویداد : ۲۰۰۰ تومان
                    
@@ -132,7 +134,7 @@
                    </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/chain_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/chain_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    designer4.ir
                    
@@ -140,7 +142,7 @@
                    </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 roidadha_info_inner">
                    <a href="#">
-                        <img src="img/mail_01.svg">
+                        <img src="<?=base_url('')?>assets/site/img/mail_01.svg">
                        <div class="col-lg-11 col-md-11 col-sm-11 col-xs-10 info_inner_title ">
                    info@gmail.com
                    
@@ -168,30 +170,30 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right_col flex_box p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 right_side flex_item f_r p0" >
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                         </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-                            <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+                            <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
                         </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper img_swiper_57 p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">پوستر</div>
                         </div>
                         </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper img_swiper_57 p0">
-                        <img src="img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">کلیپ</div>
                         </div>
@@ -204,7 +206,7 @@
                         <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -212,7 +214,7 @@
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/telegram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -220,7 +222,7 @@
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -228,7 +230,7 @@
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/telegram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -236,7 +238,7 @@
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -244,7 +246,7 @@
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="svg/telegram.svg" class="img-responsive" alt="">
+                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
                                     Mojtaba
@@ -261,7 +263,7 @@
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r title_info_map p0">
 موقعیت روی نقشه                            </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_map fild_map_2 f_r m0 p0">
-                <img src="img/map.png" class="img-responsive" alt="">
+                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
             </div>
         </div>
         </div>
@@ -280,9 +282,17 @@
     
     
     
+  
     
     
     
     
+      
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+    
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

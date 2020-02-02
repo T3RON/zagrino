@@ -7,6 +7,10 @@
     
     
     
+    
+    
+    
+    
 
     <!-- column-right -->
 
@@ -59,8 +63,8 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side flex_item f_l p0">
 
-                    <div class="col-lg-4 col-md-5 col-sm-12 col-xs-12 img f_r m0 p0">
-                        <img src="img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
+                    <div class="col-lg-4 col-md-5 col-sm-5 col-xs-12 img f_r m0 p0">
+                        <img src="<?=base_url('')?>assets/site/img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact_lite  c_border m_15  p0">
                                 <a href="">
                                     <div class="color takhfif_btns  clr_3e4eee p0">
@@ -77,7 +81,7 @@
                                 </div>
                     </div>
 
-                    <div class="col-lg-7 col-md-6 col-sm-12 col-xs-12 info_top p_10 p_title_niazmandi f_l p0">
+                    <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 info_top p_10 p_title_niazmandi f_l p0">
                         <div class="tag tag_niazmandi ">پیج اینستاگرام</div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 group p0">
                                     <div class="f_r title_c">شناسه :</div>
@@ -100,19 +104,19 @@
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section p0">
                             
+                            <div class="hidden-xs observe f_r">
+                                <i class="icon-eye f_r"></i>
+                                <span>
+                                    5/5/98 تا 8/8/98
+                                </span>
+                            </div>
                             <div class="f_r">
-                                <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                                <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
                             </div>
                             <div class="observe f_r">
                                 <i class="icon-eye f_r"></i>
                                 <span>
                                     8585
-                                </span>
-                            </div>
-                            <div class="hidden-xs observe f_r">
-                                <i class="icon-eye f_r"></i>
-                                <span>
-                                    5/5/98 تا 8/8/98
                                 </span>
                             </div>
                         </div>
@@ -151,8 +155,17 @@
     
     
     
+  
     
     
+      
     
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
