@@ -7,6 +7,15 @@
     
 
 
+    
+    
+    
+    
+    
+    
+    
+
+
     <!-- BODY -->
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
@@ -65,16 +74,6 @@
                    </div>
                </div>
 
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                   <div class="t_align fild_title  p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan" class="p0">انتخاب شهر</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                    <div class="t_align fild_title  p0">
@@ -125,26 +124,6 @@
                    <div class="t_align fild_title  p0">
                        <span class="f_r p0"></span>
                        <label for="sefaresh_nam_neshan" class="p0">مدیریت</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                   <div class="t_align fild_title  p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan" class="p0">شهر</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                   <div class="t_align fild_title  p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan" class="p0">شعار </label>
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
@@ -442,36 +421,36 @@
                         <li class="c">
                             
                      <div class="img_panel_2 p0">
-                         <img src="img/logo.png" id="imgshow_60">
+                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_60">
                          <div class="f_r img_panel_input_2">
-                             <img src="img/camera.svg">
+                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
                              <input id="upload_img_60" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
                             
                      <div class="img_panel_2 p0">
-                         <img src="img/logo.png" id="imgshow_61">
+                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_61">
                          <div class="f_r img_panel_input_2">
-                             <img src="img/camera.svg">
+                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
                              <input id="upload_img_61" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
                             
                      <div class="img_panel_2 p0">
-                         <img src="img/logo.png" id="imgshow_62">
+                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_62">
                          <div class="f_r img_panel_input_2">
-                             <img src="img/camera.svg">
+                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
                              <input id="upload_img_62" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
                             
                      <div class="img_panel_2 p0">
-                         <img src="img/logo.png" id="imgshow_63">
+                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_63">
                          <div class="f_r img_panel_input_2">
-                             <img src="img/camera.svg">
+                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
                              <input id="upload_img_63" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
@@ -488,7 +467,7 @@
                         <label for="upload_logo" class="p0">آپلود لوگو</label>
                         <span class="f_l p0"></span>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in  p0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
                         
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 logo_preview_l pishnamayesh f_l p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -503,9 +482,9 @@
                         </div>
                     </div>
                      <div class="f_r img_panel_2 p0">
-                        <img src="img/logo.png" id="imgshow_611">
+                        <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_611">
                         <div class="f_r img_panel_input_2">
-                            <img src="img/camera.svg">
+                            <img src="<?=base_url('')?>assets/site/img/camera.svg">
                             <input id="upload_img_611" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                     </div>
@@ -518,18 +497,18 @@
                         <label for="upload_menu" class="p0">آپلود منوی کسب و کار</label>
                         <span class="f_l p0"></span>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in p0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
                         <div class=" m_5 f_r img_panel_2 p0">
-                            <img src="img/logo.png" id="imgshow_620">
+                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_620">
                             <div class="f_r img_panel_input_2">
-                                <img src="img/camera.svg">
+                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                 <input id="upload_img_620" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_img">
-                    <img id="imgshow_622" src="img/zarin_pal.png" class="img-responsive" alt="">
+                    <img id="imgshow_622" src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
                     
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 f_r delete_img">
                         </div>
@@ -545,7 +524,7 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon_input p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in p0">
                                     <label for="social_network_1" class="label_icon f_r p0">
-                                        <img src="svg/telegram.svg" alt="">
+                                        <img src="<?=base_url('')?>assets/site/svg/telegram.svg" alt="">
                                     </label>
                                     <input id="social_network_1" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
                                 </div>
@@ -553,7 +532,7 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon_input p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in p0">
                                     <label for="social_network_2" class="label_icon f_r p0">
-                                        <img src="svg/iconfinder_Instagram.svg" alt="">
+                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" alt="">
                                     </label>
                                     <input id="social_network_2" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
                                 </div>
@@ -561,7 +540,7 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon_input p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in p0">
                                     <label for="social_network_3" class="label_icon f_r p0">
-                                        <img src="svg/iconfinder_Instagram.svg" alt="">
+                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" alt="">
                                     </label>
                                     <input id="social_network_3" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
                                 </div>
@@ -569,16 +548,6 @@
                         </ul>
 
 
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                       <div class="t_align fild_title  p0">
-                           <span class="f_r p0"></span>
-                           <label for="sefaresh_nam_neshan" class="p0">وبسایت</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                           <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                       </div>
-                   </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                        <div class="t_align fild_title  p0">
                            <span class="f_r p0"></span>
@@ -601,14 +570,28 @@
                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  map" id="map_koli" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
                    </div>
 
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh">
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
                    <div class="title_tavajoh ">
                        توجه
                    </div>
                    <p>
-                       شما میتوانید پنل شغلی عادی خود را با پرداخت هزینه ای بسیار مناسب به ویژه تبدیل کنید و از تمام امکانات سایت استفاده کنید
+                       شما میتوانید پنل شغلی عادی خود را با پرداخت هزینه ای بسیار مناسب به ویژه تبدیل کنید و از تمام 
+                      <a href="">امکانات</a> 
+                        سایت استفاده کنید
 
                    </p>
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_poster p0">
+                   <a href="">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
+                            <i class="icon-plus f_r"></i>
+                             ثبت پنل ویژه
+                    </div>
+                </a>
+
+                       </div>
+                   </div>
+
                </div>
 
 
@@ -642,4 +625,102 @@
     
     
     
+    
+    
+    
+    
+  
+    
+    
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+    
+<script >
+    $('document').ready(function () {
+        $("#upload_img_60").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_60').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+<script >
+    $('document').ready(function () {
+        $("#upload_img_61").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_61').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+<script >
+    $('document').ready(function () {
+        $("#upload_img_62").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_62').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+<script >
+    $('document').ready(function () {
+        $("#upload_img_63").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_63').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+    
+    
+<script >
+    $('document').ready(function () {
+        $("#upload_img_611").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_611').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+<script >
+    $('document').ready(function () {
+        $("#upload_img_620").change(function () {
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+                reader.onload = function (e) {
+                    $('#imgshow_620').attr('src', e.target.result);
+                    $('#imgshow_622').attr('src', e.target.result);
+                }
+                reader.readAsDataURL(this.files[0]);
+            }
+        });
+    });
+</script>
+    
+    
+  
+    
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

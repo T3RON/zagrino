@@ -7,6 +7,8 @@
     
     
     
+    
+    
 
     <!-- column-right -->
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandiha p0">
@@ -15,7 +17,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                    <img src="img/Resane_bg.jpg">
+                    <img src="<?=base_url('')?>assets/site/img/Resane_bg.jpg">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2  p0">دسته بندی رسانه ها</div>
                     </div>
             </div>
@@ -103,10 +105,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                    <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                    <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                 </div>
                                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                     ایتا
@@ -141,7 +143,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -151,10 +153,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                             تلگرام
@@ -189,7 +191,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -199,10 +201,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                             اینستاگرام
@@ -237,7 +239,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -247,10 +249,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                             اپلیکیشن
@@ -285,7 +287,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -295,10 +297,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                              سروش
@@ -333,7 +335,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -343,10 +345,10 @@
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 img img_resaneha_big f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small f_r p0">
-                                            <img src="img/logo.png" class="img-responsive" alt="" title="">
+                                            <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="" title="">
                                         </div>
                                         <div class="col-lg-3 col-md-6 col-sm-6 col-xs-6 img img_resaneha_small_2 f_l p0">
                                              وب سایت
@@ -381,7 +383,7 @@
                                                 </div>
                                             </div>
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_org_title f_l p0">
-                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">عضویت</button>
+                                        <button id="footer_form_submit" type="submit" class="col-lg-12 col-md-6 col-sm-6 col-xs-12 btn_ozv f_r p0">نمایش</button>
                                     </div>
                                 </div>
                         </div>
@@ -401,11 +403,12 @@
     
     
     
+       
     
     
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+
     
-    
-    
-    
-    
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

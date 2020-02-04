@@ -4,6 +4,10 @@
     
     
     
+   
+    
+    
+    
     
     
     
@@ -16,7 +20,7 @@
         <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head Agahiha_Niazmandiha p0">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                    <img src="img/Rounded%20Rectangle%2047.png">
+                    <img src="<?=base_url('')?>assets/site/img/Rounded%20Rectangle%2047.png">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0">دسته بندی رویداد ها</div>
                 </div>
             </div>
@@ -109,7 +113,7 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <img src="img/4.png" class="img-responsive" alt="" title="">
+                            <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">کنسرت گروه بهاران</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -123,7 +127,7 @@
                     </li>
                     <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <img src="img/4.png" class="img-responsive" alt="" title="">
+                            <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">کنسرت گروه بهاران</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -137,7 +141,7 @@
                     </li>
                     <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <img src="img/4.png" class="img-responsive" alt="" title="">
+                            <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">کنسرت گروه بهاران</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -151,7 +155,7 @@
                     </li>
                     <li class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <img src="img/4.png" class="img-responsive" alt="" title="">
+                            <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title="">
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">کنسرت گروه بهاران</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -195,7 +199,11 @@
     
     
     
+      
     
     
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

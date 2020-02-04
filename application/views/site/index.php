@@ -6,6 +6,10 @@
     
     
     
+  
+    
+    
+    
     
 
 
@@ -69,13 +73,13 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/1.png" class="img-responsive" alt=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
                             <div class="f_l score p0">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -87,13 +91,13 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/1.png" class="img-responsive" alt=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
                             <div class="f_l score p0">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -105,13 +109,13 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/1.png" class="img-responsive" alt=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
                             <div class="f_l score p0">
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
@@ -184,17 +188,49 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
+                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in off_in_green p0">20% تخفیف</div>
                             </div>
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
                             <a href="" class="title f_r p0">رستوران خاطره</a>
                             <span class="Location f_l p0">نهاوند</span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
+                            <span class="f_r ticket p0">5
+                                <i class="icon-ticket"></i>
+                            </span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 price p0">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 old f_r p0">۷۰۰۰۰</div>
+                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 new f_l taling_left p0">
+                                <span class="new_price">۵۰۰۰۰</span>
+                                <span>تومان</span>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 see_buy f_r p0">
+                            <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده و خرید</button>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
+                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
+                            </div>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
+                            <a href="" class="title f_r p0">رستوران خاطره</a>
+                            <span class="Location f_l p0">نهاوند</span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
                             <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
                             <span class="f_r ticket p0">5
                                 <i class="icon-ticket"></i>
@@ -214,48 +250,19 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
+                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
                             </div>
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
                             <a href="" class="title f_r p0">رستوران خاطره</a>
                             <span class="Location f_l p0">نهاوند</span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
-                            <span class="f_r ticket p0">5
-                                <i class="icon-ticket"></i>
-                            </span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 price p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 old f_r p0">۷۰۰۰۰</div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 new f_l taling_left p0">
-                                <span class="new_price">۵۰۰۰۰</span>
-                                <span>تومان</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 see_buy f_r p0">
-                            <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده و خرید</button>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
-                            </div>
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
-                            <a href="" class="title f_r p0">رستوران خاطره</a>
-                            <span class="Location f_l p0">نهاوند</span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
+                            <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
                             <span class="f_r ticket p0">5
                                 <i class="icon-ticket"></i>
                             </span>
@@ -339,7 +346,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                    <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                                     <div class="expired p0">
 
                                     </div>
@@ -386,7 +393,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                    <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                                     <div class="expired p0">
 
                                     </div>
@@ -433,7 +440,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                    <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                                     <div class="expired p0">
 
                                     </div>
@@ -538,7 +545,7 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/4.png" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">کنسرت گروه بهاران</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -552,7 +559,7 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/4.png" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">کنسرت گروه بهاران</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -566,7 +573,7 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="img/4.png" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">کنسرت گروه بهاران</a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
@@ -642,17 +649,17 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
@@ -663,17 +670,17 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
@@ -684,17 +691,17 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                         </div>
                         <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="img/Band.jpg" class="img-responsive" alt="" title=""></a>
+                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
                             </div>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
@@ -768,7 +775,31 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
+                                    <button type="button" role="button" class="">
+                                        تور ها
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
+                                    <button type="button" role="button" class="">
+                                        رزرو اقامتگاه ها
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
                                         جاذبه های گردشگری
@@ -780,10 +811,10 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
-                                        جاذبه های گردشگری
+                                        تبلیغ ها
                                     </button>
                                 </div>
                             </div>
@@ -792,10 +823,10 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
-                                        جاذبه های گردشگری
+                                        تبلیغ ها
                                     </button>
                                 </div>
                             </div>
@@ -804,34 +835,10 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
-                                        جاذبه های گردشگری
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
-                                    <button type="button" role="button" class="">
-                                        جاذبه های گردشگری
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0" style="background:url(img/ADS.png);background-size: cover;background-position: center; ">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bacground_insert p0">
-                                <img src="img/eiffel.jpg" class="img-responsive" alt="" title="">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
-                                    <button type="button" role="button" class="">
-                                        جاذبه های گردشگری
+                                        تبلیغ ها
                                     </button>
                                 </div>
                             </div>
@@ -900,7 +907,7 @@
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section p0">
-                                <img src="svg/telegram.svg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
                                         کانال های تلگرام
@@ -910,7 +917,7 @@
                         </li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section p0">
-                                <img src="svg/iconfinder_Instagram.svg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
                                         پیج های اینستاگرام
@@ -920,7 +927,7 @@
                         </li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section p0">
-                                <img src="img/ita_icon.png" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/ita_icon.png" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
                                         کانال های ایتا
@@ -930,7 +937,7 @@
                         </li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section p0">
-                                <img src="img/soroush.png" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/soroush.png" class="img-responsive" alt="" title="">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on t_align p0">
                                     <button type="button" role="button" class="">
                                         پیج های سروش
@@ -944,7 +951,7 @@
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wide p0">
                                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 f_r p0">
-                                    <img class="img-responsive" src="img/mobile.png" alt="" title="">
+                                    <img class="img-responsive" src="<?=base_url('')?>assets/site/img/mobile.png" alt="" title="">
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 f_l text_on t_align p0">
                                     <button type="button" role="button" class="">
@@ -956,7 +963,7 @@
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 wide p0">
                                 <div class="col-lg-7 col-md-7 col-sm-7 col-xs-6 f_r p0">
-                                    <img class="img-responsive" src="img/mobile.png" alt="" title="">
+                                    <img class="img-responsive" src="<?=base_url('')?>assets/site/img/mobile.png" alt="" title="">
                                 </div>
                                 <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 f_l text_on t_align p0">
                                     <button type="button" role="button" class="">
@@ -972,18 +979,32 @@
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 multi_media p0">
                                 <a href="">
-                                    <img class="img-responsive" src="img/7.png" alt="" title="">
+                                    <img class="img-responsive" src="<?=base_url('')?>assets/site/img/7.png" alt="" title="">
                                 </a>
                             </div>
                         </li>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 multi_media p0">
                                 <a href="">
-                                    <img class="img-responsive" src="img/7.png" alt="" title="">
+                                    <img class="img-responsive" src="<?=base_url('')?>assets/site/img/7.png" alt="" title="">
                                 </a>
                             </div>
                         </li>
                     </ul>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 poster p0">
+                            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 archive t_align f_l p0">
+                                <a href="">
+                                    <div class="in f_l m0">
+                                        <i class="icon-chain f_r"></i>
+                                        <span>
+                                            آرشیو
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1009,7 +1030,7 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-4 img f_r p0">
-                            <a href=""><img class="img-responsive" src="img/Band.jpg" alt="" title=""></a>
+                            <a href=""><img class="img-responsive" src="<?=base_url('')?>assets/site/img/Band.jpg" alt="" title=""></a>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-8 tag_out f_r p0">
                             <span class="f_r">
@@ -1024,7 +1045,7 @@
                     </li>
                     <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-4 img f_r p0">
-                            <a href=""><img class="img-responsive" src="img/Band.jpg" alt="" title=""></a>
+                            <a href=""><img class="img-responsive" src="<?=base_url('')?>assets/site/img/Band.jpg" alt="" title=""></a>
                         </div>
                         <div class="col-lg-8 col-md-8 col-sm-12 col-xs-8 tag_out f_r p0">
                             <span class="f_r">
@@ -1060,7 +1081,7 @@
                     <li class="col-lg-12 col-md-12 col-sm-6 col-xs-6 f_r p0">
                         <a href="">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on p0">فوق تخصص زیباییفوق تخصص زیباییفوق تخصص زیبایی</div>
                         </a>
@@ -1068,7 +1089,7 @@
                     <li class="col-lg-12 col-md-12 col-sm-6 col-xs-6 f_r p0">
                         <a href="">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on p0">فوق تخصص زیباییفوق تخصص زیباییفوق تخصص زیبایی</div>
                         </a>
@@ -1076,7 +1097,7 @@
                     <li class="col-lg-12 col-md-12 col-sm-6 col-xs-6 f_r p0">
                         <a href="">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_on p0">فوق تخصص زیباییفوق تخصص زیباییفوق تخصص زیبایی</div>
                         </a>
@@ -1086,10 +1107,10 @@
         </section>
 
         <section class="col-lg-12 col-md-12 col-sm-3 col-xs-12 ads f_l p0">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ads_list p0">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ads_list m_p_5 p0">
                 <a href="">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <img src="img/digikala.png" class="img-responsive" alt="" title="">
+                        <img src="<?=base_url('')?>assets/site/img/digikala.png" class="img-responsive" alt="" title="">
                     </div>
                 </a>
             </div>
@@ -1104,5 +1125,13 @@
     
     
     
+     
     
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+      
+
+
+    
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

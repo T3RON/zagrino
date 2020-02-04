@@ -1,7 +1,7 @@
 <?php include_once (APPPATH.'views/_layout/site/header.php');?>
     
     
-    
+  
     
     
     
@@ -19,7 +19,7 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
-                    <img src="img/Niazmandi_b.png">
+                    <img src="<?=base_url('')?>assets/site/img/Niazmandi_b.png">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2 p0">دسته بندی آگهی ها و نیازمندی ها</div>
                     </div>
             </div>
@@ -174,7 +174,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazi p0">
 
                                     </div>
@@ -221,7 +221,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazip0">
 
                                     </div>
@@ -268,9 +268,9 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazi p0">
-                                        <img src="img/monghazi.png">
+                                        <img src="<?=base_url('')?>assets/site/img/monghazi.png">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 c_text f_l p0">
@@ -315,7 +315,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazi p0">
 
                                     </div>
@@ -362,7 +362,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazip0">
 
                                     </div>
@@ -409,9 +409,9 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazi p0">
-                                        <img src="img/monghazi.png">
+                                        <img src="<?=base_url('')?>assets/site/img/monghazi.png">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 c_text f_l p0">
@@ -521,7 +521,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -568,7 +568,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -615,7 +615,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -662,7 +662,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -709,7 +709,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -756,7 +756,7 @@
                                     <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
                                     </div>
-                                    <img src="img/Band.jpg" class="img-responsive" alt="" title="">
+                                    <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired p0">
 
                                     </div>
@@ -824,8 +824,15 @@
     
     
     
+     
+      
     
     
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+
     
+
     
-<?php include_once (APPPATH.'views/_layout/site/footer.php');?>
+<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
