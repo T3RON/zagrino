@@ -71,7 +71,7 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
@@ -107,7 +107,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
@@ -187,7 +187,7 @@
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
                             <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in off_in_green p0">20% تخفیف</div>
                             </div>
@@ -218,7 +218,7 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
                             <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
                             </div>
@@ -249,7 +249,7 @@
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 off_out p0">
+                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
                             <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
                             </div>
@@ -554,7 +554,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 date p0">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 f_r p0">زمان برگزاری :</div>
-                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red p0">۹۸/۰۵/۰۵</div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red taling_left p0">۹۸/۰۵/۰۵</div>
                         </div>
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
@@ -568,7 +568,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 date p0">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 f_r p0">زمان برگزاری :</div>
-                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red p0">۹۸/۰۵/۰۵</div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red taling_left p0">۹۸/۰۵/۰۵</div>
                         </div>
                     </li>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
@@ -582,7 +582,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 date p0">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-6 f_r p0">زمان برگزاری :</div>
-                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red p0">۹۸/۰۵/۰۵</div>
+                            <div class="col-lg-7 col-md-7 col-sm-6 col-xs-6 f_l date_red taling_left p0">۹۸/۰۵/۰۵</div>
                         </div>
                     </li>
                 </ul>
@@ -996,7 +996,7 @@
                             <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 archive t_align f_l p0">
                                 <a href="">
                                     <div class="in f_l m0">
-                                        <i class="icon-chain f_r"></i>
+                                        <i class="icon-chain f_r m_2_5"></i>
                                         <span>
                                             آرشیو
                                         </span>
@@ -1024,7 +1024,7 @@
                 </div>
             </div>
             <div class="f_r title p0">
-                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><a href="">خبرنامه</a></h3>
+                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_0_0"><a href="">خبرنامه</a></h3>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list_item p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -1074,7 +1074,7 @@
                 </div>
             </div>
             <div class="f_r title p0">
-                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 "><a href="">پر بازدیدترین ها</a></h3>
+                <h3 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_0_0"><a href="">پر بازدیدترین ها</a></h3>
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 watch_rate_list p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">

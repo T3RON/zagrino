@@ -19,7 +19,7 @@
                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
             <input id="upload_img" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 f_l m_5 p0">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12 f_l m_5 p0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text_1_2 f_r title_info_big  p0">
                         کالای اصل را از ما بخرید
                     </div>
@@ -64,8 +64,9 @@
                         <div class="sabad_kharid_icon  line_h_3 f_r p0">
                             <img src="<?=base_url('')?>assets/site/img/shoping.svg">
                         </div>
-                        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 fild sabad_kharid_text p_0 f_r p0">
-                            091811111111 / <span class="red">کد ۲۵</span>
+                        <div class="col-lg-4 col-md-4 col-sm-5 col-xs-4 fild sabad_kharid_text p_0 f_r p0">
+                            <span class="hidden-xs">091811111111 /</span>
+                             <span class="red">کد ۲۵</span>
                         </div>
                         <div class=" fild sabad_kharid_text f_l p0">
                             <div class=" f_l">

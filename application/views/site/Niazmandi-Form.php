@@ -54,11 +54,11 @@
                <li>نمایش 2 عدد عکس</li>
                <li>نمایش موقعیت بر روی نقشه</li>
            </ul>
-           <img class="gary_bg_bot" src="<?=base_url('')?>assets/site/img/gary_bg_bot.jpg" alt="">
+           <img class="gary_bg_bot m_-5_0" src="<?=base_url('')?>assets/site/img/gary_bg_bot.jpg" alt="">
 
        </div>
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
-           <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
+           <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 foot_in p0">
                <img src="<?=base_url('')?>assets/site/img/Rounded_blue_ss.png" alt="">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r t_align">
                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">سه ماهه</div>
@@ -74,7 +74,7 @@
            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
                آگهی ویژه
            </div>
-           <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 takhfif f_l">
+           <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 takhfif f_l pos_abs">
                20% تخفیف
            </div>
            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_0_0 line_h_1_0">
@@ -92,10 +92,10 @@
                <li>ثبت ۱ عدد آگهی ویژه</li>
                <li>ثبت ۱ عدد آگهی ویژه</li>
            </ul>
-           <img src="<?=base_url('')?>assets/site/img/red_bg_bot.jpg" alt="">
+           <img class="m_-5_0" src="<?=base_url('')?>assets/site/img/red_bg_bot.jpg" alt="">
        </div>
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 foot">
-        <div class="col-lg-6 col-md-8 col-sm-12 col-xs-12 foot_in p0">
+        <div class="col-lg-6 col-md-8 col-sm-10 col-xs-12 foot_in p0">
             <img src="<?=base_url('')?>assets/site/img/Rounded_blue_ss.png" alt="">
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r t_align">
                 <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 t_align">سه ماهه</div>
@@ -157,22 +157,31 @@
             </div>
 
 
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r fild">
-                   <div class="radio_input">
-                       <label class="radio_label p0">
-                           <span>حقیقی </span>
-                           <input type="radio" name="radio_1">
-                           <span class="checkmark"></span>
-                       </label>
-                   </div>
-                   <div class="radio_input">
-                       <label class="radio_label p0">
-                           <span>حقوقی </span>
-                           <input type="radio" name="radio_1">
-                           <span class="checkmark"></span>
-                       </label>
-                   </div>
-               </div>
+
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l fild vaziat_kala">
+
+                <div class="title">
+                    مالکیت
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 radio_input">
+                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                        <span>حقیقی </span>
+                        <input type="radio" name="radio_1">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 radio_input">
+                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                        <span>حقوقی </span>
+                        <input type="radio" name="radio_1">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+
+
+                </div>
 
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
@@ -256,7 +265,7 @@
                    </div>
                </div>
 
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="fild_in_11" class="p0">موضوع آگهی</label>
@@ -266,7 +275,7 @@
                        <input id="fild_in_11" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="fild_in_15" class="p0">کد ملی (اختیاری)</label>
@@ -298,7 +307,7 @@
                    <i class="icon-plus"></i>
                </button>
 
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r clear fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="tozihat_text" class="p0">توضیحات کامل</label>
@@ -310,7 +319,7 @@
                </div>
 
 
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="fild_in_16" class="p0">موبایل معتبر</label>
@@ -321,7 +330,7 @@
                    </div>
                </div>
 
-               <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="fild_in_17" class="p0">تلفن</label>

@@ -19,7 +19,7 @@
                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
             <input id="upload_img" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 f_l m_5 p0">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12 f_l m_5 p0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text_1_2 f_r title_info_big  p0">
                         کالای اصل را از ما بخرید
                     </div>
@@ -50,9 +50,9 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabad_div_info ">
     پنل کاربری / سبد خرید
 </div>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandi_ghavanin">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandi_ghavanin p0">
 
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 <div class="ghavanin_2 fnt_18">
 آخرین فعالیت ها
 <div class="bottom"></div>
@@ -99,24 +99,24 @@
                           <li class="col-lg-2 col-md-3 col-sm-3 col-xs-12  today-li-inner  f_r green f_r p0">
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 li_inner_black p0"></div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r p0">
-                                <button class="f_l p0">
+                                <button class="f_l p0" id="inc" onclick="btn_inc()">
                                     <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
                               </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r today-li-inner p0">
+                            <div id="number_inc_dec" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r today-li-inner  line_h_4 p0">
                                 10
                               </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_l p0">
-                                <button class="f_r p0">
+                                <button class="f_r p0" id="dec" onclick="btn_dec()">
                                     <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
                               </div></li>
                           <li class="col-lg-2 col-md-2 col-sm-3 col-xs-12  today-li-inner line_h_1_5 f_r black f_r  p0">
                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 li_inner_black p0"></div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_r p0">
-                                <button class="f_l p0">
+                                <button class="f_l p0" >
                                 <img src="<?=base_url('')?>assets/site/img/accept.svg" ></button>
                               </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 f_l p0">
-                                <button class="f_r p0">
+                                <button class="f_r p0" >
                                 <img src="<?=base_url('')?>assets/site/img/denied.svg" ></button>
                               </div>
                        </li>

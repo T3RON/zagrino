@@ -411,8 +411,8 @@
                         <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 moarefi m_p_5 c_bg f_r p0">
                             <div class="col-lg-9 col-md-10 col-sm-10 col-xs-10 t_align f_r p0">معرفی کالا و خدمات</div>
                             <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 f_r p0">
-                                <div class="num f_r">2</div>
-                                <i class="icon-bell3 f_l"></i>
+                                <div class="num f_r pos_abs">2</div>
+                                <i class="icon-bell3 f_l pos_abs"></i>
                             </div>
                             <div class="position p0">
                             </div>
@@ -422,8 +422,8 @@
                         <div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 takhfifi m_p_5 c_bg f_r p0">
                             <div class="col-lg-9 col-md-10 col-sm-10 col-xs-10 t_align f_r p0">پنل تخفیفی</div>
                             <div class="col-lg-3 col-md-2 col-sm-2 col-xs-2 f_r p0">
-                                <div class="num f_r">2</div>
-                                <i class="icon-bell3 f_l"></i>
+                                <div class="num f_r pos_abs">2</div>
+                                <i class="icon-bell3 f_l pos_abs"></i>
                             </div>
                         </div>
                     </a>

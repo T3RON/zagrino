@@ -20,7 +20,7 @@ class BankMashaghelRaigan extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Niazmandi-Form', $output);
+        $this->load->view('site/Niazmandi', $output);
     }
 
 

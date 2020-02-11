@@ -149,7 +149,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>نمایندگی مرکزی</span>
-                            <input type="radio" checked="checked" name="radio">
+                            <input onclick="N_1()" type="radio" checked="checked" name="radio">
                             <span class="checkmark"></span>
                         </label>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel ">
@@ -157,73 +157,72 @@
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                                <div class="t_align fild_title  p0">
                                    <span class="f_r p0"></span>
-                                   <label for="sefaresh_nam_neshan" class="p0">تعداد شعبه و یا نمایندگی در کشور </label>
+                                   <label for="sefaresh_nam_neshan_1" class="p0">تعداد نمایندگی در کشور </label>
                                    <span class="f_l p0"></span>
                                </div>
                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                   <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                   <input id="sefaresh_nam_neshan_1" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                </div>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                                <div class="t_align fild_title  p0">
                                    <span class="f_r p0"></span>
-                                   <label for="sefaresh_nam_neshan" class="p0">تعداد شعبه و یا نمایندگی در بروجرد </label>
+                                   <label for="sefaresh_nam_neshan_2" class="p0">تعداد نمایندگی در بروجرد </label>
                                    <span class="f_l p0"></span>
                                </div>
                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                   <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                   <input id="sefaresh_nam_neshan_2" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                </div>
                            </div>
-                        
                         </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12  radio_label p0">
                             <span>نمایندگی </span>
-                            <input type="radio" name="radio">
+                            <input onclick="N_2()" type="radio" name="radio">
                             <span class="checkmark"></span>
                         </label>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel f_r clear">
                    <div class="t_align fild_title  p0">
                        <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan" class="p0">شماره نمایندگی </label>
+                       <label for="sefaresh_nam_neshan_3" class="p0">شماره نمایندگی </label>
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input id="sefaresh_nam_neshan_3" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r group p0">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>شعبه </span>
-                            <input type="radio" name="radio">
+                            <input onclick="N_3()" type="radio" name="radio">
                             <span class="checkmark"></span>
                         </label>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel f_r clear ">
                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>شعبه اول</span>
-                            <input type="radio" name="radio_in">
+                            <input id="sefaresh_nam_neshan_4" type="radio" name="radio_in">
                             <span class="checkmark"></span>
                         </label>
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>شعبه دوم</span>
-                            <input type="radio" name="radio_in">
+                            <input id="sefaresh_nam_neshan_5" type="radio" name="radio_in">
                             <span class="checkmark"></span>
                         </label>
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>شعبه سوم</span>
-                            <input type="radio" name="radio_in">
+                            <input id="sefaresh_nam_neshan_6" type="radio" name="radio_in">
                             <span class="checkmark"></span>
                         </label>
                         <label class="col-lg-12 col-md-12 col-sm-6 col-xs-12 radio_label p0">
                             <span>شعبه چهارم</span>
-                            <input type="radio" name="radio_in">
+                            <input id="sefaresh_nam_neshan_7" type="radio" name="radio_in">
                             <span class="checkmark"></span>
                         </label>
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>شعبه پنجم</span>
-                            <input type="radio" name="radio_in">
+                            <input id="sefaresh_nam_neshan_8" type="radio" name="radio_in">
                             <span class="checkmark"></span>
                         </label>
                </div>
@@ -232,7 +231,7 @@
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set p0">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>مستقل </span>
-                            <input type="radio" name="radio">
+                            <input onclick="N_4()" type="radio" name="radio">
                             <span class="checkmark"></span>
                         </label>
                     </div>
@@ -457,10 +456,6 @@
                     </ul>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    
-                </div>
-
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild upload_logo">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
@@ -507,7 +502,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_img">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_img img_side">
                     <img id="imgshow_622" src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
                     
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 f_r delete_img">
@@ -717,6 +712,67 @@
         });
     });
 </script>
+<script >
+    $('document').ready(function () {
+        document.getElementById('sefaresh_nam_neshan_1').disabled = false; 
+        document.getElementById('sefaresh_nam_neshan_2').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_3').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_4').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_5').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_6').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_7').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_8').disabled = true;
+    });
+</script>
+<script >
+  function N_1()  {
+        document.getElementById('sefaresh_nam_neshan_1').disabled = false; 
+        document.getElementById('sefaresh_nam_neshan_2').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_3').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_4').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_5').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_6').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_7').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_8').disabled = true;
+    }
+</script>
+<script >
+  function N_2()  {
+        document.getElementById('sefaresh_nam_neshan_1').disabled = true; 
+        document.getElementById('sefaresh_nam_neshan_2').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_3').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_4').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_5').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_6').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_7').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_8').disabled = true;
+    }
+</script>
+<script >
+  function N_3()  {
+        document.getElementById('sefaresh_nam_neshan_1').disabled = true; 
+        document.getElementById('sefaresh_nam_neshan_2').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_3').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_4').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_5').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_6').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_7').disabled = false;
+        document.getElementById('sefaresh_nam_neshan_8').disabled = false;
+    }
+</script>
+<script >
+  function N_4()  {
+        document.getElementById('sefaresh_nam_neshan_1').disabled = true; 
+        document.getElementById('sefaresh_nam_neshan_2').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_3').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_4').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_5').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_6').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_7').disabled = true;
+        document.getElementById('sefaresh_nam_neshan_8').disabled = true;
+    }
+</script>
+
     
     
   

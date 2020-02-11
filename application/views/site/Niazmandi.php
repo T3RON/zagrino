@@ -57,62 +57,93 @@
                 </ul>
             </div>
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 find box p0">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 find box p0">
                 <span class="title p0">
                     جست و جوی سریع براساس نوع درخواست آگهی
                 </span>
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 find_radio p0">
                     <li class="">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>فروش </span>
+                            <span>پزشکی </span>
                             <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>فروش </span>
+                            <span>خدمات </span>
+                            <input type="radio" name="radio_kind">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="">
+                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>آموزشی </span>
+                            <input type="radio" name="radio_kind">
+                            <span class="checkmark"></span>
+                        </label>
+                    </li>
+                    <li class="">
+                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>کد تخفیف </span>
                             <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                 </ul>
+
+                <div class="col-lg-6 col-md-11 col-sm-11 col-xs-12 p0 hover_2 f_r">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 arrow f_r p0">
+                                <i class="icon-long-arrow-right"></i>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-11 see_all f_l p0">
+                                جست و جو 
+                            </div>
+                        </div>
             </div>
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 find box p0">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 find box p0">
                 <span class="title p0">
                     جست و جو براساس تعیین اولویت و نوع شرایط
                 </span>
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 find_radio p0">
-                    <li class="">
-                        <label class="col-lg-12 radio_label p0">
-                            <span>فروش </span>
-                            <input type="checkbox" name="">
+                <li class="">
+                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>پزشکی </span>
+                            <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>فروش </span>
-                            <input type="checkbox" name="">
+                            <span>خدمات </span>
+                            <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>فروش </span>
-                            <input type="checkbox" name="ss">
+                            <span>آموزشی </span>
+                            <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                     <li class="">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>فروش </span>
-                            <input type="checkbox" name="ss">
+                            <span>کد تخفیف </span>
+                            <input type="radio" name="radio_kind">
                             <span class="checkmark"></span>
                         </label>
                     </li>
                 </ul>
+                <div class="col-lg-6 col-md-11 col-sm-11 col-xs-12 p0 hover_2 f_r">
+                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 arrow f_r p0">
+                                <i class="icon-long-arrow-right"></i>
+                            </div>
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-11 see_all f_l p0">
+                                جست و جو 
+                            </div>
+                        </div>
             </div>
 
         </div>   

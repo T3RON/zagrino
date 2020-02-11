@@ -332,7 +332,7 @@
                
                
                
-               <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 f_r fild">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="sefaresh_cod_karbari" class="p0">آی دی مدیر</label>
@@ -347,7 +347,7 @@
                
                
                
-               <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="sefaresh_cod_karbari" class="p0">نام و نشان مدیر</label>
@@ -358,7 +358,7 @@
                    </div>
                </div>
                
-               <div class="col-lg-6 col-md-6 col-sm-8 col-xs-12 f_r  fild">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
                    <div class="t_align fild_title p0">
                        <span class="f_r p0"></span>
                        <label for="sefaresh_cod_karbari" class="p0">شماره تماس مدیر</label>
@@ -424,7 +424,8 @@
                        
                    </ul>
                </div>
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild"><div class="t_align fild_title p0">
+               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+               <div class="t_align fild_title p0">
                 <span class="f_r p0"></span>
                 <label for="upload_img" class="p0">                سفارش لینک سایت ، کانال و پیج و . . .                   
                 </label>
@@ -464,28 +465,27 @@
         ثبت رسانه و شبکه های اجتماعی
     </div>
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
-
+       
     
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p_all_20">
-
+           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  p_all_20 ">
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 m_price contact_lite c_border m_5 price_number f_r clr_g_0ac601">
                             ۴۰۰/۰۰۰ تومان
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 contact_lite  c_border m_5_2 f_r p0">
-                        <a href="">
-                            <div class="color takhfif_btns clr_3e4eee p0">
-                                مشاهده سبد خرید
-                            </div>
-                        </a>
-                    </div>
+                    <a href="">
+                        <div class="color takhfif_btns clr_3e4eee p0">
+                            مشاهده سبد خرید
+                        </div>
+                    </a>
+                </div>
                
                 <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 contact_lite c_border m_5_2 f_r p0">
-                        <a href="">
-                            <div class="color takhfif_btns bg_0ac601 p0">
-                                پرداخت و اتمام خرید
-                            </div>
-                        </a>
-                    </div>
+                    <a href="">
+                        <div class="color takhfif_btns bg_0ac601 p0">
+                            پرداخت و اتمام خرید
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
        </div>
