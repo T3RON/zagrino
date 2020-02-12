@@ -3,7 +3,11 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
+<<<<<<< HEAD
 -- Generation Time: Jan 20, 2020 at 11:28 AM
+=======
+-- Generation Time: Feb 12, 2020 at 12:52 PM
+>>>>>>> 23/11/98
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -674,6 +678,30 @@ CREATE TABLE IF NOT EXISTS `zgr_login_attempts` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `zgr_menu`
+--
+
+DROP TABLE IF EXISTS `zgr_menu`;
+CREATE TABLE IF NOT EXISTS `zgr_menu` (
+  `menu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `menu_title` text NOT NULL,
+  `menu_link` text NOT NULL,
+  PRIMARY KEY (`menu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_menu`
+--
+
+INSERT INTO `zgr_menu` (`menu_id`, `menu_title`, `menu_link`) VALUES
+(1, 'صفحه نخست', 'http://localhost/zagrino/Index');
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 23/11/98
 -- Table structure for table `zgr_ostan`
 --
 
@@ -724,6 +752,32 @@ INSERT INTO `zgr_ostan` (`ostan_id`, `ostan_title`) VALUES
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `zgr_slider`
+--
+
+DROP TABLE IF EXISTS `zgr_slider`;
+CREATE TABLE IF NOT EXISTS `zgr_slider` (
+  `slider_id` int(11) NOT NULL AUTO_INCREMENT,
+  `slider_link` text NOT NULL,
+  `slider_img` text NOT NULL,
+  PRIMARY KEY (`slider_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_slider`
+--
+
+INSERT INTO `zgr_slider` (`slider_id`, `slider_link`, `slider_img`) VALUES
+(5, 'http://localhost/zagrino/admin/Slider/index/add', '35600-3.jpg'),
+(4, 'http://localhost/zagrino/admin/Slider/index/add', 'bc2b4-1.0.jpg'),
+(6, 'http://localhost/zagrino/admin/Slider/index/add', 'e7f6b-2.jpg');
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 23/11/98
 -- Table structure for table `zgr_state`
 --
 
@@ -773,6 +827,30 @@ CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
 -- --------------------------------------------------------
 
 --
+<<<<<<< HEAD
+=======
+-- Table structure for table `zgr_text`
+--
+
+DROP TABLE IF EXISTS `zgr_text`;
+CREATE TABLE IF NOT EXISTS `zgr_text` (
+  `text_id` int(11) NOT NULL AUTO_INCREMENT,
+  `text_title` text NOT NULL,
+  `text_link` text NOT NULL,
+  PRIMARY KEY (`text_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_text`
+--
+
+INSERT INTO `zgr_text` (`text_id`, `text_title`, `text_link`) VALUES
+(1, 'متن متحرک زاگرس زوم با ارائه خدمات برندینگ ، حامی و معرف کسب و کار شماست', 'http://localhost/zagrino/admin/Text/index/add');
+
+-- --------------------------------------------------------
+
+--
+>>>>>>> 23/11/98
 -- Table structure for table `zgr_users`
 --
 
@@ -803,7 +881,11 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
+<<<<<<< HEAD
 (1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1579503831, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+=======
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1581489797, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+>>>>>>> 23/11/98
 (2, '', '6', '', NULL, '', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------

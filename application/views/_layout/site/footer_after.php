@@ -32,13 +32,15 @@
         spaceBetween: 30,
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 8000,
             disableOnInteraction: false,
         },
         pagination: {
             el: '.swiper-pagination',
         },
     });
+
+
 </script>
 
 </body>

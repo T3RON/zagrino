@@ -161,12 +161,21 @@ License: GNU General Public License v2 or later
 }
 
 .header .logo_slider .left_use .c_circle {
+<<<<<<< HEAD
     height: 40px;
     width: 40px;
     box-shadow: 0 0 20px 0 #e1e1e1;
     font-size: 20px;
     color: #ccd5de;
     border-radius: 20px;
+=======
+    height: 64px;
+    width: 64px;
+    box-shadow: 0 0 20px 0 #e1e1e1;
+    font-size: 20px;
+    color: #ccd5de;
+    border-radius: 50px;
+>>>>>>> 23/11/98
     padding: 12px!important;
 }
 
@@ -3589,7 +3598,27 @@ form .fild select {
     font-size: 14px;
     text-align: center;
 }
+<<<<<<< HEAD
 
+=======
+.v-slider-frame {
+    float:right !important;
+    with:100% !important;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+ul.v-slides {
+  list-style-type: none;
+  transform: translateY(50px);
+  padding:0;
+}
+.v-slide {
+  font-size: 15px;
+  line-height: 50px;
+  color: #000;
+}
+>>>>>>> 23/11/98
 .veri_code_niazmandi {
     background: #e9ebec;
     border-radius: 20px;
@@ -4548,10 +4577,17 @@ form .fild select {
 }
 
 .small_img_marhale img {
+<<<<<<< HEAD
     width: 35%;
     position: absolute;
     bottom: 0px;
     right: 35%;
+=======
+    width: 500px;
+    position: absolute;
+    bottom: -164px;
+    right: 9%;
+>>>>>>> 23/11/98
 }
 
 .label_marhale {
@@ -5314,7 +5350,11 @@ form .fild select {
         margin: 0;
     }
     .slider .container-fluid .swiper-container .swiper-wrapper img {
+<<<<<<< HEAD
         height: 450px!important;
+=======
+        height: 350px!important;
+>>>>>>> 23/11/98
     }
     .b_m_v .title_head .report_violation span {
         padding: 4px 10px!important;

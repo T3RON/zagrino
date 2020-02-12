@@ -20,6 +20,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_2d3561 p0">
+<<<<<<< HEAD
             کاربر میهمان
         </div>
 
@@ -105,12 +106,25 @@
                    تایید شماره
                </span>
            </div>
+=======
+        تایید شماره       
+         </div>
+
+
+         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
+
+   
+>>>>>>> 23/11/98
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 m_15 f_r p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img_marhale ">
                     <img src="<?=base_url('')?>assets/site/img/bg_logo_solo.jpg">
                 </div>
                 <div class="ol-lg-12 col-md-12 col-sm-12 col-xs-12 small_img_marhale ">
+<<<<<<< HEAD
                     <img src="<?=base_url('')?>assets/site/img/logo_solo.jpg">
+=======
+                    <img style="bottom: -65px !important;" src="<?=base_url('')?>assets/site/img/verify.png">
+>>>>>>> 23/11/98
                 </div>
            </div>
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  m_15 f_l">
@@ -150,7 +164,10 @@
 
                 </form>
            </div>
+<<<<<<< HEAD
         </div>
+=======
+>>>>>>> 23/11/98
            
 
 
