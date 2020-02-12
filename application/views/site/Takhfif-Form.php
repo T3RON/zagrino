@@ -255,7 +255,7 @@
                         </label>
                     </div>
  
-                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12  radio_input m_p_5">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12  radio_input m_5_5">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>تخفیف خدمات </span>
                             <input type="radio" name="radio_1">
@@ -278,15 +278,18 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild vaziat_kala p0">
 
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input m_p_5">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 radio_input m_p_5">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>تخفیف درصدی </span>
                             <input type="radio" name="radio_1">
                             <span class="checkmark"></span>
                         </label>
                 </div>
+                <p class="hidden-lg hidden-md hidden-sm col-xs-12 f_r m_p_5 ">
+                    مختص فروشندگان کالا - عمده فروشان
+                </p>
  
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input m_p_5 ">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 radio_input m_5_5 ">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>تخفیف پکیجی </span>
                             <input type="radio" name="radio_1">
@@ -294,15 +297,15 @@
                         </label>
                 </div>
                 
-                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 f_r m_p_5 ">
+                <p class="col-lg-5 col-md-5 col-sm-5 hidden-xs f_r m_p_5 ">
                     مختص فروشندگان کالا - عمده فروشان
                 </p>
  
-                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 f_r m_p_5 ">
+                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-12 f_r m_p_5 ">
                         مختص فروشندگان کالا - عمده فروشان
                 </p>
  
-                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-6 radio_input clear m_p_5">
+                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 radio_input clear m_p_5">
                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                             <span>کد تخفیف </span>
                             <input type="radio" name="radio_1">
@@ -313,7 +316,7 @@
 
 
 
-                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-6 clear f_r m_p_5 ">
+                <p class="col-lg-5 col-md-5 col-sm-5 col-xs-12 clear f_r m_p_5 ">
                     مختص سایت های فروشگاهی
                 </p>
             </div>
@@ -1357,13 +1360,6 @@
                                 </li>
                                 <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
                                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                        <span>آموزش</span>
-                                        <input type="checkbox" name="">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </li>
-                                <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                                         <span>هفتگی</span>
                                         <input type="checkbox" name="">
                                         <span class="checkmark"></span>
@@ -1649,7 +1645,7 @@
                                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12  niazmandi_radio ">
                                     <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                         <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>سود مشتری و ارزش واقعی و قیمت  تخفیفی کالا ها را نسبت به قیمت اولیه تض��ین می نمایم  </span>
+                                            <span>سود مشتری و ارزش واقعی و قیمت  تخفیفی کالا ها را نسبت به قیمت اولیه تضمین می نمایم  </span>
                                             <input type="checkbox" name="">
                                             <span class="checkmark"></span>
                                         </label>

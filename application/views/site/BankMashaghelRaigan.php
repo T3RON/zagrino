@@ -376,7 +376,7 @@
 
 
                 <!-- LG & MD Only -->
-                <div class="col-lg-12 col-md-12 hidden-sm hidden-xs toggler_tabs p0">
+                <div class="col-lg-12 hidden-md hidden-sm hidden-xs toggler_tabs p0">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
                         <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
                             <a href="#t_t_tozihat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
@@ -429,7 +429,7 @@
                     </ul>
                 </div>
 
-                <div id="tabs_menu_1" class="col-lg-12 col-md-12 hidden-sm hidden-xs tabs p0">
+                <div id="tabs_menu_1" class="col-lg-12 hidden-md hidden-sm hidden-xs tabs p0">
 
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat">
@@ -613,6 +613,250 @@
 
 
 
+                <!-- MD Only -->
+                <div class="hidden-lg col-md-12 hidden-sm hidden-xs toggler_tabs p0">
+                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_tozihat10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
+                                <div class="title">
+                                    توضیحات کلی
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_emkanat10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
+                                <div class="title">
+                                    امکانات و خدمات
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_etelaat_tamas10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
+                                <div class="title10">
+                                    اطلاعات تماس
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabs_menu_110" class="hidden-lg col-md-12 hidden-sm hidden-xs tabs p0">
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat10">
+                        <p>
+                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
+                        </p>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat10">
+                        <ul>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                <a href="" onclick="return false;">
+                                    <div class="t_align all">
+                                        <i class="icon-check-square"></i>
+                                        <div class="t_align txt p0">
+                                            اینترنت رایگان و نامحدود لابی
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas10">
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    091811111111 - 09351111111
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    08111111111
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    08111111111
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    daglass@gmail.com
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    65919 - 99879
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
+                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                    takfile.com
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+                <div class="hidden-lg col-md-12 hidden-sm hidden-xs toggler_tabs p0">
+                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_shabake_ejtemaei20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
+                                <div class="title">
+                                    آدرس شبکه های اجتماعی
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_addres_map20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
+                                <div class="title">
+                                    آدرس و موقعیت روی نقشه
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
+                            <a href="#t_t_menu_list_khadamat20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
+                                <div class="title">
+                                    لیست خدمات و محصولات
+                                    <div class="d_n"></div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="tabs_menu_120" class="hidden-lg col-md-12 hidden-sm hidden-xs tabs p0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei20">
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                </div>
+                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                    Mojtaba
+                                </div>
+                            </li>
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
+                                </div>
+                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                    Mojtaba
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map20">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                آدرس
+                            </div>
+                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
+                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                موقعیت
+                            </div>
+                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                  
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat20">
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                <div class="img_in p0">
+                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                <div class="img_in p0">
+                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                <div class="img_in p0">
+                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                </div>
+                            </li>
+                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
+                                <div class="img_in p0">
+                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                </div>
+                            </li>
+                        </ul>
+                    </div> 
+                </div>
+
+
                 <!-- Sm Only -->
                 <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
@@ -633,7 +877,7 @@
                             </a>
                         </li>
                         <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
+                            <a href="#t_t_etelaat_tamas1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
                                 <div class="title1">
                                     اطلاعات تماس
                                     <div class="d_n"></div>

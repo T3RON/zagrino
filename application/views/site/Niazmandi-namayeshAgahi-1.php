@@ -41,12 +41,12 @@
         
         
         
-    <div class="col-lg-12 border_box">
+    <div class="col-lg-12 border_box p0">
 
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package left_col f_l flex_box">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package left_col f_l flex_box p0">
             
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side ">
-        <div class="info_mid info_top">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side  p0">
+        <div class="info_mid info_top p0">
             
             <div class="tag tag_niazmandi ">وسایل نقلیه</div>
             
@@ -67,8 +67,8 @@
             </div>
             </div>
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side p_title_niazmandi">
-        <div class="info_mid info_top">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side p_title_niazmandi p0">
+        <div class="info_mid info_top p0">
             
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section f-r p0">
             <div class="observe f_r p0">نقدی - اقساط</div>

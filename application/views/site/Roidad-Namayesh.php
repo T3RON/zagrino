@@ -186,13 +186,13 @@
                             <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
                             <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
                         </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper img_swiper_57 p0">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 img_swiper img_swiper_57 p0">
                         <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">پوستر</div>
                         </div>
                         </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper img_swiper_57 p0">
+                    <div class="col-lg-12 col-md-12 col-sm-6 col-xs-12 img_swiper img_swiper_57 p0">
                         <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">کلیپ</div>

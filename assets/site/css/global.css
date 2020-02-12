@@ -71,7 +71,7 @@ video {
     padding: 0;
     border: 0;
     outline: 0;
-    font-size: 13px;
+    font-size: 14px;
     vertical-align: baseline;
     background: transparent;
     text-align: right;
@@ -360,7 +360,7 @@ form .fild .fild_title {
     line-height: 0.5;
     z-index: 6;
     margin: -2px 15px;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 form .fild .fild_title span {
@@ -377,7 +377,7 @@ form .fild .fild_title label {
 form .fild .fild_in {
     border: 1px solid #E7EBEE;
     border-radius: 20px;
-    padding: 10px 15px;
+    padding: 5px 15px;
     position: relative;
 }
 
@@ -445,12 +445,13 @@ form .fild .radio_label {
     display: block;
     position: relative;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 14px;
     color: #939aa4;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-bottom: 0!important;
 }
 
 form .fild .radio_label input {
@@ -532,7 +533,7 @@ form .fild .radio_label input {
 }
 
 .section_head .right_side {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .section_head .right_side .title {
@@ -705,7 +706,7 @@ form .fild .radio_label input {
     border: 1px solid #e7ebee;
     border-radius: 20px;
     padding: 2px 16px!important;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 
@@ -779,7 +780,7 @@ form .button_change {
 }
 
 form .button_change i {
-    font-size: 13px;
+    font-size: 14px;
     float: left;
 }
 

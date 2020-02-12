@@ -171,16 +171,17 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_date p0">
     <img src="<?=base_url('')?>assets/site/img/Layer%201.png" class="img-responsive" alt="" title="">
     <div class="container-fluid ">
-        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 date f_l p0">
+        <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 date f_l p0">
             سه شنبه
             <span class="f_l">ــــ</span>
         </div>
-        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 text f_l p0">
+        <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 text f_l p0">
             <span class="f_r">ــــ</span>
             با ما برند شوید
         </div>
     </div>
 </div>
+
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 slider clear">

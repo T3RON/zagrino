@@ -18,7 +18,7 @@
                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
             <input id="upload_img" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                 </div>
-                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-8 f_l m_5 p0">
+                <div class="col-lg-10 col-md-9 col-sm-9 col-xs-12 f_l m_5 p0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  text_1_2 f_r title_info_big  p0">
                         کالای اصل را از ما بخرید
                     </div>

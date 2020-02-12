@@ -73,6 +73,28 @@
             });
         });
     </script>
+    <script >
+        function btn_inc(){
+            var value = document.getElementById('number_inc_dec').innerHTML;
+            if(value < 10){
+                value++;
+            }else {
+                value = 10;
+            }
+            document.getElementById('number_inc_dec').innerHTML = value;
+        }
+    </script>
+    <script >
+        function btn_dec(){
+            var value = document.getElementById('number_inc_dec').innerHTML;
+            if(value > 0){
+                value--;
+            }else {
+                value = 0;
+            }
+            document.getElementById('number_inc_dec').innerHTML = value;
+        }
+    </script>
     
     
     

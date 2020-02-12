@@ -39,7 +39,7 @@ License: GNU General Public License v2 or later
     color: #7b8594!important;
     border-radius: 20px;
     border: 1px solid transparent;
-    line-height: 2;
+    line-height: 3;
     display: block;
     text-align: center;
 }
@@ -209,12 +209,12 @@ License: GNU General Public License v2 or later
 }
 
 .under_date .text {
-    padding: 40px 0 20px 0 !important;
+    padding: 40px 20px 20px 0 !important;
 }
 
 .under_date .date {
     text-align: left;
-    padding: 40px 0 20px 0 !important;
+    padding: 40px 0 20px 20px !important;
 }
 
 
@@ -421,7 +421,7 @@ License: GNU General Public License v2 or later
 
 .banks_jobs .left_side ul li .address,
 .similar_jobs .list_item ul li .address {
-    font-size: 12px;
+    font-size: 14px;
     color: #99a0a9;
     border-bottom: 1px solid #f4f6f8;
 }
@@ -487,7 +487,7 @@ License: GNU General Public License v2 or later
 }
 
 .Takhfifat .left_side ul li .head .Location {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .Takhfifat .left_side ul li .button_group {
@@ -594,7 +594,7 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .under button {
     border: 1px solid #c2cadb;
     text-align: center;
-    font-size: 11px;
+    font-size: 14px;
     color: #939aa4;
     background: transparent;
     border-radius: 15px;
@@ -626,7 +626,7 @@ License: GNU General Public License v2 or later
     background: #e9ebec;
     border-radius: 20px;
     padding: 0 5px!important;
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
     margin: 3px 0 0 0!important;
 }
@@ -652,7 +652,7 @@ License: GNU General Public License v2 or later
     background: #fff;
     margin: 4px 0;
     padding: 0 10px!important;
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 10px;
 }
 
@@ -660,7 +660,7 @@ License: GNU General Public License v2 or later
 .c_observe,
 .c_code {
     color: #939aa4;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .c_validate {
@@ -717,18 +717,18 @@ License: GNU General Public License v2 or later
 }
 
 .Roidad .left_side ul li .address {
-    font-size: 12px;
+    font-size: 14px;
     color: #99a0a9;
     border-bottom: 1px solid #f4f6f8;
     padding: 5px 0 !important;
 }
 
 .Roidad .left_side ul li .location {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .Roidad .left_side ul li .date {
-    font-size: 12px;
+    font-size: 14px;
     color: #99a0a9;
     padding: 5px 0 !important;
 }
@@ -780,14 +780,14 @@ License: GNU General Public License v2 or later
 }
 
 .Bazarche .left_side ul li .Location {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .Bazarche .left_side ul li .number {
     border-radius: 10px;
     background: #00bcd4;
     color: #fff !important;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 
@@ -1025,20 +1025,20 @@ License: GNU General Public License v2 or later
     background: #f4f6f8;
     color: #464646;
     padding: 10px 10px 2px 10px !important;
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 10px;
 }
 
 .column_left .news_paper .list_item ul li .text_in {
     line-height: 1.2;
     padding: 10px 8px 0 0 !important;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .column_left .archive {
     border: 1px solid #e7ebee;
     background: #fff;
-    font-size: 12px;
+    font-size: 14px;
     padding: 2px 10px !important;
     border-radius: 10px;
     margin: 0 0 -10px 0;
@@ -1112,7 +1112,7 @@ footer form .footer_grid .footer_border {
     line-height: 0.5;
     z-index: 6;
     margin: -2px 15px;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 footer form .footer_grid .footer_border label {
@@ -1153,7 +1153,7 @@ footer .footer_grid textarea {
 
 footer .footer_grid input::placeholder {
     color: #b3bbc7!important;
-    font-size: 11px;
+    font-size: 14px;
     transition: opacity 0.2s 0.2s ease;
     -webkit-transition: opacity 0.2s 0.2s ease;
     -moz-transition: opacity 0.2s 0.2s ease;
@@ -1162,7 +1162,7 @@ footer .footer_grid input::placeholder {
 
 footer .footer_grid textarea::placeholder {
     color: #b3bbc7!important;
-    font-size: 11px;
+    font-size: 14px;
     transition: opacity 0.2s 0.2s ease;
     -webkit-transition: opacity 0.2s 0.2s ease;
     -moz-transition: opacity 0.2s 0.2s ease;
@@ -1180,7 +1180,7 @@ footer form .footer_grid button {
 }
 
 footer .second_section {
-    font-size: 12px;
+    font-size: 14px;
     line-height: 2;
 }
 
@@ -1255,7 +1255,7 @@ footer .second_section .copyRight_l span {
 .b_m_v .title_head .report_damage span {
     border: 1px solid #fff;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .b_m_v .title_head .report_violation span {
@@ -1316,7 +1316,7 @@ footer .second_section .copyRight_l span {
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .text_1 {
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .text_1 .text_1_1 {
@@ -1332,7 +1332,7 @@ footer .second_section .copyRight_l span {
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .point_section {
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .point_section button {
@@ -1401,7 +1401,7 @@ a {
 
 .b_m_v .border_box .flex_box .left_side .info_mid {
     line-height: 2.5;
-    font-size: 12px!important;
+    font-size: 14px!important;
     padding: 5px 5px 15px 0 !important;
 }
 
@@ -1525,14 +1525,14 @@ a {
 }
 
 .b_m_v .list_item ul li .left_section {
-    font-size: 11px;
+    font-size: 14px;
     padding: 65px 0 0 0 !important;
 }
 
 .b_m_v .list_item ul li .left_section i {
     float: right;
     font-size: 15px;
-    margin: -4px 0 0 0;
+    margin: 0 0 0 0;
     color: #bec7d9;
 }
 
@@ -1556,7 +1556,7 @@ a {
 .b_m_v .list_item ul li .left_section .detail a div {
     width: 95%;
     color: #a3a9b1 !important;
-    font-size: 12px;
+    font-size: 14px;
     padding: 7px 10px !important;
 }
 
@@ -1570,7 +1570,7 @@ a {
 
 .b_m_v .footer p {
     line-height: 3;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .b_m_v .footer p a {
@@ -1578,7 +1578,7 @@ a {
 }
 
 .b_m_v .poster .archive a .in {
-    font-size: 12px;
+    font-size: 14px;
     padding: 6px 5px 6px 12px;
     background: #ed1c24;
     color: #ffffff;
@@ -1606,7 +1606,7 @@ a {
 
 .b_m_v .under_poster .sabt i {
     margin: 14px 15px 0 10px;
-    font-size: 11px;
+    font-size: 14px;
     padding: 1px 1px 1px 2px!important;
     background: #fff !important;
     color: #ed1c24;
@@ -1653,13 +1653,13 @@ a {
     height: 15px;
     border-radius: 20px;
     line-height: 1.4;
-    margin: 5px 2px 0 0;
+    margin: 5px -15px 0 0;
 }
 
 .b_m_v .under_poster .c_bg i {
     color: #000000;
     font-size: 15px;
-    margin: -5px 0 0 11px;
+    margin: 10px 0 0 11px;
 }
 
 .bankmashaghel_img img {
@@ -1791,7 +1791,7 @@ a {
 .b_m_v .toggler_tabs {
     padding: 20px 0 !important;
     line-height: 2;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .b_m_v .toggler_tabs ul {
@@ -1854,7 +1854,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_tozihat p {
     line-height: 1.8;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -1887,7 +1887,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_emkanat ul li a .txt {
     line-height: 1.7;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -1898,7 +1898,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_saate_kari p {
     line-height: 1.8;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 
@@ -1943,7 +1943,7 @@ a {
 }
 
 .b_m_v .border_box .tabs .t_t_saate_kari_vip .week ul li ul li {
-    font-size: 11px;
+    font-size: 14px;
     width: 100%;
     padding: 15px 10px;
     line-height: 1.8;
@@ -2036,14 +2036,14 @@ a {
 }
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .title {
-    font-size: 12px;
+    font-size: 14px;
     color: #969696;
 }
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_text {
     border-radius: 10px;
     border: 1px solid #f7f7f7;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 1.5;
     padding: 7px !important;
 }
@@ -2160,7 +2160,7 @@ a {
 }
 
 .users_point .section_1 .d_b_3 {
-    font-size: 11px;
+    font-size: 14px;
     color: #aab0b7;
 }
 
@@ -2169,7 +2169,7 @@ a {
     padding: 7px 30px;
     background: blue;
     color: #fff;
-    font-size: 11px;
+    font-size: 14px;
     border: none;
     border-radius: 20px;
 }
@@ -2334,7 +2334,7 @@ a {
 .b_m_form form .left .uploaded_img li button {
     box-shadow: 0 1px 2px 0 #dcdcdc;
     color: #8c8c92;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 2.2;
     position: absolute;
     margin: -95px 5px 0 0;
@@ -2363,7 +2363,7 @@ a {
 
 .b_m_form form .left .logo_preview .logo_preview_l {
     line-height: 2.8;
-    font-size: 11px;
+    font-size: 14px;
     padding: 30px 0 0 0 !important;
     color: #9ba1ab;
 }
@@ -2405,7 +2405,7 @@ a {
     border-radius: 20px;
     background: #fff;
     margin: 5px 5px 0 0;
-    font-size: 12px;
+    font-size: 14px;
     color: #949aa4;
 }
 
@@ -2434,7 +2434,7 @@ a {
 
 .b_m_form form .right .fild .radio_input span {
     color: #939aa4;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .b_m_form form .right .fild .radio_input input {
@@ -2479,7 +2479,7 @@ a {
     border: 1px solid #ebeff1;
     padding: 5px 10px !important;
     color: #464646;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .b_m_form form .right .contact_info ul li {
@@ -2551,7 +2551,7 @@ a {
 
 .niazmandiha .section_head .dasteh ul li {
     float: right;
-    font-size: 12px;
+    font-size: 14px;
     padding: 10px 0 10px 10px !important;
 }
 
@@ -2569,7 +2569,7 @@ a {
     float: right;
     background: #6ddcff;
     color: #495358;
-    font-size: 12px;
+    font-size: 14px;
     padding: 5px 25px !important;
     border-radius: 20px;
 }
@@ -2589,7 +2589,7 @@ a {
     display: block;
     position: relative;
     cursor: pointer;
-    font-size: 11px;
+    font-size: 14px;
     color: #939aa4;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -2644,7 +2644,7 @@ a {
 
 .niazmandiha .section_head .find .radio_label span {
     color: #939aa4;
-    font-size: 11px;
+    font-size: 14px;
     text-align: right!important;
 }
 
@@ -2665,7 +2665,7 @@ a {
 }
 
 .niazmandiha_form .all {
-    margin: 30px 0;
+    margin: 20px 0;
     border: 2px dotted #dcdcdc;
     border-radius: 20px;
     padding: 5px 10px 15px 10px!important;
@@ -2795,6 +2795,7 @@ a {
 }
 
 .niazmandiha_form .all .vizheh ul {
+    margin: 15px 0 0 0!important;
     padding: 30px 10px;
     background-color: #ed1b24;
 }
@@ -2855,7 +2856,7 @@ a {
 /* ---- form_sefaresh --*/
 
 .niazmandiha_form form {
-    padding: 15px 0!important;
+    padding: 5px 0!important;
 }
 
 .niazmandiha_form form label {
@@ -2882,20 +2883,20 @@ a {
 
 .niazmandiha_form form .fild select {
     color: #a39d9d !important;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
 }
 
 form .fild select {
     color: #a39d9d !important;
-    font-size: 12px;
+    font-size: 14px;
     border: none;
 }
 
 .niazmandiha_form form .tarefeh_link a {
     color: #2a57ff !important;
     line-height: 3;
-    font-size: 11px;
+    font-size: 14px;
 }
 
 .niazmandiha_form form .img_place {
@@ -2946,7 +2947,7 @@ form .fild select {
 .niazmandiha_form form .vaziat_kala .radio_input {
     right: 10px;
     padding: 0 !important;
-    margin: 0 10px;
+    margin: 0 5px;
     border: 1px solid #e7ebee;
     border-radius: 20px;
     line-height: 3;
@@ -3344,7 +3345,7 @@ form .fild select {
 .niazmandi_n_a .title_head .report_damage span {
     border: 1px solid #fff;
     border-radius: 20px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .niazmandi_n_a .title_head .report_violation span {
@@ -3357,7 +3358,7 @@ form .fild select {
 
 .niazmandi_n_a .border_box {
     border: 1px dashed #dcdcdc;
-    padding: 30px!important;
+    padding: 15px 30px!important;
     margin: 10px 0;
     border-radius: 20px;
 }
@@ -3506,8 +3507,6 @@ form .fild select {
 
 .roidadha_info_inner:last-child {
     border-bottom: none;
-    padding: 15px 0;
-    margin: 1px 0;
 }
 
 .roidadha_info_inner a {
@@ -3587,7 +3586,7 @@ form .fild select {
     background: #e9ebec;
     border-radius: 20px;
     padding: 0 5px!important;
-    font-size: 11px;
+    font-size: 14px;
     text-align: center;
 }
 
@@ -3846,7 +3845,7 @@ form .fild select {
 .label_icon img {
     width: 30px;
     height: 30px;
-    margin: 2px 3px 0 0;
+    margin: 5px 3px 0 0;
     border-radius: 40%;
 }
 
@@ -3921,7 +3920,7 @@ form .fild select {
 }
 
 .img_panel img {
-    width: 110px;
+    width: 130px;
     height: 130px;
     margin: 0 auto!important;
     display: block;
@@ -3973,7 +3972,11 @@ form .fild select {
 .niazmandi_ghavanin .ghavanin_2 {
     color: #000;
     float: right;
-    line-height: 5;
+    line-height: 3;
+}
+
+.line_h_4 {
+    line-height: 4!important;
 }
 
 .niazmandi_ghavanin .ghavanin_2 .bottom {
@@ -3997,7 +4000,6 @@ form .fild select {
 
 .sabad_kharid_icon {
     background: #0ac601;
-    ;
     width: 45px;
     height: 35px;
     margin: 5px;
@@ -4068,11 +4070,12 @@ form .fild select {
 
 .niazmandi_ghavanin .head_title_2 {
     text-align: center;
-    margin: -60px 0 0 0;
+    margin: -30px 0 0 0;
+    line-height: 2;
 }
 
 .niazmandi_ghavanin .head_title_2 span {
-    padding: 0 10px;
+    padding: 0 5px;
     font-size: 20px;
     background: #fff;
 }
@@ -4306,7 +4309,7 @@ form .fild select {
     padding: 7px 25px;
     background: blue;
     color: #fff!important;
-    font-size: 11px;
+    font-size: 14px;
     border: none;
     border-radius: 20px;
     line-height: 1.5;
@@ -4387,7 +4390,7 @@ form .fild select {
     padding: 7px 25px;
     background: blue;
     color: #fff!important;
-    font-size: 11px;
+    font-size: 14px;
     border: none;
     border-radius: 20px;
     line-height: 1.5;
@@ -4398,7 +4401,7 @@ form .fild select {
     padding: 10px 5px!important;
     background: #fff;
     color: #000!important;
-    font-size: 11px;
+    font-size: 14px;
     border: none;
     border-radius: 20px;
     line-height: 1.5;
@@ -4438,7 +4441,7 @@ form .fild select {
 
 .resane_p p {
     line-height: 1.8;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .p_10 {
@@ -4489,6 +4492,14 @@ form .fild select {
     margin: 5px 10px!important;
 }
 
+.m_5_5 {
+    margin: 5px!important;
+}
+
+.pos_abs {
+    position: absolute!important;
+}
+
 .p_2 {
     padding: 1px 0!important;
     text-align: center;
@@ -4509,7 +4520,7 @@ form .fild select {
     padding: 7px 25px;
     background: #fff;
     color: #000!important;
-    font-size: 11px;
+    font-size: 14px;
     border-radius: 20px;
     line-height: 1.5;
 }
@@ -4598,7 +4609,7 @@ form .fild select {
 
 .thkfif_form p {
     line-height: 1.8;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .bg_e2f8ff {
@@ -4647,7 +4658,7 @@ form .fild select {
 }
 
 .radio_label_2 span:first-child {
-    padding: 3px 50px 0 0!important;
+    padding: 7px 50px 0 0!important;
 }
 
 .m_18 {
@@ -4668,6 +4679,10 @@ form .fild select {
 
 .m_p_5_2 {
     margin: 10px 0 0 0!important;
+}
+
+.m_2_5 {
+    margin: 2px 5px!important;
 }
 
 .m_p_10 {
@@ -4691,7 +4706,7 @@ form .fild select {
 }
 
 .p_all_20 {
-    margin: 40px 0;
+    margin: 20px 0 10px 0;
     border: 2px dotted #dcdcdc;
     border-radius: 20px;
     padding: 15px 10px!important;
@@ -4790,6 +4805,15 @@ form .fild select {
     padding: 5px 0!important;
 }
 
+.img_side img {
+    height: 600px;
+    width: 100%;
+}
+
+.m_-5_0 {
+    margin: -5px 0 0 0!important;
+}
+
 
 /*------------ media_screen ---------------*/
 
@@ -4853,7 +4877,7 @@ form .fild select {
         padding: 20px 15px!important;
     }
     .b_m_v .list_item ul li .left_section {
-        font-size: 11px;
+        font-size: 14px;
         padding: 3px 0 0 0 !important;
     }
     .b_m_v .under_poster .c_bg {
@@ -4874,6 +4898,9 @@ form .fild select {
         text-align: center;
         padding: 0 10px !important;
         line-height: 2;
+        z-index: 88;
+        left: 5px;
+        top: 10px;
     }
     .column_left .news_paper .list_item ul li .img img {
         height: 70px;
@@ -4914,6 +4941,9 @@ form .fild select {
         margin: 0 0 0 0;
         font-size: 14px;
     }
+    .niazmandiha_form .all .foot .foot_in div {
+        line-height: 4;
+    }
 }
 
 @media (max-width: 535px) {
@@ -4950,7 +4980,7 @@ form .fild select {
         padding: 20px 15px!important;
     }
     .b_m_v .list_item ul li .left_section {
-        font-size: 11px;
+        font-size: 14px;
         padding: 3px 0 0 0 !important;
     }
     .b_m_v .list_item ul li .left_section div {
@@ -4971,7 +5001,7 @@ form .fild select {
     .b_m_v .under_poster .c_bg i {
         color: #000000;
         font-size: 15px;
-        margin: -5px 0 0 16px;
+        margin: 10px 0 0 16px;
     }
     .b_m_v .border_box .tabs .t_t_saate_kari_vip .week ul li {
         width: 33.2%;
@@ -4994,6 +5024,14 @@ form .fild select {
         text-align: center;
         padding: 0 10px !important;
         line-height: 2;
+        z-index: 88;
+        left: 5px;
+        top: 30px;
+    }
+    .niazmandiha_form .all .vizheh ul {
+        margin: 0 0 0 0!important;
+        padding: 30px 10px;
+        background-color: #ed1b24;
     }
     .column_left .news_paper .list_item ul li .img img {
         height: 70px;
@@ -5033,6 +5071,13 @@ form .fild select {
         text-align: center;
         margin: -3px 0 0 0;
         font-size: 14px;
+    }
+    .section_head .left_side {
+        padding: 15px 5px !important;
+        border-right: none;
+    }
+    .niazmandiha_form .all .foot .foot_in div {
+        line-height: 4;
     }
 }
 
@@ -5128,6 +5173,11 @@ form .fild select {
     .m_20_noxs {
         padding: 20px 0!important;
     }
+    .niazmandiha_form .all .vizheh ul {
+        margin: 3px 0 0 0!important;
+        padding: 30px 10px;
+        background-color: #ed1b24;
+    }
 }
 
 @media (max-width: 765px) {}
@@ -5195,6 +5245,9 @@ form .fild select {
         text-align: center;
         padding: 0 10px !important;
         line-height: 2;
+        z-index: 88;
+        left: 5px;
+        top: 10px;
     }
     .column_left .news_paper .list_item ul li .img img {
         height: 70px;
@@ -5232,6 +5285,14 @@ form .fild select {
         margin: 5px 0 6px 0;
         font-size: 14px;
     }
+    .niazmandiha_form .all .vizheh ul {
+        margin: 0 0 0 0!important;
+        padding: 30px 10px;
+        background-color: #ed1b24;
+    }
+    .niazmandiha_form .all .foot .foot_in div {
+        line-height: 6;
+    }
 }
 
 @media (max-width: 992px) {}
@@ -5253,7 +5314,7 @@ form .fild select {
         margin: 0;
     }
     .slider .container-fluid .swiper-container .swiper-wrapper img {
-        height: 400px!important;
+        height: 450px!important;
     }
     .b_m_v .title_head .report_violation span {
         padding: 4px 10px!important;
@@ -5265,7 +5326,7 @@ form .fild select {
         padding: 4px 12px!important;
     }
     .b_m_v .list_item ul li .left_section {
-        font-size: 11px;
+        font-size: 14px;
         padding: 65px 0 0 0 !important;
     }
     .b_m_v .border_box .flex_box .left_side .info_top .text_1 .text_1_1 {
@@ -5300,6 +5361,9 @@ form .fild select {
         text-align: center;
         padding: 0 10px !important;
         line-height: 2;
+        z-index: 88;
+        left: 0;
+        top: 30px;
     }
     .column_left .news_paper .list_item ul li .img img {
         height: 70px;
@@ -5336,5 +5400,10 @@ form .fild select {
         text-align: center;
         margin: 5px 0 1px 0;
         font-size: 14px;
+    }
+    .niazmandiha_form .all .vizheh ul {
+        margin: 10px 0 0 0!important;
+        padding: 30px 10px;
+        background-color: #ed1b24;
     }
 }

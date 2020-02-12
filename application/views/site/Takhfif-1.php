@@ -265,7 +265,7 @@
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l outer_1 l b_r p0">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_3 p0">
                                         <img src="<?=base_url('')?>assets/site/img/Resane_bg.jpg">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2  p0">دسته بندی رسانه ها</div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_title_2  p0">تخفیف درصدی کالا</div>
                                     </div>
                                 </div>
                             </div>
@@ -860,14 +860,14 @@
                                                     </div>
 
                                                     <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
-                                                        <button class="f_l p0">
+                                                        <button class="f_l p0" onclick="btn_inc()">
                                                       <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
                                                     </div>
                                                     <div class="col-lg-4 col-md-4 col-sm-6 col-xs-4 f_r today-li-inner line_h_5 p0">
                                                         10
                                                     </div>
                                                     <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
-                                                        <button class="f_r p0">
+                                                        <button class="f_r p0" onclick="btn_dec()">
                                                       <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
                                                     </div>
                                                 </li>
@@ -958,7 +958,7 @@
                                             <ul class="p0">
                                                 <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 today-li-tittle_2  p0">
                                                     <ul class="p0">
-                                                        <li class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p0">نام کالا یا محصول</li>
+                                                        <li class="col-lg-2 col-md-3 col-sm-3 col-xs-5 today-li-inner t_align_r p_0_15 p0">نام کالا یا محصول</li>
                                                         <li class="col-lg-2 hidden-md hidden-sm hidden-xs today-li-inner black p0">مبلغ کالا بدون تخفیف به تومان</li>
                                                         <li class="col-lg-1 hidden-md hidden-sm hidden-xs today-li-inner red p0">درصد تخفیف</li>
                                                         <li class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner green p0">قیمت با تخفیف</li>
@@ -978,17 +978,16 @@
                                                             <div class="ccol-lg-12 col-md-12 col-sm-12 col-xs-12 f_r today-li-inner p0">
                                                                 ۱۰ عدد
                                                             </div>
-
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
-                                                                <button class="f_l p0">
-                                                              <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r p0">
+                                                                <button class="f_l p0" id="inc" onclick="btn_inc()">
+                                                                    <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
                                                             </div>
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r today-li-inner line_h_5 p0">
+                                                            <div id="number_inc_dec" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r today-li-inner p0">
                                                                 10
                                                             </div>
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
-                                                                <button class="f_r p0">
-                                                              <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_l p0">
+                                                                <button class="f_r p0" id="dec" onclick="btn_dec()">
+                                                                    <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
                                                             </div>
                                                         </li>
                                                         <li class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner p_20_0 p0">
@@ -1562,16 +1561,16 @@
                                                                 ۱۰ عدد
                                                             </div>
 
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r p0">
-                                                                <button class="f_l p0">
-                                                              <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r p0">
+                                                                <button class="f_l p0" id="inc" onclick="btn_inc()">
+                                                                    <img src="<?=base_url('')?>assets/site/img/plus_perp.svg"></button>
                                                             </div>
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_r today-li-inner line_h_5 p0">
+                                                            <div id="number_inc_dec" class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_r today-li-inner p0">
                                                                 10
                                                             </div>
-                                                            <div class="col-lg-4 col-md-4 col-sm-3 col-xs-4 f_l p0">
-                                                                <button class="f_r p0">
-                                                              <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
+                                                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 f_l p0">
+                                                                <button class="f_r p0" id="dec" onclick="btn_dec()">
+                                                                    <img src="<?=base_url('')?>assets/site/img/minus_perp.svg"></button>
                                                             </div>
                                                         </li>
                                                         <li class="col-lg-2  col-md-2 col-sm-2 hidden-xs today-li-inner p_20_0 p0">
@@ -2118,6 +2117,28 @@
       },
     });
   </script>
+    <script >
+        function btn_inc(){
+            var value = document.getElementById('number_inc_dec').innerHTML;
+            if(value < 10){
+                value++;
+            }else {
+                value = 10;
+            }
+            document.getElementById('number_inc_dec').innerHTML = value;
+        }
+    </script>
+    <script >
+        function btn_dec(){
+            var value = document.getElementById('number_inc_dec').innerHTML;
+            if(value > 0){
+                value--;
+            }else {
+                value = 0;
+            }
+            document.getElementById('number_inc_dec').innerHTML = value;
+        }
+    </script>
     
 
     

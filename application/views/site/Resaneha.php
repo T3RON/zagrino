@@ -100,7 +100,7 @@
 
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
@@ -148,7 +148,7 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
@@ -196,7 +196,7 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
@@ -244,7 +244,7 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
@@ -292,7 +292,7 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
@@ -340,7 +340,7 @@
                                 </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 p0">
+                    <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper img_resaneha p0">
 
