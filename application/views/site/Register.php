@@ -93,11 +93,7 @@
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
                             <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-<<<<<<< HEAD
-                                <option value="none" selected disabled hidden style="color: #dcdcdc">انتخاب شهر</option>
-=======
                                 <option value="none" selected disabled hidden style="color: #dcdcdc"> </option>
->>>>>>> 23/11/98
                                 <option value="1">نهاوند</option>
                                 <option value="2">ملایر</option>
                                 <option value="3">کوهانی</option>
@@ -132,58 +128,17 @@
                     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 contact_lite clear  c_border m_5_2 f_r p0">
                             <a href="">
                                 <div class="color takhfif_btns clr_3e4eee p0">
-<<<<<<< HEAD
-                                    تایید و ارسال
-=======
                                     تایید و ثبت نام
->>>>>>> 23/11/98
                                 </div>
                             </a>
                         </div>
 
            </div>
 
-<<<<<<< HEAD
-           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  m_15 f_l">
-               
-
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 contact_lite m_15  c_border   p0">
-                <a href="">
-                    یا ورود با
-                </a>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_000 f_r m_p_5 clear p0">
-                <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12  f_r" type="button" name="">
-                    <img src="<?=base_url('')?>assets/site/img/goole.svg">
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 p0">
-                        google
-                    </div>
-                </a>
-                </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_000 f_r m_p_5 clear p0">
-                <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12  f_r" type="button" name="">
-                    <img src="<?=base_url('')?>assets/site/img/twiter.svg">
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 p0">
-                        twiter
-                    </div>
-                </a>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bg_000 f_r m_p_5 clear p0">
-                <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12  f_r" type="button" name="">
-                    <img src="<?=base_url('')?>assets/site/img/facebook.svg">
-                    <div class="col-lg-11 col-md-11 col-sm-11 col-xs-11 p0">
-                        facebooks
-                    </div>
-                </a>
-            </div>
-
-       </div>
-=======
                
     
 
      
->>>>>>> 23/11/98
            
         </form>
         </div>

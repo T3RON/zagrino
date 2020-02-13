@@ -73,7 +73,7 @@ class Jobs extends MY_Controller {
         $crud->field_type('jobs_register_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
         $crud->field_type('jobs_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
 
-        $crud->set_field_upload('jobs_logo','assets/uploads/files');
+        $crud->set_field_upload('jobs_logo','assets/uploads/img');
         //$crud->field_type('username','date');
 
 

@@ -1,22 +1,12 @@
 <?php
 
 
-<<<<<<< HEAD
-class MY_Model extends CI_Model
-{
-=======
 class MY_Model extends CI_Model {
 
->>>>>>> 23/11/98
     function __construct()
     {
         parent::__construct();
         $this->load->database();
-<<<<<<< HEAD
-    }
-
-
-=======
         $this->load->library('session');
     }
 
@@ -195,5 +185,4 @@ class MY_Model extends CI_Model {
         return $cnt['count(*)'];
     }
   
->>>>>>> 23/11/98
 }

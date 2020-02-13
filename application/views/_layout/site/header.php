@@ -3,7 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title></title>
+    <title><?= $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
@@ -25,10 +25,6 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
 </head>
-<<<<<<< HEAD
-=======
-
->>>>>>> 23/11/98
 <body>
 <!-- header -->
 <div class="container-fluid ">
@@ -40,7 +36,9 @@
             <div id="mainpage_panel" class="panel_back_g">
                 <div class="main_panel">
                     <div class="panel_buttom">
-                        <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="logo">
+                    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+                    <?php } ?>
                     </div>
                     <div class="body_panel">
                         <ul class="panel_ul">
@@ -102,17 +100,9 @@
         <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs top_header p0">
             <div class="col-lg-5 col-md-9 col-sm-12 col-xs-12 menu_top p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 m0">
-<<<<<<< HEAD
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">صفحه اول</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">پنل کاربری</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3 "><a href="">تعرفه خدمات</a></li>
-                    <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "><a href="">درباره زاگرس زوم</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">ارتباط با ما</a></li>
-=======
                 <?php foreach ($menu_top as $menu_top_value) { ?>
                     <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="<?= $menu_top_value->menu_link; ?>"><?= $menu_top_value->menu_title; ?></a></li>
                 <?php } ?>
->>>>>>> 23/11/98
                 </ul>
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 buy f_l p0">
@@ -136,9 +126,9 @@
             <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12 login p0">
                 <img class="img-circle" src="<?=base_url('')?>assets/site/svg/iconfinder_user_118589.svg" alt="" title="">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 f_r place">
-                    <a href="">ورود</a>
+                    <a href="<?=base_url('site/Login')?>">ورود</a>
                     <span>/</span>
-                    <a href="">ثبت نام</a>
+                    <a href="<?=base_url('site/Register')?>">ثبت نام</a>
                 </div>
             </div>
         </div>
@@ -149,7 +139,9 @@
                         <img src="<?=base_url('')?>assets/site/img/background_logo.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0 m0">
-                        <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="">
+                    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+                    <?php } ?>
                     </div>
                 </div>
                 <nav class="col-lg-2 col-md-3 col-sm-3 col-xs-6 left_use">
@@ -174,9 +166,6 @@
                             </a></li>
                     </ul>
                 </nav>
-<<<<<<< HEAD
-                <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs text_holder f_r">متن متحرک زاگرس زوم با ارائه خدمات برندینگ ، حامی و معرف کسب و کار شماست</div>
-=======
                 <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs text_holder f_r">
                 <div class="v-slider-frame offset-sm-3">
       <ul class="v-slides">
@@ -187,7 +176,6 @@
       </ul>
     </div>
                 </div>
->>>>>>> 23/11/98
         </div>
     </div>
 </div>
@@ -211,23 +199,6 @@
         <!-- Swiper -->
         <div class="swiper-container main_swiper">
             <div class="swiper-wrapper">
-<<<<<<< HEAD
-                <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/carousel.png" class="" alt="" title="">
-                    </a>
-                </div>
-=======
             <?php foreach ($slider as $slider_value) { ?>
                 <div class="swiper-slide">
                     <a href="<?= $slider_value->slider_link;?>">
@@ -235,7 +206,6 @@
                     </a>
                 </div>
             <?php } ?>
->>>>>>> 23/11/98
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>

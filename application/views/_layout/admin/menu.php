@@ -140,51 +140,28 @@
         </li>
         <li class="treeview">
           <a href="#">
-<<<<<<< HEAD
-            <i class="fa fa-folder"></i> <span>مثال ها</span>
-=======
             <i class="fa fa-folder"></i> <span>منو ها</span>
->>>>>>> 23/11/98
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-<<<<<<< HEAD
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> سفارش</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> پروفایل</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> صفحه ورود</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> ثبت نام</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> قفل صفحه</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> ارور ۴۰۴</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> ارور ۵۰۰</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> صفحه خالی</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> صفحه سریع</a></li>
-=======
             <li><a href="<?= base_url('admin/Menu'); ?>"><i class="fa fa-circle-o"></i> بالاي سايت</a></li>
             <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
     
->>>>>>> 23/11/98
           </ul>
         </li>
         <li class="treeview">
         <a href="#">
-<<<<<<< HEAD
-          <i class="fa fa-share"></i> <span>چندسطحی</span>
-=======
           <i class="fa fa-share"></i> <span>تنظيمات سايت</span>
->>>>>>> 23/11/98
           <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-<<<<<<< HEAD
-          <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>
-=======
           <li><a href="<?= base_url('admin/Slider'); ?>"><i class="fa fa-circle-o"></i> اسلايدر صفحه نخست</a></li>
           <li><a href="<?= base_url('admin/Text'); ?>"><i class="fa fa-circle-o"></i>متن متحرك </a></li>
->>>>>>> 23/11/98
+          <li><a href="<?= base_url('admin/Site'); ?>"><i class="fa fa-circle-o"></i> سايت</a></li>
           <li class="treeview">
             <a href="#"><i class="fa fa-circle-o"></i> سطح اول
               <span class="pull-left-container">

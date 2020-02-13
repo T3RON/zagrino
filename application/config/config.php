@@ -23,11 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-<<<<<<< HEAD
-$config['base_url'] = 'http://localhost:8888/zagrino/';
-=======
 $config['base_url'] = 'http://localhost/zagrino/';
->>>>>>> 23/11/98
 $config['thekey']='XhWQgd2YzM1CN1QEZQ8Q2uCBNqR2FxEt';
 
 /*

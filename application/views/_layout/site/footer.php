@@ -14,37 +14,21 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r footer_grid">
                         <div class="t_align footer_border p0">
                             <span class="f_r p0"></span>
-<<<<<<< HEAD
-                            <label for="haghighi" class="p0">حقیقی</label>
-                            <span class="f_l p0"></span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
-                            <input id="haghighi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" placeholder="نام و نام خانوادگی">
-=======
                             <label for="haghighi" class="p0">نام و نام خانوادگی</label>
                             <span class="f_l p0"></span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
                             <input id="haghighi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
->>>>>>> 23/11/98
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12   f_l footer_grid">
                         <div class="t_align footer_border p0">
                             <span class="f_r p0"></span>
-<<<<<<< HEAD
-                            <label for="hoghooghi" class="p0">حقوقی</label>
-                            <span class="f_l p0"></span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
-                            <input id="hoghooghi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" placeholder="نام شرکت">
-=======
                             <label for="hoghooghi" class="p0">نام شرکت</label>
                             <span class="f_l p0"></span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
                             <input id="hoghooghi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
->>>>>>> 23/11/98
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12   f_r footer_grid">
@@ -147,15 +131,6 @@
 <script type="text/javascript" src="<?=base_url('')?>assets/site/js/swiper.min.js"></script>
 <script src="<?=base_url('')?>assets/site/js/pushbar.js"></script>
 <script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
-<<<<<<< HEAD
-    
-    
-      
-    
-<!--    Script For This Page     -->
-      
-      <script>
-=======
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
     
@@ -197,18 +172,13 @@ vSlide.play()
 
 
 
->>>>>>> 23/11/98
     var swiper = new Swiper('.swiper_bankMashaghel', {
       
           slidesPerView: 2,
       spaceBetween: 30,
         loop: true,
         autoplay: {
-<<<<<<< HEAD
-            delay: 2500,
-=======
             delay: 8000,
->>>>>>> 23/11/98
             disableOnInteraction: false,
         },
       pagination: {
