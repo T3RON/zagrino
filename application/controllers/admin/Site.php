@@ -26,16 +26,25 @@ class Site extends MY_Controller {
         $crud->display_as('site_keywords','كلمات كليدي');
         $crud->display_as('site_logo','لوگو');
         $crud->display_as('site_icon','آيكون');
+        $crud->display_as('site_btn_one_title','عنوان دكمه اول');
+        $crud->display_as('site_btn_one_link','لينك دكمه اول');
+        $crud->display_as('site_btn_one_ico','آيكون دكمه اول');
+        $crud->display_as('site_btn_two_title','عنوان دكه دوم');
+        $crud->display_as('site_btn_two_link','لينك دكمه دوم');
+        $crud->display_as('site_btn_two_ico','آيكون دكمه دوم');
+        $crud->display_as('site_ads_text','متن تبليغاتي');
         
         $crud->set_field_upload('site_logo','assets/uploads/img');
         $crud->set_field_upload('site_icon','assets/uploads/img');
+        $crud->set_field_upload('site_btn_one_ico','assets/uploads/img');
+        $crud->set_field_upload('site_btn_two_ico','assets/uploads/img');
 
         $crud->unset_clone();
         $crud->unset_add();
         $crud->unset_delete();
         
 
-        $crud->unset_texteditor('site_title','site_des','site_keywords');
+        $crud->unset_texteditor('site_ads_text','site_btn_one_title','site_btn_one_link','site_btn_two_title','site_btn_two_link','site_title','site_des','site_keywords');
       
         $output = $crud->render();
         $this->out_view($output);

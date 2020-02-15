@@ -23,6 +23,7 @@
             <li class="active"><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
             <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
             <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -147,7 +148,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/Menu'); ?>"><i class="fa fa-circle-o"></i> بالاي سايت</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
+            <li><a href="<?= base_url('admin/Smenu'); ?>"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
     
           </ul>
         </li>

@@ -146,24 +146,26 @@
                 </div>
                 <nav class="col-lg-2 col-md-3 col-sm-3 col-xs-6 left_use">
                     <ul>
+                    <?php foreach($site as $site_value) { ?>
                         <li class="col-lg-6 col-md-6 col-sm-6 hidden-xs t_align advice p0">
-                            <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <a href=" <?= $site_value->site_btn_one_link; ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l p0">
                                     <div class="c_circle m0">
-                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_phone1_172517.svg" class="img-responsive" alt="">
+                                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_btn_one_ico; ?>" class="img-responsive" alt="">
                                     </div>
-                                    مشاوره رایگان
+                                    <?= $site_value->site_btn_one_title; ?>
                                 </div>
                             </a></li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 t_align p0">
-                            <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <a href=" <?= $site_value->site_btn_two_link; ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l p0">
                                     <div class="c_circle m0">
-                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_pictures-optimization_2944880.svg" class="img-responsive" alt="">
+                                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_btn_two_ico; ?>" class="img-responsive" alt="">
                                     </div>
-                                    نمایشگاه ها
+                                    <?= $site_value->site_btn_two_title; ?>
                                 </div>
                             </a></li>
+                            <?php } ?>
                     </ul>
                 </nav>
                 <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs text_holder f_r">
@@ -188,7 +190,9 @@
         </div>
         <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 text f_l p0">
             <span class="f_r">ــــ</span>
-            با ما برند شوید
+            <?php foreach($site as $site_value) { ?>
+                <?= $site_value->site_ads_text; ?>
+                <?php } ?>
         </div>
     </div>
 </div>
@@ -259,51 +263,9 @@
     <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs menu_bottom p0">
         <i class="icon-align-right2"></i>
         <ul class="col-lg-11 col-md-11 col-sm-11 col-xs-11 f_r m0 p0">
-            <li>
-                <a href="">
-                    صفحه
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بانک مشاغل
-                </a>
-            </li>
-            <li>
-                <a href="">
-
-                    تخفیفات
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    آگهی و نیازمندی ها
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    رویداد ها
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بازارچه
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    خدمات گردشگری
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بانک رسانه ها و شبکه های اجتماعی
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    نظرسنجی
-                </a>
-            </li>
+        <?php foreach ($menu_middel as $menu_middel_value) { ?>
+                    <li><a href="<?= $menu_middel_value->smenu_link; ?>"><?= $menu_middel_value->smenu_title; ?></a></li>
+                <?php } ?>
+          
         </ul>
     </div>

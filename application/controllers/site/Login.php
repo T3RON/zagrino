@@ -11,6 +11,7 @@ class Login extends MY_Controller {
     {
         parent::__construct();
         $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
     }
 
     function index()
@@ -18,6 +19,8 @@ class Login extends MY_Controller {
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
+        $output['site'] = $this->MY_Model->select_single('site',1);
+
 
         $this->load->vars(array(
             'home_page' => TRUE
