@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 15, 2020 at 07:26 AM
+-- Generation Time: Feb 16, 2020 at 12:03 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -56,7 +56,14 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `account_about` text NOT NULL,
   `account_level` int(11) NOT NULL,
   PRIMARY KEY (`account_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_accounts`
+--
+
+INSERT INTO `zgr_accounts` (`account_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `account_reg_date`, `account_up_date`, `state_id`, `account_active_code`, `account_avatar`, `account_map_latitude`, `account_map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`) VALUES
+(1, 'محمد', 'سيف', 'mseif', '258456', 'seif4847@gmail.com', '09192183440', '09192183440', '3950171533', '6591953977', '09192183440', 1, 1, 1, '09192183440', '09192183440', 1, '09192183440', '09192183440', '09192183440', '09192183440', 1, 1, '09192183440', 1);
 
 -- --------------------------------------------------------
 
@@ -586,6 +593,8 @@ INSERT INTO `zgr_groups` (`id`, `name`, `description`) VALUES
 DROP TABLE IF EXISTS `zgr_jobs`;
 CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_id` int(11) NOT NULL,
+  `jobs_sub_cate_id` int(11) NOT NULL,
   `account_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -614,24 +623,53 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_count_namayandegi_in_city` int(11) DEFAULT NULL,
   `jobs_sharayet` text,
   `jobs_list_service` text,
-  `jobs_lohe_taghdir` text,
+  `jobs_service_id` int(11) DEFAULT NULL,
   `jobs_mojavez` text,
+  `jobs_video` text,
   `jobs_register_date` text,
-  `jobs_update_date` text NOT NULL,
+  `jobs_update_date` text,
   `state_id` int(11) DEFAULT NULL,
   `jobs_logo` text,
   `jobs_shoar` text,
-  `category_id` text,
   `jobs_price` text,
   PRIMARY KEY (`jobs_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `account_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_lohe_taghdir`, `jobs_mojavez`, `jobs_register_date`, `jobs_update_date`, `state_id`, `jobs_logo`, `jobs_shoar`, `category_id`, `jobs_price`) VALUES
-(1, 3, 4, 63, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'شنبه ۲۱ دی ۱۳۹۸  ۱۳:۳۷  ب ظ', 'شنبه ۲۱ دی ۱۳۹۸  ۱۳:۳۷  ب ظ', 1, NULL, NULL, NULL, '0');
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `account_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `state_id`, `jobs_logo`, `jobs_shoar`, `jobs_price`) VALUES
+(8, 7, 1, 1, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 1, NULL, NULL, NULL),
+(9, 7, 1, 1, 26, 368, 'تست مي باشد', 'تست مي باشد', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '81811-.jpg', NULL, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_cate` (
+  `jobs_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_title` text NOT NULL,
+  PRIMARY KEY (`jobs_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_cate`
+--
+
+INSERT INTO `zgr_jobs_cate` (`jobs_cate_id`, `jobs_cate_title`) VALUES
+(1, 'خدماتی'),
+(2, 'خوراکی ومواد غذایی'),
+(3, 'بهداشتی درمانی'),
+(4, 'فروشگاه ها  و مراکز خرید'),
+(5, 'تفریحی ورزشی'),
+(6, 'دفاتر  و شرکت ها'),
+(7, 'آموزشگاه ها'),
+(8, 'خدمات آنلاین شهری'),
+(9, 'صنعت و معدن');
 
 -- --------------------------------------------------------
 
@@ -645,16 +683,76 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs_images` (
   `jobs_id` int(11) NOT NULL,
   `jobs_image_url` text NOT NULL,
   PRIMARY KEY (`jobs_image_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=42 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=53 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs_images`
 --
 
 INSERT INTO `zgr_jobs_images` (`jobs_image_id`, `jobs_id`, `jobs_image_url`) VALUES
+(46, 9, '7c97f-Hydrangeas.jpg'),
+(45, 9, '61b90-flower-729514_1280.jpg'),
 (40, 1, 'd332c-Jellyfish.jpg'),
 (41, 1, 'f1f63-Koala.jpg'),
+(52, 9, 'e8104-Tulips.jpg'),
+(51, 9, '9d5a2-Penguins.jpg'),
+(50, 9, 'c32ea-summer-192179_1280.jpg'),
+(49, 9, 'ebb2a-Lighthouse.jpg'),
+(48, 9, 'b2cf5-Koala.jpg'),
+(47, 9, '17c59-Jellyfish.jpg'),
 (39, 1, '12127-Lighthouse.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_service`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_service`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_service` (
+  `jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_service_title` text NOT NULL,
+  `jobs_service_ico` text NOT NULL,
+  PRIMARY KEY (`jobs_service_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_service`
+--
+
+INSERT INTO `zgr_jobs_service` (`jobs_service_id`, `jobs_service_title`, `jobs_service_ico`) VALUES
+(1, 'اينترنت رايگان و نامحدود لابي', ''),
+(2, 'سيستم كنترل دما', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_sub_cate` (
+  `jobs_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_id` int(11) NOT NULL,
+  `jobs_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`jobs_sub_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_sub_cate`
+--
+
+INSERT INTO `zgr_jobs_sub_cate` (`jobs_sub_cate_id`, `jobs_cate_id`, `jobs_sub_cate_title`) VALUES
+(1, 7, 'کامپیوتر'),
+(2, 7, 'گلسازی'),
+(3, 7, 'آرایش'),
+(4, 7, 'خط و نقاشی'),
+(5, 7, 'رانندگی'),
+(6, 7, 'زبان'),
+(7, 7, 'علمی/ کنکور'),
+(8, 7, 'فنی'),
+(9, 7, 'موسیقی'),
+(10, 6, 'بيمه ايران');
 
 -- --------------------------------------------------------
 
@@ -741,6 +839,28 @@ INSERT INTO `zgr_ostan` (`ostan_id`, `ostan_title`) VALUES
 (29, 'هرمزگان'),
 (30, 'همدان'),
 (31, 'يزد');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_rel_jobs_service`
+--
+
+DROP TABLE IF EXISTS `zgr_rel_jobs_service`;
+CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
+  `rel_jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_id` int(11) NOT NULL,
+  `jobs_service_id` int(11) NOT NULL,
+  PRIMARY KEY (`rel_jobs_service_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_rel_jobs_service`
+--
+
+INSERT INTO `zgr_rel_jobs_service` (`rel_jobs_service_id`, `jobs_id`, `jobs_service_id`) VALUES
+(4, 8, 2),
+(3, 8, 1);
 
 -- --------------------------------------------------------
 
@@ -929,7 +1049,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1581746126, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1581833399, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '', '6', '', NULL, '', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
