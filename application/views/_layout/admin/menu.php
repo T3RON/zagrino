@@ -21,9 +21,11 @@
           </a>
           <ul class="treeview-menu">
             <li class="active"><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jobsv'); ?>"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jcate'); ?>"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه بندي مشاغل</a></li>
+            <li class="active"><a href="<?= base_url('admin/Jobs_service'); ?>"><i class="fa fa-circle-o"></i>تعريف امكانات و خدمات</a></li>
           </ul>
         </li>
         <li class="treeview">

@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Jobs extends MY_Controller {
+class Jobsv extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -16,11 +16,13 @@ class Jobs extends MY_Controller {
     {
 
         $crud = new grocery_CRUD();
-
+        $crud->where('zgr_jobs.state_id',2);
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
+        
 
-        $crud->columns('jobs_register_date','jobs_title','account_id');
+
+        $crud->columns('state_id','jobs_register_date','jobs_title','account_id');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');

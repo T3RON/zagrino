@@ -39,21 +39,13 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
+                    <?php foreach($jobs_cate as $jobs_cate_value) { ?>
+               
+                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= $jobs_cate_value->jobs_cate_id; ?>">
+                <?= $jobs_cate_value->jobs_cate_title; ?>
+                                        </a></li>
+                <?php } ?>
+                        
                     </ul>
                 </div>
                 <div class="hidden-lg hidden-md hidden-sm hidden-xs title f_r p0">

@@ -17,11 +17,10 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
-    function select_limit($table,$limit,$order_by,$order_type) {
+    function select_limit($table,$limit) {
         $this->db->select('*');
         $this->db->from($table);
         $this->db->limit($limit);
-        $this->db->order_by($order_by,$order_type);
         $query = $this->db->get();
         return $query->result();
     }

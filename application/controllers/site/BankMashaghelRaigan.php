@@ -16,8 +16,11 @@ class BankMashaghelRaigan extends MY_Controller {
     function index()
     {
         $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
+        $output['site'] = $this->MY_Model->select_single('site','1');
+        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
 
         $this->load->vars(array(
             'home_page' => TRUE

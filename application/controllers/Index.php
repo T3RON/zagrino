@@ -25,6 +25,7 @@ class Index extends MY_Controller {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
+        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
 
 
       

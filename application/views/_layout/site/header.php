@@ -185,7 +185,7 @@
     <img src="<?=base_url('')?>assets/site/img/Layer%201.png" class="img-responsive" alt="" title="">
     <div class="container-fluid ">
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 date f_l p0">
-            سه شنبه
+            <?= $timeStamp; ?>
             <span class="f_l">ــــ</span>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 text f_l p0">

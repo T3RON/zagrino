@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Jobs extends MY_Controller {
+class Jobsf extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -19,6 +19,7 @@ class Jobs extends MY_Controller {
 
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
+        $crud->where('zgr_jobs.state_id',1);
 
         $crud->columns('jobs_register_date','jobs_title','account_id');
         $crud->display_as('jobs_id','شناسه');
