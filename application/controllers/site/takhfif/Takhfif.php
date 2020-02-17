@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaigan extends MY_Controller {
+class Takhfif extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -16,8 +16,11 @@ class BankMashaghelRaigan extends MY_Controller {
     function index()
     {
         $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
+        $output['site'] = $this->MY_Model->select_single('site','1');
+        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
 
         $this->load->vars(array(
             'home_page' => TRUE
@@ -25,7 +28,7 @@ class BankMashaghelRaigan extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/BankMashaghelRaigan', $output);
+        $this->load->view('site/Takhfif_form', $output);
     }
 
 

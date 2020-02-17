@@ -82,7 +82,7 @@
             
             <div class="pushbar_main_content">
 
-				<button data-pushbar-target="mypushbar1">
+				<button style=" border: none;padding: 9px;border-radius: 51px;" data-pushbar-target="mypushbar1">
                     <img src="<?=base_url('')?>assets/site/img/menu-24px.svg">
                 </button>
 
@@ -107,13 +107,98 @@
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 buy f_l p0">
                 <div class="col-lg-7 col-md-12 col-sm-7 col-xs-7 add t_align f_l p0">
-                    <a href="">
+                    <a data-toggle="modal" data-target="#exampleModal" href="">
                         <div class="t_align p0">
                             <i class="f_l icon-plus"></i>
+                            
                             ثبت رایگان شغل و آگهی
                         </div>
                     </a>
                 </div>
+
+                <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div class="row">
+      <div class="col-lg-4 header-pick-modal p0">
+
+      
+         <a href="" onclick="return false;">
+        <div class="t_align all">
+        <img src="<?=base_url('')?>assets/site/svg/family.svg" alt="">
+        <div class="t_align txt p0">
+        خدمات گردشگري
+    </div>
+       </div>
+        </a>
+        </div>
+        <div class="col-lg-4 header-pick-modal p0">
+
+      
+        <a href="<?= base_url('site/work/BankMashaghelRaiganForm'); ?>">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/retail.svg" alt="">
+<div class="t_align txt p0">
+ثبت مشاغل
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="<?= base_url('site/takhfif/Takhfif'); ?>">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/sale.svg" alt="">
+<div class="t_align txt p0">
+ثبت تخفيفات
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/blog.svg" alt="">
+<div class="t_align txt p0">
+ثبت آگهي
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/event.svg" alt="">
+<div class="t_align txt p0">
+ثبت رويداد
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+
+      
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/fruit.svg" alt="">
+<div class="t_align txt p0">
+ثبت بازارچه
+</div>
+</div>
+</a>
+</div>
+                         
+        </div>
+                      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
                 <div class="col-lg-4 col-md-12 col-sm-4 col-xs-4 t_align box_up ">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box">
                         سبد خرید

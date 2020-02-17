@@ -445,7 +445,7 @@
                                     <div class="t_align all">
                                         <i class="icon-check-square"></i>
                                         <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
+                                            اینترنت رایگان و نامیحدود لاب
                                         </div>
                                     </div>
                                 </a>

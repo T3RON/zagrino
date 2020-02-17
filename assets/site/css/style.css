@@ -639,6 +639,19 @@ License: GNU General Public License v2 or later
     overflow-y: hidden;
     text-overflow: ellipsis;
 }
+.header-pick-modal {
+    background: #fff;
+    padding: 0 20px !important;
+    border-radius: 5px;
+    color: #fff;
+}
+.header-pick-modal:hover {
+    background: #f5f5f5;
+}
+.header-pick-modal img {
+    width: 50px;
+    margin-top: 7px;
+}
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text .c_title a {
     color: unset !important;
@@ -3128,8 +3141,8 @@ form .fild select {
     width: 100%!important;
     box-shadow: none!important;
     border: none!important;
-    background: #e1e1e1!important;
-    padding: 10px 40px!important;
+    background: #f9f9f9!important;
+    padding: 0px 40px!important;
     margin: 0!important;
     text-align: right;
 }
