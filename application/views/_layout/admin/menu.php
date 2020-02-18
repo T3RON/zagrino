@@ -150,7 +150,8 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/Menu'); ?>"><i class="fa fa-circle-o"></i> بالاي سايت</a></li>
-            <li><a href="<?= base_url('admin/Smenu'); ?>"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
+            <li><a href="<?= base_url('admin/Smenu'); ?>"><i class="fa fa-circle-o"></i> زير اسلايدر سايت</a></li>
+            <li><a href="<?= base_url('admin/Fmenu'); ?>"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
     
           </ul>
         </li>

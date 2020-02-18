@@ -91,18 +91,9 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_menu p0">
                     <ul class="m0 p0">
-                        <li><a href="">
-                            همکاری با زاگرینو
-                        </a></li>
-                        <li><a href="">
-                            قوانین و مقررات
-                        </a></li>
-                        <li><a href="">
-                            سوالات متداول
-                        </a></li>
-                        <li><a href="">
-                            راهنمای استفاده از خدمات
-                        </a></li>
+                    <?php foreach ($footer_menu as $footer_menu_value) { ?>
+                    <li><a href="<?= $footer_menu_value->footer_menu_link; ?>"><?= $footer_menu_value->footer_menu_title; ?></a></li>
+                <?php } ?>
                     </ul>
                 </div>
 
