@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 17, 2020 at 12:20 PM
+-- Generation Time: Feb 18, 2020 at 12:01 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -565,6 +565,31 @@ INSERT INTO `zgr_city` (`city_id`, `ostan_id`, `city_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_footer_menu`
+--
+
+DROP TABLE IF EXISTS `zgr_footer_menu`;
+CREATE TABLE IF NOT EXISTS `zgr_footer_menu` (
+  `footer_menu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `footer_menu_title` text NOT NULL,
+  `footer_menu_link` text NOT NULL,
+  PRIMARY KEY (`footer_menu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_footer_menu`
+--
+
+INSERT INTO `zgr_footer_menu` (`footer_menu_id`, `footer_menu_title`, `footer_menu_link`) VALUES
+(1, 'همكاري با زاگرينو', 'http://localhost/zagrino/Index'),
+(2, 'قوانين و مقررات', 'http://localhost/zagrino/Index'),
+(4, 'سوالات متداول', 'http://localhost/zagrino/Index'),
+(5, 'راهنماي استفاده از خدمات', 'http://localhost/zagrino/Index'),
+(6, 'تعرفه تبليغات', 'http://localhost/zagrino/Index');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_groups`
 --
 
@@ -1049,7 +1074,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1581917514, 1, 'Admin', 'istrator', 'ADMIN', '0'),
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1582006036, 1, 'Admin', 'istrator', 'ADMIN', '0'),
 (2, '', '6', '', NULL, '', NULL, NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
