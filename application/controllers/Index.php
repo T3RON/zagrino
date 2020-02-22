@@ -6,10 +6,15 @@
  * Time: 04:13 AM
  */
 
-class Index extends MY_Controller {
+class Index extends CI_Controller {
     function __construct()
     {
         parent::__construct();
+        $this->load->library('ion_auth');
+        $this->load->library('Jdf');
+        $this->load->library('user_agent');
+        $this->load->helper('url');
+        $this->load->helper('form');
         $this->load->library('javascript');
         $this->load->library('javascript/jquery');
         $this->load->model('Menu_Model');
@@ -27,6 +32,7 @@ class Index extends MY_Controller {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
+        $output['bank_mashaghel'] = $this->Menu_Model->select('jobs');
 
 
       

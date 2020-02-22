@@ -63,11 +63,12 @@
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
+                            <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>"><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href=""><?= $bank_mashaghel_value->jobs_title; ?></a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
                             <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
@@ -81,42 +82,8 @@
                             </div>
                         </div>
                     </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <div class="f_l score p0">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <div class="f_l score p0">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                        </div>
-                    </li>
+                
+                <?php } ?>
                 </ul>
                 
                 <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">

@@ -4,7 +4,7 @@
 
     <!-- column-right -->
 
-
+<?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_head p0">
@@ -32,19 +32,20 @@
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left_side flex_item f_l p0">
 
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 img f_r m0 p0">
-                            <img src="<?=base_url('')?>assets/site/img/Hotel_logo.jpg" class="img-responsive img-circle" alt="">
+                            <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>" class="img-responsive img-circle" alt="">
                         </div>
 
                         <div class="col-lg-7 col-md-6 col-sm-6 col-xs-12 info_top f_l p0">
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                                <h2>هتل توس اصفهان</h2>
+                                <h2><?= $bank_mashaghel_value->jobs_title; ?></h2>
                             </div>
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_1 p0">
                                 <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text_1_1 f_r p0">
                                     <div class="f_r">شناسه :</div>
-                                    <span class="">۱۳۳۴</span>
+                                    <span class=""><?= $bank_mashaghel_value->jobs_id; ?>
+</span>
                                 </div>
-                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 text_1_2 f_l p0">کالای اصل را از ما بخرید</div>
+                                <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 text_1_2 f_l p0"><?= $bank_mashaghel_value->jobs_shoar; ?></div>
                             </div>
 
                             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section p0">
@@ -105,25 +106,25 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info_mid p0">
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 management f_r p0">
                                 <div class="f_r title_c">مدیریت :</div>
-                                <div class="f_r">مجتبی بحیرایی</div>
+                                <div class="f_r"><?= $bank_mashaghel_value->account_fn; ?> <?= $bank_mashaghel_value->account_ln; ?></div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 group p0">
                                 <div class="f_r title_c">گروه بندی :</div>
-                                <div class="f_r">مراکز خرید
-                                    <span>،</span>
-                                    فروشگاه های زنجیره ای
+                                <div class="f_r">
+                                <?= $bank_mashaghel_value->jobs_sub_cate_title; ?>
+                                
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 update f_r p0">
                                 <div class="f_r title_c">آخرین به روز رسانی :</div>
-                                <div class="f_r">۱۳۹۷/۰۸/۰۵</div>
+                                <div class="f_r"><?= $bank_mashaghel_value->jobs_update_date; ?></div>
                             </div>
                             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12 address f_l p0">
                                 <li>
-                                    <div class="f_r">همدان</div>
+                                    <div class="f_r"><?= $bank_mashaghel_value->ostan_title; ?></div>
                                 </li>
                                 <li>
-                                    <div class="f_r">نهاوند</div>
+                                    <div class="f_r"><?= $bank_mashaghel_value->city_title; ?></div>
                                 </li>
                             </ul>
                         </div>
@@ -132,13 +133,13 @@
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_border c_b_r f_r p0">
                                 <div class="t_align">
                                     <span class="title_c">تعداد نمایندگی فعال :</span>
-                                    <span class="">۲۰۰</span>
+                                    <span class=""><?= $bank_mashaghel_value->jobs_count_namayandegi; ?></span>
                                 </div>
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_border c_b_l f_l p0">
                                 <div class="t_align">
-                                    <span class="title_c">تعداد نمایندگی فعال در نهاوند :</span>
-                                    <span class="">۵</span>
+                                    <span class="title_c">تعداد نمایندگی فعال در <?= $bank_mashaghel_value->city_title; ?> :</span>
+                                    <span class=""><?= $bank_mashaghel_value->jobs_count_namayandegi_in_city; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -146,7 +147,7 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_border branch p0">
                             <div class="t_align">
                                 <span class="title_c">شعبـه مرکزی :</span>
-                                <span>نهاوند - پاساژ پیام</span>
+                                <span><?= $bank_mashaghel_value->city_title; ?> - <span><?= $bank_mashaghel_value->jobs_shobe	; ?></span></span>
                             </div>
                         </div>
 
@@ -322,7 +323,7 @@
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 f_r caption p0">
                         <div class="title p0">توضیحات</div>
                         <p>
-                            در سال‌های اخیر شتاب زندگی روزمره بالا رفته‌است و به‌تبع آن، ما زمان کمتری برای چیدن مقدمات سفر در اختیار داریم؛ مجبوریم از کمترین زمان‌هایمان بهترین استفاده را ببریم، چه برای برنامه‌ریزی سفر و چه در خود سفر. رزرو اینترنتی به ما کمک می‌کند در سفرهایمان زمان را صرف پیداکردن محل اقامت نکنیم و دردسرهای رزرو هتل به‌شیوه سنتی را نداشته‌باشیم.
+                        <?= $bank_mashaghel_value->jobs_content; ?>
                         </p>
                     </div>
 
@@ -358,14 +359,13 @@
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 caption f_r p0">
                         <div class="title p0">وبژگی ها</div>
                         <p>
-                            در سال‌های اخیر شتاب زندگی روزمره بالا رفته‌است و به‌تبع آن، ما زمان کمتری برای چیدن مقدمات سفر در اختیار داریم؛ مجبوریم از کمترین زمان‌هایمان بهترین استفاده را ببریم، چه برای برنامه‌ریزی سفر و چه در خود سفر. رزرو اینترنتی به ما کمک می‌کند در سفرهایمان زمان را صرف پیداکردن محل اقامت نکنیم و دردسرهای رزرو هتل به‌شیوه سنتی را نداشته‌باشیم.
-                        </p>
+                        <?= $bank_mashaghel_value->jobs_feature; ?>                        </p>
                     </div>
 
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 price f_r p0">
                         قیمت :
                         <span class="data_price">
-                            125000
+                        <?= $bank_mashaghel_value->jobs_price; ?>  
                         </span>
                         تومان
                     </div>
@@ -434,72 +434,24 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat">
                         <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
+                        <?= $bank_mashaghel_value->jobs_content; ?>
+                                                </p>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat">
                         <ul>
+                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
                             <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
                                 <a href="" onclick="return false;">
                                     <div class="t_align all">
                                         <i class="icon-check-square"></i>
                                         <div class="t_align txt p0">
-                                            اینترنت رایگان و نامیحدود لاب
+                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                        <?php } ?>
                         </ul>
                     </div>
 
@@ -509,37 +461,37 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
+                                <?= $bank_mashaghel_value->jobs_mobile; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_tell; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_fax; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
+                                <?= $bank_mashaghel_value->jobs_email; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
+                                <?= $bank_mashaghel_value->jobs_code_posti; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
+                                <?= $bank_mashaghel_value->jobs_website; ?>  
                                 </div>
                             </li>
                         </ul>
@@ -552,7 +504,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_instagram; ?>  
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -560,7 +512,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_telegram; ?>  
                                 </div>
                             </li>
                         </ul>
@@ -571,7 +523,7 @@
                                 آدرس
                             </div>
                             <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
+                            <?= $bank_mashaghel_value->jobs_telegram; ?> 
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
@@ -586,28 +538,7 @@
 
                   
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
+                    <?= $bank_mashaghel_value->jobs_list_service; ?> 
                     </div> 
                 </div>
 
@@ -647,8 +578,8 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat10">
                         <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
+                        <?= $bank_mashaghel_value->jobs_content; ?> 
+                                                </p>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat10">
@@ -722,37 +653,37 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
+                                <?= $bank_mashaghel_value->jobs_mobile; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_tell; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_fax; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
+                                <?= $bank_mashaghel_value->jobs_email; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
+                                <?= $bank_mashaghel_value->jobs_code_posti; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
+                                <?= $bank_mashaghel_value->jobs_website; ?> 
                                 </div>
                             </li>
                         </ul>
@@ -797,7 +728,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_instagram; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -805,7 +736,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_telegram; ?> 
                                 </div>
                             </li>
                         </ul>
@@ -816,7 +747,7 @@
                                 آدرس
                             </div>
                             <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
+                            <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
@@ -891,8 +822,8 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat1">
                         <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
+                        <?= $bank_mashaghel_value->jobs_content; ?>
+                                                </p>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat1">
@@ -966,37 +897,37 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
+                                <?= $bank_mashaghel_value->jobs_mobile; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_tell; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_fax; ?> 
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
+                                <?= $bank_mashaghel_value->jobs_email; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
+                                <?= $bank_mashaghel_value->jobs_code_posti; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
+                                <?= $bank_mashaghel_value->jobs_website; ?> 
                                 </div>
                             </li>
                         </ul>
@@ -1041,7 +972,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_instagram; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -1049,7 +980,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_telegram; ?>
                                 </div>
                             </li>
                         </ul>
@@ -1060,7 +991,7 @@
                                 آدرس
                             </div>
                             <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
+                            <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
@@ -1128,8 +1059,8 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_tozihat p0" id="t_t_tozihat3">
                         <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
+                        <?= $bank_mashaghel_value->jobs_content; ?>
+                                                </p>
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat3">
@@ -1226,37 +1157,37 @@
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
+                                <?= $bank_mashaghel_value->jobs_mobile; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_tell; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
+                                <?= $bank_mashaghel_value->jobs_fax	; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
-                                </div>
+                                <?= $bank_mashaghel_value->jobs_email; ?>
+                                                                </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
-                                </div>
+                                <?= $bank_mashaghel_value->jobs_code_posti; ?>
+                                                                </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
+                                <?= $bank_mashaghel_value->jobs_website; ?>
                                 </div>
                             </li>
                         </ul>
@@ -1269,7 +1200,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_instagram; ?>
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -1277,7 +1208,7 @@
                                     <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
                                 </div>
                                 <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
+                                <?= $bank_mashaghel_value->jobs_telegram; ?>
                                 </div>
                             </li>
                         </ul>
@@ -1312,7 +1243,7 @@
                                 آدرس
                             </div>
                             <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
+                            <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
@@ -1486,6 +1417,9 @@
  </div>
 </div>
 
+<?php } ?>
+
+
 
 
 
@@ -1603,7 +1537,16 @@
     
     
     
+
+
+
+
+
+
+
+
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
 
 <!--    Script For This Page     -->
  

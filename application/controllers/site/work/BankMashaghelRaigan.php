@@ -6,17 +6,33 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaigan extends MY_Controller {
+class BankMashaghelRaigan extends CI_Controller {
     function __construct()
     {
         parent::__construct();
+        $this->load->library('ion_auth');
+        $this->load->library('Jdf');
+        $this->load->library('user_agent');
+        $this->load->helper('url');
+        $this->load->helper('form');
         $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
     }
 
     function index()
     {
+
+        $id = $this->uri->segment('5');
+        
+
+        $output['bank_mashaghel'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs',$id);
+        $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs','jobs_service','jobs_service','jobs_service',$id);
+        var_dump($output['bank_mashaghel_service']);
+        exit;
+
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
+        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
