@@ -86,13 +86,15 @@ class Jobs extends MY_Controller {
         //$crud->field_type('username','date');
 
 
+      
         //$crud->required_fields('username');
 
         $crud->unset_clone();
+        
         $crud->unset_texteditor(
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
-            'jobs_map_latitude','jobs_map_longitude','jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
+            'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
             'jobs_update_date','jobs_shoar','jobs_price'
         );
 
@@ -169,6 +171,10 @@ class Jobs extends MY_Controller {
         $this->load->view('admin/index',$output);
 
     }
+
+
+
+    
 
 
 }
