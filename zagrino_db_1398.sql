@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 22, 2020 at 01:15 PM
+-- Generation Time: Feb 26, 2020 at 01:03 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -68,25 +68,169 @@ INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zgr_agahi_register`
+-- Table structure for table `zgr_agahi`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_register`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_register` (
+DROP TABLE IF EXISTS `zgr_agahi`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `agahi_id` int(11) NOT NULL,
-  `account_id` int(11) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
   `agahi_hoghoghi_or_haghighi` int(11) NOT NULL,
   `agahi_sazeman_title` text NOT NULL,
   `tarefe_id` int(11) NOT NULL,
   `show_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL,
   `agahi_title` text NOT NULL,
   `agahi_reg_date` date NOT NULL,
   `agahi_update_date` date NOT NULL,
   `state_id` int(11) NOT NULL,
+  `agahi_cate_id` int(11) DEFAULT NULL,
+  `agahi_sub_cate_id` int(11) DEFAULT NULL,
+  `agahi_des` text,
+  `agahi_tell` text,
+  `agahi_latitude` text,
+  `agahi_longitude` text,
+  `agahi_tag_conditions_id` int(11) DEFAULT NULL,
+  `agahi_address` text,
+  `agahi_tag_id` int(11) DEFAULT NULL,
+  `agahi_price` text,
+  `agahi_full_des` text NOT NULL,
+  `agahi_email` text NOT NULL,
+  `agahi_kala_state_id` int(11) NOT NULL,
   PRIMARY KEY (`agahi_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi`
+--
+
+INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_hoghoghi_or_haghighi`, `agahi_sazeman_title`, `tarefe_id`, `show_id`, `agahi_title`, `agahi_reg_date`, `agahi_update_date`, `state_id`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_tag_conditions_id`, `agahi_address`, `agahi_tag_id`, `agahi_price`, `agahi_full_des`, `agahi_email`, `agahi_kala_state_id`) VALUES
+(0, 1, 0, 0, 0, '', 0, 0, '', '0000-00-00', '0000-00-00', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_amlak`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_amlak`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
+  `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `amlak_cate_id` int(11) NOT NULL,
+  `amlak_sub_cat_id` int(11) NOT NULL,
+  `amlak_tag_id` int(11) NOT NULL,
+  `amlak_tag_cond_id` int(11) NOT NULL,
+  `amlak_price` text NOT NULL,
+  `amlak_des` text NOT NULL,
+  `amlak_bonga_title` text NOT NULL,
+  `amlak_agahi_dahande` text NOT NULL,
+  `amlak_sanad_state` text NOT NULL,
+  `amlak_mizan_malekiat` text NOT NULL,
+  `amlak_metraj` text NOT NULL,
+  `amlak_sanad_type` text NOT NULL,
+  `amlak_full_des` text NOT NULL,
+  `amlak_ejare_price` text NOT NULL,
+  `amlak_rahn_price` text NOT NULL,
+  `amlak_count_room` text NOT NULL,
+  `amlak_tabaghe` text NOT NULL,
+  `amlak_parking` text NOT NULL,
+  `amlak_emtiaz` text NOT NULL,
+  `amlak_anbari` text NOT NULL,
+  `amlak_asansor` text NOT NULL,
+  `amlak_date_register` text NOT NULL,
+  `amlak_date_update` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  PRIMARY KEY (`agahi_amlak_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_car`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_car`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
+  `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `agahi_car_cate` int(11) DEFAULT NULL,
+  `agahi_car_sub_cate` int(11) DEFAULT NULL,
+  `agahi_car_tag_id` int(11) DEFAULT NULL,
+  `agahi_car_tag_conditions_id` int(11) DEFAULT NULL,
+  `agahi_car_price` text,
+  `agahi_car_full_des` text,
+  `agahi_car_tell` text,
+  `agahi_car_address` text,
+  `agahi_car_year` text,
+  `agahi_car_type_id` int(11) DEFAULT NULL,
+  `agahi_car_body_type_id` int(11) DEFAULT NULL,
+  `agahi_car_karked` text,
+  `agahi_car_state_id` int(11) DEFAULT NULL,
+  `agahi_car_sokht_id` int(11) DEFAULT NULL,
+  `agahi_car_pelak` text,
+  `agahi_car_color` int(11) DEFAULT NULL,
+  `agahi_car_body_des` text,
+  `agahi_car_motor_des` text,
+  `agahi_rule_check` tinyint(1) DEFAULT NULL,
+  `agahi_car_date_register` text NOT NULL,
+  `agahi_car_date_update` text NOT NULL,
+  `agahi_car_lat` text NOT NULL,
+  `agahi_car_long` text NOT NULL,
+  PRIMARY KEY (`agahi_car_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_cate` (
+  `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cate_title` text NOT NULL,
+  PRIMARY KEY (`agahi_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_cate`
+--
+
+INSERT INTO `zgr_agahi_cate` (`agahi_cate_id`, `agahi_cate_title`) VALUES
+(1, 'وسايل الكتريكي');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_images`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_images`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
+  `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_id` int(11) NOT NULL,
+  `agahi_image_url` text NOT NULL,
+  PRIMARY KEY (`agahi_image_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_sub_cate` (
+  `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cate_id` int(11) NOT NULL,
+  `agahi_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`agahi_sub_cate_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1066,14 +1210,14 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
   `company` varchar(100) DEFAULT NULL,
   `phone` varchar(20) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_users`
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1582368628, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1582715505, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

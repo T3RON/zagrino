@@ -20,7 +20,7 @@ class Jobs extends MY_Controller {
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
 
-        $crud->columns('jobs_register_date','jobs_title','account_id');
+        $crud->columns('jobs_register_date','jobs_title','accounts_id');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');
@@ -45,8 +45,9 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_pinterest','پينترست');
         $crud->display_as('jobs_youtube','يوتوب');
         $crud->display_as('jobs_address','آدرس');
-        $crud->display_as('jobs_map_latitude','latitude');
-        $crud->display_as('jobs_map_longitude','longitude');
+        $crud->display_as('jobs_map_latitude','طول جغرافيايي');
+        $crud->display_as('jobs_map_longitude','عرض جغرافيايي');
+        $crud->display_as('jobs_feature','توضيحات بيشتر');
         $crud->display_as('jobs_count_namayandegi','تعداد نمايندگي ها');
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
         $crud->display_as('jobs_sharayet','شرايط فروش');

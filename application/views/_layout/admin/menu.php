@@ -72,11 +72,58 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>ليست نيازمندي</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>معلق</a></li>
-          </ul>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> بخش نيازمندي
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="<?= base_url('admin/Agahi'); ?>"><i class="fa fa-circle-o"></i>ليست نيازمندي </a></li>
+                  <li><a href="<?= base_url('admin/Acate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="<?= base_url('admin/Ascate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="<?= base_url('admin/Agahi_tarefe'); ?>"><i class="fa fa-circle-o"></i>تعرفه </a></li>
+                  <li><a href="<?= base_url('admin/Agahi_show'); ?>"><i class="fa fa-circle-o"></i>زمان نمايش</a></li>
+                  <li><a href="<?= base_url('admin/Agahi_tagc'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  <li><a href="<?= base_url('admin/Agahi_tag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="<?= base_url('admin/Agahi_skala'); ?>"><i class="fa fa-circle-o"></i>وضعيت كالا</a></li>
+               
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> نيازمندي املاك
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i>ليست املاك </a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> آگهي هاي وسايل نقليه
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i>ليست وسايل نقليه </a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>نوع وسيله</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>وضعيت وسيله</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>نوع سوخت</a></li>
+                  <li><a href="#"><i class="fa fa-circle-o"></i>نوع سوخت</a></li>
+                </ul>
+              </li>
+            </ul>
+    
         </li>
         <li class="treeview">
           <a href="#">
