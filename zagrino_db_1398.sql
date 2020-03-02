@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Feb 26, 2020 at 01:03 PM
+-- Generation Time: Mar 02, 2020 at 12:46 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -208,6 +208,19 @@ INSERT INTO `zgr_agahi_cate` (`agahi_cate_id`, `agahi_cate_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_agahi_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_cond_tag` (
+  `agahi_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`agahi_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_agahi_images`
 --
 
@@ -222,6 +235,33 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_agahi_show_time`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_show_time`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_show_time` (
+  `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_show_time_title` text NOT NULL,
+  `agahi_show_time_val` text NOT NULL,
+  PRIMARY KEY (`agahi_show_time_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_state_kala`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_state_kala`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_state_kala` (
+  `agahi_state_kala_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_state_kala_title` text NOT NULL,
+  PRIMARY KEY (`agahi_state_kala_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_agahi_sub_cate`
 --
 
@@ -231,6 +271,40 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_sub_cate` (
   `agahi_cate_id` int(11) NOT NULL,
   `agahi_sub_cate_title` text NOT NULL,
   PRIMARY KEY (`agahi_sub_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_sub_cate`
+--
+
+INSERT INTO `zgr_agahi_sub_cate` (`agahi_sub_cate_id`, `agahi_cate_id`, `agahi_sub_cate_title`) VALUES
+(1, 1, 'رايانه');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_tag` (
+  `agahi_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_tag_title` text NOT NULL,
+  PRIMARY KEY (`agahi_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_tarefe`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_tarefe`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_tarefe` (
+  `agahi_tarefe_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_tarefe_title` text NOT NULL,
+  `agahi_tarefe_price` text NOT NULL,
+  PRIMARY KEY (`agahi_tarefe_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1217,7 +1291,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1582715505, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583149023, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

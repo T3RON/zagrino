@@ -25,7 +25,7 @@ class Ascate extends MY_Controller {
         $crud->display_as('agahi_cate_id','سر گروه');
         $crud->display_as('agahi_sub_cate_title','زير گروه');
 
-        $crud->set_relation('agahi_cate_id','jobs_cate','jobs_cate_title');
+        $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
 
 
 
