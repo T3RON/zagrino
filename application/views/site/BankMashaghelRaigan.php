@@ -583,67 +583,19 @@
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat10">
-                        <ul>
+                    <ul>
+                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
                             <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
                                 <a href="" onclick="return false;">
                                     <div class="t_align all">
                                         <i class="icon-check-square"></i>
                                         <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
+                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                        <?php } ?>
                         </ul>
                     </div>
 
@@ -827,67 +779,19 @@
                     </div>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat1">
-                        <ul>
+                    <ul>
+                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
                             <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
                                 <a href="" onclick="return false;">
                                     <div class="t_align all">
                                         <i class="icon-check-square"></i>
                                         <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
+                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                        <?php } ?>
                         </ul>
                     </div>
 
@@ -1065,66 +969,19 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat3">
                         <ul>
+                        <ul>
+                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
                             <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
                                 <a href="" onclick="return false;">
                                     <div class="t_align all">
                                         <i class="icon-check-square"></i>
                                         <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
+                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
                                         </div>
                                     </div>
                                 </a>
                             </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
+                        <?php } ?>
                         </ul>
                     </div>
 

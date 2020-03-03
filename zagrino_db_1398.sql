@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 02, 2020 at 12:46 PM
+-- Generation Time: Mar 03, 2020 at 01:20 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -97,7 +97,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `agahi_price` text,
   `agahi_full_des` text NOT NULL,
   `agahi_email` text NOT NULL,
-  `agahi_kala_state_id` int(11) NOT NULL,
+  `agahi_state_kala_id` int(11) NOT NULL,
   PRIMARY KEY (`agahi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -105,7 +105,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
 -- Dumping data for table `zgr_agahi`
 --
 
-INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_hoghoghi_or_haghighi`, `agahi_sazeman_title`, `tarefe_id`, `show_id`, `agahi_title`, `agahi_reg_date`, `agahi_update_date`, `state_id`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_tag_conditions_id`, `agahi_address`, `agahi_tag_id`, `agahi_price`, `agahi_full_des`, `agahi_email`, `agahi_kala_state_id`) VALUES
+INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_hoghoghi_or_haghighi`, `agahi_sazeman_title`, `tarefe_id`, `show_id`, `agahi_title`, `agahi_reg_date`, `agahi_update_date`, `state_id`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_tag_conditions_id`, `agahi_address`, `agahi_tag_id`, `agahi_price`, `agahi_full_des`, `agahi_email`, `agahi_state_kala_id`) VALUES
 (0, 1, 0, 0, 0, '', 0, 0, '', '0000-00-00', '0000-00-00', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 0);
 
 -- --------------------------------------------------------
@@ -305,6 +305,151 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_tarefe` (
   `agahi_tarefe_title` text NOT NULL,
   `agahi_tarefe_price` text NOT NULL,
   PRIMARY KEY (`agahi_tarefe_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_cate` (
+  `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_cate_title` text NOT NULL,
+  PRIMARY KEY (`amlak_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_cond_tag` (
+  `amlak_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`amlak_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_sub_cate` (
+  `amlak_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_cate_id` int(11) NOT NULL,
+  `amlak_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`amlak_sub_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_tag` (
+  `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_tag_title` text NOT NULL,
+  PRIMARY KEY (`amlak_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_car_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_car_cate` (
+  `car_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cate_title` text NOT NULL,
+  PRIMARY KEY (`car_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_car_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_car_cond_tag` (
+  `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`car_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_sokht`
+--
+
+DROP TABLE IF EXISTS `zgr_car_sokht`;
+CREATE TABLE IF NOT EXISTS `zgr_car_sokht` (
+  `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_sokht_title` text NOT NULL,
+  PRIMARY KEY (`car_sokht_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_state`
+--
+
+DROP TABLE IF EXISTS `zgr_car_state`;
+CREATE TABLE IF NOT EXISTS `zgr_car_state` (
+  `car_state_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_state_title` text NOT NULL,
+  PRIMARY KEY (`car_state_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_car_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_car_sub_cate` (
+  `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cate_id` int(11) NOT NULL,
+  `car_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`car_sub_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_car_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_car_tag` (
+  `car_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_tag_title` text NOT NULL,
+  PRIMARY KEY (`car_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_type`
+--
+
+DROP TABLE IF EXISTS `zgr_car_type`;
+CREATE TABLE IF NOT EXISTS `zgr_car_type` (
+  `car_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_type_title` text NOT NULL,
+  PRIMARY KEY (`car_type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1162,7 +1307,7 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
 --
 
 INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', '', '', '', '', '', '', '');
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '');
 
 -- --------------------------------------------------------
 
@@ -1291,7 +1436,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583149023, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583234688, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

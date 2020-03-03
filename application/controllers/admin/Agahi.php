@@ -42,14 +42,15 @@ class Agahi extends MY_Controller {
         $crud->display_as('agahi_tag_conditions_id','برچسب شرايط');
         $crud->display_as('agahi_address','آدرس');
         $crud->display_as('agahi_tag_id','برچسب');
-        $crud->display_as('agahi_price	','قيمت');
+        $crud->display_as('agahi_price','قيمت');
         $crud->display_as('agahi_full_des','توضيحات كامل');
         $crud->display_as('agahi_email','ايميل');
-        $crud->display_as('agahi_kala_state_id	','وضعيت كالا');
+        $crud->display_as('agahi_state_kala_id','وضعيت كالا');
      
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
+        $crud->set_relation('agahi_state_kala_id','agahi_state_kala','agahi_state_kala_title');
         $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
         $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
