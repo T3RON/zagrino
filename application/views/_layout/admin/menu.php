@@ -97,11 +97,12 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i>ليست املاك </a></li>
-                <li><a href="#"><i class="fa fa-circle-o"></i>گروه </a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i>زير گروه</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                <li><a href="<?= base_url('admin/Amlak'); ?>"><i class="fa fa-circle-o"></i>ليست املاك </a></li>
+                <li><a href="<?= base_url('admin/Mcate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="<?= base_url('admin/Mscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="<?= base_url('admin/Mtag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="<?= base_url('admin/Mctag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  
                 </ul>
               </li>
               <li class="treeview">

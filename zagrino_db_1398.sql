@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 03, 2020 at 01:20 PM
+-- Generation Time: Mar 05, 2020 at 10:34 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -121,9 +121,9 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
   `amlak_cate_id` int(11) NOT NULL,
-  `amlak_sub_cat_id` int(11) NOT NULL,
+  `amlak_sub_cate_id` int(11) NOT NULL,
   `amlak_tag_id` int(11) NOT NULL,
-  `amlak_tag_cond_id` int(11) NOT NULL,
+  `amlak_cond_tag_id` int(11) NOT NULL,
   `amlak_price` text NOT NULL,
   `amlak_des` text NOT NULL,
   `amlak_bonga_title` text NOT NULL,
@@ -1436,7 +1436,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583234688, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583391655, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
