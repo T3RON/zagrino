@@ -364,7 +364,7 @@ form .fild .fild_title {
 }
 
 form .fild .fild_title span {
-    background: #e7ebee;
+    background: #999;
     height: 5px;
     width: 5px;
     border-radius: 20px;
@@ -375,7 +375,7 @@ form .fild .fild_title label {
 }
 
 form .fild .fild_in {
-    border: 1px solid #E7EBEE;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 5px 15px;
     position: relative;
@@ -647,7 +647,7 @@ form .fild .radio_label input {
 
 .section_head .left_side {
     padding: 15px 5px !important;
-    border-right: 1px solid #cacaca;
+    border-right: 1px solid #999;
 }
 
 .section_head .left_side ul li {

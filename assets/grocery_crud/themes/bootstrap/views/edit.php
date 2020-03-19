@@ -66,7 +66,7 @@
                                 <div id='report-success' class='report-div success bg-success' style="display:none"></div>
                             </div>
                             <div class="form-group">
-                                <div class="col-sm-5">
+                                <div class="col-sm-7">
                                     <button class="btn btn-default btn-success b10" type="submit" id="form-button-save">
                                         <i class="fa fa-check"></i>
                                         <?php echo $this->l('form_update_changes'); ?>

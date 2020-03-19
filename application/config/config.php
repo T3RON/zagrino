@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/zagrino/';
+$config['base_url'] = 'http://localhost:8888/zagrino/';
 $config['thekey']='XhWQgd2YzM1CN1QEZQ8Q2uCBNqR2FxEt';
 
 /*
@@ -522,5 +522,3 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
-
-

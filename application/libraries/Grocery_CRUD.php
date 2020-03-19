@@ -2387,7 +2387,7 @@ class grocery_CRUD_Layout extends grocery_CRUD_Model_Driver
 		}
 		else
 		{
-			$input = "<input id='field-{$field_info->name}' name='{$field_info->name}' value='$value' class='form-control'>";
+			$input = "<textarea id='field-{$field_info->name}' name='{$field_info->name}' class='form-control'>$value</textarea>";
 		}
 		return $input;
 	}

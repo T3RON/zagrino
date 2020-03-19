@@ -18,9 +18,9 @@ License: GNU General Public License v2 or later
     font-size: 12px!important;
     float: right;
     line-height: 3;
-    border-right: 1px dashed #e3e3e3;
+    border-right: 1px dashed #999;
     border-radius: 0 0 20px 0;
-    border-bottom: 1px dashed #e3e3e3;
+    border-bottom: 1px dashed #999;
 }
 
 .top_header .menu_top {
@@ -161,12 +161,12 @@ License: GNU General Public License v2 or later
 }
 
 .header .logo_slider .left_use .c_circle {
-    height: 64px;
-    width: 64px;
+    height: 40px;
+    width: 40px;
     box-shadow: 0 0 20px 0 #e1e1e1;
     font-size: 20px;
     color: #ccd5de;
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 12px!important;
 }
 
@@ -237,7 +237,7 @@ License: GNU General Public License v2 or later
 .search .search_label span {
     width: 5px;
     height: 5px;
-    background: #e3e3e3;
+    background: #999;
     border-radius: 20px;
 }
 
@@ -639,19 +639,6 @@ License: GNU General Public License v2 or later
     overflow-y: hidden;
     text-overflow: ellipsis;
 }
-.header-pick-modal {
-    background: #fff;
-    padding: 0 20px !important;
-    border-radius: 5px;
-    color: #fff;
-}
-.header-pick-modal:hover {
-    background: #f5f5f5;
-}
-.header-pick-modal img {
-    width: 50px;
-    margin-top: 7px;
-}
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text .c_title a {
     color: unset !important;
@@ -976,18 +963,18 @@ License: GNU General Public License v2 or later
 }
 
 .column_left .border_section {
-    border: 1px solid #e7ebee;
+    border: 1px solid #999;
     border-radius: 10px;
 }
 
 .column_left section .b1 {
     padding: 13px 4px 13px;
     border-radius: 50px;
-    border: 1px solid #e7ebee;
+    border: 1px solid #999;
     border-top: outset transparent;
     border-right: outset transparent;
-    transform: rotate(-44deg);
-    margin: -31px 0 0 0;
+    transform: rotate(-48deg);
+    margin: -34px 0 0 0;
     background: #fff;
 }
 
@@ -1049,7 +1036,7 @@ License: GNU General Public License v2 or later
 }
 
 .column_left .archive {
-    border: 1px solid #e7ebee;
+    border: 1px solid #999;
     background: #fff;
     font-size: 14px;
     padding: 2px 10px !important;
@@ -1133,14 +1120,14 @@ footer form .footer_grid .footer_border label {
 }
 
 footer .footer_border span {
-    background: #e7ebee;
+    background: #999;
     height: 5px;
     width: 5px;
     border-radius: 20px;
 }
 
 footer .footer_grid .footer_in {
-    border: 1px solid #E7EBEE;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 10px !important;
 }
@@ -1830,7 +1817,7 @@ a {
 
 .b_m_v .toggler_tabs ul li .is-target-visible .title {
     color: #e91e63!important;
-    border: 1px solid #e7ebee;
+    border: 1px solid #828282;
     border-bottom: none!important;
     position: relative;
     border-radius: 50px 50px 0 0;
@@ -2679,7 +2666,7 @@ a {
 
 .niazmandiha_form .all {
     margin: 20px 0;
-    border: 2px dotted #dcdcdc;
+    border: 2px dotted #999;
     border-radius: 20px;
     padding: 5px 10px 15px 10px!important;
 }
@@ -2942,7 +2929,7 @@ form .fild select {
 }
 
 .niazmandiha_form form .niazmandi_radio li label {
-    border: 1px solid #E7EBEE;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 5px 7px !important;
 }
@@ -2973,7 +2960,7 @@ form .fild select {
 
 .niazmandiha_form form .text_title span {
     padding: 10px 20px !important;
-    color: #c0c8d3;
+    color: #999;
 }
 
 .niazmandiha_form form .fild .img_place li {
@@ -3002,7 +2989,7 @@ form .fild select {
 }
 
 .niazmandiha_form form .naghlie_makhsoos .body {
-    border-color: #f7e8da!important;
+    border-color: #999!important;
     padding: 25px 0 !important;
 }
 
@@ -3011,14 +2998,14 @@ form .fild select {
 
 .niazmandi_ghavanin .outer {
     text-align: center;
-    background: #673ab7;
+    /* background: #673ab7; */
     border-radius: 20px !important;
     margin: 5px 0 2px 0;
 }
 
 .niazmandi_ghavanin .all {
     margin: 40px 0;
-    border: 2px dotted #dcdcdc;
+    border: 2px dotted #999;
     border-radius: 20px;
     padding: 20px 20px!important;
 }
@@ -3141,8 +3128,8 @@ form .fild select {
     width: 100%!important;
     box-shadow: none!important;
     border: none!important;
-    background: #f9f9f9!important;
-    padding: 0px 40px!important;
+    background: #e1e1e1!important;
+    padding: 10px 40px!important;
     margin: 0!important;
     text-align: right;
 }
@@ -3602,23 +3589,7 @@ form .fild select {
     font-size: 14px;
     text-align: center;
 }
-.v-slider-frame {
-    float:right !important;
-    with:100% !important;
-  height: 50px;
-  overflow: hidden;
-  text-align: center;
-}
-ul.v-slides {
-  list-style-type: none;
-  transform: translateY(50px);
-  padding:0;
-}
-.v-slide {
-  font-size: 15px;
-  line-height: 50px;
-  color: #000;
-}
+
 .veri_code_niazmandi {
     background: #e9ebec;
     border-radius: 20px;
@@ -3933,7 +3904,7 @@ ul.v-slides {
 
 .right_panel {
     background: #fff;
-    border-left: 1px solid #e7ebee;
+    border-left: 1px solid #999;
 }
 
 .left_panel {
@@ -3993,8 +3964,8 @@ ul.v-slides {
 }
 
 .sabad_div_info {
-    border-top: 1px solid #e7ebee;
-    border-bottom: 1px solid #e7ebee;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
     padding: 15px 15px;
 }
 
@@ -4086,13 +4057,13 @@ ul.v-slides {
 
 .niazmandi_ghavanin .all_2 {
     margin: 10px 0;
-    border: 2px solid #dcdcdc;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 10px 20px!important;
 }
 
 .today-li {
-    border: 2px solid #dcdcdc;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 10px 15px!important;
 }
@@ -4359,7 +4330,7 @@ ul.v-slides {
 }
 
 .today-li_2 {
-    border: 2px solid #dcdcdc;
+    border: 1px solid #999;
     border-radius: 20px;
     padding: 10px 5px!important;
     margin: 3px 0!important;
@@ -4577,10 +4548,10 @@ ul.v-slides {
 }
 
 .small_img_marhale img {
-    width: 500px;
+    width: 35%;
     position: absolute;
-    bottom: -164px;
-    right: 9%;
+    bottom: 0px;
+    right: 35%;
 }
 
 .label_marhale {
@@ -4736,7 +4707,7 @@ ul.v-slides {
 
 .p_all_20 {
     margin: 20px 0 10px 0;
-    border: 2px dotted #dcdcdc;
+    border: 2px dotted #999;
     border-radius: 20px;
     padding: 15px 10px!important;
 }
@@ -4843,6 +4814,20 @@ ul.v-slides {
     margin: -5px 0 0 0!important;
 }
 
+.m_l_15 {
+    margin: 0 15px!important;
+    text-align: center!important;
+}
+
+.borde_r_35 {
+    border-radius: 25px;
+    text-align: center!important;
+}
+
+.border_none {
+    border: none!important;
+}
+
 
 /*------------ media_screen ---------------*/
 
@@ -4869,7 +4854,7 @@ ul.v-slides {
 
 @media (min-width: 600px) {
     .search {
-        border: 1px solid #e3e3e3;
+        border: 1px solid #999;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -4941,7 +4926,7 @@ ul.v-slides {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #e7ebee;
+        border: 1px solid #828282;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -4971,7 +4956,7 @@ ul.v-slides {
         font-size: 14px;
     }
     .niazmandiha_form .all .foot .foot_in div {
-        line-height: 4;
+        line-height: 5;
     }
 }
 
@@ -4989,7 +4974,7 @@ ul.v-slides {
         padding: 4px 9px!important;
     }
     .search {
-        border: 1px solid #e3e3e3;
+        border: 1px solid #999;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5072,7 +5057,7 @@ ul.v-slides {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #e7ebee;
+        border: 1px solid #828282;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -5110,6 +5095,16 @@ ul.v-slides {
     }
 }
 
+.tlt_2 {
+    font-size: 23px;
+    padding: 10px 0 !important;
+}
+
+.border_b_1 {
+    padding: 10px 0!important;
+    border-bottom: 1px solid #e1e1e1!important;
+}
+
 @media (max-width: 600px) {}
 
 
@@ -5117,7 +5112,7 @@ ul.v-slides {
 
 @media (min-width: 768px) {
     .search {
-        border: 1px solid #e3e3e3;
+        border: 1px solid #999;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5182,7 +5177,7 @@ ul.v-slides {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #e7ebee;
+        border: 1px solid #828282;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -5216,7 +5211,7 @@ ul.v-slides {
 
 @media (min-width: 992px) {
     .search {
-        border: 1px solid #e3e3e3;
+        border: 1px solid #999;
         border-radius: 50px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5288,7 +5283,7 @@ ul.v-slides {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #e7ebee;
+        border: 1px solid #828282;
         border-bottom: none!important;
         position: relative;
         border-radius: 50px 50px 0 0;
@@ -5320,7 +5315,7 @@ ul.v-slides {
         background-color: #ed1b24;
     }
     .niazmandiha_form .all .foot .foot_in div {
-        line-height: 6;
+        line-height: 5.3;
     }
 }
 
@@ -5333,7 +5328,7 @@ ul.v-slides {
 
 @media (min-width: 1200px) {
     .search {
-        border: 1px solid #e3e3e3;
+        border: 1px solid #999;
         border-radius: 50px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5343,7 +5338,7 @@ ul.v-slides {
         margin: 0;
     }
     .slider .container-fluid .swiper-container .swiper-wrapper img {
-        height: 350px!important;
+        height: 450px!important;
     }
     .b_m_v .title_head .report_violation span {
         padding: 4px 10px!important;
@@ -5404,7 +5399,7 @@ ul.v-slides {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #e7ebee;
+        border: 1px solid #828282;
         border-bottom: none!important;
         position: relative;
         border-radius: 50px 50px 0 0;

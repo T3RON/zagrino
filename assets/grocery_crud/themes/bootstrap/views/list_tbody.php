@@ -58,7 +58,7 @@
                                             ?>
                                             <li>
                                                 <a href="<?php echo $action_url; ?>">
-                                                    <span><?php echo $action->label?></span>
+                                                    <span style="float: right;"><?php echo $action->label?></span>
                                                     <i class="fa <?php echo $action->css_class; ?>"></i> 
                                                 </a>
                                             </li>
@@ -68,7 +68,7 @@
                                     <?php if (!$unset_read) { ?>
                                         <li>
                                             <a href="<?php echo $row->read_url?>">
-                                            <span><?php echo $this->l('list_view')?></span>
+                                            <span style="float: right;"><?php echo $this->l('list_view')?></span>
                                             <i class="fa fa-eye"></i> 
                                             
                                             </a>
@@ -77,7 +77,7 @@
                                     <?php if (!$unset_delete) { ?>
                                         <li>
                                             <a data-target="<?php echo $row->delete_url?>" href="javascript:void(0)" title="<?php echo $this->l('list_delete')?>" class="delete-row">
-                                            <span class="text-danger"><?php echo $this->l('list_delete')?></span>
+                                            <span style="float: right;" class="text-danger"><?php echo $this->l('list_delete')?></span>
                                                 <i class="fa fa-trash-o text-danger"></i>
                                             </a>
                                         </li>
