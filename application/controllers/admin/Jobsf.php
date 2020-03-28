@@ -21,11 +21,11 @@ class Jobsf extends MY_Controller {
         $crud->set_subject('شغل');
         $crud->where('zgr_jobs.state_id',1);
 
-        $crud->columns('jobs_register_date','jobs_title','account_id');
+        $crud->columns('jobs_register_date','jobs_title','accounts_id');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');
-        $crud->display_as('account_id','كاربر');
+        $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
         $crud->display_as('jobs_title','عنوان شغل');
@@ -69,8 +69,7 @@ class Jobsf extends MY_Controller {
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
-        $crud->set_relation('account_id','accounts','account_mobile');
-        $crud->set_relation('account_id','accounts','account_mobile');
+        $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         

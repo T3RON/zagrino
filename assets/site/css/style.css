@@ -589,8 +589,16 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .upper img {
     height: 140px;
     border-radius: 10px;
+} 
+.expiredimg {
+    height: 67px !important;
+    width: 67px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 41px !important;
+   
 }
-
 .Agahiha_Niazmandiha .left_side ul li .under button {
     border: 1px solid #c2cadb;
     text-align: center;
@@ -3791,9 +3799,7 @@ ul.v-slides {
     width: 100%!important
 }
 
-.img img {
-    width: 100%!important
-}
+
 
 .ta_r {
     text-align: center!important;
