@@ -20,12 +20,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
-            <li class="active"><a href="<?= base_url('admin/Jobsv'); ?>"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
-            <li class="active"><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
-            <li class="active"><a href="<?= base_url('admin/Jcate'); ?>"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
-            <li class="active"><a href="<?= base_url('admin/Jscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه بندي مشاغل</a></li>
-            <li class="active"><a href="<?= base_url('admin/Jobs_service'); ?>"><i class="fa fa-circle-o"></i>تعريف امكانات و خدمات</a></li>
+            <li><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jobsv'); ?>"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
+            <li><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li><a href="<?= base_url('admin/Jcate'); ?>"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه بندي مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jobs_service'); ?>"><i class="fa fa-circle-o"></i>تعريف امكانات و خدمات</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -214,25 +214,17 @@
           <li><a href="<?= base_url('admin/Slider'); ?>"><i class="fa fa-circle-o"></i> اسلايدر صفحه نخست</a></li>
           <li><a href="<?= base_url('admin/Text'); ?>"><i class="fa fa-circle-o"></i>متن متحرك </a></li>
           <li><a href="<?= base_url('admin/Site'); ?>"><i class="fa fa-circle-o"></i> سايت</a></li>
+          <li><a href="<?= base_url('admin/State'); ?>"><i class="fa fa-circle-o"></i> وضعيت ها</a></li>
           <li class="treeview">
-            <a href="#"><i class="fa fa-circle-o"></i> سطح اول
+            <a href="#"><i class="fa fa-circle-o"></i> مديريت شهر ها
               <span class="pull-left-container">
                   <i class="fa fa-angle-right pull-left"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> سطح دوم</a></li>
-              <li class="treeview">
-                <a href="#"><i class="fa fa-circle-o"></i> سطح دوم
-                  <span class="pull-left-container">
-                      <i class="fa fa-angle-right pull-left"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
-                </ul>
-              </li>
+              <li><a href="<?= base_url('admin/Ostan'); ?>"><i class="fa fa-circle-o"></i>استان</a></li>
+              <li><a href="<?= base_url('admin/City'); ?>"><i class="fa fa-circle-o"></i>شهرستان</a></li>
+   
             </ul>
           </li>
           <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>

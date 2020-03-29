@@ -24,35 +24,15 @@
                 <div class="inner p0">آگهی های ویژه</div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
-                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12 title f_r p0">
-                    <a href="">
-                        <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs p0 hover">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
-                                <i class="icon-long-arrow-right"></i>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 see_all f_l p0">
-                                مشاهده همه
-                            </div>
-                        </div>
-                    </a>
-                </div>
+       
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    <?php foreach ($agahi_cate as $agahi_cate_val) {  ?>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
+                            <?= $agahi_cate_val->agahi_cate_title; ?>
                         </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
+                    <?php } ?>
+                     
                     </ul>
                 </div>
             </div>
@@ -162,7 +142,7 @@
                                     </div>
                                     <img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title="">
                                     <div class="expired monghazi p0">
-                                        <img src="<?=base_url('')?>assets/site/img/monghazi.png">
+                                        <img class="expiredimg" src="<?=base_url('')?>assets/site/img/monghazi.png">
                                     </div>
                                 </div>
                                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 c_text f_l p0">

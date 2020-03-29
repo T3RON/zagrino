@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Alist extends MY_Controller {
+class Jlist extends MY_Controller {
     function __construct()
     {
         parent::__construct();
