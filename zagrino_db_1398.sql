@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 05, 2020 at 10:34 AM
+-- Generation Time: Mar 31, 2020 at 07:28 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -31,30 +31,30 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `zgr_accounts`;
 CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `accounts_id` int(11) NOT NULL AUTO_INCREMENT,
-  `account_fn` text NOT NULL,
-  `account_ln` text NOT NULL,
-  `account_username` text NOT NULL,
-  `account_pass` text NOT NULL,
-  `account_email` text NOT NULL,
+  `account_fn` text,
+  `account_ln` text,
+  `account_username` text,
+  `account_pass` text,
+  `account_email` text,
   `account_mobile` text NOT NULL,
-  `account_tell` text NOT NULL,
-  `account_codemeli` text NOT NULL,
-  `account_codeposti` text NOT NULL,
-  `account_address` text NOT NULL,
-  `ostan_id` int(11) NOT NULL,
-  `city_id` int(11) NOT NULL,
-  `account_state` int(11) NOT NULL,
-  `account_reg_date` text NOT NULL,
-  `account_up_date` text NOT NULL,
-  `state_id` int(11) NOT NULL,
-  `account_active_code` text NOT NULL,
-  `account_avatar` text NOT NULL,
-  `account_map_latitude` text NOT NULL,
-  `account_map_longitude` text NOT NULL,
-  `account_sex` int(11) NOT NULL,
-  `account_age` int(11) NOT NULL,
-  `account_about` text NOT NULL,
-  `account_level` int(11) NOT NULL,
+  `account_tell` text,
+  `account_codemeli` text,
+  `account_codeposti` text,
+  `account_address` text,
+  `ostan_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `account_state` int(11) DEFAULT NULL,
+  `account_reg_date` text,
+  `account_up_date` text,
+  `state_id` int(11) DEFAULT NULL,
+  `account_active_code` text,
+  `account_avatar` text,
+  `account_map_latitude` text,
+  `account_map_longitude` text,
+  `account_sex` int(11) DEFAULT NULL,
+  `account_age` int(11) DEFAULT NULL,
+  `account_about` text,
+  `account_level` int(11) DEFAULT NULL,
   PRIMARY KEY (`accounts_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -141,6 +141,9 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `amlak_emtiaz` text NOT NULL,
   `amlak_anbari` text NOT NULL,
   `amlak_asansor` text NOT NULL,
+  `amlak_address` text NOT NULL,
+  `amlak_lat` text NOT NULL,
+  `amlak_long` text NOT NULL,
   `amlak_date_register` text NOT NULL,
   `amlak_date_update` text NOT NULL,
   `state_id` int(11) NOT NULL,
@@ -159,20 +162,21 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
-  `agahi_car_cate` int(11) DEFAULT NULL,
-  `agahi_car_sub_cate` int(11) DEFAULT NULL,
-  `agahi_car_tag_id` int(11) DEFAULT NULL,
-  `agahi_car_tag_conditions_id` int(11) DEFAULT NULL,
+  `agahi_car_title` text NOT NULL,
+  `car_cate_id` int(11) DEFAULT NULL,
+  `car_sub_cate_id` int(11) DEFAULT NULL,
+  `car_tag_id` int(11) DEFAULT NULL,
+  `car_cond_tag_id` int(11) DEFAULT NULL,
   `agahi_car_price` text,
   `agahi_car_full_des` text,
   `agahi_car_tell` text,
   `agahi_car_address` text,
   `agahi_car_year` text,
-  `agahi_car_type_id` int(11) DEFAULT NULL,
-  `agahi_car_body_type_id` int(11) DEFAULT NULL,
+  `car_type_id` int(11) DEFAULT NULL,
+  `car_body_id` int(11) DEFAULT NULL,
   `agahi_car_karked` text,
-  `agahi_car_state_id` int(11) DEFAULT NULL,
-  `agahi_car_sokht_id` int(11) DEFAULT NULL,
+  `car_state_id` int(11) DEFAULT NULL,
+  `car_sokht_id` int(11) DEFAULT NULL,
   `agahi_car_pelak` text,
   `agahi_car_color` int(11) DEFAULT NULL,
   `agahi_car_body_des` text,
@@ -182,6 +186,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `agahi_car_date_update` text NOT NULL,
   `agahi_car_lat` text NOT NULL,
   `agahi_car_long` text NOT NULL,
+  `state_id` int(11) NOT NULL,
   PRIMARY KEY (`agahi_car_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -318,7 +323,15 @@ CREATE TABLE IF NOT EXISTS `zgr_amlak_cate` (
   `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT,
   `amlak_cate_title` text NOT NULL,
   PRIMARY KEY (`amlak_cate_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_amlak_cate`
+--
+
+INSERT INTO `zgr_amlak_cate` (`amlak_cate_id`, `amlak_cate_title`) VALUES
+(1, 'آپارتمان'),
+(2, 'ويلايي');
 
 -- --------------------------------------------------------
 
@@ -358,6 +371,19 @@ CREATE TABLE IF NOT EXISTS `zgr_amlak_tag` (
   `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT,
   `amlak_tag_title` text NOT NULL,
   PRIMARY KEY (`amlak_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_body`
+--
+
+DROP TABLE IF EXISTS `zgr_car_body`;
+CREATE TABLE IF NOT EXISTS `zgr_car_body` (
+  `car_body_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_body_title` text NOT NULL,
+  PRIMARY KEY (`car_body_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1436,7 +1462,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1583391655, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1585459559, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
