@@ -79,9 +79,10 @@ class Jobs extends MY_Controller {
 
         $crud->unset_add_fields('jobs_id');
         $crud->unset_edit_fields('jobs_id');
-        $crud->field_type('jobs_register_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('jobs_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-
+        $crud->unset_edit_fields('jobs_register_date');
+        $crud->field_type('jobs_register_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->field_type('jobs_update_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->unset_add_fields('jobs_update_date');
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');

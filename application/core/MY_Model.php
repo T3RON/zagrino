@@ -17,6 +17,15 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+    function select_two_orderBy($table,$field_order_by_one,$type_order_by_one,$field_order_by_two,$type_order_by_two) {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->order_by($field_order_by_one,$type_order_by_one);
+        $this->db->order_by($field_order_by_two,$type_order_by_two);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     function select_limit($table,$limit) {
         $this->db->select('*');
         $this->db->from($table);
@@ -176,6 +185,7 @@ class MY_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
 
 
 

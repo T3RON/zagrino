@@ -20,7 +20,7 @@ class Accounts extends MY_Controller {
         $crud->set_table('zgr_accounts');
         $crud->set_subject('كاربران');
 
-        $crud->columns('account_mobile','account_email','account_ln','account_fn','account_username');
+        $crud->columns('account_reg_date','account_mobile','account_email','account_ln','account_fn','account_username');
         $crud->display_as('account_id','شناسه');
         $crud->display_as('account_fn','نام');
         $crud->display_as('account_ln','نام خانوادگي');
@@ -57,9 +57,11 @@ class Accounts extends MY_Controller {
 
         $crud->unset_add_fields('account_id');
         $crud->unset_edit_fields('account_id');
-        $crud->field_type('account_reg_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('account_up_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-
+        
+        $crud->field_type('account_reg_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->field_type('account_up_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->unset_edit_fields('account_reg_date');
+        $crud->unset_add_fields('account_up_date');
         $crud->set_field_upload('account_avatar','assets/uploads/files');
         //$crud->field_type('username','date');
 

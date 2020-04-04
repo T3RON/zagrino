@@ -64,10 +64,16 @@
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
-                    <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
+                    <?php if ($bank_mashaghel_value->state_id == 2) { ?>
+                    <a href="<?= base_url('site/work/BankMashaghelVizhe'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
+                    <?php } else { ?>
+                        <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
+                    <?php } ?>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <img src="<?=base_url('')?>assets/site/img/1.png" class="img-responsive" alt="">
+                        
+                            <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>" class="img-responsive" alt="">
+                            
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href=""><?= $bank_mashaghel_value->jobs_title; ?></a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
