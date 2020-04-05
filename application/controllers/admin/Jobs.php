@@ -83,6 +83,7 @@ class Jobs extends MY_Controller {
         $crud->field_type('jobs_register_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
         $crud->field_type('jobs_update_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
         $crud->unset_add_fields('jobs_update_date');
+       
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
@@ -97,8 +98,11 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','jobs_price'
+            'jobs_update_date','jobs_shoar','jobs_price','expire'
         );
+
+       
+        $crud->field_type('expire', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
 
 
         $fields_cate = array(

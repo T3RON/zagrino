@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Mar 31, 2020 at 07:28 AM
+-- Generation Time: Apr 05, 2020 at 11:21 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
 --
 
 INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `account_reg_date`, `account_up_date`, `state_id`, `account_active_code`, `account_avatar`, `account_map_latitude`, `account_map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`) VALUES
-(1, 'محمد', 'سيف', 'mseif', '258456', 'seif4847@gmail.com', '09192183440', '09192183440', '3950171533', '6591953977', '09192183440', 1, 1, 1, '09192183440', '09192183440', 1, '09192183440', '09192183440', '09192183440', '09192183440', 1, 1, '09192183440', 1);
+(1, 'محمد', 'سيف', 'mseif', '258456', 'seif4847@gmail.com', '09192183440', '09192183440', '3950171533', '6591953977', '09192183440', 1, 1, 1, 'شنبه, ۱۶ فروردین ۱۳۹۹', 'شنبه, ۱۶ فروردین ۱۳۹۹', 1, '09192183440', '20135-beautiful-701678_1280.jpg', '09192183440', '09192183440', 1, 1, '09192183440', 1);
 
 -- --------------------------------------------------------
 
@@ -1046,15 +1046,19 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_logo` text,
   `jobs_shoar` text,
   `jobs_price` text,
+  `expire` timestamp NOT NULL,
   PRIMARY KEY (`jobs_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `state_id`, `jobs_logo`, `jobs_shoar`, `jobs_price`) VALUES
-(9, 7, 1, 1, 26, 368, 'تست مي باشد', 'تست مي باشد', '<p>\n	12111111111111111111111111111111111111111111</p>\n', NULL, NULL, '09192183440', '08133237591', '08133237591', 'seif4847@gmail.com', '6591953977', 'takfile.com', 'dfsf', 'fdsf', 'fsdf', 'fdsfd', 'dfs', 'df', 'dsf', '<p>\n	fdsfsdfdsfsdfsdfsdfds</p>\n', NULL, NULL, 5, 2, '<p>\n	121212</p>\n', '<p>\n	212121</p>\n', NULL, '<p>\n	212121212</p>\n', NULL, NULL, NULL, 1, '81811-.jpg', '121212121212', '21212121212');
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `state_id`, `jobs_logo`, `jobs_shoar`, `jobs_price`, `expire`) VALUES
+(9, 7, 1, 1, 26, 368, 'تست مي باشد', 'تست مي باشد', '<p>\n	12111111111111111111111111111111111111111111</p>\n', NULL, NULL, '09192183440', '08133237591', '08133237591', 'seif4847@gmail.com', '6591953977', 'takfile.com', 'dfsf', 'fdsf', 'fsdf', 'fdsfd', 'dfs', 'df', 'dsf', '<p>\n	fdsfsdfdsfsdfsdfsdfds</p>\n', NULL, NULL, 5, 2, '<p>\n	121212</p>\n', '<p>\n	212121</p>\n', NULL, '<p>\n	212121212</p>\n', NULL, NULL, NULL, 1, '81811-.jpg', '121212121212', '21212121212', '0000-00-00 00:00:00'),
+(10, 6, 10, 1, 3, 50, 'شغل ويژه', 'نام شعبه', '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">توضيح شغل</span></p>\n', '<div class=\"form-group jobs_feature_form_group\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;\">\n	<div class=\"col-md-12\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 1067px;\">\n		<div class=\"form-group row \" style=\"box-sizing: border-box; margin-right: -15px; margin-left: -15px; margin-bottom: 15px;\">\n			<label class=\"control-label text-left col-md-2 padding-0\" style=\"box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 177.828px; padding-top: 7px; margin-top: 0px; direction: rtl !important;\">Jobs feature</label></div>\n	</div>\n</div>\n<div class=\"form-group jobs_work_titme_form_group\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;\">\n	<div class=\"col-md-12\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 1067px;\">\n		<div class=\"form-group row \" style=\"box-sizing: border-box; margin-right: -15px; margin-left: -15px; margin-bottom: 15px;\">\n			<div class=\"col-md-10\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 889.156px;\">\n				&nbsp;</div>\n		</div>\n	</div>\n</div>\n<p>\n	&nbsp;</p>\n', '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">ساعت كاري</span></p>\n', 'موبايل', 'تلفن ثابت', 'فكس', 'ايميل', 'كدپستي', 'وب سايت', 'اينستاگرام', 'تلگرام', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">آدرس</span></p>\n', 'latitude', 'longitude', 0, 0, '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">شرايط فروش</span></p>\n', '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">ليست خدمات و سرويس</span></p>\n', NULL, '<p>\n	<span font-size:=\"\" font-weight:=\"\" helvetica=\"\" style=\"color: rgb(51, 51, 51); font-family: iranyekanwebregular, \" text-align:=\"\">مجوز ها</span></p>\n', '98ae9-wildlife.wmv', NULL, NULL, 2, '68627-desert.jpg', '8شعار', 'قيمت', '0000-00-00 00:00:00'),
+(11, 6, 10, 1, 26, 368, 'شغل تست مي باشد', 'حلوا شكري', '\r\n	توليد بهترين و با كيفيت ترين حلوا شكري بروجرد\r\n', '<p>\n	توليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجرد</p>\n', '<p>\n	ساعت كاري از ساعت 8 صبح تا 12 ظهر و از ساعت 15 تا 20 عصر اين شعبه فعال مي باشد</p>\n', '09192183440', '08133237591', '08133237591', 'seif4847@gmail.com', '6591953977', 'zagrino.com', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', '<p>\n	بلوار كربلا</p>\n', '<p>\n	1154544564</p>\n', '<p>\n	56456456456456</p>\n', 3, 2, '<p>\n	نقدي</p>\n', '<p>\n	توليد حلوا شكري</p>\n', NULL, '<p>\n	غذا و دارو</p>\n', 'd4237-wildlife.wmv', 'یکشنبه, ۱۷ فروردین ۱۳۹۹', NULL, 2, '547de-chrysanthemum.jpg', 'تبلغ ما كيفيت ماست', 'متنوع', '0000-00-00 00:00:00'),
+(12, 6, 10, 1, 26, 368, 'شغل تست مي باشد', 'حلوا شكري', '\r\n	توليد بهترين و با كيفيت ترين حلوا شكري بروجرد\r\n', '<p>\n	توليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجردتوليد بهترين و با كيفيت ترين حلوا شكري بروجرد</p>\n', '<p>\n	ساعت كاري از ساعت 8 صبح تا 12 ظهر و از ساعت 15 تا 20 عصر اين شعبه فعال مي باشد</p>\n', '09192183440', '08133237591', '08133237591', 'seif4847@gmail.com', '6591953977', 'zagrino.com', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', 'zagrino', '<p>\n	بلوار كربلا</p>\n', '<p>\n	1154544564</p>\n', '<p>\n	56456456456456</p>\n', 3, 2, '<p>\n	نقدي</p>\n', '<p>\n	توليد حلوا شكري</p>\n', NULL, '<p>\n	غذا و دارو</p>\n', 'd4237-wildlife.wmv', 'یکشنبه, ۱۷ فروردین ۱۳۹۹', NULL, 2, '547de-chrysanthemum.jpg', 'تبلغ ما كيفيت ماست', 'متنوع', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -1265,7 +1269,7 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
   `jobs_id` int(11) NOT NULL,
   `jobs_service_id` int(11) NOT NULL,
   PRIMARY KEY (`rel_jobs_service_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_rel_jobs_service`
@@ -1273,7 +1277,11 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
 
 INSERT INTO `zgr_rel_jobs_service` (`rel_jobs_service_id`, `jobs_id`, `jobs_service_id`) VALUES
 (6, 9, 2),
-(5, 9, 1);
+(5, 9, 1),
+(7, 10, 1),
+(8, 10, 2),
+(9, 11, 2),
+(10, 12, 2);
 
 -- --------------------------------------------------------
 
@@ -1462,7 +1470,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1585459559, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1586067466, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

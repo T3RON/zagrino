@@ -48,7 +48,7 @@ immediately after the control sidebar -->
 <script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- babakhani datepicker -->
 
-
+<script src="<?=base_url('')?>dist/js/persianDatepicker.min.js"></script>
 
 <!-- Script -->
 <!-- <script>

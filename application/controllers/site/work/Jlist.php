@@ -21,7 +21,9 @@ class Jlist extends MY_Controller {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['agahi_cate'] = $this->MY_Model->select('agahi_cate');
-        $output['agahi'] = $this->MY_Model->select('agahi');
+        //$output['bank_mashaghel'] = $this->Menu_Model->select_two_orderBy('jobs','state_id','DESC','jobs_register_date','ASC');
+        $output['bank_mashaghel'] = $this->MY_Model->join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs.state_id','DESC');
+
 
         $this->load->vars(array(
             'home_page' => TRUE
@@ -29,7 +31,7 @@ class Jlist extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Alist', $output);
+        $this->load->view('site/Jlist', $output);
     }
 
 
