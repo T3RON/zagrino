@@ -27,9 +27,9 @@
        
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <?php foreach ($jobs_cate as $jobs_cate_val) {  ?>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jslist'); ?>/index/<?= $jobs_cate_val->jobs_cate_id; ?>">
-                            <?= $jobs_cate_val->jobs_cate_title; ?>
+                    <?php foreach ($jobs_sub_cate as $jobs_sub_cate_val) {  ?>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jszlist'); ?>/index/<?= $jobs_sub_cate_val->jobs_sub_cate_id; ?>/<?= $jobs_sub_cate_val->jobs_cate_id; ?>">
+                            <?= $jobs_sub_cate_val->jobs_sub_cate_title; ?>
                         </a></li>
                     <?php } ?>
                      

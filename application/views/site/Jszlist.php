@@ -21,15 +21,15 @@
                 <div class="inner p0">فهرست</div>
             </div>
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 f_l outer l p0">
-                <div class="inner p0">آگهی های ویژه</div>
+                <div class="inner p0">آگهي هاي شغلي </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
        
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <?php foreach ($jobs_cate as $jobs_cate_val) {  ?>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jslist'); ?>/index/<?= $jobs_cate_val->jobs_cate_id; ?>">
-                            <?= $jobs_cate_val->jobs_cate_title; ?>
+                    <?php foreach ($jobs_sub_zero_cate as $jobs_sub_zero_cate_val) {  ?>
+                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jszlist'); ?>/index/<?= $jobs_sub_zero_cate_val->jobs_sub_cate_id; ?>/<?= $jobs_sub_zero_cate_val->jobs_cate_id; ?>">
+                            <?= $jobs_sub_zero_cate_val->jobs_sub_cate_title; ?>
                         </a></li>
                     <?php } ?>
                      

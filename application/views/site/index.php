@@ -26,7 +26,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
                 <div class="col-lg-10 col-md-10 col-sm-10 hidden-xs title f_r p0">
-                    <a href="">
+                    <a href="<?= base_url('site/work/Jlist'); ?>">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
                                 <i class="icon-long-arrow-right"></i>
@@ -41,7 +41,7 @@
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <?php foreach($jobs_cate as $jobs_cate_value) { ?>
                
-                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= $jobs_cate_value->jobs_cate_id; ?>">
+                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jslist'); ?>/index/<?= $jobs_cate_value->jobs_cate_id; ?>">
                 <?= $jobs_cate_value->jobs_cate_title; ?>
                                         </a></li>
                 <?php } ?>

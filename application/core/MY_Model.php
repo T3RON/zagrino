@@ -17,6 +17,8 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+    
+
     function select_two_orderBy($table,$field_order_by_one,$type_order_by_one,$field_order_by_two,$type_order_by_two) {
         $this->db->select('*');
         $this->db->from($table);
@@ -172,7 +174,7 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
-    function show_join_six($table,$table_one,$table_two,$table_three,$table_four,$table_five,$table_six,$table_where, $id) {
+    function show_join_six($table,$table_one,$table_two,$table_three,$table_four,$table_five,$table_six,$orderby_field, $orderby_type,$table_where, $id) {
         $this->db->select('*');
         $this->db->from($table);
         $this->db->join($table_one, $table.'.'.$table_one.'_id = '.$table_one.'.'.$table_one.'_id');
@@ -181,7 +183,9 @@ class MY_Model extends CI_Model {
         $this->db->join($table_four, $table.'.'.$table_four.'_id = '.$table_four.'.'.$table_four.'_id');
         $this->db->join($table_five, $table.'.'.$table_five.'_id = '.$table_five.'.'.$table_five.'_id');
         $this->db->join($table_six, $table.'.'.$table_six.'_id = '.$table_six.'.'.$table_six.'_id');
+        $this->db->order_by($orderby_field, $orderby_type);
         $this->db->where($table_where.'_id', $id);
+        
         $query = $this->db->get();
         return $query->result();
     }
