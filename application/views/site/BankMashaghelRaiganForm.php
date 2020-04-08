@@ -34,23 +34,12 @@
 
 
 
-           <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+           <form action="<?= base_url('site/work/BankMashaghelRaiganForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r p0">
                     
                <!------------------------------------------------------------------  تکمیل فرم سفارش آگهی ------------>
 
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">شناسه کاربری</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
 
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                    <div class="t_align fild_title  p0">
@@ -59,7 +48,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_title" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -70,7 +59,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="manager" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -82,7 +71,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_shoar" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -94,8 +83,8 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                       <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                           <option value="none" selected disabled hidden style="color: #dcdcdc">انتخاب دسته بندی شغل</option>
+                       <select  name="cate" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                           <option value="none" selected disabled hidden style="color: #dcdcdc"></option>
                            <option value="1">ebuy</option>
                            <option value="2">amazon</option>
                            <option value="3">app store</option>
@@ -111,8 +100,8 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                       <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                           <option value="none" selected disabled hidden style="color: #dcdcdc">انتخاب شهر</option>
+                       <select name="city" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                           <option value="none" selected disabled hidden style="color: #dcdcdc"> </option>
                            <option value="1">نهاوند</option>
                            <option value="2">ملایر</option>
                            <option value="3">کوهانی</option>
@@ -127,7 +116,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="3" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -137,7 +126,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="shobe_name" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -147,21 +136,15 @@
                
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>نمایندگی مرکزی</span>
-                            <input onclick="N_1()" type="radio" checked="checked" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel ">
-                            
-                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                                <div class="t_align fild_title  p0">
                                    <span class="f_r p0"></span>
                                    <label for="sefaresh_nam_neshan_1" class="p0">تعداد نمایندگی در کشور </label>
                                    <span class="f_l p0"></span>
                                </div>
                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                   <input id="sefaresh_nam_neshan_1" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                   <input name="jobs_count_namayandegi" id="sefaresh_nam_neshan_1" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                </div>
                            </div>
                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -171,70 +154,44 @@
                                    <span class="f_l p0"></span>
                                </div>
                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                   <input id="sefaresh_nam_neshan_2" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                   <input name="jobs_count_namayandegi_in_city" id="sefaresh_nam_neshan_2" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                </div>
                            </div>
-                        </div>
+
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                               <div class="t_align fild_title  p0">
+                                   <span class="f_r p0"></span>
+                                   <label for="sefaresh_nam_neshan_2" class="p0">شماره نمايندگي </label>
+                                   <span class="f_l p0"></span>
+                               </div>
+                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
+                                   <input name="namayandegi_number" id="sefaresh_nam_neshan_2" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                               </div>
+                           </div>
+
+
+
+                           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                               <div class="t_align fild_title  p0">
+                                   <span class="f_r p0"></span>
+                                   <label for="sefaresh_nam_neshan_2" class="p0">عنوان شعبه </label>
+                                   <span class="f_l p0"></span>
+                               </div>
+                               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
+                                   <input name="jobs_shobe" id="sefaresh_nam_neshan_2" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                               </div>
+                           </div>
+
+
+
+
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12  radio_label p0">
-                            <span>نمایندگی </span>
-                            <input onclick="N_2()" type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel f_r clear">
-                   <div class="t_align fild_title  p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan_3" class="p0">شماره نمایندگی </label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan_3" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
+                
+         
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r group p0">
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>شعبه </span>
-                            <input onclick="N_3()" type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 inner_form_bankemashaghel f_r clear ">
-                   <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>شعبه اول</span>
-                            <input id="sefaresh_nam_neshan_4" type="radio" name="radio_in">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>شعبه دوم</span>
-                            <input id="sefaresh_nam_neshan_5" type="radio" name="radio_in">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>شعبه سوم</span>
-                            <input id="sefaresh_nam_neshan_6" type="radio" name="radio_in">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="col-lg-12 col-md-12 col-sm-6 col-xs-12 radio_label p0">
-                            <span>شعبه چهارم</span>
-                            <input id="sefaresh_nam_neshan_7" type="radio" name="radio_in">
-                            <span class="checkmark"></span>
-                        </label>
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>شعبه پنجم</span>
-                            <input id="sefaresh_nam_neshan_8" type="radio" name="radio_in">
-                            <span class="checkmark"></span>
-                        </label>
-               </div>
-                        
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set p0">
-                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                            <span>مستقل </span>
-                            <input onclick="N_4()" type="radio" name="radio">
-                            <span class="checkmark"></span>
-                        </label>
-                    </div>
+          
+          
                 </div>
                
                
@@ -247,67 +204,13 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_content" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
                
                
                
-               
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">توضیحات کلی کسب و کار</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>ارسال رایگان </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
-               </div>
+           
                
                
                
@@ -319,7 +222,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_work_titme" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -329,7 +232,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="weektion_day" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
                
@@ -355,7 +258,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="fild_in_11" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_mobile" id="fild_in_11" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -367,7 +270,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="fild_in_15" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <input name="jobs_tell" id="fild_in_15" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                    </div>
                </div>
 
@@ -378,7 +281,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="fild_in_16" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
+                       <input name="jobs_fax" id="fild_in_16" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
                    </div>
                </div>
 
@@ -389,7 +292,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="fild_in_17" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
+                       <input name="jobs_email" id="fild_in_17" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
                    </div>
                </div>
 
@@ -400,7 +303,7 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="fild_in_17" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
+                       <input name="jobs_code_posti" id="fild_in_17" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
                    </div>
                </div>
                
@@ -423,7 +326,7 @@
                          <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_60">
                          <div class="f_r img_panel_input_2">
                              <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                             <input id="upload_img_60" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                             <input name="img1" id="upload_img_60" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
@@ -432,7 +335,7 @@
                          <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_61">
                          <div class="f_r img_panel_input_2">
                              <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                             <input id="upload_img_61" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                             <input name="img2" id="upload_img_61" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
@@ -441,7 +344,7 @@
                          <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_62">
                          <div class="f_r img_panel_input_2">
                              <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                             <input id="upload_img_62" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                             <input name="img3" id="upload_img_62" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                         <li class="">
@@ -450,7 +353,7 @@
                          <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_63">
                          <div class="f_r img_panel_input_2">
                              <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                             <input id="upload_img_63" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                             <input name="img4" id="upload_img_63" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                      </div>
                         </li>
                     </ul>
@@ -480,7 +383,7 @@
                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_611">
                         <div class="f_r img_panel_input_2">
                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                            <input id="upload_img_611" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                            <input name="img_logo" id="upload_img_611" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                     </div>
                 </div>
@@ -497,17 +400,12 @@
                             <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_620">
                             <div class="f_r img_panel_input_2">
                                 <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input id="upload_img_620" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                                <input name="img_menu" id="upload_img_620" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_img img_side">
-                    <img id="imgshow_622" src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                    
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 f_r delete_img">
-                        </div>
-                </div>
+        
                 
             </div>
                
@@ -521,7 +419,7 @@
                                     <label for="social_network_1" class="label_icon f_r p0">
                                         <img src="<?=base_url('')?>assets/site/svg/telegram.svg" alt="">
                                     </label>
-                                    <input id="social_network_1" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
+                                    <input name="jobs_telegram" id="social_network_1" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
                                 </div>
                             </li>
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon_input p0">
@@ -529,17 +427,10 @@
                                     <label for="social_network_2" class="label_icon f_r p0">
                                         <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" alt="">
                                     </label>
-                                    <input id="social_network_2" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
+                                    <input name="jobs_instagram" id="social_network_2" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
                                 </div>
                             </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon_input p0">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in p0">
-                                    <label for="social_network_3" class="label_icon f_r p0">
-                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" alt="">
-                                    </label>
-                                    <input id="social_network_3" type="text" class="col-lg-11 col-md-10 col-sm-10 col-xs-10 p0">
-                                </div>
-                            </li>
+
                         </ul>
 
 
@@ -550,7 +441,7 @@
                            <span class="f_l p0"></span>
                        </div>
                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                           <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                           <input name="jobs_address" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                        </div>
                    </div> 
 
@@ -562,7 +453,14 @@
 
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_r select_map">
                        <!--Google map-->
-                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  map" id="map_koli" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
+                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  map" id="map_koli" style="position: relative; overflow: hidden;">
+                       <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                       <div class="gm-err-container">
+                       <div class="gm-err-content"><div class="gm-err-icon">
+                       <img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;">
+                       </div>
+                       <div class="gm-err-title">Oops! Something went wrong.</div>
+                       <div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
                    </div>
 
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
@@ -577,12 +475,12 @@
                    </p>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_poster p0">
-                   <a href="">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
-                            <i class="icon-plus f_r"></i>
-                             ثبت پنل ویژه
-                    </div>
-                </a>
+                            <a href="">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
+                                    <i class="icon-plus f_r"></i>
+                                            ثبت پنل ویژه
+                                </div>
+                            </a>
 
                        </div>
                    </div>

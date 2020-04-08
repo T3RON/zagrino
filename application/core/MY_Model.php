@@ -211,7 +211,9 @@ class MY_Model extends CI_Model {
     }
 
     function insert ($data,$table) {
-        return $this->db->insert($data, $table);
+        $this->db->insert($data, $table);
+        return ($this->db->affected_rows() != 1) ? false : true;
+    
     }
 
     function update ($table,$id,$data) {

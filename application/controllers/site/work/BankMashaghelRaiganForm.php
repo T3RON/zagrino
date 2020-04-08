@@ -6,11 +6,17 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaiganForm extends MY_Controller {
+class BankMashaghelRaiganForm extends Ci_Controller {
     function __construct()
     {
         parent::__construct();
         $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
+        $this->load->library('Jdf');
+        $this->load->library('user_agent');
+        $this->load->library('session');
+        $this->load->helper('url');
+        $this->load->helper('form');
     }
 
     function index()
@@ -30,7 +36,63 @@ class BankMashaghelRaiganForm extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/BankMashaghelRaigan_Form', $output);
+        $this->load->view('site/BankMashaghelRaiganForm', $output);
+    }
+
+    function register() {
+
+        $data = array(
+            
+            'jobs_id' =>$this->input->post('jobs_id'),
+            'jobs_cate_id' =>1,
+            'jobs_sub_cate_id' =>1,
+            'accounts_id' =>1,
+            'ostan_id' =>1,
+            'city_id' =>1,
+            'jobs_title' =>$this->input->post('jobs_title'),
+            'jobs_shobe' =>$this->input->post('jobs_shobe'),
+            'jobs_content' =>$this->input->post('jobs_content'),
+            'jobs_feature' =>$this->input->post('jobs_feature'),
+            'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
+            'jobs_mobile' =>$this->input->post('jobs_mobile'),
+            'jobs_tell' =>$this->input->post('jobs_tell'),
+            'jobs_fax' =>$this->input->post('jobs_fax'),
+            'jobs_email' =>$this->input->post('jobs_email'),
+            'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
+            'jobs_website' =>$this->input->post('jobs_website'),
+            'jobs_instagram' =>$this->input->post('jobs_instagram'),
+            'jobs_telegram' =>$this->input->post('jobs_telegram'),
+            'jobs_whatsapp' =>$this->input->post('jobs_whatsapp'),
+            'jobs_facebook' =>$this->input->post('jobs_facebook'),
+            'jobs_tw' =>$this->input->post('jobs_tw'),
+            'jobs_pinterest' =>$this->input->post('jobs_pinterest'),
+            'jobs_youtube' =>$this->input->post('jobs_youtube'),
+            'jobs_address' =>$this->input->post('jobs_address'),
+            'jobs_map_latitude' =>$this->input->post('jobs_map_latitude'),
+            'jobs_map_longitude' =>$this->input->post('jobs_map_longitude'),
+            'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
+            'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
+            'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
+            'jobs_list_service' =>$this->input->post('jobs_list_service'),
+            'jobs_service_id' =>$this->input->post('jobs_service_id'),
+            'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
+            'jobs_video' =>$this->input->post('jobs_video'),
+            'jobs_register_date' =>$this->input->post('jobs_register_date'),
+            'jobs_update_date' =>$this->input->post('jobs_update_date'),
+            'state_id' =>$this->input->post('state_id'),
+            'jobs_logo' =>$this->input->post('jobs_logo'),
+            'jobs_shoar' =>$this->input->post('jobs_shoar'),
+            'jobs_price' =>$this->input->post('jobs_price'),
+            'expire' =>1
+        );
+
+        $jobs = $this->Menu_Model->insert('jobs',$data);
+        if($jobs) {
+            echo $jobs;
+        }else {
+            echo $jobs;
+        }
+
     }
 
 

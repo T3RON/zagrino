@@ -4608,22 +4608,21 @@ ul.v-slides {
     height: 130px;
     margin: 0 auto!important;
     display: block;
-    border-radius: 15px;
 }
 
 .img_panel_input_2 {
-    background: #ff0000;
+    background: #298013;
     width: 35px;
     height: 35px;
-    margin: -36px 2px;
-    border-radius: 15px;
+    margin: -25px 71px;
+    border-radius: 36px;
     position: absolute;
 }
 
 .img_panel_input_2 img {
-    width: 25px;
-    height: 25px;
-    margin: 5px!important;
+    width: 20px;
+    height: 20px;
+    margin: 8px!important;
 }
 
 .img_panel_input_2 input {

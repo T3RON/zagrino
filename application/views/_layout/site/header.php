@@ -138,7 +138,7 @@
         <div class="col-lg-4 header-pick-modal p0">
 
       
-        <a href="<?= base_url('site/work/BankMashaghelRaiganForm'); ?>">
+        <a href="<?= base_url('site/work/Vof'); ?>">
 <div class="t_align all">
 <img src="<?=base_url('')?>assets/site/svg/retail.svg" alt="">
 <div class="t_align txt p0">
