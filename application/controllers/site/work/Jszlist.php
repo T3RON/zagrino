@@ -24,7 +24,7 @@ class Jszlist extends MY_Controller {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_sub_zero_cate'] = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$id_cate);
-        $output['bank_mashaghel'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs.state_id','DESC','zgr_jobs.jobs_sub_cate',$id);
+        $output['bank_mashaghel'] = $this->MY_Model->show_join_six_with_order('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs.state_id','DESC','zgr_jobs.jobs_sub_cate',$id);
 
 
         $this->load->vars(array(

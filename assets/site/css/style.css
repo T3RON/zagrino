@@ -600,10 +600,10 @@ License: GNU General Public License v2 or later
    
 }
 .Agahiha_Niazmandiha .left_side ul li .under button {
-    border: 1px solid #c2cadb;
+    border: 1px solid #848484;
     text-align: center;
     font-size: 14px;
-    color: #939aa4;
+    color: #505152;
     background: transparent;
     border-radius: 15px;
     margin: 2px 0;
@@ -621,8 +621,8 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .left i {
     float: right;
     padding: 0 4px;
-    margin: 2px 0;
-    font-size: 15px;
+    margin: 5px 0;
+    font-size: 17px;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text {
@@ -670,17 +670,18 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .Location span {
-    background: #fff;
+    background: #575858;
     margin: 4px 0;
     padding: 0 10px!important;
     font-size: 14px;
     border-radius: 10px;
+    color: #fff;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .c_validate,
 .c_observe,
 .c_code {
-    color: #939aa4;
+    color: #222325;
     font-size: 14px;
 }
 
@@ -693,8 +694,8 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .information button {
-    background: #fff;
-    color: #464646!important;
+    background: #c31d5b;
+    color: #ffffff!important;
     border-radius: 10px;
     font-size: 14px;
     border: none;
