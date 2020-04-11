@@ -23,7 +23,7 @@
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_e91e63 p0">
             فرم پنل مشاغل
         </div>
-
+        <?php echo validation_errors(); ?>
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
 
            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
@@ -34,7 +34,7 @@
 
 
 
-           <form action="<?= base_url('site/work/BankMashaghelRaiganForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+           <form action="<?= base_url('site/work/BankMashaghelRaiganForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" enctype='multipart/form-data'>
 
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r p0">
                     
@@ -83,7 +83,24 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                       <select  name="cate" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <select  name="jobs_cate_id" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                           <option value="none" selected disabled hidden style="color: #dcdcdc"></option>
+                           <option value="1">ebuy</option>
+                           <option value="2">amazon</option>
+                           <option value="3">app store</option>
+                           <option value="4">wallet </option>
+                       </select>
+                   </div>
+               </div>
+
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear f_r fild">
+                   <div class="t_align fild_title p0">
+                       <span class="f_r p0"></span>
+                       <label for="sefaresh_makan" class="p0">انتخاب دسته بندی شغل</label>
+                       <span class="f_l p0"></span>
+                   </div>
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                       <select  name="jobs_sub_cate_id" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                            <option value="none" selected disabled hidden style="color: #dcdcdc"></option>
                            <option value="1">ebuy</option>
                            <option value="2">amazon</option>
@@ -100,7 +117,24 @@
                        <span class="f_l p0"></span>
                    </div>
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                       <select name="city" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                       <select name="ostan_id" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                           <option value="none" selected disabled hidden style="color: #dcdcdc"> </option>
+                           <option value="1">نهاوند</option>
+                           <option value="2">ملایر</option>
+                           <option value="3">کوهانی</option>
+                           <option value="4">جهان آباد</option>
+                       </select>
+                   </div>
+               </div>
+
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear f_r fild">
+                   <div class="t_align fild_title p0">
+                       <span class="f_r p0"></span>
+                       <label for="sefaresh_makan" class="p0">مکان آگهی</label>
+                       <span class="f_l p0"></span>
+                   </div>
+                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                       <select name="city_id" id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                            <option value="none" selected disabled hidden style="color: #dcdcdc"> </option>
                            <option value="1">نهاوند</option>
                            <option value="2">ملایر</option>

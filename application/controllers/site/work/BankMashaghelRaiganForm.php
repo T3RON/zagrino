@@ -15,6 +15,7 @@ class BankMashaghelRaiganForm extends Ci_Controller {
         $this->load->library('Jdf');
         $this->load->library('user_agent');
         $this->load->library('session');
+        $this->load->library('form_validation'); 
         $this->load->helper('url');
         $this->load->helper('form');
     }
@@ -41,14 +42,15 @@ class BankMashaghelRaiganForm extends Ci_Controller {
 
     function register() {
 
+
+
         $data = array(
             
-            'jobs_id' =>$this->input->post('jobs_id'),
-            'jobs_cate_id' =>1,
-            'jobs_sub_cate_id' =>1,
+            'jobs_cate_id' =>$this->input->post('jobs_cate_id'),
+            'jobs_sub_cate_id' =>7,
             'accounts_id' =>1,
-            'ostan_id' =>1,
-            'city_id' =>1,
+            'ostan_id' =>7,
+            'city_id' =>7,
             'jobs_title' =>$this->input->post('jobs_title'),
             'jobs_shobe' =>$this->input->post('jobs_shobe'),
             'jobs_content' =>$this->input->post('jobs_content'),
@@ -80,18 +82,41 @@ class BankMashaghelRaiganForm extends Ci_Controller {
             'jobs_register_date' =>$this->input->post('jobs_register_date'),
             'jobs_update_date' =>$this->input->post('jobs_update_date'),
             'state_id' =>$this->input->post('state_id'),
-            'jobs_logo' =>$this->input->post('jobs_logo'),
+            'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
+            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
+            'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
+            'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
             'jobs_shoar' =>$this->input->post('jobs_shoar'),
             'jobs_price' =>$this->input->post('jobs_price'),
-            'expire' =>1
+            'expire' =>"1"
         );
 
-        $jobs = $this->Menu_Model->insert('jobs',$data);
-        if($jobs) {
-            echo $jobs;
-        }else {
-            echo $jobs;
+
+        $this->form_validation->set_rules('jobs_cate_id','Username','required');
+       
+       
+        if($this->form_validation->run() == FALSE){
+
+         echo "dsadadsadad";
+           
+
         }
+        else{
+            $jobs = $this->Menu_Model->insert('jobs',$data);
+            print_r($jobs);
+            exit;
+            if($jobs) {
+                echo $jobs;
+            }else {
+                echo $jobs;
+
+            }
+          
+        }
+
+
+    
 
     }
 
