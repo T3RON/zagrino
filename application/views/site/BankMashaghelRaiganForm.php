@@ -18,19 +18,15 @@
 
     <!-- BODY -->
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
-
+    <div id="pos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_e91e63 p0">
             فرم پنل مشاغل
         </div>
-        <?php echo validation_errors(); ?>
+        
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
+       <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
-               <span>
-                   ثبت فرم پنل شغلی رایگان
-               </span>
-           </div>
+    
 
 
 
@@ -487,7 +483,7 @@
 
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_r select_map">
                        <!--Google map-->
-                       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  map" id="map_koli" style="position: relative; overflow: hidden;">
+                       <div id="map" class="col-lg-12 col-md-12 col-sm-12 col-xs-12  map" id="map_koli" style="position: relative; overflow: hidden;">
                        <div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
                        <div class="gm-err-container">
                        <div class="gm-err-content"><div class="gm-err-icon">
@@ -562,6 +558,30 @@
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
 <!--    Script For This Page     -->
+
+<script>
+// Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  var uluru = {lat: 33.896209, lng:  48.764359};
+  // The map, centered at Uluru
+  var map = new google.maps.Map(
+      document.getElementById('map'), {
+          zoom: 10, 
+          center: uluru
+          });
+  // The marker, positioned at Uluru
+  var marker = new google.maps.Marker({position: uluru, map: map});
+}
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdFTV6udcVMeClso6S9NQQwJOerJpqzwg&callback=initMap">
+    </script>
     
 <script >
     $('document').ready(function () {
@@ -705,7 +725,11 @@
     }
 </script>
 
-    
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).scrollTop( $("#pos").offset().top );  
+    });
+</script>
     
   
     

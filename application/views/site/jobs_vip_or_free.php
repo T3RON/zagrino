@@ -18,7 +18,7 @@
 
     <!-- BODY -->
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
+    <div id="pos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_e91e63 p0">
         انتخاب نوع پنل شغلي درخواستي
@@ -191,7 +191,11 @@
 </script>
 
     
-    
+<script type="text/javascript">
+    $(document).ready(function() {
+        $(document).scrollTop( $("#pos").offset().top );  
+    });
+</script>
   
     
 

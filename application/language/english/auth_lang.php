@@ -74,7 +74,7 @@ $lang['create_user_validation_password_label']         = 'گذرواژه';
 $lang['create_user_validation_password_confirm_label'] = 'تایید گذرواژه';
 
 // Edit User
-$lang['edit_user_heading']                           = 'Edit User';
+$lang['edit_user_heading']                           = 'ويرايش كاربر';
 $lang['edit_user_subheading']                        = 'Please enter the users information below.';
 $lang['edit_user_fname_label']                       = 'First Name:';
 $lang['edit_user_lname_label']                       = 'Last Name:';

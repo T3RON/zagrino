@@ -47,10 +47,10 @@ class BankMashaghelRaiganForm extends Ci_Controller {
         $data = array(
             
             'jobs_cate_id' =>$this->input->post('jobs_cate_id'),
-            'jobs_sub_cate_id' =>7,
+            'jobs_sub_cate_id' =>$this->input->post('jobs_sub_cate_id'),
             'accounts_id' =>1,
-            'ostan_id' =>7,
-            'city_id' =>7,
+            'ostan_id' =>$this->input->post('ostan_id'),
+            'city_id' =>$this->input->post('city_id'),
             'jobs_title' =>$this->input->post('jobs_title'),
             'jobs_shobe' =>$this->input->post('jobs_shobe'),
             'jobs_content' =>$this->input->post('jobs_content'),
@@ -93,19 +93,21 @@ class BankMashaghelRaiganForm extends Ci_Controller {
         );
 
 
-        $this->form_validation->set_rules('jobs_cate_id','Username','required');
+        $this->form_validation->set_rules('jobs_cate_id','دسته بندي','required');
+        $this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
+        $this->form_validation->set_rules('ostan_id','استان','required');
+        $this->form_validation->set_rules('city_id','شهرستان','required');
        
        
         if($this->form_validation->run() == FALSE){
 
-         echo "dsadadsadad";
+            $this->index();  
            
 
         }
         else{
             $jobs = $this->Menu_Model->insert('jobs',$data);
-            print_r($jobs);
-            exit;
+            
             if($jobs) {
                 echo $jobs;
             }else {
@@ -119,6 +121,8 @@ class BankMashaghelRaiganForm extends Ci_Controller {
     
 
     }
+
+    
 
 
 }
