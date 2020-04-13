@@ -530,8 +530,8 @@
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
+                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+              
                             </div>
                         </div>
                     </div>
@@ -706,8 +706,8 @@
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
+                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                     
                             </div>
                         </div>
                     </div>
@@ -902,8 +902,8 @@
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
+                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+          
                             </div>
                         </div>
                     </div>
@@ -1107,9 +1107,10 @@
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
+                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                  
                             </div>
+        
                         </div>
                     </div>
 
@@ -1274,6 +1275,8 @@
  </div>
 </div>
 
+
+
 <?php } ?>
 
 
@@ -1405,6 +1408,8 @@
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
 
+
+
 <!--    Script For This Page     -->
  
 <script>
@@ -1428,5 +1433,22 @@
     });
   </script>
 
-    
+    <script>
+var position = [40.748774, -73.985763];
+                                function initialize() { 
+                                    var latlng = new google.maps.LatLng(position[0], position[1]);
+                                    var myOptions = {
+                                        zoom: 16,
+                                        center: latlng,
+                                        mapTypeId: google.maps.MapTypeId.ROADMAP
+                                    };
+                                    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+                                    marker = new google.maps.Marker({
+                                        position: latlng,
+                                        map: map,
+                                        title: "Latitude:"+position[0]+" | Longitude:"+position[1]
+                                    });
+                                }
+                                </script>
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

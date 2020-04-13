@@ -79,16 +79,16 @@ class BankMashaghelRaiganForm extends Ci_Controller {
             'jobs_service_id' =>$this->input->post('jobs_service_id'),
             'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
             'jobs_video' =>$this->input->post('jobs_video'),
-            'jobs_register_date' =>$this->input->post('jobs_register_date'),
-            'jobs_update_date' =>$this->input->post('jobs_update_date'),
-            'state_id' =>$this->input->post('state_id'),
+            'jobs_register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
+            'jobs_update_date' =>'',
+            'state_id' =>1,
             'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
             'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
             'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
             'jobs_shoar' =>$this->input->post('jobs_shoar'),
-            'jobs_price' =>$this->input->post('jobs_price'),
+            'price_id' =>0,
             'expire' =>"1"
         );
 
@@ -97,10 +97,12 @@ class BankMashaghelRaiganForm extends Ci_Controller {
         $this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
+        $this->form_validation->set_rules('jobs_map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
        
        
         if($this->form_validation->run() == FALSE){
-
+            $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
+            $this->session->set_flashdata('msg',$array_msg);
             $this->index();  
            
 
@@ -109,9 +111,13 @@ class BankMashaghelRaiganForm extends Ci_Controller {
             $jobs = $this->Menu_Model->insert('jobs',$data);
             
             if($jobs) {
-                echo $jobs;
+                $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
+                $this->session->set_flashdata('msg',$array_msg);
+                redirect('site/work/BankMashaghelRaiganForm/index');
             }else {
-                echo $jobs;
+                $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
+                $this->session->set_flashdata('msg',$array_msg);
+                redirect('site/work/BankMashaghelRaiganForm/index');
 
             }
           

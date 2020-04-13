@@ -235,7 +235,7 @@ class MY_Model extends CI_Model {
     }
 
     function upload($fileName,$types,$max) {
-        $config['upload_path'] = './assets/uploads/files/';
+        $config['upload_path'] = './assets/uploads/img/';
         $config['allowed_types'] = $types;//'jpg|png'
         $config['max_size'] = $max;//5024
         $config['encrypt_name'] = true;

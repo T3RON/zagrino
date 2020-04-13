@@ -113,6 +113,7 @@
     </div>
 </footer>
 
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdFTV6udcVMeClso6S9NQQwJOerJpqzwg"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="<?=base_url('')?>assets/site/js/bootstrap.min.js"></script>
@@ -124,7 +125,8 @@
 <script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
-    
+<script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
     
           
     <script type="text/javascript">
@@ -183,4 +185,4 @@ vSlide.play()
     });
   </script>
     
-    
+    <?php include_once (APPPATH.'views/_layout/swal.php'); ?>

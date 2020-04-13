@@ -413,7 +413,7 @@
                         <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_611">
                         <div class="f_r img_panel_input_2">
                             <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                            <input name="img_logo" id="upload_img_611" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
+                            <input name="jobs_logo" id="upload_img_611" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
                     </div>
                     </div>
                 </div>
@@ -474,6 +474,8 @@
                            <input name="jobs_address" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                        </div>
                    </div> 
+                   <input name="jobs_map_latitude" id="latitude" type="hidden">
+                   <input name="jobs_map_longitude" id="longitude" type="hidden">
 
  
                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
@@ -493,7 +495,7 @@
                        <div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
                    </div>
 
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
+                   <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
                    <div class="title_tavajoh ">
                        توجه
                    </div>
@@ -515,7 +517,7 @@
                        </div>
                    </div>
 
-               </div>
+               </div> -->
 
 
             </div> 
@@ -559,29 +561,71 @@
 
 <!--    Script For This Page     -->
 
-<script>
-// Initialize and add the map
-function initMap() {
-  // The location of Uluru
-  var uluru = {lat: 33.896209, lng:  48.764359};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {
-          zoom: 10, 
-          center: uluru
-          });
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: uluru, map: map});
-}
-    </script>
+
     <!--Load the API from the specified URL
     * The async attribute allows the browser to render the page while the API loads
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdFTV6udcVMeClso6S9NQQwJOerJpqzwg&callback=initMap">
-    </script>
+
+<script>
+var position = [40.748774, -73.985763];
+
+function initialize() { 
+    var latlng = new google.maps.LatLng(position[0], position[1]);
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: "Latitude:"+position[0]+" | Longitude:"+position[1]
+    });
+
+    
+
+
+    google.maps.event.addListener(map, 'click', function(event) {
+        var result = [event.latLng.lat(), event.latLng.lng()];
+        document.getElementById("latitude").value = event.latLng.lat();
+    document.getElementById("longitude").value = event.latLng.lng();
+        transition(result);
+    });
+}
+
+//Load google map
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+var numDeltas = 100;
+var delay = 10; //milliseconds
+var i = 0;
+var deltaLat;
+var deltaLng;
+
+function transition(result){
+    i = 0;
+    deltaLat = (result[0] - position[0])/numDeltas;
+    deltaLng = (result[1] - position[1])/numDeltas;
+    moveMarker();
+}
+
+function moveMarker(){
+    position[0] += deltaLat;
+    position[1] += deltaLng;
+    var latlng = new google.maps.LatLng(position[0], position[1]);
+    marker.setTitle("Latitude:"+position[0]+" | Longitude:"+position[1]);
+    marker.setPosition(latlng);
+    if(i!=numDeltas){
+        i++;
+        setTimeout(moveMarker, delay);
+    }
+}
+</script>
     
 <script >
     $('document').ready(function () {

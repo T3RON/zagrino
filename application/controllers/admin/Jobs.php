@@ -59,9 +59,13 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('jobs_logo','لوگو');
+        $crud->display_as('img1','تصوير شماره 1');
+        $crud->display_as('img2','تصوير شماره 2');
+        $crud->display_as('img3','تصوير شماره 3');
+        $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
-        $crud->display_as('jobs_price','قيمت');
+        $crud->display_as('price_id','قيمت');
         $crud->display_as('jobs_service_id','سرويس ها');
 
         $crud->set_relation('ostan_id','ostan','ostan_title');
@@ -70,6 +74,7 @@ class Jobs extends MY_Controller {
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
+        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         
@@ -86,6 +91,10 @@ class Jobs extends MY_Controller {
        
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
         //$crud->field_type('username','date');
 
 
@@ -98,7 +107,7 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','jobs_price','expire'
+            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
         );
 
        
