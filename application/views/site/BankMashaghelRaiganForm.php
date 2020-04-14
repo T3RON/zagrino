@@ -555,19 +555,6 @@
     
     
   
-    
-    
-<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
-
-<!--    Script For This Page     -->
-
-
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
-
 <script>
 var position = [40.748774, -73.985763];
 
@@ -626,6 +613,19 @@ function moveMarker(){
     }
 }
 </script>
+    
+    
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+<!--    Script For This Page     -->
+
+
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+
     
 <script >
     $('document').ready(function () {

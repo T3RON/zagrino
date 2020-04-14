@@ -518,7 +518,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 آدرس
                             </div>
@@ -526,12 +526,12 @@
                             <?= $bank_mashaghel_value->jobs_telegram; ?> 
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-              
+                            <div style="height: 200px;" id="map">
+            
                             </div>
                         </div>
                     </div>
@@ -694,7 +694,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map20">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 آدرس
                             </div>
@@ -702,11 +702,11 @@
                             <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                            <div style="height: 200px;" id="map">
                      
                             </div>
                         </div>
@@ -890,7 +890,7 @@
                         </ul>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map2">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 آدرس
                             </div>
@@ -898,11 +898,11 @@
                             <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                            <div style="height: 200px;" id="map">
           
                             </div>
                         </div>
@@ -1095,7 +1095,7 @@
                 <div id="tabs_menu_15" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_addres_map p0" id="t_t_addres_map5">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 آدرس
                             </div>
@@ -1103,11 +1103,11 @@
                             <?= $bank_mashaghel_value->jobs_address; ?>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
                             <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
                                 موقعیت
                             </div>
-                            <div id="map" class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                            <div style="height: 200px;" id="map">
                   
                             </div>
         
@@ -1395,9 +1395,34 @@
     
     
     
-    
-    
+    <script>
+var position = [40.748774, -73.985763];
 
+function initialize() { 
+    var latlng = new google.maps.LatLng(position[0], position[1]);
+    var myOptions = {
+        zoom: 16,
+        center: latlng,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    map = new google.maps.Map(document.getElementById("map"), myOptions);
+
+    marker = new google.maps.Marker({
+        position: latlng,
+        map: map,
+        title: "Latitude:"+position[0]+" | Longitude:"+position[1]
+    });
+
+    
+}
+
+//Load google map
+google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+</script>
+    
 
 
 
@@ -1433,22 +1458,4 @@
     });
   </script>
 
-    <script>
-var position = [40.748774, -73.985763];
-                                function initialize() { 
-                                    var latlng = new google.maps.LatLng(position[0], position[1]);
-                                    var myOptions = {
-                                        zoom: 16,
-                                        center: latlng,
-                                        mapTypeId: google.maps.MapTypeId.ROADMAP
-                                    };
-                                    map = new google.maps.Map(document.getElementById("map"), myOptions);
-
-                                    marker = new google.maps.Marker({
-                                        position: latlng,
-                                        map: map,
-                                        title: "Latitude:"+position[0]+" | Longitude:"+position[1]
-                                    });
-                                }
-                                </script>
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

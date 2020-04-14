@@ -2072,6 +2072,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map {
     margin-top: 10px !important;
+    height: 300px;
 }
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map img {
