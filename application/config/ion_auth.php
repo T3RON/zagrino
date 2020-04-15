@@ -176,9 +176,9 @@ $config['store_salt']  = FALSE;
  | -------------------------------------------------------------------------
  */
 $config['delimiters_source']       = 'config'; 	// "config" = use the settings defined here, "form_validation" = use the settings defined in CI's form validation library
-$config['message_start_delimiter'] = '<p>'; 	// Message start delimiter
+$config['message_start_delimiter'] = '<p style="margin-bottom: 20px;background: antiquewhite;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;">'; 	// Message start delimiter
 $config['message_end_delimiter']   = '</p>'; 	// Message end delimiter
-$config['error_start_delimiter']   = '<p>';		// Error message start delimiter
+$config['error_start_delimiter']   = '<p style="margin-bottom: 20px;background: #e01900;color: #fff;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;">';		// Error message start delimiter
 $config['error_end_delimiter']     = '</p>';	// Error message end delimiter
 
 /* End of file ion_auth.php */

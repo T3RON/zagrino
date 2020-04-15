@@ -55,7 +55,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <div class="login-box">
 
     <div class="login-box-body">
-        <p>ایمیل جهت بازیابی اکانت کاربری خود وارد نمایید</p>
+    <p style="margin-bottom: 20px;background: antiquewhite;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;">ایمیل جهت بازیابی اکانت کاربری خود وارد نمایید</p>
 
         <div id="infoMessage"><?php echo $message;?></div>
 
