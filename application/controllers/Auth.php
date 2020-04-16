@@ -209,7 +209,7 @@ class Auth extends CI_Controller
 	public function forgot_password()
 	{
 		$this->data['title'] = $this->lang->line('forgot_password_heading');
-		
+		$this->data['site'] = $this->MY_Model->select_single('site','1');
 		// setting validation rules by checking whether identity is username or email
 		if ($this->config->item('identity', 'ion_auth') != 'email')
 		{
@@ -466,6 +466,7 @@ class Auth extends CI_Controller
 	public function create_user()
 	{
 		$this->data['title'] = $this->lang->line('create_user_heading');
+		$this->data['site'] = $this->MY_Model->select_single('site','1');
 
 		if (!$this->ion_auth->logged_in() || !$this->ion_auth->is_admin())
 		{

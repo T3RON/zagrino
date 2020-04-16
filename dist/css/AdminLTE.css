@@ -1262,6 +1262,34 @@ a:focus {
  * Component: Form
  * ---------------
  */
+ .login-btn {
+  background: #325b8e !important;
+  border-radius: 15px !important;
+  border: 1px solid #d6d6d6 !important;
+ }
+ .forget-login {
+  background: #f39c12 !important;
+  padding: 5px !important;
+  color: #fff !important;
+  text-align: center !important;
+  border-radius: 15px !important;
+  border: 1px solid #fff !important;
+
+ }
+ .forget-login:hover {
+  color: #fff;
+ }
+ .register-login {
+  background: #00a65a !important;
+  padding: 5px !important;
+  text-align: center !important;
+  border-radius: 15px !important;
+  color: #fff !important;
+  border: 1px solid #fff !important;
+ }
+ .register-login:hover {
+  color: #fff;
+ }
 .form-control {
   border-radius: 15px;
   box-shadow: none;

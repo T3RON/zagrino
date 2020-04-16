@@ -53,7 +53,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <body class="hold-transition login-page">
 <div class="login-box">
-
+<div class="login-logo">
+    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+     <?php } ?>
+    </div>
     <div class="login-box-body">
     <p style="margin-bottom: 20px;background: antiquewhite;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;">ایمیل جهت بازیابی اکانت کاربری خود وارد نمایید</p>
 
@@ -69,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="row">
             <!-- /.col -->
             <div class="col-xs-12">
-                <?php echo form_submit('submit', 'بازیابی','class="btn btn-primary btn-block btn-flat"');?>
+                <?php echo form_submit('submit', 'بازیابی','class="btn btn-primary btn-block forget-login"');?>
             </div>
             <!-- /.col -->
         </div>

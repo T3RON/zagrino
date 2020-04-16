@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 13, 2020 at 10:44 AM
+-- Generation Time: Apr 16, 2020 at 09:52 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -89,17 +89,13 @@ CREATE TABLE IF NOT EXISTS `zgr_ads` (
 DROP TABLE IF EXISTS `zgr_agahi`;
 CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `agahi_id` int(11) NOT NULL,
-  `accounts_id` int(11) NOT NULL,
-  `ostan_id` int(11) NOT NULL,
-  `city_id` int(11) NOT NULL,
-  `agahi_hoghoghi_or_haghighi` int(11) NOT NULL,
-  `agahi_sazeman_title` text NOT NULL,
-  `tarefe_id` int(11) NOT NULL,
-  `show_id` int(11) NOT NULL,
-  `agahi_title` text NOT NULL,
-  `agahi_reg_date` date NOT NULL,
-  `agahi_update_date` date NOT NULL,
-  `state_id` int(11) NOT NULL,
+  `accounts_id` int(11) DEFAULT NULL,
+  `ostan_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `agahi_title` text,
+  `agahi_sazeman_title` text,
+  `agahi_hoghoghi_or_haghighi` int(11) DEFAULT NULL,
+  `tarefe_id` int(11) DEFAULT NULL,
   `agahi_cate_id` int(11) DEFAULT NULL,
   `agahi_sub_cate_id` int(11) DEFAULT NULL,
   `agahi_des` text,
@@ -109,19 +105,22 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `agahi_tag_conditions_id` int(11) DEFAULT NULL,
   `agahi_address` text,
   `agahi_tag_id` int(11) DEFAULT NULL,
-  `agahi_price` text,
-  `agahi_full_des` text NOT NULL,
-  `agahi_email` text NOT NULL,
-  `agahi_state_kala_id` int(11) NOT NULL,
+  `agahi_full_des` text,
+  `agahi_email` text,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` int(11) DEFAULT NULL,
+  `price_id` text,
+  `state_id` int(11) DEFAULT NULL,
+  `show_time_id` int(11) DEFAULT NULL,
+  `agahi_state_kala_id` int(11) DEFAULT NULL,
+  `agahi_reg_date` text,
+  `agahi_update_date` text,
   PRIMARY KEY (`agahi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_agahi`
---
-
-INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_hoghoghi_or_haghighi`, `agahi_sazeman_title`, `tarefe_id`, `show_id`, `agahi_title`, `agahi_reg_date`, `agahi_update_date`, `state_id`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_tag_conditions_id`, `agahi_address`, `agahi_tag_id`, `agahi_price`, `agahi_full_des`, `agahi_email`, `agahi_state_kala_id`) VALUES
-(0, 1, 0, 0, 0, '', 0, 0, '', '0000-00-00', '0000-00-00', 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -196,12 +195,20 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `agahi_car_color` int(11) DEFAULT NULL,
   `agahi_car_body_des` text,
   `agahi_car_motor_des` text,
-  `agahi_rule_check` tinyint(1) DEFAULT NULL,
   `agahi_car_date_register` text NOT NULL,
   `agahi_car_date_update` text NOT NULL,
   `agahi_car_lat` text NOT NULL,
   `agahi_car_long` text NOT NULL,
   `state_id` int(11) NOT NULL,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` text,
+  `price_id` int(11) DEFAULT NULL,
+  `agahi_rule_check` tinyint(1) DEFAULT NULL,
+  `expire` text,
   PRIMARY KEY (`agahi_car_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -250,20 +257,6 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
   `agahi_id` int(11) NOT NULL,
   `agahi_image_url` text NOT NULL,
   PRIMARY KEY (`agahi_image_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_agahi_show_time`
---
-
-DROP TABLE IF EXISTS `zgr_agahi_show_time`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_show_time` (
-  `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT,
-  `agahi_show_time_title` text NOT NULL,
-  `agahi_show_time_val` text NOT NULL,
-  PRIMARY KEY (`agahi_show_time_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1065,6 +1058,7 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_shoar` text,
   `price_id` int(11) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
+  `show_time_id` int(11) DEFAULT NULL,
   `expire` text NOT NULL,
   PRIMARY KEY (`jobs_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
@@ -1073,14 +1067,14 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`) VALUES
-(24, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.74961930042645', '-73.9881179795151', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'f6cb9bcc1165c783ec500b7011caf66b.jpg', '63199fc0ad4957ba89dc1f7c2268dd2a.jpg', '8eccddb9fc7b1447d847d9dbebde523b.jpg', 'cff17ba5e9b5e65b8cc2d04f1c621886.jpg', 'fd10f8843bf1b434283e76478199a195.jpg', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(25, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.748562673214444', '-73.9903710350876', 0, 1, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '2e947a5a1d333d1fe6da940d9177b0e0.jpg', '3de798de29617997e4ca1110fbb40e99.jpg', '6aff7a4394c58c364507e7593d15c563.jpg', 'd54640314ecdac4f270a0c421788e777.jpg', '9b78ff05664e73c469c984039f33d01e.jpg', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(26, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74857892914486', '-73.98361186837008', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(27, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.748871535213', '-73.99032811974337', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(28, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98131589745333', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(29, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74877400000002', '-73.98298959587862', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1'),
-(30, 2, 3, 1, 1, 2, '', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98893337105562', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '', 0, 1, '1');
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `show_time_id`, `expire`) VALUES
+(24, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.74961930042645', '-73.9881179795151', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'f6cb9bcc1165c783ec500b7011caf66b.jpg', '63199fc0ad4957ba89dc1f7c2268dd2a.jpg', '8eccddb9fc7b1447d847d9dbebde523b.jpg', 'cff17ba5e9b5e65b8cc2d04f1c621886.jpg', 'fd10f8843bf1b434283e76478199a195.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(25, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.748562673214444', '-73.9903710350876', 0, 1, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '2e947a5a1d333d1fe6da940d9177b0e0.jpg', '3de798de29617997e4ca1110fbb40e99.jpg', '6aff7a4394c58c364507e7593d15c563.jpg', 'd54640314ecdac4f270a0c421788e777.jpg', '9b78ff05664e73c469c984039f33d01e.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(26, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74857892914486', '-73.98361186837008', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(27, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.748871535213', '-73.99032811974337', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(28, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98131589745333', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(29, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74877400000002', '-73.98298959587862', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
+(30, 2, 3, 1, 1, 2, '', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98893337105562', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '', 0, 1, NULL, '1');
 
 -- --------------------------------------------------------
 
@@ -1348,6 +1342,20 @@ INSERT INTO `zgr_secend_menu` (`smenu_id`, `smenu_title`, `smenu_link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_show_time`
+--
+
+DROP TABLE IF EXISTS `zgr_show_time`;
+CREATE TABLE IF NOT EXISTS `zgr_show_time` (
+  `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_show_time_title` text NOT NULL,
+  `agahi_show_time_val` text NOT NULL,
+  PRIMARY KEY (`agahi_show_time_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_site`
 --
 
@@ -1503,7 +1511,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1586759533, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587022260, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

@@ -32,7 +32,7 @@ class Car extends MY_Controller {
         $crud->display_as('agahi_car_full_des','توضيحات كامل');
         $crud->display_as('agahi_car_year','سال ساخت');
         $crud->display_as('agahi_car_karked','كاركرد');
-        $crud->display_as('agahi_car_type_id','نوع وسيله');
+        $crud->display_as('car_type_id','نوع وسيله');
         $crud->display_as('car_body_id','نوع بدنه');
         $crud->display_as('agahi_car_state_id','وضعيت وسيله');
         $crud->display_as('car_sokht_id','نوع سوخت');
@@ -41,6 +41,7 @@ class Car extends MY_Controller {
         $crud->display_as('agahi_car_tell','شماره تماس');
         $crud->display_as('agahi_car_body_des','توضيحات بدنه');
         $crud->display_as('agahi_car_motor_des','توضيحات موتور');
+        $crud->display_as('agahi_rule_check','قبول قوانين');
         $crud->display_as('agahi_car_lat','طول جغرافيايي');
         $crud->display_as('agahi_car_long','عرض جغرافيايي');
         $crud->display_as('agahi_car_price','قيمت فروش');
@@ -48,6 +49,8 @@ class Car extends MY_Controller {
         $crud->display_as('car_tag_id','برچسب');
         $crud->display_as('car_cond_tag_id','برچسب شرايط');
         $crud->display_as('agahi_car_date_register','تاريخ ثبت');
+        $crud->display_as('price_id','هزينه');
+        $crud->display_as('expire','تاريخ انقضا');
       
      
         $crud->set_relation('ostan_id','ostan','ostan_title');
@@ -62,18 +65,36 @@ class Car extends MY_Controller {
         $crud->set_relation('car_body_id','car_body','car_body_title');
         $crud->set_relation('car_state_id','car_state','car_state_title');
         $crud->set_relation('car_sokht_id','car_sokht','car_sokht_title');
+        $crud->set_relation('price_id','price','price_amount');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
-        
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
+        $crud->set_field_upload('img5','assets/uploads/img');
+        $crud->set_field_upload('img6','assets/uploads/img');
         //$crud->add_action('افزودن تصوير', '', 'Jobs_images/index', 'fa-photo');
 
         $this->load->library('gc_dependent_select');
 
         $crud->unset_add_fields('agahi_car_id');
         $crud->unset_edit_fields('agahi_car_id');
+        $crud->unset_add_fields('expire');
+        $crud->unset_edit_fields('expire');
+
         $crud->field_type('agahi_car_date_register', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
         $crud->field_type('agahi_car_date_update', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
 
+
+        $crud->unset_edit_fields('agahi_car_date_register');
+        $crud->unset_add_fields('agahi_car_date_update');
+        $crud->field_type('agahi_car_date_register', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->field_type('agahi_car_date_update', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        
+        $crud->field_type('expire', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+
+        
         //$crud->set_field_upload('jobs_logo','assets/uploads/img');
         //$crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');

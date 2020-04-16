@@ -76,17 +76,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-12">
-                    <?php echo form_submit('submit', lang('login_submit_btn'),'class="btn btn-primary btn-block btn-flat"');?>
+                    <?php echo form_submit('submit', lang('login_submit_btn'),'class="btn btn-primary btn-block login-btn"');?>
                 </div>
                 <!-- /.col -->
             </div>
             <?php echo form_close();?>
 
         <!-- /.social-auth-links -->
-        <div style="margin-top: 23px;">
-        <a href="forgot_password"><?php echo lang('login_forgot_password');?></a><br>
-        <div style="margin-top: 23px;">
-        <a href="<?= site_url('Auth/create_user'); ?>" class="text-center">ثبت نام</a>
+        <div style="margin-top: 20px;">
+        <a class="btn-block forget-login" href="forgot_password"><?php echo lang('login_forgot_password');?></a><br>
+        <div>
+        <a class="btn-block register-login" href="<?= site_url('Auth/create_user'); ?>" class="text-center">ثبت نام</a>
 
         </div>
         </div>
