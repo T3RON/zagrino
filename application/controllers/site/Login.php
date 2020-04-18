@@ -28,6 +28,14 @@ class Login extends CI_Controller {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site',1);
 
+        // $day = 86400 * 31;
+        // $calc_day=time() + ( ( $this->jdf->jdate('t',time(),'','','en') - $this->jdf->jdate('j',time(),'','','en') ) * $day ) + 86400;
+        // $curent_day=time();
+        
+        // echo($curent_day);
+        // echo($this->jdf->jdate('l, j F Y',$curent_day,'','GMT'));
+        // exit;
+
 
         $this->load->vars(array(
             'home_page' => TRUE
