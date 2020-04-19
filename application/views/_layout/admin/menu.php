@@ -215,7 +215,20 @@
           <li><a href="<?= base_url('admin/Text'); ?>"><i class="fa fa-circle-o"></i>متن متحرك </a></li>
           <li><a href="<?= base_url('admin/Site'); ?>"><i class="fa fa-circle-o"></i> سايت</a></li>
           <li><a href="<?= base_url('admin/State'); ?>"><i class="fa fa-circle-o"></i> وضعيت ها</a></li>
-          <li><a href="<?= base_url('admin/Ads'); ?>"><i class="fa fa-circle-o"></i> تبليغات سايت</a></li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> تبليغات سايت
+              <span class="pull-left-container">
+                  <i class="fa fa-angle-right pull-left"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="<?= base_url('admin/Ads'); ?>"><i class="fa fa-circle-o"></i>افزودن تبليغ</a></li>
+              <li><a href="<?= base_url('admin/Positon'); ?>"><i class="fa fa-circle-o"></i>تعيين موقعيت</a></li>
+              <li><a href="<?= base_url('admin/Adsa'); ?>"><i class="fa fa-circle-o"></i>تبليغات فعال</a></li>
+              <li><a href="<?= base_url('admin/Adsf'); ?>"><i class="fa fa-circle-o"></i>تبليغات منقضي</a></li>
+   
+            </ul>
+          </li>
           <li class="treeview">
             <a href="#"><i class="fa fa-circle-o"></i> مديريت شهر ها
               <span class="pull-left-container">

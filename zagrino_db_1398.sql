@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 16, 2020 at 09:52 AM
+-- Generation Time: Apr 19, 2020 at 12:08 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -75,10 +75,25 @@ DROP TABLE IF EXISTS `zgr_ads`;
 CREATE TABLE IF NOT EXISTS `zgr_ads` (
   `ads_id` int(11) NOT NULL AUTO_INCREMENT,
   `postion_id` int(11) NOT NULL,
+  `ads_title` text NOT NULL,
   `ads_img` text NOT NULL,
   `ads_link` text NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `ads_reg` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
   PRIMARY KEY (`ads_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_ads`
+--
+
+INSERT INTO `zgr_ads` (`ads_id`, `postion_id`, `ads_title`, `ads_img`, `ads_link`, `price_id`, `state_id`, `ads_reg`, `days`, `expire`) VALUES
+(1, 2, 'sdsss', '824c9-chrysanthemum.jpg', 'saddsd', 0, 1, '1587279808', 20, ''),
+(2, 2, 'dsdsd', 'd1629-jellyfish.jpg', 'dsdsd', 0, 1, '1587279861', 20, '1587366276'),
+(3, 3, '', '1b37e-tulips.jpg', 'dsds', 0, 4, '1587281485', 20, '1589009501');
 
 -- --------------------------------------------------------
 
@@ -115,10 +130,11 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `img6` int(11) DEFAULT NULL,
   `price_id` text,
   `state_id` int(11) DEFAULT NULL,
-  `show_time_id` int(11) DEFAULT NULL,
   `agahi_state_kala_id` int(11) DEFAULT NULL,
   `agahi_reg_date` text,
   `agahi_update_date` text,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
   PRIMARY KEY (`agahi_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -161,6 +177,10 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `amlak_date_register` text NOT NULL,
   `amlak_date_update` text NOT NULL,
   `state_id` int(11) NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `amlak_reg` text NOT NULL,
+  `amlak_update` text NOT NULL,
+  `amlak_expire` text NOT NULL,
   PRIMARY KEY (`agahi_amlak_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1269,7 +1289,17 @@ CREATE TABLE IF NOT EXISTS `zgr_postion` (
   `postion_id` int(11) NOT NULL AUTO_INCREMENT,
   `postion_title` text NOT NULL,
   PRIMARY KEY (`postion_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_postion`
+--
+
+INSERT INTO `zgr_postion` (`postion_id`, `postion_title`) VALUES
+(1, 'بالا سايت'),
+(2, 'سمت راست'),
+(3, 'سمت چپ'),
+(4, 'پايين سايت');
 
 -- --------------------------------------------------------
 
@@ -1415,10 +1445,10 @@ INSERT INTO `zgr_slider` (`slider_id`, `slider_link`, `slider_img`) VALUES
 
 DROP TABLE IF EXISTS `zgr_state`;
 CREATE TABLE IF NOT EXISTS `zgr_state` (
-  `state_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL AUTO_INCREMENT,
   `state_title` text NOT NULL,
   PRIMARY KEY (`state_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_state`
@@ -1426,7 +1456,11 @@ CREATE TABLE IF NOT EXISTS `zgr_state` (
 
 INSERT INTO `zgr_state` (`state_id`, `state_title`) VALUES
 (1, 'معمولي'),
-(2, 'ويژه');
+(2, 'ويژه'),
+(3, 'فعال'),
+(4, 'منقضي شده'),
+(5, 'پرداخت شده'),
+(6, 'پرداخت نشده');
 
 -- --------------------------------------------------------
 
@@ -1511,7 +1545,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587022260, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587270978, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
