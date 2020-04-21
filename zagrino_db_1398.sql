@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 19, 2020 at 12:08 PM
+-- Generation Time: Apr 21, 2020 at 11:31 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -180,7 +180,8 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `price_id` int(11) NOT NULL,
   `amlak_reg` text NOT NULL,
   `amlak_update` text NOT NULL,
-  `amlak_expire` text NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
   PRIMARY KEY (`agahi_amlak_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -229,6 +230,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `price_id` int(11) DEFAULT NULL,
   `agahi_rule_check` tinyint(1) DEFAULT NULL,
   `expire` text,
+  `days` int(11) NOT NULL,
   PRIMARY KEY (`agahi_car_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1080,6 +1082,7 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `state_id` int(11) DEFAULT NULL,
   `show_time_id` int(11) DEFAULT NULL,
   `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
   PRIMARY KEY (`jobs_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
 
@@ -1087,14 +1090,9 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `show_time_id`, `expire`) VALUES
-(24, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.74961930042645', '-73.9881179795151', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'f6cb9bcc1165c783ec500b7011caf66b.jpg', '63199fc0ad4957ba89dc1f7c2268dd2a.jpg', '8eccddb9fc7b1447d847d9dbebde523b.jpg', 'cff17ba5e9b5e65b8cc2d04f1c621886.jpg', 'fd10f8843bf1b434283e76478199a195.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(25, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.748562673214444', '-73.9903710350876', 0, 1, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '2e947a5a1d333d1fe6da940d9177b0e0.jpg', '3de798de29617997e4ca1110fbb40e99.jpg', '6aff7a4394c58c364507e7593d15c563.jpg', 'd54640314ecdac4f270a0c421788e777.jpg', '9b78ff05664e73c469c984039f33d01e.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(26, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74857892914486', '-73.98361186837008', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(27, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.748871535213', '-73.99032811974337', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(28, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98131589745333', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(29, 2, 2, 1, 2, 2, 'sadsadsa', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74877400000002', '-73.98298959587862', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1'),
-(30, 2, 3, 1, 1, 2, '', '', '', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', '40.74872523233986', '-73.98893337105562', 0, 0, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '', 0, 1, NULL, '1');
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `jobs_register_date`, `jobs_update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `show_time_id`, `expire`, `days`) VALUES
+(24, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.74961930042645', '-73.9881179795151', 0, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'f6cb9bcc1165c783ec500b7011caf66b.jpg', '63199fc0ad4957ba89dc1f7c2268dd2a.jpg', '8eccddb9fc7b1447d847d9dbebde523b.jpg', 'cff17ba5e9b5e65b8cc2d04f1c621886.jpg', 'fd10f8843bf1b434283e76478199a195.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1', 0),
+(25, 2, 2, 1, 3, 2, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, 'هف روز هفته', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '40.748562673214444', '-73.9903710350876', 0, 1, NULL, NULL, NULL, NULL, NULL, 'دوشنبه, ۲۵ فروردین ۱۳۹۹', '', '2e947a5a1d333d1fe6da940d9177b0e0.jpg', '3de798de29617997e4ca1110fbb40e99.jpg', '6aff7a4394c58c364507e7593d15c563.jpg', 'd54640314ecdac4f270a0c421788e777.jpg', '9b78ff05664e73c469c984039f33d01e.jpg', 'تبلغ ما كيفيت ماست', 0, 1, NULL, '1', 0);
 
 -- --------------------------------------------------------
 
@@ -1225,6 +1223,8 @@ CREATE TABLE IF NOT EXISTS `zgr_newspaper` (
   `newspaper_text` text NOT NULL,
   `newspaper_img` text NOT NULL,
   `newspaper_date` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
   PRIMARY KEY (`newspaper_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1277,6 +1277,24 @@ INSERT INTO `zgr_ostan` (`ostan_id`, `ostan_title`) VALUES
 (29, 'هرمزگان'),
 (30, 'همدان'),
 (31, 'يزد');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_pay`
+--
+
+DROP TABLE IF EXISTS `zgr_pay`;
+CREATE TABLE IF NOT EXISTS `zgr_pay` (
+  `pay_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `authority` text NOT NULL,
+  `mobile` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `amount` bigint(20) NOT NULL,
+  `pay_date` text NOT NULL,
+  PRIMARY KEY (`pay_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1404,6 +1422,8 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
   `site_btn_two_link` text NOT NULL,
   `site_btn_two_ico` text NOT NULL,
   `site_ads_text` text NOT NULL,
+  `API_KEY_ZARINPAL` text NOT NULL,
+  `API_KEY_KAVENEGAR` text NOT NULL,
   PRIMARY KEY (`site_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -1411,8 +1431,8 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
 -- Dumping data for table `zgr_site`
 --
 
-INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '');
+INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -1487,6 +1507,11 @@ CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
   `takhfif_sent_another_city` int(11) NOT NULL,
   `takhfif_tahodat_ersal_kala` text NOT NULL,
   `takhfif_tazmin_sod_moshtari` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `takhfif_reg` text NOT NULL,
+  `takhfif_update` text NOT NULL,
   PRIMARY KEY (`takhfif_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1545,7 +1570,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587270978, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587461429, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
