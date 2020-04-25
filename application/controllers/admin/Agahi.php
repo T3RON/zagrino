@@ -20,7 +20,7 @@ class Agahi extends MY_Controller {
         $crud->set_table('zgr_agahi');
         $crud->set_subject('نيازمندي');
 
-        $crud->columns('state_id','agahi_reg_date','agahi_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','agahi_title','accounts_id');
         $crud->display_as('agahi_id','شناسه');
         $crud->display_as('agahi_cate_id','گروه بندي');
         $crud->display_as('agahi_sub_cate_id',' زير گروه بندي');
@@ -32,8 +32,6 @@ class Agahi extends MY_Controller {
         $crud->display_as('agahi_sazeman_title','عنوان سازمان');
         $crud->display_as('tarefe_id','تعرفه');
         $crud->display_as('show_id','مدت نمايش');
-        $crud->display_as('agahi_reg_date','تاريخ ثبت');
-        $crud->display_as('agahi_update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('agahi_des','توضيح مختصر');
         $crud->display_as('agahi_tell','تلفن ثابت');
@@ -45,14 +43,26 @@ class Agahi extends MY_Controller {
         $crud->display_as('agahi_price','قيمت');
         $crud->display_as('agahi_full_des','توضيحات كامل');
         $crud->display_as('agahi_email','ايميل');
+        $crud->display_as('img1','تصوير شماره 1');
+        $crud->display_as('img2','تصوير شماره 2');
+        $crud->display_as('img3','تصوير شماره 3');
+        $crud->display_as('img4','تصوير شماره 4');
+        $crud->display_as('img5','تصوير شماره 5');
+        $crud->display_as('img6','تصوير شماره 6');
+        $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('agahi_state_kala_id','وضعيت كالا');
-     
+        $crud->display_as('register_date','تاريخ ثبت');
+        $crud->display_as('update_date','تاريخ آپديت');
+        $crud->display_as('days','تعداد روزهاي نمايش');
+        $crud->display_as('expire','تاريخ انقضا');
+    
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('agahi_state_kala_id','agahi_state_kala','agahi_state_kala_title');
         $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
         $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
+        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
@@ -63,13 +73,31 @@ class Agahi extends MY_Controller {
 
         $crud->unset_add_fields('agahi_id');
         $crud->unset_edit_fields('agahi_id');
-        $crud->field_type('agahi_reg_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('agahi_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+     
+
+
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
+        $crud->set_field_upload('img5','assets/uploads/img');
+        $crud->set_field_upload('img6','assets/uploads/img');
 
         //$crud->set_field_upload('jobs_logo','assets/uploads/img');
         //$crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
 
+        
+
+        $crud->callback_before_insert(array($this,'calculate'));
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
 
       
         //$crud->required_fields('username');
@@ -147,6 +175,29 @@ class Agahi extends MY_Controller {
                     $output = $crud->render();
                     $output->output.= $js_ostan . $js_cate;
         $this->out_view($output);
+    }
+
+    function calculate($post_array) {
+        $day =  time() + ($post_array['days'] * 86400);
+        $post_array['expire'] = $day;
+        return $post_array;
+    }   
+
+    public function _change_expire_date($value, $row)
+    {
+        if(time() > $value) {
+            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+        }else {
+            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+        }
+        
+    }
+
+    public function _change_reg_date($value, $row)
+    {
+        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+
+        
     }
     function out_view($output = null) {
         

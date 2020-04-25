@@ -135,7 +135,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
+            <li><a href="<?= base_url('admin/Events'); ?>"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
             <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> معلق</a></li>

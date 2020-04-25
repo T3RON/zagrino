@@ -20,7 +20,7 @@ class Ads extends MY_Controller {
         $crud->set_table('zgr_ads');
         $crud->set_subject('تبليغات');
 
-        $crud->columns('state_id','expire','ads_reg','postion_id','ads_title');
+        $crud->columns('state_id','expire','register_date','postion_id','ads_title');
         $crud->display_as('ads_id','شناسه ');
         $crud->display_as('ads_title','عنوان تبليغ ');
         $crud->display_as('postion_id','مكان قرار گيري');
@@ -28,7 +28,7 @@ class Ads extends MY_Controller {
         $crud->display_as('ads_link','لينك');
         $crud->display_as('price_id','قيمت');
         $crud->display_as('state_id','وضعيت');
-        $crud->display_as('ads_reg','تاريخ ثبت');
+        $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('days','تعداد روزهاي نمايش');
         $crud->display_as('expire','تاريخ انقضا');
 
@@ -40,7 +40,7 @@ class Ads extends MY_Controller {
       
         
 
-        $crud->unset_texteditor('expire','ads_reg','ads_link','ads_title');
+        $crud->unset_texteditor('expire','register_date','ads_link','ads_title');
 
         $crud->set_relation('postion_id','postion','postion_title');
         $crud->set_relation('state_id','state','state_title');
@@ -51,11 +51,9 @@ class Ads extends MY_Controller {
 
         $crud->callback_before_insert(array($this,'calculate'));
         $crud->callback_column('expire',array($this,'_change_expire_date'));
-        $crud->callback_column('ads_reg',array($this,'_change_reg_date'));
-
-        
-        $crud->unset_edit_fields('ads_reg');
-        $crud->field_type('ads_reg', 'hidden', time());
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->field_type('register_date', 'hidden', time());
         $crud->field_type('expire', 'hidden');
 
 
