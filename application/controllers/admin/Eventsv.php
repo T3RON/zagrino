@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Events extends MY_Controller {
+class Eventsv extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -18,7 +18,9 @@ class Events extends MY_Controller {
         $crud = new grocery_CRUD();
 
         $crud->set_table('zgr_events');
-        $crud->set_subject('شغل');
+        $crud->where('zgr_events.state_id'2);
+
+        $crud->set_subject('رويداد');
 
         $crud->columns('state_id','expire','update_date','register_date','events_type_id','events_title','accounts_id');
         $crud->display_as('events_id','شناسه');
@@ -104,6 +106,7 @@ class Events extends MY_Controller {
         //$crud->required_fields('username');
 
         $crud->unset_clone();
+        $crud->unset_add();
         
         $crud->unset_texteditor(
             'events_title','events_dec','events_start','events_finish','events_capacity','events_link_site','events_email','events_instagram',

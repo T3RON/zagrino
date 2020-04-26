@@ -22,7 +22,7 @@
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
             <li><a href="<?= base_url('admin/Jobsv'); ?>"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
-            <li><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معلق</a></li>
             <li><a href="<?= base_url('admin/Jcate'); ?>"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
             <li><a href="<?= base_url('admin/Jscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه بندي مشاغل</a></li>
             <li><a href="<?= base_url('admin/Jobs_service'); ?>"><i class="fa fa-circle-o"></i>تعريف امكانات و خدمات</a></li>
@@ -136,9 +136,12 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/Events'); ?>"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> معلق</a></li>
+            <li><a href="<?= base_url('admin/Eventsv'); ?>"><i class="fa fa-circle-o"></i>ويژه</a></li>
+            <li><a href="<?= base_url('admin/Eventsn'); ?>"><i class="fa fa-circle-o"></i> معمولي</a></li>
+            <li><a href="<?= base_url('admin/Eventsf'); ?>"><i class="fa fa-circle-o"></i> معلق</a></li>
+            <li><a href="<?= base_url('admin/Eventslvl'); ?>"><i class="fa fa-circle-o"></i> سطح رويداد</a></li>
+            <li><a href="<?= base_url('admin/Eventsrun'); ?>"><i class="fa fa-circle-o"></i> نحوه برگزاري رويداد</a></li>
+            <li><a href="<?= base_url('admin/Eventstype'); ?>"><i class="fa fa-circle-o"></i> نوع رويداد</a></li>
         
           </ul>
         </li>
@@ -150,7 +153,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i>جاذبه ها</a></li>
+            <li><a href="<?= base_url('admin/Gardeshgary_jazebe'); ?>"><i class="fa fa-circle-o"></i>جاذبه ها</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>اقامتگاه ها</a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> تور ها</a></li>
           </ul>

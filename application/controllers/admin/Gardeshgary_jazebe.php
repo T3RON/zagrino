@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Events extends MY_Controller {
+class Gardeshgary_jazebe extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -17,40 +17,31 @@ class Events extends MY_Controller {
 
         $crud = new grocery_CRUD();
 
-        $crud->set_table('zgr_events');
-        $crud->set_subject('شغل');
+        $crud->set_table('zgr_gardeshgari');
+        $crud->set_subject('گردشگري و جاذبه ها');
 
-        $crud->columns('state_id','expire','update_date','register_date','events_type_id','events_title','accounts_id');
-        $crud->display_as('events_id','شناسه');
-        $crud->display_as('events_type_id','نوع رويداد');
-        $crud->display_as('events_run_id',' نوع اجرا');
+        $crud->columns('state_id','expire','update_date','register_date','gardeshgari_title','accounts_id');
+        $crud->display_as('gardeshgari_id','شناسه');
         $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
-        $crud->display_as('events_title','عنوان رويداد');
-        $crud->display_as('events_dec','توضيح');
-        $crud->display_as('events_owner','سازمان دهنده');
-        $crud->display_as('events_start','شروع رويداد');
-        $crud->display_as('events_finish','پايان رويداد');
-        $crud->display_as('events_capacity','ظرفيت');
-        $crud->display_as('events_level_id','سطح رويداد');
-        $crud->display_as('events_pro_dec','توضيح تخصصي رويداد');
-        $crud->display_as('events_conditons','شرايط رويداد');
+        $crud->display_as('gardeshgari_title','عنوان محل');
+        $crud->display_as('gardeshgari_des','توضيحات');
+        $crud->display_as('gardeshgari_creator','سازنده');
+        $crud->display_as('gardeshgari_conditons','شرايط');
+        $crud->display_as('gardeshgari_best_time','بهترين زمان');
+        $crud->display_as('gardeshgari_need_time_view','زمان مورد نياز گردش');
+        $crud->display_as('gardeshgari_address','آدرس');
+        $crud->display_as('jobs_service_id','سرويس ها');
+        $crud->display_as('map_latitude','طول جغرافيايي');
+        $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
         $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
-        $crud->display_as('events_logo','لوگو');
-        $crud->display_as('events_poster','پوستر');
-        $crud->display_as('events_clip','كليپ');
-        $crud->display_as('events_link_site','لينك سايت');
-        $crud->display_as('events_email','ايميل');
-        $crud->display_as('events_instagram','اينستاگرام');
-        $crud->display_as('events_address','آدرس برگزاري');
-        $crud->display_as('map_latitude','طول جغرافيايي');
-        $crud->display_as('map_longitude','عرض جغرافيايي');
+
         $crud->display_as('state_id','وضعيت رويداد');
         $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('register_date','تاريخ ثبت');
@@ -62,22 +53,19 @@ class Events extends MY_Controller {
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
-        $crud->set_relation('events_type_id','events_type','events_type_title');
-        $crud->set_relation('events_run_id','events_run','events_run_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation('price_id','price','price_amount');
+        $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
+
 
         
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('jobs_id');
-        $crud->unset_edit_fields('jobs_id');
+        $crud->unset_add_fields('gardeshgari_id');
+        $crud->unset_edit_fields('gardeshgari_id');
  
-       
-        $crud->set_field_upload('events_logo','assets/uploads/img');
-        $crud->set_field_upload('events_poster','assets/uploads/img');
-        $crud->set_field_upload('events_clip','assets/uploads/videos');
+    
         $crud->set_field_upload('img1','assets/uploads/img');
         $crud->set_field_upload('img2','assets/uploads/img');
         $crud->set_field_upload('img3','assets/uploads/img');
@@ -106,8 +94,8 @@ class Events extends MY_Controller {
         $crud->unset_clone();
         
         $crud->unset_texteditor(
-            'events_title','events_dec','events_start','events_finish','events_capacity','events_link_site','events_email','events_instagram',
-            'events_address','map_latitude','map_longitude','events_owner'
+            'gardeshgari_title','gardeshgari_creator','gardeshgari_best_time','gardeshgari_conditons','gardeshgari_best_time','gardeshgari_need_time_view',
+            'map_latitude','map_longitude'
         );
 
         
@@ -130,8 +118,8 @@ class Events extends MY_Controller {
                 );
 
                 $config_ostan = array(
-                    'main_table' => 'zgr_events',
-                    'main_table_primary' => 'events_id',
+                    'main_table' => 'zgr_gardeshgari',
+                    'main_table_primary' => 'gardeshgari_id',
                     "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"
@@ -175,8 +163,8 @@ class Events extends MY_Controller {
 
     function out_view($output = null) {
         
-        $output->title = "رويداد ها";
-        $output->des = "مديريت و بررسي رويداد هاي موجود";
+        $output->title = "گردشگري جاذبه ها";
+        $output->des = "مديريت و بررسي جاذبه هاي موجود";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
         $this->load->view('admin/index',$output);
 

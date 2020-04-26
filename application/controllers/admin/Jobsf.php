@@ -16,7 +16,7 @@ class Jobsf extends MY_Controller {
     {
 
         $crud = new grocery_CRUD();
-        $crud->where('zgr_jobs.state_id',1);
+        $crud->where('zgr_jobs.state_id',7);
 
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
@@ -115,6 +115,7 @@ class Jobsf extends MY_Controller {
         //$crud->required_fields('username');
 
         $crud->unset_clone();
+        $crud->unset_add();
         
         $crud->unset_texteditor(
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
