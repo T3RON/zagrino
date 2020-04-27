@@ -14,21 +14,21 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r footer_grid">
                         <div class="t_align footer_border p0">
                             <span class="f_r p0"></span>
-                            <label for="haghighi" class="p0">حقیقی</label>
+                            <label for="haghighi" class="p0">نام و نام خانوادگی</label>
                             <span class="f_l p0"></span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
-                            <input id="haghighi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" placeholder="نام و نام خانوادگی">
+                            <input id="haghighi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12   f_l footer_grid">
                         <div class="t_align footer_border p0">
                             <span class="f_r p0"></span>
-                            <label for="hoghooghi" class="p0">حقوقی</label>
+                            <label for="hoghooghi" class="p0">نام شرکت</label>
                             <span class="f_l p0"></span>
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_in p0">
-                            <input id="hoghooghi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" placeholder="نام شرکت">
+                            <input id="hoghooghi" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12   f_r footer_grid">
@@ -91,18 +91,9 @@
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer_menu p0">
                     <ul class="m0 p0">
-                        <li><a href="">
-                            همکاری با زاگرینو
-                        </a></li>
-                        <li><a href="">
-                            قوانین و مقررات
-                        </a></li>
-                        <li><a href="">
-                            سوالات متداول
-                        </a></li>
-                        <li><a href="">
-                            راهنمای استفاده از خدمات
-                        </a></li>
+                    <?php foreach ($footer_menu as $footer_menu_value) { ?>
+                    <li><a href="<?= $footer_menu_value->footer_menu_link; ?>"><?= $footer_menu_value->footer_menu_title; ?></a></li>
+                <?php } ?>
                     </ul>
                 </div>
 
@@ -131,20 +122,55 @@
 <script type="text/javascript" src="<?=base_url('')?>assets/site/js/swiper.min.js"></script>
 <script src="<?=base_url('')?>assets/site/js/pushbar.js"></script>
 <script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
-    
-    
-      
-    
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+
+<script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdFTV6udcVMeClso6S9NQQwJOerJpqzwg&callback=initialize"></script>
+          
+    <script type="text/javascript">
+    jQuery.noConflict()(function ($) { // this was missing for me
+    $(document).ready(function() { 
+        var vsOpts = {
+  $slides: $('.v-slide'),
+  $list: $('.v-slides'),
+  duration: 10,
+  lineHeight: 50
+}
+
+var vSlide = new TimelineMax({
+  paused: true,
+  repeat: -1
+})
+
+vsOpts.$slides.each(function(i) {
+  vSlide.to(vsOpts.$list, vsOpts.duration / vsOpts.$slides.length, {
+    y: i * -1 * vsOpts.lineHeight,
+    ease: Elastic.easeOut.config(1, 0.4)
+  })
+})
+vSlide.play()
+
+    });
+});
+
+
+</script>
 <!--    Script For This Page     -->
       
       <script>
+
+
+
+
+
     var swiper = new Swiper('.swiper_bankMashaghel', {
       
           slidesPerView: 2,
       spaceBetween: 30,
         loop: true,
         autoplay: {
-            delay: 2500,
+            delay: 8000,
             disableOnInteraction: false,
         },
       pagination: {
@@ -158,4 +184,4 @@
     });
   </script>
     
-    
+    <?php include_once (APPPATH.'views/_layout/swal.php'); ?>

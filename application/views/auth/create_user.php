@@ -53,7 +53,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 <body class="hold-transition login-page">
 <div class="register-box" style="direction: rtl">
-
+<div class="login-logo">
+    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+     <?php } ?>
+    </div>
 	<div class="register-box-body">
 		<p class="login-box-msg">ثبت نام کاربر جدید</p>
 
@@ -104,7 +108,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 		</p>
 
 
-		<p><?php echo form_submit('submit', lang('create_user_submit_btn'),'class="btn btn-primary btn-block btn-flat"');?></p>
+		<p><?php echo form_submit('submit', lang('create_user_submit_btn'),'class="btn btn-primary btn-block register-login"');?></p>
 
 		<?php echo form_close();?>
 

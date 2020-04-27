@@ -34,6 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <![endif]-->
+    <link rel="stylesheet" href="<?=base_url('')?>dist/persianDatepicker-default.css" />
 
     <!-- Google Font -->
     <link rel="stylesheet"
@@ -302,7 +303,7 @@ desired effect
           <li class="dropdown user user-menu">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <img src="<?=base_url('')?>dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-              <span class="hidden-xs">علیرضا حسینی زاده</span>
+              <span class="hidden-xs"><?= $this->session->userdata('first_name'); ?> <?= $this->session->userdata('last_name'); ?></span>
             </a>
             <ul class="dropdown-menu">
               <!-- User image -->

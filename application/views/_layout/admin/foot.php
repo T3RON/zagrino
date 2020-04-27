@@ -48,7 +48,7 @@ immediately after the control sidebar -->
 <script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- babakhani datepicker -->
 
-
+<script src="<?=base_url('')?>dist/js/persianDatepicker.min.js"></script>
 
 <!-- Script -->
 <!-- <script>
@@ -75,6 +75,21 @@ console.log(arguments);
 
 </script>
 
+
+<script>
+ /** add active class and stay opened when selected */
+var url = window.location;
+
+// for sidebar menu entirely but not cover treeview
+$('ul.sidebar-menu a').filter(function() {
+   return this.href == url;
+}).parent().addClass('active');
+
+// for treeview
+$('ul.treeview-menu a').filter(function() {
+   return this.href == url;
+}).parentsUntil(".sidebar-menu > .treeview-menu").addClass('active');
+    </script>
 
 
 

@@ -18,9 +18,9 @@ License: GNU General Public License v2 or later
     font-size: 12px!important;
     float: right;
     line-height: 3;
-    border-right: 1px dashed #999;
+    border-right: 1px dashed #e3e3e3;
     border-radius: 0 0 20px 0;
-    border-bottom: 1px dashed #999;
+    border-bottom: 1px dashed #e3e3e3;
 }
 
 .top_header .menu_top {
@@ -161,12 +161,12 @@ License: GNU General Public License v2 or later
 }
 
 .header .logo_slider .left_use .c_circle {
-    height: 40px;
-    width: 40px;
+    height: 64px;
+    width: 64px;
     box-shadow: 0 0 20px 0 #e1e1e1;
     font-size: 20px;
     color: #ccd5de;
-    border-radius: 20px;
+    border-radius: 50px;
     padding: 12px!important;
 }
 
@@ -237,7 +237,7 @@ License: GNU General Public License v2 or later
 .search .search_label span {
     width: 5px;
     height: 5px;
-    background: #999;
+    background: #e3e3e3;
     border-radius: 20px;
 }
 
@@ -589,13 +589,21 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .upper img {
     height: 140px;
     border-radius: 10px;
+} 
+.expiredimg {
+    height: 67px !important;
+    width: 67px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 41px !important;
+   
 }
-
 .Agahiha_Niazmandiha .left_side ul li .under button {
-    border: 1px solid #c2cadb;
+    border: 1px solid #848484;
     text-align: center;
     font-size: 14px;
-    color: #939aa4;
+    color: #505152;
     background: transparent;
     border-radius: 15px;
     margin: 2px 0;
@@ -613,8 +621,8 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .left i {
     float: right;
     padding: 0 4px;
-    margin: 2px 0;
-    font-size: 15px;
+    margin: 5px 0;
+    font-size: 17px;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text {
@@ -639,6 +647,19 @@ License: GNU General Public License v2 or later
     overflow-y: hidden;
     text-overflow: ellipsis;
 }
+.header-pick-modal {
+    background: #fff;
+    padding: 0 20px !important;
+    border-radius: 5px;
+    color: #fff;
+}
+.header-pick-modal:hover {
+    background: #f5f5f5;
+}
+.header-pick-modal img {
+    width: 50px;
+    margin-top: 7px;
+}
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text .c_title a {
     color: unset !important;
@@ -649,17 +670,18 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .Location span {
-    background: #fff;
+    background: #575858;
     margin: 4px 0;
     padding: 0 10px!important;
     font-size: 14px;
     border-radius: 10px;
+    color: #fff;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .c_validate,
 .c_observe,
 .c_code {
-    color: #939aa4;
+    color: #222325;
     font-size: 14px;
 }
 
@@ -672,8 +694,8 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .information button {
-    background: #fff;
-    color: #464646!important;
+    background: #c31d5b;
+    color: #ffffff!important;
     border-radius: 10px;
     font-size: 14px;
     border: none;
@@ -963,18 +985,18 @@ License: GNU General Public License v2 or later
 }
 
 .column_left .border_section {
-    border: 1px solid #999;
+    border: 1px solid #e7ebee;
     border-radius: 10px;
 }
 
 .column_left section .b1 {
     padding: 13px 4px 13px;
     border-radius: 50px;
-    border: 1px solid #999;
+    border: 1px solid #e7ebee;
     border-top: outset transparent;
     border-right: outset transparent;
-    transform: rotate(-48deg);
-    margin: -34px 0 0 0;
+    transform: rotate(-44deg);
+    margin: -31px 0 0 0;
     background: #fff;
 }
 
@@ -1036,7 +1058,7 @@ License: GNU General Public License v2 or later
 }
 
 .column_left .archive {
-    border: 1px solid #999;
+    border: 1px solid #e7ebee;
     background: #fff;
     font-size: 14px;
     padding: 2px 10px !important;
@@ -1120,14 +1142,14 @@ footer form .footer_grid .footer_border label {
 }
 
 footer .footer_border span {
-    background: #999;
+    background: #e7ebee;
     height: 5px;
     width: 5px;
     border-radius: 20px;
 }
 
 footer .footer_grid .footer_in {
-    border: 1px solid #999;
+    border: 1px solid #E7EBEE;
     border-radius: 20px;
     padding: 10px !important;
 }
@@ -1336,8 +1358,8 @@ footer .second_section .copyRight_l span {
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .point_section button {
-    width: 27px!important;
-    height: 27px!important;
+    width: 33px!important;
+    height: 33px!important;
 }
 
 .b_m_v .border_box .flex_box .left_side .info_top .point_section .observe {
@@ -1817,7 +1839,7 @@ a {
 
 .b_m_v .toggler_tabs ul li .is-target-visible .title {
     color: #e91e63!important;
-    border: 1px solid #828282;
+    border: 1px solid #e7ebee;
     border-bottom: none!important;
     position: relative;
     border-radius: 50px 50px 0 0;
@@ -2050,6 +2072,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map {
     margin-top: 10px !important;
+    height: 300px;
 }
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map img {
@@ -2666,7 +2689,7 @@ a {
 
 .niazmandiha_form .all {
     margin: 20px 0;
-    border: 2px dotted #999;
+    border: 2px dotted #dcdcdc;
     border-radius: 20px;
     padding: 5px 10px 15px 10px!important;
 }
@@ -2929,7 +2952,7 @@ form .fild select {
 }
 
 .niazmandiha_form form .niazmandi_radio li label {
-    border: 1px solid #999;
+    border: 1px solid #E7EBEE;
     border-radius: 20px;
     padding: 5px 7px !important;
 }
@@ -2960,7 +2983,7 @@ form .fild select {
 
 .niazmandiha_form form .text_title span {
     padding: 10px 20px !important;
-    color: #999;
+    color: #c0c8d3;
 }
 
 .niazmandiha_form form .fild .img_place li {
@@ -2989,7 +3012,7 @@ form .fild select {
 }
 
 .niazmandiha_form form .naghlie_makhsoos .body {
-    border-color: #999!important;
+    border-color: #f7e8da!important;
     padding: 25px 0 !important;
 }
 
@@ -2998,14 +3021,14 @@ form .fild select {
 
 .niazmandi_ghavanin .outer {
     text-align: center;
-    /* background: #673ab7; */
+    background: #673ab7;
     border-radius: 20px !important;
     margin: 5px 0 2px 0;
 }
 
 .niazmandi_ghavanin .all {
     margin: 40px 0;
-    border: 2px dotted #999;
+    border: 2px dotted #dcdcdc;
     border-radius: 20px;
     padding: 20px 20px!important;
 }
@@ -3128,8 +3151,8 @@ form .fild select {
     width: 100%!important;
     box-shadow: none!important;
     border: none!important;
-    background: #e1e1e1!important;
-    padding: 10px 40px!important;
+    background: #f9f9f9!important;
+    padding: 0px 40px!important;
     margin: 0!important;
     text-align: right;
 }
@@ -3589,7 +3612,23 @@ form .fild select {
     font-size: 14px;
     text-align: center;
 }
-
+.v-slider-frame {
+    float:right !important;
+    with:100% !important;
+  height: 50px;
+  overflow: hidden;
+  text-align: center;
+}
+ul.v-slides {
+  list-style-type: none;
+  transform: translateY(50px);
+  padding:0;
+}
+.v-slide {
+  font-size: 15px;
+  line-height: 50px;
+  color: #000;
+}
 .veri_code_niazmandi {
     background: #e9ebec;
     border-radius: 20px;
@@ -3762,9 +3801,7 @@ form .fild select {
     width: 100%!important
 }
 
-.img img {
-    width: 100%!important
-}
+
 
 .ta_r {
     text-align: center!important;
@@ -3904,7 +3941,7 @@ form .fild select {
 
 .right_panel {
     background: #fff;
-    border-left: 1px solid #999;
+    border-left: 1px solid #e7ebee;
 }
 
 .left_panel {
@@ -3964,8 +4001,8 @@ form .fild select {
 }
 
 .sabad_div_info {
-    border-top: 1px solid #999;
-    border-bottom: 1px solid #999;
+    border-top: 1px solid #e7ebee;
+    border-bottom: 1px solid #e7ebee;
     padding: 15px 15px;
 }
 
@@ -4057,13 +4094,13 @@ form .fild select {
 
 .niazmandi_ghavanin .all_2 {
     margin: 10px 0;
-    border: 1px solid #999;
+    border: 2px solid #dcdcdc;
     border-radius: 20px;
     padding: 10px 20px!important;
 }
 
 .today-li {
-    border: 1px solid #999;
+    border: 2px solid #dcdcdc;
     border-radius: 20px;
     padding: 10px 15px!important;
 }
@@ -4330,7 +4367,7 @@ form .fild select {
 }
 
 .today-li_2 {
-    border: 1px solid #999;
+    border: 2px solid #dcdcdc;
     border-radius: 20px;
     padding: 10px 5px!important;
     margin: 3px 0!important;
@@ -4398,7 +4435,7 @@ form .fild select {
 
 .takhfif_btns {
     box-shadow: #0000ff6b 1px 0 10px 0px;
-    padding: 10px 5px!important;
+    padding: 10px 15px!important;
     background: #fff;
     color: #000!important;
     font-size: 14px;
@@ -4548,10 +4585,10 @@ form .fild select {
 }
 
 .small_img_marhale img {
-    width: 35%;
+    width: 500px;
     position: absolute;
-    bottom: 0px;
-    right: 35%;
+    bottom: -164px;
+    right: 9%;
 }
 
 .label_marhale {
@@ -4573,22 +4610,21 @@ form .fild select {
     height: 130px;
     margin: 0 auto!important;
     display: block;
-    border-radius: 15px;
 }
 
 .img_panel_input_2 {
-    background: #ff0000;
+    background: #298013;
     width: 35px;
     height: 35px;
-    margin: -36px 2px;
-    border-radius: 15px;
+    margin: -25px 71px;
+    border-radius: 36px;
     position: absolute;
 }
 
 .img_panel_input_2 img {
-    width: 25px;
-    height: 25px;
-    margin: 5px!important;
+    width: 20px;
+    height: 20px;
+    margin: 8px!important;
 }
 
 .img_panel_input_2 input {
@@ -4707,7 +4743,7 @@ form .fild select {
 
 .p_all_20 {
     margin: 20px 0 10px 0;
-    border: 2px dotted #999;
+    border: 2px dotted #dcdcdc;
     border-radius: 20px;
     padding: 15px 10px!important;
 }
@@ -4814,20 +4850,6 @@ form .fild select {
     margin: -5px 0 0 0!important;
 }
 
-.m_l_15 {
-    margin: 0 15px!important;
-    text-align: center!important;
-}
-
-.borde_r_35 {
-    border-radius: 25px;
-    text-align: center!important;
-}
-
-.border_none {
-    border: none!important;
-}
-
 
 /*------------ media_screen ---------------*/
 
@@ -4854,7 +4876,7 @@ form .fild select {
 
 @media (min-width: 600px) {
     .search {
-        border: 1px solid #999;
+        border: 1px solid #e3e3e3;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -4926,7 +4948,7 @@ form .fild select {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #828282;
+        border: 1px solid #e7ebee;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -4956,7 +4978,7 @@ form .fild select {
         font-size: 14px;
     }
     .niazmandiha_form .all .foot .foot_in div {
-        line-height: 5;
+        line-height: 4;
     }
 }
 
@@ -4974,7 +4996,7 @@ form .fild select {
         padding: 4px 9px!important;
     }
     .search {
-        border: 1px solid #999;
+        border: 1px solid #e3e3e3;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5057,7 +5079,7 @@ form .fild select {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #828282;
+        border: 1px solid #e7ebee;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -5095,16 +5117,6 @@ form .fild select {
     }
 }
 
-.tlt_2 {
-    font-size: 23px;
-    padding: 10px 0 !important;
-}
-
-.border_b_1 {
-    padding: 10px 0!important;
-    border-bottom: 1px solid #e1e1e1!important;
-}
-
 @media (max-width: 600px) {}
 
 
@@ -5112,7 +5124,7 @@ form .fild select {
 
 @media (min-width: 768px) {
     .search {
-        border: 1px solid #999;
+        border: 1px solid #e3e3e3;
         border-radius: 10px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5177,7 +5189,7 @@ form .fild select {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #828282;
+        border: 1px solid #e7ebee;
         border-bottom: none!important;
         position: relative;
         border-radius: 25px 25px 0 0;
@@ -5211,7 +5223,7 @@ form .fild select {
 
 @media (min-width: 992px) {
     .search {
-        border: 1px solid #999;
+        border: 1px solid #e3e3e3;
         border-radius: 50px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5283,7 +5295,7 @@ form .fild select {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #828282;
+        border: 1px solid #e7ebee;
         border-bottom: none!important;
         position: relative;
         border-radius: 50px 50px 0 0;
@@ -5315,7 +5327,7 @@ form .fild select {
         background-color: #ed1b24;
     }
     .niazmandiha_form .all .foot .foot_in div {
-        line-height: 5.3;
+        line-height: 6;
     }
 }
 
@@ -5328,7 +5340,7 @@ form .fild select {
 
 @media (min-width: 1200px) {
     .search {
-        border: 1px solid #999;
+        border: 1px solid #e3e3e3;
         border-radius: 50px;
         padding: 10px !important;
         margin-top: 15px;
@@ -5338,7 +5350,7 @@ form .fild select {
         margin: 0;
     }
     .slider .container-fluid .swiper-container .swiper-wrapper img {
-        height: 450px!important;
+        height: 350px!important;
     }
     .b_m_v .title_head .report_violation span {
         padding: 4px 10px!important;
@@ -5399,7 +5411,7 @@ form .fild select {
     }
     .b_m_v .toggler_tabs ul li .is-target-visible .title {
         color: #e91e63!important;
-        border: 1px solid #828282;
+        border: 1px solid #e7ebee;
         border-bottom: none!important;
         position: relative;
         border-radius: 50px 50px 0 0;

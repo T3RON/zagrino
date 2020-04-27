@@ -37,13 +37,13 @@
  */
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-$lang['email_must_be_array'] = 'The email validation method must be passed an array.';
-$lang['email_invalid_address'] = 'Invalid email address: %s';
-$lang['email_attachment_missing'] = 'Unable to locate the following email attachment: %s';
-$lang['email_attachment_unreadable'] = 'Unable to open this attachment: %s';
-$lang['email_no_from'] = 'Cannot send mail with no "From" header.';
-$lang['email_no_recipients'] = 'You must include recipients: To, Cc, or Bcc';
-$lang['email_send_failure_phpmail'] = 'Unable to send email using PHP mail(). Your server might not be configured to send mail using this method.';
+$lang['email_must_be_array'] = 'روش اعتبار سنجی ایمیل باید یک آرایه منتقل شود.';
+$lang['email_invalid_address'] = 'آدرس ایمیل نامعتبر:٪ s';
+$lang['email_attachment_missing'] = 'یافتن پیوست ایمیل زیر امکان پذیر نیست:٪ s';
+$lang['email_attachment_unreadable'] = 'باز کردن این پیوست امکان پذیر نیست:٪ s';
+$lang['email_no_from'] = 'ارسال نامه بدون عنوان "از" امکان پذیر نیست.';
+$lang['email_no_recipients'] = 'شما باید گیرندگان را نیز شامل شوید ، به ، سی سی یا سی سی سی';
+$lang['email_send_failure_phpmail'] = 'ارسال ایمیل با استفاده از نامه PHP () امکان پذیر نیست. ممکن است سرور شما برای ارسال نامه با استفاده از این روش تنظیم نشده باشد.';
 $lang['email_send_failure_sendmail'] = 'Unable to send email using PHP Sendmail. Your server might not be configured to send mail using this method.';
 $lang['email_send_failure_smtp'] = 'Unable to send email using PHP SMTP. Your server might not be configured to send mail using this method.';
 $lang['email_sent'] = 'Your message has been successfully sent using the following protocol: %s';

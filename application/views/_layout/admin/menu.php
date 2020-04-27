@@ -20,9 +20,12 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="active"><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
-            <li class="active"><a href="index2.html"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li><a href="<?= base_url('admin/Jobs'); ?>"><i class="fa fa-circle-o"></i>ليست مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jobsv'); ?>"><i class="fa fa-circle-o"></i>مشاغل ويژه</a></li>
+            <li><a href="<?= base_url('admin/Jobsf'); ?>"><i class="fa fa-circle-o"></i>مشاغل معمولي</a></li>
+            <li><a href="<?= base_url('admin/Jcate'); ?>"><i class="fa fa-circle-o"></i>گروه بندي مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه بندي مشاغل</a></li>
+            <li><a href="<?= base_url('admin/Jobs_service'); ?>"><i class="fa fa-circle-o"></i>تعريف امكانات و خدمات</a></li>
           </ul>
         </li>
         <li class="treeview">
@@ -69,11 +72,59 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i>ليست نيازمندي</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>معلق</a></li>
-          </ul>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> بخش نيازمندي
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                  <li><a href="<?= base_url('admin/Agahi'); ?>"><i class="fa fa-circle-o"></i>ليست نيازمندي </a></li>
+                  <li><a href="<?= base_url('admin/Acate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="<?= base_url('admin/Ascate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="<?= base_url('admin/Atarefe'); ?>"><i class="fa fa-circle-o"></i>تعرفه </a></li>
+                  <li><a href="<?= base_url('admin/Ashow_time'); ?>"><i class="fa fa-circle-o"></i>زمان نمايش</a></li>
+                  <li><a href="<?= base_url('admin/Acond_tag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  <li><a href="<?= base_url('admin/Atag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="<?= base_url('admin/Akala_state'); ?>"><i class="fa fa-circle-o"></i>وضعيت كالا</a></li>
+               
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> نيازمندي املاك
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="<?= base_url('admin/Amlak'); ?>"><i class="fa fa-circle-o"></i>ليست املاك </a></li>
+                <li><a href="<?= base_url('admin/Mcate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="<?= base_url('admin/Mscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="<?= base_url('admin/Mtag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="<?= base_url('admin/Mctag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  
+                </ul>
+              </li>
+              <li class="treeview">
+                <a href="#"><i class="fa fa-circle-o"></i> آگهي هاي وسايل نقليه
+                  <span class="pull-left-container">
+                      <i class="fa fa-angle-right pull-left"></i>
+                    </span>
+                </a>
+                <ul class="treeview-menu">
+                <li><a href="<?= base_url('admin/Car'); ?>"><i class="fa fa-circle-o"></i>ليست وسايل نقليه </a></li>
+                <li><a href="<?= base_url('admin/Ccate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
+                  <li><a href="<?= base_url('admin/Cscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a></li>
+                  <li><a href="<?= base_url('admin/Cctag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
+                  <li><a href="<?= base_url('admin/Ctag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
+                  <li><a href="<?= base_url('admin/Ctype'); ?>"><i class="fa fa-circle-o"></i>نوع وسيله</a></li>
+                  <li><a href="<?= base_url('admin/Cstate'); ?>"><i class="fa fa-circle-o"></i>وضعيت وسيله</a></li>
+                  <li><a href="<?= base_url('admin/Csokht'); ?>"><i class="fa fa-circle-o"></i>نوع سوخت</a></li>
+                  <li><a href="<?= base_url('admin/Cbody'); ?>"><i class="fa fa-circle-o"></i>نوع بدنه</a></li>
+                </ul>
+              </li>
+            </ul>
+    
         </li>
         <li class="treeview">
           <a href="#">
@@ -84,7 +135,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
+            <li><a href="<?= base_url('admin/Events'); ?>"><i class="fa fa-circle-o"></i> ليست رويداد ها</a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i>ويژه</a></li>
             <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> معمولي</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> معلق</a></li>
@@ -140,51 +191,54 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>مثال ها</span>
+            <i class="fa fa-folder"></i> <span>منو ها</span>
             <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> سفارش</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> پروفایل</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> صفحه ورود</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> ثبت نام</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> قفل صفحه</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> ارور ۴۰۴</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> ارور ۵۰۰</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> صفحه خالی</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> صفحه سریع</a></li>
+            <li><a href="<?= base_url('admin/Menu'); ?>"><i class="fa fa-circle-o"></i> بالاي سايت</a></li>
+            <li><a href="<?= base_url('admin/Smenu'); ?>"><i class="fa fa-circle-o"></i> زير اسلايدر سايت</a></li>
+            <li><a href="<?= base_url('admin/Fmenu'); ?>"><i class="fa fa-circle-o"></i> پايين سايت</a></li>
+    
           </ul>
         </li>
         <li class="treeview">
         <a href="#">
-          <i class="fa fa-share"></i> <span>چندسطحی</span>
+          <i class="fa fa-share"></i> <span>تنظيمات سايت</span>
           <span class="pull-left-container">
               <i class="fa fa-angle-right pull-left"></i>
             </span>
         </a>
         <ul class="treeview-menu">
-          <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>
+          <li><a href="<?= base_url('admin/Slider'); ?>"><i class="fa fa-circle-o"></i> اسلايدر صفحه نخست</a></li>
+          <li><a href="<?= base_url('admin/Text'); ?>"><i class="fa fa-circle-o"></i>متن متحرك </a></li>
+          <li><a href="<?= base_url('admin/Site'); ?>"><i class="fa fa-circle-o"></i> سايت</a></li>
+          <li><a href="<?= base_url('admin/State'); ?>"><i class="fa fa-circle-o"></i> وضعيت ها</a></li>
           <li class="treeview">
-            <a href="#"><i class="fa fa-circle-o"></i> سطح اول
+            <a href="#"><i class="fa fa-circle-o"></i> تبليغات سايت
               <span class="pull-left-container">
                   <i class="fa fa-angle-right pull-left"></i>
                 </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#"><i class="fa fa-circle-o"></i> سطح دوم</a></li>
-              <li class="treeview">
-                <a href="#"><i class="fa fa-circle-o"></i> سطح دوم
-                  <span class="pull-left-container">
-                      <i class="fa fa-angle-right pull-left"></i>
-                    </span>
-                </a>
-                <ul class="treeview-menu">
-                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
-                  <li><a href="#"><i class="fa fa-circle-o"></i> سطح سوم</a></li>
-                </ul>
-              </li>
+              <li><a href="<?= base_url('admin/Ads'); ?>"><i class="fa fa-circle-o"></i>افزودن تبليغ</a></li>
+              <li><a href="<?= base_url('admin/Positon'); ?>"><i class="fa fa-circle-o"></i>تعيين موقعيت</a></li>
+              <li><a href="<?= base_url('admin/Adsa'); ?>"><i class="fa fa-circle-o"></i>تبليغات فعال</a></li>
+              <li><a href="<?= base_url('admin/Adsf'); ?>"><i class="fa fa-circle-o"></i>تبليغات منقضي</a></li>
+   
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-circle-o"></i> مديريت شهر ها
+              <span class="pull-left-container">
+                  <i class="fa fa-angle-right pull-left"></i>
+                </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="<?= base_url('admin/Ostan'); ?>"><i class="fa fa-circle-o"></i>استان</a></li>
+              <li><a href="<?= base_url('admin/City'); ?>"><i class="fa fa-circle-o"></i>شهرستان</a></li>
+   
             </ul>
           </li>
           <li><a href="#"><i class="fa fa-circle-o"></i> سطح اول</a></li>

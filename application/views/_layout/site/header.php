@@ -3,7 +3,7 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <title></title>
+    <title><?= $title; ?></title>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- CSS -->
@@ -24,6 +24,7 @@
     <!-- Swiper -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
+    <link href="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <!-- header -->
@@ -36,7 +37,9 @@
             <div id="mainpage_panel" class="panel_back_g">
                 <div class="main_panel">
                     <div class="panel_buttom">
-                        <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="logo">
+                    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+                    <?php } ?>
                     </div>
                     <div class="body_panel">
                         <ul class="panel_ul">
@@ -80,7 +83,7 @@
             
             <div class="pushbar_main_content">
 
-				<button data-pushbar-target="mypushbar1">
+				<button style=" border: none;padding: 9px;border-radius: 51px;" data-pushbar-target="mypushbar1">
                     <img src="<?=base_url('')?>assets/site/img/menu-24px.svg">
                 </button>
 
@@ -98,22 +101,105 @@
         <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs top_header p0">
             <div class="col-lg-5 col-md-9 col-sm-12 col-xs-12 menu_top p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 m0">
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">صفحه اول</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">پنل کاربری</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-3 "><a href="">تعرفه خدمات</a></li>
-                    <li class="col-lg-3 col-md-3 col-sm-3 col-xs-3 "><a href="">درباره زاگرس زوم</a></li>
-                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="">ارتباط با ما</a></li>
+                <?php foreach ($menu_top as $menu_top_value) { ?>
+                    <li class="col-lg-2 col-md-2 col-sm-2 col-xs-2 "><a href="<?= $menu_top_value->menu_link; ?>"><?= $menu_top_value->menu_title; ?></a></li>
+                <?php } ?>
                 </ul>
             </div>
             <div class="col-lg-4 col-md-3 col-sm-6 col-xs-12 buy f_l p0">
                 <div class="col-lg-7 col-md-12 col-sm-7 col-xs-7 add t_align f_l p0">
-                    <a href="">
+                    <a data-toggle="modal" data-target="#exampleModal" href="">
                         <div class="t_align p0">
                             <i class="f_l icon-plus"></i>
+                            
                             ثبت رایگان شغل و آگهی
                         </div>
                     </a>
                 </div>
+
+                <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+
+      <div class="modal-body">
+      <div class="row">
+      <div class="col-lg-4 header-pick-modal p0">
+
+      
+         <a href="" onclick="return false;">
+        <div class="t_align all">
+        <img src="<?=base_url('')?>assets/site/svg/family.svg" alt="">
+        <div class="t_align txt p0">
+        خدمات گردشگري
+    </div>
+       </div>
+        </a>
+        </div>
+        <div class="col-lg-4 header-pick-modal p0">
+
+      
+        <a href="<?= base_url('site/work/Vof'); ?>">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/retail.svg" alt="">
+<div class="t_align txt p0">
+ثبت مشاغل
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="<?= base_url('site/takhfif/Takhfif'); ?>">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/sale.svg" alt="">
+<div class="t_align txt p0">
+ثبت تخفيفات
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/blog.svg" alt="">
+<div class="t_align txt p0">
+ثبت آگهي
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/event.svg" alt="">
+<div class="t_align txt p0">
+ثبت رويداد
+</div>
+</div>
+</a>
+</div>
+<div class="col-lg-4 header-pick-modal p0">
+
+      
+<a href="" onclick="return false;">
+<div class="t_align all">
+<img src="<?=base_url('')?>assets/site/svg/fruit.svg" alt="">
+<div class="t_align txt p0">
+ثبت بازارچه
+</div>
+</div>
+</a>
+</div>
+                         
+        </div>
+                      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">بستن</button>
+      </div>
+    </div>
+  </div>
+</div>
                 <div class="col-lg-4 col-md-12 col-sm-4 col-xs-4 t_align box_up ">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box">
                         سبد خرید
@@ -126,9 +212,9 @@
             <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12 login p0">
                 <img class="img-circle" src="<?=base_url('')?>assets/site/svg/iconfinder_user_118589.svg" alt="" title="">
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 f_r place">
-                    <a href="">ورود</a>
+                    <a href="<?=base_url('site/Login')?>">ورود</a>
                     <span>/</span>
-                    <a href="">ثبت نام</a>
+                    <a href="<?=base_url('site/Register')?>">ثبت نام</a>
                 </div>
             </div>
         </div>
@@ -139,32 +225,45 @@
                         <img src="<?=base_url('')?>assets/site/img/background_logo.png" class="img-responsive" alt="">
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0 m0">
-                        <img src="<?=base_url('')?>assets/site/img/logo.png" class="img-responsive" alt="">
+                    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+                    <?php } ?>
                     </div>
                 </div>
                 <nav class="col-lg-2 col-md-3 col-sm-3 col-xs-6 left_use">
                     <ul>
+                    <?php foreach($site as $site_value) { ?>
                         <li class="col-lg-6 col-md-6 col-sm-6 hidden-xs t_align advice p0">
-                            <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <a href=" <?= $site_value->site_btn_one_link; ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l p0">
                                     <div class="c_circle m0">
-                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_phone1_172517.svg" class="img-responsive" alt="">
+                                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_btn_one_ico; ?>" class="img-responsive" alt="">
                                     </div>
-                                    مشاوره رایگان
+                                    <?= $site_value->site_btn_one_title; ?>
                                 </div>
                             </a></li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 t_align p0">
-                            <a href="#" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <a href=" <?= $site_value->site_btn_two_link; ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l p0">
                                     <div class="c_circle m0">
-                                        <img src="<?=base_url('')?>assets/site/svg/iconfinder_pictures-optimization_2944880.svg" class="img-responsive" alt="">
+                                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_btn_two_ico; ?>" class="img-responsive" alt="">
                                     </div>
-                                    نمایشگاه ها
+                                    <?= $site_value->site_btn_two_title; ?>
                                 </div>
                             </a></li>
+                            <?php } ?>
                     </ul>
                 </nav>
-                <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs text_holder f_r">متن متحرک زاگرس زوم با ارائه خدمات برندینگ ، حامی و معرف کسب و کار شماست</div>
+                <div class="col-lg-7 col-md-6 col-sm-6 hidden-xs text_holder f_r">
+                <div class="v-slider-frame offset-sm-3">
+      <ul class="v-slides">
+      <?php foreach ($text as $text_value) { ?>
+        <li class="v-slide"><?= $text_value->text_title; ?></li>
+      <?php } ?>
+    
+      </ul>
+    </div>
+                </div>
         </div>
     </div>
 </div>
@@ -172,12 +271,14 @@
     <img src="<?=base_url('')?>assets/site/img/Layer%201.png" class="img-responsive" alt="" title="">
     <div class="container-fluid ">
         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-4 date f_l p0">
-            سه شنبه
+            <?= $timeStamp; ?>
             <span class="f_l">ــــ</span>
         </div>
         <div class="col-lg-10 col-md-10 col-sm-9 col-xs-8 text f_l p0">
             <span class="f_r">ــــ</span>
-            با ما برند شوید
+            <?php foreach($site as $site_value) { ?>
+                <?= $site_value->site_ads_text; ?>
+                <?php } ?>
         </div>
     </div>
 </div>
@@ -188,21 +289,13 @@
         <!-- Swiper -->
         <div class="swiper-container main_swiper">
             <div class="swiper-wrapper">
+            <?php foreach ($slider as $slider_value) { ?>
                 <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                    <a href="<?= $slider_value->slider_link;?>">
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $slider_value->slider_img;?>" class="" alt="" title="">
                     </a>
                 </div>
-                <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
-                    </a>
-                </div>
-                <div class="swiper-slide">
-                    <a href="">
-                        <img src="<?=base_url('')?>assets/site/img/carousel.png" class="" alt="" title="">
-                    </a>
-                </div>
+            <?php } ?>
             </div>
             <!-- Add Pagination -->
             <div class="swiper-pagination"></div>
@@ -256,51 +349,9 @@
     <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs menu_bottom p0">
         <i class="icon-align-right2"></i>
         <ul class="col-lg-11 col-md-11 col-sm-11 col-xs-11 f_r m0 p0">
-            <li>
-                <a href="">
-                    صفحه
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بانک مشاغل
-                </a>
-            </li>
-            <li>
-                <a href="">
-
-                    تخفیفات
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    آگهی و نیازمندی ها
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    رویداد ها
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بازارچه
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    خدمات گردشگری
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    بانک رسانه ها و شبکه های اجتماعی
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    نظرسنجی
-                </a>
-            </li>
+        <?php foreach ($menu_middel as $menu_middel_value) { ?>
+                    <li><a href="<?= $menu_middel_value->smenu_link; ?>"><?= $menu_middel_value->smenu_title; ?></a></li>
+                <?php } ?>
+          
         </ul>
     </div>

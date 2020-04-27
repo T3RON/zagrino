@@ -99,7 +99,7 @@
 }
 
 .skin-blue .sidebar-menu>li.active>a {
-    border-left-color: #3c8dbc
+    border-left-color: #f59403
 }
 
 .skin-blue .sidebar-menu>li>.treeview-menu {
@@ -121,7 +121,7 @@
 
 .skin-blue .sidebar-menu .treeview-menu>li.active>a,
 .skin-blue .sidebar-menu .treeview-menu>li>a:hover {
-    color: #fff
+    color: #f9af0a;
 }
 
 .skin-blue .sidebar-form {

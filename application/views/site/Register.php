@@ -29,7 +29,7 @@
        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
 
     
-           <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+           <form action="<?= site_url('site/Register/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 m_15 f_r ">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img_marhale ">
                     <img src="<?=base_url('')?>assets/site/img/bg_logo_solo.jpg">
@@ -49,7 +49,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="mobile" id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
@@ -60,7 +60,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="password" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="password" id="sefaresh_cod_karbari" type="password" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
@@ -71,7 +71,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="password" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="repassword" id="sefaresh_cod_karbari" type="password" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
@@ -82,26 +82,10 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="code" id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear f_r fild">
-                        <div class="t_align fild_title p0">
-                            <span class="f_r p0"></span>
-                            <label for="sefaresh_makan" class="p0">انتخاب شهر</label>
-                            <span class="f_l p0"></span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                            <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <option value="none" selected disabled hidden style="color: #dcdcdc"> </option>
-                                <option value="1">نهاوند</option>
-                                <option value="2">ملایر</option>
-                                <option value="3">کوهانی</option>
-                                <option value="4">جهان آباد</option>
-                            </select>
-                        </div>
-                    </div>
-     
+ 
 
 
 
@@ -111,14 +95,14 @@
                                 <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                                         <span>پذیرش قوانین زاگرس زوم </span>
-                                        <input type="checkbox" name="">
+                                        <input name="ruls" type="checkbox" name="">
                                         <span class="checkmark"></span>
                                     </label>
                                 </li>
                                 <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                                         <span>دریافت خبر نامه و نوتیفکیشن</span>
-                                        <input type="checkbox" name="">
+                                        <input name="recivenews" type="checkbox" name="">
                                         <span class="checkmark"></span>
                                     </label>
                                 </li>
@@ -126,19 +110,11 @@
                 </div>
                     
                     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-5 contact_lite clear  c_border m_5_2 f_r p0">
-                            <a href="">
-                                <div class="color takhfif_btns clr_3e4eee p0">
-                                    تایید و ثبت نام
-                                </div>
-                            </a>
+                    <input type="submit" value="تایید و ثبت نام"  class="color takhfif_btns clr_3e4eee p0">
+                          
                         </div>
 
            </div>
-
-               
-    
-
-     
            
         </form>
         </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jan 09, 2020 at 01:21 PM
+-- Generation Time: Apr 25, 2020 at 11:44 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -25,25 +25,496 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zgr_agahi_register`
+-- Table structure for table `zgr_accounts`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_register`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_register` (
+DROP TABLE IF EXISTS `zgr_accounts`;
+CREATE TABLE IF NOT EXISTS `zgr_accounts` (
+  `accounts_id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_fn` text,
+  `account_ln` text,
+  `account_username` text,
+  `account_pass` text,
+  `account_email` text,
+  `account_mobile` text NOT NULL,
+  `account_tell` text,
+  `account_codemeli` text,
+  `account_codeposti` text,
+  `account_address` text,
+  `ostan_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `account_state` int(11) DEFAULT NULL,
+  `account_reg_date` text,
+  `account_up_date` text,
+  `state_id` int(11) DEFAULT NULL,
+  `account_active_code` text,
+  `account_avatar` text,
+  `account_map_latitude` text,
+  `account_map_longitude` text,
+  `account_sex` int(11) DEFAULT NULL,
+  `account_age` int(11) DEFAULT NULL,
+  `account_about` text,
+  `account_level` int(11) DEFAULT NULL,
+  PRIMARY KEY (`accounts_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_accounts`
+--
+
+INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `account_reg_date`, `account_up_date`, `state_id`, `account_active_code`, `account_avatar`, `account_map_latitude`, `account_map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`) VALUES
+(1, 'محمد', 'سيف', 'mseif', '258456', 'seif4847@gmail.com', '09192183440', '09192183440', '3950171533', '6591953977', '09192183440', 1, 1, 1, 'شنبه, ۱۶ فروردین ۱۳۹۹', 'شنبه, ۱۶ فروردین ۱۳۹۹', 1, '09192183440', '20135-beautiful-701678_1280.jpg', '09192183440', '09192183440', 1, 1, '09192183440', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_ads`
+--
+
+DROP TABLE IF EXISTS `zgr_ads`;
+CREATE TABLE IF NOT EXISTS `zgr_ads` (
+  `ads_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postion_id` int(11) NOT NULL,
+  `ads_title` text NOT NULL,
+  `ads_img` text NOT NULL,
+  `ads_link` text NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `register_date` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`ads_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_ads`
+--
+
+INSERT INTO `zgr_ads` (`ads_id`, `postion_id`, `ads_title`, `ads_img`, `ads_link`, `price_id`, `state_id`, `register_date`, `days`, `expire`) VALUES
+(1, 2, 'sdsss', '824c9-chrysanthemum.jpg', 'saddsd', 0, 1, '1587279808', 20, ''),
+(2, 2, 'dsdsd', 'd1629-jellyfish.jpg', 'dsdsd', 0, 1, '1587279861', 20, '1587366276'),
+(3, 3, '', '1b37e-tulips.jpg', 'dsds', 0, 4, '1587281485', 20, '1589009501');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `agahi_id` int(11) NOT NULL,
-  `account_id` int(11) NOT NULL,
+  `accounts_id` int(11) DEFAULT NULL,
+  `ostan_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `agahi_title` text,
+  `agahi_sazeman_title` text,
+  `agahi_hoghoghi_or_haghighi` int(11) DEFAULT NULL,
+  `tarefe_id` int(11) DEFAULT NULL,
+  `agahi_cate_id` int(11) DEFAULT NULL,
+  `agahi_sub_cate_id` int(11) DEFAULT NULL,
+  `agahi_des` text,
+  `agahi_tell` text,
+  `agahi_latitude` text,
+  `agahi_longitude` text,
+  `agahi_tag_conditions_id` int(11) DEFAULT NULL,
+  `agahi_address` text,
+  `agahi_tag_id` int(11) DEFAULT NULL,
+  `agahi_full_des` text,
+  `agahi_email` text,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` int(11) DEFAULT NULL,
+  `price_id` text,
+  `state_id` int(11) DEFAULT NULL,
+  `agahi_state_kala_id` int(11) DEFAULT NULL,
+  `register_date` text,
+  `update_date` text,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`agahi_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_amlak`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_amlak`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
+  `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
-  `agahi_hoghoghi_or_haghighi` int(11) NOT NULL,
-  `agahi_sazeman_title` text NOT NULL,
-  `tarefe_id` int(11) NOT NULL,
-  `show_id` int(11) NOT NULL,
-  `category_id` int(11) NOT NULL,
-  `agahi_title` text NOT NULL,
-  `agahi_reg_date` date NOT NULL,
-  `agahi_update_date` date NOT NULL,
+  `amlak_cate_id` int(11) NOT NULL,
+  `amlak_tag_id` int(11) NOT NULL,
+  `amlak_cond_tag_id` int(11) NOT NULL,
+  `amlak_price` text NOT NULL,
+  `amlak_des` text NOT NULL,
+  `amlak_bonga_title` text NOT NULL,
+  `amlak_agahi_dahande` text NOT NULL,
+  `amlak_sanad_state` text NOT NULL,
+  `amlak_mizan_malekiat` text NOT NULL,
+  `amlak_metraj` text NOT NULL,
+  `amlak_sanad_type` text NOT NULL,
+  `amlak_full_des` text NOT NULL,
+  `amlak_ejare_price` text NOT NULL,
+  `amlak_rahn_price` text NOT NULL,
+  `amlak_count_room` text NOT NULL,
+  `amlak_tabaghe` text NOT NULL,
+  `amlak_parking` text NOT NULL,
+  `amlak_emtiaz` text NOT NULL,
+  `amlak_anbari` text NOT NULL,
+  `amlak_asansor` text NOT NULL,
+  `amlak_address` text NOT NULL,
+  `amlak_lat` text NOT NULL,
+  `amlak_long` text NOT NULL,
+  `img1` text NOT NULL,
+  `img2` text NOT NULL,
+  `img3` text NOT NULL,
+  `img4` text NOT NULL,
+  `img5` text NOT NULL,
+  `img6` text NOT NULL,
   `state_id` int(11) NOT NULL,
-  PRIMARY KEY (`agahi_id`)
+  `price_id` int(11) NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
+  PRIMARY KEY (`agahi_amlak_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_amlak`
+--
+
+INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `city_id`, `amlak_cate_id`, `amlak_tag_id`, `amlak_cond_tag_id`, `amlak_price`, `amlak_des`, `amlak_bonga_title`, `amlak_agahi_dahande`, `amlak_sanad_state`, `amlak_mizan_malekiat`, `amlak_metraj`, `amlak_sanad_type`, `amlak_full_des`, `amlak_ejare_price`, `amlak_rahn_price`, `amlak_count_room`, `amlak_tabaghe`, `amlak_parking`, `amlak_emtiaz`, `amlak_anbari`, `amlak_asansor`, `amlak_address`, `amlak_lat`, `amlak_long`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `price_id`, `register_date`, `update_date`, `expire`, `days`) VALUES
+(1, 1, 4, 61, 2, 0, 0, '60000000000', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', 'املاك', 'املاك', 'املاك', 'املاك', 'املاك', '<p>\n	املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك</p>\n', '300000', '2222222', '6', '5', 'دارد', 'برق آب گاز تلفن', 'داذد', 'دارد', '<p>\n	املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك</p>\n', '', '', '8b6fd-tulips.jpg', '358ce-penguins.jpg', '7d633-beautiful-701678_1280.jpg', '71f44-jellyfish.jpg', '59562-chrysanthemum.jpg', 'b4b13-hydrangeas.jpg', 3, 0, '1587800383', '', '1590392476', 30);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_car`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_car`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
+  `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `agahi_car_title` text NOT NULL,
+  `car_cate_id` int(11) DEFAULT NULL,
+  `car_sub_cate_id` int(11) DEFAULT NULL,
+  `car_tag_id` int(11) DEFAULT NULL,
+  `car_cond_tag_id` int(11) DEFAULT NULL,
+  `agahi_car_price` text,
+  `agahi_car_full_des` text,
+  `agahi_car_tell` text,
+  `agahi_car_address` text,
+  `agahi_car_year` text,
+  `car_type_id` int(11) DEFAULT NULL,
+  `car_body_id` int(11) DEFAULT NULL,
+  `agahi_car_karked` text,
+  `car_state_id` int(11) DEFAULT NULL,
+  `car_sokht_id` int(11) DEFAULT NULL,
+  `agahi_car_pelak` text,
+  `agahi_car_color` int(11) DEFAULT NULL,
+  `agahi_car_body_des` text,
+  `agahi_car_motor_des` text,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `agahi_car_lat` text NOT NULL,
+  `agahi_car_long` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` text,
+  `price_id` int(11) DEFAULT NULL,
+  `agahi_rule_check` tinyint(1) DEFAULT NULL,
+  `expire` text,
+  `days` int(11) NOT NULL,
+  PRIMARY KEY (`agahi_car_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_cate` (
+  `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cate_title` text NOT NULL,
+  PRIMARY KEY (`agahi_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_cate`
+--
+
+INSERT INTO `zgr_agahi_cate` (`agahi_cate_id`, `agahi_cate_title`) VALUES
+(1, 'وسايل الكتريكي');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_cond_tag` (
+  `agahi_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`agahi_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_images`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_images`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
+  `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_id` int(11) NOT NULL,
+  `agahi_image_url` text NOT NULL,
+  PRIMARY KEY (`agahi_image_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_state_kala`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_state_kala`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_state_kala` (
+  `agahi_state_kala_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_state_kala_title` text NOT NULL,
+  PRIMARY KEY (`agahi_state_kala_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_sub_cate` (
+  `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_cate_id` int(11) NOT NULL,
+  `agahi_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`agahi_sub_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_sub_cate`
+--
+
+INSERT INTO `zgr_agahi_sub_cate` (`agahi_sub_cate_id`, `agahi_cate_id`, `agahi_sub_cate_title`) VALUES
+(1, 1, 'رايانه');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_tag` (
+  `agahi_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_tag_title` text NOT NULL,
+  PRIMARY KEY (`agahi_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_tarefe`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_tarefe`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_tarefe` (
+  `agahi_tarefe_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_tarefe_title` text NOT NULL,
+  `agahi_tarefe_price` text NOT NULL,
+  PRIMARY KEY (`agahi_tarefe_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_cate` (
+  `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_cate_title` text NOT NULL,
+  PRIMARY KEY (`amlak_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_amlak_cate`
+--
+
+INSERT INTO `zgr_amlak_cate` (`amlak_cate_id`, `amlak_cate_title`) VALUES
+(1, 'آپارتمان'),
+(2, 'ويلايي');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_cond_tag` (
+  `amlak_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`amlak_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_amlak_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_amlak_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_amlak_tag` (
+  `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `amlak_tag_title` text NOT NULL,
+  PRIMARY KEY (`amlak_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_body`
+--
+
+DROP TABLE IF EXISTS `zgr_car_body`;
+CREATE TABLE IF NOT EXISTS `zgr_car_body` (
+  `car_body_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_body_title` text NOT NULL,
+  PRIMARY KEY (`car_body_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_car_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_car_cate` (
+  `car_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cate_title` text NOT NULL,
+  PRIMARY KEY (`car_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_cond_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_car_cond_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_car_cond_tag` (
+  `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cond_tag_title` text NOT NULL,
+  PRIMARY KEY (`car_cond_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_sokht`
+--
+
+DROP TABLE IF EXISTS `zgr_car_sokht`;
+CREATE TABLE IF NOT EXISTS `zgr_car_sokht` (
+  `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_sokht_title` text NOT NULL,
+  PRIMARY KEY (`car_sokht_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_state`
+--
+
+DROP TABLE IF EXISTS `zgr_car_state`;
+CREATE TABLE IF NOT EXISTS `zgr_car_state` (
+  `car_state_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_state_title` text NOT NULL,
+  PRIMARY KEY (`car_state_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_car_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_car_sub_cate` (
+  `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_cate_id` int(11) NOT NULL,
+  `car_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`car_sub_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_tag`
+--
+
+DROP TABLE IF EXISTS `zgr_car_tag`;
+CREATE TABLE IF NOT EXISTS `zgr_car_tag` (
+  `car_tag_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_tag_title` text NOT NULL,
+  PRIMARY KEY (`car_tag_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_type`
+--
+
+DROP TABLE IF EXISTS `zgr_car_type`;
+CREATE TABLE IF NOT EXISTS `zgr_car_type` (
+  `car_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `car_type_title` text NOT NULL,
+  PRIMARY KEY (`car_type_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_category`
+--
+
+DROP TABLE IF EXISTS `zgr_category`;
+CREATE TABLE IF NOT EXISTS `zgr_category` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_title` text NOT NULL,
+  PRIMARY KEY (`category_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -509,6 +980,149 @@ INSERT INTO `zgr_city` (`city_id`, `ostan_id`, `city_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_events`
+--
+
+DROP TABLE IF EXISTS `zgr_events`;
+CREATE TABLE IF NOT EXISTS `zgr_events` (
+  `events_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `events_owner` text NOT NULL,
+  `events_logo` text NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `events_title` text NOT NULL,
+  `events_dec` text NOT NULL,
+  `events_start` text NOT NULL,
+  `events_finish` text NOT NULL,
+  `events_type_id` int(11) NOT NULL,
+  `events_run_id` int(11) NOT NULL,
+  `events_capacity` text NOT NULL,
+  `events_level_id` int(11) NOT NULL,
+  `events_pro_dec` text NOT NULL,
+  `events_conditons` text NOT NULL,
+  `img1` text NOT NULL,
+  `img2` text NOT NULL,
+  `img3` text NOT NULL,
+  `img4` text NOT NULL,
+  `img5` text NOT NULL,
+  `img6` text NOT NULL,
+  `events_poster` text NOT NULL,
+  `events_clip` text NOT NULL,
+  `events_link_site` text NOT NULL,
+  `events_email` text NOT NULL,
+  `events_instagram` text NOT NULL,
+  `events_address` text NOT NULL,
+  `map_latitude` text NOT NULL,
+  `map_longitude` text NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
+  PRIMARY KEY (`events_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_events_level`
+--
+
+DROP TABLE IF EXISTS `zgr_events_level`;
+CREATE TABLE IF NOT EXISTS `zgr_events_level` (
+  `events_level_id` int(11) NOT NULL AUTO_INCREMENT,
+  `events_level_title` text NOT NULL,
+  PRIMARY KEY (`events_level_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_events_run`
+--
+
+DROP TABLE IF EXISTS `zgr_events_run`;
+CREATE TABLE IF NOT EXISTS `zgr_events_run` (
+  `events_run_id` int(11) NOT NULL AUTO_INCREMENT,
+  `events_run_title` text NOT NULL,
+  PRIMARY KEY (`events_run_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_events_type`
+--
+
+DROP TABLE IF EXISTS `zgr_events_type`;
+CREATE TABLE IF NOT EXISTS `zgr_events_type` (
+  `events_type_id` int(11) NOT NULL AUTO_INCREMENT,
+  `events_type_title` text NOT NULL,
+  PRIMARY KEY (`events_type_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_footer_menu`
+--
+
+DROP TABLE IF EXISTS `zgr_footer_menu`;
+CREATE TABLE IF NOT EXISTS `zgr_footer_menu` (
+  `footer_menu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `footer_menu_title` text NOT NULL,
+  `footer_menu_link` text NOT NULL,
+  PRIMARY KEY (`footer_menu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_footer_menu`
+--
+
+INSERT INTO `zgr_footer_menu` (`footer_menu_id`, `footer_menu_title`, `footer_menu_link`) VALUES
+(1, 'همكاري با زاگرينو', 'http://localhost/zagrino/Index'),
+(2, 'قوانين و مقررات', 'http://localhost/zagrino/Index'),
+(4, 'سوالات متداول', 'http://localhost/zagrino/Index'),
+(5, 'راهنماي استفاده از خدمات', 'http://localhost/zagrino/Index'),
+(6, 'تعرفه تبليغات', 'http://localhost/zagrino/Index');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_gardeshgari`
+--
+
+DROP TABLE IF EXISTS `zgr_gardeshgari`;
+CREATE TABLE IF NOT EXISTS `zgr_gardeshgari` (
+  `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `gardeshgari_title` text NOT NULL,
+  `gardeshgari_des` text NOT NULL,
+  `gardeshgari_ghedmat` text NOT NULL,
+  `gardeshgari_creator` text NOT NULL,
+  `gardeshgari_conditons` text NOT NULL,
+  `gardeshgari_best_time` text NOT NULL,
+  `gardeshgari_need_time_view` text NOT NULL,
+  `gardeshgari_address` text NOT NULL,
+  `jobs_service_id` int(11) NOT NULL,
+  `map_latitude` text NOT NULL,
+  `map_longitude` text NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
+  PRIMARY KEY (`gardeshgari_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_groups`
 --
 
@@ -536,48 +1150,141 @@ INSERT INTO `zgr_groups` (`id`, `name`, `description`) VALUES
 
 DROP TABLE IF EXISTS `zgr_jobs`;
 CREATE TABLE IF NOT EXISTS `zgr_jobs` (
-  `jobs_id` int(11) NOT NULL,
-  `account_id` int(11) NOT NULL,
+  `jobs_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_id` int(11) NOT NULL,
+  `jobs_sub_cate_id` int(11) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
-  `jobs_title` text NOT NULL,
-  `jobs_shobe` text NOT NULL,
-  `jobs_content` text NOT NULL,
-  `jobs_work_titme` text NOT NULL,
-  `jobs_mobile` text NOT NULL,
-  `jobs_tell` text NOT NULL,
-  `jobs_fax` text NOT NULL,
-  `jobs_email` text NOT NULL,
-  `jobs_code_posti` text NOT NULL,
-  `jobs_website` text NOT NULL,
-  `jobs_instagram` text NOT NULL,
-  `jobs_telegram` text NOT NULL,
-  `jobs_whatsapp` text NOT NULL,
-  `jobs_facebook` text NOT NULL,
-  `jobs_tw` text NOT NULL,
-  `jobs_pinterest` text NOT NULL,
-  `jobs_youtube` text NOT NULL,
-  `jobs_address` text NOT NULL,
-  `jobs_map_latitude` text NOT NULL,
-  `jobs_map_longitude` text NOT NULL,
-  `jobs_count_namayandegi` int(11) NOT NULL,
-  `jobs_count_namayandegi_in_city` int(11) NOT NULL,
-  `jobs_sharayet` text NOT NULL,
-  `jobs_list_service` text NOT NULL,
-  `jobs_lohe_taghdir` text NOT NULL,
-  `jobs_mojavez` text NOT NULL,
-  `jobs_register_date` date NOT NULL,
-  `jobs_update_date` date NOT NULL,
-  `state_id` int(11) NOT NULL,
+  `jobs_title` text,
+  `jobs_shobe` text,
+  `jobs_content` text,
+  `jobs_feature` text,
+  `jobs_work_titme` text,
+  `jobs_mobile` text,
+  `jobs_tell` text,
+  `jobs_fax` text,
+  `jobs_email` text,
+  `jobs_code_posti` text,
+  `jobs_website` text,
+  `jobs_instagram` text,
+  `jobs_telegram` text,
+  `jobs_whatsapp` text,
+  `jobs_facebook` text,
+  `jobs_tw` text,
+  `jobs_pinterest` text,
+  `jobs_youtube` text,
+  `jobs_address` text,
+  `jobs_map_latitude` text,
+  `jobs_map_longitude` text,
+  `jobs_count_namayandegi` int(11) DEFAULT NULL,
+  `jobs_count_namayandegi_in_city` int(11) DEFAULT NULL,
+  `jobs_sharayet` text,
+  `jobs_list_service` text,
+  `jobs_service_id` int(11) DEFAULT NULL,
+  `jobs_mojavez` text,
+  `jobs_video` text,
+  `register_date` text,
+  `update_date` text,
+  `jobs_logo` text,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `jobs_shoar` text,
+  `price_id` int(11) DEFAULT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
   PRIMARY KEY (`jobs_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `account_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_lohe_taghdir`, `jobs_mojavez`, `jobs_register_date`, `jobs_update_date`, `state_id`) VALUES
-(5552, 555, 1, 2, 'بيبيب', 'بيبيب', '<p>\n	بيبيبيب</p>\n', '<p>\n	بيبيب</p>\n', 'بيبي', 'بيب', 'بيب', 'بيب', 'بيب', 'بي', 'يبي', 'بي', 'بيب', 'بيب', 'بيبي', 'بيب', 'بيب', '<p>\n	بيب</p>\n', 'بيب', 'بيب', 5, 45, '<p>\n	بيب</p>\n', '<p>\n	بيبي</p>\n', '<p>\n	بيبي</p>\n', '<p>\n	يبيب</p>\n', '1970-01-01', '1970-01-01', 0);
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
+(31, 7, 2, 1, 26, 368, 'كاشي كاري', 'كاشي و سراميك كريمي', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريمي</p>\n', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', 'وب سايت', 'اينستاگرام', 'تلگرام', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, NULL, 8, 6, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', 'bb53b-wildlife.wmv', '1587791427', NULL, 'cfc26-chrysanthemum.jpg', '76f16-flower-729514_1280.jpg', '3b694-jellyfish.jpg', '75515-beautiful-701678_1280.jpg', '6bd9f-jellyfish.jpg', 'كاشي و سراميك كريمي', NULL, 3, '1590383544', 30);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_cate` (
+  `jobs_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_title` text NOT NULL,
+  PRIMARY KEY (`jobs_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_cate`
+--
+
+INSERT INTO `zgr_jobs_cate` (`jobs_cate_id`, `jobs_cate_title`) VALUES
+(1, 'خدماتی'),
+(2, 'خوراکی ومواد غذایی'),
+(3, 'بهداشتی درمانی'),
+(4, 'فروشگاه ها  و مراکز خرید'),
+(5, 'تفریحی ورزشی'),
+(6, 'دفاتر  و شرکت ها'),
+(7, 'آموزشگاه ها'),
+(8, 'خدمات آنلاین شهری'),
+(9, 'صنعت و معدن');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_service`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_service`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_service` (
+  `jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_service_title` text NOT NULL,
+  `jobs_service_ico` text NOT NULL,
+  PRIMARY KEY (`jobs_service_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_service`
+--
+
+INSERT INTO `zgr_jobs_service` (`jobs_service_id`, `jobs_service_title`, `jobs_service_ico`) VALUES
+(1, 'اينترنت رايگان و نامحدود لابي', ''),
+(2, 'سيستم كنترل دما', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_jobs_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_jobs_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_jobs_sub_cate` (
+  `jobs_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_cate_id` int(11) NOT NULL,
+  `jobs_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`jobs_sub_cate_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs_sub_cate`
+--
+
+INSERT INTO `zgr_jobs_sub_cate` (`jobs_sub_cate_id`, `jobs_cate_id`, `jobs_sub_cate_title`) VALUES
+(1, 7, 'کامپیوتر'),
+(2, 7, 'گلسازی'),
+(3, 7, 'آرایش'),
+(4, 7, 'خط و نقاشی'),
+(5, 7, 'رانندگی'),
+(6, 7, 'زبان'),
+(7, 7, 'علمی/ کنکور'),
+(8, 7, 'فنی'),
+(9, 7, 'موسیقی'),
+(10, 6, 'بيمه ايران');
 
 -- --------------------------------------------------------
 
@@ -593,6 +1300,45 @@ CREATE TABLE IF NOT EXISTS `zgr_login_attempts` (
   `time` int(11) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_menu`
+--
+
+DROP TABLE IF EXISTS `zgr_menu`;
+CREATE TABLE IF NOT EXISTS `zgr_menu` (
+  `menu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `menu_title` text NOT NULL,
+  `menu_link` text NOT NULL,
+  PRIMARY KEY (`menu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_menu`
+--
+
+INSERT INTO `zgr_menu` (`menu_id`, `menu_title`, `menu_link`) VALUES
+(1, 'صفحه نخست', 'http://localhost/zagrino/Index');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_newspaper`
+--
+
+DROP TABLE IF EXISTS `zgr_newspaper`;
+CREATE TABLE IF NOT EXISTS `zgr_newspaper` (
+  `newspaper_id` int(11) NOT NULL AUTO_INCREMENT,
+  `newspaper_title` text NOT NULL,
+  `newspaper_text` text NOT NULL,
+  `newspaper_img` text NOT NULL,
+  `newspaper_date` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`newspaper_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -647,15 +1393,206 @@ INSERT INTO `zgr_ostan` (`ostan_id`, `ostan_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_pay`
+--
+
+DROP TABLE IF EXISTS `zgr_pay`;
+CREATE TABLE IF NOT EXISTS `zgr_pay` (
+  `pay_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `authority` text NOT NULL,
+  `mobile` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `amount` bigint(20) NOT NULL,
+  `pay_date` text NOT NULL,
+  PRIMARY KEY (`pay_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_postion`
+--
+
+DROP TABLE IF EXISTS `zgr_postion`;
+CREATE TABLE IF NOT EXISTS `zgr_postion` (
+  `postion_id` int(11) NOT NULL AUTO_INCREMENT,
+  `postion_title` text NOT NULL,
+  PRIMARY KEY (`postion_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_postion`
+--
+
+INSERT INTO `zgr_postion` (`postion_id`, `postion_title`) VALUES
+(1, 'بالا سايت'),
+(2, 'سمت راست'),
+(3, 'سمت چپ'),
+(4, 'پايين سايت');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_price`
+--
+
+DROP TABLE IF EXISTS `zgr_price`;
+CREATE TABLE IF NOT EXISTS `zgr_price` (
+  `price_id` int(11) NOT NULL AUTO_INCREMENT,
+  `price_amount` int(11) NOT NULL,
+  PRIMARY KEY (`price_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_rel_jobs_service`
+--
+
+DROP TABLE IF EXISTS `zgr_rel_jobs_service`;
+CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
+  `rel_jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `jobs_id` int(11) NOT NULL,
+  `jobs_service_id` int(11) NOT NULL,
+  PRIMARY KEY (`rel_jobs_service_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_rel_jobs_service`
+--
+
+INSERT INTO `zgr_rel_jobs_service` (`rel_jobs_service_id`, `jobs_id`, `jobs_service_id`) VALUES
+(6, 9, 2),
+(5, 9, 1),
+(7, 10, 1),
+(8, 10, 2),
+(9, 11, 2),
+(10, 12, 2),
+(11, 31, 1),
+(12, 31, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_secend_menu`
+--
+
+DROP TABLE IF EXISTS `zgr_secend_menu`;
+CREATE TABLE IF NOT EXISTS `zgr_secend_menu` (
+  `smenu_id` int(11) NOT NULL AUTO_INCREMENT,
+  `smenu_title` text NOT NULL,
+  `smenu_link` text NOT NULL,
+  PRIMARY KEY (`smenu_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_secend_menu`
+--
+
+INSERT INTO `zgr_secend_menu` (`smenu_id`, `smenu_title`, `smenu_link`) VALUES
+(1, 'صفحه', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(2, 'بانك مشاغل', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(3, 'تخفيفات', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(4, 'آگهي و نيازمندي ها', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(5, 'رويداد ها', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(6, 'بازارچه', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(7, 'خدمات گردشگري', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(8, 'بانك رسانه ها و خدمات اجتماعي', 'http://localhost/zagrino/admin/Smenu/index/add'),
+(9, 'نظر سنجي', 'http://localhost/zagrino/admin/Smenu/index/add');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_show_time`
+--
+
+DROP TABLE IF EXISTS `zgr_show_time`;
+CREATE TABLE IF NOT EXISTS `zgr_show_time` (
+  `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_show_time_title` text NOT NULL,
+  `agahi_show_time_val` text NOT NULL,
+  PRIMARY KEY (`agahi_show_time_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_show_time`
+--
+
+INSERT INTO `zgr_show_time` (`agahi_show_time_id`, `agahi_show_time_title`, `agahi_show_time_val`) VALUES
+(1, 'يك ماهه', '30'),
+(2, 'دو ماهه', '60'),
+(3, 'سه ماهه', '90'),
+(4, 'يكساله', '365');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_site`
+--
+
+DROP TABLE IF EXISTS `zgr_site`;
+CREATE TABLE IF NOT EXISTS `zgr_site` (
+  `site_id` int(11) NOT NULL AUTO_INCREMENT,
+  `site_title` text NOT NULL,
+  `site_des` text NOT NULL,
+  `site_keywords` text NOT NULL,
+  `site_logo` text NOT NULL,
+  `site_icon` text NOT NULL,
+  `site_btn_one_title` text NOT NULL,
+  `site_btn_one_link` text NOT NULL,
+  `site_btn_one_ico` text NOT NULL,
+  `site_btn_two_title` text NOT NULL,
+  `site_btn_two_link` text NOT NULL,
+  `site_btn_two_ico` text NOT NULL,
+  `site_ads_text` text NOT NULL,
+  `API_KEY_ZARINPAL` text NOT NULL,
+  `API_KEY_KAVENEGAR` text NOT NULL,
+  PRIMARY KEY (`site_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_site`
+--
+
+INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_slider`
+--
+
+DROP TABLE IF EXISTS `zgr_slider`;
+CREATE TABLE IF NOT EXISTS `zgr_slider` (
+  `slider_id` int(11) NOT NULL AUTO_INCREMENT,
+  `slider_link` text NOT NULL,
+  `slider_img` text NOT NULL,
+  PRIMARY KEY (`slider_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_slider`
+--
+
+INSERT INTO `zgr_slider` (`slider_id`, `slider_link`, `slider_img`) VALUES
+(5, 'http://localhost/zagrino/admin/Slider/index/add', '35600-3.jpg'),
+(4, 'http://localhost/zagrino/admin/Slider/index/add', 'bc2b4-1.0.jpg'),
+(6, 'http://localhost/zagrino/admin/Slider/index/add', 'e7f6b-2.jpg');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_state`
 --
 
 DROP TABLE IF EXISTS `zgr_state`;
 CREATE TABLE IF NOT EXISTS `zgr_state` (
-  `state_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL AUTO_INCREMENT,
   `state_title` text NOT NULL,
   PRIMARY KEY (`state_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_state`
@@ -663,7 +1600,66 @@ CREATE TABLE IF NOT EXISTS `zgr_state` (
 
 INSERT INTO `zgr_state` (`state_id`, `state_title`) VALUES
 (1, 'معمولي'),
-(2, 'ويژه');
+(2, 'ويژه'),
+(3, 'فعال'),
+(4, 'منقضي شده'),
+(5, 'پرداخت شده'),
+(6, 'پرداخت نشده');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_takhfif`
+--
+
+DROP TABLE IF EXISTS `zgr_takhfif`;
+CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
+  `takhfif_id` int(11) NOT NULL AUTO_INCREMENT,
+  `account_id` int(11) NOT NULL,
+  `takhfif_title_kasbokar` text NOT NULL,
+  `category_id` int(11) NOT NULL,
+  `takhfif_dalil` text NOT NULL,
+  `takhfif_title` text NOT NULL,
+  `takhfif_monasebat` text NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `takhfif_group` text NOT NULL,
+  `takhfif_type` text NOT NULL,
+  `takhfif_bazgasht_taviz` int(11) NOT NULL,
+  `takhfif_adam_asalt` int(11) NOT NULL,
+  `takhfif_tozihat_zemanat` text NOT NULL,
+  `takhfif_sent_another_city` int(11) NOT NULL,
+  `takhfif_tahodat_ersal_kala` text NOT NULL,
+  `takhfif_tazmin_sod_moshtari` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `takhfif_reg` text NOT NULL,
+  `takhfif_update` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`takhfif_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_text`
+--
+
+DROP TABLE IF EXISTS `zgr_text`;
+CREATE TABLE IF NOT EXISTS `zgr_text` (
+  `text_id` int(11) NOT NULL AUTO_INCREMENT,
+  `text_title` text NOT NULL,
+  `text_link` text NOT NULL,
+  PRIMARY KEY (`text_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_text`
+--
+
+INSERT INTO `zgr_text` (`text_id`, `text_title`, `text_link`) VALUES
+(1, 'متن متحرک زاگرس زوم با ارائه خدمات برندینگ ، حامی و معرف کسب و کار شماست', 'http://localhost/zagrino/admin/Text/index/add'),
+(2, 'محمد سيف برنامه نويس و طراح سايت زاگرينو', 'http://localhost/zagrino/admin/Text/index/add');
 
 -- --------------------------------------------------------
 
@@ -698,7 +1694,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1268889823, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587789471, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

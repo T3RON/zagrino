@@ -54,13 +54,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <body class="hold-transition login-page" style="direction: rtl">
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>ورود به سایت</b></a>
+    <?php foreach($site as $site_value) { ?>
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>" class="img-responsive" alt="logo">
+     <?php } ?>
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
-        <p><?php echo lang('login_subheading');?></p>
+        <p style="margin-bottom: 20px;background: antiquewhite;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;"><?php echo lang('login_subheading');?></p>
 
-        <div id="infoMessage"><?php echo $message;?></div>
+        <div  id="infoMessage"><?php echo $message;?></div>
 
         <?php echo form_open("auth/login");?>
             <div class="form-group has-feedback">
@@ -74,16 +76,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <div class="row">
                 <!-- /.col -->
                 <div class="col-xs-12">
-                    <?php echo form_submit('submit', lang('login_submit_btn'),'class="btn btn-primary btn-block btn-flat"');?>
+                    <?php echo form_submit('submit', lang('login_submit_btn'),'class="btn btn-primary btn-block login-btn"');?>
                 </div>
                 <!-- /.col -->
             </div>
             <?php echo form_close();?>
 
         <!-- /.social-auth-links -->
+        <div style="margin-top: 20px;">
+        <a class="btn-block forget-login" href="forgot_password"><?php echo lang('login_forgot_password');?></a><br>
+        <div>
+        <a class="btn-block register-login" href="<?= site_url('Auth/create_user'); ?>" class="text-center">ثبت نام</a>
 
-        <a href="forgot_password"><?php echo lang('login_forgot_password');?></a><br>
-        <a href="<?= site_url('Auth/create_user'); ?>" class="text-center">ثبت نام</a>
+        </div>
+        </div>
+     
 
     </div>
     <!-- /.login-box-body -->

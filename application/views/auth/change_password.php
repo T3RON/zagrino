@@ -59,7 +59,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
 	<!-- /.login-logo -->
 	<div class="login-box-body" style="direction: rtl">
-		<p><?php echo lang('login_subheading');?></p>
+		<p style="background: antiquewhite;padding: 5px;border-radius: 10px;font-size: 12px;text-align: center;"><?php echo lang('login_subheading');?></p>
 
 		<div id="infoMessage"><?php echo $message;?></div>
 
