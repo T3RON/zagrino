@@ -117,7 +117,7 @@
                             </div>
                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 update f_r p0">
                                 <div class="f_r title_c">آخرین به روز رسانی :</div>
-                                <div class="f_r"><?= $bank_mashaghel_value->jobs_update_date; ?></div>
+                                <div class="f_r"><?= $bank_mashaghel_value->update_date; ?></div>
                             </div>
                             <ul class="col-lg-6 col-md-6 col-sm-6 col-xs-12 address f_l p0">
                                 <li>
@@ -374,771 +374,179 @@
 
 
 
+                <div class="niazmandiha_form">
+                    <form>
+                        <div class="fild">
+                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>توضیحات کلی
+                            </span>
+                            <input id="btn_t_t_tozihat" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>امکانات و خدمات </span>
+                            <input id="btn_t_t_emkanat" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
 
-                <!-- LG & MD Only -->
-                <div class="col-lg-12 hidden-md hidden-sm hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                                </li>
 
-                <div id="tabs_menu_1" class="col-lg-12 hidden-md hidden-sm hidden-xs tabs p0">
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p_0_10_i" id="t_t_tozihat">
+                                        <p>
+                                            <?= $bank_mashaghel_value->jobs_content; ?>
+                                        </p>
+                                    </div>
 
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat">
-                        <p>
-                        <?= $bank_mashaghel_value->jobs_content; ?>
-                                                </p>
-                    </div>
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat">
+                                        <ul>
+                                            <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <?php } ?>
+                                        </ul>
+                                    </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat">
-                        <ul>
-                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
+                                </div>
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>اطلاعات تماس </span>
+                            <input id="btn_t_t_etelaat_tamas" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>آدرس شبکه های اجتماعی </span>
+                            <input id="btn_t_t_shabake_ejtemaei" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_mobile; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_tell; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_fax; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_email; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_code_posti; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
+                                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_website; ?>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_instagram; ?>
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                                    <?= $bank_mashaghel_value->jobs_telegram; ?>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>آدرس و موقعیت روی نقشه </span>
+                            <input id="btn_t_t_addres_map" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>لیست خدمات و محصولات</span>
+                            <input id="btn_t_t_menu_list_khadamat" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p_0_10_i">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                                آدرس
+                                            </div>
+                                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
+                                                <?= $bank_mashaghel_value->jobs_telegram; ?>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p_0_10_i">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                                موقعیت
+                                            </div>
+                                            <div style="height: 200px;" id="map">
+
+                                            </div>
                                         </div>
                                     </div>
-                                </a>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    </div>
 
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_mobile; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_tell; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_fax; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_email; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_code_posti; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_website; ?>  
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_instagram; ?>  
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_telegram; ?>  
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                            <?= $bank_mashaghel_value->jobs_telegram; ?> 
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div style="height: 200px;" id="map">
-            
-                            </div>
-                        </div>
-                    </div>
-
-                  
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat">
-                    <?= $bank_mashaghel_value->jobs_list_service; ?> 
-                    </div> 
-                </div>
-
-
-
-                <!-- MD Only -->
-                <div class="hidden-lg col-md-12 hidden-sm hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas10" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_110">
-                                <div class="title10">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_110" class="hidden-lg col-md-12 hidden-sm hidden-xs tabs p0">
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat10">
-                        <p>
-                        <?= $bank_mashaghel_value->jobs_content; ?> 
-                                                </p>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat10">
-                    <ul>
-                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
-                                        </div>
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat">
+                                        <?= $bank_mashaghel_value->jobs_list_service; ?>
                                     </div>
-                                </a>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas10">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_mobile; ?> 
                                 </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_tell; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_fax; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_email; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_code_posti; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_website; ?> 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-                <div class="hidden-lg col-md-12 hidden-sm hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat20" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_120">
-                                <div class="title">
-                                    لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_120" class="hidden-lg col-md-12 hidden-sm hidden-xs tabs p0">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei20">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_instagram; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_telegram; ?> 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map20">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                            <?= $bank_mashaghel_value->jobs_address; ?>
-                            </div>
+                            </ul>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div style="height: 200px;" id="map">
-                     
-                            </div>
-                        </div>
-                    </div>
-
-                  
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat20">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
-
-
-                <!-- Sm Only -->
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title1">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_11" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p0" id="t_t_tozihat1">
-                        <p>
-                        <?= $bank_mashaghel_value->jobs_content; ?>
-                                                </p>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat1">
-                    <ul>
-                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    </div>
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_mobile; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_tell; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_fax; ?> 
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_email; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_code_posti; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_website; ?> 
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_12">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_12">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_12">
-                                <div class="title">
-                                    لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_12" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_instagram; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_telegram; ?>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map2">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                            <?= $bank_mashaghel_value->jobs_address; ?>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div style="height: 200px;" id="map">
-          
-                            </div>
-                        </div>
-                    </div>
-
-                  
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div> 
-                </div>
-
-
-
-                <!-- XS Only -->
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat3" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_13">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat3" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_13">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_13" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_tozihat p0" id="t_t_tozihat3">
-                        <p>
-                        <?= $bank_mashaghel_value->jobs_content; ?>
-                                                </p>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat3">
-                        <ul>
-                        <ul>
-                        <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            <?= $bank_mashaghel_service_value->jobs_service_title; ?>
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    </div>
-
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas4" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_14">
-                                <div class="title">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei4" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_14">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_14" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_etelaat_tamas p0" id="t_t_etelaat_tamas4">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_mobile; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_tell; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_fax	; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_email; ?>
-                                                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_code_posti; ?>
-                                                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_website; ?>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei p0" id="t_t_shabake_ejtemaei4">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_instagram; ?>
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                <?= $bank_mashaghel_value->jobs_telegram; ?>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map5" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_15">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat5" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_15">
-                                <div class="title">
-                                    لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_15" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_addres_map p0" id="t_t_addres_map5">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                            <?= $bank_mashaghel_value->jobs_address; ?>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div style="height: 200px;" id="map">
-                  
-                            </div>
-        
-                        </div>
-                    </div>
-
-                  
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat5">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div> 
+                    </form>
                 </div>
 
 
@@ -1278,12 +686,6 @@
 
 
 <?php } ?>
-
-
-
-
-
-
 
 
 
@@ -1456,6 +858,52 @@ google.maps.event.addDomListener(window, 'load', initialize);
         prevEl: '.swiper-button-prev_bankMashaghel',
       },
     });
-  </script>
+  </script> <script>
+        function myFunction() {
+
+            var btn_t_t_tozihat = document.getElementById("btn_t_t_tozihat");
+            var btn_t_t_emkanat = document.getElementById("btn_t_t_emkanat");
+            var btn_t_t_etelaat_tamas = document.getElementById("btn_t_t_etelaat_tamas");
+            var btn_t_t_shabake_ejtemaei = document.getElementById("btn_t_t_shabake_ejtemaei");
+            var btn_t_t_addres_map = document.getElementById("btn_t_t_addres_map");
+            var btn_t_t_menu_list_khadamat = document.getElementById("btn_t_t_menu_list_khadamat");
+            var t_t_tozihat = document.getElementById("t_t_tozihat");
+            var t_t_emkanat = document.getElementById("t_t_emkanat");
+            var t_t_etelaat_tamas = document.getElementById("t_t_etelaat_tamas");
+            var t_t_shabake_ejtemaei = document.getElementById("t_t_shabake_ejtemaei");
+            var t_t_addres_map = document.getElementById("t_t_addres_map");
+            var t_t_menu_list_khadamat = document.getElementById("t_t_menu_list_khadamat");
+            if (btn_t_t_tozihat.checked == true) {
+                t_t_tozihat.style.display = "block";
+            } else {
+                t_t_tozihat.style.display = "none";
+            }
+            if (btn_t_t_emkanat.checked == true) {
+                t_t_emkanat.style.display = "block";
+            } else {
+                t_t_emkanat.style.display = "none";
+            }
+            if (btn_t_t_etelaat_tamas.checked == true) {
+                t_t_etelaat_tamas.style.display = "block";
+            } else {
+                t_t_etelaat_tamas.style.display = "none";
+            }
+            if (btn_t_t_shabake_ejtemaei.checked == true) {
+                t_t_shabake_ejtemaei.style.display = "block";
+            } else {
+                t_t_shabake_ejtemaei.style.display = "none";
+            }
+            if (btn_t_t_addres_map.checked == true) {
+                t_t_addres_map.style.display = "block";
+            } else {
+                t_t_addres_map.style.display = "none";
+            }
+            if (btn_t_t_menu_list_khadamat.checked == true) {
+                t_t_menu_list_khadamat.style.display = "block";
+            } else {
+                t_t_menu_list_khadamat.style.display = "none";
+            }
+        }
+    </script>
 
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
