@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Gardeshgary_jazebe extends MY_Controller {
+class Eghamatgah extends MY_Controller {
     function __construct()
     {
         parent::__construct();
@@ -17,23 +17,23 @@ class Gardeshgary_jazebe extends MY_Controller {
 
         $crud = new grocery_CRUD();
 
-        $crud->set_table('zgr_gardeshgari');
-        $crud->set_subject('گردشگري و جاذبه ها');
+        $crud->set_table('zgr_eghamatgah');
+        $crud->set_subject('اقامتگاه و هتل');
 
-        $crud->columns('state_id','expire','update_date','register_date','gardeshgari_title','accounts_id');
-        $crud->display_as('gardeshgari_id','شناسه');
+        $crud->columns('state_id','expire','update_date','register_date','eghamatgah_title','accounts_id');
+        $crud->display_as('eghamatgah_id','شناسه');
         $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
-        $crud->display_as('gardeshgari_title','عنوان محل');
-        $crud->display_as('gardeshgari_des','توضيحات');
-        $crud->display_as('gardeshgari_ghedmat','قدمت');
-        $crud->display_as('gardeshgari_creator','سازنده');
-        $crud->display_as('gardeshgari_conditons','شرايط');
-        $crud->display_as('gardeshgari_best_time','بهترين زمان');
-        $crud->display_as('gardeshgari_need_time_view','زمان مورد نياز گردش');
-        $crud->display_as('gardeshgari_address','آدرس');
-        $crud->display_as('jobs_service_id','سرويس ها');
+        $crud->display_as('eghamatgah_title','عنوان ');
+        $crud->display_as('eghamatgah_des','توضيحات');
+        $crud->display_as('eghamatgah_tabaghe','تعداد طبقه');
+        $crud->display_as('eghamatgah_type','نوع مكان');
+        $crud->display_as('eghamatgah_otagh','تعداد اتاق');
+        $crud->display_as('eghamatgah_conditions','شرايط');
+        $crud->display_as('eghamatgah_takht','تعداد تخت');
+        $crud->display_as('eghamatgah_tahvil','زمان تحويل');
+        $crud->display_as('eghamatgah_takhlie','زمان تخليه');
         $crud->display_as('map_latitude','طول جغرافيايي');
         $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('img1','تصوير شماره 1');
@@ -42,8 +42,12 @@ class Gardeshgary_jazebe extends MY_Controller {
         $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
-
-        $crud->display_as('state_id','وضعيت رويداد');
+        $crud->display_as('logo','لوگو');
+        $crud->display_as('eghamatgah_address','آدرس');
+        $crud->display_as('eghamatgah_telephone','شماره هاي تماس');
+        $crud->display_as('jobs_service_id','سرويس هاي اقامت');
+        $crud->display_as('eghamatgah_email','پست الكترونيكي');
+        $crud->display_as('state_id','وضعيت');
         $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
@@ -56,15 +60,15 @@ class Gardeshgary_jazebe extends MY_Controller {
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation('price_id','price','price_amount');
-        $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
+        $crud->set_relation_n_n('jobs_service_id', 'rel_eghamat_service', 'jobs_service', 'eghamatgah_id', 'jobs_service_id', 'jobs_service_title');
 
 
         
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('gardeshgari_id');
-        $crud->unset_edit_fields('gardeshgari_id');
+        $crud->unset_add_fields('eghamatgah_id');
+        $crud->unset_edit_fields('eghamatgah_id');
  
     
         $crud->set_field_upload('img1','assets/uploads/img');
@@ -95,8 +99,10 @@ class Gardeshgary_jazebe extends MY_Controller {
         $crud->unset_clone();
         
         $crud->unset_texteditor(
-            'gardeshgari_title','gardeshgari_creator','gardeshgari_best_time','gardeshgari_conditons','gardeshgari_best_time','gardeshgari_need_time_view',
-            'map_latitude','map_longitude','gardeshgari_ghedmat'
+            'eghamatgah_title','eghamatgah_des','eghamatgah_tabaghe','eghamatgah_type','eghamatgah_otagh','eghamatgah_conditions',
+            'eghamatgah_takht','eghamatgah_tahvil','eghamatgah_takhlie',
+            'eghamatgah_telephone','map_latitude','map_longitude',
+            'eghamatgah_email','price_id','days'
         );
 
         
@@ -119,8 +125,8 @@ class Gardeshgary_jazebe extends MY_Controller {
                 );
 
                 $config_ostan = array(
-                    'main_table' => 'zgr_gardeshgari',
-                    'main_table_primary' => 'gardeshgari_id',
+                    'main_table' => 'zgr_eghamatgah',
+                    'main_table_primary' => 'eghamatgah_id',
                     "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"

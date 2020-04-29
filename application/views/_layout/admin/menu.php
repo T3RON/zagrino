@@ -154,7 +154,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="<?= base_url('admin/Gardeshgary_jazebe'); ?>"><i class="fa fa-circle-o"></i>جاذبه ها</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>اقامتگاه ها</a></li>
+            <li><a href="<?= base_url('admin/Eghamatgah'); ?>"><i class="fa fa-circle-o"></i>اقامتگاه ها</a></li>
             <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> تور ها</a></li>
           </ul>
         </li>

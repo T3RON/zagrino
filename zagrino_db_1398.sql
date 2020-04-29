@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 26, 2020 at 09:48 AM
+-- Generation Time: Apr 29, 2020 at 11:16 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -980,6 +980,49 @@ INSERT INTO `zgr_city` (`city_id`, `ostan_id`, `city_title`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_eghamatgah`
+--
+
+DROP TABLE IF EXISTS `zgr_eghamatgah`;
+CREATE TABLE IF NOT EXISTS `zgr_eghamatgah` (
+  `eghamatgah_id` int(11) NOT NULL,
+  `accounts_id` text NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `eghamatgah_title` text NOT NULL,
+  `eghamatgah_des` text NOT NULL,
+  `eghamatgah_tabaghe` int(11) NOT NULL,
+  `eghamatgah_type` text NOT NULL,
+  `eghamatgah_otagh` int(11) NOT NULL,
+  `eghamatgah_conditions` text NOT NULL,
+  `eghamatgah_takht` int(11) NOT NULL,
+  `eghamatgah_tahvil` text NOT NULL,
+  `eghamatgah_takhlie` text NOT NULL,
+  `img1` text NOT NULL,
+  `img2` text NOT NULL,
+  `img3` text NOT NULL,
+  `img4` text NOT NULL,
+  `img5` text NOT NULL,
+  `img6` text NOT NULL,
+  `logo` text NOT NULL,
+  `eghamatgah_address` text NOT NULL,
+  `eghamatgah_telephone` text NOT NULL,
+  `jobs_service_id` int(11) NOT NULL,
+  `map_latitude` text NOT NULL,
+  `map_longitude` text NOT NULL,
+  `eghamatgah_email` text NOT NULL,
+  `price_id` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`eghamatgah_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_events`
 --
 
@@ -1468,6 +1511,20 @@ CREATE TABLE IF NOT EXISTS `zgr_price` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_rel_eghamat_service`
+--
+
+DROP TABLE IF EXISTS `zgr_rel_eghamat_service`;
+CREATE TABLE IF NOT EXISTS `zgr_rel_eghamat_service` (
+  `rel_eghamat_service_id` int(11) NOT NULL AUTO_INCREMENT,
+  `eghamatgah_id` int(11) NOT NULL,
+  `jobs_service_id` int(11) NOT NULL,
+  PRIMARY KEY (`rel_eghamat_service_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_rel_jobs_service`
 --
 
@@ -1613,7 +1670,7 @@ CREATE TABLE IF NOT EXISTS `zgr_state` (
   `state_id` int(11) NOT NULL AUTO_INCREMENT,
   `state_title` text NOT NULL,
   PRIMARY KEY (`state_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_state`
@@ -1626,7 +1683,8 @@ INSERT INTO `zgr_state` (`state_id`, `state_title`) VALUES
 (4, 'منقضي شده'),
 (5, 'پرداخت شده'),
 (6, 'پرداخت نشده'),
-(7, 'معلق');
+(7, 'معلق'),
+(8, 'در دست بررسي');
 
 -- --------------------------------------------------------
 
@@ -1686,6 +1744,47 @@ INSERT INTO `zgr_text` (`text_id`, `text_title`, `text_link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_tour`
+--
+
+DROP TABLE IF EXISTS `zgr_tour`;
+CREATE TABLE IF NOT EXISTS `zgr_tour` (
+  `tour_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `tour_type` text NOT NULL,
+  `tour_title` text NOT NULL,
+  `tour_mabda` text NOT NULL,
+  `tour_maghsad` text NOT NULL,
+  `tour_start` text NOT NULL,
+  `tour_finish` text NOT NULL,
+  `tour_vasile` text NOT NULL,
+  `tour_count_night` text NOT NULL,
+  `tour_takht` int(11) NOT NULL,
+  `tour_number` text NOT NULL,
+  `tour_address` text NOT NULL,
+  `img1` text NOT NULL,
+  `img2` text NOT NULL,
+  `img3` text NOT NULL,
+  `img4` text NOT NULL,
+  `img5` text NOT NULL,
+  `img6` text NOT NULL,
+  `map_latitude` text NOT NULL,
+  `map_longitude` text NOT NULL,
+  `eghamatgah_email` text NOT NULL,
+  `price_id` int(11) NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `days` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  PRIMARY KEY (`tour_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_users`
 --
 
@@ -1716,7 +1815,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1587877028, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1588137439, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
