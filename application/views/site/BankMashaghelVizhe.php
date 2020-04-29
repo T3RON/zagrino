@@ -540,2062 +540,686 @@
 
 
 
-                <!-- LG & MD Only -->
-                <div class="col-lg-12 col-md-12 hidden-sm hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_clip" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    کلبپ تبلیغاتی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tarafe_gharardad" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    مراکز طرف قرارداد
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a onclick="swiper_inn()" href="#t_t_saate_kari" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    ساعت کاری
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1">
-                                <div class="title">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_1" class="col-lg-12 col-md-12 hidden-sm hidden-xs tabs p0">
+                <div class="niazmandiha_form">
+                    <form>
+                        <div class="fild">
+                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                        <span>کلبپ تبلیغاتی
+                                        </span>
+                                        <input id="btn_t_t_clip" onclick="myFunction()" type="checkbox" name="">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                        <span>توضیحات کلی </span>
+                                        <input id="btn_t_t_tozihat" onclick="myFunction_2(),myFunction()" type="checkbox" name="">
+                                        <span class="checkmark"></span>
+                                    </label>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_clip p0" id="t_t_clip">
-                        <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 video p0" id="video_clip" poster="img/Band.jpg" preload="" playsinline controls >
-                            <source src="<?=base_url('')?>assets/site/video/file_example_MP4_1280_10MG.mp4" type="video/mp4">
-                            <source src="<?=base_url('')?>assets/site/video/SampleVideo_176x144_1mb.3gp" type="video/3gp">
-                            <p>مرورگر شما قادر به پشتیبانی از فایل ویدئویی نیست</p>
-                        </video>
-                    </div>
+                                </li>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tozihat p0" id="t_t_tozihat">
-                        <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
-                    </div>
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat">
-                        <ul>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_clip p_0_10_i" id="t_t_clip">
+                                        <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 video p0" id="video_clip" poster="img/Band.jpg" preload="" playsinline controls>
+                                            <source src="<?=base_url('')?>assets/site/video/file_example_MP4_1280_10MG.mp4" type="video/mp4">
+                                            <source src="<?=base_url('')?>assets/site/video/SampleVideo_176x144_1mb.3gp" type="video/3gp">
+                                            <p>مرورگر شما قادر به پشتیبانی از فایل ویدئویی نیست</p>
+                                        </video>
                                     </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tarafe_gharardad p0" id="t_t_tarafe_gharardad">
-                        gggggggggggggg
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_saate_kari_vip p0" id="t_t_saate_kari">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_r f_r">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon f_r title ta_r p0">
-                                    <i class="icon-calendar4"></i>
-                                    ساعت و وضعیت کاری
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tozihat p_0_10_i" id="t_t_tozihat">
+                                        <p>
+                                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در
+                                            رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
+                                        </p>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 week p0">
-                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>امکانات و خدمات </span>
+                            <input id="btn_t_t_emkanat" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
                                 </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        یکشنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>مراکز طرف قرارداد </span>
+                            <input id="btn_t_t_tarafe_gharardad" onclick="myFunction_3(),myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
                                 </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        دو شنبه
+
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat">
+                                        <ul>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
+                                                <a href="" onclick="return false;">
+                                                    <div class="t_align all">
+                                                        <i class="icon-check-square"></i>
+                                                        <div class="t_align txt p0">
+                                                            اینترنت رایگان و نامحدود لابی
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        سه شنبه
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tarafe_gharardad p_0_10_i" id="t_t_tarafe_gharardad">
+                                        gggggggggggggg
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
+                                </div>
+
+
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>ساعت  کاری </span>
+                            <input id="btn_t_t_saate_kari" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
                                 </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        چهار شنبه
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>اطلاعات تماس </span>
+                            <input id="btn_t_t_etelaat_tamas" onclick="myFunction_4(),myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_saate_kari_vip p0" id="t_t_saate_kari">
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_r f_r">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon f_r title ta_r p0">
+                                                    <i class="icon-calendar4"></i> ساعت و وضعیت کاری
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 week p0">
+                                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        شنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        یکشنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        دو شنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        سه شنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        چهار شنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r">
+                                                    <div class="title_date t_align">
+                                                        پنج شنبه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li class="f_r j_c">
+                                                    <div class="title_date t_align">
+                                                        جمعه
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="time">
+                                                                <div class="AM">8 - 12</div>
+                                                                <div class="PM">15 - 22</div>
+                                                            </div>
+                                                            <div class="date">5 / 5 / 98</div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        پنج شنبه
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>موبایل : 09351111111 - 091811111111</span>
+                                                </label>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>تلفن ثابت : 08111111111</span>
+                                                </label>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>فکس : 08111111111  </span>
+                                                </label>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>ایمیل : daglass@gmail.com </span>
+                                                </label>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>کد پستی : 99879 - 65919</span>
+                                                </label>
+                                            </li>
+                                            <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                                                    <span>وب سایت : takfile.com</span>
+                                                </label>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
+                                </div>
+
+
+
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>آدرس شبکه های اجتماعی</span>
+                            <input id="btn_t_t_shabake_ejtemaei" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
                                 </li>
-                                <li class="f_r j_c">
-                                    <div class="title_date t_align">
-                                        جمعه
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>آدرس و موقعیت روی نقشه </span>
+                            <input id="btn_t_t_addres_map" onclick="myFunction_5(),myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei is-visible p0" id="t_t_shabake_ejtemaei">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                                    Mojtaba
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
+                                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
+                                                </div>
+                                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
+                                                    Mojtaba
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map">
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p_0_10_i">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                                آدرس
                                             </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
+                                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
                                             </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p_0_10_i">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                                                موقعیت
                                             </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
+                                            <div class="col-lg-12 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
                                             </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>شرایط فروش </span>
+                            <input id="btn_t_t_sharayet_foroosh" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
                                 </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>لیست خدمات و محصولات</span>
+                            <input id="btn_t_t_menu_list_khadamat" onclick="myFunction_6(),myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_sharayet_foroosh p_0_10_i" id="t_t_sharayet_foroosh">
+                                        gggggggggggggg
+                                    </div>
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>لوح ها و تقدیرنامه ها </span>
+                            <input id="btn_t_t_loh_taghdirname" onclick="myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+                                <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
+                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
+                            <span>مجوزها و اعتبار</span>
+                            <input id="btn_t_t_mojavezha" onclick="myFunction_7(),myFunction()" type="checkbox" name="">
+                            <span class="checkmark"></span>
+                        </label>
+                                </li>
+
+                                <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
+
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_loh_taghdirname p0" id="t_t_loh_taghdirname">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                    <div style="display:none" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_mojavezha p0" id="t_t_mojavezha">
+                                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
+                                                <div class="img_in p0">
+                                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+
+
+
                             </ul>
                         </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
+                    </form>
                 </div>
-
-                <div class="col-lg-12 col-md-12 hidden-sm hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_sharayet_foroosh" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                    شرایط فروش
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_loh_taghdirname" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                    لوح ها و تقدیرنامه ها
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_mojavezha" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_2">
-                                <div class="title">
-                                    مجوزها و اعتبار
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_2" class="col-lg-12 col-md-12 hidden-sm hidden-xs tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei is-visible p0" id="t_t_shabake_ejtemaei">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_sharayet_foroosh p0" id="t_t_sharayet_foroosh">
-                        gggggggggggggg
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_loh_taghdirname p0" id="t_t_loh_taghdirname">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_mojavezha p0" id="t_t_mojavezha">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-
-
-
-
-                <!-- SM Only -->
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_clip1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title">
-                                    کلبپ تبلیغاتی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_11">
-                                <div class="title1">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_11" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_clip p0" id="t_t_clip1">
-                        <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 video p0" id="video_clip" poster="img/Band.jpg" preload="" playsinline controls >
-                            <source src="<?=base_url('')?>assets/site/video/file_example_MP4_1280_10MG.mp4" type="video/mp4">
-                            <source src="<?=base_url('')?>assets/site/video/SampleVideo_176x144_1mb.3gp" type="video/3gp">
-                            <p>مرورگر شما قادر به پشتیبانی از فایل ویدئویی نیست</p>
-                        </video>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tozihat p0" id="t_t_tozihat1">
-                        <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0" id="t_t_emkanat1">
-                        <ul>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_211">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_211">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_sharayet_foroosh1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_211">
-                                <div class="title">
-                                    شرایط فروش
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_211" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_shabake_ejtemaei is-visible p0" id="t_t_shabake_ejtemaei1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map1">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_sharayet_foroosh p0" id="t_t_sharayet_foroosh1">
-                        gggggggggggggg
-                    </div>
-
-
-                </div>
-
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tarafe_gharardad1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1111">
-                                <div class="title">
-                                    مراکز طرف قرارداد
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a onclick="swiper_inn()" href="#t_t_saate_kari1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1111">
-                                <div class="title">
-                                    ساعت کاری
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1111">
-                                <div class="title">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_1111" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_tarafe_gharardad p0" id="t_t_tarafe_gharardad1">
-                        gggggggggggggg
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_saate_kari_vip p0" id="t_t_saate_kari1">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_r f_r">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon f_r title ta_r p0">
-                                    <i class="icon-calendar4"></i>
-                                    ساعت و وضعیت کاری
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 week p0">
-                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        یکشنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        دو شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        سه شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        چهار شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        پنج شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r j_c">
-                                    <div class="title_date t_align">
-                                        جمعه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="hidden-lg hidden-md col-sm-12 hidden-xs toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_21111">
-                                <div class="title">
-                                لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_loh_taghdirname1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_21111">
-                                <div class="title">
-                                    لوح ها و تقدیرنامه ها
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_mojavezha1" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_21111">
-                                <div class="title">
-                                    مجوزها و اعتبار
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_21111" class="hidden-lg hidden-md col-sm-12 hidden-xs tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_loh_taghdirname p0" id="t_t_loh_taghdirname1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_mojavezha p0" id="t_t_mojavezha1">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-
-
-
-                <!-- XS Only -->
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_clip2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_12">
-                                <div class="title">
-                                    کلبپ تبلیغاتی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tozihat2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_12">
-                                <div class="title">
-                                    توضیحات کلی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_12" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_clip p0" id="t_t_clip2">
-                        <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 video p0" id="video_clip" poster="img/Band.jpg" preload="" playsinline controls >
-                            <source src="<?=base_url('')?>assets/site/video/file_example_MP4_1280_10MG.mp4" type="video/mp4">
-                            <source src="<?=base_url('')?>assets/site/video/SampleVideo_176x144_1mb.3gp" type="video/3gp">
-                            <p>مرورگر شما قادر به پشتیبانی از فایل ویدئویی نیست</p>
-                        </video>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tozihat p0" id="t_t_tozihat2">
-                        <p>
-                            هتل بوتیک تجاری آرامیس با 133 واحد اقامتی شامل اتاق و سوئیت مجلل و مدرن همراه با ارائه بهترین سیستم های کنترل دما، صوتی، تصویری، تلویزیون (IP TV)، تلفن، اینترنت پرسرعت بی سیم (وایرلس)، استفاده از سیستم تهویه مطبوع مرکزی، مدرنترین امکانات و تجهیزات در رستوران با شکوه و مجلل، غذاهای متنوع و لذیذ ایرانی، کافی شاپ، مجموعه سلامتی و تندرستی بسیار مجهز، با تمرکز و دقت در ارائه سرویس های مطلوب در خدمت میهمانان گرامی می باشد.
-                        </p>
-                    </div>
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_shabake_ejtemaei2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_22">
-                                <div class="title">
-                                    آدرس شبکه های اجتماعی
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_addres_map2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_22">
-                                <div class="title">
-                                    آدرس و موقعیت روی نقشه
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_22" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_shabake_ejtemaei is-visible p0" id="t_t_shabake_ejtemaei2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                    <img src="<?=base_url('')?>assets/site/svg/telegram.svg" class="img-responsive" alt="">
-                                </div>
-                                <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                    Mojtaba
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0" id="t_t_addres_map2">
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                آدرس
-                            </div>
-                            <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
-                                تــوکیو - بالاتر از میدان امام (ره) - نبش خیابان ترا
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p0">
-                            <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                موقعیت
-                            </div>
-                            <div class="col-lg-10 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
-                                <img src="<?=base_url('')?>assets/site/img/map.png" class="img-responsive" alt="">
-                            </div>
-                        </div>
-                    </div>
-
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_emkanat2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_122">
-                                <div class="title">
-                                    امکانات و خدمات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_tarafe_gharardad2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_122">
-                                <div class="title">
-                                    مراکز طرف قرارداد
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_122" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_emkanat p0" id="t_t_emkanat2">
-                        <ul>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                <a href="" onclick="return false;">
-                                    <div class="t_align all">
-                                        <i class="icon-check-square"></i>
-                                        <div class="t_align txt p0">
-                                            اینترنت رایگان و نامحدود لابی
-                                        </div>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_tarafe_gharardad p0" id="t_t_tarafe_gharardad2">
-                        gggggggggggggg
-                    </div>
-
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_sharayet_foroosh2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_222">
-                                <div class="title">
-                                    شرایط فروش
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_menu_list_khadamat2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_222">
-                                <div class="title">
-                                لیست خدمات و محصولات
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_222" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_sharayet_foroosh p0" id="t_t_sharayet_foroosh2">
-                        gggggggggggggg
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0" id="t_t_menu_list_khadamat2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a onclick="swiper_inn()" href="#t_t_saate_kari2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1222">
-                                <div class="title">
-                                    ساعت کاری
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_etelaat_tamas2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_1222">
-                                <div class="title">
-                                    اطلاعات تماس
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_1222" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_saate_kari_vip p0" id="t_t_saate_kari2">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_r f_r">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 icon f_r title ta_r p0">
-                                    <i class="icon-calendar4"></i>
-                                    ساعت و وضعیت کاری
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 week p0">
-                            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        یکشنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        دو شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        سه شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        چهار شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r">
-                                    <div class="title_date t_align">
-                                        پنج شنبه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="f_r j_c">
-                                    <div class="title_date t_align">
-                                        جمعه
-                                    </div>
-                                    <ul>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                        <li>
-                                            <div class="time">
-                                                <div class="AM">8 - 12</div>
-                                                <div class="PM">15 - 22</div>
-                                            </div>
-                                            <div class="date">5 / 5 / 98</div>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0" id="t_t_etelaat_tamas2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">موبایل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    091811111111 - 09351111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">تلفن ثابت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">فکس</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    08111111111
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">ایمیل</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    daglass@gmail.com
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">کد پستی</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    65919 - 99879
-                                </div>
-                            </li>
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                <div class="col-lg-1 col-md-12 col-sm-12 col-xs-12 title f_r p0">وب سایت</div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild f_r p0">
-                                    takfile.com
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 toggler_tabs p0">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_loh_taghdirname2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_22222">
-                                <div class="title">
-                                    لوح ها و تقدیرنامه ها
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-2 col-md-4 col-sm-4 col-xs-6">
-                            <a href="#t_t_mojavezha2" class="nav-link active" data-toggler="tabs" data-toggler-collection="#tabs_menu_22222">
-                                <div class="title">
-                                    مجوزها و اعتبار
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div id="tabs_menu_22222" class="hidden-lg hidden-md hidden-sm col-xs-12 tabs p0">
-
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible t_t_loh_taghdirname p0" id="t_t_loh_taghdirname2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_mojavezha p0" id="t_t_mojavezha2">
-                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                            <li class="col-lg-3 col-md-3 col-sm-6 col-xs-6 ">
-                                <div class="img_in p0">
-                                    <img src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-
 
 
 
@@ -2853,25 +1477,215 @@
       
 <script>
     var swiper = new Swiper('.swiper_bankMashaghel', {
-      
-          slidesPerView: 2,
-      spaceBetween: 30,
+        
+            slidesPerView: 4,
+        spaceBetween: 5,
         loop: true,
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
         },
-      pagination: {
+        pagination: {
         el: '.swiper-pagination',
         clickable: true,
-      },
-      navigation: {
+        },
+        navigation: {
         nextEl: '.swiper-button-next_bankMashaghel',
         prevEl: '.swiper-button-prev_bankMashaghel',
-      },
+        },
     });
-  </script>
+</script>
     
+
+<script>
+    function myFunction() {
+        var btn_t_t_clip = document.getElementById("btn_t_t_clip");
+        var btn_t_t_tozihat = document.getElementById("btn_t_t_tozihat");
+        var btn_t_t_emkanat = document.getElementById("btn_t_t_emkanat");
+        var btn_t_t_tarafe_gharardad = document.getElementById("btn_t_t_tarafe_gharardad");
+        var btn_t_t_saate_kari = document.getElementById("btn_t_t_saate_kari");
+
+        var btn_t_t_etelaat_tamas = document.getElementById("btn_t_t_etelaat_tamas");
+        var btn_t_t_shabake_ejtemaei = document.getElementById("btn_t_t_shabake_ejtemaei");
+        var btn_t_t_addres_map = document.getElementById("btn_t_t_addres_map");
+
+        var btn_t_t_sharayet_foroosh = document.getElementById("btn_t_t_sharayet_foroosh");
+
+        var btn_t_t_menu_list_khadamat = document.getElementById("btn_t_t_menu_list_khadamat");
+
+        var btn_t_t_loh_taghdirname = document.getElementById("btn_t_t_loh_taghdirname");
+        var btn_t_t_mojavezha = document.getElementById("btn_t_t_mojavezha");
+
+
+
+
+        var t_t_clip = document.getElementById("t_t_clip");
+        var t_t_tozihat = document.getElementById("t_t_tozihat");
+        var t_t_emkanat = document.getElementById("t_t_emkanat");
+        var t_t_tarafe_gharardad = document.getElementById("t_t_tarafe_gharardad");
+        var t_t_saate_kari = document.getElementById("t_t_saate_kari");
+
+        var t_t_etelaat_tamas = document.getElementById("t_t_etelaat_tamas");
+        var t_t_shabake_ejtemaei = document.getElementById("t_t_shabake_ejtemaei");
+        var t_t_addres_map = document.getElementById("t_t_addres_map");
+
+        var t_t_sharayet_foroosh = document.getElementById("t_t_sharayet_foroosh");
+
+        var t_t_menu_list_khadamat = document.getElementById("t_t_menu_list_khadamat");
+
+        var t_t_loh_taghdirname = document.getElementById("t_t_loh_taghdirname");
+        var t_t_mojavezha = document.getElementById("t_t_mojavezha");
+
+
+
+        if (btn_t_t_clip.checked == true) {
+            t_t_clip.style.display = "block";
+            btn_t_t_tozihat.checked = false;
+        } else {
+            t_t_clip.style.display = "none";
+        }
+        if (btn_t_t_tozihat.checked == true) {
+            t_t_tozihat.style.display = "block";
+            btn_t_t_clip.checked = false;
+        } else {
+            t_t_tozihat.style.display = "none";
+        }
+
+        if (btn_t_t_emkanat.checked == true) {
+            t_t_emkanat.style.display = "block";
+            btn_t_t_tarafe_gharardad.checked = false;
+        } else {
+            t_t_emkanat.style.display = "none";
+        }
+        if (btn_t_t_tarafe_gharardad.checked == true) {
+            btn_t_t_emkanat.checked = false;
+            t_t_tarafe_gharardad.style.display = "block";
+        } else {
+            t_t_tarafe_gharardad.style.display = "none";
+        }
+
+        if (btn_t_t_saate_kari.checked == true) {
+            t_t_saate_kari.style.display = "block";
+            btn_t_t_etelaat_tamas.checked = false;
+        } else {
+            t_t_saate_kari.style.display = "none";
+        }
+        if (btn_t_t_etelaat_tamas.checked == true) {
+            t_t_etelaat_tamas.style.display = "block";
+            btn_t_t_saate_kari.checked = false;
+        } else {
+            t_t_etelaat_tamas.style.display = "none";
+        }
+
+        if (btn_t_t_shabake_ejtemaei.checked == true) {
+            t_t_shabake_ejtemaei.style.display = "block";
+            btn_t_t_addres_map.checked = false;
+        } else {
+            t_t_shabake_ejtemaei.style.display = "none";
+        }
+        if (btn_t_t_addres_map.checked == true) {
+            t_t_addres_map.style.display = "block";
+            btn_t_t_shabake_ejtemaei.checked = false;
+        } else {
+            t_t_addres_map.style.display = "none";
+        }
+
+        if (btn_t_t_sharayet_foroosh.checked == true) {
+            t_t_sharayet_foroosh.style.display = "block";
+            btn_t_t_menu_list_khadamat.checked = false;
+        } else {
+            t_t_sharayet_foroosh.style.display = "none";
+        }
+        if (btn_t_t_menu_list_khadamat.checked == true) {
+            t_t_menu_list_khadamat.style.display = "block";
+            btn_t_t_sharayet_foroosh.checked = false;
+        } else {
+            t_t_menu_list_khadamat.style.display = "none";
+        }
+
+        if (btn_t_t_loh_taghdirname.checked == true) {
+            t_t_loh_taghdirname.style.display = "block";
+            btn_t_t_mojavezha.checked = false;
+        } else {
+            t_t_loh_taghdirname.style.display = "none";
+        }
+        if (btn_t_t_mojavezha.checked == true) {
+            t_t_mojavezha.style.display = "block";
+            btn_t_t_loh_taghdirname.checked = false;
+        } else {
+            t_t_mojavezha.style.display = "none";
+        }
+    }
+</script>
+
+
+<script>
+    function myFunction_2() {
+        var btn_t_t_clip = document.getElementById("btn_t_t_clip");
+
+        if (btn_t_t_clip.checked == true) {
+            btn_t_t_clip.checked = false;
+        } 
+
+    }
+</script>
+
+<script>
+    function myFunction_3() {
+        var btn_t_t_emkanat = document.getElementById("btn_t_t_emkanat");
+
+        if (btn_t_t_emkanat.checked == true) {
+            btn_t_t_emkanat.checked = false;
+        } 
+
+    }
+</script>
+
+<script>
+    function myFunction_4() {
+        var btn_t_t_saate_kari = document.getElementById("btn_t_t_saate_kari");
+
+        if (btn_t_t_saate_kari.checked == true) {
+            btn_t_t_saate_kari.checked = false;
+        } 
+
+    }
+</script>
+
+<script>
+    function myFunction_5() {
+        var btn_t_t_shabake_ejtemaei = document.getElementById("btn_t_t_shabake_ejtemaei");
+
+        if (btn_t_t_shabake_ejtemaei.checked == true) {
+            btn_t_t_shabake_ejtemaei.checked = false;
+        } 
+
+    }
+</script>
+
+<script>
+    function myFunction_6() {
+        var btn_t_t_sharayet_foroosh = document.getElementById("btn_t_t_sharayet_foroosh");
+
+        if (btn_t_t_sharayet_foroosh.checked == true) {
+            btn_t_t_sharayet_foroosh.checked = false;
+        } 
+
+    }
+</script>
+
+<script>
+    function myFunction_7() {
+        var btn_t_t_loh_taghdirname = document.getElementById("btn_t_t_loh_taghdirname");
+
+        if (btn_t_t_loh_taghdirname.checked == true) {
+            btn_t_t_loh_taghdirname.checked = false;
+        } 
+
+    }
+</script>
+
+
 
     
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
