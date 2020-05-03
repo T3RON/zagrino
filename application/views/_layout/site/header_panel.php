@@ -209,11 +209,11 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12 login p0">
-                <img class="img-circle" src="<?=base_url('')?>assets/site/svg/iconfinder_user_118589.svg" alt="" title="">
+            
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 f_r place">
-                    <a href="<?=base_url('site/Login')?>">ورود</a>
-                    <span>/</span>
-                    <a href="<?=base_url('site/Register')?>">ثبت نام</a>
+                <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                    <a href="<?=base_url('site/Login')?>">نمايش بازارچه</a>
+            
                 </div>
             </div>
         </div>

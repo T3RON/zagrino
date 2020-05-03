@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Apr 29, 2020 at 11:16 AM
+-- Generation Time: May 03, 2020 at 11:55 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -1239,8 +1239,8 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_pinterest` text,
   `jobs_youtube` text,
   `jobs_address` text,
-  `jobs_map_latitude` text,
-  `jobs_map_longitude` text,
+  `map_latitude` text,
+  `map_longitude` text,
   `jobs_count_namayandegi` int(11) DEFAULT NULL,
   `jobs_count_namayandegi_in_city` int(11) DEFAULT NULL,
   `jobs_sharayet` text,
@@ -1267,7 +1267,7 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_map_latitude`, `jobs_map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
 (31, 7, 2, 1, 26, 368, 'كاشي كاري', 'كاشي و سراميك كريمي', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريمي</p>\n', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', 'وب سايت', 'اينستاگرام', 'تلگرام', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, NULL, 8, 6, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', 'bb53b-wildlife.wmv', '1587791427', NULL, 'cfc26-chrysanthemum.jpg', '76f16-flower-729514_1280.jpg', '3b694-jellyfish.jpg', '75515-beautiful-701678_1280.jpg', '6bd9f-jellyfish.jpg', 'كاشي و سراميك كريمي', NULL, 3, '1590383544', 30);
 
 -- --------------------------------------------------------
@@ -1349,6 +1349,36 @@ INSERT INTO `zgr_jobs_sub_cate` (`jobs_sub_cate_id`, `jobs_cate_id`, `jobs_sub_c
 (8, 7, 'فنی'),
 (9, 7, 'موسیقی'),
 (10, 6, 'بيمه ايران');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_kala`
+--
+
+DROP TABLE IF EXISTS `zgr_kala`;
+CREATE TABLE IF NOT EXISTS `zgr_kala` (
+  `kala_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) DEFAULT NULL,
+  `shop_id` int(11) DEFAULT NULL,
+  `ostan_id` int(11) DEFAULT NULL,
+  `city_id` int(11) DEFAULT NULL,
+  `kala_title` text,
+  `kala_des` text,
+  `kala_price` text,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` text,
+  `register_date` text,
+  `update_date` text,
+  `state_id` int(11) DEFAULT NULL,
+  `expire` text,
+  `days` int(11) DEFAULT NULL,
+  PRIMARY KEY (`kala_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1582,6 +1612,63 @@ INSERT INTO `zgr_secend_menu` (`smenu_id`, `smenu_title`, `smenu_link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_shop`
+--
+
+DROP TABLE IF EXISTS `zgr_shop`;
+CREATE TABLE IF NOT EXISTS `zgr_shop` (
+  `shop_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `ostan_id` int(11) NOT NULL,
+  `city_id` int(11) NOT NULL,
+  `jobs_id` int(11) NOT NULL,
+  `shop_title` text,
+  `shop_address` text,
+  `shop_banner` text,
+  `shop_cate_id` int(11) DEFAULT NULL,
+  `shop_sub_cate_id` int(11) DEFAULT NULL,
+  `shop_phone` text,
+  `shop_des` text,
+  `map_latitude` text,
+  `map_longitude` text,
+  `register_date` text,
+  `update_date` text,
+  `state_id` int(11) DEFAULT NULL,
+  `expire` text,
+  `days` int(11) DEFAULT NULL,
+  PRIMARY KEY (`shop_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_shop_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_shop_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_shop_cate` (
+  `shop_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_cate_title` text NOT NULL,
+  PRIMARY KEY (`shop_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_shop_sub_cate`
+--
+
+DROP TABLE IF EXISTS `zgr_shop_sub_cate`;
+CREATE TABLE IF NOT EXISTS `zgr_shop_sub_cate` (
+  `shop_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+  `shop_cate_id` int(11) NOT NULL,
+  `shop_sub_cate_title` text NOT NULL,
+  PRIMARY KEY (`shop_sub_cate_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_show_time`
 --
 
@@ -1696,8 +1783,9 @@ DROP TABLE IF EXISTS `zgr_takhfif`;
 CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
   `takhfif_id` int(11) NOT NULL AUTO_INCREMENT,
   `account_id` int(11) NOT NULL,
+  `shop_id` int(11) DEFAULT NULL,
+  `jobs_id` int(11) DEFAULT NULL,
   `takhfif_title_kasbokar` text NOT NULL,
-  `category_id` int(11) NOT NULL,
   `takhfif_dalil` text NOT NULL,
   `takhfif_title` text NOT NULL,
   `takhfif_monasebat` text NOT NULL,
@@ -1753,32 +1841,33 @@ CREATE TABLE IF NOT EXISTS `zgr_tour` (
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
-  `tour_type` text NOT NULL,
-  `tour_title` text NOT NULL,
-  `tour_mabda` text NOT NULL,
-  `tour_maghsad` text NOT NULL,
-  `tour_start` text NOT NULL,
-  `tour_finish` text NOT NULL,
-  `tour_vasile` text NOT NULL,
-  `tour_count_night` text NOT NULL,
-  `tour_takht` int(11) NOT NULL,
-  `tour_number` text NOT NULL,
-  `tour_address` text NOT NULL,
-  `img1` text NOT NULL,
-  `img2` text NOT NULL,
-  `img3` text NOT NULL,
-  `img4` text NOT NULL,
-  `img5` text NOT NULL,
-  `img6` text NOT NULL,
-  `map_latitude` text NOT NULL,
-  `map_longitude` text NOT NULL,
-  `eghamatgah_email` text NOT NULL,
-  `price_id` int(11) NOT NULL,
-  `state_id` int(11) NOT NULL,
-  `register_date` text NOT NULL,
-  `update_date` text NOT NULL,
-  `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
+  `tour_type` text,
+  `tour_title` text,
+  `tour_des` text,
+  `tour_mabda` text,
+  `tour_maghsad` text,
+  `tour_start` text,
+  `tour_finish` text,
+  `tour_vasile` text,
+  `tour_count_night` text,
+  `tour_takht` int(11) DEFAULT NULL,
+  `tour_number` text,
+  `tour_address` text,
+  `img1` text,
+  `img2` text,
+  `img3` text,
+  `img4` text,
+  `img5` text,
+  `img6` text,
+  `map_latitude` text,
+  `map_longitude` text,
+  `eghamatgah_email` text,
+  `price_id` int(11) DEFAULT NULL,
+  `state_id` int(11) DEFAULT NULL,
+  `register_date` text,
+  `update_date` text,
+  `days` int(11) DEFAULT NULL,
+  `expire` text,
   PRIMARY KEY (`tour_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1815,7 +1904,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1588137439, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1588486659, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

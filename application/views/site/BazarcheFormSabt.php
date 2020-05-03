@@ -87,78 +87,37 @@
             
                 
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">منبع کسب مهارت شما</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-6 col-md-+ col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>آموزشگاه آزاد </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-+ col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>مراکز فنی و حرفه ای </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>تجربی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>سایر</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
+                <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">محل كسب مهارت شما</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                </div>
                 
                 
                 
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l  fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">نوع فعالیت فروشگاه</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>کسب و کار خدماتی </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>فروش کالا و محصول</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>هر دو</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
+               <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">نوع فعاليت فروشگاه</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                </div>
                 
                 
@@ -207,190 +166,74 @@
                </div>
                
 
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r clear fild p0">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">مشاغل فروشگاهی ارائه محصولات به</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio p0">
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>سراسر کشور </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>شهر خودم</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>محله خودم</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span> شهرهای اطراف</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>همه موارد </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-               </div>
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild p0">
+               <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">مشاغل فروشگاهي ارائه محصولات به</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                
                
                     
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l fild p0">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">مشاغل خدماتی ارائه خدمات به </label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio p0">
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>سراسر کشور </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>شهر خودم</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>محله خودم</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span> شهرهای اطراف</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>همه موارد </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
+               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l fild p0">
+ 
+                       <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">مشاغل خدماتي ارائه به</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                </div>
                
                     
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild p0">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">روش ارسال</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio p0">
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>پیک </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>پست</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>اتوبوس های شرکت های مسافرتی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span> اینترنتی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>توافقی </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
+               <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">روش ارسال</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                </div>
                
                     
                 
                     
                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l fild p0">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">روش ارائه خدمات</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio p0">
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>پیک </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>پست</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>اتوبوس های شرکت های مسافرتی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span> اینترنتی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>توافقی </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
+               <div class="t_align fild_title p0">
+                    <span class="f_r p0"></span>
+                    <label for="sefaresh_makan" class="p0">روش ارائه خدمات</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <option value="1">نهاوند</option>
+                        <option value="2">ملایر</option>
+                        <option value="3">کوهانی</option>
+                        <option value="4">جهان آباد</option>
+                    </select>
+                </div>
                </div>
                     
                     
