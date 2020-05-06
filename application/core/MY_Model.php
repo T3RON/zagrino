@@ -268,5 +268,37 @@ class MY_Model extends CI_Model {
         $cnt = $query->row_array();
         return $cnt['count(*)'];
     }
+
+    
+    function check_login ($mobile,$password) {
+        $this->db->where('account_mobile',$mobile);
+        $this->db->limit(1);
+        $login_query = $this->db->get('accounts');
+        if ($login_query->num_rows() > 0) {
+            $row = $login_query->row();
+         
+            if ($row) {
+                $session_data = array(
+                    'accounts_id'=> $row->accounts_id,
+                    'account_fn'=> $row->account_fn,
+                    'account_ln'=> $row->account_ln,
+                    'account_mobile'=> $row->account_mobile,
+                    'account_avatar'=> $row->account_avatar,
+                    'state_id'=> $row->state_id,
+                    'logged_in'=> TRUE
+                );
+
+                $this->session->sess_expiration = '14400';
+                $this->session->set_userdata($session_data);
+        
+                return password_verify($password,$row->account_pass);
+
+
+            }
+
+        }else {
+            return false;
+        }
+    }
   
 }

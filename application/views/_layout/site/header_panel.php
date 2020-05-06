@@ -290,6 +290,14 @@
         
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 toggler_tabs p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
+                <li style="background:red !important;"  class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        <a style="color:#fff !important;"  href="<?= base_url('site/Panel/Profile'); ?>" class="nav-link active" >
+                            <div class="title">
+                               پروفايل خود را تكميل نماييد
+                                <div class="d_n"></div>
+                            </div>
+                        </a>
+                    </li>
                     <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                         <a href="#panel_01" class="nav-link active" >
                             <div class="title">

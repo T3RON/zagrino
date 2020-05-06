@@ -21,9 +21,10 @@ class CI_Panel extends CI_Controller
 
         $this->load->model('MY_Model');
 
-        echo("sdsdsdd");
+    
         
     }
+
 
 
 

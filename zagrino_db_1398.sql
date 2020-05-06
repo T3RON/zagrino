@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 03, 2020 at 11:55 AM
+-- Generation Time: May 06, 2020 at 11:31 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -44,26 +44,26 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `ostan_id` int(11) DEFAULT NULL,
   `city_id` int(11) DEFAULT NULL,
   `account_state` int(11) DEFAULT NULL,
-  `account_reg_date` text,
-  `account_up_date` text,
   `state_id` int(11) DEFAULT NULL,
   `account_active_code` text,
   `account_avatar` text,
-  `account_map_latitude` text,
-  `account_map_longitude` text,
+  `map_latitude` text,
+  `map_longitude` text,
   `account_sex` int(11) DEFAULT NULL,
   `account_age` int(11) DEFAULT NULL,
   `account_about` text,
   `account_level` int(11) DEFAULT NULL,
+  `register_date` text,
+  `update_date` text,
   PRIMARY KEY (`accounts_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_accounts`
 --
 
-INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `account_reg_date`, `account_up_date`, `state_id`, `account_active_code`, `account_avatar`, `account_map_latitude`, `account_map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`) VALUES
-(1, 'محمد', 'سيف', 'mseif', '258456', 'seif4847@gmail.com', '09192183440', '09192183440', '3950171533', '6591953977', '09192183440', 1, 1, 1, 'شنبه, ۱۶ فروردین ۱۳۹۹', 'شنبه, ۱۶ فروردین ۱۳۹۹', 1, '09192183440', '20135-beautiful-701678_1280.jpg', '09192183440', '09192183440', 1, 1, '09192183440', 1);
+INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `state_id`, `account_active_code`, `account_avatar`, `map_latitude`, `map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`, `register_date`, `update_date`) VALUES
+(2, 'محمد', 'سيف', NULL, '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', NULL, '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '76f16-flower-729514_1280.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '1588753827', '');
 
 -- --------------------------------------------------------
 
