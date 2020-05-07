@@ -21,12 +21,18 @@ class Login extends CI_Controller {
 
     function index()
     {
+        if( $this->session->userdata('logged_in')) {
+            redirect('site/panel/index');
+        }else {
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
         $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site',1);
+
+
+
 
         // $day = 86400 * 31;
         // $calc_day=time() + ( ( $this->jdf->jdate('t',time(),'','','en') - $this->jdf->jdate('j',time(),'','','en') ) * $day ) + 86400;
@@ -44,6 +50,7 @@ class Login extends CI_Controller {
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
         $this->load->view('site/Login', $output);
+    }
     }
 
     function register() {
@@ -71,17 +78,20 @@ class Login extends CI_Controller {
     }
 
     function login() {
-        $mobile = $this->input->post('mobile');
-        $password = $this->input->post('password');
+     
+            $mobile = $this->input->post('mobile');
+            $password = $this->input->post('password');
+        
+            $result = $this->MY_Model->check_login($mobile,$password);
     
-        $result = $this->MY_Model->check_login($mobile,$password);
-
-        if ($result) {
-            redirect('site/panel/index');
-        } else {
-            redirect('Register');
-        }
-
+            if ($result) {
+                redirect('site/panel/index');
+            } else {
+                redirect('Register');
+            }
+    
+        
+ 
     }
 
     
@@ -97,7 +107,7 @@ class Login extends CI_Controller {
         );
         $this->session->unset_userdata($session_data);
         $this->session->sess_destroy();
-        redirect('site/Index');
+        redirect('Index');
     }
 
 
