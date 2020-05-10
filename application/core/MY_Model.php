@@ -269,6 +269,14 @@ class MY_Model extends CI_Model {
         return $cnt['count(*)'];
     }
 
+    function g_count_where($table,$where_name,$where_value) {
+        $this->db->select('count(*)');
+        $this->db->where($where_name,$where_value);
+        $query = $this->db->get($table);
+        $cnt = $query->row_array();
+        return $cnt['count(*)'];
+    }
+
     
     function check_login ($mobile,$password) {
         $this->db->where('account_mobile',$mobile);

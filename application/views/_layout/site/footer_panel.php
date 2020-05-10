@@ -139,5 +139,34 @@
     });
 </script>
 
+
+<script type="text/javascript">
+        $(document).ready(function(){
+ 
+            $('#ostan_id').change(function(){ 
+               var id=$(this).val();
+                $.ajax({
+                    url : "<?php echo site_url('site/panel/Profile/get_cities');?>",
+                    method : "POST",
+                    data : {id: id},
+                    async : true,
+                    dataType : 'json',
+                    success: function(data){
+                         
+                        var html = '';
+                        var i;
+                        for(i=0; i<data.length; i++){
+                            html += '<option value='+data[i].city_id+'>'+data[i].city_title+'</option>';
+                        }
+                        $('#city_id').html(html);
+ 
+                    }
+                });
+                return false;
+            }); 
+             
+        });
+    </script>
+
 </body>
 </html>

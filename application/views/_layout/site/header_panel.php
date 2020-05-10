@@ -324,30 +324,16 @@
                                 </div>
                             </a>
                         </li>
+        
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="#panel_01" class="nav-link active">
-                                <div class="title">
-                                    انتخاب شهر
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="#panel_02" class="nav-link active">
+                            <a href="<?= base_url('site/Panel/Show_panel'); ?>" class="nav-link active">
                                 <div class="title">
                                     مدیریت پنل ها
                                     <div class="d_n"></div>
                                 </div>
                             </a>
                         </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="#panel_03" class="nav-link active">
-                                <div class="title">
-                                    سبد خرید
-                                    <div class="d_n"></div>
-                                </div>
-                            </a>
-                        </li>
+               
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_04" class="nav-link active">
                                 <div class="title">

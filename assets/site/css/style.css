@@ -12,7 +12,14 @@ License: GNU General Public License v2 or later
 @import url("global.css");
 
 /* -- header --*/
-
+.err {
+    color: red;
+    font-weight: bold;
+}
+.succ {
+    color: green;
+    font-weight: bold;
+}
 .top_header {
     padding: 5px 0 !important;
     font-size: 12px!important;

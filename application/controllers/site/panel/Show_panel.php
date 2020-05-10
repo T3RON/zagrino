@@ -8,7 +8,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Profile extends CI_Panel {
+class Show_panel extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -30,18 +30,25 @@ class Profile extends CI_Panel {
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
         $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
-        $output['ostan'] = $this->MY_Model->select('ostan');
 
 
+
+        $output['agahi'] = $this->MY_Model->g_count_where('agahi','accounts_id',$this->session->userdata('accounts_id'));
+        $output['jobs'] = $this->MY_Model->g_count_where('jobs','accounts_id',$this->session->userdata('accounts_id'));
+        $output['events'] = $this->MY_Model->g_count_where('events','accounts_id',$this->session->userdata('accounts_id'));
+        $output['shop'] = $this->MY_Model->g_count_where('shop','accounts_id',$this->session->userdata('accounts_id'));
+        $output['takhfif'] = $this->MY_Model->g_count_where('takhfif','accounts_id',$this->session->userdata('accounts_id'));
+        $output['gardeshgari'] = $this->MY_Model->g_count_where('gardeshgari','accounts_id',$this->session->userdata('accounts_id'));
+
+        print_r($output['jobs']);
+        exit;
       
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Profile',$output);
+        $this->load->view('site/ShowPanel',$output);
     }
 
     function get_cities() {
