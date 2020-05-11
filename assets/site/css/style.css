@@ -12,6 +12,9 @@ License: GNU General Public License v2 or later
 @import url("global.css");
 
 /* -- header --*/
+thead.tbl-style tr th {
+text-align: center !important;
+}
 .err {
     color: red;
     font-weight: bold;

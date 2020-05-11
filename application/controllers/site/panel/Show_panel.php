@@ -12,15 +12,7 @@ class Show_panel extends CI_Panel {
     function __construct()
     {
         parent::__construct();
-        $this->load->library('ion_auth');
-        $this->load->library('Jdf');
-        $this->load->library('user_agent');
-        $this->load->helper('url');
-        $this->load->helper('form');
-        $this->load->library('javascript');
-        $this->load->library('javascript/jquery');
-        $this->load->model('Menu_Model');
-        $this->load->model('MY_Model');
+
 
     }
 
@@ -42,8 +34,7 @@ class Show_panel extends CI_Panel {
         $output['takhfif'] = $this->MY_Model->g_count_where('takhfif','accounts_id',$this->session->userdata('accounts_id'));
         $output['gardeshgari'] = $this->MY_Model->g_count_where('gardeshgari','accounts_id',$this->session->userdata('accounts_id'));
 
-        print_r($output['jobs']);
-        exit;
+        
       
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";

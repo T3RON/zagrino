@@ -25,7 +25,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$agahi != 0 ) { ?>
+                            <?php if((int)$agahi != "0" ) { ?>
                             <a href="#">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $agahi; ?></span>
@@ -43,7 +43,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$takhfif != 0 ) { ?>
+                            <?php if((int)$takhfif != "0" ) { ?>
                             <a href="#">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $takhfif; ?></span>
@@ -63,7 +63,7 @@
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$jobs != "0" ) { ?>
-                            <a href="#">
+                            <a href="<?= base_url('site/Panel/Jobs'); ?>">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $jobs; ?></span>
                                 <span style="margin-left:10px;background:#237790;float:left;"
@@ -81,7 +81,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$gardeshgari != 0 ) { ?>
+                            <?php if((int)$gardeshgari != "0" ) { ?>
                             <a href="#">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $gardeshgari; ?></span>
@@ -99,7 +99,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$shop != 0 ) { ?>
+                            <?php if((int)$shop != "0" ) { ?>
                             <a href="#">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $shop; ?></span>
@@ -118,7 +118,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$events != 0 ) { ?>
+                            <?php if((int)$events != "0" ) { ?>
                             <a href="#">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $events; ?></span>

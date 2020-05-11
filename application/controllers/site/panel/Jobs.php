@@ -8,10 +8,11 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Index extends CI_Panel {
+class Jobs extends CI_Panel {
     function __construct()
     {
         parent::__construct();
+
 
     }
 
@@ -24,13 +25,21 @@ class Index extends CI_Panel {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
+        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
+        $output['ostan'] = $this->MY_Model->select('ostan');
 
 
       
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Panel',$output);
+        $this->load->view('site/Pjobs',$output);
+    }
+
+    function get_cities() {
+        $ostan_id = $this->input->post('id',TRUE);
+        $data = $this->MY_Model->select_single_where('city','ostan',$ostan_id);
+        echo json_encode($data);
     }
 
 
