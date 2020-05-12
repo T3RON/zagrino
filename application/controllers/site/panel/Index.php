@@ -17,6 +17,7 @@ class Index extends CI_Panel {
 
     function index()
     {
+        //$this->check_logged();
    
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');

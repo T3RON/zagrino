@@ -15,21 +15,17 @@ class CI_Panel extends CI_Controller
         $this->load->library('user_agent');
         $this->load->helper('url');
         $this->load->helper('form');
+        $this->load->helper('Accesscontrol');
         $this->load->library('javascript');
         $this->load->library('javascript/jquery');
         $this->load->model('Menu_Model');
         $this->load->model('MY_Model');
 
        
-        if($this->check_logged() == false) {
-            redirect(site_url().'/site/panel/Index');
-        }else {
-     
-            redirect(site_url().'/site/Login');
-        }
+        Accesscontrol_helper::is_logged_in();
 
       
-
+     
 
 
     
@@ -37,14 +33,7 @@ class CI_Panel extends CI_Controller
     }
 
 
-    function check_logged() {
-                 
-        if (!$this->session->userdata('logged_in'))  {
-            return false ;  
-        }else {
-             return true; 
-        }
-    }
+   
 
 
 

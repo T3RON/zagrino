@@ -26,6 +26,7 @@ class Profile extends CI_Panel {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['ostan'] = $this->MY_Model->select('ostan');
+        $output['accounts'] = $this->MY_Model->select_single('accounts',$this->session->userdata('accounts_id'));
 
 
       
