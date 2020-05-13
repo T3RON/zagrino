@@ -25,8 +25,9 @@ class Jobs extends CI_Panel {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
-        $output['ostan'] = $this->MY_Model->select('ostan');
+        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.accounts',$this->session->userdata('accounts_id'));
+
+
 
 
       
@@ -36,11 +37,20 @@ class Jobs extends CI_Panel {
         $this->load->view('site/Pjobs',$output);
     }
 
-    function get_cities() {
-        $ostan_id = $this->input->post('id',TRUE);
-        $data = $this->MY_Model->select_single_where('city','ostan',$ostan_id);
-        echo json_encode($data);
+    function show() {
+
     }
+
+    function edit() {
+
+    }
+
+
+    function delete() {
+echo "sdsdss";
+    }
+
+ 
 
 
 }
