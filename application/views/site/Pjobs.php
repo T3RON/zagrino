@@ -58,10 +58,10 @@
                                         <a data-toggle="modal" data-target="#mdl-delete"
                                             style="background:red;color: #fff !important;padding: 0px 10px !important;"
                                             class="btn btn-sm">حذف</a>
-                                        <a href="<?= base_url('site/panel/Jobs/edit'); ?>"
+                                        <a href="<?= base_url('site/panel/Jobs/edit'); ?>/<?= $jobs_value->jobs_id; ?>"
                                             style="background:#7f7f7f;color: #fff !important;padding: 0px 10px !important;"
                                             class="btn btn-secondary btn-sm">ويرايش</a>
-                                        <a href="<?= base_url('site/panel/Jobs/show'); ?>"
+                                        <a href="<?= base_url('site/panel/Jobs/show'); ?>/<?= $jobs_value->jobs_id; ?>"
                                             style="background:#d4b000;color: #fff !important;padding: 0px 10px !important;"
                                             class="btn btn-secondary btn-sm">مشاهده</a>
                                     </td>
@@ -122,5 +122,5 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear_both"></div>
 
-
 <?php include_once (APPPATH.'views/_layout/site/footer_panel.php'); ?>
+<?php include_once (APPPATH.'views/_layout/swal.php'); ?>

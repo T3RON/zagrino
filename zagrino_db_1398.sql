@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 06, 2020 at 11:31 AM
+-- Generation Time: May 23, 2020 at 11:40 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -33,7 +33,6 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `accounts_id` int(11) NOT NULL AUTO_INCREMENT,
   `account_fn` text,
   `account_ln` text,
-  `account_username` text,
   `account_pass` text,
   `account_email` text,
   `account_mobile` text NOT NULL,
@@ -43,7 +42,6 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `account_address` text,
   `ostan_id` int(11) DEFAULT NULL,
   `city_id` int(11) DEFAULT NULL,
-  `account_state` int(11) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
   `account_active_code` text,
   `account_avatar` text,
@@ -56,14 +54,14 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `register_date` text,
   `update_date` text,
   PRIMARY KEY (`accounts_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_accounts`
 --
 
-INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_username`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `account_state`, `state_id`, `account_active_code`, `account_avatar`, `map_latitude`, `map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`, `register_date`, `update_date`) VALUES
-(2, 'محمد', 'سيف', NULL, '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', NULL, '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '76f16-flower-729514_1280.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '1588753827', '');
+INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `state_id`, `account_active_code`, `account_avatar`, `map_latitude`, `map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`, `register_date`, `update_date`) VALUES
+(1, 'محمد', 'سيف', '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', 'dsd', '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '76f16-flower-729514_1280.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '1588753827', '');
 
 -- --------------------------------------------------------
 
@@ -84,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `zgr_ads` (
   `days` int(11) NOT NULL,
   `expire` text NOT NULL,
   PRIMARY KEY (`ads_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_ads`
@@ -136,7 +134,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `days` int(11) NOT NULL,
   `expire` text NOT NULL,
   PRIMARY KEY (`agahi_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -186,7 +184,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `expire` text NOT NULL,
   `days` int(11) NOT NULL,
   PRIMARY KEY (`agahi_amlak_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_amlak`
@@ -242,7 +240,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `expire` text,
   `days` int(11) NOT NULL,
   PRIMARY KEY (`agahi_car_id`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1261,14 +1259,15 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `expire` text NOT NULL,
   `days` int(11) NOT NULL,
   PRIMARY KEY (`jobs_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
 INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
-(31, 7, 2, 1, 26, 368, 'كاشي كاري', 'كاشي و سراميك كريمي', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريمي</p>\n', '09192183440', '08137591', '08137591', 'seif4847@gmail.com', '6591953977', 'وب سايت', 'اينستاگرام', 'تلگرام', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, NULL, 8, 6, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', NULL, '<p>\n	كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي</p>\n', 'bb53b-wildlife.wmv', '1587791427', NULL, 'cfc26-chrysanthemum.jpg', '76f16-flower-729514_1280.jpg', '3b694-jellyfish.jpg', '75515-beautiful-701678_1280.jpg', '6bd9f-jellyfish.jpg', 'كاشي و سراميك كريمي', NULL, 3, '1590383544', 30);
+(37, 7, 1, 1, 2, 31, 'كاشي كاري', 'كاشي و سراميك كريمي', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1590218718', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, '1591949211', 20),
+(38, 2, 3, 1, 3, 3, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'شنبه, ۳ خرداد ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1', 0);
 
 -- --------------------------------------------------------
 
@@ -1564,7 +1563,7 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
   `jobs_id` int(11) NOT NULL,
   `jobs_service_id` int(11) NOT NULL,
   PRIMARY KEY (`rel_jobs_service_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_rel_jobs_service`
@@ -1578,7 +1577,9 @@ INSERT INTO `zgr_rel_jobs_service` (`rel_jobs_service_id`, `jobs_id`, `jobs_serv
 (9, 11, 2),
 (10, 12, 2),
 (11, 31, 1),
-(12, 31, 2);
+(12, 31, 2),
+(13, 32, 1),
+(14, 32, 2);
 
 -- --------------------------------------------------------
 
@@ -1782,7 +1783,7 @@ INSERT INTO `zgr_state` (`state_id`, `state_title`) VALUES
 DROP TABLE IF EXISTS `zgr_takhfif`;
 CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
   `takhfif_id` int(11) NOT NULL AUTO_INCREMENT,
-  `account_id` int(11) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
   `shop_id` int(11) DEFAULT NULL,
   `jobs_id` int(11) DEFAULT NULL,
   `takhfif_title_kasbokar` text NOT NULL,
@@ -1904,7 +1905,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1588486659, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1590212270, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

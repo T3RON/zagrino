@@ -14,89 +14,76 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all ">
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ghavanin_2">
-                    ليست مشاغل ثبت شده توسط شما
+                
+
+                <?php foreach ($jobs as $jobs_value) { ?>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ghavanin_2">
+                    شما در حال ويرايش شغل <span style="color:red;"><?= $jobs_value->jobs_title; ?></span> هستيد   
                     <div class="bottom"></div>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
+                <div class="form-group">
+                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="مديريت" aria-describedby="emailHelp"
+                            value="<?= $jobs_value->account_fn; ?> <?= $jobs_value->account_ln; ?>" readonly>
+                    </div>
 
                     <div class="form-group">
-                        <table class="table">
-                            <thead class="thead-dark">
-                                <tr>
-                                    <th style="text-align: center;" scope="col">#كد شناسايي</th>
-                                    <th style="text-align: center;" scope="col">عنوان شغل</th>
-                                    <th style="text-align: center;" scope="col">گروه بندي</th>
-                                    <th style="text-align: center;" scope="col">وضعيت</th>
-                                    <th style="text-align: center;" scope="col">تاريخ ثبت</th>
-                                    <th style="text-align: center;" scope="col">تاريخ انقضا</th>
-                                    <th style="text-align: center;" scope="col">عمليات</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <?php foreach ($jobs as $jobs_value) { ?>
-                                <tr>
-                                    <td style="text-align: center;"><?= $jobs_value->jobs_id; ?></td>
-                                    <td style="text-align: center;"><?= $jobs_value->jobs_title; ?></td>
-                                    <td style="text-align: center;"><?= $jobs_value->jobs_cate_title; ?></td>
-                                    <td style="text-align: center;"><?= $jobs_value->state_title; ?></td>
-                                    <td style="text-align: center;">
-                                        <span
-                                            style="color:blue;"><?= $this->jdf->jdate('l, j F Y',$jobs_value->register_date,'','GMT'); ?></span>
+                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="عنوان شغل" aria-describedby="emailHelp"
+                            value="<?= $jobs_value->jobs_title; ?>">
+                    </div>
 
-                                    </td>
-                                    <td style="text-align: center;">
-                                        <?php if(time() > $jobs_value->expire) { ?>
-                                        <span
-                                            style="color:red;"><?= $this->jdf->jdate('l, j F Y',$jobs_value->expire,'','GMT'); ?></span>
-                                        <?php } else { ?>
-                                        <span
-                                            style="color:green;"><?= $this->jdf->jdate('l, j F Y',$jobs_value->expire,'','GMT'); ?></span>
-                                        <?php } ?>
-                                    </td>
-                                    <td style="text-align: center;">
-                                        <a data-toggle="modal" data-target="#mdl-delete"
-                                            style="background:red;color: #fff !important;padding: 0px 10px !important;"
-                                            class="btn btn-sm">حذف</a>
-                                        <a href="<?= base_url('site/panel/Jobs/edit'); ?>"
-                                            style="background:#7f7f7f;color: #fff !important;padding: 0px 10px !important;"
-                                            class="btn btn-secondary btn-sm">ويرايش</a>
-                                        <a href="<?= base_url('site/panel/Jobs/show'); ?>"
-                                            style="background:#d4b000;color: #fff !important;padding: 0px 10px !important;"
-                                            class="btn btn-secondary btn-sm">مشاهده</a>
-                                    </td>
-                                </tr>
-                                
-                                <!-- Modal delete -->
-                                <div class="modal fade" id="mdl-delete" tabindex="-1" role="dialog"
-                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel">حذف شغل</h5>
-                                             
-                                            </div>
-                                            <div class="modal-body">
-                                                آيا از حذف <?= $jobs_value->jobs_title; ?> اطمينان داريد ؟
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary"
-                                                    data-dismiss="modal">بستن</button>
-                                                <a style="background:red;color: #fff !important;" href="<?= base_url('site/panel/Jobs/delete'); ?>/<?= $jobs_value->jobs_id; ?>" type="button" class="btn btn-primary">خذف</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    
 
+                    <div class="form-group">
+                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="شعار تبليغاتي" aria-describedby="emailHelp"
+                        value="<?= $jobs_value->jobs_shobe; ?>">
+                    </div>
 
-
-                                <?php } ?>
-
-                            </tbody>
-                        </table>
-
+                    <div class="form-group">
+                    <textarea class="form-control" placeholder="توضيح در مورد شغل <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1" rows="3" value="<?= $jobs_value->jobs_content; ?>"></textarea>
 
                     </div>
+                    <div class="form-group">
+                        <select class="form-control" id="ostan_id">
+                            <option>استان ...</option>
+                            <?php foreach ($ostan as $ostan_value) { ?>
+                                <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?></option>
+
+                            <?php } ?>
+                
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-control" id="city_id">
+                            <option>شهرستان ...</option>
+                
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="كد پستي" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        value="<?= $jobs_value->account_codeposti; ?>">
+                    </div>
+
+                   
+                    <div class="form-group">
+                        <lable style="height: 49px;float:left;"> آپلود تصوير پروفايل   <img src="<?=base_url('')?>assets/uploads/img/<?= $accounts_value->account_avatar; ?>" whith="30" height="30"></lable>
+                        <input type="file" class="custom-file-input" id="validatedCustomFile" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control" placeholder="سن (اختياري)"  id="exampleInputEmail1" aria-describedby="emailHelp"
+                        value="<?= $jobs_value->account_age; ?>">
+                    </div>
+                   
+
+                    
+                  
+
+                </div>
+
+            
+
+                <?php } ?>
 
                 </div>
 
@@ -124,3 +111,31 @@
 
 
 <?php include_once (APPPATH.'views/_layout/site/footer_panel.php'); ?>
+
+<script type="text/javascript">
+        $(document).ready(function(){
+ 
+            $('#ostan_id').change(function(){ 
+               var id=$(this).val();
+                $.ajax({
+                    url : "<?php echo site_url('site/panel/Jobs/get_cities');?>",
+                    method : "POST",
+                    data : {id: id},
+                    async : true,
+                    dataType : 'json',
+                    success: function(data){
+                         
+                        var html = '';
+                        var i;
+                        for(i=0; i<data.length; i++){
+                            html += '<option value='+data[i].city_id+'>'+data[i].city_title+'</option>';
+                        }
+                        $('#city_id').html(html);
+ 
+                    }
+                });
+                return false;
+            }); 
+             
+        });
+    </script>

@@ -27,6 +27,7 @@
     <!-- Swiper -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
+    <link href="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>

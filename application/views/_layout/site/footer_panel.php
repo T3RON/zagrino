@@ -57,7 +57,9 @@
 <script type="text/javascript" src="<?=base_url('')?>assets/site/js/swiper.min.js"></script>
 <script src="<?=base_url('')?>assets/site/js/pushbar.js"></script>
 <script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
-    
+    <!-- Sweet-Alert  -->
+<script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
     
 <!--    Script For This Page     -->
     <script >
@@ -140,7 +142,7 @@
 </script>
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
         $(document).ready(function(){
  
             $('#ostan_id').change(function(){ 
@@ -166,7 +168,7 @@
             }); 
              
         });
-    </script>
+    </script> -->
 
 </body>
 </html>

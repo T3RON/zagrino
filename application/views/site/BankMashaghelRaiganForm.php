@@ -555,6 +555,11 @@
     
     
   
+
+    
+    
+<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
 <script>
 var position = [40.748774, -73.985763];
 
@@ -613,9 +618,6 @@ function moveMarker(){
     }
 }
 </script>
-    
-    
-<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
 <!--    Script For This Page     -->
 
