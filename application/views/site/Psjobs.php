@@ -30,24 +30,24 @@
 
                     <div class="form-group">
                         <input type="email" class="form-control" id="exampleInputEmail1" placeholder="عنوان شغل"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_title; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_title; ?>" readonly>
                     </div>
 
 
 
                     <div class="form-group">
                         <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="شعار تبليغاتي"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_shobe; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_shobe; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <textarea class="form-control" placeholder="توضيح در مورد شغل <?= $jobs_value->jobs_title; ?>"
                             id="exampleFormControlTextarea1" rows="3"
-                            value="<?= $jobs_value->jobs_content; ?>"></textarea>
+                            value="<?= $jobs_value->jobs_content; ?>" readonly></textarea>
 
                     </div>
                     <div class="form-group">
-                        <select class="form-control" id="ostan_id">
+                        <select class="form-control" id="ostan_id" readonly>
                             <option>استان ...</option>
                             <?php foreach ($ostan as $ostan_value) { ?>
                             <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?>
@@ -58,13 +58,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <select class="form-control" id="city_id">
+                        <select class="form-control" id="city_id" readonly>
                             <option>شهرستان ...</option>
 
                         </select>
                     </div>
                     <div class="form-group">
-                        <select name="jobs_cate" class="form-control" id="jobs_cate_id">
+                        <select name="jobs_cate" class="form-control" id="jobs_cate_id" readonly>
                             <option>دسته بندي ...</option>
                             <?php foreach ($cate as $cate_value) { ?>
                             <option value="<?= $cate_value->jobs_cate_id; ?>"><?= $cate_value->jobs_cate_title; ?>
@@ -75,7 +75,7 @@
                         </select>
                     </div>
                     <div name="jobs_sub_cate" class="form-group">
-                        <select class="form-control" id="jobs_sub_cate_id">
+                        <select class="form-control" id="jobs_sub_cate_id" readonly>
                             <option>زير دسته بندي ...</option>
 
                         </select>
@@ -84,7 +84,7 @@
                     <div class="form-group">
                         <textarea name="jobs_feature" class="form-control"
                             placeholder="جزئيات بيشتر <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_feature; ?>"></textarea>
+                            rows="3" value="<?= $jobs_value->jobs_feature; ?>" readonly></textarea>
                     </div>
 
                 </div>
@@ -93,42 +93,42 @@
                     <div class="form-group">
                         <input name="jobs_work_titme" class="form-control" placeholder="زمان كاري"
                             id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_work_titme; ?>">
+                            value="<?= $jobs_value->jobs_work_titme; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_mobile" class="form-control" placeholder="تلفن همراه" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_mobile; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_mobile; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_tell" class="form-control" placeholder="تلفن ثابت" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tell; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tell; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_fax" class="form-control" placeholder="فكس" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_fax; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_fax; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_email" class="form-control" placeholder="ايميل" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_email; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_email; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_code_posti" class="form-control" placeholder="كد پستي" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_code_posti; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_code_posti; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <input name="jobs_youtube" class="form-control" placeholder="يوتيوب" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_youtube; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_youtube; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_count_namayandegi" class="form-control" placeholder="تعداد نمايندگي"
                             id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_count_namayandegi; ?>">
+                            value="<?= $jobs_value->jobs_count_namayandegi; ?>" readonly>
                     </div>
 
                     <div class="form-group">
@@ -136,7 +136,7 @@
                                 src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_video; ?>" whith="30"
                                 height="30"></lable>
                         <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                            required>
+                        readonly>
                     </div>
 
                 </div>
@@ -144,50 +144,50 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l">
                     <div class="form-group">
                         <input name="jobs_website" class="form-control" placeholder="وب سايت" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_website; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_website; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_instagram" class="form-control" placeholder="اينستاگرام"
                             id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_instagram; ?>">
+                            value="<?= $jobs_value->jobs_instagram; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_telegram" class="form-control" placeholder="تلگرام" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_telegram; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_telegram; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_whatsapp" class="form-control" placeholder="واتساپ" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_whatsapp; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_whatsapp; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_facebook" class="form-control" placeholder="فيسبوك" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_facebook; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_facebook; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_tw" class="form-control" placeholder="تويتر" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tw; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tw; ?>" readonly>
                     </div>
                     <div class="form-group">
                         <input name="jobs_pinterest" class="form-control" placeholder="پينترست" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_pinterest; ?>">
+                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_pinterest; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <input name="jobs_count_namayandegi_in_city" class="form-control"
                             placeholder="تعداد نمايندگي در شهر" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_count_namayandegi_in_city; ?>">
+                            value="<?= $jobs_value->jobs_count_namayandegi_in_city; ?>" readonly>
                     </div>
 
                     <div class="form-group">
                         <lable style="height: 49px;float:left;"> آپلود تصوير لوگو <img
                                 src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_logo; ?>" whith="30"
                                 height="30"></lable>
-                        <input name="jobs_logo" type="file" class="custom-file-input" id="validatedCustomFile" required>
+                        <input name="jobs_logo" type="file" class="custom-file-input" id="validatedCustomFile"  readonly>
                     </div>
 
                 </div>
@@ -197,22 +197,21 @@
                     <div class="form-group">
                         <textarea name="jobs_feature" class="form-control"
                             placeholder="آدرس  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_address; ?>"></textarea>
+                            rows="3" value="<?= $jobs_value->jobs_address; ?>" readonly></textarea>
                     </div>
                     <div class="form-group">
                         <textarea name="jobs_sharayet" class="form-control"
                             placeholder="شرايط  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_sharayet; ?>"></textarea>
+                            rows="3" value="<?= $jobs_value->jobs_sharayet; ?>" readonly></textarea>
                     </div>
                     <div class="form-group">
                         <textarea name="jobs_mojavez" class="form-control"
                             placeholder="مجوز  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_mojavez; ?>"></textarea>
+                            rows="3" value="<?= $jobs_value->jobs_mojavez; ?>" readonly></textarea>
                     </div>
 
-                    <button type="button" class="btn btn-primary">بروزرساني</button>
-                    <div class="btn err">dsdsdsdsd</div>
-                    <div class="btn succ">dsdsdsdsd</div>
+                    <button type="button" class="btn btn-primary">بازگشت</button>
+                    
 
                 </div>
 

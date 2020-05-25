@@ -38,7 +38,25 @@ class Jobs extends CI_Panel {
     }
 
     function show() {
-   
+        $id = $this->uri->segment(5);
+        $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
+        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
+        $output['slider'] = $this->Menu_Model->select('slider');
+        $output['text'] = $this->Menu_Model->select('text');
+        $output['site'] = $this->MY_Model->select_single('site','1');
+        $output['ostan'] = $this->MY_Model->select('ostan');
+        $output['cate'] = $this->MY_Model->select('jobs_cate');
+        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.jobs',$id);
+
+
+
+
+      
+        $output['title'] = "پنل كاربري";
+        $output['des'] = "مديريت و بررسي كاربران";
+        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
+        $this->load->view('site/Psjobs',$output);
         
     }
 
@@ -51,6 +69,7 @@ class Jobs extends CI_Panel {
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['ostan'] = $this->MY_Model->select('ostan');
+        $output['cate'] = $this->MY_Model->select('jobs_cate');
         $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.jobs',$id);
 
 
@@ -84,6 +103,11 @@ class Jobs extends CI_Panel {
         echo json_encode($data);
     }
 
+    function get_cate() {
+        $jobs_cate_id = $this->input->post('id',TRUE);
+        $data = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$jobs_cate_id);
+        echo json_encode($data);
+    }
  
 
 
