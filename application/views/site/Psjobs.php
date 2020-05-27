@@ -21,199 +21,228 @@
                     شما در حال ويرايش شغل <span style="color:red;"><?= $jobs_value->jobs_title; ?></span> هستيد
                     <div class="bottom"></div>
                 </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l">
+                    <div class="form-group">
+                        <span class="span_show">زمان كاري : </span>
+                        <lable><?= $jobs_value->jobs_work_titme; ?></lable>
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">تلفن همراه : </span>
+                        <lable><?= $jobs_value->jobs_mobile; ?></lable>
+
+
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">تلفن ثابت : </span>
+                        <lable><?= $jobs_value->jobs_tell; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">فكس : </span>
+                        <lable><?= $jobs_value->jobs_fax; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">ايميل : </span>
+                        <lable><?= $jobs_value->jobs_email; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">كد پستي : </span>
+                        <lable><?= $jobs_value->jobs_code_posti; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">يوتيوب : </span>
+                        <lable><?= $jobs_value->jobs_youtube; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">يوتيوب : </span>
+                        <lable><?= $jobs_value->jobs_youtube; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">تعداد نمايندگي : </span>
+                        <lable><?= $jobs_value->jobs_count_namayandegi; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">واتساپ : </span>
+                        <lable><?= $jobs_value->jobs_whatsapp; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">فيسبوك : </span>
+                        <lable><?= $jobs_value->jobs_facebook; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">تويتر : </span>
+                        <lable><?= $jobs_value->jobs_tw; ?></lable>
+                    </div>
+
+
+
+
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 m_15 f_l">
+                    <div class="form-group">
+                        <span class="span_show"> مشخصات فردي : </span>
+                        <lable><?= $jobs_value->account_fn; ?> <?= $jobs_value->account_ln; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">عنوان شغل : </span>
+                        <lable><?= $jobs_value->jobs_title; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">شعار تبليغاتي : </span>
+                        <lable><?= $jobs_value->jobs_shobe; ?></lable>
+                    </div>
+
+
+                    <div class="form-group">
+                        <span class="span_show">استان : </span>
+                        <lable><?= $jobs_value->ostan_title; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">شهرستان : </span>
+                        <lable><?= $jobs_value->city_title; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">دسته بندي : </span>
+                        <lable><?= $jobs_value->jobs_cate_title; ?></lable>
+                    </div>
+
+                    <div name="jobs_sub_cate" class="form-group">
+                        <span class="span_show">زير دسته بندي : </span>
+                        <lable><?= $jobs_value->jobs_sub_cate_title; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show"> تعداد نمايندگي شهر: </span>
+                        <lable><?= $jobs_value->jobs_count_namayandegi_in_city; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">وب سايت : </span>
+                        <lable><?= $jobs_value->jobs_website; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">اينستاگرام : </span>
+                        <lable><?= $jobs_value->jobs_instagram; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">تلگرام : </span>
+                        <lable><?= $jobs_value->jobs_telegram; ?></lable>
+                    </div>
+
+                    <div class="form-group">
+                        <span class="span_show">پينترست : </span>
+                        <lable><?= $jobs_value->jobs_pinterest; ?></lable>
+                    </div>
+
+                </div>
+
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
                     <div class="form-group">
-                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="مديريت"
-                            aria-describedby="emailHelp"
-                            value="<?= $jobs_value->account_fn; ?> <?= $jobs_value->account_ln; ?>" readonly>
+                        <span style="color:red;">توضيح در مورد شغل : </span>
+                        <lable><?= $jobs_value->jobs_content; ?></lable>
                     </div>
 
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="عنوان شغل"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_title; ?>" readonly>
-                    </div>
-
-
-
-                    <div class="form-group">
-                        <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="شعار تبليغاتي"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_shobe; ?>" readonly>
+                        <span style="color:red;">جزئيات بيشتر : </span>
+                        <lable><?= $jobs_value->jobs_feature; ?></lable>
                     </div>
 
                     <div class="form-group">
-                        <textarea class="form-control" placeholder="توضيح در مورد شغل <?= $jobs_value->jobs_title; ?>"
-                            id="exampleFormControlTextarea1" rows="3"
-                            value="<?= $jobs_value->jobs_content; ?>" readonly></textarea>
-
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="ostan_id" readonly>
-                            <option>استان ...</option>
-                            <?php foreach ($ostan as $ostan_value) { ?>
-                            <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?>
-                            </option>
-
-                            <?php } ?>
-
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="form-control" id="city_id" readonly>
-                            <option>شهرستان ...</option>
-
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select name="jobs_cate" class="form-control" id="jobs_cate_id" readonly>
-                            <option>دسته بندي ...</option>
-                            <?php foreach ($cate as $cate_value) { ?>
-                            <option value="<?= $cate_value->jobs_cate_id; ?>"><?= $cate_value->jobs_cate_title; ?>
-                            </option>
-
-                            <?php } ?>
-
-                        </select>
-                    </div>
-                    <div name="jobs_sub_cate" class="form-group">
-                        <select class="form-control" id="jobs_sub_cate_id" readonly>
-                            <option>زير دسته بندي ...</option>
-
-                        </select>
+                        <span style="color:red;">آدرس : </span>
+                        <lable><?= $jobs_value->jobs_address; ?></lable>
                     </div>
 
                     <div class="form-group">
-                        <textarea name="jobs_feature" class="form-control"
-                            placeholder="جزئيات بيشتر <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_feature; ?>" readonly></textarea>
+                        <span style="color:red;">شرايط : </span>
+                        <lable><?= $jobs_value->jobs_sharayet; ?></lable>
                     </div>
+
+                    <div class="form-group">
+                        <span style="color:red;">مجوز : </span>
+                        <lable><?= $jobs_value->jobs_mojavez; ?></lable>
+                    </div>
+                </div>
+
+                <?php if($jobs_value->jobs_video != "") { ?>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l p0">
+            
+
+                    <video class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group" controls>
+                        <source src="<?=base_url('')?>assets/uploads/videos/<?= $jobs_value->jobs_video; ?>" type="video/mp4">
+                        Your browser does not support HTML video.
+                    </video>
+
 
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l">
-                    <div class="form-group">
-                        <input name="jobs_work_titme" class="form-control" placeholder="زمان كاري"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_work_titme; ?>" readonly>
+                <?php } ?>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <?php if($jobs_value->img1 != "") { ?>
+                        <img class="img-responsive"
+                            src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->img1; ?>">
+                        <?php } else {?>
+                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/no_image.png">
+                        <?php } ?>
                     </div>
 
-                    <div class="form-group">
-                        <input name="jobs_mobile" class="form-control" placeholder="تلفن همراه" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_mobile; ?>" readonly>
-                    </div>
 
-                    <div class="form-group">
-                        <input name="jobs_tell" class="form-control" placeholder="تلفن ثابت" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tell; ?>" readonly>
-                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <?php if($jobs_value->img2 != "") { ?>
+                        <img class="img-responsive"
+                            src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->img2; ?>">
+                        <?php } else {?>
+                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/no_image.png">
+                        <?php } ?> </div>
 
-                    <div class="form-group">
-                        <input name="jobs_fax" class="form-control" placeholder="فكس" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_fax; ?>" readonly>
-                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <?php if($jobs_value->img3 != "") { ?>
+                        <img class="img-responsive"
+                            src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->img3; ?>">
+                        <?php } else {?>
+                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/no_image.png">
+                        <?php } ?> </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
+                        <?php if($jobs_value->img4 != "") { ?>
+                        <img class="img-responsive"
+                            src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->img4; ?>">
+                        <?php } else {?>
+                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/no_image.png">
+                        <?php } ?> </div>
 
-                    <div class="form-group">
-                        <input name="jobs_email" class="form-control" placeholder="ايميل" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_email; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_code_posti" class="form-control" placeholder="كد پستي" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_code_posti; ?>" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input name="jobs_youtube" class="form-control" placeholder="يوتيوب" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_youtube; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_count_namayandegi" class="form-control" placeholder="تعداد نمايندگي"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_count_namayandegi; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <lable style="height: 49px;float:left;"> آپلود ويدئو <img
-                                src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_video; ?>" whith="30"
-                                height="30"></lable>
-                        <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                        readonly>
-                    </div>
 
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l">
-                    <div class="form-group">
-                        <input name="jobs_website" class="form-control" placeholder="وب سايت" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_website; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_instagram" class="form-control" placeholder="اينستاگرام"
-                            id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_instagram; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_telegram" class="form-control" placeholder="تلگرام" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_telegram; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_whatsapp" class="form-control" placeholder="واتساپ" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_whatsapp; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_facebook" class="form-control" placeholder="فيسبوك" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_facebook; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_tw" class="form-control" placeholder="تويتر" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_tw; ?>" readonly>
-                    </div>
-                    <div class="form-group">
-                        <input name="jobs_pinterest" class="form-control" placeholder="پينترست" id="exampleInputEmail1"
-                            aria-describedby="emailHelp" value="<?= $jobs_value->jobs_pinterest; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <input name="jobs_count_namayandegi_in_city" class="form-control"
-                            placeholder="تعداد نمايندگي در شهر" id="exampleInputEmail1" aria-describedby="emailHelp"
-                            value="<?= $jobs_value->jobs_count_namayandegi_in_city; ?>" readonly>
-                    </div>
-
-                    <div class="form-group">
-                        <lable style="height: 49px;float:left;"> آپلود تصوير لوگو <img
-                                src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_logo; ?>" whith="30"
-                                height="30"></lable>
-                        <input name="jobs_logo" type="file" class="custom-file-input" id="validatedCustomFile"  readonly>
-                    </div>
-
-                </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l">
-
-                    <div class="form-group">
-                        <textarea name="jobs_feature" class="form-control"
-                            placeholder="آدرس  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_address; ?>" readonly></textarea>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="jobs_sharayet" class="form-control"
-                            placeholder="شرايط  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_sharayet; ?>" readonly></textarea>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="jobs_mojavez" class="form-control"
-                            placeholder="مجوز  <?= $jobs_value->jobs_title; ?>" id="exampleFormControlTextarea1"
-                            rows="3" value="<?= $jobs_value->jobs_mojavez; ?>" readonly></textarea>
-                    </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
 
                     <button type="button" class="btn btn-primary">بازگشت</button>
-                    
-
                 </div>
+
+
+
 
 
 
