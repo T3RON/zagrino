@@ -12,7 +12,7 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmandi_ghavanin">
 
-            <form action="<?= site_url('site/panel/Jobs') ?>" method="post" enctype='multipart/form-data'>
+            <form action="<?= site_url('site/panel/Jobs/insert') ?>" method="post" enctype='multipart/form-data'>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all ">
 
@@ -25,9 +25,10 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
                         <div class="form-group">
-                            <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="مديريت"
+                            <input type="text" class="form-control" id="exampleInputEmail1" placeholder="مديريت"
                                 aria-describedby="emailHelp"
                                 value="<?= $jobs_value->account_fn; ?> <?= $jobs_value->account_ln; ?>" readonly>
+                                <input name="accounts_id" type="hidden" value="<?= $jobs_value->accounts_id; ?>">
                         </div>
 
                         <div class="form-group">
@@ -40,19 +41,19 @@
 
 
                         <div class="form-group">
-                            <input type="tel" class="form-control" id="exampleInputEmail1" placeholder="شعار تبليغاتي"
+                            <input name="jobs_shobe" type="text" class="form-control" id="exampleInputEmail1" placeholder="شعار تبليغاتي"
                                 aria-describedby="emailHelp" value="<?= $jobs_value->jobs_shobe; ?>">
                         </div>
 
                         <div class="form-group">
-                            <textarea class="form-control"
+                            <textarea name="jobs_content" class="form-control"
                                 placeholder="توضيح در مورد شغل <?= $jobs_value->jobs_title; ?>"
                                 id="exampleFormControlTextarea1" rows="3"
                                 value="<?= $jobs_value->jobs_content; ?>"></textarea>
 
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="ostan_id">
+                            <select name="ostan_id" class="form-control" id="ostan_id">
                                 <option>استان ...</option>
                                 <?php foreach ($ostan as $ostan_value) { ?>
                                 <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?>
@@ -63,7 +64,7 @@
                             </select>
                         </div>
                         <div class="form-group">
-                            <select class="form-control" id="city_id">
+                            <select name="city_id" class="form-control" id="city_id">
                                 <option>شهرستان ...</option>
 
                             </select>
@@ -140,12 +141,12 @@
                         </div>
 
                         <div class="form-group">
-                            <lable style="height: 49px;float:left;"> آپلود ويدئو <img
-                                    src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_video; ?>" whith="30"
-                                    height="30"></lable>
-                            <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title">آپلود ويدئو </h4>
+                            <input name="jobs_video" type="file" id="input-file-now" class="dropify" />
                         </div>
+
+
 
                     </div>
 
@@ -196,12 +197,11 @@
                                 value="<?= $jobs_value->jobs_count_namayandegi_in_city; ?>">
                         </div>
 
+
                         <div class="form-group">
-                            <lable style="height: 49px;float:left;"> آپلود تصوير لوگو <img
-                                    src="<?=base_url('')?>assets/uploads/img/<?= $jobs_value->jobs_logo; ?>" whith="30"
-                                    height="30"></lable>
-                            <input name="jobs_logo" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title">آپلود تصوير لوگو </h4>
+                            <input name="jobs_logo" type="file" id="input-file-now" class="dropify" />
                         </div>
 
                     </div>
@@ -227,32 +227,29 @@
 
                     </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_l p0">
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 form-group">
-                        <lable style="text-align:center;"> تصوير شماره 4 </lable>
-
-                            <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title"> انتخاب تصوير شماره 4</h4>
+                            <input name="img4" type="file" id="input-file-now" class="dropify" />
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 form-group">
-                        <lable style="text-align:center;"> تصوير شماره 3 </lable>
-
-                            <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title"> انتخاب تصوير شماره 3</h4>
+                            <input name="img3" type="file" id="input-file-now" class="dropify" />
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 form-group">
-                        <lable style="text-align:center;"> تصوير شماره 2 </lable>
-
-                            <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title"> انتخاب تصوير شماره 2</h4>
+                            <input name="img2" type="file" id="input-file-now" class="dropify" />
                         </div>
 
                         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 form-group">
-                        <lable style="text-align:center;"> تصوير شماره 1 </lable>
-                            <input name="jobs_video" type="file" class="custom-file-input" id="validatedCustomFile"
-                                required>
+                            <h4 style="font-size: 14px;text-align: center;background: aliceblue;padding: 5px 0px;"
+                                class="card-title"> انتخاب تصوير شماره 1</h4>
+                            <input name="img1" type="file" id="input-file-now" class="dropify" />
                         </div>
 
 

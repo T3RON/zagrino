@@ -24,6 +24,8 @@
         href="<?=base_url('')?>assets/site/fonts/flag-icon-css/css/flag-icon.min.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/pace.css">
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/fonts/fonts.css">
+    <link rel="stylesheet" href="<?=base_url('')?>assets/plugins/dropify/dist/css/dropify.min.css">
+
     <!-- Swiper -->
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">

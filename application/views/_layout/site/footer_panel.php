@@ -57,6 +57,8 @@
 <script type="text/javascript" src="<?=base_url('')?>assets/site/js/swiper.min.js"></script>
 <script src="<?=base_url('')?>assets/site/js/pushbar.js"></script>
 <script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
+<script src="<?=base_url('')?>assets/plugins/dropify/dist/js/dropify.js"></script>
+
     <!-- Sweet-Alert  -->
 <script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
 <script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
@@ -169,6 +171,50 @@
              
         });
     </script> -->
+
+    
+<script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("واقعا نياز داريد اين فايل را حذف كنيد \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('فايل حذف گرديد');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
+    });
+</script>
 
 </body>
 </html>
