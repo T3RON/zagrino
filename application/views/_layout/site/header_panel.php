@@ -30,6 +30,21 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
     <link href="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
+
+
+    
+
+    <?php if (isset($home_page) && $home_page !== TRUE):?>
+    <?php foreach($css_files as $file): ?>
+      <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
+    <?php endforeach; ?>
+    <?php foreach($js_files as $file): ?>
+      <script src="<?php echo $file; ?>"></script>
+    <?php endforeach; ?>
+
+    <?php endif;?>
+
 </head>
 
 <body>

@@ -75,7 +75,6 @@ video {
     vertical-align: baseline;
     background: transparent;
     text-align: right;
-    direction: rtl;
 }
 
 @font-face {
@@ -107,7 +106,6 @@ body {
     text-align: center !important;
     color: #5c6672 !important;
     overflow-x: hidden;
-    direction: rtl!important;
 }
 
 article,

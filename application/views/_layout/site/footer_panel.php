@@ -62,6 +62,10 @@
     <!-- Sweet-Alert  -->
 <script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
 <script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+
+
+
+
     
 <!--    Script For This Page     -->
     <script >

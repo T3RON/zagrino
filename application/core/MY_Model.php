@@ -334,6 +334,7 @@ class MY_Model extends CI_Model {
     }
 
     function update ($table,$id,$data) {
+    
         $this->db->where($table.'_id', $id);
         return $this->db->update($table, $data);
     }

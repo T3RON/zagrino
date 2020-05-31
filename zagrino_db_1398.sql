@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 23, 2020 at 11:40 AM
+-- Generation Time: May 31, 2020 at 11:45 AM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -61,7 +61,7 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
 --
 
 INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `state_id`, `account_active_code`, `account_avatar`, `map_latitude`, `map_longitude`, `account_sex`, `account_age`, `account_about`, `account_level`, `register_date`, `update_date`) VALUES
-(1, 'محمد', 'سيف', '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', 'dsd', '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '76f16-flower-729514_1280.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '1588753827', '');
+(1, 'محمد', 'سيف', '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', 'dsd', '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, '76f16-flower-729514_1280.jpg', NULL, NULL, NULL, NULL, NULL, NULL, '1588753827', '');
 
 -- --------------------------------------------------------
 
@@ -1259,15 +1259,17 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `expire` text NOT NULL,
   `days` int(11) NOT NULL,
   PRIMARY KEY (`jobs_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=39 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=41 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
 INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
-(37, 7, 1, 1, 2, 31, 'كاشي كاري', 'كاشي و سراميك كريمي', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '1590218718', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 3, '1591949211', 20),
-(38, 2, 3, 1, 3, 3, 'كاشي كاري', 'كاشي و سراميك كريمي', 'كاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريميكاشي و سراميك كريمي', NULL, '', '', '', '', '', '', NULL, '', '', NULL, NULL, NULL, NULL, NULL, '', NULL, NULL, 0, 0, NULL, NULL, NULL, NULL, NULL, 'شنبه, ۳ خرداد ۱۳۹۹', '', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', '<p>You did not select a file to upload.</p>', 'تبلغ ما كيفيت ماست', 0, 1, '1', 0);
+(37, 7, 6, 1, 0, 0, 'كاشي كاري', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 20),
+(38, 0, 0, 1, 0, 0, 'ghghgh', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
+(39, 7, 6, 1, 0, 0, 'dsdsadsad', 'كاشي و سراميك كريميds', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
+(40, 7, 5, 1, 2, 32, '6666', 'كاشي و سراميك كريميds', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'یکشنبه, ۱۱ خرداد ۱۳۹۹', '<p></p>', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', 'a3ea1db8d76cdfe8ad265ec698640927.jpg', '635a8407dba385478294126520888bc8.jpg', '7f011227c2efd8e38264624ae7683806.jpg', NULL, 0, 1, '1', 0);
 
 -- --------------------------------------------------------
 

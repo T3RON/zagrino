@@ -8,7 +8,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Jobs extends CI_Panel {
+class Agahi extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -25,7 +25,7 @@ class Jobs extends CI_Panel {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.accounts',$this->session->userdata('accounts_id'));
+        $output['agahi'] = $this->MY_Model->show_join_six('agahi','agahi_cate','agahi_sub_cate','accounts','ostan','city','state','zgr_agahi.accounts',$this->session->userdata('accounts_id'));
 
 
 
@@ -33,7 +33,7 @@ class Jobs extends CI_Panel {
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Pjobs',$output);
+        $this->load->view('site/PAgahi',$output);
     }
 
     function insert() {
@@ -47,43 +47,31 @@ class Jobs extends CI_Panel {
             'accounts_id' =>$this->input->post('accounts_id'),
             'ostan_id' =>$this->input->post('ostan_id'),
             'city_id' =>$this->input->post('city_id'),
-            'jobs_title' =>$this->input->post('jobs_title'),
-            'jobs_shobe' =>$this->input->post('jobs_shobe'),
-            'jobs_content' =>$this->input->post('jobs_content'),
-            'jobs_feature' =>$this->input->post('jobs_feature'),
-            'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
-            'jobs_mobile' =>$this->input->post('jobs_mobile'),
-            'jobs_tell' =>$this->input->post('jobs_tell'),
-            'jobs_fax' =>$this->input->post('jobs_fax'),
-            'jobs_email' =>$this->input->post('jobs_email'),
-            'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
-            'jobs_website' =>$this->input->post('jobs_website'),
-            'jobs_instagram' =>$this->input->post('jobs_instagram'),
-            'jobs_telegram' =>$this->input->post('jobs_telegram'),
-            'jobs_whatsapp' =>$this->input->post('jobs_whatsapp'),
-            'jobs_facebook' =>$this->input->post('jobs_facebook'),
-            'jobs_tw' =>$this->input->post('jobs_tw'),
-            'jobs_pinterest' =>$this->input->post('jobs_pinterest'),
-            'jobs_youtube' =>$this->input->post('jobs_youtube'),
-            'jobs_address' =>$this->input->post('jobs_address'),
-            'map_latitude' =>$this->input->post('map_latitude'),
-            'map_longitude' =>$this->input->post('map_longitude'),
-            'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
-            'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
-            'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
-            'jobs_list_service' =>$this->input->post('jobs_list_service'),
-            'jobs_service_id' =>$this->input->post('jobs_service_id'),
-            'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
-            'jobs_video' =>$this->Menu_Model->upload('jobs_video','jpg|png|mp4|wmv',51024),
+            'agahi_title' =>$this->input->post('agahi_title'),
+            'agahi_sazeman_title' =>$this->input->post('agahi_sazeman_title'),
+            'agahi_hoghoghi_or_haghighi' =>$this->input->post('agahi_hoghoghi_or_haghighi'),
+            'tarefe_id' =>$this->input->post('tarefe_id'),
+            'agahi_cate_id' =>$this->input->post('agahi_cate_id'),
+            'agahi_sub_cate_id' =>$this->input->post('agahi_sub_cate_id'),
+            'agahi_des' =>$this->input->post('agahi_des'),
+            'agahi_tell' =>$this->input->post('agahi_tell'),
+            'agahi_latitude' =>$this->input->post('agahi_latitude'),
+            'agahi_longitude' =>$this->input->post('agahi_longitude'),
+            'agahi_tag_conditions_id' =>$this->input->post('agahi_tag_conditions_id'),
+            'agahi_address' =>$this->input->post('agahi_address'),
+            'agahi_tag_id' =>$this->input->post('agahi_tag_id'),
+            'agahi_full_des' =>$this->input->post('agahi_full_des'),
+            'agahi_email' =>$this->input->post('agahi_email'),
+            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img2' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img3' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img4' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img5' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'img6' =>$this->Menu_Model->upload('img1','jpg|png',5024),
+            'price_id' =>$this->input->post('jobs_count_namayandegi'),
             'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
             'update_date' =>'',
             'state_id' =>1,
-            'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
-            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
-            'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
-            'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
-            'jobs_shoar' =>$this->input->post('jobs_shoar'),
             'price_id' =>0,
             'expire' =>"1"
         );
@@ -143,7 +131,7 @@ class Jobs extends CI_Panel {
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Psjobs',$output);
+        $this->load->view('site/Psagahi',$output);
         
     }
 
@@ -166,7 +154,7 @@ class Jobs extends CI_Panel {
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Pejobs',$output);
+        $this->load->view('site/Peagahi',$output);
     }
 
     function edit_action() {
@@ -225,11 +213,7 @@ class Jobs extends CI_Panel {
 
        
             $jobs = $this->Menu_Model->update('jobs',$id,$data);
-            print_r('img1'.$data['img1']);
-            print_r('img2'.$data['img2']);
-            print_r('img3'.$data['img3']);
-            print_r('img4'.$data['img4']);
-            exit;
+           
             
             if($jobs) {
                 $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
@@ -251,7 +235,7 @@ class Jobs extends CI_Panel {
 
     function delete() {
         $id = $this->uri->segment(5);
-        $query = $this->MY_Model->delete('jobs',$id);
+        $query = $this->MY_Model->delete('agahi',$id);
     
         if($query) {
             Message_helper::message('موفقيت','ركورد مورد نظر با موفقيت حذف شد','success','site/panel/Jobs');

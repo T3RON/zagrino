@@ -3044,6 +3044,7 @@ form .fild select {
     border: 2px dotted #dcdcdc;
     border-radius: 8px;
     padding: 20px 20px!important;
+    direction: rtl;
 }
 
 .niazmandi_ghavanin .head_title {
