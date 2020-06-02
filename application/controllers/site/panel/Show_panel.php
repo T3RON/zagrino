@@ -41,7 +41,7 @@ class Show_panel extends CI_Panel {
         $output['title'] = "پنل كاربري";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/ShowPanel',$output);
+        $this->load->view('panel/ShowPanel',$output);
     }
 
     function get_cities() {

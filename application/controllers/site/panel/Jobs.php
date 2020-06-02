@@ -1,6 +1,6 @@
 <?php
-
 include_once(APPPATH.'core/CI_Panel.php');
+
 /**
  * Created by PhpStorm.
  * User: acer
@@ -12,269 +12,238 @@ class Jobs extends CI_Panel {
     function __construct()
     {
         parent::__construct();
-        $this->load->helper('Message');
-
+        
     }
 
     function index()
     {
-   
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
-        $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.accounts',$this->session->userdata('accounts_id'));
 
+        $crud = new grocery_CRUD();
 
+        $crud->set_table('zgr_jobs');
+        $crud->set_subject('شغل');
 
-      
-        $output['title'] = "پنل كاربري";
-        $output['des'] = "مديريت و بررسي كاربران";
-        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Pjobs',$output);
-    }
+        $crud->columns('state_id','expire','update_date','register_date','jobs_title','accounts_id');
+        $crud->display_as('jobs_id','شناسه');
+        $crud->display_as('jobs_cate_id','گروه بندي');
+        $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');
+        $crud->display_as('accounts_id','كاربر');
+        $crud->display_as('ostan_id','استان');
+        $crud->display_as('city_id','شهرستان');
+        $crud->display_as('jobs_title','عنوان شغل');
+        $crud->display_as('jobs_shobe','نام شعبه');
+        $crud->display_as('jobs_content','توضيح شغل');
+        $crud->display_as('jobs_work_titme','ساعت كاري');
+        $crud->display_as('jobs_mobile','موبايل');
+        $crud->display_as('jobs_tell','تلفن ثابت');
+        $crud->display_as('jobs_fax','فكس');
+        $crud->display_as('jobs_email','ايميل');
+        $crud->display_as('jobs_code_posti','كدپستي');
+        $crud->display_as('jobs_website','وب سايت');
+        $crud->display_as('jobs_instagram','اينستاگرام');
+        $crud->display_as('jobs_telegram','تلگرام');
+        $crud->display_as('jobs_whatsapp','واتساپ');
+        $crud->display_as('jobs_facebook','فيسبوك');
+        $crud->display_as('jobs_tw','توِيتر');
+        $crud->display_as('jobs_pinterest','پينترست');
+        $crud->display_as('jobs_youtube','يوتوب');
+        $crud->display_as('jobs_address','آدرس');
+        $crud->display_as('jobs_map_latitude','طول جغرافيايي');
+        $crud->display_as('jobs_map_longitude','عرض جغرافيايي');
+        $crud->display_as('jobs_feature','توضيحات بيشتر');
+        $crud->display_as('jobs_count_namayandegi','تعداد نمايندگي ها');
+        $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
+        $crud->display_as('jobs_sharayet','شرايط فروش');
+        $crud->display_as('jobs_list_service','ليست خدمات و سرويس');
+        $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
+        $crud->display_as('jobs_mojavez','مجوز ها');
+        $crud->display_as('jobs_video','ويدئو');
+        $crud->display_as('register_date','تاريخ ثبت شغل');
+        $crud->display_as('update_date','تاريخ آپديت');
+        $crud->display_as('state_id','وضعيت');
+        $crud->display_as('jobs_logo','لوگو');
+        $crud->display_as('img1','تصوير شماره 1');
+        $crud->display_as('img2','تصوير شماره 2');
+        $crud->display_as('img3','تصوير شماره 3');
+        $crud->display_as('img4','تصوير شماره 4');
+        $crud->display_as('jobs_shoar','شعار');
+        $crud->display_as('category_id','گروه بندي');
+        $crud->display_as('price_id','قيمت');
+        $crud->display_as('jobs_service_id','سرويس ها');
+        $crud->display_as('days','تعداد روزهاي نمايش');
+        $crud->display_as('expire','تاريخ انقضا');
 
-    function insert() {
-
-
-
-        $data = array(
-            
-            'jobs_cate_id' =>$this->input->post('jobs_cate_id'),
-            'jobs_sub_cate_id' =>$this->input->post('jobs_sub_cate_id'),
-            'accounts_id' =>$this->input->post('accounts_id'),
-            'ostan_id' =>$this->input->post('ostan_id'),
-            'city_id' =>$this->input->post('city_id'),
-            'jobs_title' =>$this->input->post('jobs_title'),
-            'jobs_shobe' =>$this->input->post('jobs_shobe'),
-            'jobs_content' =>$this->input->post('jobs_content'),
-            'jobs_feature' =>$this->input->post('jobs_feature'),
-            'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
-            'jobs_mobile' =>$this->input->post('jobs_mobile'),
-            'jobs_tell' =>$this->input->post('jobs_tell'),
-            'jobs_fax' =>$this->input->post('jobs_fax'),
-            'jobs_email' =>$this->input->post('jobs_email'),
-            'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
-            'jobs_website' =>$this->input->post('jobs_website'),
-            'jobs_instagram' =>$this->input->post('jobs_instagram'),
-            'jobs_telegram' =>$this->input->post('jobs_telegram'),
-            'jobs_whatsapp' =>$this->input->post('jobs_whatsapp'),
-            'jobs_facebook' =>$this->input->post('jobs_facebook'),
-            'jobs_tw' =>$this->input->post('jobs_tw'),
-            'jobs_pinterest' =>$this->input->post('jobs_pinterest'),
-            'jobs_youtube' =>$this->input->post('jobs_youtube'),
-            'jobs_address' =>$this->input->post('jobs_address'),
-            'map_latitude' =>$this->input->post('map_latitude'),
-            'map_longitude' =>$this->input->post('map_longitude'),
-            'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
-            'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
-            'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
-            'jobs_list_service' =>$this->input->post('jobs_list_service'),
-            'jobs_service_id' =>$this->input->post('jobs_service_id'),
-            'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
-            'jobs_video' =>$this->Menu_Model->upload('jobs_video','jpg|png|mp4|wmv',51024),
-            'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-            'update_date' =>'',
-            'state_id' =>1,
-            'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
-            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
-            'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
-            'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
-            'jobs_shoar' =>$this->input->post('jobs_shoar'),
-            'price_id' =>0,
-            'expire' =>"1"
-        );
-
-
-        // $this->form_validation->set_rules('jobs_cate_id','دسته بندي','required');
-        // $this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
-        // $this->form_validation->set_rules('ostan_id','استان','required');
-        // $this->form_validation->set_rules('city_id','شهرستان','required');
-        // $this->form_validation->set_rules('jobs_map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
-       
-       
-        // if($this->form_validation->run() == FALSE){
-        //     $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
-        //     $this->session->set_flashdata('msg',$array_msg);
-        //     $this->index();  
-           
-
-        // }
-        // else{
-            $jobs = $this->Menu_Model->insert('jobs',$data);
-            
-            if($jobs) {
-                $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
-                $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/panel/Jobs');
-            }else {
-                $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
-                $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/panel/Jobs');
-
-            }
-          
-        // }
-
-
-    
-
-    }
-
-    function show() {
-        $id = $this->uri->segment(5);
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
-        $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['ostan'] = $this->MY_Model->select('ostan');
-        $output['cate'] = $this->MY_Model->select('jobs_cate');
-        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.jobs',$id);
-
-
-
-
-      
-        $output['title'] = "پنل كاربري";
-        $output['des'] = "مديريت و بررسي كاربران";
-        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Psjobs',$output);
-        
-    }
-
-    function edit() {
-        $id = $this->uri->segment(5);
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
-        $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['ostan'] = $this->MY_Model->select('ostan');
-        $output['cate'] = $this->MY_Model->select('jobs_cate');
-        $output['jobs'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','zgr_jobs.jobs',$id);
-
-
-
-
-      
-        $output['title'] = "پنل كاربري";
-        $output['des'] = "مديريت و بررسي كاربران";
-        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Pejobs',$output);
-    }
-
-    function edit_action() {
-        
-
-        $id = $this->input->post('jobs_id');
-        $data = array(
-            
-            'jobs_cate_id' =>$this->input->post('jobs_cate_id'),
-            'jobs_sub_cate_id' =>$this->input->post('jobs_sub_cate_id'),
-            'accounts_id' =>$this->input->post('accounts_id'),
-            'ostan_id' =>$this->input->post('ostan_id'),
-            'city_id' =>$this->input->post('city_id'),
-            'jobs_title' =>$this->input->post('jobs_title'),
-            'jobs_shobe' =>$this->input->post('jobs_shobe'),
-            'jobs_content' =>$this->input->post('jobs_content'),
-            'jobs_feature' =>$this->input->post('jobs_feature'),
-            'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
-            'jobs_mobile' =>$this->input->post('jobs_mobile'),
-            'jobs_tell' =>$this->input->post('jobs_tell'),
-            'jobs_fax' =>$this->input->post('jobs_fax'),
-            'jobs_email' =>$this->input->post('jobs_email'),
-            'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
-            'jobs_website' =>$this->input->post('jobs_website'),
-            'jobs_instagram' =>$this->input->post('jobs_instagram'),
-            'jobs_telegram' =>$this->input->post('jobs_telegram'),
-            'jobs_whatsapp' =>$this->input->post('jobs_whatsapp'),
-            'jobs_facebook' =>$this->input->post('jobs_facebook'),
-            'jobs_tw' =>$this->input->post('jobs_tw'),
-            'jobs_pinterest' =>$this->input->post('jobs_pinterest'),
-            'jobs_youtube' =>$this->input->post('jobs_youtube'),
-            'jobs_address' =>$this->input->post('jobs_address'),
-            'map_latitude' =>$this->input->post('map_latitude'),
-            'map_longitude' =>$this->input->post('map_longitude'),
-            'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
-            'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
-            'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
-            'jobs_list_service' =>$this->input->post('jobs_list_service'),
-            'jobs_service_id' =>$this->input->post('jobs_service_id'),
-            'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
-            'jobs_video' =>$this->Menu_Model->upload('jobs_video','jpg|png|mp4|wmv',51024),
-            'register_date' =>$this->input->post('register_date'),
-            'update_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-            'state_id' =>1,
-            'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
-            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
-            'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
-            'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
-            'jobs_shoar' =>$this->input->post('jobs_shoar'),
-            'price_id' =>0,
-            'expire' =>"1"
-        );
-
-
-
-       
-            $jobs = $this->Menu_Model->update('jobs',$id,$data);
-            print_r('img1'.$data['img1']);
-            print_r('img2'.$data['img2']);
-            print_r('img3'.$data['img3']);
-            print_r('img4'.$data['img4']);
-            exit;
-            
-            if($jobs) {
-                $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
-                $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/panel/Jobs');
-            }else {
-                $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
-                $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/panel/Jobs');
-
-            }
-    
-
-
-    
-
-    }
-
-
-    function delete() {
-        $id = $this->uri->segment(5);
-        $query = $this->MY_Model->delete('jobs',$id);
-    
-        if($query) {
-            Message_helper::message('موفقيت','ركورد مورد نظر با موفقيت حذف شد','success','site/panel/Jobs');
-        }else {
-            Message_helper::message('خطا','مشكلي در حذف ركورد بوجود آمده ','error','site/panel/Jobs');
+        $crud->where('zgr_jobs.accounts_id',$this->session->userdata('accounts_id'));
+        $crud->unset_clone();
+        $crud->unset_add();
+        if($this->session->userdata('state_id') != 2) {
+            $crud->unset_edit();
         }
-    
+        $this->load->vars(array(
+            'home_page' => FALSE
+        ));
+
+        $crud->set_relation('ostan_id','ostan','ostan_title');
+        $crud->set_relation('city_id','city','city_title');
+        $crud->set_relation('state_id','state','state_title');
+        $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
+        $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
+        $crud->set_relation('accounts_id','accounts','account_mobile');
+        $crud->set_relation('price_id','price','price_amount');
+        $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
+
         
 
-    }
+        $this->load->library('gc_dependent_select');
 
-    function get_cities() {
-        $ostan_id = $this->input->post('id',TRUE);
-        $data = $this->MY_Model->select_single_where('city','ostan',$ostan_id);
-        echo json_encode($data);
-    }
-
-    function get_cate() {
-        $jobs_cate_id = $this->input->post('id',TRUE);
-        $data = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$jobs_cate_id);
-        echo json_encode($data);
-    }
+        $crud->unset_add_fields('jobs_id');
+        $crud->unset_edit_fields('jobs_id');
  
+       
+        $crud->set_field_upload('jobs_logo','assets/uploads/img');
+        $crud->set_field_upload('jobs_video','assets/uploads/videos');
+
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
+        //$crud->field_type('username','date');
+
+
+
+        $crud->callback_before_insert(array($this,'calculate'));
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
+
+
+        
+      
+        //$crud->required_fields('username');
+
+      
+        
+        $crud->unset_texteditor(
+            'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
+            'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
+            'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
+            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
+        );
+
+       
+
+        $fields_cate = array(
+
+            // first field:
+            'jobs_cate_id' => array( // first dropdown name
+            'table_name' => 'jobs_cate', // table of country
+            'title' => 'jobs_cate_title', // country title
+            'relate' => null // the first dropdown hasn't a relation
+            ),
+            // second field
+            'jobs_sub_cate_id' => array ( // second dropdown name
+            'table_name' => 'jobs_sub_cate', // table of state
+            'title' => 'jobs_sub_cate_title', // state title
+            'id_field' => 'jobs_sub_cate_id', // table of state: primary key
+            'relate' => 'jobs_cate_id', // table of state:
+            'data-placeholder' => 'انتخاب زير گروه' //dropdown's data-placeholder:
+            )
+                );
+
+            $config_cate = array(
+                'main_table' => 'zgr_jobs',
+                'main_table_primary' => 'jobs_id',
+                "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
+                //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
+                //'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
+             );
+
+             $categories = new gc_dependent_select($crud, $fields_cate, $config_cate);
+             $js_cate = $categories->get_js();
+
+
+        $fields = array(
+
+            // first field:
+            'ostan_id' => array( // first dropdown name
+            'table_name' => 'ostan', // table of country
+            'title' => 'ostan_title', // country title
+            'relate' => null // the first dropdown hasn't a relation
+            ),
+            // second field
+            'city_id' => array ( // second dropdown name
+            'table_name' => 'city', // table of state
+            'title' => 'city_title', // state title
+            'id_field' => 'city_id', // table of state: primary key
+            'relate' => 'ostan_id', // table of state:
+            'data-placeholder' => 'انتخاب شهر' //dropdown's data-placeholder:
+            )
+                );
+
+                $config_ostan = array(
+                    'main_table' => 'zgr_jobs',
+                    'main_table_primary' => 'jobs_id',
+                    "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
+                    //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
+                    'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"
+                    );
+                    
+                    $ostan = new gc_dependent_select($crud, $fields, $config_ostan);
+                   
+                    $js_ostan = $ostan->get_js();
+                    
+                    $output = $crud->render();
+                    $output->output.= $js_ostan . $js_cate;
+        $this->out_view($output);
+    }
+
+
+    function calculate($post_array) {
+        $day =  time() + ($post_array['days'] * 86400);
+        $post_array['expire'] = $day;
+        return $post_array;
+    }   
+
+    public function _change_expire_date($value, $row)
+    {
+        if(time() > $value) {
+            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+        }else {
+            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+        }
+        
+    }
+
+    public function _change_reg_date($value, $row)
+    {
+        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+
+        
+    }
+
+
+    function out_view($output = null) {
+        $output->menu_top = $this->Menu_Model->select('menu');
+        $output->menu_middel = $this->Menu_Model->select('secend_menu');
+        $output->footer_menu = $this->Menu_Model->select('footer_menu');
+        $output->slider = $this->Menu_Model->select('slider');
+        $output->text = $this->Menu_Model->select('text');
+        $output->site = $this->MY_Model->select_single('site','1');
+        $output->title = "بانك مشاغل";
+        $output->des = "مديريت و بررسي مشاغل موجود";
+        $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
+        $this->load->view('panel/index',$output);
+
+    }
+
+
+
+    
 
 
 }

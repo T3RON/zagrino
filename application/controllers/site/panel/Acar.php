@@ -20,6 +20,8 @@ class Acar extends CI_Panel {
 
         $crud = new grocery_CRUD();
 
+
+        
         $crud->set_table('zgr_agahi_car');
         $crud->set_subject('وسايل نقليه');
 
@@ -63,6 +65,7 @@ class Acar extends CI_Panel {
         $crud->display_as('expire','تاريخ انقضا');
         $crud->display_as('days','تعداد روزهاي قابل نمايش');
    
+        $crud->where('zgr_agahi_car.accounts_id',$this->session->userdata('accounts_id'));
       
         $this->load->vars(array(
             'home_page' => FALSE
@@ -120,6 +123,7 @@ class Acar extends CI_Panel {
         //$crud->required_fields('username');
 
         $crud->unset_clone();
+        $crud->unset_add();
         
         $crud->unset_texteditor(
             'agahi_car_title','agahi_car_price','agahi_car_tell','agahi_car_year','agahi_car_karked',
@@ -149,7 +153,7 @@ class Acar extends CI_Panel {
             $config_cate = array(
                 'main_table' => 'zgr_agahi_car',
                 'main_table_primary' => 'agahi_car_id',
-                "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
+                "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
                 //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                 //'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
              );
@@ -177,9 +181,9 @@ class Acar extends CI_Panel {
                 );
 
                 $config_ostan = array(
-                    'main_table' => 'zgr_agahi',
-                    'main_table_primary' => 'agahi_id',
-                    "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
+                    'main_table' => 'zgr_agahi_car',
+                    'main_table_primary' => 'agahi_car_id',
+                    "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"
                     );
@@ -202,16 +206,16 @@ class Acar extends CI_Panel {
     public function _change_expire_date($value, $row)
     {
         if(time() > $value) {
-            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
         }else {
-            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
         }
         
     }
 
     public function _change_reg_date($value, $row)
     {
-        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
 
         
     }
@@ -225,7 +229,7 @@ class Acar extends CI_Panel {
         $output->title = "بانك نيازمندي ها";
         $output->des = "مديريت و بررسي نيازمندي موجود";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/panelindex',$output);
+        $this->load->view('panel/index',$output);
 
     }
 
