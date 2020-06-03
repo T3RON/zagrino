@@ -23,7 +23,7 @@ class Jobs extends CI_Panel {
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
 
-        $crud->columns('state_id','expire','update_date','register_date','jobs_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','jobs_title');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');

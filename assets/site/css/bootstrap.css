@@ -2319,6 +2319,7 @@ overflow: hidden !important;
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
+  
 }
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
