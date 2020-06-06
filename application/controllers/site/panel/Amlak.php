@@ -7,7 +7,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Agahi extends CI_Panel {
+class Amlak extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -18,46 +18,52 @@ class Agahi extends CI_Panel {
 
         $crud = new grocery_CRUD();
 
-        $crud->set_table('zgr_agahi');
-        $crud->set_subject('نيازمندي');
+        $crud->set_table('zgr_agahi_amlak');
+        $crud->set_subject('املاك');
 
-        $crud->columns('state_id','expire','update_date','register_date','agahi_title','accounts_id');
-        $crud->display_as('agahi_id','شناسه');
-        $crud->display_as('agahi_cate_id','گروه بندي');
-        $crud->display_as('agahi_sub_cate_id',' زير گروه بندي');
+        $crud->columns('state_id','expire','update_date','register_date','amlak_bonga_title','accounts_id');
+        $crud->display_as('agahi_amlak_id','شناسه');
+        $crud->display_as('amlak_cate_id','گروه بندي');
         $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
-        $crud->display_as('agahi_title','عنوان نيازمندي');
-        $crud->display_as('agahi_hoghoghi_or_haghighi','نوع آگهي');
-        $crud->display_as('agahi_sazeman_title','عنوان سازمان');
-        $crud->display_as('tarefe_id','تعرفه');
-        $crud->display_as('show_id','مدت نمايش');
-        $crud->display_as('state_id','وضعيت');
-        $crud->display_as('agahi_des','توضيح مختصر');
-        $crud->display_as('agahi_tell','تلفن ثابت');
-        $crud->display_as('agahi_latitude','طول جغرافيايي');
-        $crud->display_as('agahi_longitude','عرض جغرافيايي');
-        $crud->display_as('agahi_tag_conditions_id','برچسب شرايط');
-        $crud->display_as('agahi_address','آدرس');
-        $crud->display_as('agahi_tag_id','برچسب');
-        $crud->display_as('agahi_price','قيمت');
-        $crud->display_as('agahi_full_des','توضيحات كامل');
-        $crud->display_as('agahi_email','ايميل');
+        $crud->display_as('amlak_bonga_title','عنوان ملك');
+        $crud->display_as('amlak_des','توضيحات');
+        $crud->display_as('amlak_full_des','توضيحات كامل');
+        $crud->display_as('amlak_agahi_dahande','آگهي دهنده');
+        $crud->display_as('amlak_sanad_state','وضعيت سند');
+        $crud->display_as('amlak_mizan_malekiat','ميزان مالكيت');
+        $crud->display_as('amlak_metraj','متراژ');
+        $crud->display_as('amlak_ejare_price','مبلغ اجاره');
+        $crud->display_as('amlak_sanad_type','نوع سند');
+        $crud->display_as('amlak_rahn_price','رهن');
+        $crud->display_as('amlak_count_room','تعداد اتاق');
+        $crud->display_as('amlak_tabaghe','طبقه');
+        $crud->display_as('amlak_parking','پاركينگ');
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
         $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
+        $crud->display_as('amlak_emtiaz','امتيازات');
+        $crud->display_as('amlak_anbari','انباري');
+        $crud->display_as('amlak_asansor','آسانسور');
+        $crud->display_as('amlak_address','آدرس');
+        $crud->display_as('amlak_lat','طول جغرافيايي');
+        $crud->display_as('amlak_long','عرض جغرافيايي');
+        $crud->display_as('amlak_price','قيمت فروش');
+        $crud->display_as('state_id','وضعيت آگهي');
+        $crud->display_as('amlak_tag_id','برچسب');
+        $crud->display_as('amlak_cond_tag_id','برچسب شرايط');
+        $crud->display_as('state_id','وضعيت آگهي');
         $crud->display_as('price_id','هزينه اشتراك');
-        $crud->display_as('agahi_state_kala_id','وضعيت كالا');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
         $crud->display_as('expire','تاريخ انقضا');
-
-        $crud->where('zgr_agahi.accounts_id',$this->session->userdata('accounts_id'));
+      
+        $crud->where('zgr_agahi_amlak.accounts_id',$this->session->userdata('accounts_id'));
         $crud->unset_clone();
         $crud->unset_add();
         if($this->session->userdata('state_id') != 2) {
@@ -66,15 +72,15 @@ class Agahi extends CI_Panel {
         $this->load->vars(array(
             'home_page' => FALSE
         ));
-    
+     
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
-        $crud->set_relation('agahi_state_kala_id','agahi_state_kala','agahi_state_kala_title');
-        $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
-        $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
-        $crud->set_relation('price_id','price','price_amount');
+        $crud->set_relation('amlak_cate_id','amlak_cate','amlak_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
+        $crud->set_relation('amlak_cond_tag_id','amlak_cond_tag','amlak_cond_tag_title');
+        $crud->set_relation('price_id','price','price_amount');
+        $crud->set_relation('amlak_tag_id','amlak_tag','amlak_tag_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         
@@ -82,9 +88,8 @@ class Agahi extends CI_Panel {
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('agahi_id');
-        $crud->unset_edit_fields('agahi_id');
-     
+        $crud->unset_add_fields('agahi_amlak_id');
+        $crud->unset_edit_fields('agahi_amlak_id');
 
 
         $crud->set_field_upload('img1','assets/uploads/img');
@@ -98,8 +103,6 @@ class Agahi extends CI_Panel {
         //$crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
 
-        
-
         $crud->callback_before_insert(array($this,'calculate'));
         $crud->callback_column('expire',array($this,'_change_expire_date'));
         $crud->callback_column('register_date',array($this,'_change_reg_date'));
@@ -109,41 +112,33 @@ class Agahi extends CI_Panel {
         $crud->field_type('register_date', 'hidden', time());
         $crud->field_type('update_date', 'hidden', time());
         $crud->field_type('expire', 'hidden');
-
       
         //$crud->required_fields('username');
 
         $crud->unset_clone();
         
         $crud->unset_texteditor(
-            'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
-            'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
-            'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
+            'amlak_bonga_title','amlak_des','amlak_agahi_dahande','amlak_sanad_state','amlak_mizan_malekiat','amlak_metraj','amlak_rahn_price',
+            'amlak_count_room','amlak_tabaghe','amlak_parking','amlak_emtiaz','amlak_anbari','amlak_asansor','amlak_price',
+            'amlak_ejare_price','amlak_sanad_type','amlak_lat','amlak_long',
             'jobs_update_date','jobs_shoar','jobs_price'
         );
 
+  
 
         $fields_cate = array(
 
             // first field:
-            'agahi_cate_id' => array( // first dropdown name
-            'table_name' => 'agahi_cate', // table of country
-            'title' => 'agahi_cate_title', // country title
+            'amlak_cate_id' => array( // first dropdown name
+            'table_name' => 'amlak_cate', // table of country
+            'title' => 'amlak_cate_title', // country title
             'relate' => null // the first dropdown hasn't a relation
-            ),
-            // second field
-            'agahi_sub_cate_id' => array ( // second dropdown name
-            'table_name' => 'agahi_sub_cate', // table of state
-            'title' => 'agahi_sub_cate_title', // state title
-            'id_field' => 'agahi_sub_cate_id', // table of state: primary key
-            'relate' => 'agahi_cate_id', // table of state:
-            'data-placeholder' => 'انتخاب زير گروه' //dropdown's data-placeholder:
             )
                 );
 
             $config_cate = array(
-                'main_table' => 'zgr_agahi',
-                'main_table_primary' => 'agahi_id',
+                'main_table' => 'zgr_agahi_amlak',
+                'main_table_primary' => 'agahi_amlak_id',
                 "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
                 //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                 //'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
@@ -172,8 +167,8 @@ class Agahi extends CI_Panel {
                 );
 
                 $config_ostan = array(
-                    'main_table' => 'zgr_agahi',
-                    'main_table_primary' => 'agahi_id',
+                    'main_table' => 'zgr_agahi_amlak',
+                    'main_table_primary' => 'agahi_amlak_id',
                     "url" => base_url().'site/panel/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"
@@ -188,6 +183,7 @@ class Agahi extends CI_Panel {
         $this->out_view($output);
     }
 
+    
     function calculate($post_array) {
         $day =  time() + ($post_array['days'] * 86400);
         $post_array['expire'] = $day;

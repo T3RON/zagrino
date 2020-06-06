@@ -25,19 +25,12 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <?php if((int)$agahi != "0" ) { ?>
-                            <a href="#">
-                                <span style="background:red;float:left;"
-                                    class="badge badge-primary badge-pill"><?= $agahi; ?></span>
+                            <a href="<?= base_url('site/Panel/Choose_Agahi'); ?>">
+                        
                                 <span style="margin-left:10px;background:#237790;float:left;"
-                                    class="badge badge-pill badge-primary">مشاهده</span>
+                                    class="badge badge-pill badge-primary">مشاهده بخش هاي آگهي</span>
                             </a>
-                            <?php }else { ?>
-                            <span style="background:gray;float:left;"
-                                class="badge badge-primary badge-pill"><?= $agahi; ?></span>
-                            <span style="margin-left:10px;background:gray;float:left;"
-                                class="badge badge-pill badge-primary">شما آگهي نداريد</span>
-                            <?php } ?>
+                    
                             پنل آگهي
                         </li>
 
@@ -103,9 +96,9 @@
                             <span style="background:gray;float:left;"
                                 class="badge badge-primary badge-pill"><?= $shop; ?></span>
                             <span style="margin-left:10px;background:gray;float:left;"
-                                class="badge badge-pill badge-primary">شما بازارچه نداريد</span>
+                                class="badge badge-pill badge-primary">شما فروشگاه نداريد</span>
                             <?php } ?>
-                            بازارچه
+                            فروشگاه
                         </li>
 
 

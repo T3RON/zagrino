@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: May 31, 2020 at 11:45 AM
+-- Generation Time: Jun 06, 2020 at 12:19 PM
 -- Server version: 5.7.26
 -- PHP Version: 7.2.18
 
@@ -1438,6 +1438,28 @@ CREATE TABLE IF NOT EXISTS `zgr_newspaper` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_offers`
+--
+
+DROP TABLE IF EXISTS `zgr_offers`;
+CREATE TABLE IF NOT EXISTS `zgr_offers` (
+  `offers_id` int(11) NOT NULL AUTO_INCREMENT,
+  `accounts_id` int(11) NOT NULL,
+  `shop_id` int(11) NOT NULL,
+  `kala_id` int(11) NOT NULL,
+  `offers_type` int(11) NOT NULL,
+  `offers_percent` int(11) NOT NULL,
+  `register_date` text NOT NULL,
+  `update_date` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `expire` text NOT NULL,
+  `days` int(11) NOT NULL,
+  PRIMARY KEY (`offers_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_ostan`
 --
 
@@ -1907,7 +1929,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1590212270, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1591179783, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 

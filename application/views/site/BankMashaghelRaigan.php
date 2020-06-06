@@ -5,7 +5,7 @@
     <!-- column-right -->
 
 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0" style="direction: rtl;">
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_head p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 job_title t_align p0">بانک مشاغل</div>
