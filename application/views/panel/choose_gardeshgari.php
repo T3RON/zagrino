@@ -27,7 +27,7 @@
                             <div style="text-align:center;" class="panel-heading">گردشگري</div>
                             <div class="panel-body">
                                 <div class="col-xs-12 col-md-12">
-                                    <a href="#" class="thumbnail">
+                                    <a href="<?= base_url('site/panel/Gardeshgary'); ?>" class="thumbnail">
                                         <img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png" alt="...">
                                     </a>
                                 </div>
@@ -40,7 +40,7 @@
                             <div style="text-align:center;" class="panel-heading">تور هاي تفريحي</div>
                             <div class="panel-body">
                                 <div class="col-xs-12 col-md-12">
-                                    <a href="#" class="thumbnail">
+                                    <a href="<?= base_url('site/panel/Tour'); ?>" class="thumbnail">
                                         <img src="<?= base_url(''); ?>/assets/uploads/img/tour.png" alt="...">
                                     </a>
                                 </div>

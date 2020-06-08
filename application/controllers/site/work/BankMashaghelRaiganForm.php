@@ -1,4 +1,5 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,18 +7,11 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaiganForm extends Ci_Controller {
+class BankMashaghelRaiganForm extends CI_Panel {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
-        $this->load->model('MY_Model');
-        $this->load->library('Jdf');
-        $this->load->library('user_agent');
-        $this->load->library('session');
-        $this->load->library('form_validation'); 
-        $this->load->helper('url');
-        $this->load->helper('form');
+
     }
 
     function index()
@@ -29,7 +23,9 @@ class BankMashaghelRaiganForm extends Ci_Controller {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
+        $output['jobs_cate'] = $this->MY_Model->select('jobs_cate');
+        $output['ostan'] = $this->MY_Model->select('ostan');
+
 
         $this->load->vars(array(
             'home_page' => TRUE
@@ -128,6 +124,18 @@ class BankMashaghelRaiganForm extends Ci_Controller {
 
     }
 
+
+    function get_sub_cate() {
+        $jobs_cate_id = $this->input->post('id',TRUE);
+        $data = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$jobs_cate_id);
+        echo json_encode($data);
+    }
+
+    function get_city() {
+        $ostan_id = $this->input->post('id',TRUE);
+        $data = $this->MY_Model->select_single_where('city','ostan',$ostan_id);
+        echo json_encode($data);
+    }
     
 
 

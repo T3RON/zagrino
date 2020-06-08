@@ -1,4 +1,5 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,7 +7,7 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaiganForm extends MY_Controller {
+class BankMashaghelVizheForm extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -30,7 +31,7 @@ class BankMashaghelRaiganForm extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/BankMashaghelRaiganForm', $output);
+        $this->load->view('site/BankMashaghelVizheForm', $output);
     }
 
 
