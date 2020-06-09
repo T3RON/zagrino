@@ -83,7 +83,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                        <select id="jobs_cate_id" name="jobs_cate_id" class="form-control custom-select">
+                        <select id="jobs_cate_id" name="jobs_cate_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <?php foreach($jobs_cate as $jobs_cate_value) { ?>
                             <option value="<?= $jobs_cate_value->jobs_cate_id; ?>"><?= $jobs_cate_value->jobs_cate_title; ?></option>
                             <?php } ?>
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 
-                        <select id="ostan_id" name="ostan_id" class="form-control custom-select">
+                        <select id="ostan_id" name="ostan_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <?php foreach($ostan as $ostan_value) { ?>
                             <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?></option>
                             <?php } ?>
@@ -498,8 +498,8 @@
                 </div>
 
 
-                <input name="jobs_map_latitude" id="latitude" type="hidden">
-                <input name="jobs_map_longitude" id="longitude" type="hidden">
+                <input name="map_latitude" id="latitude" type="hidden">
+                <input name="map_longitude" id="longitude" type="hidden">
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
