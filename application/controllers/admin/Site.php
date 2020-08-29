@@ -33,6 +33,8 @@ class Site extends MY_Controller {
         $crud->display_as('site_btn_two_link','لينك دكمه دوم');
         $crud->display_as('site_btn_two_ico','آيكون دكمه دوم');
         $crud->display_as('site_ads_text','متن تبليغاتي');
+        $crud->display_as('API_KEY_ZARINPAL','كد api زرين پال');
+        $crud->display_as('API_KEY_KAVENEGAR','كد api كاوه نگار');
         
         $crud->set_field_upload('site_logo','assets/uploads/img');
         $crud->set_field_upload('site_icon','assets/uploads/img');
@@ -44,7 +46,7 @@ class Site extends MY_Controller {
         $crud->unset_delete();
         
 
-        $crud->unset_texteditor('site_ads_text','site_btn_one_title','site_btn_one_link','site_btn_two_title','site_btn_two_link','site_title','site_des','site_keywords');
+        $crud->unset_texteditor('API_KEY_ZARINPAL','API_KEY_KAVENEGAR','site_ads_text','site_btn_one_title','site_btn_one_link','site_btn_two_title','site_btn_two_link','site_title','site_des','site_keywords');
       
         $output = $crud->render();
         $this->out_view($output);

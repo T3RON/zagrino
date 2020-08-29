@@ -74,86 +74,86 @@ $lang['create_user_validation_password_label']         = 'گذرواژه';
 $lang['create_user_validation_password_confirm_label'] = 'تایید گذرواژه';
 
 // Edit User
-$lang['edit_user_heading']                           = 'Edit User';
-$lang['edit_user_subheading']                        = 'Please enter the users information below.';
-$lang['edit_user_fname_label']                       = 'First Name:';
-$lang['edit_user_lname_label']                       = 'Last Name:';
-$lang['edit_user_company_label']                     = 'Company Name:';
-$lang['edit_user_email_label']                       = 'Email:';
-$lang['edit_user_phone_label']                       = 'Phone:';
-$lang['edit_user_password_label']                    = 'Password: (if changing password)';
-$lang['edit_user_password_confirm_label']            = 'Confirm Password: (if changing password)';
-$lang['edit_user_groups_heading']                    = 'Member of groups';
-$lang['edit_user_submit_btn']                        = 'Save User';
-$lang['edit_user_validation_fname_label']            = 'First Name';
-$lang['edit_user_validation_lname_label']            = 'Last Name';
-$lang['edit_user_validation_email_label']            = 'Email Address';
-$lang['edit_user_validation_phone_label']            = 'Phone';
-$lang['edit_user_validation_company_label']          = 'Company Name';
-$lang['edit_user_validation_groups_label']           = 'Groups';
-$lang['edit_user_validation_password_label']         = 'Password';
-$lang['edit_user_validation_password_confirm_label'] = 'Password Confirmation';
+$lang['edit_user_heading']                           = 'ساخت کاربر';
+$lang['edit_user_subheading']                        = 'لطفا اطلاعات کاربران را در زیر وارد کنید';
+$lang['edit_user_fname_label']                       = 'نام:';
+$lang['edit_user_lname_label']                       = 'نام خانوادگی:';
+$lang['edit_user_company_label']                     = 'هویت:';
+$lang['edit_user_email_label']                       = 'کمپانی:';
+$lang['edit_user_phone_label']                       = 'ایمیل:';
+$lang['edit_user_password_label']                    = 'موبایل:';
+$lang['edit_user_password_confirm_label']            = 'گذرواژه:';
+$lang['edit_user_groups_heading']                    = 'تایید گذرواژه:';
+$lang['edit_user_submit_btn']                        = 'افزودن کاربر';
+$lang['edit_user_validation_fname_label']            = 'نام';
+$lang['edit_user_validation_lname_label']            = 'نام خانوادگی:';
+$lang['edit_user_validation_email_label']            = 'هویت';
+$lang['edit_user_validation_phone_label']            = 'ایمیل';
+$lang['edit_user_validation_company_label']          = 'موبایل';
+$lang['edit_user_validation_groups_label']           = 'کمپانی';
+$lang['edit_user_validation_password_label']         = 'گذرواژه';
+$lang['edit_user_validation_password_confirm_label'] = 'تایید گذرواژه';
 
 // Create Group
-$lang['create_group_title']                  = 'Create Group';
-$lang['create_group_heading']                = 'Create Group';
-$lang['create_group_subheading']             = 'Please enter the group information below.';
-$lang['create_group_name_label']             = 'Group Name:';
-$lang['create_group_desc_label']             = 'Description:';
-$lang['create_group_submit_btn']             = 'Create Group';
-$lang['create_group_validation_name_label']  = 'Group Name';
-$lang['create_group_validation_desc_label']  = 'Description';
+$lang['create_group_title']                  = 'ساخت گروه';
+$lang['create_group_heading']                = 'ساخت گروه';
+$lang['create_group_subheading']             = 'لطفا اطلاعات گروه را در زير وارد نماييد';
+$lang['create_group_name_label']             = 'عنوان گروه:';
+$lang['create_group_desc_label']             = 'توضيحات:';
+$lang['create_group_submit_btn']             = 'ساخت گروه';
+$lang['create_group_validation_name_label']  = 'عنوان گروه';
+$lang['create_group_validation_desc_label']  = 'توضيحات';
 
 // Edit Group
-$lang['edit_group_title']                  = 'Edit Group';
-$lang['edit_group_saved']                  = 'Group Saved';
-$lang['edit_group_heading']                = 'Edit Group';
-$lang['edit_group_subheading']             = 'Please enter the group information below.';
-$lang['edit_group_name_label']             = 'Group Name:';
-$lang['edit_group_desc_label']             = 'Description:';
-$lang['edit_group_submit_btn']             = 'Save Group';
-$lang['edit_group_validation_name_label']  = 'Group Name';
-$lang['edit_group_validation_desc_label']  = 'Description';
+$lang['edit_group_title']                  = 'ويرايش گروه';
+$lang['edit_group_saved']                  = 'گروه ذخيره شد';
+$lang['edit_group_heading']                = 'ويرايش گروه';
+$lang['edit_group_subheading']             = 'لطفا اطلاعات گروه را در زير وارد نماييد';
+$lang['edit_group_name_label']             = 'عنوان گروه:';
+$lang['edit_group_desc_label']             = 'توضيحات:';
+$lang['edit_group_submit_btn']             = 'ذخيره گروه';
+$lang['edit_group_validation_name_label']  = 'عنوان گروه';
+$lang['edit_group_validation_desc_label']  = 'توضيحات';
 
 // Change Password
-$lang['change_password_heading']                               = 'Change Password';
-$lang['change_password_old_password_label']                    = 'Old Password:';
-$lang['change_password_new_password_label']                    = 'New Password (at least %s characters long):';
-$lang['change_password_new_password_confirm_label']            = 'Confirm New Password:';
-$lang['change_password_submit_btn']                            = 'Change';
-$lang['change_password_validation_old_password_label']         = 'Old Password';
-$lang['change_password_validation_new_password_label']         = 'New Password';
-$lang['change_password_validation_new_password_confirm_label'] = 'Confirm New Password';
+$lang['change_password_heading']                               = 'تغيير گذرواژه';
+$lang['change_password_old_password_label']                    = 'گذرواژه قديمي:';
+$lang['change_password_new_password_label']                    = 'گذرواژه جديد (at least %s characters long):';
+$lang['change_password_new_password_confirm_label']            = 'تاييد گذرواژه جديد:';
+$lang['change_password_submit_btn']                            = 'تغيير';
+$lang['change_password_validation_old_password_label']         = 'گذرواژه قديمي';
+$lang['change_password_validation_new_password_label']         = 'گذرواژه جديد';
+$lang['change_password_validation_new_password_confirm_label'] = 'تاييد گذرواژه جديد';
 
 // Forgot Password
-$lang['forgot_password_heading']                 = 'Forgot Password';
-$lang['forgot_password_subheading']              = 'Please enter your %s so we can send you an email to reset your password.';
+$lang['forgot_password_heading']                 = 'فراموشي گذرواژه';
+$lang['forgot_password_subheading']              = 'لطفا٪ s خود را وارد کنید تا ما بتوانیم برای تنظیم مجدد رمز خود یک ایمیل برای شما ارسال کنیم.';
 $lang['forgot_password_email_label']             = '%s:';
-$lang['forgot_password_submit_btn']              = 'Submit';
-$lang['forgot_password_validation_email_label']  = 'Email Address';
-$lang['forgot_password_username_identity_label'] = 'Username';
-$lang['forgot_password_email_identity_label']    = 'Email';
-$lang['forgot_password_email_not_found']         = 'No record of that email address.';
+$lang['forgot_password_submit_btn']              = 'تاييد';
+$lang['forgot_password_validation_email_label']  = 'ايميل آدرس';
+$lang['forgot_password_username_identity_label'] = 'نام كاربري';
+$lang['forgot_password_email_identity_label']    = 'ايميل';
+$lang['forgot_password_email_not_found']         = 'هیچ سابقه ای از آن آدرس ایمیل موجود نیست';
 
 // Reset Password
-$lang['reset_password_heading']                               = 'Change Password';
-$lang['reset_password_new_password_label']                    = 'New Password (at least %s characters long):';
-$lang['reset_password_new_password_confirm_label']            = 'Confirm New Password:';
-$lang['reset_password_submit_btn']                            = 'Change';
-$lang['reset_password_validation_new_password_label']         = 'New Password';
-$lang['reset_password_validation_new_password_confirm_label'] = 'Confirm New Password';
+$lang['reset_password_heading']                               = 'تغيير گذرواژه';
+$lang['reset_password_new_password_label']                    = 'گذرواژه جدید (حداقل٪ s نویسه طولانی):';
+$lang['reset_password_new_password_confirm_label']            = 'تاييد گذرواژه جديد:';
+$lang['reset_password_submit_btn']                            = 'تغيير';
+$lang['reset_password_validation_new_password_label']         = 'گذرواژه جديد';
+$lang['reset_password_validation_new_password_confirm_label'] = 'تاييد گذرواژه جديد';
 
 // Activation Email
-$lang['email_activate_heading']    = 'Activate account for %s';
-$lang['email_activate_subheading'] = 'Please click this link to %s.';
-$lang['email_activate_link']       = 'Activate Your Account';
+$lang['email_activate_heading']    = 'حساب٪ s را فعال کنید';
+$lang['email_activate_subheading'] = 'لطفا جهت فعال سازي به ايميل %s خود مراجعه نماييد';
+$lang['email_activate_link']       = 'اكانت شما فعال شد';
 
 // Forgot Password Email
-$lang['email_forgot_password_heading']    = 'Reset Password for %s';
-$lang['email_forgot_password_subheading'] = 'Please click this link to %s.';
-$lang['email_forgot_password_link']       = 'Reset Your Password';
+$lang['email_forgot_password_heading']    = 'بازيابي گذرواژه براي %s';
+$lang['email_forgot_password_subheading'] = 'لطفا جهت فعال سازي به ايميل %s خود مراجعه نماييد';
+$lang['email_forgot_password_link']       = 'گذرواژه شما بازيابي شد';
 
 // New Password Email
-$lang['email_new_password_heading']    = 'New Password for %s';
-$lang['email_new_password_subheading'] = 'Your password has been reset to: %s';
+$lang['email_new_password_heading']    = 'گذرواژه جديد براي %s';
+$lang['email_new_password_subheading'] = 'گذرواژه شما دوباره تنظیم شده است:٪ s';
 

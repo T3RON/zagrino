@@ -12,7 +12,20 @@ License: GNU General Public License v2 or later
 @import url("global.css");
 
 /* -- header --*/
-
+thead.tbl-style tr th {
+text-align: center !important;
+}
+.span_show {
+    color:blue;
+}
+.err {
+    color: red;
+    font-weight: bold;
+}
+.succ {
+    color: green;
+    font-weight: bold;
+}
 .top_header {
     padding: 5px 0 !important;
     font-size: 12px!important;
@@ -601,10 +614,10 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .under button {
-    border: 1px solid #c2cadb;
+    border: 1px solid #848484;
     text-align: center;
     font-size: 14px;
-    color: #939aa4;
+    color: #505152;
     background: transparent;
     border-radius: 15px;
     margin: 2px 0;
@@ -622,8 +635,8 @@ License: GNU General Public License v2 or later
 .Agahiha_Niazmandiha .left_side ul li .left i {
     float: right;
     padding: 0 4px;
-    margin: 2px 0;
-    font-size: 15px;
+    margin: 5px 0;
+    font-size: 17px;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text {
@@ -674,17 +687,18 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .Location span {
-    background: #fff;
+    background: #575858;
     margin: 4px 0;
     padding: 0 10px!important;
     font-size: 14px;
     border-radius: 10px;
+    color: #fff;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .left .c_validate,
 .c_observe,
 .c_code {
-    color: #939aa4;
+    color: #222325;
     font-size: 14px;
 }
 
@@ -697,8 +711,8 @@ License: GNU General Public License v2 or later
 }
 
 .Agahiha_Niazmandiha .left_side ul li .information button {
-    background: #fff;
-    color: #464646!important;
+    background: #c31d5b;
+    color: #ffffff!important;
     border-radius: 10px;
     font-size: 14px;
     border: none;
@@ -2075,6 +2089,7 @@ a {
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map {
     margin-top: 10px !important;
+    height: 300px;
 }
 
 .b_m_v .border_box .tabs .t_t_addres_map .box .fild_map img {
@@ -3029,10 +3044,11 @@ form .fild select {
 }
 
 .niazmandi_ghavanin .all {
-    margin: 40px 0;
+    margin: 5px 0;
     border: 2px dotted #dcdcdc;
-    border-radius: 20px;
+    border-radius: 8px;
     padding: 20px 20px!important;
+    direction: rtl;
 }
 
 .niazmandi_ghavanin .head_title {
@@ -4439,7 +4455,7 @@ ul.v-slides {
 
 .takhfif_btns {
     box-shadow: #0000ff6b 1px 0 10px 0px;
-    padding: 10px 15px!important;
+    padding: 10px 65px!important;
     background: #fff;
     color: #000!important;
     font-size: 14px;
@@ -4614,22 +4630,21 @@ ul.v-slides {
     height: 130px;
     margin: 0 auto!important;
     display: block;
-    border-radius: 15px;
 }
 
 .img_panel_input_2 {
-    background: #ff0000;
+    background: #298013;
     width: 35px;
     height: 35px;
-    margin: -36px 2px;
-    border-radius: 15px;
+    margin: -25px 71px;
+    border-radius: 36px;
     position: absolute;
 }
 
 .img_panel_input_2 img {
-    width: 25px;
-    height: 25px;
-    margin: 5px!important;
+    width: 20px;
+    height: 20px;
+    margin: 8px!important;
 }
 
 .img_panel_input_2 input {

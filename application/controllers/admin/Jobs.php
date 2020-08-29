@@ -20,7 +20,7 @@ class Jobs extends MY_Controller {
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
 
-        $crud->columns('jobs_register_date','jobs_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','jobs_title','accounts_id');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');
@@ -56,15 +56,24 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
         $crud->display_as('jobs_mojavez','مجوز ها');
         $crud->display_as('jobs_video','ويدئو');
-        $crud->display_as('jobs_register_date','تاريخ ثبت شغل');
-        $crud->display_as('jobs_update_date','تاريخ آپديت');
+        $crud->display_as('register_date','تاريخ ثبت شغل');
+        $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('jobs_logo','لوگو');
+<<<<<<< HEAD
         $crud->display_as('jobs_img','تصویر شاخص');
+=======
+        $crud->display_as('img1','تصوير شماره 1');
+        $crud->display_as('img2','تصوير شماره 2');
+        $crud->display_as('img3','تصوير شماره 3');
+        $crud->display_as('img4','تصوير شماره 4');
+>>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
-        $crud->display_as('jobs_price','قيمت');
+        $crud->display_as('price_id','قيمت');
         $crud->display_as('jobs_service_id','سرويس ها');
+        $crud->display_as('days','تعداد روزهاي نمايش');
+        $crud->display_as('expire','تاريخ انقضا');
 
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
@@ -72,6 +81,7 @@ class Jobs extends MY_Controller {
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
+        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         
@@ -81,15 +91,31 @@ class Jobs extends MY_Controller {
 
         $crud->unset_add_fields('jobs_id');
         $crud->unset_edit_fields('jobs_id');
-        $crud->field_type('jobs_register_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('jobs_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-
+ 
+       
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
         $crud->set_field_upload('jobs_img','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
         //$crud->field_type('username','date');
 
 
+
+        $crud->callback_before_insert(array($this,'calculate'));
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
+
+
+        
       
         //$crud->required_fields('username');
 
@@ -99,9 +125,14 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
+<<<<<<< HEAD
             'jobs_update_date','jobs_shoar','jobs_price','jobs_gharardad','jobs_lohe_taghdir'
+=======
+            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
+>>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
         );
 
+       
 
         $fields_cate = array(
 
@@ -167,6 +198,32 @@ class Jobs extends MY_Controller {
                     $output->output.= $js_ostan . $js_cate;
         $this->out_view($output);
     }
+
+
+    function calculate($post_array) {
+        $day =  time() + ($post_array['days'] * 86400);
+        $post_array['expire'] = $day;
+        return $post_array;
+    }   
+
+    public function _change_expire_date($value, $row)
+    {
+        if(time() > $value) {
+            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+        }else {
+            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+        }
+        
+    }
+
+    public function _change_reg_date($value, $row)
+    {
+        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
+
+        
+    }
+
+
     function out_view($output = null) {
         
         $output->title = "بانك مشاغل";

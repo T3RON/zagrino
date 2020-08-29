@@ -20,10 +20,9 @@ class Amlak extends MY_Controller {
         $crud->set_table('zgr_agahi_amlak');
         $crud->set_subject('املاك');
 
-        $crud->columns('state_id','amlak_date_register','amlak_bonga_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','amlak_bonga_title','accounts_id');
         $crud->display_as('agahi_amlak_id','شناسه');
         $crud->display_as('amlak_cate_id','گروه بندي');
-        $crud->display_as('amlak_sub_cate_id',' زير گروه بندي');
         $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
@@ -40,6 +39,12 @@ class Amlak extends MY_Controller {
         $crud->display_as('amlak_count_room','تعداد اتاق');
         $crud->display_as('amlak_tabaghe','طبقه');
         $crud->display_as('amlak_parking','پاركينگ');
+        $crud->display_as('img1','تصوير شماره 1');
+        $crud->display_as('img2','تصوير شماره 2');
+        $crud->display_as('img3','تصوير شماره 3');
+        $crud->display_as('img4','تصوير شماره 4');
+        $crud->display_as('img5','تصوير شماره 5');
+        $crud->display_as('img6','تصوير شماره 6');
         $crud->display_as('amlak_emtiaz','امتيازات');
         $crud->display_as('amlak_anbari','انباري');
         $crud->display_as('amlak_asansor','آسانسور');
@@ -51,16 +56,20 @@ class Amlak extends MY_Controller {
         $crud->display_as('amlak_tag_id','برچسب');
         $crud->display_as('amlak_cond_tag_id','برچسب شرايط');
         $crud->display_as('state_id','وضعيت آگهي');
-        $crud->display_as('amlak_date_register','تاريخ ثبت');
+        $crud->display_as('price_id','هزينه اشتراك');
+        $crud->display_as('register_date','تاريخ ثبت');
+        $crud->display_as('update_date','تاريخ آپديت');
+        $crud->display_as('days','تعداد روزهاي نمايش');
+        $crud->display_as('expire','تاريخ انقضا');
       
      
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('amlak_cate_id','amlak_cate','amlak_cate_title');
-        $crud->set_relation('amlak_sub_cate_id','amlak_sub_cate','amlak_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation('amlak_cond_tag_id','amlak_cond_tag','amlak_cond_tag_title');
+        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('amlak_tag_id','amlak_tag','amlak_tag_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
@@ -69,16 +78,30 @@ class Amlak extends MY_Controller {
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('agahi_id');
-        $crud->unset_edit_fields('agahi_id');
-        $crud->field_type('amlak_date_register', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('amlak_date_update', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
+        $crud->unset_add_fields('agahi_amlak_id');
+        $crud->unset_edit_fields('agahi_amlak_id');
+
+
+        $crud->set_field_upload('img1','assets/uploads/img');
+        $crud->set_field_upload('img2','assets/uploads/img');
+        $crud->set_field_upload('img3','assets/uploads/img');
+        $crud->set_field_upload('img4','assets/uploads/img');
+        $crud->set_field_upload('img5','assets/uploads/img');
+        $crud->set_field_upload('img6','assets/uploads/img');
 
         //$crud->set_field_upload('jobs_logo','assets/uploads/img');
         //$crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
 
-
+        $crud->callback_before_insert(array($this,'calculate'));
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
       
         //$crud->required_fields('username');
 
@@ -100,14 +123,6 @@ class Amlak extends MY_Controller {
             'table_name' => 'amlak_cate', // table of country
             'title' => 'amlak_cate_title', // country title
             'relate' => null // the first dropdown hasn't a relation
-            ),
-            // second field
-            'amlak_sub_cate_id' => array ( // second dropdown name
-            'table_name' => 'amlak_sub_cate', // table of state
-            'title' => 'amlak_sub_cate_title', // state title
-            'id_field' => 'amlak_sub_cate_id', // table of state: primary key
-            'relate' => 'amlak_cate_id', // table of state:
-            'data-placeholder' => 'انتخاب زير گروه' //dropdown's data-placeholder:
             )
                 );
 
@@ -142,8 +157,8 @@ class Amlak extends MY_Controller {
                 );
 
                 $config_ostan = array(
-                    'main_table' => 'zgr_agahi',
-                    'main_table_primary' => 'agahi_id',
+                    'main_table' => 'zgr_agahi_amlak',
+                    'main_table_primary' => 'agahi_amlak_id',
                     "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/',
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     'segment_name' =>'get_cts' // It's an optional parameter. by default "get_items"
@@ -156,6 +171,30 @@ class Amlak extends MY_Controller {
                     $output = $crud->render();
                     $output->output.= $js_ostan . $js_cate;
         $this->out_view($output);
+    }
+
+    
+    function calculate($post_array) {
+        $day =  time() + ($post_array['days'] * 86400);
+        $post_array['expire'] = $day;
+        return $post_array;
+    }   
+
+    public function _change_expire_date($value, $row)
+    {
+        if(time() > $value) {
+            return '<span style="color:red;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+        }else {
+            return '<span style="color:green;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+        }
+        
+    }
+
+    public function _change_reg_date($value, $row)
+    {
+        return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',$value,'','GMT').'<span>'; 
+
+        
     }
     function out_view($output = null) {
         

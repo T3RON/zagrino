@@ -2312,7 +2312,10 @@ th {
 .table-bordered > tbody > tr > td,
 .table-bordered > tfoot > tr > td {
   border: 1px solid #ddd;
+
+  
 }
+
 .table-bordered > thead > tr > th,
 .table-bordered > thead > tr > td {
   border-bottom-width: 2px;
@@ -5026,7 +5029,7 @@ a.thumbnail.active {
 }
 .alert {
   padding: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   border: 1px solid transparent;
   border-radius: 4px;
 }

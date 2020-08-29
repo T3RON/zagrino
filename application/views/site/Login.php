@@ -17,7 +17,7 @@
 
     <!-- column-right -->
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 " style="direction: rtl;">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_2d3561 p0">
         ورود
@@ -37,7 +37,7 @@
            </div>
            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  m_15 f_l">
                
-           <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+           <form action="<?=base_url('site/Login/login')?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -47,7 +47,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="mobile" id="mobile" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
@@ -59,7 +59,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="password" type="password" id="pass" class="active-resultcol-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
@@ -70,7 +70,7 @@
                                 <li class="col-lg-5 col-md-6 col-sm-12 col-xs-12 p0">
                                     <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
                                         <span>نمایش رمز عبور </span>
-                                        <input type="checkbox" name="">
+                                        <input class="show-pass" id="change_char" onclick="change_char();" type="checkbox" name="">
                                         <span class="checkmark"></span>
                                     </label>
                                 </li>
@@ -85,11 +85,9 @@
                         </div>
                 </div>
                     <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 contact_lite clear  c_border m_5_2 f_r p0">
-                            <a href="">
-                                <div class="color takhfif_btns clr_3e4eee p0">
-                                    ورود
-                                </div>
-                            </a>
+                        
+                            <button type="submit" class="color takhfif_btns clr_3e4eee p0">ورود</button>
+
                         </div>
 
                         <div style="text-align: end;" class="col-lg-7 col-md-7 col-sm-7 col-xs-12 contact_lite m_15  c_border  f_r p0">
@@ -141,7 +139,28 @@
 
 <!--    Script For This Page     -->
       
+<script type="text/javascript">
 
+$(".show-pass").change(function (e) {
+    e.preventDefault();
+    var type = $("#pass").attr('type');
+    switch (type) {
+        case 'password':
+        {
+            $("#pass").attr('type', 'text');
+            return;
+        }
+        case 'text':
+        {
+            $("#pass").attr('type', 'password');
+            return;
+        }
+    }
+});
+
+
+
+</script>
     
 
     

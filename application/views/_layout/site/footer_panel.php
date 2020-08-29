@@ -49,15 +49,56 @@
     </div>
 </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="<?=base_url('')?>assets/site/js/bootstrap.min.js"></script>
-<script src="<?=base_url('')?>assets/site/js/toggler.js"></script>
-<script src="<?=base_url('')?>assets/site/js/toggle.js"></script>
-<script src="<?=base_url('')?>assets/site/js/jquery.min.js"></script>
-<script type="text/javascript" src="<?=base_url('')?>assets/site/js/swiper.min.js"></script>
-<script src="<?=base_url('')?>assets/site/js/pushbar.js"></script>
-<script src="<?=base_url('')?>assets/site/js/upload-image.js"></script>
-    
+<script src="<?= base_url('') ?>dist/js/persian-date.js"></script>
+<script src="<?= base_url('') ?>dist/js/persian-datepicker.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<!-- <script src="<?=base_url('')?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<!-- DataTables -->
+<script src="<?=base_url('')?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
+<script src="<?=base_url('')?>bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="<?=base_url('')?>bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="<?=base_url('')?>bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="<?= base_url('') ?>dist/js/adminlte.min.js"></script>
+<script src="<?= base_url('') ?>assets/js/raphael-min.js"></script>
+
+<!-- Select2 -->
+<script src="<?= base_url('') ?>bower_components/select2/dist/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.js"></script>
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
+<script src="<?= base_url('') ?>plugins/input-mask/jquery.inputmask.extensions.js"></script>
+<!-- date-range-picker -->
+<script src="<?= base_url('') ?>bower_components/moment/min/moment.min.js"></script>
+<script src="<?= base_url('') ?>bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- bootstrap color picker -->
+<script src="<?= base_url('') ?>bower_components/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
+<!-- bootstrap time picker -->
+<!-- iCheck 1.0.1 -->
+<script src="<?= base_url('') ?>plugins/iCheck/icheck.min.js"></script>
+<script src="<?= base_url('') ?>bower_components/Chart.js/Chart.js"></script>
+<script src="<?= base_url('') ?>dist/js/adminlte.min.js"></script>
+<!-- jvectormap  -->
+<script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- babakhani datepicker -->
+
+<script src="<?=base_url('')?>dist/js/persianDatepicker.min.js"></script>
+
+
+
+
+<script src="<?=base_url('')?>assets/plugins/dropify/dist/js/dropify.js"></script>
+
+    <!-- Sweet-Alert  -->
+<script src="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.min.js"></script>
+<script src="<?=base_url('')?>assets/plugins/sweetalert/jquery.sweet-alert.custom.js"></script>
+
+
+
+
     
 <!--    Script For This Page     -->
     <script >
@@ -136,6 +177,79 @@
         pagination: {
             el: '.swiper-pagination',
         },
+    });
+</script>
+
+
+<!-- <script type="text/javascript">
+        $(document).ready(function(){
+ 
+            $('#ostan_id').change(function(){ 
+               var id=$(this).val();
+                $.ajax({
+                    url : "<?php echo site_url('site/panel/Profile/get_cities');?>",
+                    method : "POST",
+                    data : {id: id},
+                    async : true,
+                    dataType : 'json',
+                    success: function(data){
+                         
+                        var html = '';
+                        var i;
+                        for(i=0; i<data.length; i++){
+                            html += '<option value='+data[i].city_id+'>'+data[i].city_title+'</option>';
+                        }
+                        $('#city_id').html(html);
+ 
+                    }
+                });
+                return false;
+            }); 
+             
+        });
+    </script> -->
+
+    
+<script>
+    $(document).ready(function() {
+        // Basic
+        $('.dropify').dropify();
+
+        // Translated
+        $('.dropify-fr').dropify({
+            messages: {
+                default: 'Glissez-déposez un fichier ici ou cliquez',
+                replace: 'Glissez-déposez un fichier ou cliquez pour remplacer',
+                remove: 'Supprimer',
+                error: 'Désolé, le fichier trop volumineux'
+            }
+        });
+
+        // Used events
+        var drEvent = $('#input-file-events').dropify();
+
+        drEvent.on('dropify.beforeClear', function(event, element) {
+            return confirm("واقعا نياز داريد اين فايل را حذف كنيد \"" + element.file.name + "\" ?");
+        });
+
+        drEvent.on('dropify.afterClear', function(event, element) {
+            alert('فايل حذف گرديد');
+        });
+
+        drEvent.on('dropify.errors', function(event, element) {
+            console.log('Has Errors');
+        });
+
+        var drDestroy = $('#input-file-to-destroy').dropify();
+        drDestroy = drDestroy.data('dropify')
+        $('#toggleDropify').on('click', function(e) {
+            e.preventDefault();
+            if (drDestroy.isDropified()) {
+                drDestroy.destroy();
+            } else {
+                drDestroy.init();
+            }
+        })
     });
 </script>
 

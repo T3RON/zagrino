@@ -1,4 +1,5 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,7 +7,11 @@
  * Time: 04:13 AM
  */
 
+<<<<<<< HEAD
 class BankMashaghelVizhe extends CI_Controller {
+=======
+class BankMashaghelVizhe extends CI_Panel {
+>>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
     function __construct()
     {
         parent::__construct();
@@ -22,10 +27,16 @@ class BankMashaghelVizhe extends CI_Controller {
     function index()
     {
         $id = $this->uri->segment('5');
+<<<<<<< HEAD
 
         $output['jobs_vip'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs',$id);
         $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs_service','jobs','rel_jobs_service','jobs',$id);
         $output['jobs_imgs'] = $this->MY_Model->select_where('jobs_images','jobs_id',$id);
+=======
+        
+        $output['bank_mashaghel'] = $this->MY_Model->show_join_six('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs',$id);
+        $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs_service','jobs','rel_jobs_service','jobs',$id);
+>>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
 
 
         $output['menu_top'] = $this->Menu_Model->select('menu');

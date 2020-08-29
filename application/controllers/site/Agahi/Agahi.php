@@ -1,4 +1,5 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,7 +7,7 @@
  * Time: 04:13 AM
  */
 
-class Agahi extends MY_Controller {
+class Agahi extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -22,13 +23,11 @@ class Agahi extends MY_Controller {
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
 
-        $this->load->vars(array(
-            'home_page' => TRUE
-        ));
+     
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Niazmandi-Form', $output);
+        $this->load->view('site/Niazmandi_Form', $output);
     }
 
 

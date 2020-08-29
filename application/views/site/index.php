@@ -1,16 +1,16 @@
 <?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
-    
-    
-    
-    
-    
-    
-    
-  
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
+
 
 
     <!-- column-right -->
@@ -26,7 +26,7 @@
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
                 <div class="col-lg-10 col-md-10 col-sm-10 hidden-xs title f_r p0">
-                    <a href="">
+                    <a href="<?= base_url('site/work/Jlist'); ?>">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover">
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
                                 <i class="icon-long-arrow-right"></i>
@@ -40,12 +40,12 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <?php foreach($jobs_cate as $jobs_cate_value) { ?>
-               
+
                 <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jlist/getJobsByCate'); ?>/<?= $jobs_cate_value->jobs_cate_id; ?>">
                 <?= $jobs_cate_value->jobs_cate_title; ?>
                                         </a></li>
                 <?php } ?>
-                        
+
                     </ul>
                 </div>
                 <div class="hidden-lg hidden-md hidden-sm hidden-xs title f_r p0">
@@ -73,10 +73,10 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <?php if ($bank_mashaghel_value->state_id == "1") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 vighe-tag p0">ویژه</div>
-                                    
+
                         <?php }else { ?>
                         <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 normal-tag p0">معمولی</div>
-                                    
+
                         <?php } ?>
                             <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_img; ?>" class="img-responsive">
                         </div>
@@ -94,11 +94,11 @@
                             </div>
                         </div>
                     </li>
-                   
+
                     </a>
                 <?php } ?>
                 </ul>
-                
+
                 <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">
                     <a href="">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover_2">
@@ -1090,20 +1090,20 @@
     </aside>
 
 </div>
-    
-    
-    
-    
-    
-    
-    
-     
-    
+
+
+
+
+
+
+
+
+
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
 <!--    Script For This Page     -->
-      
 
 
-    
+
+
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
