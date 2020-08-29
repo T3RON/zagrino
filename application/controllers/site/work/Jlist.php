@@ -6,11 +6,13 @@
  * Time: 04:13 AM
  */
 
-class Jlist extends MY_Controller {
+class Jlist extends CI_Controller {
     function __construct()
     {
         parent::__construct();
         $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
+        $this->load->library('Jdf');
     }
 
     function index()
@@ -20,8 +22,12 @@ class Jlist extends MY_Controller {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['agahi_cate'] = $this->MY_Model->select('agahi_cate');
-        $output['agahi'] = $this->MY_Model->select('agahi');
+        $output['jobs_cate'] = $this->MY_Model->select('jobs_cate');
+        $output['bank_mashaghel'] = $this->MY_Model->select_limit_orderby('jobs',8,'state_id','ASC');
+
+        $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
+        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
 
         $this->load->vars(array(
             'home_page' => TRUE
@@ -29,7 +35,32 @@ class Jlist extends MY_Controller {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Alist', $output);
+        $this->load->view('site/Jlist', $output);
+    }
+
+    function getJobsByCate() {
+        $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
+        $output['slider'] = $this->Menu_Model->select('slider');
+        $output['text'] = $this->Menu_Model->select('text');
+        $output['site'] = $this->MY_Model->select_single('site','1');
+        
+        
+        $cate_id =$this->uri->segment(5);
+        $output['bank_mashaghel'] = $this->MY_Model->select_single_where('jobs','jobs_cate',$cate_id);
+        $output['jobs_cate'] = $this->MY_Model->select_where('jobs_sub_cate','jobs_cate_id',$cate_id);
+        
+        $output['menu_top'] = $this->Menu_Model->select('menu');
+        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
+        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
+
+        $this->load->vars(array(
+            'home_page' => TRUE
+        ));
+        $output['title'] = "كاربران";
+        $output['des'] = "مديريت و بررسي كاربران";
+        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
+        $this->load->view('site/Jlistsub', $output);
     }
 
 

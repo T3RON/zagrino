@@ -20,6 +20,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="<?=base_url('')?>bower_components/Ionicons/css/ionicons.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="<?=base_url('')?>dist/css/AdminLTE.css">
+
+                                                        
+    <link href="https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css" rel="stylesheet" type="text/css">
+<script src="https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.js" type="text/javascript"></script>
+
   <!-- jvectormap -->
   <link rel="stylesheet" href="<?=base_url('')?>bower_components/jvectormap/jquery-jvectormap.css">
     <!-- AdminLTE Skins. We have chosen the skin-blue for this starter

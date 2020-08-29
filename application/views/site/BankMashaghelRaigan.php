@@ -155,7 +155,7 @@
 
                     <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right_side flex_item f_r p0" >
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper bankmashaghel_img  p0">
-                        <img src="<?=base_url('')?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png" class="" alt="" title="">
+                        <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_img; ?>" class="" alt="" title="">
                             
                                     <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>

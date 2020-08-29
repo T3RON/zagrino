@@ -6,51 +6,64 @@
     font-weight: normal;
     font-style: normal;
 }
+
 * {
     text-shadow: none!important;
     box-shadow: none!important;
     color: #fff!important;
     font-size: 12px!important;
-    font-family: irsans,Tahoma,Geneva,sans-serif !important;
+    font-family: irsans, Tahoma, Geneva, sans-serif !important;
 }
-a{
+
+a {
     text-decoration: none!important;
 }
-::before{
-  display: none;
+
+::before {
+    display: none;
 }
-div{
+
+div {
     box-shadow: none!important;
 }
-form div{
+
+form div {
     border: none!important;
     background: transparent !important;
 }
-img{
+
+img {
     display: block;
     margin: 0 auto;
     width: 100%;
 }
-.p0{
+
+.p0 {
     padding: 0 !important;
 }
-.B{
+
+.B {
     display: block;
     margin: 0 auto!important;
 }
+
 .min_h {
     min-height: 290px;
 }
-.c_bg{
+
+.c_bg {
     background: #461858 !important;
 }
-.c_bg_2{
+
+.c_bg_2 {
     background: #461858 !important;
 }
-.c_bg_3{
+
+.c_bg_3 {
     background: #57246b !important;
 }
-.c_btn{
+
+.c_btn {
     display: block!important;
     margin: 10% auto!important;
     line-height: 1 !important;
@@ -61,111 +74,120 @@ img{
     border-radius: 20px !important;
     box-shadow: none!important;
 }
-.c_tittle{
+
+.c_tittle {
     border-bottom: 1px solid #e3bc9b!important;
     margin: 5% auto 10%;
     text-align: center;
-    line-height:4;
+    line-height: 4;
     font-size: 18px!important;
     width: 80%;
 }
-.c_tittle_2{
+
+.c_tittle_2 {
     width: 100%;
     border-color: #4d0f62 !important;
 }
-.c_bg_main{
+
+.c_bg_main {
     background: url("../images/bacground-no repeat.png") no-repeat;
     background-size: 100% 100%;
     margin: 0!important;
 }
-.c_text_align{
+
+.c_text_align {
     text-align: center!important;
 }
-.c_textarea textarea{
+
+.c_textarea textarea {
     resize: none!important;
     background: #4f1665 !important;
     border-radius: 15px!important;
     padding: 2% 5%!important;
     border: none!important;
 }
+
 .ui-title {
     display: block;
     margin: 0 45px!important;
     text-align: right!important;
 }
+
 button {
     outline: none!important;
 }
+
 button:focus {
     outline: none!important;
 }
 
-
-
-
-
-
-
 #fab {
-  position: fixed;
-  display: block;
-  left: 0;
-  bottom: 0;
-  margin-left: 40px;
-  margin-bottom: 40px;
-  z-index: 900;
+    position: fixed;
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin-left: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
 }
+
 .p-1rem {
-  padding: 1rem;
+    padding: 1rem;
 }
-
-
-
 
 
 /*--------------- Page_Main ----------------------------*/
-.slider_main{
+
+.slider_main {
     padding: 23px 3%!important;
 }
+
 .main_btn {
     float: right!important;
 }
+
 .page2_main_btn img {
     width: 100%;
     height: auto;
     display: block;
 }
-.page2_main_btn_inner{
+
+.page2_main_btn_inner {
     width: auto;
-/*    height: 125px;*/
+    /*    height: 125px;*/
     background: #461858;
     padding: 0 5%;
     margin-bottom: 20px!important;
 }
+
 .page2_main_btn_inner div {
     margin: 10px auto;
 }
-.page2_main_btn_inner div a{
-/*    height: 125px;*/
+
+.page2_main_btn_inner div a {
+    /*    height: 125px;*/
     display: grid;
 }
-.page2_main_btn a{
+
+.page2_main_btn a {
     padding: 33% 0;
     text-align: center;
-/*    height: 125px;*/
+    /*    height: 125px;*/
     font-size: 13px !important;
     border: 5px solid #e9d800!important;
     border-radius: 50%!important;
     background: #3a1548 !important;
 }
-.news_page_main_header p{
+
+.news_page_main_header p {
     border-bottom: 1px solid #9c8c9e;
     color: #572e63 !important;
     padding: 3%;
     font-size: 16px !important;
     font-weight: bold;
 }
-.news_page_main_header a{
+
+.news_page_main_header a {
     border: none!important;
     background-color: #fff!important;
     color: #fff!important;
@@ -173,11 +195,13 @@ button:focus {
     position: relative!important;
     float: right;
 }
-.news_page_main_ul{
+
+.news_page_main_ul {
     margin: 0!important;
     list-style: none;
     padding: 0!important;
 }
+
 .news_page_main_ul li {
     border: none!important;
     margin: 2% 0!important;
@@ -186,11 +210,13 @@ button:focus {
     background: #f3f1f2!important;
     text-overflow: ellipsis;
 }
-.news_page_main_ul li p{
+
+.news_page_main_ul li p {
     color: #313030 !important;
     text-overflow: ellipsis;
 }
-.news_page_main_ul li a{
+
+.news_page_main_ul li a {
     border: none!important;
     background-color: #f3f1f2!important;
     color: #fff!important;
@@ -198,6 +224,7 @@ button:focus {
     position: relative!important;
     float: right;
 }
+
 .mainpage_news_title {
     border: none!important;
     background: #fff!important;
@@ -206,6 +233,7 @@ button:focus {
     position: relative!important;
     float: right;
 }
+
 #main_swiper-wrapper div p {
     text-overflow: ellipsis!important;
     overflow: hidden!important;
@@ -213,49 +241,56 @@ button:focus {
 }
 
 
-
-
 /*--------------- Panel ----------------*/
+
 .mdl-layout__drawer {
     background: #461857;
     float: right;
 }
+
 .ui-panel-inner {
     padding: 0!important;
 }
+
 .panel_back_g {
     background: #461857!important;
 }
+
 .main_panel {
     width: 100%;
     background: #461857;
     padding: 0!important;
 }
+
 .head_panel {
     background: #e9d800;
 }
+
 .head_panel img {
     width: 70%;
     margin: 0 auto;
     display: block;
 }
+
 .head_panel span {
     text-align: center;
     font-size: 14px!important;
     color: #461857!important;
     display: block;
 }
+
 .panel_ul {
     list-style: none;
     padding: 0;
     margin: 5px 0!important;
-    
 }
+
 .panel_li {
     padding: 0 10px;
     margin: 0!important;
     border-bottom: 1px solid #563065;
 }
+
 .panel_li button {
     width: 100%;
     box-shadow: none!important;
@@ -265,12 +300,15 @@ button:focus {
     margin: 0!important;
     text-align: right;
 }
+
 .panel_li a {
     line-height: 3;
 }
+
 .panel_buttom {
     height: auto;
 }
+
 .panel_buttom img {
     display: block;
     height: 100%;
@@ -278,14 +316,32 @@ button:focus {
 }
 
 
-
-
-
-
-
-
 /* Swipe works with mouse as well but often causes text selection. */
-#loginpage *,#smspage *,#chooselocatinpage *,#locationB1 *,#locationB2 *,#mainpage *,#sanspage *,#choosesanspage *,#chooseclasspage *,#workoutpage *,#contactpage *,#newspage *,#introductionpage *,#signuppage *,#suggestionpage *,#programrequestpage *,#programpart1page *,#programpart2page *,#programpart3page *,#goodtoknowpage *,#profilepage *,#rulespage *,#allnewspage *,#articlespage *   {
+
+#loginpage *,
+#smspage *,
+#chooselocatinpage *,
+#locationB1 *,
+#locationB2 *,
+#mainpage *,
+#sanspage *,
+#choosesanspage *,
+#chooseclasspage *,
+#workoutpage *,
+#contactpage *,
+#newspage *,
+#introductionpage *,
+#signuppage *,
+#suggestionpage *,
+#programrequestpage *,
+#programpart1page *,
+#programpart2page *,
+#programpart3page *,
+#goodtoknowpage *,
+#profilepage *,
+#rulespage *,
+#allnewspage *,
+#articlespage * {
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -293,43 +349,42 @@ button:focus {
 }
 
 .swipe {
-  overflow: hidden;
-  visibility: hidden;
-  position: relative;
+    overflow: hidden;
+    visibility: hidden;
+    position: relative;
     height: 200px;
 }
+
 .swipe-wrap {
-  overflow: hidden;
-  position: relative;
+    overflow: hidden;
+    position: relative;
     height: 200px;
 }
-.swipe-wrap > div {
+
+.swipe-wrap>div {
     height: 200px;
     background: #f789ac;
-  float:left;
-  width:100%;
-  position: relative;
+    float: left;
+    width: 100%;
+    position: relative;
 }
 
 .ui-btn.ui-checkbox-off:after {
     background-color: rgb(183, 0, 255)!important;
 }
+
 #snackbar-wrapper {
     text-align: center!important;
 }
+
 .snackbar {
     width: 100%!important;
     text-align: center!important;
 }
+
 .snackbar-text {
     width: 100%!important;
 }
-
-
-
-
-
-
 
 .mdl-layout__drawer-right {
     display: -webkit-box;
@@ -350,7 +405,7 @@ button:focus {
     position: absolute;
     top: 0;
     right: 0;
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 3px 1px -2px rgba(0,0,0,.2),0 1px 5px 0 rgba(0,0,0,.12);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
     box-sizing: border-box;
     border-right: 1px solid #e0e0e0;
     background: #fafafa;
@@ -362,8 +417,8 @@ button:focus {
     will-change: transform;
     -webkit-transition-duration: .2s;
     transition-duration: .2s;
-    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
     -webkit-transition-property: -webkit-transform;
     transition-property: transform;
     color: #424242;
@@ -375,9 +430,8 @@ button:focus {
 .active {
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
-    transform: translateX(0);  
+    transform: translateX(0);
 }
-
 
 .mdl-layout__obfuscator-right {
     background-color: transparent;
@@ -392,12 +446,12 @@ button:focus {
     transition-property: background-color;
     -webkit-transition-duration: .2s;
     transition-duration: .2s;
-    -webkit-transition-timing-function: cubic-bezier(.4,0,.2,1);
-    transition-timing-function: cubic-bezier(.4,0,.2,1);
+    -webkit-transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1);
 }
 
 .ob-active {
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0, 0, 0, .5);
     visibility: visible;
 }
 

@@ -49,7 +49,6 @@ immediately after the control sidebar -->
 <!-- babakhani datepicker -->
 
 
-
 <!-- Script -->
 <!-- <script>
 console.log(arguments);
@@ -97,6 +96,13 @@ $('ul.treeview-menu a').filter(function() {
      Both of these plugins are recommended to enhance the
      user experience. -->
 
+
+
+     گام دوم: فراخوانی نقشه:
+
+به وسیله کد زیر که در تگ script قرار می گیرد نقشه را فراخوانی می کنیم
+
+ 
 
 
 </body>

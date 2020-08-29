@@ -25,12 +25,30 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+    function select_limit_orderby($table,$limit,$field_order_by,$type_order_by) {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->limit($limit);
+        $this->db->order_by($field_order_by,$type_order_by);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     function select_limit_where($table,$limit,$field_where,$where,$field_order_by,$type_order_by) {
         $this->db->select('*');
         $this->db->from($table);
         $this->db->where($field_where, $where);
         $this->db->limit($limit);
         $this->db->order_by($field_order_by,$type_order_by);
+        $query = $this->db->get();
+        return $query->result();
+
+    }
+
+    function select_where($table,$field_where,$where) {
+        $this->db->select('*');
+        $this->db->from($table);
+        $this->db->where($field_where, $where);
         $query = $this->db->get();
         return $query->result();
 

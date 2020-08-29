@@ -52,6 +52,7 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
         $crud->display_as('jobs_sharayet','شرايط فروش');
         $crud->display_as('jobs_list_service','ليست خدمات و سرويس');
+        $crud->display_as('jobs_gharardad','قرارداد ها');
         $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
         $crud->display_as('jobs_mojavez','مجوز ها');
         $crud->display_as('jobs_video','ويدئو');
@@ -59,6 +60,7 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('jobs_logo','لوگو');
+        $crud->display_as('jobs_img','تصویر شاخص');
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
         $crud->display_as('jobs_price','قيمت');
@@ -83,6 +85,7 @@ class Jobs extends MY_Controller {
         $crud->field_type('jobs_update_date', 'invisible', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
 
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
+        $crud->set_field_upload('jobs_img','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
 
@@ -96,7 +99,7 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','jobs_price'
+            'jobs_update_date','jobs_shoar','jobs_price','jobs_gharardad','jobs_lohe_taghdir'
         );
 
 
