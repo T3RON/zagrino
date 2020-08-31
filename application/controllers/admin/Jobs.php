@@ -52,7 +52,6 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
         $crud->display_as('jobs_sharayet','شرايط فروش');
         $crud->display_as('jobs_list_service','ليست خدمات و سرويس');
-        $crud->display_as('jobs_gharardad','قرارداد ها');
         $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
         $crud->display_as('jobs_mojavez','مجوز ها');
         $crud->display_as('jobs_video','ويدئو');
@@ -60,14 +59,10 @@ class Jobs extends MY_Controller {
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('jobs_logo','لوگو');
-<<<<<<< HEAD
-        $crud->display_as('jobs_img','تصویر شاخص');
-=======
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
         $crud->display_as('img4','تصوير شماره 4');
->>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
         $crud->display_as('price_id','قيمت');
@@ -94,7 +89,6 @@ class Jobs extends MY_Controller {
  
        
         $crud->set_field_upload('jobs_logo','assets/uploads/img');
-        $crud->set_field_upload('jobs_img','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
         $crud->set_field_upload('img1','assets/uploads/img');
         $crud->set_field_upload('img2','assets/uploads/img');
@@ -125,11 +119,7 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-<<<<<<< HEAD
-            'jobs_update_date','jobs_shoar','jobs_price','jobs_gharardad','jobs_lohe_taghdir'
-=======
             'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
->>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
         );
 
        

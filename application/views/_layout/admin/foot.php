@@ -48,10 +48,7 @@ immediately after the control sidebar -->
 <script src="<?= base_url('') ?>plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- babakhani datepicker -->
 
-<<<<<<< HEAD
-=======
 <script src="<?=base_url('')?>dist/js/persianDatepicker.min.js"></script>
->>>>>>> 9468fe3bde444b9ebda9abd472ff344833568748
 
 <!-- Script -->
 <!-- <script>
@@ -101,13 +98,6 @@ $('ul.treeview-menu a').filter(function() {
      Both of these plugins are recommended to enhance the
      user experience. -->
 
-
-
-     گام دوم: فراخوانی نقشه:
-
-به وسیله کد زیر که در تگ script قرار می گیرد نقشه را فراخوانی می کنیم
-
- 
 
 
 </body>

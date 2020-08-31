@@ -1,16 +1,16 @@
 <?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
-
-
-
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+  
+    
+    
+    
+    
 
 
     <!-- column-right -->
@@ -31,21 +31,21 @@
                             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
                                 <i class="icon-long-arrow-right"></i>
                             </div>
-                            <a href="<?= base_url('site/work/Jlist'); ?>"><div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 see_all f_l p0">
+                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 see_all f_l p0">
                                 مشاهده همه
-                            </div></a>
+                            </div>
                         </div>
                     </a>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <?php foreach($jobs_cate as $jobs_cate_value) { ?>
-
-                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jlist/getJobsByCate'); ?>/<?= $jobs_cate_value->jobs_cate_id; ?>">
+               
+                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jslist'); ?>/index/<?= $jobs_cate_value->jobs_cate_id; ?>">
                 <?= $jobs_cate_value->jobs_cate_title; ?>
                                         </a></li>
                 <?php } ?>
-
+                        
                     </ul>
                 </div>
                 <div class="hidden-lg hidden-md hidden-sm hidden-xs title f_r p0">
@@ -64,21 +64,16 @@
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
-                <?php if ($bank_mashaghel_value->state_id == "1") { ?>
+                    <?php if ($bank_mashaghel_value->state_id == 2) { ?>
                     <a href="<?= base_url('site/work/BankMashaghelVizhe'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
-                <?php }else { ?>
-                    <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
-                <?php } ?>
+                    <?php } else { ?>
+                        <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
+                    <?php } ?>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <?php if ($bank_mashaghel_value->state_id == "1") { ?>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 vighe-tag p0">ویژه</div>
-
-                        <?php }else { ?>
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 normal-tag p0">معمولی</div>
-
-                        <?php } ?>
-                            <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_img; ?>" class="img-responsive">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+                        
+                            <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>" class="img-responsive" alt="">
+                            
                         </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href=""><?= $bank_mashaghel_value->jobs_title; ?></a></div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
@@ -94,11 +89,11 @@
                             </div>
                         </div>
                     </li>
-
+                   
                     </a>
                 <?php } ?>
                 </ul>
-
+                
                 <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">
                     <a href="">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover_2">
@@ -1090,20 +1085,20 @@
     </aside>
 
 </div>
-
-
-
-
-
-
-
-
-
+    
+    
+    
+    
+    
+    
+    
+     
+    
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
 <!--    Script For This Page     -->
+      
 
 
-
-
+    
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
