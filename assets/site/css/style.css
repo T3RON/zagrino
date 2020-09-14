@@ -11,6 +11,29 @@ License: GNU General Public License v2 or later
 @import url("media.css");
 @import url("global.css");
 
+
+.vip-tag-r {
+    background: #ec1e25;
+    background: #ec1e25;
+    color: #fff;
+    position: absolute !important;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0 12px !important;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.vip-tag-g {
+    background: green;
+    background: #ec1e25;
+    color: #fff;
+    position: absolute !important;
+    text-align: center;
+    border-radius: 20px;
+    padding: 0 12px !important;
+}
+
 /* -- header --*/
 thead.tbl-style tr th {
 text-align: center !important;
@@ -279,6 +302,7 @@ text-align: center !important;
     border: none;
     background: transparent;
     padding: 2px 10px;
+    text-align: right;
 }
 
 .search form input::placeholder {
@@ -1318,8 +1342,6 @@ footer .second_section .copyRight_l span {
 
 .b_m_v .border_box .flex_box .right_side .img_swiper .special_out {
     position: absolute;
-    padding: 0 3px 3px 3px !important;
-    background: #f4f6f8;
     border-radius: 0 0 0 14px;
     top: 0;
 }
@@ -1329,6 +1351,8 @@ footer .second_section .copyRight_l span {
     color: #fff;
     text-align: center;
     border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
     padding: 5px!important;
 }
 
@@ -1688,7 +1712,7 @@ a {
     height: 15px;
     border-radius: 20px;
     line-height: 1.4;
-    margin: 5px -15px 0 0;
+    margin: 13px 4px 0 0;
 }
 
 .b_m_v .under_poster .c_bg i {
@@ -5385,7 +5409,7 @@ ul.v-slides {
     .b_m_v .under_poster .c_bg i {
         color: #000000;
         font-size: 15px;
-        margin: 11px 0 0 10px;
+        margin: 13px 0 0 -21px;
     }
     .b_m_v .under_poster .c_bg {
         background: #fff;

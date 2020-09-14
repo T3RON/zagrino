@@ -70,8 +70,13 @@
                         <a href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
                     <?php } ?>
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                        
+                        <div class="p0">
+                            <?php if ($bank_mashaghel_value->state_id == 2) { ?>
+                                <div class="p0">
+                                    <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
+                                    <div class="vip-tag-r p0">20% تخفیف</div>
+                                </div>
+                            <?php } ?>
                             <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>" class="img-responsive" alt="">
                             
                         </div>
@@ -155,7 +160,7 @@
                     <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
                             <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
-                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
+                                <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in off_in_green p0">20% تخفیف</div>
                             </div>
                             <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>

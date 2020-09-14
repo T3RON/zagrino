@@ -31,7 +31,7 @@ class Index extends CI_Controller {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
+        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','10');
         $output['bank_mashaghel'] = $this->Menu_Model->select_two_orderBy('jobs','state_id','DESC','register_date','ASC');
 
 
