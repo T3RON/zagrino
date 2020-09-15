@@ -2188,7 +2188,9 @@ a {
 
 
 /* -------users_point-------- */
-
+.users_point {
+    direction: rtl !important;
+}
 .users_point .section_1 {
     color: #939aa4;
     margin: 5px 0;

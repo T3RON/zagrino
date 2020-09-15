@@ -28,6 +28,9 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
     <link href="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
+
+    <link href="https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.css" rel="stylesheet" type="text/css">
+    <script src="https://static.neshan.org/sdk/leaflet/1.4.0/leaflet.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -50,32 +53,39 @@
                         <ul class="panel_ul">
                             <li class="panel_li panel_li_home p0">
                                 <a href="/index.html" href="/index.html">صفحه اول<img
-                                        src="<?=base_url('')?>assets/site/img/iconfinder_home_126572.svg"></a></li>
+                                        src="<?=base_url('')?>assets/site/img/iconfinder_home_126572.svg"></a>
+                            </li>
                             <li class="panel_li panel_li_profile p0">
                                 <a href="/Page_Profile.html" type="button">پنل کاربری<img
-                                        src="<?=base_url('')?>assets/site/img/user.svg"></a></li>
+                                        src="<?=base_url('')?>assets/site/img/user.svg"></a>
+                            </li>
                             <li class="panel_li panel_li_good p0">
                                 <a href="/Page_GoodToKnow.html" type="button"><img
                                         src="<?=base_url('')?>assets/site/img/iconfinder_services_2639916.svg">تعرفه
-                                    خدمات </a></li>
+                                    خدمات </a>
+                            </li>
                             <li class="panel_li panel_li_profile p0">
                                 <a href="/Page_Profile.html" type="button">نمایشگاه ها<img
-                                        src="<?=base_url('')?>assets/site/img/user.svg"></a></li>
+                                        src="<?=base_url('')?>assets/site/img/user.svg"></a>
+                            </li>
                             <li class="panel_li panel_li_good p0">
                                 <a href="/Page_GoodToKnow.html" type="button"><img
                                         src="<?=base_url('')?>assets/site/img/iconfinder_services_2639916.svg">مشاوره
-                                    رایگان</a></li>
+                                    رایگان</a>
+                            </li>
                             <li class="panel_li panel_li_singup p0">
                                 <a href="/Page_SignUp.html" type="button"><img
                                         src="<?=base_url('')?>assets/site/img/iconfinder_info2_216652.svg">درباره زاگرس
-                                    زوم</a></li>
+                                    زوم</a>
+                            </li>
                             <li class="panel_li panel_li_request p0">
                                 <a href="/Page_Program_Request.html" type="button"><img
                                         src="<?=base_url('')?>assets/site/img/contact.svg">ارتباط با ما</a>
                             </li>
                             <li class="panel_li panel_li_request p0">
                                 <a href="/Page_Food_Request.html" type="button"><img
-                                        src="<?=base_url('')?>assets/site/img/add.svg">ثبت رایگان شغل و آگهی</a></li>
+                                        src="<?=base_url('')?>assets/site/img/add.svg">ثبت رایگان شغل و آگهی</a>
+                            </li>
                             <li class="panel_li panel_li_sharess p0">
                                 <a href="/Page_Food_Request.html" type="button"><img
                                         src="<?=base_url('')?>assets/site/img/iconfinder_add_user_male_2639755.svg">ثبت
@@ -273,7 +283,8 @@
                                     </div>
                                     <?= $site_value->site_btn_one_title; ?>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                         <li class="col-lg-6 col-md-6 col-sm-6 col-xs-12 t_align p0">
                             <a href=" <?= $site_value->site_btn_two_link; ?>"
                                 class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
@@ -284,7 +295,8 @@
                                     </div>
                                     <?= $site_value->site_btn_two_title; ?>
                                 </div>
-                            </a></li>
+                            </a>
+                        </li>
                         <?php } ?>
                     </ul>
                 </nav>

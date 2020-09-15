@@ -1,0 +1,16 @@
+<html>
+    <head>
+        <script src="https://addmap.parsijoo.ir/leaflet/leaflet.js"></script>
+<link rel="stylesheet" href="https://addmap.parsijoo.ir/leaflet/leaflet.css" />      
+    </head>
+    <body>
+        <div id="map" style="width:100%;height:700px;"></div>
+        <script>
+       var map = L.map('map').setView([35.70163, 51.39211], 12);
+       L.tileLayer('https://developers.parsijoo.ir/web-service/v1/map/?type=tile&x={x}&y={y}&z={z}&apikey=627973149c2041b184e31259821d1306', {
+       maxZoom: 21,
+         }).addTo(map);
+       </script>
+    </body>
+    
+</html>

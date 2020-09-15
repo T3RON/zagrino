@@ -9,7 +9,7 @@
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r footer_img_end p0">
                 <img src="<?=base_url('')?>assets/site/img/footer.png" class="img-responsive" alt="" title="">
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l p0">
+            <div style="direction: rtl;" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_l p0">
                 <form name="s" action="" method="get" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r footer_grid">
                         <div class="t_align footer_border p0">
