@@ -12,6 +12,66 @@ License: GNU General Public License v2 or later
 @import url("global.css");
 
 
+.block-box {
+    direction: rtl;
+    text-align: right;
+    background-color: #fdfdfd;
+    border-radius: 5px;
+    border: 1px solid #efefef;
+    padding: 2px 15px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+
+}
+.block-title {
+    direction: rtl;
+    font-size: 16px;
+    padding: 8px;
+    color: red;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.block-text {
+    direction: rtl;
+    font-size: 14px;
+    padding: 8px;
+}
+
+.blk-tb {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.video-style {
+    border: 1px solid #d2cece;
+    border-radius: 5px;
+}
+
+.r {
+    direction: rtl !important;
+}
+.space-left {
+    margin-left: 5px;
+}
+.space-right {
+    margin-right: 5px;
+}
+
+.list-block li {
+    border: 1px solid #eaeaea;
+    border-radius: 3px;
+    margin-left: 4px;
+    margin-bottom: 4px;
+    padding: 13px;
+    width: 124px;
+    height: 70px;
+    direction: rtl;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+}
+ 
+
 .vip-tag-r {
     background: #ec1e25;
     background: #ec1e25;
