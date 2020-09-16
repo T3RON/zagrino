@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 5.0.2
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jun 06, 2020 at 12:19 PM
--- Server version: 5.7.26
--- PHP Version: 7.2.18
+-- Generation Time: Sep 16, 2020 at 03:48 PM
+-- Server version: 5.7.31
+-- PHP Version: 7.3.21
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -1237,8 +1236,8 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `jobs_pinterest` text,
   `jobs_youtube` text,
   `jobs_address` text,
-  `map_latitude` text,
-  `map_longitude` text,
+  `jobs_latitude` text,
+  `jobs_longitude` text,
   `jobs_count_namayandegi` int(11) DEFAULT NULL,
   `jobs_count_namayandegi_in_city` int(11) DEFAULT NULL,
   `jobs_sharayet` text,
@@ -1265,11 +1264,11 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
-(37, 7, 6, 1, 0, 0, 'كاشي كاري', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 20),
-(38, 0, 0, 1, 0, 0, 'ghghgh', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
-(39, 7, 6, 1, 0, 0, 'dsdsadsad', 'كاشي و سراميك كريميds', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
-(40, 7, 5, 1, 2, 32, '6666', 'كاشي و سراميك كريميds', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, NULL, NULL, 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'یکشنبه, ۱۱ خرداد ۱۳۹۹', '<p></p>', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', 'a3ea1db8d76cdfe8ad265ec698640927.jpg', '635a8407dba385478294126520888bc8.jpg', '7f011227c2efd8e38264624ae7683806.jpg', NULL, 0, 1, '1', 0);
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_latitude`, `jobs_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
+(37, 7, 6, 1, 0, 0, 'كاشي كاري', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', 'ds', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 20),
+(38, 0, 0, 1, 0, 0, 'ghghgh', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
+(39, 7, 6, 1, 3, 2, 'dsdsadsad', 'كاشي و سراميك كريميds', 'سلام', 'سلام', 'سلام', '09192183440', '08133235664', '', 'seif4847@gmail.com', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
+(40, 7, 5, 1, 2, 32, '6666', 'كاشي و سراميك كريميds', 'سلام', 'dsd', '20dsd', 'sds', 'ds', 'dsd', 'ds', 'ds', 'dsd', 'dsd', 'sdd', 'dsd', 'dsd', 'dsd', 'dsds', 'sddsd', 'dsd', '33.89621114574323', '48.750954837035195', 333, 33, 'dsdsds', 'dsdsd', 1, '', '<p></p>', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', 'digikala.png', 'a3ea1db8d76cdfe8ad265ec698640927.jpg', '635a8407dba385478294126520888bc8.jpg', '7f011227c2efd8e38264624ae7683806.jpg', 'sdsdsd', 2, 2, '1', 45);
 
 -- --------------------------------------------------------
 
@@ -1594,16 +1593,16 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
 --
 
 INSERT INTO `zgr_rel_jobs_service` (`rel_jobs_service_id`, `jobs_id`, `jobs_service_id`) VALUES
-(6, 9, 2),
-(5, 9, 1),
-(7, 10, 1),
-(8, 10, 2),
-(9, 11, 2),
-(10, 12, 2),
-(11, 31, 1),
-(12, 31, 2),
-(13, 32, 1),
-(14, 32, 2);
+(6, 40, 2),
+(5, 40, 1),
+(7, 40, 1),
+(8, 40, 2),
+(9, 40, 2),
+(10, 40, 2),
+(11, 40, 1),
+(12, 40, 2),
+(13, 40, 1),
+(14, 40, 2);
 
 -- --------------------------------------------------------
 
@@ -1929,7 +1928,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1591179783, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1600067003, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
