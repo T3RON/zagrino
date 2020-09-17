@@ -1,4 +1,5 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,7 +7,7 @@
  * Time: 04:13 AM
  */
 
-class BankMashaghelRaigan extends CI_Controller {
+class BankMashaghelRaigan extends CI_Panel {
     function __construct()
     {
         parent::__construct();

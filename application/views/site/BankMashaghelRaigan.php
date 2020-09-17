@@ -2,10 +2,17 @@
 
 
 
+
+
+
+
+
+
+
 <!-- column-right -->
 
 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
-<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0" style="direction: rtl;">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_head p0">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 job_title t_align p0">بانک مشاغل</div>
@@ -29,8 +36,9 @@
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flex_box p0">
 
-            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left_side flex_item f_l p0">
 
+
+            <div style="direction: rtl;" class="col-lg-6 col-md-6 col-sm-12 col-xs-12 left_side flex_item f_l p0">
                 <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 img f_r m0 p0">
                     <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>"
                         class="img-responsive img-circle" alt="">
@@ -44,13 +52,12 @@
                         <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12 text_1_1 f_r p0">
                             <div class="f_r">شناسه :</div>
                             <span class=""><?= $bank_mashaghel_value->jobs_id; ?>
-                            </span>
                         </div>
                         <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12 text_1_2 f_l p0">
                             <?= $bank_mashaghel_value->jobs_shoar; ?></div>
                     </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section p0">
+                    <div style="margin-top: 37px;" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 point_section p0">
                         <div class="f_r">
                             <button type="button" class="btn_global m0 p0"><img
                                     src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg"
@@ -140,7 +147,7 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_border c_b_r f_r p0">
                         <div class="t_align">
                             <span class="title_c">تعداد نمایندگی فعال :</span>
-                            <span class=""><?= $bank_mashaghel_value->jobs_count_namayandegi; ?></span>
+                            <span class="">۲۰۰</span>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_border c_b_l f_l p0">
@@ -161,15 +168,13 @@
                 </div>
 
             </div>
-
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 right_side flex_item f_r p0">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper bankmashaghel_img  p0">
-                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" class=""
-                        alt="" title="">
-
-                    <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
+                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" class="" alt=""
+                        title="">
+                    <!-- <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
-                    </div>
+                    </div> -->
                 </div>
                 <!-- Swiper -->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 swiper-container swiper_bankMashaghel">
@@ -179,7 +184,7 @@
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
 
-                                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" class="img-responsive" alt=""
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
                                         title="">
 
                                 </div>
@@ -192,7 +197,7 @@
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
 
-                                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img2; ?>" class="img-responsive" alt=""
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
                                         title="">
 
                                 </div>
@@ -205,7 +210,7 @@
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
 
-                                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img3; ?>" class="img-responsive" alt=""
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
                                         title="">
 
                                 </div>
@@ -218,7 +223,19 @@
 
                                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
 
-                                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img4; ?>" class="img-responsive" alt=""
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
+                                        title="">
+
+                                </div>
+
+                            </li>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
                                         title="">
 
                                 </div>
@@ -226,7 +243,32 @@
 
                             </li>
                         </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
+                                        title="">
+
+                                </div>
+
+
+                            </li>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+
+                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
+                                        title="">
+
+                                </div>
+
+
+                            </li>
+                        </div>
 
                     </div>
                     <!-- Add Arrows -->
@@ -236,6 +278,7 @@
 
 
 
+
             </div>
 
 
@@ -243,301 +286,95 @@
 
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade moarefi_toggler" id="tab_btn_moarefi">
 
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 flex_box p0">
-                <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 big_img m0 f_r p0">
-                    <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                </div>
-                <ul class="col-lg-5 col-md-5 col-sm-5 col-xs-12 little_img f_l p0">
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
-                        <div>
-                            <img src="<?=base_url('')?>assets/site/img/talar.png" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                </ul>
-            </div>
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 f_r caption p0">
-                <div class="title p0">توضیحات</div>
-                <p>
-                    <?= $bank_mashaghel_value->jobs_content; ?>
-                </p>
-            </div>
-
-            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 img_text_on f_l">
-                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 ">
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <div class="text_on p0">
-                            استخر
-                        </div>
-                        <div class="img_holder p0 m0">
-                            <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <div class="text_on p0">
-                            شاپ
-                        </div>
-                        <div class="img_holder p0 m0">
-                            <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <div class="text_on p0">
-                            تالار پذیرایی کافی
-                        </div>
-                        <div class="img_holder p0 m0">
-                            <img src="<?=base_url('')?>assets/site/img/eiffel.jpg" class="img-responsive" alt="">
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 caption f_r p0">
-                <div class="title p0">وبژگی ها</div>
-                <p>
-                    <?= $bank_mashaghel_value->jobs_feature; ?> </p>
-            </div>
-
-            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 price f_r p0">
-                قیمت :
-                <span class="data_price">
-                    <?= $bank_mashaghel_value->jobs_price; ?>
-                </span>
-                تومان
-            </div>
-
-        </div>
-
-
-
-        <div class="niazmandiha_form">
-            <form>
-                <div class="fild">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>توضیحات کلی
-                                </span>
-                                <input id="btn_t_t_tozihat" onclick="myFunction()" type="checkbox" name="">
-                                <span class="checkmark"></span>
-                            </label>
-                        </li>
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>امکانات و خدمات </span>
-                                <input id="btn_t_t_emkanat" onclick="myFunction_2(),myFunction()" type="checkbox"
-                                    name="">
-                                <span class="checkmark"></span>
-                            </label>
-
-                        </li>
-
-                        <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
-
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade is-visible  t_t_tozihat p_0_10_i"
-                                id="t_t_tozihat">
-                                <p>
-                                    <?= $bank_mashaghel_value->jobs_content; ?>
-                                </p>
-                            </div>
-
-
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_emkanat p0"
-                                id="t_t_emkanat">
-                                <ul>
-                                    <?php foreach($bank_mashaghel_service as $bank_mashaghel_service_value) { ?>
-                                    <li class="col-lg-2 col-md-3 col-sm-6 col-xs-6 ">
-                                        <a href="" onclick="return false;">
-                                            <div class="t_align all">
-                                                <i class="icon-check-square"></i>
-                                                <div class="t_align txt p0">
-                                                    <?= $bank_mashaghel_service_value->jobs_service_title; ?>
-                                                </div>
-                                            </div>
-                                        </a>
+            <div class="blk-tb col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-box">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-title"> توضیحات :</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-text"><?= $bank_mashaghel_value->jobs_content; ?></div>
+                    </div>
+              
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-box">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-title"> مراکز طرف قرارداد :</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-text"><?= $bank_mashaghel_value->jobs_content; ?></div>
+                    </div>
+                
+                   
+                   
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12 p0">
+                            <div class="card">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item r">
+                                        <img width="25" height="25"
+                                            src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg">
+                                        <?= $bank_mashaghel_value->jobs_instagram; ?>
                                     </li>
-                                    <?php } ?>
-                                </ul>
-                            </div>
-
-                        </div>
-
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>اطلاعات تماس </span>
-                                <input id="btn_t_t_etelaat_tamas" onclick="myFunction()" type="checkbox" name="">
-                                <span class="checkmark"></span>
-                            </label>
-                        </li>
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>آدرس شبکه های اجتماعی </span>
-                                <input id="btn_t_t_shabake_ejtemaei" onclick="myFunction_3(),myFunction()"
-                                    type="checkbox" name="">
-                                <span class="checkmark"></span>
-                            </label>
-                        </li>
-
-
-                        <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
-
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_etelaat_tamas p0"
-                                id="t_t_etelaat_tamas">
-                                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>موبایل :
-                                                <?= $bank_mashaghel_value->jobs_mobile; ?> </span>
-                                        </label>
-                                    </li>
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>تلفن ثابت : <?= $bank_mashaghel_value->jobs_tell; ?></span>
-                                        </label>
-                                    </li>
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>فکس : <?= $bank_mashaghel_value->jobs_fax; ?> </span>
-                                        </label>
-                                    </li>
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>ایمیل : <?= $bank_mashaghel_value->jobs_email; ?> </span>
-                                        </label>
-                                    </li>
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>کد پستی : <?= $bank_mashaghel_value->jobs_code_posti; ?> </span>
-                                        </label>
-                                    </li>
-                                    <li class="col-lg-6 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                            <span>وب سایت : <?= $bank_mashaghel_value->jobs_website; ?></span>
-                                        </label>
-                                    </li>
-                                </ul>
-
-                            </div>
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_shabake_ejtemaei p0"
-                                id="t_t_shabake_ejtemaei">
-                                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                            <img src="<?=base_url('')?>assets/site/svg/iconfinder_Instagram.svg"
-                                                class="img-responsive" alt="">
-                                        </div>
-                                        <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                            <?= $bank_mashaghel_value->jobs_instagram; ?>
-                                        </div>
-                                    </li>
-                                    <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                        <div class="col-lg-1 col-md-2 col-sm-2 col-xs-2 title f_r p0">
-                                            <img src="<?=base_url('')?>assets/site/svg/telegram.svg"
-                                                class="img-responsive" alt="">
-                                        </div>
-                                        <div class="col-lg-11 col-md-10 col-sm-10 col-xs-10 fild f_r p0">
-                                            <?= $bank_mashaghel_value->jobs_telegram; ?>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>آدرس و موقعیت روی نقشه </span>
-                                <input id="btn_t_t_addres_map" onclick="myFunction()" type="checkbox" name="">
-                                <span class="checkmark"></span>
-                            </label>
-                        </li>
-                        <li class="col-lg-6 col-md-6 col-sm-6 col-xs-6 p0">
-                            <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                <span>لیست خدمات و محصولات</span>
-                                <input id="btn_t_t_menu_list_khadamat" onclick="myFunction_4(),myFunction()"
-                                    type="checkbox" name="">
-                                <span class="checkmark"></span>
-                            </label>
-                        </li>
-
-                        <div id="tabs_menu_1" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tabs_menu_1 tabs p0">
-
-
-
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0"
-                                id="t_t_addres_map">
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p_0_10_i">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                        آدرس
-                                    </div>
-                                    <div class="col-lg-11 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
+                                    <li class="list-group-item r">
+                                        <img width="25" height="25" src="<?=base_url('')?>assets/site/svg/telegram.svg">
                                         <?= $bank_mashaghel_value->jobs_telegram; ?>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box p_0_10_i">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
-                                        موقعیت
-                                    </div>
-                                    <div style="height: 200px;" id="map">
+                                    </li>
+               
 
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div style="display:none"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_menu_list_khadamat p0"
-                                id="t_t_menu_list_khadamat">
-                                <?= $bank_mashaghel_value->jobs_list_service; ?>
+                                </ul>
                             </div>
                         </div>
-                    </ul>
+                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 p0">
+                            <div class="card">
+                                <ul class="list-group list-group-flush space-left">
+                                    <li class="list-group-item r">
+                                        <img width="25" height="25" src="<?=base_url('')?>assets/site/svg/mobile.svg">
+                                        <?= $bank_mashaghel_value->jobs_mobile; ?>
+                                    </li>
+                                    <li class="list-group-item r">
+                                        <img width="25" height="25"
+                                            src="<?=base_url('')?>assets/site/svg/telephone.svg">
+                                        <?= $bank_mashaghel_value->jobs_tell; ?>
+                                    </li>
+     
+                                </ul>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
                 </div>
-            </form>
+
+                <div class="blk-tb col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-right p0">
+
+        
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-box">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-title"> ساعت کاری :</div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-text"><?= $bank_mashaghel_value->jobs_work_titme; ?></div>
+                    </div>
+
+               
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" alt="">
+                    </div>
+
+                </div>
+
+
+               
+
+
+
+            </div>
+
+
+
+
+
+
+        
         </div>
 
 
@@ -545,18 +382,74 @@
 
 
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer p0">
-            <p class="f_r">
-                توجه : هرگونه مسولیت محتوا ه عهده صاحب پست می باشد .
-                <a href="">
-                    ( مشاهده قوانین ، هشدارها و تذکرات )
-                </a>
-            </p>
-        </div>
+
 
     </div>
+    <div style="display:block" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 js-toggler is-fade t_t_addres_map p0"
+        id="t_t_addres_map">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p_0_10_i">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                آدرس
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_text f_r p0">
+            <?= $bank_mashaghel_value->jobs_address; ?>
+            </div>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 box p_0_10_i">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title f_r p0">
+                موقعیت
+            </div>
+            <div class="col-lg-12 col-md-11 col-sm-12 col-xs-12 fild_map f_r m0 p0">
+                <div style="height: 200px;" id="map"></div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 footer p0">
+        <p class="f_r">
+            توجه : هرگونه مسولیت محتوا ه عهده صاحب پست می باشد .
+            <a href="">
+                ( مشاهده قوانین ، هشدارها و تذکرات )
+            </a>
+        </p>
+    </div>
+
 </div>
 
+
+<script type="text/javascript">
+
+var options = {
+    center: [<?= $bank_mashaghel_value->jobs_latitude; ?>, <?= $bank_mashaghel_value->jobs_longitude; ?>],
+    zoom: 18
+}
+
+var map = L.map('map', options);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'})
+.addTo(map);
+
+// map.on('click', 
+// 	function(e){
+// 		//var coord = e.latlng.toString().split(',');
+// 		//var lat = coord[0].split('(');
+// 		//var lng = coord[1].split(')');
+// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
+// 		L.marker(e.latlng).addTo(map);
+// 	});
+
+var myMarker = L.marker([<?= $bank_mashaghel_value->jobs_latitude; ?>, <?= $bank_mashaghel_value->jobs_longitude; ?>], {title: "<?= $bank_mashaghel_value->jobs_title; ?>", alt: "The Big I", draggable: true})
+.addTo(map)
+.on('dragend', function() {
+    var coord = String(myMarker.getLatLng()).split(',');
+    console.log(coord);
+    var lat = coord[0].split('(');
+    console.log(lat);
+    var lng = coord[1].split(')');
+    console.log(lng);
+    myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
+});
+
+</script>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 users_point title_global p0">
 
@@ -679,19 +572,11 @@
             </div>
         </div>
     </div>
+
 </div>
 
 
-
 <?php } ?>
-
-
-
-
-
-
-
-
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head similar_jobs title_global p0">
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head t_align p0">
@@ -803,11 +688,6 @@
 
 
 
-
-
-
-
-
 </div>
 
 
@@ -817,42 +697,10 @@
 
 
 
-<script>
-var position = [40.748774, -73.985763];
-
-function initialize() {
-    var latlng = new google.maps.LatLng(position[0], position[1]);
-    var myOptions = {
-        zoom: 16,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById("map"), myOptions);
-
-    marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        title: "Latitude:" + position[0] + " | Longitude:" + position[1]
-    });
-
-
-}
-
-//Load google map
-google.maps.event.addDomListener(window, 'load', initialize);
-</script>
-
-
-
-
-
 
 
 
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
-
-
-
 
 <!--    Script For This Page     -->
 
@@ -876,76 +724,136 @@ var swiper = new Swiper('.swiper_bankMashaghel', {
     },
 });
 </script>
+
+
 <script>
 function myFunction() {
-
+    var btn_t_t_clip = document.getElementById("btn_t_t_clip");
     var btn_t_t_tozihat = document.getElementById("btn_t_t_tozihat");
     var btn_t_t_emkanat = document.getElementById("btn_t_t_emkanat");
+    var btn_t_t_tarafe_gharardad = document.getElementById("btn_t_t_tarafe_gharardad");
+    var btn_t_t_saate_kari = document.getElementById("btn_t_t_saate_kari");
+
     var btn_t_t_etelaat_tamas = document.getElementById("btn_t_t_etelaat_tamas");
     var btn_t_t_shabake_ejtemaei = document.getElementById("btn_t_t_shabake_ejtemaei");
     var btn_t_t_addres_map = document.getElementById("btn_t_t_addres_map");
+
+    var btn_t_t_sharayet_foroosh = document.getElementById("btn_t_t_sharayet_foroosh");
+
     var btn_t_t_menu_list_khadamat = document.getElementById("btn_t_t_menu_list_khadamat");
 
+    var btn_t_t_loh_taghdirname = document.getElementById("btn_t_t_loh_taghdirname");
+    var btn_t_t_mojavezha = document.getElementById("btn_t_t_mojavezha");
 
+
+
+
+    var t_t_clip = document.getElementById("t_t_clip");
     var t_t_tozihat = document.getElementById("t_t_tozihat");
     var t_t_emkanat = document.getElementById("t_t_emkanat");
+    var t_t_tarafe_gharardad = document.getElementById("t_t_tarafe_gharardad");
+    var t_t_saate_kari = document.getElementById("t_t_saate_kari");
+
     var t_t_etelaat_tamas = document.getElementById("t_t_etelaat_tamas");
     var t_t_shabake_ejtemaei = document.getElementById("t_t_shabake_ejtemaei");
     var t_t_addres_map = document.getElementById("t_t_addres_map");
+
+    var t_t_sharayet_foroosh = document.getElementById("t_t_sharayet_foroosh");
+
     var t_t_menu_list_khadamat = document.getElementById("t_t_menu_list_khadamat");
 
+    var t_t_loh_taghdirname = document.getElementById("t_t_loh_taghdirname");
+    var t_t_mojavezha = document.getElementById("t_t_mojavezha");
 
+
+
+    if (btn_t_t_clip.checked == true) {
+        t_t_clip.style.display = "block";
+        btn_t_t_tozihat.checked = false;
+    } else {
+        t_t_clip.style.display = "none";
+    }
     if (btn_t_t_tozihat.checked == true) {
         t_t_tozihat.style.display = "block";
-        btn_t_t_emkanat.checked = false;
+        btn_t_t_clip.checked = false;
     } else {
         t_t_tozihat.style.display = "none";
     }
+
     if (btn_t_t_emkanat.checked == true) {
         t_t_emkanat.style.display = "block";
-        btn_t_t_tozihat.checked = false;
+        btn_t_t_tarafe_gharardad.checked = false;
     } else {
         t_t_emkanat.style.display = "none";
     }
+    if (btn_t_t_tarafe_gharardad.checked == true) {
+        btn_t_t_emkanat.checked = false;
+        t_t_tarafe_gharardad.style.display = "block";
+    } else {
+        t_t_tarafe_gharardad.style.display = "none";
+    }
 
-
+    if (btn_t_t_saate_kari.checked == true) {
+        t_t_saate_kari.style.display = "block";
+        btn_t_t_etelaat_tamas.checked = false;
+    } else {
+        t_t_saate_kari.style.display = "none";
+    }
     if (btn_t_t_etelaat_tamas.checked == true) {
         t_t_etelaat_tamas.style.display = "block";
-        btn_t_t_shabake_ejtemaei.checked = false;
+        btn_t_t_saate_kari.checked = false;
     } else {
         t_t_etelaat_tamas.style.display = "none";
     }
+
     if (btn_t_t_shabake_ejtemaei.checked == true) {
         t_t_shabake_ejtemaei.style.display = "block";
-        btn_t_t_etelaat_tamas.checked = false;
+        btn_t_t_addres_map.checked = false;
     } else {
         t_t_shabake_ejtemaei.style.display = "none";
     }
-
-
     if (btn_t_t_addres_map.checked == true) {
         t_t_addres_map.style.display = "block";
-        btn_t_t_menu_list_khadamat.checked = false;
+        btn_t_t_shabake_ejtemaei.checked = false;
     } else {
         t_t_addres_map.style.display = "none";
     }
+
+    if (btn_t_t_sharayet_foroosh.checked == true) {
+        t_t_sharayet_foroosh.style.display = "block";
+        btn_t_t_menu_list_khadamat.checked = false;
+    } else {
+        t_t_sharayet_foroosh.style.display = "none";
+    }
     if (btn_t_t_menu_list_khadamat.checked == true) {
         t_t_menu_list_khadamat.style.display = "block";
-        btn_t_t_addres_map.checked = false;
+        btn_t_t_sharayet_foroosh.checked = false;
     } else {
         t_t_menu_list_khadamat.style.display = "none";
     }
 
-
+    if (btn_t_t_loh_taghdirname.checked == true) {
+        t_t_loh_taghdirname.style.display = "block";
+        btn_t_t_mojavezha.checked = false;
+    } else {
+        t_t_loh_taghdirname.style.display = "none";
+    }
+    if (btn_t_t_mojavezha.checked == true) {
+        t_t_mojavezha.style.display = "block";
+        btn_t_t_loh_taghdirname.checked = false;
+    } else {
+        t_t_mojavezha.style.display = "none";
+    }
 }
 </script>
 
+
 <script>
 function myFunction_2() {
-    var btn_t_t_tozihat = document.getElementById("btn_t_t_tozihat");
+    var btn_t_t_clip = document.getElementById("btn_t_t_clip");
 
-    if (btn_t_t_tozihat.checked == true) {
-        btn_t_t_tozihat.checked = false;
+    if (btn_t_t_clip.checked == true) {
+        btn_t_t_clip.checked = false;
     }
 
 }
@@ -953,10 +861,10 @@ function myFunction_2() {
 
 <script>
 function myFunction_3() {
-    var btn_t_t_etelaat_tamas = document.getElementById("btn_t_t_etelaat_tamas");
+    var btn_t_t_emkanat = document.getElementById("btn_t_t_emkanat");
 
-    if (btn_t_t_etelaat_tamas.checked == true) {
-        btn_t_t_etelaat_tamas.checked = false;
+    if (btn_t_t_emkanat.checked == true) {
+        btn_t_t_emkanat.checked = false;
     }
 
 }
@@ -964,14 +872,48 @@ function myFunction_3() {
 
 <script>
 function myFunction_4() {
-    var btn_t_t_addres_map = document.getElementById("btn_t_t_addres_map");
+    var btn_t_t_saate_kari = document.getElementById("btn_t_t_saate_kari");
 
-    if (btn_t_t_addres_map.checked == true) {
-        btn_t_t_addres_map.checked = false;
+    if (btn_t_t_saate_kari.checked == true) {
+        btn_t_t_saate_kari.checked = false;
     }
 
 }
 </script>
+
+<script>
+function myFunction_5() {
+    var btn_t_t_shabake_ejtemaei = document.getElementById("btn_t_t_shabake_ejtemaei");
+
+    if (btn_t_t_shabake_ejtemaei.checked == true) {
+        btn_t_t_shabake_ejtemaei.checked = false;
+    }
+
+}
+</script>
+
+<script>
+function myFunction_6() {
+    var btn_t_t_sharayet_foroosh = document.getElementById("btn_t_t_sharayet_foroosh");
+
+    if (btn_t_t_sharayet_foroosh.checked == true) {
+        btn_t_t_sharayet_foroosh.checked = false;
+    }
+
+}
+</script>
+
+<script>
+function myFunction_7() {
+    var btn_t_t_loh_taghdirname = document.getElementById("btn_t_t_loh_taghdirname");
+
+    if (btn_t_t_loh_taghdirname.checked == true) {
+        btn_t_t_loh_taghdirname.checked = false;
+    }
+
+}
+</script>
+
 
 
 

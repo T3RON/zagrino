@@ -37,6 +37,7 @@
                         </div>
                     </a>
                 </div>
+                
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <?php foreach($jobs_cate as $jobs_cate_value) { ?>
@@ -61,6 +62,7 @@
                     </a>
                 </div>
             </div>
+
             <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
                 <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
@@ -115,156 +117,7 @@
         </div>
 
         <!-- Takhfifat -->
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Takhfifat section_head p0">
-            <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs f_r outer r p0">
-                <div class="inner p0">فهرست</div>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 f_l outer l p0">
-                <div class="inner p0">تخفیفات</div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
-                <div class="col-lg-10 col-md-10 col-sm-10 hidden-xs title f_r p0">
-                    <a href="">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
-                                <i class="icon-long-arrow-right"></i>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 see_all f_l p0">
-                                مشاهده همه
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
-                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
-                                <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in off_in_green p0">20% تخفیف</div>
-                            </div>
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
-                            <a href="" class="title f_r p0">رستوران خاطره</a>
-                            <span class="Location f_l p0">نهاوند</span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
-                            <span class="f_r ticket p0">5
-                                <i class="icon-ticket"></i>
-                            </span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 price p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 old f_r p0">۷۰۰۰۰</div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 new f_l taling_left p0">
-                                <span class="new_price">۵۰۰۰۰</span>
-                                <span>تومان</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 see_buy f_r p0">
-                            <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده و خرید</button>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
-                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
-                            </div>
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
-                            <a href="" class="title f_r p0">رستوران خاطره</a>
-                            <span class="Location f_l p0">نهاوند</span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
-                            <span class="f_r ticket p0">5
-                                <i class="icon-ticket"></i>
-                            </span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 price p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 old f_r p0">۷۰۰۰۰</div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 new f_l taling_left p0">
-                                <span class="new_price">۵۰۰۰۰</span>
-                                <span>تومان</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 see_buy f_r p0">
-                            <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده و خرید</button>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-                            <div class="col-lg-5 col-md-5 col-sm-6 col-xs-7 off_out p0">
-                            <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 off_in p0">20% تخفیف</div>
-                            </div>
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head p0">
-                            <a href="" class="title f_r p0">رستوران خاطره</a>
-                            <span class="Location f_l p0">نهاوند</span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 button_group p0">
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0 p0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_icon-18-bookmark_315215.svg" class="img-responsive" alt=""></button>
-                            <button type="button" class="btn_global m0"><img src="<?=base_url('')?>assets/site/svg/iconfinder_heart-01_186400.svg" class="img-responsive" alt=""></button>
-                            <span class="f_r ticket p0">5
-                                <i class="icon-ticket"></i>
-                            </span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 price p0">
-                            <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 old f_r p0">۷۰۰۰۰</div>
-                            <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 new f_l taling_left p0">
-                                <span class="new_price">۵۰۰۰۰</span>
-                                <span>تومان</span>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 see_buy f_r p0">
-                            <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده و خرید</button>
-                        </div>
-                    </li>
-                </ul>
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">
-                    <a href="">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover_2">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 arrow f_r p0">
-                                <i class="icon-long-arrow-right"></i>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-11 see_all f_l p0">
-                                مشاهده همه
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
+    
 
 
         <!-- Agahiha_Niazmandiha -->
@@ -575,128 +428,7 @@
 
 
 
-        <!-- Bazarche -->
-        <div  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Bazarche section_head p0">
-            <div class="col-lg-3 col-md-3 col-sm-3 hidden-xs f_r outer r p0">
-                <div class="inner p0">فهرست</div>
-            </div>
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 f_l outer l p0">
-                <div class="inner p0">بازارچه</div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 right_side f_r p0">
-                <div class="col-lg-10 col-md-10 col-sm-10 hidden-xs title f_r p0">
-                    <a href="">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 arrow f_r p0">
-                                <i class="icon-long-arrow-right"></i>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 see_all f_l p0">
-                                مشاهده همه
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
-                    <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-                            دسته بندی ۱
-                        </a></li>
-                    </ul>
-                </div>
-            </div>
 
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side f_l p0">
-                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom p0">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 Location t_align f_l p0">آدرس</div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 number t_align f_r p0">10 محصول</div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom p0">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 Location t_align f_l p0">آدرس</div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 number t_align f_r p0">10 محصول</div>
-                        </div>
-                    </li>
-                    <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 big_img p0">
-                            <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                        </div>
-                        <div class="col-lg-12 col-md-12 hidden-sm hidden-xs small_img p0">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-                                <a href=""><img src="<?=base_url('')?>assets/site/img/Band.jpg" class="img-responsive" alt="" title=""></a>
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a href="">فروشگاه عمده</a></div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 bottom p0">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 Location t_align f_l p0">آدرس</div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 number t_align f_r p0">10 محصول</div>
-                        </div>
-                    </li>
-                </ul>
-                <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">
-                    <a href="">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 hover_2">
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-1 arrow f_r p0">
-                                <i class="icon-long-arrow-right"></i>
-                            </div>
-                            <div class="col-lg-8 col-md-8 col-sm-8 col-xs-11 see_all f_l p0">
-                                مشاهده همه
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
 
 
 

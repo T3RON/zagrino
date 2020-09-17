@@ -21,7 +21,8 @@ class Agahi extends CI_Panel {
         $output['slider'] = $this->Menu_Model->select('slider');
         $output['text'] = $this->Menu_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
+        
+        $output['agahi_cate'] = $this->MY_Model->select_limit('agahi_cate','10');
 
      
         $output['title'] = "كاربران";

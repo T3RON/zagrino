@@ -1,4 +1,6 @@
 <?php
+include_once(APPPATH.'core/CI_Panel.php');
+
 /**
  * Created by PhpStorm.
  * User: acer
@@ -6,7 +8,7 @@
  * Time: 04:13 AM
  */
 
-class Vof extends CI_Controller {
+class Vof extends CI_Panel {
     function __construct()
     {
         parent::__construct();

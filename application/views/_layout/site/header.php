@@ -116,14 +116,14 @@
                     </button>
 
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-6 t_align box_up p0">
+                <!-- <div class="col-lg-6 col-md-6 col-sm-4 col-xs-6 t_align box_up p0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box">
                         سبد خرید
                         <span class="f_l p0">
                             3
                         </span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 hidden-xs top_header p0">
@@ -230,14 +230,14 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4 col-md-12 col-sm-4 col-xs-4 t_align box_up ">
+                    <!-- <div class="col-lg-4 col-md-12 col-sm-4 col-xs-4 t_align box_up ">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 box">
                             سبد خرید
                             <span class="f_l p0">
                                 3
                             </span>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-lg-3 col-md-9 col-sm-6 col-xs-12 login p0">
                     <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 f_r place">
