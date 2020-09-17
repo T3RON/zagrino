@@ -10,6 +10,13 @@ class Accounts extends MY_Controller {
     function __construct()
     {
         parent::__construct();
+        $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
+        $this->load->library('ion_auth');
+        $this->load->library('Jdf');
+        $this->load->library('user_agent');
+        $this->load->helper('url');
+        $this->load->helper('form');
     }
 
     function index()
@@ -20,11 +27,10 @@ class Accounts extends MY_Controller {
         $crud->set_table('zgr_accounts');
         $crud->set_subject('كاربران');
 
-        $crud->columns('account_reg_date','account_mobile','account_email','account_ln','account_fn','account_username');
-        $crud->display_as('account_id','شناسه');
+        $crud->columns('account_reg_date','account_mobile','account_email','account_ln','account_fn','accounts_id');
+        $crud->display_as('accounts_id','شناسه');
         $crud->display_as('account_fn','نام');
         $crud->display_as('account_ln','نام خانوادگي');
-        $crud->display_as('account_username','نام كاربري');
         $crud->display_as('account_pass','گذرواژه');
         $crud->display_as('account_email','ايميل');
         $crud->display_as('account_mobile','موبايل');
@@ -34,37 +40,37 @@ class Accounts extends MY_Controller {
         $crud->display_as('account_address','آدرس');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
-        $crud->display_as('account_reg_date','تاريخ ثبت نام');
-        $crud->display_as('account_up_date','تاريخ آخرين آپديت');
+        $crud->display_as('register_date','تاريخ ثبت نام');
+        $crud->display_as('update_date','تاريخ آخرين آپديت');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('account_active_code','كد فعال سازي');
         $crud->display_as('account_avatar','عكس پروفايل');
-        $crud->display_as('account_map_latitude','عرض جغرافيايي');
-        $crud->display_as('account_map_longitude','طول جغرافيايي');
         $crud->display_as('account_sex','جنسيت');
         $crud->display_as('account_age','سن');
         $crud->display_as('account_about','درباره من');
-        $crud->display_as('account_level','سطح كاربري');
      
 
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
         
+
        
+        $crud->change_field_type('account_pass','invisible');
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('account_id');
-        $crud->unset_edit_fields('account_id');
-        
-        $crud->field_type('account_reg_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->field_type('account_up_date', 'hidden', $this->jdf->jdate('l, j F Y',time(),'','GMT'));
-        $crud->unset_edit_fields('account_reg_date');
-        $crud->unset_add_fields('account_up_date');
+     
+
+        $crud->unset_fields('account_active_code');
+
         $crud->set_field_upload('account_avatar','assets/uploads/files');
         //$crud->field_type('username','date');
 
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
 
         //$crud->required_fields('username');
 
@@ -94,8 +100,8 @@ class Accounts extends MY_Controller {
                 );
 
                 $config = array(
-                    'main_table' => 'zgr_jobs',
-                    'main_table_primary' => 'jobs_id',
+                    'main_table' => 'zgr_accounts',
+                    'main_table_primary' => 'accounts_id',
                     "url" => base_url().'admin/'. __CLASS__ . '/' . __FUNCTION__ .  '/'
                     //'ajax_loader' => base_url() . 'ajax-loader.gif', // path to ajax-loader image. It's an optional parameter
                     //'segment_name' =>'get_items' // It's an optional parameter. by default "get_items"
@@ -116,6 +122,8 @@ class Accounts extends MY_Controller {
         $this->load->view('admin/index',$output);
 
     }
+
+ 
 
 
 }

@@ -18,6 +18,8 @@ class MY_Controller extends CI_Controller
         $this->load->helper('url');
         $this->load->helper('form');
 
+
+
         $this->load->vars(array(
             'home_page' => FALSE
         ));

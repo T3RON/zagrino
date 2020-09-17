@@ -100,6 +100,7 @@ class Jobs extends MY_Controller {
 
         $crud->callback_before_insert(array($this,'calculate'));
         $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('state_id',array($this,'_change_state_id'));
         $crud->callback_column('register_date',array($this,'_change_reg_date'));
         $crud->callback_column('update_date',array($this,'_change_reg_date'));
         $crud->unset_edit_fields('register_date');
@@ -205,6 +206,7 @@ class Jobs extends MY_Controller {
         }
         
     }
+ 
 
     public function _change_reg_date($value, $row)
     {
