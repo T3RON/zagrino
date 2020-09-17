@@ -60,7 +60,8 @@ class Accounts extends MY_Controller {
 
         $this->load->library('gc_dependent_select');
 
-     
+        $crud->unset_clone();
+        $crud->unset_add();
 
         $crud->unset_fields('account_active_code');
 

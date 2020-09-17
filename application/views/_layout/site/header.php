@@ -178,7 +178,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
+                                        <!-- <div class="col-lg-4 header-pick-modal p0">
                                             <a href="<?= base_url('site/takhfif/Takhfif'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/sale.svg" alt="">
@@ -187,7 +187,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> -->
                                         <div class="col-lg-4 header-pick-modal p0">
                                             <a href="<?= base_url('site/Agahi/Agahi'); ?>">
                                                 <div class="t_align all">

@@ -2787,6 +2787,7 @@ a {
 }
 
 .niazmandiha_form .all {
+    direction: rtl;
     margin: 20px 0;
     border: 2px dotted #dcdcdc;
     border-radius: 20px;
@@ -5427,7 +5428,7 @@ ul.v-slides {
         background-color: #ed1b24;
     }
     .niazmandiha_form .all .foot .foot_in div {
-        line-height: 6;
+        line-height: 5;
     }
 }
 
