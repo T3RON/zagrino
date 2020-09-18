@@ -7,7 +7,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class BankMashaghelVizhe extends CI_Panel {
+class BankMashaghelVizhe extends CI_Controller {
     function __construct()
     {
         parent::__construct();

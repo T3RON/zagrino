@@ -64,7 +64,6 @@
                   <li><a href="<?= base_url('admin/Atarefe'); ?>"><i class="fa fa-circle-o"></i>تعرفه </a></li>
                   <li><a href="<?= base_url('admin/Ashow_time'); ?>"><i class="fa fa-circle-o"></i>زمان نمايش</a></li>
                   <li><a href="<?= base_url('admin/Acond_tag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a></li>
-                  <li><a href="<?= base_url('admin/Atag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
                   <li><a href="<?= base_url('admin/Akala_state'); ?>"><i class="fa fa-circle-o"></i>وضعيت كالا</a></li>
                
                 </ul>

@@ -33,6 +33,7 @@ class Index extends CI_Controller {
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','10');
         $output['bank_mashaghel'] = $this->Menu_Model->select_two_orderBy('jobs','state_id','DESC','register_date','ASC');
+        $output['Agahi'] = $this->Menu_Model->join_three_withOrderBy('agahi','state','agahi_cate','city','agahi.state_id','DESC','register_date','ASC');
 
 
       

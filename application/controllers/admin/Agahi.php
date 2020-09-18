@@ -37,7 +37,7 @@ class Agahi extends MY_Controller {
         $crud->display_as('agahi_tell','تلفن ثابت');
         $crud->display_as('agahi_latitude','طول جغرافيايي');
         $crud->display_as('agahi_longitude','عرض جغرافيايي');
-        $crud->display_as('agahi_tag_conditions_id','برچسب شرايط');
+        $crud->display_as('agahi_cond_tag_id','برچسب شرايط');
         $crud->display_as('agahi_address','آدرس');
         $crud->display_as('agahi_tag_id','برچسب');
         $crud->display_as('agahi_price','قيمت');
@@ -60,6 +60,7 @@ class Agahi extends MY_Controller {
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('agahi_state_kala_id','agahi_state_kala','agahi_state_kala_title');
+        $crud->set_relation('agahi_cond_tag_id','agahi_cond_tag','agahi_cond_tag_title');
         $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
         $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
         $crud->set_relation('price_id','price','price_amount');

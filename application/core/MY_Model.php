@@ -66,6 +66,16 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+	function join_one_withOrderBy($table,$table_join,$field_order_by_one,$type_order_by_one,$field_order_by_two,$type_order_by_two) {
+		$this->db->select('*');
+		$this->db->from($table);
+		$this->db->join($table_join, $table.'.'.$table_join.'_id = '.$table_join.'.'.$table_join.'_id');
+		$this->db->order_by($field_order_by_one,$type_order_by_one);
+		$this->db->order_by($field_order_by_two,$type_order_by_two);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 
     function join_two($table,$table_one,$table_two) {
         $this->db->select('*');
@@ -75,6 +85,17 @@ class MY_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+	function join_two_withOrderBy($table,$table_one,$table_two,$field_order_by_one,$type_order_by_one,$field_order_by_two,$type_order_by_two) {
+		$this->db->select('*');
+		$this->db->from($table);
+		$this->db->join($table_one, $table.'.'.$table_one.'_id = '.$table_one.'.'.$table_one.'_id');
+		$this->db->join($table_two, $table.'.'.$table_two.'_id = '.$table_two.'.'.$table_two.'_id');
+		$this->db->order_by($field_order_by_one,$type_order_by_one);
+		$this->db->order_by($field_order_by_two,$type_order_by_two);
+		$query = $this->db->get();
+		return $query->result();
+	}
 
     function show_join_two($table,$table_one,$table_two,$table_where,$table_w,$id) {
         $this->db->select('*');
@@ -95,6 +116,20 @@ class MY_Model extends CI_Model {
         $query = $this->db->get();
         return $query->result();
     }
+
+	function join_three_withOrderBy($table,$table_one,$table_two,$table_three,$field_order_by_one,$type_order_by_one,$field_order_by_two,$type_order_by_two) {
+		$this->db->select('*');
+		$this->db->from($table);
+		$this->db->join($table_one, $table.'.'.$table_one.'_id = '.$table_one.'.'.$table_one.'_id');
+		$this->db->join($table_two, $table.'.'.$table_two.'_id = '.$table_two.'.'.$table_two.'_id');
+		$this->db->join($table_three, $table.'.'.$table_three.'_id = '.$table_three.'.'.$table_three.'_id');
+		$this->db->order_by($field_order_by_one,$type_order_by_one);
+		$this->db->order_by($field_order_by_two,$type_order_by_two);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
+
 
     function show_join_three($table,$table_one,$table_two,$table_three,$table_where,$id) {
         $this->db->select('*');

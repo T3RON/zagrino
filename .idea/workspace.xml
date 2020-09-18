@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/application/controllers/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Agahi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Agahi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Atag.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizhe.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizhe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/core/MY_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/_layout/admin/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/_layout/admin/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/Niazmandi-namayeshAgahi-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Agahi_show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/site/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/style.css" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1hgN9jnzpMnJZMe2b4OPvyvxRzf" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/controllers/site/Agahi" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\wamp64\www\zagrino\application\controllers\site\Agahi" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="" />
+      <created>1600428625364</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600428625364</updated>
+      <workItem from="1600428626752" duration="8339000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
