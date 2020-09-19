@@ -268,37 +268,17 @@
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package border_hoshtar f_r p0">
 				<div class="col-lg-3 col-md-3 col-sm-4 col-xs-5 f_r title">هشدار پلیس</div>
-				<div class="red ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-					گرافیک
-					است. چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی
-					مورد
-					نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته،
-					حال
-					و آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه
-					ای
-					علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام
-					و
-					دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد وزمان مورد نیاز شامل حروفچینی
-					دستاوردهای
-					اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد
-				</div>
-				<div class="green ">لورم ایپسوم متن</div>
-				<div class="green ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان
-					گرافیک
-					است.
-				</div>
-				<div class="green ">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت</div>
-				<div class="green ">دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده
-					قرار
-					گیرد
+				<div class="red ">
+				<?php foreach ($site as $site_value) { ?>
+				<?= $site_value->police_text; ?>
+				<?php } ?>
 				</div>
 			</div>
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package  f_l p0">
 
-				<form class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r niazmandi_send_pm">ارسال پیام به آگهی دهندی
-						:
+				<form method="post" action="<?= base_url("site/Agahi/AgahiShow/send_message"); ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r niazmandi_send_pm">ارسال پیام به آگهی دهندی:
 					</div>
 
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -308,7 +288,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input name="email" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -319,7 +299,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input name="mobile" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -330,7 +310,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input name="text" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -341,11 +321,14 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input name="sec_code" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
-					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 veri_code_niazmandi">۷۸۹۸</div>
-					<button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button">ارسال</button>
+					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 veri_code_niazmandi"><?= $rand_number; ?></div>
+					<input name="re_sec_code" type="hidden" value="<?= $rand_number; ?>">
+					
+
+					<button type="submit" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button">ارسال</button>
 				</form>
 			</div>
 

@@ -33,6 +33,7 @@ class Site extends MY_Controller {
         $crud->display_as('site_btn_two_link','لينك دكمه دوم');
         $crud->display_as('site_btn_two_ico','آيكون دكمه دوم');
         $crud->display_as('site_ads_text','متن تبليغاتي');
+        $crud->display_as('police_text','متن هشدار پلیس');
         $crud->display_as('API_KEY_ZARINPAL','كد api زرين پال');
         $crud->display_as('API_KEY_KAVENEGAR','كد api كاوه نگار');
         

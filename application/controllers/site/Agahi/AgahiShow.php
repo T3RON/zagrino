@@ -39,10 +39,30 @@ class AgahiShow extends CI_Controller {
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['agahi_cate'] = $this->MY_Model->select_limit('agahi_cate','5');
 
+        $output['rand_number'] = rand(1000,9999);
+
         
        
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Agahi_show', $output);
+       ب
+    }
+
+    function send_message() {
+      
+        $rand_code = $this->input->post('sec_code');
+        $re_rand_code = $this->input->post('re_sec_code');
+
+        $data = array(
+            'message_email' => $this->input->post('email'),
+            'message_mobile' => $this->input->post('mobile'),
+            'message_text' => $this->input->post('text')
+        );
+    
+    
+
+        if($re_rand_code == $rand_code) {
+            $this->MY_Model->insert('agahi_message', $data);
+        }
     }
 
 
