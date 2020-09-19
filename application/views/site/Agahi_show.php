@@ -94,6 +94,7 @@
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package right_col f_r flex_box p0">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 right_side flex_item f_r p0">
+
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper p0">
 						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img1; ?>"
 							 class="" alt="" title="">
@@ -101,20 +102,36 @@
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0"><?= $agahi_value->agahi_cond_tag_title; ?></div>
 						</div>
 					</div>
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12   p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img1; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img2; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img3; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img4; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img5; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img6; ?>"
-							 class="col-lg-4 col-md-4 col-sm-4 col-xs-4  p0">
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img1; ?>" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img2; ?>" class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img3; ?>"
+							 class="img-responsive">
+						</div>
+						
 					</div>
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img4; ?>"
+							 class="img-responsive">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img class="img-responsive"src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img5; ?>">
+						</div>
+						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
+							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img6; ?>"
+							 class="img-responsive">
+						</div>
+						
+					</div>
+
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side m_p_10 p0">
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">سایر آگهی های این کاربر</div>
@@ -234,7 +251,7 @@
                 // 		L.marker(e.latlng).addTo(map);
                 // 	});
 
-                var myMarker = L.marker([<?= $agahi_value->agahi_latitude; ?>, <?= $agahi_value->agahi_longitude; ?>], {title: "<?= $agahi_value->agahi_title; ?>", alt: "The Big I", draggable: true})
+                var myMarker = L.marker([<?= $agahi_value->agahi_latitude; ?>, <?= $agahi_value->agahi_longitude; ?>], {title: "", alt: "The Big I", draggable: true})
                     .addTo(map)
                     .on('dragend', function() {
                         var coord = String(myMarker.getLatLng()).split(',');
