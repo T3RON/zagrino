@@ -59,11 +59,16 @@ class AgahiShow extends CI_Controller {
             'message_text' => $this->input->post('text')
         );
     
-    
+        print_r($data);
+        exit;
 
         if($re_rand_code == $rand_code) {
-            $this->MY_Model->insert('agahi_message', $data);
-            redirect('site/Agahi/AgahiShow/index/'.$this->input->post('agahi_id').'');
+           
+            $t = $this->MY_Model->insert('agahi_message', $data);
+            
+            echo json_encode(array(
+				"statusCode"=>200
+			));
         }
     }
 

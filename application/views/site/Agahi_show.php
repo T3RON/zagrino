@@ -277,7 +277,7 @@
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package  f_l p0">
 
-				<form method="post" action="<?= base_url("site/Agahi/AgahiShow/send_message"); ?>" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0">
+				
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r niazmandi_send_pm">ارسال پیام به آگهی دهندی:
 					</div>
 
@@ -288,7 +288,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input name="email" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input id="email" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -299,7 +299,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input name="mobile" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input id="mobile" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -310,7 +310,7 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input name="text" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input id="text" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 
@@ -321,21 +321,23 @@
 							<span class="f_l p0"></span>
 						</div>
 						<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-							<input name="sec_code" id="fild_in_32" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<input id="sec_code"  type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 						</div>
 					</div>
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 veri_code_niazmandi"><?= $rand_number; ?></div>
-					<input name="re_sec_code" type="hidden" value="<?= $rand_number; ?>">
-					<input name="agahi_id" type="hidden" value="<?= $agahi_value->agahi_id; ?>">
+					<input id="re_sec_code" type="hidden" value="<?= $rand_number; ?>">
+					<input id="agahi_id" type="hidden" value="<?= $agahi_value->agahi_id; ?>">
 
-					<button type="submit" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button">ارسال</button>
-				</form>
+					<button type="submit" id="butsave" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button">ارسال</button>
+				
 			</div>
 
 		</div>
 
 	<?php } ?>
 </div>
+
+
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Agahiha_Niazmandiha section_head similar_jobs title_global p0">
@@ -529,6 +531,62 @@
             hashed.style.display = "inline";
         }
     }
+
+});
+</script>
+
+<script type="text/javascript">
+// $(document).ready(function() {
+// 	$('#butsave').on('click', function() {
+// 		alert("sdsds");
+// 		var email = $('#email').val();
+// 		var mobile = $('#mobile').val();
+// 		var text = $('#text').val();
+// 		var sec_code = $('#sec_code').val();
+// 		var re_sec_code = $('#re_sec_code').val();
+// 		var agahi_id = $('#agahi_id').val();
+// 		if(email!="" && mobile!="" && text!="" && sec_code!=""){
+// 			$("#submit_message").attr("disabled", "disabled");
+// 			$.ajax({
+// 				url: "<?php echo base_url('');?>site/Agahi/AgahiShow/send_message",
+// 				type: "POST",
+// 				data: {
+// 					email: email,
+// 					mobile: mobile,
+// 					text: text,
+// 					sec_code: sec_code,
+// 					re_sec_code: re_sec_code,
+// 					agahi_id: agahi_id
+// 				},
+// 				cache: false,
+// 				success: function(dataResult){
+// 					var dataResult = JSON.parse(dataResult);
+// 					if(dataResult.statusCode==200){
+// 						$("#butsave").removeAttr("disabled");
+// 						$('#fupForm').find('input:text').val('');
+// 						$("#success").show();
+// 						$('#success').html('Data added successfully !'); 						
+// 					}
+// 					else if(dataResult.statusCode==201){
+// 					   alert("Error occured !");
+// 					}
+					
+// 				}
+// 			});
+// 		}
+// 		else{
+// 			alert('Please fill all the field !');
+// 		}
+// 	});
+// });
+
+$(document).ready(function() {
+  $("#butsave").click(function () {
+    alert("Hello!");
+   
+  });
+});
+
 </script>
 
 
