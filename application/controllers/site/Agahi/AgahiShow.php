@@ -28,9 +28,6 @@ class AgahiShow extends CI_Controller {
         $output['agahi'] = $this->MY_Model->show_join_seven('agahi','agahi_cate','agahi_sub_cate','accounts','ostan','city','state','agahi_cond_tag','agahi',$id);
         $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs_service','jobs','rel_jobs_service','jobs',$id);
 
-
-    
-
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
         $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
@@ -44,15 +41,19 @@ class AgahiShow extends CI_Controller {
         
        
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-       ب
+        $this->load->view('site/Agahi_show', $output);
     }
 
     function send_message() {
+
+        $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
+        
       
         $rand_code = $this->input->post('sec_code');
         $re_rand_code = $this->input->post('re_sec_code');
 
         $data = array(
+            'agahi_id' => $this->input->post('agahi_id'),
             'message_email' => $this->input->post('email'),
             'message_mobile' => $this->input->post('mobile'),
             'message_text' => $this->input->post('text')
@@ -62,6 +63,7 @@ class AgahiShow extends CI_Controller {
 
         if($re_rand_code == $rand_code) {
             $this->MY_Model->insert('agahi_message', $data);
+            redirect('site/Agahi/AgahiShow/index/'.$this->input->post('agahi_id').'');
         }
     }
 

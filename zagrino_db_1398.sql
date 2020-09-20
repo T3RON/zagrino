@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Sep 19, 2020 at 08:50 AM
+-- Generation Time: Sep 20, 2020 at 08:39 AM
 -- Server version: 5.7.31
 -- PHP Version: 7.3.21
 
@@ -297,6 +297,38 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
   `agahi_image_url` text NOT NULL,
   PRIMARY KEY (`agahi_image_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_agahi_message`
+--
+
+DROP TABLE IF EXISTS `zgr_agahi_message`;
+CREATE TABLE IF NOT EXISTS `zgr_agahi_message` (
+  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+  `agahi_id` int(11) NOT NULL,
+  `message_email` text NOT NULL,
+  `message_text` text NOT NULL,
+  `message_mobile` text NOT NULL,
+  PRIMARY KEY (`message_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_message`
+--
+
+INSERT INTO `zgr_agahi_message` (`message_id`, `agahi_id`, `message_email`, `message_text`, `message_mobile`) VALUES
+(1, 0, 'dsd', 'dsd', 'dsd'),
+(2, 0, 'corssis248@gmail.com', 'ad', '0813 322 3907'),
+(3, 0, 'corssis248@gmail.com', 'ad', '0813 322 3907'),
+(4, 1, 'corssis248@gmail.com', 'dad', '0813 322 3907'),
+(5, 1, 'corssis248@gmail.com', 'dad', '0813 322 3907'),
+(6, 1, 'corssis248@gmail.com', 'xfd', '0813 322 3907'),
+(7, 1, 'corssis248@gmail.com', 'errerer', '0813 322 3907'),
+(8, 1, 'corssis248@gmail.com', 'ghgh', '0813 322 3907'),
+(9, 1, 'corssis248@gmail.com', 'ddfdf', '0813 322 3907'),
+(10, 1, 'corssis248@gmail.com', 'fsfdfdf', '0813 322 3907');
 
 -- --------------------------------------------------------
 
@@ -1747,6 +1779,7 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
   `site_btn_two_link` text NOT NULL,
   `site_btn_two_ico` text NOT NULL,
   `site_ads_text` text NOT NULL,
+  `police_text` text NOT NULL,
   `API_KEY_ZARINPAL` text NOT NULL,
   `API_KEY_KAVENEGAR` text NOT NULL,
   PRIMARY KEY (`site_id`)
@@ -1756,8 +1789,8 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
 -- Dumping data for table `zgr_site`
 --
 
-INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '', '');
+INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `police_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style=\"text-align: right;\">\n	این هشدار تست می باشد</p>\n', '', '');
 
 -- --------------------------------------------------------
 
@@ -1945,7 +1978,7 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1600447396, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1600529853, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
