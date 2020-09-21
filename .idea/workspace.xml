@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/application/controllers/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Agahi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Agahi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Atag.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizhe.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizhe.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/zagrino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zagrino.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/site/Agahi/AgahiShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/Agahi/AgahiShow.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/core/MY_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/_layout/admin/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/_layout/admin/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Niazmandi-namayeshAgahi-1.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Agahi_show.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/_layout/site/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/_layout/site/footer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/Agahi_show.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Agahi_show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/site/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/site/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/global.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +17,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
       <executable />
@@ -27,6 +25,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/application/core/MY_Model.php" root0="SKIP_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProjectId" id="1hgN9jnzpMnJZMe2b4OPvyvxRzf" />
   <component name="ProjectLevelVcsManager">
@@ -67,6 +68,7 @@
       <option name="presentableId" value="Default" />
       <updated>1600428625364</updated>
       <workItem from="1600428626752" duration="8339000" />
+      <workItem from="1600630431616" duration="2385000" />
     </task>
     <servers />
   </component>
@@ -78,7 +80,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

@@ -362,6 +362,15 @@ class MY_Model extends CI_Model {
         return $query->result();
     }
 
+	function select_single_where_limit($table,$tble_where,$id,$limit) {
+		$this->db->select('*');
+		$this->db->from($table);
+		$this->db->where($tble_where.'_id', $id);
+		$this->db->limit($limit);
+		$query = $this->db->get();
+		return $query->result();
+	}
+
     function insert ($data,$table) {
         $this->db->insert($data, $table);
         return ($this->db->affected_rows() != 1) ? false : true;

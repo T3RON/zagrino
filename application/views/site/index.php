@@ -181,7 +181,7 @@
 										<div
 											class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_tag f_r p0"><?= $Agahi_value->agahi_cate_title; ?></div>
 										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_title f_r p0">
-											<a href="<?= base_url('site/Agahi/AgahiShow'); ?>/index/<?= $Agahi_value->agahi_id; ?>">
+											<a href="<?= base_url('site/Agahi/AgahiShow'); ?>/index/<?= $Agahi_value->agahi_id; ?>/<?= $Agahi_value->accounts_id; ?>">
 												<?= $Agahi_value->agahi_title; ?>
 											</a></div>
 									</div>

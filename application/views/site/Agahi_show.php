@@ -137,6 +137,7 @@
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">سایر آگهی های این کاربر</div>
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 info_top p0">
 						<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+							<?php foreach ($another_agahi as $another_agahi_val) { ?>
 							<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
 								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
 									<img
@@ -144,11 +145,11 @@
 										class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
 
 								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
-									<div class="p_0_10">خدمات طراحی سایت</div>
+									<div class="p_0_10"><?= $another_agahi_val->agahi_title; ?></div>
 									<div class="hidden-xs observe f_r">
 										<i class="icon-eye f_r"></i>
 										<span>
-                                    5/5/98 تا 8/8/98
+                                    <?= $this->jdf->jdate('l, j F Y', $agahi_value->register_date, '', 'GMT'); ?> تا <?= $this->jdf->jdate('l, j F Y', $agahi_value->expire, '', 'GMT'); ?>
                                 </span>
 									</div>
 									<div class="observe f_r">
@@ -159,50 +160,7 @@
 									</div>
 								</div>
 							</li>
-							<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
-									<img
-										src="<?= base_url('') ?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png"
-										class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
-
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
-									<div class="p_0_10">خدمات طراحی سایت</div>
-									<div class="hidden-xs observe f_r">
-										<i class="icon-eye f_r"></i>
-										<span>
-                                    5/5/98 تا 8/8/98
-                                </span>
-									</div>
-									<div class="observe f_r">
-										<i class="icon-eye f_r"></i>
-										<span>
-                                    8585
-                                </span>
-									</div>
-								</div>
-							</li>
-							<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 niazmadi_sayer_agahi p0">
-								<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3  f_r niazmadi_sayer_agahi_img p0">
-									<img
-										src="<?= base_url('') ?>assets/site/img/Screen%20Shot%202019-08-04%20at%2011.20.21.png"
-										class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r p0"></div>
-
-								<div class="col-lg-9 col-md-9 col-sm-9 col-xs-9 point_section ">
-									<div class="p_0_10">خدمات طراحی سایت</div>
-									<div class="hidden-xs observe f_r">
-										<i class="icon-eye f_r"></i>
-										<span>
-                                    5/5/98 تا 8/8/98
-                                </span>
-									</div>
-									<div class="observe f_r">
-										<i class="icon-eye f_r"></i>
-										<span>
-                                    8585
-                                </span>
-									</div>
-								</div>
-							</li>
+							<?php } ?>
 						</ul>
 					</div>
 					<button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button_agahi">مشاهده همه آگهی های این
@@ -275,7 +233,7 @@
 				</div>
 			</div>
 
-			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package  f_l p0">
+			<div class="frm col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package f_l p0">
 
 				
 					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r niazmandi_send_pm">ارسال پیام به آگهی دهندی:
@@ -328,9 +286,16 @@
 					<input id="re_sec_code" type="hidden" value="<?= $rand_number; ?>">
 					<input id="agahi_id" type="hidden" value="<?= $agahi_value->agahi_id; ?>">
 
-					<button type="submit" id="butsave" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button">ارسال</button>
-				
+					<button type="submit" id="butsave" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button_agahi">ارسال</button>
+
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+						<div class="alert alert-success alert-dismissible" id="success" style="display:none;">
+							<a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+						</div>
+					</div>
 			</div>
+
+
 
 		</div>
 
@@ -535,59 +500,7 @@
 });
 </script>
 
-<script type="text/javascript">
-// $(document).ready(function() {
-// 	$('#butsave').on('click', function() {
-// 		alert("sdsds");
-// 		var email = $('#email').val();
-// 		var mobile = $('#mobile').val();
-// 		var text = $('#text').val();
-// 		var sec_code = $('#sec_code').val();
-// 		var re_sec_code = $('#re_sec_code').val();
-// 		var agahi_id = $('#agahi_id').val();
-// 		if(email!="" && mobile!="" && text!="" && sec_code!=""){
-// 			$("#submit_message").attr("disabled", "disabled");
-// 			$.ajax({
-// 				url: "<?php echo base_url('');?>site/Agahi/AgahiShow/send_message",
-// 				type: "POST",
-// 				data: {
-// 					email: email,
-// 					mobile: mobile,
-// 					text: text,
-// 					sec_code: sec_code,
-// 					re_sec_code: re_sec_code,
-// 					agahi_id: agahi_id
-// 				},
-// 				cache: false,
-// 				success: function(dataResult){
-// 					var dataResult = JSON.parse(dataResult);
-// 					if(dataResult.statusCode==200){
-// 						$("#butsave").removeAttr("disabled");
-// 						$('#fupForm').find('input:text').val('');
-// 						$("#success").show();
-// 						$('#success').html('Data added successfully !'); 						
-// 					}
-// 					else if(dataResult.statusCode==201){
-// 					   alert("Error occured !");
-// 					}
-					
-// 				}
-// 			});
-// 		}
-// 		else{
-// 			alert('Please fill all the field !');
-// 		}
-// 	});
-// });
 
-$(document).ready(function() {
-  $("#butsave").click(function () {
-    alert("Hello!");
-   
-  });
-});
-
-</script>
 
 
 <?php include_once(APPPATH . 'views/_layout/site/footer.php'); ?>

@@ -24,9 +24,11 @@ class AgahiShow extends CI_Controller {
     {
 
         $id = $this->uri->segment('5');
+        $accounts_id = $this->uri->segment('6');
 
         $output['agahi'] = $this->MY_Model->show_join_seven('agahi','agahi_cate','agahi_sub_cate','accounts','ostan','city','state','agahi_cond_tag','agahi',$id);
         $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs_service','jobs','rel_jobs_service','jobs',$id);
+		$output['another_agahi'] = $this->MY_Model->select_single_where('agahi','accounts',$accounts_id,3);
 
         $output['menu_top'] = $this->Menu_Model->select('menu');
         $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
@@ -58,9 +60,7 @@ class AgahiShow extends CI_Controller {
             'message_mobile' => $this->input->post('mobile'),
             'message_text' => $this->input->post('text')
         );
-    
-        print_r($data);
-        exit;
+
 
         if($re_rand_code == $rand_code) {
            
