@@ -220,10 +220,12 @@
 										</div>
 									</div>
 								</div>
+								<a href="<?= base_url('site/Agahi/AgahiShow'); ?>/index/<?= $Agahi_value->agahi_id; ?>/<?= $Agahi_value->accounts_id; ?>">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 t_align information">
 									<button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">اطلاعات آگهی . . .
 									</button>
 								</div>
+								</a>
 							</div>
 						</li>
 

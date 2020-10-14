@@ -177,11 +177,11 @@ class Tour extends CI_Panel {
         
     }
     function out_view($output = null) {
-        $output->menu_top = $this->Menu_Model->select('menu');
-        $output->menu_middel = $this->Menu_Model->select('secend_menu');
-        $output->footer_menu = $this->Menu_Model->select('footer_menu');
-        $output->slider = $this->Menu_Model->select('slider');
-        $output->text = $this->Menu_Model->select('text');
+        $output->menu_top = $this->MY_Model->select('menu');
+        $output->menu_middel = $this->MY_Model->select('secend_menu');
+        $output->footer_menu = $this->MY_Model->select('footer_menu');
+        $output->slider = $this->MY_Model->select('slider');
+        $output->text = $this->MY_Model->select('text');
         $output->site = $this->MY_Model->select_single('site','1');
         $output->title = "بانك نيازمندي ها";
         $output->des = "مديريت و بررسي نيازمندي موجود";

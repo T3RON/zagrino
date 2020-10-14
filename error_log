@@ -1,0 +1,36 @@
+[21-Sep-2020 21:16:54 UTC] PHP Parse error:  syntax error, unexpected ''nahavand_zagrino_db_13' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/config/database.php on line 81
+[21-Sep-2020 21:17:26 UTC] PHP Parse error:  syntax error, unexpected ''nahavand_zagrino_db_13' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/config/database.php on line 81
+[21-Sep-2020 21:17:27 UTC] PHP Parse error:  syntax error, unexpected ''nahavand_zagrino_db_13' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/config/database.php on line 81
+[21-Sep-2020 21:17:56 UTC] PHP Parse error:  syntax error, unexpected ''nahavand_zagrino_db_1' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/config/database.php on line 81
+[21-Sep-2020 21:18:44 UTC] PHP Parse error:  syntax error, unexpected ''nahavand_zagrino_db_13' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/config/database.php on line 81
+[22-Sep-2020 10:58:34 UTC] PHP Parse error:  syntax error, unexpected ''titl' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[22-Sep-2020 10:59:17 UTC] PHP Parse error:  syntax error, unexpected ''titl' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[22-Sep-2020 10:59:30 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[22-Sep-2020 10:59:59 UTC] PHP Parse error:  syntax error, unexpected ''titl' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[22-Sep-2020 11:05:28 UTC] PHP Parse error:  syntax error, unexpected ''titl' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[22-Sep-2020 11:05:40 UTC] PHP Parse error:  syntax error, unexpected ''titl' (T_ENCAPSED_AND_WHITESPACE), expecting ']' in /home/nahavand/public_html/zagrino/application/controllers/Index.php on line 40
+[23-Sep-2020 05:48:32 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Index.php on line 22
+[30-Sep-2020 08:57:01 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Jobs.php on line 231
+[30-Sep-2020 08:57:04 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Choose_gardeshgari.php on line 22
+[30-Sep-2020 08:57:12 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Choose_gardeshgari.php on line 22
+[30-Sep-2020 14:43:49 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Jobs.php on line 231
+[30-Sep-2020 14:44:48 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Jobs.php on line 231
+[30-Sep-2020 14:44:50 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Jobs.php on line 231
+[30-Sep-2020 14:45:12 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Jobs.php on line 231
+[30-Sep-2020 14:57:12 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Amlak.php on line 210
+[30-Sep-2020 14:59:14 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Car.php on line 223
+[30-Sep-2020 14:59:16 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Agahi.php on line 214
+[30-Sep-2020 14:59:19 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Agahi.php on line 214
+[30-Sep-2020 15:13:34 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Car.php on line 223
+[30-Sep-2020 15:13:36 GMT] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/panel/Agahi.php on line 214
+[13-Oct-2020 14:07:29 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[13-Oct-2020 14:08:42 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[13-Oct-2020 14:10:07 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[13-Oct-2020 14:10:23 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[13-Oct-2020 14:14:01 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[13-Oct-2020 14:14:29 UTC] PHP Parse error:  syntax error, unexpected ''jobs_s' (T_ENCAPSED_AND_WHITESPACE) in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelRaiganForm.php on line 46
+[13-Oct-2020 14:16:15 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelRaiganForm.php on line 19
+[13-Oct-2020 14:17:05 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelRaiganForm.php on line 19
+[13-Oct-2020 14:17:33 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelRaiganForm.php on line 19
+[14-Oct-2020 12:52:15 UTC] PHP Fatal error:  Call to a member function jdate() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelVizheForm.php on line 33
+[14-Oct-2020 12:52:31 UTC] PHP Fatal error:  Call to a member function select() on null in /home/nahavand/public_html/zagrino/application/controllers/site/work/BankMashaghelRaiganForm.php on line 19

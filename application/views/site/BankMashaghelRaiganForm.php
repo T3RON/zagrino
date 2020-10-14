@@ -19,7 +19,7 @@
 <!-- BODY -->
 
 <div id="pos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 " style="direction: rtl;">
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_e91e63 p0">
+    <div id="pos" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_e91e63 p0">
         فرم پنل مشاغل
     </div>
 
@@ -868,5 +868,10 @@ $(document).ready(function() {
         });
     </script>
 
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).scrollTop($("#pos").offset().top);
+});
+</script>
 
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

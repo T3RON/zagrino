@@ -338,13 +338,13 @@
                                 class="nav-link active">
                                 <div class="title">
                                     پروفايل خود را تكميل نماييد
-                                    <div class="d_n"></div>
+                                    <div class="d_n"></div> 
                                 </div>
                             </a>
                         </li>
         
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="<?= base_url('site/Panel/Show_panel'); ?>" class="nav-link active">
+                            <a href="<?= base_url('site/panel/Show_panel'); ?>" class="nav-link active">
                                 <div class="title">
                                     مدیریت پنل ها
                                     <div class="d_n"></div>
@@ -353,7 +353,7 @@
                         </li>
                
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="#panel_04" class="nav-link active">
+                            <a href="<?= base_url('site/panel/Emtiaz'); ?>" class="nav-link active">
                                 <div class="title">
                                     امتیاز من
                                     <div class="d_n"></div>
@@ -361,7 +361,7 @@
                             </a>
                         </li>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
-                            <a href="#panel_05" class="nav-link active">
+                            <a href="<?= base_url('site/panel/Wallet'); ?>" class="nav-link active">
                                 <div class="title">
                                     کیف پول
                                     <div class="d_n"></div>

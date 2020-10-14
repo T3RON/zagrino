@@ -152,12 +152,7 @@
                                     <?= $this->jdf->jdate('l, j F Y', $agahi_value->register_date, '', 'GMT'); ?> تا <?= $this->jdf->jdate('l, j F Y', $agahi_value->expire, '', 'GMT'); ?>
                                 </span>
 									</div>
-									<div class="observe f_r">
-										<i class="icon-eye f_r"></i>
-										<span>
-                                    8585
-                                </span>
-									</div>
+								
 								</div>
 							</li>
 							<?php } ?>

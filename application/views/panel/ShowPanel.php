@@ -5,7 +5,7 @@
 
 
 
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_panel f_l p0">
+<div id="pos" class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_panel f_l p0">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12  t_t_clip p0">
 
@@ -25,7 +25,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="<?= base_url('site/Panel/Choose_Agahi'); ?>">
+                            <a href="<?= base_url('site/panel/Choose_agahi'); ?>">
                         
                                 <span style="margin-left:10px;background:#237790;float:left;"
                                     class="badge badge-pill badge-primary">مشاهده بخش هاي آگهي</span>
@@ -37,7 +37,7 @@
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$takhfif != "0" ) { ?>
-                            <a href="<?= base_url('site/Panel/Choose_gardeshgari'); ?>">
+                            <a href="<?= base_url('site/panel/Choose_gardeshgari'); ?>">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $takhfif; ?></span>
                                 <span style="margin-left:10px;background:#237790;float:left;"
@@ -56,7 +56,7 @@
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$jobs != "0" ) { ?>
-                            <a href="<?= base_url('site/Panel/Jobs'); ?>">
+                            <a href="<?= base_url('site/panel/Jobs'); ?>">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $jobs; ?></span>
                                 <span style="margin-left:10px;background:#237790;float:left;"
@@ -74,7 +74,7 @@
 
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
-                            <a href="<?= base_url('site/Panel/Choose_gardeshgari'); ?>">
+                            <a href="<?= base_url('site/panel/Choose_gardeshgari'); ?>">
                                 
                                 <span style="margin-left:10px;background:#237790;float:left;"
                                     class="badge badge-pill badge-primary">مشاهده بخش ها</span>
@@ -105,7 +105,7 @@
                         <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$events != "0" ) { ?>
-                            <a href="<?= base_url('site/Panel/Events'); ?>">
+                            <a href="<?= base_url('site/panel/Events'); ?>">
                                 <span style="background:red;float:left;"
                                     class="badge badge-primary badge-pill"><?= $events; ?></span>
                                 <span style="margin-left:10px;background:#237790;float:left;"
@@ -148,5 +148,9 @@
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 clear_both"></div>
 
-
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).scrollTop($("#pos").offset().top);
+});
+</script>
 <?php include_once (APPPATH.'views/_layout/site/footer_panel.php'); ?>

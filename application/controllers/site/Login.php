@@ -10,7 +10,7 @@ class Login extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
+        $this->load->model('menu_model');
         $this->load->model('MY_Model');
         $this->load->library('ion_auth');
         $this->load->library('Jdf');
@@ -24,11 +24,11 @@ class Login extends CI_Controller {
         if( $this->session->userdata('logged_in')) {
             redirect('site/panel/index');
         }else {
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->menu_model->select('menu');
+        $output['slider'] = $this->menu_model->select('slider');
+        $output['menu_middel'] = $this->menu_model->select('secend_menu');
+        $output['footer_menu'] = $this->menu_model->select('footer_menu');
+        $output['text'] = $this->menu_model->select('text');
         $output['site'] = $this->MY_Model->select_single('site',1);
 
 

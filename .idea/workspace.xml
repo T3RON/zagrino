@@ -3,13 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/zagrino.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/zagrino.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/site/Agahi/AgahiShow.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/Agahi/AgahiShow.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/core/MY_Model.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/core/MY_Model.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/_layout/site/footer.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/_layout/site/footer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Agahi_show.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Agahi_show.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/site/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/site/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/global.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +63,7 @@
       <updated>1600428625364</updated>
       <workItem from="1600428626752" duration="8339000" />
       <workItem from="1600630431616" duration="2385000" />
+      <workItem from="1600715301990" duration="712000" />
     </task>
     <servers />
   </component>

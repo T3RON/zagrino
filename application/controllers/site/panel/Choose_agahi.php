@@ -19,11 +19,11 @@ class Choose_agahi extends CI_Panel {
     {
         //$this->check_logged();
    
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->MY_Model->select('menu');
+        $output['menu_middel'] = $this->MY_Model->select('secend_menu');
+        $output['footer_menu'] = $this->MY_Model->select('footer_menu');
+        $output['slider'] = $this->MY_Model->select('slider');
+        $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
 
 

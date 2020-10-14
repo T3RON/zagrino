@@ -8,7 +8,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Vof extends CI_Panel {
+class Vof extends CI_Controller {
     function __construct()
     {
         parent::__construct();
@@ -17,7 +17,6 @@ class Vof extends CI_Panel {
         $this->load->library('user_agent');
         $this->load->helper('url');
         $this->load->helper('form');
-        $this->load->model('Menu_Model');
         $this->load->model('MY_Model');
     }
 
@@ -28,11 +27,11 @@ class Vof extends CI_Panel {
 
         
 
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->MY_Model->select('menu');
+        $output['menu_middel'] = $this->MY_Model->select('secend_menu');
+        $output['footer_menu'] = $this->MY_Model->select('footer_menu');
+        $output['slider'] = $this->MY_Model->select('slider');
+        $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
 
         $this->load->vars(array(

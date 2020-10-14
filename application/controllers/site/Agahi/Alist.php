@@ -10,15 +10,15 @@ class Alist extends MY_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
+        $this->load->model('menu_model');
     }
 
     function index()
     {
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->menu_model->select('menu');
+        $output['menu_middel'] = $this->menu_model->select('secend_menu');
+        $output['slider'] = $this->menu_model->select('slider');
+        $output['text'] = $this->menu_model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['agahi_cate'] = $this->MY_Model->select('agahi_cate');
         $output['agahi'] = $this->MY_Model->select('agahi');
