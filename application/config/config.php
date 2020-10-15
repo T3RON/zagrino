@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://zagrino.nahavandflour.com/';
+$config['base_url'] = 'http://localhost/zagrino/';
 $config['thekey']='XhWQgd2YzM1CN1QEZQ8Q2uCBNqR2FxEt';
 
 /*
