@@ -7,10 +7,11 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class BankMashaghelVizheForm extends CI_Controller {
+class BankMashaghelVizheForm extends CI_Panel {
     function __construct()
     {
         parent::__construct();
+        $this->load->library('Jdf');
         $this->load->model('MY_Model');
     }
 
@@ -19,7 +20,6 @@ class BankMashaghelVizheForm extends CI_Controller {
         $output['menu_top'] = $this->MY_Model->select('menu');
         $output['menu_middel'] = $this->MY_Model->select('secend_menu');
         $output['footer_menu'] = $this->MY_Model->select('footer_menu');
-
         $output['slider'] = $this->MY_Model->select('slider');
         $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');

@@ -41,16 +41,7 @@
                 <!------------------------------------------------------------------  تکمیل فرم سفارش آگهی ------------>
 
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r fild">
-                    <div class="t_align fild_title p0">
-                        <span class="f_r p0"></span>
-                        <label for="sefaresh_cod_karbari" class="p0">شناسه کاربری</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    </div>
-                </div>
+     
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                     <div class="t_align fild_title  p0">

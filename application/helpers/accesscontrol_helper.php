@@ -9,9 +9,9 @@
             $is_logged_in = $CI->session->userdata('logged_in');
                if(!isset($is_logged_in) || $is_logged_in != true)
                {
-                //$CI->load->view('site/401');
-                echo 'شما اجازه دسترسي به اين صفحه را قبل از احراز هويت ندارين <a href="'.base_url('site/Login').'">ورود به سايت</a>';    
-                die();      
+                $CI->load->view('site/401');
+//                echo 'شما اجازه دسترسي به اين صفحه را قبل از احراز هويت ندارين <a href="'.base_url('site/Login').'">ورود به سايت</a>';
+//                die();
                }       
             }
  }
