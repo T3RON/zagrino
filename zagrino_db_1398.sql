@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.5
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost:3306
--- Generation Time: Oct 15, 2020 at 03:18 PM
--- Server version: 5.7.31-cll-lve
--- PHP Version: 7.3.6
+-- Host: 127.0.0.1
+-- Generation Time: Oct 26, 2020 at 11:53 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -19,7 +17,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nahavand_zagrino_db_1398`
+-- Database: `zagrino_db_1398`
 --
 
 -- --------------------------------------------------------
@@ -1221,6 +1219,8 @@ CREATE TABLE `zgr_jobs` (
   `img2` text,
   `img3` text,
   `img4` text,
+  `img5` text NOT NULL,
+  `img6` text NOT NULL,
   `jobs_shoar` text,
   `price_id` int(11) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
@@ -1232,12 +1232,13 @@ CREATE TABLE `zgr_jobs` (
 -- Dumping data for table `zgr_jobs`
 --
 
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_latitude`, `jobs_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
-(37, 7, 6, 1, 0, 0, 'كاشي كاري', 'كاشي و سراميك كريمي', NULL, NULL, '<p>\n	20</p>\n', NULL, NULL, NULL, NULL, NULL, NULL, 'ds', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<p>\n	33.89621114574323</p>\n', '<p>\n	48.750954837035195</p>\n', 0, 0, NULL, NULL, NULL, NULL, '<p></p>', NULL, '1600335904', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, NULL, 1, '1', 10),
-(38, 0, 0, 1, 0, 0, 'ghghgh', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
-(39, 7, 6, 1, 3, 2, 'dsdsadsad', 'كاشي و سراميك كريميds', 'سلام', 'سلام', 'سلام', '09192183440', '08133235664', '', 'seif4847@gmail.com', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, 0, 1, '1', 0),
-(40, 7, 5, 1, 2, 32, '6666', 'كاشي و سراميك كريميds', 'سلام', 'dsd', '20dsd', 'sds', 'ds', 'dsd', 'ds', 'ds', 'dsd', 'dsd', 'sdd', 'dsd', 'dsd', 'dsd', 'dsds', 'sddsd', 'dsd', '33.89621114574323', '48.750954837035195', 333, 33, 'dsdsds', 'dsdsd', 1, '', '<p></p>', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', 'digikala.png', 'a3ea1db8d76cdfe8ad265ec698640927.jpg', '635a8407dba385478294126520888bc8.jpg', '7f011227c2efd8e38264624ae7683806.jpg', 'sdsdsd', 2, 1, '1', 45),
-(41, 6, 10, 1, 18, 270, 'كاشي كاري', 'كاشي و سراميك كريميdsdsadsadsa', '<p>\n	sdsdsdsكاشي كاري</p>\n', '<p>\n	كاشي كاري</p>\n', '<p>\n	كاشي كاري</p>\n', '0813 322 3907', '08137591', '08137591', 'corssis248@gmail.com', '6591953977', 'وب سايت', 'dasd', 'dasd', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	كاشي كاري</p>\n', '33.89621114574323', '48.750954837035195', NULL, 845035, NULL, NULL, NULL, NULL, NULL, '1600335947', '1600338828', '6bc03-1.png', 'bf55e-1.png', NULL, NULL, NULL, 'تبلغ ما كيفيت ماست', NULL, 3, '1602928019', 30);
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_latitude`, `jobs_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
+(37, 7, 6, 1, 0, 0, 'كاشي كاري', 'كاشي و سراميك كريمي', NULL, NULL, '<p>\n	20</p>\n', NULL, NULL, NULL, NULL, NULL, NULL, 'ds', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '<p>\n	33.89621114574323</p>\n', '<p>\n	48.750954837035195</p>\n', 0, 0, NULL, NULL, NULL, NULL, '<p></p>', NULL, '1600335904', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '', '', NULL, NULL, 1, '1', 10),
+(38, 0, 0, 1, 0, 0, 'ghghgh', 'كاشي و سراميك كريمي', '', '', '20', '', '', '', '', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '', '', NULL, 0, 1, '1', 0),
+(39, 7, 6, 1, 3, 2, 'dsdsadsad', 'كاشي و سراميك كريميds', 'سلام', 'سلام', 'سلام', '09192183440', '08133235664', '', 'seif4847@gmail.com', '', '', '', '', '', '', '', '', '', NULL, '33.89621114574323', '48.750954837035195', 0, 0, '', NULL, NULL, '', '<p></p>', NULL, 'شنبه, ۱۰ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '', '', NULL, 0, 1, '1', 0),
+(40, 7, 5, 1, 2, 32, '6666', 'كاشي و سراميك كريميds', 'سلام', 'dsd', '20dsd', 'sds', 'ds', 'dsd', 'ds', 'ds', 'dsd', 'dsd', 'sdd', 'dsd', 'dsd', 'dsd', 'dsds', 'sddsd', 'dsd', '33.89621114574323', '48.750954837035195', 333, 33, 'dsdsds', 'dsdsd', 1, '', '<p></p>', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'یکشنبه, ۱۱ خرداد ۱۳۹۹', 'b6fec417673efb8a5bfb8a12eaa8362d.jpg', 'digikala.png', 'a3ea1db8d76cdfe8ad265ec698640927.jpg', '635a8407dba385478294126520888bc8.jpg', '7f011227c2efd8e38264624ae7683806.jpg', '', '', 'sdsdsd', 2, 1, '1', 45),
+(41, 6, 10, 1, 18, 270, 'كاشي كاري', 'كاشي و سراميك كريميdsdsadsadsa', '<p>\n	sdsdsdsكاشي كاري</p>\n', '<p>\n	كاشي كاري</p>\n', '<p>\n	كاشي كاري</p>\n', '0813 322 3907', '08137591', '08137591', 'corssis248@gmail.com', '6591953977', 'وب سايت', 'dasd', 'dasd', 'واتساپ', 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', '<p>\n	كاشي كاري</p>\n', '33.89621114574323', '48.750954837035195', NULL, 845035, NULL, NULL, NULL, NULL, NULL, '1600335947', '1600338828', '6bc03-1.png', 'bf55e-1.png', NULL, NULL, NULL, '', '', 'تبلغ ما كيفيت ماست', NULL, 3, '1602928019', 30),
+(42, 7, 9, 1, 19, 274, 'fasdfsdfsf', 'fdsfsd', 'fsdfsdfsdf', NULL, NULL, 'fsdfdsfsd', 'fsdfsdfsdf', NULL, 'fdsfsdfsdf', 'fdsfsdfsdfsdf', NULL, 'sdfsdfsdf', 'fdsfsdfd', NULL, NULL, NULL, NULL, NULL, 'fdsfsdfd', '33.896281', ' 48.751614', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'شنبه, ۳ آبان ۱۳۹۹', '', NULL, '<p></p>', 'ad2d7a1ca0376d4c53f997180baecb55.png', '<p></p>', 'e34bf4b5406aa095341c42849f586cfd.jpg', '', '', 'fdsfsdfsd', 0, 1, '1', 0);
 
 -- --------------------------------------------------------
 
@@ -1675,7 +1676,7 @@ CREATE TABLE `zgr_site` (
 --
 
 INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `police_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style=\"text-align: right;\">\n	این هشدار تست می باشد</p>\n', '', '');
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style="text-align: right;">\n	این هشدار تست می باشد</p>\n', '', '');
 
 -- --------------------------------------------------------
 
@@ -1849,7 +1850,7 @@ CREATE TABLE `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1602507348, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1603566904, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -2259,349 +2260,291 @@ ALTER TABLE `zgr_users_groups`
 --
 ALTER TABLE `zgr_accounts`
   MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_ads`
 --
 ALTER TABLE `zgr_ads`
   MODIFY `ads_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_amlak`
 --
 ALTER TABLE `zgr_agahi_amlak`
   MODIFY `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_car`
 --
 ALTER TABLE `zgr_agahi_car`
   MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_cate`
 --
 ALTER TABLE `zgr_agahi_cate`
   MODIFY `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_cond_tag`
 --
 ALTER TABLE `zgr_agahi_cond_tag`
   MODIFY `agahi_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_images`
 --
 ALTER TABLE `zgr_agahi_images`
   MODIFY `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_message`
 --
 ALTER TABLE `zgr_agahi_message`
   MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_state_kala`
 --
 ALTER TABLE `zgr_agahi_state_kala`
   MODIFY `agahi_state_kala_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_sub_cate`
 --
 ALTER TABLE `zgr_agahi_sub_cate`
   MODIFY `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_agahi_tarefe`
 --
 ALTER TABLE `zgr_agahi_tarefe`
   MODIFY `agahi_tarefe_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_amlak_cate`
 --
 ALTER TABLE `zgr_amlak_cate`
   MODIFY `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `zgr_amlak_cond_tag`
 --
 ALTER TABLE `zgr_amlak_cond_tag`
   MODIFY `amlak_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_amlak_tag`
 --
 ALTER TABLE `zgr_amlak_tag`
   MODIFY `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_body`
 --
 ALTER TABLE `zgr_car_body`
   MODIFY `car_body_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_cate`
 --
 ALTER TABLE `zgr_car_cate`
   MODIFY `car_cate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_cond_tag`
 --
 ALTER TABLE `zgr_car_cond_tag`
   MODIFY `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_sokht`
 --
 ALTER TABLE `zgr_car_sokht`
   MODIFY `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_state`
 --
 ALTER TABLE `zgr_car_state`
   MODIFY `car_state_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_sub_cate`
 --
 ALTER TABLE `zgr_car_sub_cate`
   MODIFY `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_tag`
 --
 ALTER TABLE `zgr_car_tag`
   MODIFY `car_tag_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_car_type`
 --
 ALTER TABLE `zgr_car_type`
   MODIFY `car_type_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_category`
 --
 ALTER TABLE `zgr_category`
   MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_events`
 --
 ALTER TABLE `zgr_events`
   MODIFY `events_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_events_level`
 --
 ALTER TABLE `zgr_events_level`
   MODIFY `events_level_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_events_run`
 --
 ALTER TABLE `zgr_events_run`
   MODIFY `events_run_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `zgr_events_type`
 --
 ALTER TABLE `zgr_events_type`
   MODIFY `events_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_footer_menu`
 --
 ALTER TABLE `zgr_footer_menu`
   MODIFY `footer_menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `zgr_gardeshgari`
 --
 ALTER TABLE `zgr_gardeshgari`
   MODIFY `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_groups`
 --
 ALTER TABLE `zgr_groups`
   MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `zgr_jobs`
 --
 ALTER TABLE `zgr_jobs`
-  MODIFY `jobs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
-
+  MODIFY `jobs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 --
 -- AUTO_INCREMENT for table `zgr_jobs_cate`
 --
 ALTER TABLE `zgr_jobs_cate`
   MODIFY `jobs_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
-
 --
 -- AUTO_INCREMENT for table `zgr_jobs_service`
 --
 ALTER TABLE `zgr_jobs_service`
   MODIFY `jobs_service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `zgr_jobs_sub_cate`
 --
 ALTER TABLE `zgr_jobs_sub_cate`
   MODIFY `jobs_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `zgr_kala`
 --
 ALTER TABLE `zgr_kala`
   MODIFY `kala_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_login_attempts`
 --
 ALTER TABLE `zgr_login_attempts`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_menu`
 --
 ALTER TABLE `zgr_menu`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_newspaper`
 --
 ALTER TABLE `zgr_newspaper`
   MODIFY `newspaper_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_offers`
 --
 ALTER TABLE `zgr_offers`
   MODIFY `offers_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_pay`
 --
 ALTER TABLE `zgr_pay`
   MODIFY `pay_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_postion`
 --
 ALTER TABLE `zgr_postion`
   MODIFY `postion_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `zgr_price`
 --
 ALTER TABLE `zgr_price`
   MODIFY `price_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_rel_eghamat_service`
 --
 ALTER TABLE `zgr_rel_eghamat_service`
   MODIFY `rel_eghamat_service_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_rel_jobs_service`
 --
 ALTER TABLE `zgr_rel_jobs_service`
   MODIFY `rel_jobs_service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
-
 --
 -- AUTO_INCREMENT for table `zgr_secend_menu`
 --
 ALTER TABLE `zgr_secend_menu`
   MODIFY `smenu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT for table `zgr_shop`
 --
 ALTER TABLE `zgr_shop`
   MODIFY `shop_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_shop_cate`
 --
 ALTER TABLE `zgr_shop_cate`
   MODIFY `shop_cate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_shop_sub_cate`
 --
 ALTER TABLE `zgr_shop_sub_cate`
   MODIFY `shop_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_show_time`
 --
 ALTER TABLE `zgr_show_time`
   MODIFY `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
 --
 -- AUTO_INCREMENT for table `zgr_site`
 --
 ALTER TABLE `zgr_site`
   MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_slider`
 --
 ALTER TABLE `zgr_slider`
   MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
-
 --
 -- AUTO_INCREMENT for table `zgr_state`
 --
 ALTER TABLE `zgr_state`
   MODIFY `state_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
 --
 -- AUTO_INCREMENT for table `zgr_takhfif`
 --
 ALTER TABLE `zgr_takhfif`
   MODIFY `takhfif_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_takhfif_type`
 --
 ALTER TABLE `zgr_takhfif_type`
   MODIFY `takhfif_type_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_text`
 --
 ALTER TABLE `zgr_text`
   MODIFY `text_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- AUTO_INCREMENT for table `zgr_tour`
 --
 ALTER TABLE `zgr_tour`
   MODIFY `tour_id` int(11) NOT NULL AUTO_INCREMENT;
-
 --
 -- AUTO_INCREMENT for table `zgr_users`
 --
 ALTER TABLE `zgr_users`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
 --
 -- AUTO_INCREMENT for table `zgr_users_groups`
 --
 ALTER TABLE `zgr_users_groups`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
 --
 -- Constraints for dumped tables
 --
@@ -2612,7 +2555,6 @@ ALTER TABLE `zgr_users_groups`
 ALTER TABLE `zgr_users_groups`
   ADD CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `zgr_groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `zgr_users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
