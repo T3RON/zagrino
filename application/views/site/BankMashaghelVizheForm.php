@@ -32,9 +32,9 @@
             </span>
         </div>
 
+		<?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
-
-        <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+        <form action="<?= base_url('site/work/BankMashaghelVizheForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r p0">
 
@@ -54,16 +54,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    <div class="t_align fild_title  p0">
-                        <span class="f_r p0"></span>
-                        <label for="sefaresh_nam_neshan" class="p0">مدیریت</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                        <input name="jobs_title" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    </div>
-                </div>
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
@@ -204,7 +194,18 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                        <input name="jobs_feature" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <input name="jobs_sharayet" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+                    <div class="t_align fild_title  p0">
+                        <span class="f_r p0"></span>
+                        <label for="sefaresh_nam_neshan" class="p0">مجوز ها</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
+                        <input name="jobs_mojavez" id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
 
