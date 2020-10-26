@@ -3,11 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaigan.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaiganForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelRaiganForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizheForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/BankMashaghelVizheForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/helpers/accesscontrol_helper.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/helpers/accesscontrol_helper.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/BankMashaghelRaiganForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/BankMashaghelRaiganForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/site/BankMashaghelVizheForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/BankMashaghelVizheForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/zagrino_db_1398.sql" beforeDir="false" afterPath="$PROJECT_DIR$/zagrino_db_1398.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/site/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/style.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +64,8 @@
       <workItem from="1600715301990" duration="712000" />
       <workItem from="1603171994716" duration="2702000" />
       <workItem from="1603525265839" duration="671000" />
+      <workItem from="1603565953515" duration="5033000" />
+      <workItem from="1603710292087" duration="2123000" />
     </task>
     <servers />
   </component>

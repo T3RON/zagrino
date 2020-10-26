@@ -10,8 +10,9 @@
                if(!isset($is_logged_in) || $is_logged_in != true)
                {
                 $CI->load->view('site/401');
-//                echo 'شما اجازه دسترسي به اين صفحه را قبل از احراز هويت ندارين <a href="'.base_url('site/Login').'">ورود به سايت</a>';
-//                die();
+                echo "شما اجازه دسترسی ندارید ابتدا در سامانه عضو و یا وارد شود سپس اقدام نمایید";
+                echo "<a href=".base_url('site/Login').">بازگشت به سایت</a>";
+                die();
                }       
             }
  }

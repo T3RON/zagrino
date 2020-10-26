@@ -55,20 +55,13 @@ class BankMashaghelRaiganForm extends CI_Panel {
             'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
             'jobs_mobile' =>$this->input->post('jobs_mobile'),
             'jobs_tell' =>$this->input->post('jobs_tell'),
-            'jobs_fax' =>$this->input->post('jobs_fax'),
             'jobs_email' =>$this->input->post('jobs_email'),
             'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
-            'jobs_website' =>$this->input->post('jobs_website'),
             'jobs_instagram' =>$this->input->post('jobs_instagram'),
             'jobs_telegram' =>$this->input->post('jobs_telegram'),
-            'jobs_whatsapp' =>$this->input->post('jobs_whatsapp'),
-            'jobs_facebook' =>$this->input->post('jobs_facebook'),
-            'jobs_tw' =>$this->input->post('jobs_tw'),
-            'jobs_pinterest' =>$this->input->post('jobs_pinterest'),
-            'jobs_youtube' =>$this->input->post('jobs_youtube'),
             'jobs_address' =>$this->input->post('jobs_address'),
-            'map_latitude' =>$this->input->post('map_latitude'),
-            'map_longitude' =>$this->input->post('map_longitude'),
+            'jobs_latitude' =>$this->input->post('jobs_latitude'),
+            'jobs_longitude' =>$this->input->post('jobs_longitude'),
             'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
             'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
             'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
@@ -79,11 +72,10 @@ class BankMashaghelRaiganForm extends CI_Panel {
             'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
             'update_date' =>'',
             'state_id' =>1,
-            'jobs_logo' =>$this->Menu_Model->upload('jobs_logo','jpg|png',5024),
-            'img1' =>$this->Menu_Model->upload('img1','jpg|png',5024),
-            'img2' =>$this->Menu_Model->upload('img2','jpg|png',5024),
-            'img3' =>$this->Menu_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->Menu_Model->upload('img4','jpg|png',5024),
+            'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
+            'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
+            'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
+            'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
             'jobs_shoar' =>$this->input->post('jobs_shoar'),
             'price_id' =>0,
             'expire' =>"1"
@@ -94,7 +86,7 @@ class BankMashaghelRaiganForm extends CI_Panel {
         $this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
-        $this->form_validation->set_rules('jobs_map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
+        $this->form_validation->set_rules('jobs_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
        
        
         if($this->form_validation->run() == FALSE){
@@ -105,7 +97,7 @@ class BankMashaghelRaiganForm extends CI_Panel {
 
         }
         else{
-            $jobs = $this->Menu_Model->insert('jobs',$data);
+            $jobs = $this->MY_Model->insert('jobs',$data);
             
             if($jobs) {
                 $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');

@@ -132,17 +132,7 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    <div class="t_align fild_title  p0">
-                        <span class="f_r p0"></span>
-                        <label for="sefaresh_nam_neshan" class="p0">مدیریت</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                        <input name="3" id="sefaresh_nam_neshan" type="text"
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    </div>
-                </div>
+
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                     <div class="t_align fild_title  p0">
                         <span class="f_r p0"></span>
@@ -162,28 +152,6 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 set f_r p0">
 
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                            <div class="t_align fild_title  p0">
-                                <span class="f_r p0"></span>
-                                <label for="sefaresh_nam_neshan_1" class="p0">تعداد نمایندگی در کشور </label>
-                                <span class="f_l p0"></span>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                <input name="jobs_count_namayandegi" id="sefaresh_nam_neshan_1" type="text"
-                                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                            <div class="t_align fild_title  p0">
-                                <span class="f_r p0"></span>
-                                <label for="sefaresh_nam_neshan_2" class="p0">تعداد نمایندگی در بروجرد </label>
-                                <span class="f_l p0"></span>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                                <input name="jobs_count_namayandegi_in_city" id="sefaresh_nam_neshan_2" type="text"
-                                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            </div>
-                        </div>
 
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                             <div class="t_align fild_title  p0">
@@ -241,39 +209,6 @@
 
 
 
-
-
-
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    <div class="t_align fild_title  p0">
-                        <span class="f_r p0"></span>
-                        <label for="sefaresh_nam_neshan" class="p0">ساعت کاری </label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                        <input name="jobs_work_titme" id="sefaresh_nam_neshan" type="text"
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    <div class="t_align fild_title  p0">
-                        <span class="f_r p0"></span>
-                        <label for="sefaresh_nam_neshan" class="p0">روزهای تعطیل </label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                        <input name="weektion_day" id="sefaresh_nam_neshan" type="text"
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                    </div>
-                </div>
-
-
-
-
-
-
-
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form_midle_title">
                     <div class="form_midle_title_in">
                         <span>
@@ -308,17 +243,6 @@
                     </div>
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                    <div class="t_align fild_title p0">
-                        <span class="f_r p0"></span>
-                        <label for="fild_in_16" class="p0">فکس</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="jobs_fax" id="fild_in_16" type="text"
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 input p0">
-                    </div>
-                </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
                     <div class="t_align fild_title p0">
@@ -360,7 +284,7 @@
                         <li class="c">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_60">
+                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_60">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                     <input name="img1" id="upload_img_60"
@@ -371,7 +295,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_61">
+                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_61">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                     <input name="img2" id="upload_img_61"
@@ -382,7 +306,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_62">
+                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_62">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                     <input name="img3" id="upload_img_62"
@@ -393,7 +317,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_63">
+                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_63">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/camera.svg">
                                     <input name="img4" id="upload_img_63"
@@ -403,57 +327,6 @@
                         </li>
                     </ul>
                 </div>
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild upload_logo">
-                    <div class="t_align fild_title p0">
-                        <span class="f_r p0"></span>
-                        <label for="upload_logo" class="p0">آپلود لوگو</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-12 logo_preview_l pishnamayesh f_l p0">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                پیشنمایش لوگو
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                سایز پیشنهادی :
-                                <span class="size">
-                                    ۱۷۰*۱۷۰
-                                </span>
-                                پیکسل
-                            </div>
-                        </div>
-                        <div class="f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_611">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input name="jobs_logo" id="upload_img_611"
-                                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file"
-                                    multiple=""></div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_menu">
-                    <div class="t_align fild_title p0">
-                        <span class="f_r p0"></span>
-                        <label for="upload_menu" class="p0">آپلود منوی کسب و کار</label>
-                        <span class="f_l p0"></span>
-                    </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-                        <div class=" m_5 f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_620">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input name="img_menu" id="upload_img_620"
-                                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file"
-                                    multiple=""></div>
-                        </div>
-                    </div>
-                </div>
-
 
 
             </div>
@@ -498,8 +371,8 @@
                 </div>
 
 
-                <input name="map_latitude" id="latitude" type="hidden">
-                <input name="map_longitude" id="longitude" type="hidden">
+                <input name="jobs_latitude" id="latitude" type="hidden">
+                <input name="jobs_longitude" id="longitude" type="hidden">
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
@@ -516,8 +389,7 @@
                             <div class="gm-err-container">
                                 <div class="gm-err-content">
                                     <div class="gm-err-icon">
-                                        <img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png"
-                                            draggable="false" style="user-select: none;">
+										<div style="height: 200px;" id="map"></div>
                                     </div>
                                     <div class="gm-err-title">Oops! Something went wrong.</div>
                                     <div class="gm-err-message">This page didn't load Google Maps correctly. See the
@@ -585,7 +457,43 @@
 
 
 
+<script type="text/javascript">
 
+	var options = {
+		center: [33.89621114574323, 48.750954837035195],
+		zoom: 18
+	}
+
+	var map = L.map('map', options);
+
+	L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'})
+			.addTo(map);
+
+	// map.on('click',
+	// 	function(e){
+	// 		//var coord = e.latlng.toString().split(',');
+	// 		//var lat = coord[0].split('(');
+	// 		//var lng = coord[1].split(')');
+	// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
+	// 		L.marker(e.latlng).addTo(map);
+	// 	});
+
+	var myMarker = L.marker([33.89621114574323, 48.750954837035195], {title: "89621114574323", alt: "The Big I", draggable: true})
+			.addTo(map)
+			.on('dragend', function() {
+				var coord = String(myMarker.getLatLng()).split(',');
+				console.log(coord);
+				var lat = coord[0].split('(');
+				var lng = coord[1].split(')');
+				console.log(lng);
+				console.log(lat);
+				document.getElementById("latitude").value = lat[1];
+				document.getElementById("longitude").value = lng[0];
+
+				myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
+			});
+
+</script>
 
 
 
@@ -593,64 +501,7 @@
 
 <?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
 
-<script>
-var position = [40.748774, -73.985763];
 
-function initialize() {
-    var latlng = new google.maps.LatLng(position[0], position[1]);
-    var myOptions = {
-        zoom: 16,
-        center: latlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
-    map = new google.maps.Map(document.getElementById("map"), myOptions);
-
-    marker = new google.maps.Marker({
-        position: latlng,
-        map: map,
-        title: "Latitude:" + position[0] + " | Longitude:" + position[1]
-    });
-
-
-
-
-    google.maps.event.addListener(map, 'click', function(event) {
-        var result = [event.latLng.lat(), event.latLng.lng()];
-        document.getElementById("latitude").value = event.latLng.lat();
-        document.getElementById("longitude").value = event.latLng.lng();
-        transition(result);
-    });
-}
-
-//Load google map
-google.maps.event.addDomListener(window, 'load', initialize);
-
-
-var numDeltas = 100;
-var delay = 10; //milliseconds
-var i = 0;
-var deltaLat;
-var deltaLng;
-
-function transition(result) {
-    i = 0;
-    deltaLat = (result[0] - position[0]) / numDeltas;
-    deltaLng = (result[1] - position[1]) / numDeltas;
-    moveMarker();
-}
-
-function moveMarker() {
-    position[0] += deltaLat;
-    position[1] += deltaLng;
-    var latlng = new google.maps.LatLng(position[0], position[1]);
-    marker.setTitle("Latitude:" + position[0] + " | Longitude:" + position[1]);
-    marker.setPosition(latlng);
-    if (i != numDeltas) {
-        i++;
-        setTimeout(moveMarker, delay);
-    }
-}
-</script>
 
 <!--    Script For This Page     -->
 
