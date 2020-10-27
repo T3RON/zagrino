@@ -71,12 +71,13 @@ class BankMashaghelVizheForm extends CI_Panel {
 			'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
 			'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
 			'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
-			'img5' =>$this->MY_Model->upload('img4','jpg|png',5024),
-			'img6' =>$this->MY_Model->upload('img4','jpg|png',5024),
+			'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
+			'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
 			'jobs_logo' =>$this->MY_Model->upload('jobs_logo','jpg|png',5024),
 			'price_id' =>0,
 			'expire' =>"1"
 		);
+
 
 
 		$this->form_validation->set_rules('jobs_cate_id','دسته بندي','required');
@@ -99,11 +100,11 @@ class BankMashaghelVizheForm extends CI_Panel {
 			if($jobs) {
 				$array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
 				$this->session->set_flashdata('msg',$array_msg);
-				redirect('site/work/BankMashaghelRaiganForm/index');
+				redirect('site/work/BankMashaghelVizheForm/index');
 			}else {
 				$array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
 				$this->session->set_flashdata('msg',$array_msg);
-				redirect('site/work/BankMashaghelRaiganForm/index');
+				redirect('site/work/BankMashaghelVizheForm/index');
 
 			}
 

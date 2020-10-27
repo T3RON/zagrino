@@ -66,6 +66,10 @@ class Jobs extends CI_Panel {
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
         $crud->display_as('img4','تصوير شماره 4');
+        $crud->display_as('img5','تصوير شماره 5');
+        $crud->display_as('img6','تصوير شماره 6');
+        $crud->display_as('jobs_latitude','عرض جغرافیایی');
+        $crud->display_as('jobs_longitude','طول جغرافیایی');
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
         $crud->display_as('price_id','قيمت');
@@ -76,37 +80,73 @@ class Jobs extends CI_Panel {
         $crud->where('zgr_jobs.accounts_id',$this->session->userdata('accounts_id'));
         $crud->unset_clone();
         $crud->unset_add();
-        if($this->session->userdata('state_id') != 2) {
+
+
+        if($this->session->userdata('state_id') != 2 && $this->session->userdata('state_id') != 9) {
             $crud->unset_edit();
         }
+
+        if($this->session->userdata('state_id') != 9) {
+			$crud->unset_add_fields('jobs_id');
+			$crud->unset_edit_fields('jobs_id');
+
+			$crud->unset_add_fields('jobs_latitude');
+			$crud->unset_edit_fields('jobs_latitude');
+
+			$crud->unset_add_fields('jobs_longitude');
+			$crud->unset_edit_fields('jobs_longitude');
+
+			$crud->unset_add_fields('days');
+			$crud->unset_edit_fields('days');
+
+			$crud->unset_add_fields('days');
+			$crud->unset_edit_fields('days');
+
+			$crud->unset_add_fields('price_id');
+			$crud->unset_edit_fields('price_id');
+
+			$crud->unset_add_fields('state_id');
+			$crud->unset_edit_fields('state_id');
+
+			$crud->field_type('jobs_latitude', 'hidden');
+			$crud->field_type('jobs_longitude', 'hidden');
+			$crud->field_type('days', 'hidden');
+			$crud->field_type('price_id', 'hidden');
+			$crud->field_type('state_id', 'hidden');
+
+        }
+
         $this->load->vars(array(
             'home_page' => FALSE
         ));
 
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
-        $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
-        
+		if($this->session->userdata('state_id') == 9) {
+			$crud->set_relation('price_id','price','price_amount');
+			$crud->set_relation('state_id','state','state_title');
+
+		}
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('jobs_id');
-        $crud->unset_edit_fields('jobs_id');
- 
-       
-        $crud->set_field_upload('jobs_logo','assets/uploads/img');
+
+
+
+		$crud->set_field_upload('jobs_logo','assets/uploads/img');
         $crud->set_field_upload('jobs_video','assets/uploads/videos');
 
         $crud->set_field_upload('img1','assets/uploads/img');
         $crud->set_field_upload('img2','assets/uploads/img');
         $crud->set_field_upload('img3','assets/uploads/img');
         $crud->set_field_upload('img4','assets/uploads/img');
+        $crud->set_field_upload('img5','assets/uploads/img');
+        $crud->set_field_upload('img6','assets/uploads/img');
         //$crud->field_type('username','date');
 
 

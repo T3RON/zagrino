@@ -671,9 +671,9 @@
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <video class="video-style col-lg-12 col-md-12 col-sm-12 col-xs-12 video p0" id="video_clip"
-                            poster="img/Band.jpg" preload="" playsinline controls>
+                            poster="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" preload="" playsinline controls>
                             <source
-                                src="<?=base_url('')?>assets/uploads/videos/<?= $bank_mashaghel_value->jobs_video; ?>"
+                                src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_video; ?>"
                                 type="video/mp4">
                             <source src="<?=base_url('')?>assets/site/video/SampleVideo_176x144_1mb.3gp"
                                 type="video/3gp">
@@ -691,9 +691,6 @@
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 block-text"><?= $bank_mashaghel_value->jobs_mojavez; ?></div>
                     </div>
 
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <img class="img-responsive" src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" alt="">
-                    </div>
 
                 </div>
 

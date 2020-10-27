@@ -280,6 +280,7 @@
 					<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12 veri_code_niazmandi"><?= $rand_number; ?></div>
 					<input id="re_sec_code" type="hidden" value="<?= $rand_number; ?>">
 					<input id="agahi_id" type="hidden" value="<?= $agahi_value->agahi_id; ?>">
+					<input id="accounts_id" type="hidden" value="<?= $agahi_value->agahi_id; ?>">
 
 					<button type="submit" id="butsave" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 main_button_agahi">ارسال</button>
 
@@ -481,6 +482,7 @@
 
 <script>
     function myFunction() {
+    	alert("Asasas");
         var hashed = document.getElementById("hashed");
         var full = document.getElementById("full");
         if (full.style.display === "none") {

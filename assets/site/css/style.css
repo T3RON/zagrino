@@ -1410,8 +1410,8 @@ footer .second_section .copyRight_l span {
     color: #fff;
     text-align: center;
     border-radius: 20px;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-right-radius: 0px;
     padding: 5px!important;
 }
 

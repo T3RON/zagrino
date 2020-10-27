@@ -11,7 +11,8 @@ class BankMashaghelVizhe extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
+        $this->load->model('MY_Model');
+		$this->load->library('Jdf');
     }
 
     function index()
@@ -22,11 +23,11 @@ class BankMashaghelVizhe extends CI_Controller {
         $output['bank_mashaghel_service'] = $this->MY_Model->show_join_two('rel_jobs_service','jobs_service','jobs','rel_jobs_service','jobs',$id);
 
 
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->MY_Model->select('menu');
+        $output['menu_middel'] = $this->MY_Model->select('secend_menu');
+        $output['footer_menu'] = $this->MY_Model->select('footer_menu');
+        $output['slider'] = $this->MY_Model->select('slider');
+        $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','5');
 

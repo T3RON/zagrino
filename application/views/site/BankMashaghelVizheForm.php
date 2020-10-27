@@ -34,7 +34,7 @@
 
 		<?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
-        <form action="<?= base_url('site/work/BankMashaghelVizheForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+        <form action="<?= base_url('site/work/BankMashaghelVizheForm/register'); ?>" method="post" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" enctype='multipart/form-data'>
 
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r p0">
 
@@ -515,8 +515,6 @@
 
 
 
-            <input name="jobs_map_latitude" id="latitude" type="hidden">
-                <input name="jobs_map_longitude" id="longitude" type="hidden">
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">

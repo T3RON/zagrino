@@ -197,6 +197,7 @@
             var sec_code = $('#sec_code').val();
             var re_sec_code = $('#re_sec_code').val();
             var agahi_id = $('#agahi_id').val();
+            var accounts_id = $('#accounts_id').val();
             if(email!="" && mobile!="" && text!="" && sec_code!=""){
                 $("#submit_message").attr("disabled", "disabled");
                 $.ajax({
@@ -208,7 +209,8 @@
                         text: text,
                         sec_code: sec_code,
                         re_sec_code: re_sec_code,
-                        agahi_id: agahi_id
+                        agahi_id: agahi_id,
+						accounts_id: accounts_id
                     },
                     cache: false,
                     success: function(dataResult){

@@ -56,9 +56,11 @@ class AgahiShow extends CI_Controller {
 
         $data = array(
             'agahi_id' => $this->input->post('agahi_id'),
+            'accounts_id' => $this->input->post('accounts_id'),
             'message_email' => $this->input->post('email'),
             'message_mobile' => $this->input->post('mobile'),
-            'message_text' => $this->input->post('text')
+            'message_text' => $this->input->post('text'),
+            'state_id' => 10
         );
 
 
