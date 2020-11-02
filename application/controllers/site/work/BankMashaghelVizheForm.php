@@ -65,7 +65,7 @@ class BankMashaghelVizheForm extends CI_Panel {
 			'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
 			'jobs_video' =>$this->MY_Model->upload('jobs_video','mp4|mpeg|wmv',10024),
 			'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-			'update_date' =>'',
+			'update_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
 			'state_id' =>2,
 			'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
 			'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
@@ -75,7 +75,8 @@ class BankMashaghelVizheForm extends CI_Panel {
 			'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
 			'jobs_logo' =>$this->MY_Model->upload('jobs_logo','jpg|png',5024),
 			'price_id' =>0,
-			'expire' =>"1"
+			'days' =>30,
+			'expire' =>time() + (30 * 86400)
 		);
 
 

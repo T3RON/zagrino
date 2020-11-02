@@ -716,6 +716,7 @@ form .fild .radio_label input {
 .section_head .right_side ul {
     text-align: right;
     line-height: 2;
+	direction: rtl;
 }
 
 .section_head .right_side ul li a {

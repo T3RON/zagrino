@@ -1,4 +1,4 @@
-<?php include_once(APPPATH . 'views/_layout/site/header.php'); ?>
+<?php include_once(APPPATH . 'views/_layout/site/head.php'); ?>
 
 
 <!------------------------- niazmandi_namayesh_agahi --------------------->
@@ -94,43 +94,102 @@
 
 			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 p_btn_package right_col f_r flex_box p0">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 right_side flex_item f_r p0">
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper bankmashaghel_img  p0">
+						<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img1; ?>" class="" alt=""
+							 title="">
+						<!-- <div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
+						</div> -->
+					</div>
+					<!-- Swiper -->
+					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 swiper-container swiper_bankMashaghel">
+						<div class="swiper-wrapper">
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img_swiper p0">
-						<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img1; ?>"
-							 class="" alt="" title="">
-						<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 special_out p0">
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0"><?= $agahi_value->agahi_cond_tag_title; ?></div>
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img1; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img1; ?>" class="img-responsive" alt=""
+												 title="">
+										</a>
+									</div>
+
+
+								</li>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img2; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img2; ?>" class="img-responsive">
+										</a>
+									</div>
+
+
+								</li>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img3; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img3; ?>" class="img-responsive" alt=""
+												 title="">
+										</a>
+									</div>
+
+
+								</li>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img4; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img4; ?>" class="img-responsive" alt=""
+												 title="">
+										</a>
+									</div>
+
+								</li>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img5; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img5; ?>" class="img-responsive" alt=""
+												 title="">
+										</a>
+									</div>
+
+
+								</li>
+							</div>
+							<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
+								<li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+										<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img6; ?>">
+											<img src="<?=base_url('')?>assets/uploads/img/<?= $agahi_value->img6; ?>" class="img-responsive" alt=""
+												 title="">
+										</a>
+									</div>
+
+
+								</li>
+							</div>
+
+
 						</div>
+						<!-- Add Arrows -->
+						<div class="swiper-button-next swiper-button-next_bankMashaghel"></div>
+						<div class="swiper-button-prev swiper-button-prev_bankMashaghel"></div>
 					</div>
 
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img1; ?>" class="img-responsive">
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img2; ?>" class="img-responsive">
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img3; ?>"
-							 class="img-responsive">
-						</div>
-						
-					</div>
 
-					<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img4; ?>"
-							 class="img-responsive">
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img class="img-responsive"src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img5; ?>">
-						</div>
-						<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 p0">
-							<img src="<?= base_url('') ?>assets/uploads/img/<?= $agahi_value->img6; ?>"
-							 class="img-responsive">
-						</div>
-						
-					</div>
+
 
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 left_side m_p_10 p0">

@@ -1,4 +1,4 @@
-<?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
+<?php include_once (APPPATH.'views/_layout/site/head.php'); ?>
 
 
 
@@ -13,7 +13,9 @@
 
 <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
-
+	<script type="text/javascript">
+		document.title = '<?= $bank_mashaghel_value->jobs_title; ?>';
+	</script>
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title_head p0">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-6 job_title t_align p0">بانک مشاغل</div>
         <div class="f_l report_violation p0">
@@ -179,96 +181,95 @@
                 <!-- Swiper -->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 swiper-container swiper_bankMashaghel">
                     <div class="swiper-wrapper">
+						<?php if($bank_mashaghel_value->img3 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img1; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
 
                             </li>
                         </div>
+						<?php } ?>
+						<?php if($bank_mashaghel_value->img3 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img2; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img2; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
 
                             </li>
                         </div>
+						<?php } ?>
+						<?php if($bank_mashaghel_value->img3 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img3; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img3; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
 
                             </li>
                         </div>
+						<?php } ?>
+						<?php if($bank_mashaghel_value->img4 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img4; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img4; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
                             </li>
                         </div>
+						<?php } ?>
+						<?php if($bank_mashaghel_value->img5 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
-
-
-                            </li>
-                        </div>
-                        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
-                            <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img5; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img5; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
 
                             </li>
                         </div>
+						<?php } ?>
+						<?php if($bank_mashaghel_value->img6 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
-
-                                    <img src="<?=base_url('')?>assets/site/img/4.png" class="img-responsive" alt=""
-                                        title="">
-
-                                </div>
+								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 img p0">
+									<a class="image-link" href="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img6; ?>">
+										<img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->img6; ?>" class="img-responsive" alt=""
+											 title="">
+									</a>
+								</div>
 
 
                             </li>
                         </div>
+						<?php } ?>
 
                     </div>
                     <!-- Add Arrows -->

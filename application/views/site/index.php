@@ -1,4 +1,4 @@
-<?php include_once(APPPATH . 'views/_layout/site/header.php'); ?>
+<?php include_once(APPPATH . 'views/_layout/site/head.php'); ?>
 
 
 <!-- column-right -->
@@ -54,9 +54,7 @@
 
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
 			<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-				<?php foreach ($bank_mashaghel
-
-				as $bank_mashaghel_value) { ?>
+				<?php foreach ($bank_mashaghel as $bank_mashaghel_value) { ?>
 				<?php if ($bank_mashaghel_value->state_id == 2) { ?>
 				<a href="<?= base_url('site/work/BankMashaghelVizhe'); ?>/index/<?= $bank_mashaghel_value->jobs_id; ?>">
 					<?php } else { ?>
@@ -140,28 +138,23 @@
 			</div>
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
 				<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-							دسته بندی ۱
-						</a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-							دسته بندی ۱
-						</a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-							دسته بندی ۱
-						</a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-							دسته بندی ۱
-						</a></li>
-					<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="">
-							دسته بندی ۱
-						</a></li>
+					<?php foreach ($agahi_cate as $agahi_cate_value) { ?>
+
+						<li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0">
+							<a href="<?= base_url('site/work/Jslist'); ?>/index/<?= $agahi_cate_value->agahi_cate_id; ?>">
+								<?= $agahi_cate_value->agahi_cate_title; ?>
+							</a>
+						</li>
+					<?php } ?>
+
 				</ul>
 			</div>
 		</div>
 
 		<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
 			<ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-				<?php foreach ($Agahi as $Agahi_value) { ?>
+				<?php foreach ($agahi as $Agahi_value) { ?>
+				<a style="clear: both;" href="<?= base_url('site/Agahi/AgahiShow'); ?>/index/<?= $Agahi_value->agahi_id; ?>/<?= $Agahi_value->accounts_id; ?>">
 						<li class="col-lg-6 col-md-4 col-sm-4 col-xs-6 p0">
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
 								<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper p0">
@@ -170,7 +163,7 @@
 											<div
 												class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0"><?= $Agahi_value->state_title; ?></div>
 										</div>
-										<a href=""><img
+										<a href="<?= base_url('site/Agahi/AgahiShow'); ?>/index/<?= $Agahi_value->agahi_id; ?>/<?= $Agahi_value->accounts_id; ?>"><img
 												src="<?= base_url('') ?>assets/uploads/img/<?= $Agahi_value->img1; ?>"
 												class="img-responsive" alt="" title=""></a>
 										<div class="expired p0">
@@ -192,10 +185,9 @@
 											دعوت
 											به همکاری
 										</button>
-										<button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">معاوضه
+										<button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0"><?= $Agahi_value->agahi_state_kala_title; ?>
 										</button>
-										<button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">نقدی و
-											اقساطی
+										<button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0"><?= $Agahi_value->agahi_cond_tag_title; ?>
 										</button>
 									</div>
 									<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_l left p0">
@@ -228,6 +220,7 @@
 								</a>
 							</div>
 						</li>
+				</a>
 
 				<?php } ?>
 			</ul>

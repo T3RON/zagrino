@@ -28,7 +28,7 @@
     <link rel="stylesheet" type="text/css" href="<?=base_url('')?>assets/site/css/swiper.min.css">
     <link rel="stylesheet" href="<?=base_url('')?>assets/site/css/pushbar.css">
     <link href="<?=base_url('')?>assets/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css">
-
+	<link rel="stylesheet" href="<?=base_url('')?>assets/site/css/magnific-popup.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
 </head>
@@ -45,6 +45,9 @@
                 <div class="main_panel">
                     <div class="panel_buttom">
                         <?php foreach($site as $site_value) { ?>
+							<script type="text/javascript">
+								document.title = '<?= $site_value->site_title; ?>';
+							</script>
                         <img src="<?=base_url('')?>assets/uploads/img/<?= $site_value->site_logo; ?>"
                             class="img-responsive" alt="logo">
                         <?php } ?>

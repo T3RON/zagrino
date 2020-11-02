@@ -45,8 +45,8 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_pinterest','پينترست');
         $crud->display_as('jobs_youtube','يوتوب');
         $crud->display_as('jobs_address','آدرس');
-        $crud->display_as('jobs_map_latitude','طول جغرافيايي');
-        $crud->display_as('jobs_map_longitude','عرض جغرافيايي');
+        $crud->display_as('jobs_latitude','طول جغرافيايي');
+        $crud->display_as('jobs_longitude','عرض جغرافيايي');
         $crud->display_as('jobs_feature','توضيحات بيشتر');
         $crud->display_as('jobs_count_namayandegi','تعداد نمايندگي ها');
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
@@ -63,6 +63,8 @@ class Jobs extends MY_Controller {
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
         $crud->display_as('img4','تصوير شماره 4');
+        $crud->display_as('img5','تصوير شماره 5');
+        $crud->display_as('img6','تصوير شماره 6');
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
         $crud->display_as('price_id','قيمت');
@@ -94,6 +96,8 @@ class Jobs extends MY_Controller {
         $crud->set_field_upload('img2','assets/uploads/img');
         $crud->set_field_upload('img3','assets/uploads/img');
         $crud->set_field_upload('img4','assets/uploads/img');
+        $crud->set_field_upload('img5','assets/uploads/img');
+        $crud->set_field_upload('img6','assets/uploads/img');
         //$crud->field_type('username','date');
 
 
@@ -120,7 +124,7 @@ class Jobs extends MY_Controller {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
+            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_latitude','jobs_longitude'
         );
 
        

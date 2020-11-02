@@ -7,7 +7,17 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 t_t_clip p0">
 
          <!-- Main content -->
-
+<style>
+	.state_id_form_group {
+		display: none;
+	}
+	.jobs_shoar_form_group {
+		display: none;
+	}
+	.price_id_form_group {
+		display: none;
+	}
+</style>
 <!-- Main row -->
 <?php echo $output; ?>
 <!-- /.row (main row) -->

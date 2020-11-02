@@ -82,11 +82,10 @@ class Jobs extends CI_Panel {
         $crud->unset_add();
 
 
-        if($this->session->userdata('state_id') != 2 && $this->session->userdata('state_id') != 9) {
+        if($this->session->userdata('state_id') != 2) {
             $crud->unset_edit();
         }
 
-        if($this->session->userdata('state_id') != 9) {
 			$crud->unset_add_fields('jobs_id');
 			$crud->unset_edit_fields('jobs_id');
 
@@ -114,7 +113,7 @@ class Jobs extends CI_Panel {
 			$crud->field_type('price_id', 'hidden');
 			$crud->field_type('state_id', 'hidden');
 
-        }
+
 
         $this->load->vars(array(
             'home_page' => FALSE
@@ -126,12 +125,10 @@ class Jobs extends CI_Panel {
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
+        $crud->set_relation('price_id','price','price_amount');
+        $crud->set_relation('state_id','state','state_title');
 
-		if($this->session->userdata('state_id') == 9) {
-			$crud->set_relation('price_id','price','price_amount');
-			$crud->set_relation('state_id','state','state_title');
 
-		}
 
         $this->load->library('gc_dependent_select');
 

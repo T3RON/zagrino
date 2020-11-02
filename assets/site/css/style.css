@@ -35,6 +35,10 @@ License: GNU General Public License v2 or later
     direction: rtl;
     font-size: 14px;
     padding: 8px;
+	font-family: 'IRANSans-web', serif !important;
+}
+.block-text p {
+	font-family: 'IRANSans-web', serif !important;
 }
 
 .blk-tb {
@@ -78,10 +82,10 @@ License: GNU General Public License v2 or later
     color: #fff;
     position: absolute !important;
     text-align: center;
+	right: 0;
     border-radius: 20px;
     padding: 0 12px !important;
-    border-bottom-left-radius: 0px;
-    border-top-left-radius: 0px;
+
 }
 
 .vip-tag-g {
@@ -1400,18 +1404,19 @@ footer .second_section .copyRight_l span {
 }
 
 .b_m_v .border_box .flex_box .right_side .img_swiper .special_out {
-    position: absolute;
-    border-radius: 0 0 0 14px;
-    top: 0;
+	position: absolute;
+	border-radius: 0 0 0 14px;
+	top: 5px;
+	right: 6px;
 }
 
 .b_m_v .border_box .flex_box .right_side .img_swiper .special_out .special_in {
     background: #ec1e25;
     color: #fff;
     text-align: center;
+	right: 0;
     border-radius: 20px;
-    border-bottom-right-radius: 0px;
-    border-top-right-radius: 0px;
+
     padding: 5px!important;
 }
 

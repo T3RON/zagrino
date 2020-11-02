@@ -31,8 +31,9 @@ class Index extends CI_Controller {
         $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_cate'] = $this->MY_Model->select_limit('jobs_cate','10');
+        $output['agahi_cate'] = $this->MY_Model->select_limit('agahi_cate','10');
         $output['bank_mashaghel'] = $this->MY_Model->select_two_orderBy('jobs','state_id','DESC','register_date','ASC');
-        $output['Agahi'] = $this->MY_Model->join_three_withOrderBy('agahi','state','agahi_cate','city','agahi.state_id','DESC','register_date','ASC');
+        $output['agahi'] = $this->MY_Model->join_five_withOrderBy('agahi','state','agahi_cate','city','agahi_cond_tag','agahi_state_kala','agahi.state_id','DESC','register_date','ASC');
         $output['title'] = 'سامانه گردشگري و تخفيفي زاگرينو';
         $output['des'] = 'مديريت و بررسي كاربران';
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');

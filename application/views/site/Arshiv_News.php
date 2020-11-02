@@ -1,4 +1,4 @@
-<?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
+<?php include_once (APPPATH.'views/_layout/site/head.php'); ?>
  
     
     
