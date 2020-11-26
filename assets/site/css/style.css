@@ -2810,14 +2810,14 @@ a {
     line-height: 1.4;
 }
 
-.niazmandiha_form .all .hint {
+.hint {
     border: 1px solid #1ea662;
     padding: 10px !important;
     border-radius: 20px;
     margin: 20px 0 10px 0;
 }
 
-.niazmandiha_form .all .hint .title {
+.hint .title {
     color: #1ea662;
     float: right;
     border: 1px solid #1ea662;
@@ -2827,7 +2827,7 @@ a {
     background: #fff;
 }
 
-.niazmandiha_form .all .hint p {
+.hint p {
     padding: 20px 10px;
     color: #1ea662;
     line-height: 2.5;

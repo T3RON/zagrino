@@ -192,7 +192,7 @@
                                             </a>
                                         </div> -->
                                         <div class="col-lg-4 header-pick-modal p0">
-                                            <a href="<?= base_url('site/Agahi/Agahi'); ?>">
+                                            <a href="<?= base_url('site/Agahi/Vof'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/blog.svg" alt="">
                                                     <div class="t_align txt p0">

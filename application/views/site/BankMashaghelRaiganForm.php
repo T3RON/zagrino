@@ -1,4 +1,4 @@
-<?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
+<?php include_once (APPPATH.'views/_layout/site/head.php'); ?>
 
 
 
@@ -705,10 +705,6 @@ $(document).ready(function() {
         });
     </script>
 
-<script type="text/javascript">
-$(document).ready(function() {
-    $(document).scrollTop($("#pos").offset().top);
-});
-</script>
+
 
 <?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>

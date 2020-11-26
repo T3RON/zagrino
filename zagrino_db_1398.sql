@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 02, 2020 at 11:47 AM
+-- Generation Time: Nov 26, 2020 at 07:35 PM
 -- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- PHP Version: 7.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -96,9 +96,6 @@ CREATE TABLE `zgr_agahi` (
   `ostan_id` int(11) DEFAULT NULL,
   `city_id` int(11) DEFAULT NULL,
   `agahi_title` text,
-  `agahi_sazeman_title` text,
-  `agahi_hoghoghi_or_haghighi` int(11) DEFAULT NULL,
-  `tarefe_id` int(11) DEFAULT NULL,
   `agahi_cate_id` int(11) DEFAULT NULL,
   `agahi_sub_cate_id` int(11) DEFAULT NULL,
   `agahi_des` text,
@@ -107,7 +104,6 @@ CREATE TABLE `zgr_agahi` (
   `agahi_longitude` text,
   `agahi_cond_tag_id` int(11) DEFAULT NULL,
   `agahi_address` text,
-  `agahi_full_des` text,
   `agahi_email` text,
   `img1` text,
   `img2` text,
@@ -128,8 +124,8 @@ CREATE TABLE `zgr_agahi` (
 -- Dumping data for table `zgr_agahi`
 --
 
-INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_title`, `agahi_sazeman_title`, `agahi_hoghoghi_or_haghighi`, `tarefe_id`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_cond_tag_id`, `agahi_address`, `agahi_full_des`, `agahi_email`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `price_id`, `state_id`, `agahi_state_kala_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
-(1, 1, 30, 421, '<p>\n	عنوان این آگهی تست می باشد</p>\n', '<p>\n	عنوان این آگهی تست می باشد</p>\n', NULL, NULL, 1, 1, '<p>\n	عنوان این آگهی تست می باشد</p>\n', '<p>\n	عنوان این آگهی تست می باشد</p>\n', '33.89621114574323', '48.750954837035195', 1, '<p>\n	عنوان این آگهی تست می باشد</p>\n', '<p>\n	عنوان این آگهی تست می باشد</p>\n', '<p>\n	عنوان این آگهی تست می باشد</p>\n', 'c4e58-12127-lighthouse.jpg', '633f9-61b90-flower-729514_1280.jpg', '6adb5-17c59-jellyfish.jpg', 'afd30-9d5a2-penguins.jpg', 'caa99-c32ea-summer-192179_1280.jpg', 'caa99-c32ea-summer-192179_1280.jpg', NULL, 3, 1, '1600429424', NULL, 30, '1603021556');
+INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_title`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_cond_tag_id`, `agahi_address`, `agahi_email`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `price_id`, `state_id`, `agahi_state_kala_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
+(2, NULL, 1, 3, 'dsdsadasdsad', 1, 1, 'gfgfgfgf', 'ddddddddddddd', '33.896106', ' 48.750056', NULL, NULL, NULL, 'ba1782121e68a6e232963c27fac1ad49.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '0', NULL, NULL, NULL, NULL, 0, '1');
 
 -- --------------------------------------------------------
 
@@ -249,7 +245,8 @@ CREATE TABLE `zgr_agahi_cate` (
 --
 
 INSERT INTO `zgr_agahi_cate` (`agahi_cate_id`, `agahi_cate_title`) VALUES
-(1, 'وسايل الكتريكي');
+(1, 'وسايل الكتريكي'),
+(2, 'وسايل ');
 
 -- --------------------------------------------------------
 
@@ -323,7 +320,7 @@ CREATE TABLE `zgr_agahi_state_kala` (
 --
 
 INSERT INTO `zgr_agahi_state_kala` (`agahi_state_kala_id`, `agahi_state_kala_title`) VALUES
-(1, 'در حال فروش');
+(1, 'دست دوم');
 
 -- --------------------------------------------------------
 
@@ -342,7 +339,8 @@ CREATE TABLE `zgr_agahi_sub_cate` (
 --
 
 INSERT INTO `zgr_agahi_sub_cate` (`agahi_sub_cate_id`, `agahi_cate_id`, `agahi_sub_cate_title`) VALUES
-(1, 1, 'رايانه');
+(1, 1, 'رايانه'),
+(2, 2, 'رايانه');
 
 -- --------------------------------------------------------
 
@@ -1660,15 +1658,19 @@ CREATE TABLE `zgr_site` (
   `site_ads_text` text NOT NULL,
   `police_text` text NOT NULL,
   `API_KEY_ZARINPAL` text NOT NULL,
-  `API_KEY_KAVENEGAR` text NOT NULL
+  `API_KEY_KAVENEGAR` text NOT NULL,
+  `help_agahi` text NOT NULL,
+  `help_car` text NOT NULL,
+  `agahi_vip_help` text NOT NULL,
+  `agahi_free_help` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_site`
 --
 
-INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `police_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style="text-align: right;">\n	این هشدار تست می باشد</p>\n', '', '');
+INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `police_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`, `help_agahi`, `help_car`, `agahi_vip_help`, `agahi_free_help`) VALUES
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style="text-align: right;">\n	این هشدار تست می باشد</p>\n', '', '', '<p>\n	راهنمای ثبت آگهی</p>\n', '<p>\n	راهنمای ثبت وسایل نقلیه</p>\n', '<div class="form-group agahi_vip_help_form_group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;">\n	<label class="col-sm-2 control-label" style="box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;">راهنمای ثبت آگهی ویژه</label></div>\n<div class="form-group agahi_free_help_form_group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;">\n	<div class="col-sm-10" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 1031px;">\n		&nbsp;</div>\n</div>\n<p>\n	&nbsp;</p>\n', '<div class="form-group agahi_free_help_form_group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">\n	<label class="col-sm-2 control-label" style="box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;">راهنمای ثبت آگهی رایگان</label></div>\n<div class="form-group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, &quot;Helvetica Neue&quot;, Helvetica, Arial, sans-serif; font-size: 14px;">\n	&nbsp;</div>\n');
 
 -- --------------------------------------------------------
 
@@ -1845,7 +1847,7 @@ CREATE TABLE `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1603997732, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1606336127, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -2261,6 +2263,11 @@ ALTER TABLE `zgr_accounts`
 ALTER TABLE `zgr_ads`
   MODIFY `ads_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `zgr_agahi`
+--
+ALTER TABLE `zgr_agahi`
+  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `zgr_agahi_amlak`
 --
 ALTER TABLE `zgr_agahi_amlak`
@@ -2274,7 +2281,7 @@ ALTER TABLE `zgr_agahi_car`
 -- AUTO_INCREMENT for table `zgr_agahi_cate`
 --
 ALTER TABLE `zgr_agahi_cate`
-  MODIFY `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_cond_tag`
 --
@@ -2299,7 +2306,7 @@ ALTER TABLE `zgr_agahi_state_kala`
 -- AUTO_INCREMENT for table `zgr_agahi_sub_cate`
 --
 ALTER TABLE `zgr_agahi_sub_cate`
-  MODIFY `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_tarefe`
 --

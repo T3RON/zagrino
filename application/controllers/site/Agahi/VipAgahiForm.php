@@ -7,7 +7,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class AgahiForm extends CI_Panel {
+class VipAgahiForm extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -34,7 +34,7 @@ class AgahiForm extends CI_Panel {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/BankMashaghelRaiganForm', $output);
+        $this->load->view('site/Niazmandi_Form_vip', $output);
     }
 
     function register() {
