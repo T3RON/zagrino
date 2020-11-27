@@ -3,18 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="88de83ee-b8e0-4791-a407-d891ce5c9a90" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/admin/Site.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/admin/Site.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/site/Agahi/AgahiForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/Agahi/VipAgahiForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/controllers/site/work/Jslist.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/work/Jslist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/_layout/site/head.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/_layout/site/head.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/controllers/site/Agahi/FreeAgahiForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/site/Agahi/FreeAgahiForm.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/views/site/BankMashaghelRaiganForm.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/BankMashaghelRaiganForm.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Jlist.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Jlist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Jslist.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Jslist.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Niazmandi.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Niazmandi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/NiazmandiFormEjareAmlak copy.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/NiazmandiFormForoshNaghlie.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/NiazmandiFormForoshNaghlie.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/views/site/Niazmandi_Form.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/site/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/assets/site/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/views/site/Niazmandi_Form_free.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/views/site/Niazmandi_Form_free.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +84,7 @@
       <workItem from="1606415214083" duration="1797000" />
       <workItem from="1606417036613" duration="1794000" />
       <workItem from="1606418934135" duration="322000" />
+      <workItem from="1606507337017" duration="388000" />
     </task>
     <servers />
   </component>

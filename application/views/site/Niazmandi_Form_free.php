@@ -26,8 +26,12 @@
 		</div>
 
 
+
+
+
 		<form action="<?= base_url('site/Agahi/FreeAgahiForm/register'); ?>" method="post"
 			  class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" enctype='multipart/form-data'>
+			<?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
 			<!------------------------------------------------------------------  ثبت آگهی رایگان ------------>
 
@@ -213,8 +217,10 @@
 				</div>
 			</div>
 
-
-
+			<?php foreach ($site as $site_value) { ?>
+				<input name="days" type="hidden" value="<?= $site_value->show_time_free; ?>">
+			<?php } ?>
+			
 
 
 
@@ -231,6 +237,7 @@
 									<div style="height: 200px;" id="map"></div>
 									<input name="agahi_latitude" id="latitude" type="hidden">
 									<input name="agahi_longitude" id="longitude" type="hidden">
+									
 								</div>
 								<div class="gm-err-title">Oops! Something went wrong.</div>
 								<div class="gm-err-message">This page didn't load Google Maps correctly. See the

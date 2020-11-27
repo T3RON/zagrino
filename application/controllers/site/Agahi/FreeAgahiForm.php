@@ -44,7 +44,7 @@ class FreeAgahiForm extends CI_Panel {
 
         $data = array(
             
-            'accounts_id' =>$this->input->post('jobs_cate_id'),
+            'accounts_id' =>$this->session->userdata('accounts_id'),
             'ostan_id' =>$this->input->post('ostan_id'),
             'city_id' =>$this->input->post('city_id'),
             'agahi_title' =>$this->input->post('agahi_title'),
@@ -57,13 +57,14 @@ class FreeAgahiForm extends CI_Panel {
             'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
             'agahi_address' =>$this->input->post('agahi_address'),
             'agahi_email' =>$this->input->post('agahi_email'),
-
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
-
             'price_id' =>0,
-            'expire' =>"1"
+            'state_id' => 12,
+            'days' =>$this->input->post('days'),
+            'expire' =>$this->calculate($this->input->post('days'))
+            
         );
 
 
@@ -75,7 +76,7 @@ class FreeAgahiForm extends CI_Panel {
 
 
         if($this->form_validation->run() == FALSE){
-            $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال آگهی بوجود آمده','type'=>'error');
+            $array_msg = array('title'=>'خطا','text'=>'تمام فیلد های مورد نیاز را تکمیل نمایید','type'=>'error');
             $this->session->set_flashdata('msg',$array_msg);
             $this->index();
 
@@ -102,6 +103,11 @@ class FreeAgahiForm extends CI_Panel {
 
     }
 
+
+    function calculate($days) {
+        $day =  time() + ($days * 86400);
+        return $day;
+    }  
 
     function get_sub_cate() {
         $agahi_cate_id = $this->input->post('id',TRUE);

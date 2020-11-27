@@ -40,6 +40,7 @@ class Site extends MY_Controller {
         $crud->display_as('help_car','راهنمای ثبت آگهی نقلیه');
         $crud->display_as('agahi_vip_help','راهنمای ثبت آگهی ویژه');
         $crud->display_as('agahi_free_help','راهنمای ثبت آگهی رایگان');
+        $crud->display_as('show_time_free','تعیین زمان پیشفرض رایگان ها');
 
         $crud->set_field_upload('site_logo','assets/uploads/img');
         $crud->set_field_upload('site_icon','assets/uploads/img');

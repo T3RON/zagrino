@@ -20,7 +20,7 @@ class Agahi extends MY_Controller {
         $crud->set_table('zgr_agahi');
         $crud->set_subject('نيازمندي');
 
-        $crud->columns('state_id','expire','update_date','register_date','agahi_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','agahi_title','account_mobile','accounts_id');
         $crud->display_as('agahi_id','شناسه');
         $crud->display_as('agahi_cate_id','گروه بندي');
         $crud->display_as('agahi_sub_cate_id',' زير گروه بندي');
@@ -64,8 +64,9 @@ class Agahi extends MY_Controller {
         $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
         $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
         $crud->set_relation('price_id','price','price_amount');
-        $crud->set_relation('accounts_id','accounts','account_mobile');
+        $crud->set_relation('accounts_id','accounts','{account_fn}.{account_ln}');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
+
 
         
         //$crud->add_action('افزودن تصوير', '', 'Jobs_images/index', 'fa-photo');
@@ -200,6 +201,11 @@ class Agahi extends MY_Controller {
 
         
     }
+
+    public function _total($value, $row) {
+        return "$row->account_fn x $row->account_ln";
+  }
+
     function out_view($output = null) {
         
         $output->title = "بانك نيازمندي ها";
@@ -209,6 +215,7 @@ class Agahi extends MY_Controller {
 
     }
 
+    
 
 
     
