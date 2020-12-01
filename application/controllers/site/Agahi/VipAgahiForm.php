@@ -43,70 +43,55 @@ class VipAgahiForm extends CI_Panel {
 
         $data = array(
             
-            'jobs_cate_id' =>$this->input->post('jobs_cate_id'),
-            'jobs_sub_cate_id' =>$this->input->post('jobs_sub_cate_id'),
-            'accounts_id' =>1,
+            'accounts_id' =>$this->session->userdata('accounts_id'),
             'ostan_id' =>$this->input->post('ostan_id'),
             'city_id' =>$this->input->post('city_id'),
-            'jobs_title' =>$this->input->post('jobs_title'),
-            'jobs_shobe' =>$this->input->post('jobs_shobe'),
-            'jobs_content' =>$this->input->post('jobs_content'),
-            'jobs_feature' =>$this->input->post('jobs_feature'),
-            'jobs_work_titme' =>$this->input->post('jobs_work_titme'),
-            'jobs_mobile' =>$this->input->post('jobs_mobile'),
-            'jobs_tell' =>$this->input->post('jobs_tell'),
-            'jobs_email' =>$this->input->post('jobs_email'),
-            'jobs_code_posti' =>$this->input->post('jobs_code_posti'),
-            'jobs_instagram' =>$this->input->post('jobs_instagram'),
-            'jobs_telegram' =>$this->input->post('jobs_telegram'),
-            'jobs_address' =>$this->input->post('jobs_address'),
-            'jobs_latitude' =>$this->input->post('jobs_latitude'),
-            'jobs_longitude' =>$this->input->post('jobs_longitude'),
-            'jobs_count_namayandegi' =>$this->input->post('jobs_count_namayandegi'),
-            'jobs_count_namayandegi_in_city' =>$this->input->post('jobs_count_namayandegi_in_city'),
-            'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
-            'jobs_list_service' =>$this->input->post('jobs_list_service'),
-            'jobs_service_id' =>$this->input->post('jobs_service_id'),
-            'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
-            'jobs_video' =>$this->input->post('jobs_video'),
-            'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-            'update_date' =>'',
-            'state_id' =>1,
+            'agahi_title' =>$this->input->post('agahi_title'),
+            'agahi_cate_id' =>$this->input->post('agahi_cate_id'),
+            'agahi_sub_cate_id' =>$this->input->post('agahi_sub_cate_id'),
+            'agahi_des' =>$this->input->post('agahi_des'),
+            'agahi_tell' =>$this->input->post('agahi_tell'),
+            'agahi_latitude' =>$this->input->post('agahi_latitude'),
+            'agahi_longitude' =>$this->input->post('agahi_longitude'),
+            'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
+            'agahi_address' =>$this->input->post('agahi_address'),
+            'agahi_email' =>$this->input->post('agahi_email'),
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'jobs_shoar' =>$this->input->post('jobs_shoar'),
             'price_id' =>0,
-            'expire' =>"1"
+            'state_id' => 12,
+            'days' =>$this->input->post('days'),
+            'expire' =>$this->calculate($this->input->post('days'))
+            
         );
 
-
-        $this->form_validation->set_rules('jobs_cate_id','دسته بندي','required');
-        $this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
+        $this->form_validation->set_rules('agahi_title','عنوان آگهی','required');
+        $this->form_validation->set_rules('agahi_cate_id','دسته بندي','required');
+        $this->form_validation->set_rules('agahi_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
-        $this->form_validation->set_rules('jobs_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
-       
-       
+        $this->form_validation->set_rules('agahi_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
+
+
         if($this->form_validation->run() == FALSE){
-            $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
+            $array_msg = array('title'=>'خطا','text'=>'تمام فیلد های مورد نیاز را تکمیل نمایید','type'=>'error');
             $this->session->set_flashdata('msg',$array_msg);
-            $this->index();  
-           
+            $this->index();
+
 
         }
         else{
-            $jobs = $this->MY_Model->insert('jobs',$data);
+            $jobs = $this->MY_Model->insert('agahi',$data);
             
             if($jobs) {
-                $array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
+                $array_msg = array('title'=>'تبريك','text'=>'آگهی شما با موفقيت درج گرديد','type'=>'success');
                 $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/work/BankMashaghelRaiganForm/index');
+                redirect('site/Agahi/FreeAgahiForm/index');
             }else {
-                $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
+                $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال آگهی بوجود آمده','type'=>'error');
                 $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/work/BankMashaghelRaiganForm/index');
+                redirect('site/Agahi/FreeAgahiForm/index');
 
             }
           
@@ -118,9 +103,14 @@ class VipAgahiForm extends CI_Panel {
     }
 
 
+    function calculate($days) {
+        $day =  time() + ($days * 86400);
+        return $day;
+    }  
+
     function get_sub_cate() {
-        $jobs_cate_id = $this->input->post('id',TRUE);
-        $data = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$jobs_cate_id);
+        $agahi_cate_id = $this->input->post('id',TRUE);
+        $data = $this->MY_Model->select_single_where('agahi_sub_cate','agahi_cate',$agahi_cate_id);
         echo json_encode($data);
     }
 

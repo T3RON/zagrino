@@ -55,6 +55,7 @@ class FreeAgahiForm extends CI_Panel {
             'agahi_latitude' =>$this->input->post('agahi_latitude'),
             'agahi_longitude' =>$this->input->post('agahi_longitude'),
             'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
+            'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
             'agahi_address' =>$this->input->post('agahi_address'),
             'agahi_email' =>$this->input->post('agahi_email'),
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
@@ -67,8 +68,9 @@ class FreeAgahiForm extends CI_Panel {
             
         );
 
-
-        $this->form_validation->set_rules('agahi_cate_id','دسته بندي','required');
+        $this->form_validation->set_rules('agahi_title','عنوان آگهی','required');
+        $this->form_validation->set_rules('agahi_tell','شماره تماس','required');
+        $this->form_validation->set_rules('agahi_cate_id',' دسته بندي','required');
         $this->form_validation->set_rules('agahi_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');

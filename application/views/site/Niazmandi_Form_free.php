@@ -88,7 +88,6 @@
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 					<select name="agahi_sub_cate_id" id="agahi_sub_cate_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-						<option value="0">...</option>
 
 					</select>
 				</div>
@@ -104,7 +103,6 @@
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 
 					<select id="ostan_id" name="ostan_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-						<option value="0">...</option>
 
 						<?php foreach($ostan as $ostan_value) { ?>
 							<option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?></option>
@@ -121,7 +119,6 @@
 				</div>
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 					<select name="city_id" id="city_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-						<option value="0">...</option>
 
 					</select>
 				</div>
@@ -195,6 +192,7 @@
 								   class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file"
 								   multiple=""></div>
 					</div>
+
 					<div class="f_r img_panel_2 p0">
 						<img src="<?= base_url('') ?>assets/site/img/placeholder.png" id="imgshow_1">
 						<div class="f_r img_panel_input_2">
@@ -203,6 +201,7 @@
 								   class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file"
 								   multiple=""></div>
 					</div>
+					
 					<div class="f_r img_panel_2 p0">
 						<img src="<?= base_url('') ?>assets/site/img/placeholder.png" id="imgshow_2">
 						<div class="f_r img_panel_input_2">
@@ -227,6 +226,7 @@
 
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_l select_map">
+			<div class="alert alert-info">جهت تعیین موقعیت روی آیکون آبی رنگ کلیک کنید سپس جابه جا نمایید</div>
 				<!--Google map-->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map" id="map"
 					 style="position: relative; overflow: hidden;">
@@ -250,12 +250,39 @@
 			</div>
 
 
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
+                    <div class="title_tavajoh ">
+                        توجه
+                    </div>
+                    <p>
+					<?php foreach ($site as $site_value) { ?>
+				تعداد روزهای نمایش آگهی رایگان <?= $site_value->show_time_free; ?> می باشد 
+				جهت استفاده از امکانات و تعداد روز های بشتر آگهی ویژه را انتخاب نمایید
+				<?php } ?>
+
+                    </p>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_poster p0">
+                            <a href="<?= base_url('site/Agahi/VipAgahiForm'); ?>">
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
+                                    <i class="icon-plus f_r"></i>
+                                    ثبت آگهی ویژه
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+
+                </div>
+
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
 				<button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r main_button" style="font-size: 20px;go" type="" href="">
 					ثبت و ارسال جهت بررسی
 				</button>
 
 			</div>
+
+
 
 		</form>
 

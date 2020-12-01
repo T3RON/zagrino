@@ -202,7 +202,7 @@
 					</div>
 
 
-				</div>
+				</div> 
 			</div>
 
 
@@ -250,6 +250,8 @@
 			</div>
 
 			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_l select_map">
+			<div class="alert alert-info">جهت تعیین موقعیت روی آیکون آبی رنگ کلیک کنید سپس جابه جا نمایید</div>
+
 				<!--Google map-->
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map" id="map"
 					 style="position: relative; overflow: hidden;">
