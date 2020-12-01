@@ -24,8 +24,11 @@ class VipAgahiForm extends CI_Panel {
         $output['slider'] = $this->MY_Model->select('slider');
         $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['jobs_cate'] = $this->MY_Model->select('jobs_cate');
+        $output['agahi_cate'] = $this->MY_Model->select('agahi_cate');
         $output['ostan'] = $this->MY_Model->select('ostan');
+        $output['agahi_state_kala'] = $this->MY_Model->select('agahi_state_kala');
+        $output['agahi_cond_tag'] = $this->MY_Model->select('agahi_cond_tag');
+        $output['show_time'] = $this->MY_Model->select('show_time');
 
 
         $this->load->vars(array(
@@ -54,17 +57,24 @@ class VipAgahiForm extends CI_Panel {
             'agahi_latitude' =>$this->input->post('agahi_latitude'),
             'agahi_longitude' =>$this->input->post('agahi_longitude'),
             'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
+            'agahi_state_kala_id' =>$this->input->post('agahi_state_kala_id'),
             'agahi_address' =>$this->input->post('agahi_address'),
             'agahi_email' =>$this->input->post('agahi_email'),
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
+            'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
+            'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
+            'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
             'price_id' =>0,
             'state_id' => 12,
             'days' =>$this->input->post('days'),
             'expire' =>$this->calculate($this->input->post('days'))
             
         );
+
+        print_r($data);
+        exit;
 
         $this->form_validation->set_rules('agahi_title','عنوان آگهی','required');
         $this->form_validation->set_rules('agahi_cate_id','دسته بندي','required');
@@ -74,7 +84,7 @@ class VipAgahiForm extends CI_Panel {
         $this->form_validation->set_rules('agahi_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
 
 
-        if($this->form_validation->run() == FALSE){
+        if($this->form_validation->run() == TRUE){
             $array_msg = array('title'=>'خطا','text'=>'تمام فیلد های مورد نیاز را تکمیل نمایید','type'=>'error');
             $this->session->set_flashdata('msg',$array_msg);
             $this->index();
@@ -87,7 +97,7 @@ class VipAgahiForm extends CI_Panel {
             if($jobs) {
                 $array_msg = array('title'=>'تبريك','text'=>'آگهی شما با موفقيت درج گرديد','type'=>'success');
                 $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/Agahi/FreeAgahiForm/index');
+                redirect('site/Agahi/Agahi_Payment/agahi/'.$this->db->insert_id());
             }else {
                 $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال آگهی بوجود آمده','type'=>'error');
                 $this->session->set_flashdata('msg',$array_msg);

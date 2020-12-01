@@ -216,9 +216,7 @@
 				</div>
 			</div>
 
-			<?php foreach ($site as $site_value) { ?>
-				<input name="days" type="hidden" value="<?= $site_value->show_time_free; ?>">
-			<?php } ?>
+		
 			
 
 

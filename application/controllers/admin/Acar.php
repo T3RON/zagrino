@@ -24,32 +24,7 @@ class Acar extends MY_Controller {
         $crud->display_as('agahi_car_id','شناسه');
         $crud->display_as('car_cate_id','گروه بندي');
         $crud->display_as('car_sub_cate_id',' زير گروه بندي');
-        $crud->display_as('accounts_id','كاربر');
-        $crud->display_as('ostan_id','استان');
-        $crud->display_as('city_id','شهرستان');
-        $crud->display_as('agahi_car_title','عنوان وسيله نقليه');
-        $crud->display_as('agahi_car_full_des','توضيحات كامل');
-        $crud->display_as('agahi_car_tag_id','برچسب');
-        $crud->display_as('agahi_car_tag_conditions_id','برچسب شرايط');
-        $crud->display_as('agahi_car_price','قيمت');
-        $crud->display_as('agahi_car_tell','شماره تماس');
-        $crud->display_as('agahi_car_address','آدرس');
-        $crud->display_as('agahi_car_year','سال');
-        $crud->display_as('agahi_car_type_id','نوع');
-        $crud->display_as('agahi_car_body_type_id','نوع بدنه');
-        $crud->display_as('agahi_car_karked','كاركرد');
-        $crud->display_as('agahi_car_state_id','وضعيت وسيله');
-        $crud->display_as('agahi_car_sokht_id','نوع سوخت');
-        $crud->display_as('agahi_car_pelak','پلاك');
-        $crud->display_as('agahi_car_color','رنگ');
-        $crud->display_as('agahi_car_body_des','توضيحات بدنه');
-        $crud->display_as('agahi_car_motor_des','توضيحات موتور');
-        $crud->display_as('agahi_rule_check','قبول قوانين');
-        $crud->display_as('agahi_rule_check','قبول قوانين');
-        $crud->display_as('agahi_car_date_register','تاريخ ثبت نام');
-        $crud->display_as('agahi_car_date_update','تاريخ ويرايش');
-        $crud->display_as('agahi_car_lat','طول جغرافيايي');
-        $crud->display_as('agahi_car_long','عرض جغرافيايي');
+
       
      
         $crud->set_relation('ostan_id','ostan','ostan_title');

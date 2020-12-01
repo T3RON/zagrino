@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 4.6.4
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1:3306
--- Generation Time: Dec 01, 2020 at 08:17 AM
--- Server version: 5.7.31
--- PHP Version: 7.3.21
+-- Host: 127.0.0.1
+-- Generation Time: Dec 01, 2020 at 10:06 PM
+-- Server version: 5.7.14
+-- PHP Version: 7.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -27,9 +26,8 @@ SET time_zone = "+00:00";
 -- Table structure for table `zgr_accounts`
 --
 
-DROP TABLE IF EXISTS `zgr_accounts`;
-CREATE TABLE IF NOT EXISTS `zgr_accounts` (
-  `accounts_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_accounts` (
+  `accounts_id` int(11) NOT NULL,
   `account_fn` text,
   `account_ln` text,
   `account_pass` text,
@@ -48,9 +46,8 @@ CREATE TABLE IF NOT EXISTS `zgr_accounts` (
   `account_age` int(11) DEFAULT NULL,
   `account_about` text,
   `register_date` text,
-  `update_date` text,
-  PRIMARY KEY (`accounts_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `update_date` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_accounts`
@@ -65,9 +62,8 @@ INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_
 -- Table structure for table `zgr_ads`
 --
 
-DROP TABLE IF EXISTS `zgr_ads`;
-CREATE TABLE IF NOT EXISTS `zgr_ads` (
-  `ads_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_ads` (
+  `ads_id` int(11) NOT NULL,
   `postion_id` int(11) NOT NULL,
   `ads_title` text NOT NULL,
   `ads_img` text NOT NULL,
@@ -76,9 +72,8 @@ CREATE TABLE IF NOT EXISTS `zgr_ads` (
   `state_id` int(11) NOT NULL,
   `register_date` text NOT NULL,
   `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
-  PRIMARY KEY (`ads_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+  `expire` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_ads`
@@ -95,9 +90,8 @@ INSERT INTO `zgr_ads` (`ads_id`, `postion_id`, `ads_title`, `ads_img`, `ads_link
 -- Table structure for table `zgr_agahi`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi` (
-  `agahi_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi` (
+  `agahi_id` int(11) NOT NULL,
   `accounts_id` int(11) DEFAULT NULL,
   `ostan_id` int(11) DEFAULT NULL,
   `city_id` int(11) DEFAULT NULL,
@@ -123,9 +117,8 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi` (
   `register_date` text,
   `update_date` text,
   `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
-  PRIMARY KEY (`agahi_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  `expire` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi`
@@ -140,7 +133,8 @@ INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agah
 (7, 1, NULL, 0, NULL, NULL, 0, NULL, NULL, '<p>\n	33.89591</p>\n', '<p>\n	48.752994</p>\n', NULL, NULL, NULL, '<p></p>', '<p></p>', '<p></p>', NULL, NULL, NULL, NULL, 3, NULL, NULL, '1606509005', 12, '1607545787'),
 (8, 1, NULL, 0, NULL, NULL, 0, NULL, NULL, '<p>\n	33.896201</p>\n', '<p>\n	48.749084</p>\n', NULL, NULL, NULL, '<p></p>', '<p></p>', '<p></p>', NULL, NULL, NULL, NULL, 7, NULL, NULL, '1606544599', 12, '1607581356'),
 (9, 1, 4, 60, '', 2, 2, '', '', '33.899656', ' 48.755575', NULL, NULL, NULL, '<p></p>', '<p></p>', '<p></p>', NULL, NULL, NULL, '0', 12, NULL, NULL, NULL, 12, '1607695232'),
-(10, 1, 15, 218, '66', 1, 1, '99999999999999', '6666', '33.896259', ' 48.74916', NULL, NULL, NULL, 'fd8b2b2a2991088ac42ad2903212188a.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '0', 12, NULL, NULL, NULL, 12, '1607753454');
+(10, 1, 15, 218, '<p>\n	66</p>\n', 1, 1, '<p>\n	99999999999999</p>\n', '<p>\n	6666</p>\n', '<p>\n	33.896259</p>\n', '<p>\n	48.74916</p>\n', NULL, NULL, NULL, 'fd8b2b2a2991088ac42ad2903212188a.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, NULL, 3, NULL, NULL, '1606850192', 12, '1607753454'),
+(11, 1, 5, 278, 'dsadsa', 1, 1, NULL, NULL, '33.89622', ' 48.749923', 1, NULL, NULL, '<p></p>', '<p></p>', '37a96865e638406540500bcbda606035.jpg', '<p></p>', 'c3369359ca3e38d6d07dc11f8c706af5.jpg', '<p></p>', '0', 12, NULL, NULL, NULL, 1, '1606945853');
 
 -- --------------------------------------------------------
 
@@ -148,9 +142,8 @@ INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agah
 -- Table structure for table `zgr_agahi_amlak`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_amlak`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
-  `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_amlak` (
+  `agahi_amlak_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -188,9 +181,8 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_amlak` (
   `register_date` text NOT NULL,
   `update_date` text NOT NULL,
   `expire` text NOT NULL,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`agahi_amlak_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `days` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_amlak`
@@ -205,9 +197,8 @@ INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `cit
 -- Table structure for table `zgr_agahi_car`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_car`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
-  `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_car` (
+  `agahi_car_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -244,8 +235,7 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
   `price_id` int(11) DEFAULT NULL,
   `agahi_rule_check` tinyint(1) DEFAULT NULL,
   `expire` text,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`agahi_car_id`)
+  `days` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -254,12 +244,10 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_car` (
 -- Table structure for table `zgr_agahi_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_cate` (
-  `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `agahi_cate_title` text NOT NULL,
-  PRIMARY KEY (`agahi_cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_agahi_cate` (
+  `agahi_cate_id` int(11) NOT NULL,
+  `agahi_cate_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_cate`
@@ -275,12 +263,10 @@ INSERT INTO `zgr_agahi_cate` (`agahi_cate_id`, `agahi_cate_title`) VALUES
 -- Table structure for table `zgr_agahi_cond_tag`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_cond_tag`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_cond_tag` (
-  `agahi_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `agahi_cond_tag_title` text NOT NULL,
-  PRIMARY KEY (`agahi_cond_tag_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_agahi_cond_tag` (
+  `agahi_cond_tag_id` int(11) NOT NULL,
+  `agahi_cond_tag_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_cond_tag`
@@ -295,12 +281,10 @@ INSERT INTO `zgr_agahi_cond_tag` (`agahi_cond_tag_id`, `agahi_cond_tag_title`) V
 -- Table structure for table `zgr_agahi_images`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_images`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
-  `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_images` (
+  `agahi_image_id` int(11) NOT NULL,
   `agahi_id` int(11) NOT NULL,
-  `agahi_image_url` text NOT NULL,
-  PRIMARY KEY (`agahi_image_id`)
+  `agahi_image_url` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -309,17 +293,15 @@ CREATE TABLE IF NOT EXISTS `zgr_agahi_images` (
 -- Table structure for table `zgr_agahi_message`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_message`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_message` (
-  `message_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_message` (
+  `message_id` int(11) NOT NULL,
   `agahi_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `message_email` text NOT NULL,
   `message_text` text NOT NULL,
   `message_mobile` text NOT NULL,
-  `state_id` int(11) NOT NULL,
-  PRIMARY KEY (`message_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+  `state_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_message`
@@ -334,15 +316,40 @@ INSERT INTO `zgr_agahi_message` (`message_id`, `agahi_id`, `accounts_id`, `messa
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_agahi_pay`
+--
+
+CREATE TABLE `zgr_agahi_pay` (
+  `agahi_pay_id` int(11) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
+  `agahi_id` int(11) NOT NULL,
+  `authority` text NOT NULL,
+  `mobile` text NOT NULL,
+  `amount` bigint(20) NOT NULL,
+  `pay_date` text NOT NULL,
+  `state_id` int(11) NOT NULL,
+  `Status` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi_pay`
+--
+
+INSERT INTO `zgr_agahi_pay` (`agahi_pay_id`, `accounts_id`, `agahi_id`, `authority`, `mobile`, `amount`, `pay_date`, `state_id`, `Status`) VALUES
+(1, 1, 1, '000000000000000000000000000000180795', '09192183440', 1000, 'سه شنبه, ۱۱ آذر ۱۳۹۹', 0, 'OK'),
+(2, 1, 1, '000000000000000000000000000000180795', '09192183440', 1000, 'سه شنبه, ۱۱ آذر ۱۳۹۹', 0, 'OK'),
+(3, 1, 0, '000000000000000000000000000000180813', '09192183440', 1000, 'سه شنبه, ۱۱ آذر ۱۳۹۹', 0, 'OK');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_agahi_state_kala`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_state_kala`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_state_kala` (
-  `agahi_state_kala_id` int(11) NOT NULL AUTO_INCREMENT,
-  `agahi_state_kala_title` text NOT NULL,
-  PRIMARY KEY (`agahi_state_kala_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_agahi_state_kala` (
+  `agahi_state_kala_id` int(11) NOT NULL,
+  `agahi_state_kala_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_state_kala`
@@ -357,13 +364,11 @@ INSERT INTO `zgr_agahi_state_kala` (`agahi_state_kala_id`, `agahi_state_kala_tit
 -- Table structure for table `zgr_agahi_sub_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_sub_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_sub_cate` (
-  `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_sub_cate` (
+  `agahi_sub_cate_id` int(11) NOT NULL,
   `agahi_cate_id` int(11) NOT NULL,
-  `agahi_sub_cate_title` text NOT NULL,
-  PRIMARY KEY (`agahi_sub_cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `agahi_sub_cate_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_sub_cate`
@@ -379,13 +384,11 @@ INSERT INTO `zgr_agahi_sub_cate` (`agahi_sub_cate_id`, `agahi_cate_id`, `agahi_s
 -- Table structure for table `zgr_agahi_tarefe`
 --
 
-DROP TABLE IF EXISTS `zgr_agahi_tarefe`;
-CREATE TABLE IF NOT EXISTS `zgr_agahi_tarefe` (
-  `agahi_tarefe_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_agahi_tarefe` (
+  `agahi_tarefe_id` int(11) NOT NULL,
   `agahi_tarefe_title` text NOT NULL,
-  `agahi_tarefe_price` text NOT NULL,
-  PRIMARY KEY (`agahi_tarefe_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `agahi_tarefe_price` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_agahi_tarefe`
@@ -400,12 +403,10 @@ INSERT INTO `zgr_agahi_tarefe` (`agahi_tarefe_id`, `agahi_tarefe_title`, `agahi_
 -- Table structure for table `zgr_amlak_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_amlak_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_amlak_cate` (
-  `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `amlak_cate_title` text NOT NULL,
-  PRIMARY KEY (`amlak_cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_amlak_cate` (
+  `amlak_cate_id` int(11) NOT NULL,
+  `amlak_cate_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_amlak_cate`
@@ -421,11 +422,9 @@ INSERT INTO `zgr_amlak_cate` (`amlak_cate_id`, `amlak_cate_title`) VALUES
 -- Table structure for table `zgr_amlak_cond_tag`
 --
 
-DROP TABLE IF EXISTS `zgr_amlak_cond_tag`;
-CREATE TABLE IF NOT EXISTS `zgr_amlak_cond_tag` (
-  `amlak_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `amlak_cond_tag_title` text NOT NULL,
-  PRIMARY KEY (`amlak_cond_tag_id`)
+CREATE TABLE `zgr_amlak_cond_tag` (
+  `amlak_cond_tag_id` int(11) NOT NULL,
+  `amlak_cond_tag_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -434,11 +433,9 @@ CREATE TABLE IF NOT EXISTS `zgr_amlak_cond_tag` (
 -- Table structure for table `zgr_amlak_tag`
 --
 
-DROP TABLE IF EXISTS `zgr_amlak_tag`;
-CREATE TABLE IF NOT EXISTS `zgr_amlak_tag` (
-  `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `amlak_tag_title` text NOT NULL,
-  PRIMARY KEY (`amlak_tag_id`)
+CREATE TABLE `zgr_amlak_tag` (
+  `amlak_tag_id` int(11) NOT NULL,
+  `amlak_tag_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -447,11 +444,9 @@ CREATE TABLE IF NOT EXISTS `zgr_amlak_tag` (
 -- Table structure for table `zgr_car_body`
 --
 
-DROP TABLE IF EXISTS `zgr_car_body`;
-CREATE TABLE IF NOT EXISTS `zgr_car_body` (
-  `car_body_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_body_title` text NOT NULL,
-  PRIMARY KEY (`car_body_id`)
+CREATE TABLE `zgr_car_body` (
+  `car_body_id` int(11) NOT NULL,
+  `car_body_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -460,11 +455,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_body` (
 -- Table structure for table `zgr_car_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_car_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_car_cate` (
-  `car_cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_cate_title` text NOT NULL,
-  PRIMARY KEY (`car_cate_id`)
+CREATE TABLE `zgr_car_cate` (
+  `car_cate_id` int(11) NOT NULL,
+  `car_cate_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -473,11 +466,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_cate` (
 -- Table structure for table `zgr_car_cond_tag`
 --
 
-DROP TABLE IF EXISTS `zgr_car_cond_tag`;
-CREATE TABLE IF NOT EXISTS `zgr_car_cond_tag` (
-  `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_cond_tag_title` text NOT NULL,
-  PRIMARY KEY (`car_cond_tag_id`)
+CREATE TABLE `zgr_car_cond_tag` (
+  `car_cond_tag_id` int(11) NOT NULL,
+  `car_cond_tag_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -486,11 +477,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_cond_tag` (
 -- Table structure for table `zgr_car_sokht`
 --
 
-DROP TABLE IF EXISTS `zgr_car_sokht`;
-CREATE TABLE IF NOT EXISTS `zgr_car_sokht` (
-  `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_sokht_title` text NOT NULL,
-  PRIMARY KEY (`car_sokht_id`)
+CREATE TABLE `zgr_car_sokht` (
+  `car_sokht_id` int(11) NOT NULL,
+  `car_sokht_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -499,11 +488,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_sokht` (
 -- Table structure for table `zgr_car_state`
 --
 
-DROP TABLE IF EXISTS `zgr_car_state`;
-CREATE TABLE IF NOT EXISTS `zgr_car_state` (
-  `car_state_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_state_title` text NOT NULL,
-  PRIMARY KEY (`car_state_id`)
+CREATE TABLE `zgr_car_state` (
+  `car_state_id` int(11) NOT NULL,
+  `car_state_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -512,12 +499,10 @@ CREATE TABLE IF NOT EXISTS `zgr_car_state` (
 -- Table structure for table `zgr_car_sub_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_car_sub_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_car_sub_cate` (
-  `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_car_sub_cate` (
+  `car_sub_cate_id` int(11) NOT NULL,
   `car_cate_id` int(11) NOT NULL,
-  `car_sub_cate_title` text NOT NULL,
-  PRIMARY KEY (`car_sub_cate_id`)
+  `car_sub_cate_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -526,11 +511,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_sub_cate` (
 -- Table structure for table `zgr_car_tag`
 --
 
-DROP TABLE IF EXISTS `zgr_car_tag`;
-CREATE TABLE IF NOT EXISTS `zgr_car_tag` (
-  `car_tag_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_tag_title` text NOT NULL,
-  PRIMARY KEY (`car_tag_id`)
+CREATE TABLE `zgr_car_tag` (
+  `car_tag_id` int(11) NOT NULL,
+  `car_tag_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -539,11 +522,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_tag` (
 -- Table structure for table `zgr_car_type`
 --
 
-DROP TABLE IF EXISTS `zgr_car_type`;
-CREATE TABLE IF NOT EXISTS `zgr_car_type` (
-  `car_type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `car_type_title` text NOT NULL,
-  PRIMARY KEY (`car_type_id`)
+CREATE TABLE `zgr_car_type` (
+  `car_type_id` int(11) NOT NULL,
+  `car_type_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -552,11 +533,9 @@ CREATE TABLE IF NOT EXISTS `zgr_car_type` (
 -- Table structure for table `zgr_category`
 --
 
-DROP TABLE IF EXISTS `zgr_category`;
-CREATE TABLE IF NOT EXISTS `zgr_category` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `category_title` text NOT NULL,
-  PRIMARY KEY (`category_id`)
+CREATE TABLE `zgr_category` (
+  `category_id` int(11) NOT NULL,
+  `category_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -565,12 +544,10 @@ CREATE TABLE IF NOT EXISTS `zgr_category` (
 -- Table structure for table `zgr_city`
 --
 
-DROP TABLE IF EXISTS `zgr_city`;
-CREATE TABLE IF NOT EXISTS `zgr_city` (
+CREATE TABLE `zgr_city` (
   `city_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
-  `city_title` text NOT NULL,
-  PRIMARY KEY (`city_id`)
+  `city_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -1025,8 +1002,7 @@ INSERT INTO `zgr_city` (`city_id`, `ostan_id`, `city_title`) VALUES
 -- Table structure for table `zgr_eghamatgah`
 --
 
-DROP TABLE IF EXISTS `zgr_eghamatgah`;
-CREATE TABLE IF NOT EXISTS `zgr_eghamatgah` (
+CREATE TABLE `zgr_eghamatgah` (
   `eghamatgah_id` int(11) NOT NULL,
   `accounts_id` text NOT NULL,
   `ostan_id` int(11) NOT NULL,
@@ -1058,8 +1034,7 @@ CREATE TABLE IF NOT EXISTS `zgr_eghamatgah` (
   `register_date` text NOT NULL,
   `update_date` text NOT NULL,
   `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
-  PRIMARY KEY (`eghamatgah_id`)
+  `expire` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1068,9 +1043,8 @@ CREATE TABLE IF NOT EXISTS `zgr_eghamatgah` (
 -- Table structure for table `zgr_events`
 --
 
-DROP TABLE IF EXISTS `zgr_events`;
-CREATE TABLE IF NOT EXISTS `zgr_events` (
-  `events_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_events` (
+  `events_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `events_owner` text NOT NULL,
   `ostan_id` int(11) NOT NULL,
@@ -1105,8 +1079,7 @@ CREATE TABLE IF NOT EXISTS `zgr_events` (
   `price_id` int(11) NOT NULL,
   `state_id` int(11) NOT NULL,
   `expire` text NOT NULL,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`events_id`)
+  `days` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1115,11 +1088,9 @@ CREATE TABLE IF NOT EXISTS `zgr_events` (
 -- Table structure for table `zgr_events_level`
 --
 
-DROP TABLE IF EXISTS `zgr_events_level`;
-CREATE TABLE IF NOT EXISTS `zgr_events_level` (
-  `events_level_id` int(11) NOT NULL AUTO_INCREMENT,
-  `events_level_title` text NOT NULL,
-  PRIMARY KEY (`events_level_id`)
+CREATE TABLE `zgr_events_level` (
+  `events_level_id` int(11) NOT NULL,
+  `events_level_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1128,12 +1099,10 @@ CREATE TABLE IF NOT EXISTS `zgr_events_level` (
 -- Table structure for table `zgr_events_run`
 --
 
-DROP TABLE IF EXISTS `zgr_events_run`;
-CREATE TABLE IF NOT EXISTS `zgr_events_run` (
-  `events_run_id` int(11) NOT NULL AUTO_INCREMENT,
-  `events_run_title` text NOT NULL,
-  PRIMARY KEY (`events_run_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_events_run` (
+  `events_run_id` int(11) NOT NULL,
+  `events_run_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_events_run`
@@ -1149,12 +1118,10 @@ INSERT INTO `zgr_events_run` (`events_run_id`, `events_run_title`) VALUES
 -- Table structure for table `zgr_events_type`
 --
 
-DROP TABLE IF EXISTS `zgr_events_type`;
-CREATE TABLE IF NOT EXISTS `zgr_events_type` (
-  `events_type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `events_type_title` text NOT NULL,
-  PRIMARY KEY (`events_type_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_events_type` (
+  `events_type_id` int(11) NOT NULL,
+  `events_type_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_events_type`
@@ -1169,13 +1136,11 @@ INSERT INTO `zgr_events_type` (`events_type_id`, `events_type_title`) VALUES
 -- Table structure for table `zgr_footer_menu`
 --
 
-DROP TABLE IF EXISTS `zgr_footer_menu`;
-CREATE TABLE IF NOT EXISTS `zgr_footer_menu` (
-  `footer_menu_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_footer_menu` (
+  `footer_menu_id` int(11) NOT NULL,
   `footer_menu_title` text NOT NULL,
-  `footer_menu_link` text NOT NULL,
-  PRIMARY KEY (`footer_menu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `footer_menu_link` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_footer_menu`
@@ -1194,9 +1159,8 @@ INSERT INTO `zgr_footer_menu` (`footer_menu_id`, `footer_menu_title`, `footer_me
 -- Table structure for table `zgr_gardeshgari`
 --
 
-DROP TABLE IF EXISTS `zgr_gardeshgari`;
-CREATE TABLE IF NOT EXISTS `zgr_gardeshgari` (
-  `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_gardeshgari` (
+  `gardeshgari_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -1222,8 +1186,7 @@ CREATE TABLE IF NOT EXISTS `zgr_gardeshgari` (
   `price_id` int(11) NOT NULL,
   `state_id` int(11) NOT NULL,
   `expire` text NOT NULL,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`gardeshgari_id`)
+  `days` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1232,13 +1195,11 @@ CREATE TABLE IF NOT EXISTS `zgr_gardeshgari` (
 -- Table structure for table `zgr_groups`
 --
 
-DROP TABLE IF EXISTS `zgr_groups`;
-CREATE TABLE IF NOT EXISTS `zgr_groups` (
-  `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_groups` (
+  `id` mediumint(8) UNSIGNED NOT NULL,
   `name` varchar(20) NOT NULL,
-  `description` varchar(100) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `description` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_groups`
@@ -1254,9 +1215,8 @@ INSERT INTO `zgr_groups` (`id`, `name`, `description`) VALUES
 -- Table structure for table `zgr_jobs`
 --
 
-DROP TABLE IF EXISTS `zgr_jobs`;
-CREATE TABLE IF NOT EXISTS `zgr_jobs` (
-  `jobs_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_jobs` (
+  `jobs_id` int(11) NOT NULL,
   `jobs_cate_id` int(11) NOT NULL,
   `jobs_sub_cate_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
@@ -1303,16 +1263,15 @@ CREATE TABLE IF NOT EXISTS `zgr_jobs` (
   `price_id` int(11) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
   `expire` text NOT NULL,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`jobs_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
+  `days` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs`
 --
 
 INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `jobs_latitude`, `jobs_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `jobs_shoar`, `price_id`, `state_id`, `expire`, `days`) VALUES
-(46, 7, 1, 1, 26, 368, 'آموزشگاه کامپیوتر البزر', 'شعبه بروجرد', '<p>\n	<span style=\"color: rgb(107, 112, 116);font-family: IRANSans-web;text-align: justify;font-family: IRANSans-web, serif !important;\">آموزشگاه فنی و حرفه ای پایا با بیش از ۲۰ سال سابقه آموزشی و بیش از ۸۰۰٫۰۰۰ نفر ساعت آموزش عملی موفق تا سال ۲۰۲۰، مهارت آموزی و ارتقای سطح کیفی و مهارتی در زمینه آموزش نرم افزارهای پایه و اداری، آموزش طراحی سایت و برنامه نویسی، آموزش شبکه عملی و سخت افزار عملی، نرم افزارهای گرافیکی، نرم افزارهای فنی و مهندسی و... در حال خدمت رسانی به هموطنان عزیز می باشد. مدیر و موسس آموزشگاه آقای پرویز تریوه می باشند که بعنوان سرگروه اساتید برخی از دوره&zwnj;ها مانند: طراحی سایت، برنامه نویسی، مدیریت و مهارتهای اداری و سازمانی در تهران و شهرستان&zwnj;ها توسط ایشان تدریس می&zwnj;گردد. تمامی دوره&zwnj;های آموزشگاه کامپیوتر پایا دارای تضمین کیفیت آموزشی می&zwnj;باشد. همچنین بنا به درخواست متقاضی، مدرک فنی و حرفه&zwnj;ای و یا مدرک بین المللی اعطاء می&zwnj;گردد.</span></p>\n', '<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/icdl-core-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه ICDL و اخذ مدرک فنی حرفه ای</span></a>&nbsp;: گواهینامه یا مدرک آی سی دی ال ICDL مدرکی است معتبر و بین المللی که نشان دهنده مهارت فرد در کار با کامپیوتر میباشد. اخذ مدرک ICDL سازمان فنی حرفه ای شامل مهارت های هفتگانه بوده و شامل ICDL درجه ۲ و ICDL درجه ۱ میباشد. شرکت در دوره آموزش ICDL و هزینه اخذ مدرک icdl بسیار کم و فوری میباشد. و موجب دریافت سریع مدرک icdl میشود. مدرک icdl فنی حرفه ای قابل ترجمه رسمی میباشد و آنرا تبدیل به مدرک icdl بین المللی می نماید. آموزشگاه کامپیوتر icdl پایا دارای مجوز فنی حرفه ای میباشد. و جزو بهترین آموزشگاههای icdl تهران است.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/icdl-advanced-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه ICDL پیشرفته ویژه بازار کار</span></a>&nbsp;: دوره آموزش آی سی دی ال پیشرفته ICDL Advanced برای کلیه کسانی که می خواهند ICDL را تا سطح پیشرفته یاد بگیرند. جویای کار و شغل مناسب می باشند. و یا در ادارات و موسسات دولتی و غیر دولتی شاغل می باشند. و تمام افرادی که می خواهند با ثبت نام در کلاسهای دوره آموزش کاربردی ICDL حرفه ای، بصورت تضمینی و فشرده یاد بگیرند مناسب است.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Word-Excel-PowerPoint-Access-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه نرم افزار های آفیس شامل آموزش ورد ، آموزش اکسل ، آموزش پاورپوینت ، آموزش اکسس ، آموزش اوت لوک</span></a>&nbsp;: دوره آموزش کاربردی نرم افزارهای Microsoft Office شامل آموزش کاربردی نرم افزار Word فشرده ، آموزش کاربردی نرم افزار Excel پیشرفته ، آموزش کاربردی نرم افزار PowerPoint سریع ، آموزش کاربردی نرم افزار Access ، آموزش کاربردی نرم افزار Outlook میکروسافت میباشد. شما می توانید با ثبت نام در کلاسهای آموزش آفیس آموزشگاه کامپیوتر پایا در کوتاهترین زمان و کمترین شهریه بصورت خصوصی و تضمینی مهارت لازم را بدست آورید. و از یکسال خدمات پشتیبانی رایگان آموزشگاه پایا بهره مند شوید.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/ten-finger-typing-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه تایپ ده انگشتی</span></a>&nbsp;: آموزش تایپ فارسی یا آموزش تایپ انگلیسی در دنیای امروز که همه کارها با کامپیوتر انجام می شود امری مهم و اجتناب ناپذیر است. با فراگیری و کسب مهارت در کلاس آموزش تایپ ده انگشتی ، بدون نگاه کردن به کیبورد و افزایش سرعت تایپ، فرصت مناسب و چشمگیری را در کار و تحصیل و ارتباطات، نسبت به دیگران بدست خواهید آورد. شما می توانید با ثبت نام در دوره های آموزش تایپ ۱۰ انگشتی آموزشگاه کامپیوتر پایا در زمان بسیار کوتاه و بصورت تضمینی مهارت مورد نظر را کسب کنید. آموزشگاه تایپ ده انگشتی پایا در کوتاهترین زمان و کمترین شهریه ، بسیار ساده و فشرده همراه با مدرک و گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Accounting-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه حسابداری عملی با نرم افزار حسابداری هلو</span></a>&nbsp;: با شرکت در دوره فشرده آموزش نرم افزار حسابداری هلو کلیه عملیات حسابداری مانند صدور فاکتور، انبار، خرید فروش، سررسید چک ها، گزارشات متنوع و... را در زمینه حسابداری فروشگاهی یا حسابداری شرکتی یا حسابداری تولیدی در مشاغل مختلف فرا خواهید گرفت. کاربری آسان همراه با امکانات گسترده، نرم افزارهای حسابداری هلو را به پرکاربرترین نرم افزار مالی کشور تبدیل کرده است. و توجه کلیه افرادی که هیچگونه سر رشته ای در حسابداری ندارند را بخودش جلب کرده است. آموزشگاه کامپیوتر پایا آموزش حسابداری با نرم افزار هلو را در ۴ جلسه و کمترین شهریه بصورت تضمینی و پشتیبانی رایگان و همراه با گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Professional-Secretarial-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه منشیگری حرفه ای</span></a>&nbsp;: یک منشی حرفه ای فرد مورد اعتماد در امور محرمانه یا خصوصی سازمان میباشد. کسی که کار منشیگری را انجام می دهد باید از عهده وظایفی چون تنظیم برنامه روزانه ، مهارت های ارتباط تلفنی ، توانایی تنظیم و سازماندهی جلسات ، تسلط در نامه نگاری و مکاتبات اداری و بایگانی اسناد ، تنظیم انواع گزارش ها از فعالیت&zwnj;های مختلف ، کار با کامپیوتر و اینترنت ، تایپ متون ، آگاهی از اصول مدیریت و انواع شیوه های مدیریت و مهارت های سازمانی ، مهارت در ارتباطات ، اصول مالی و حسابداری ، مسئولیت پذیری و نظارت برآید. در واقع یک منشی بعنوان معاون مدیر یا دست راست مدیر شناخته می شود. آموزشگاه پایا آموزش منشی گری را در کوتاهترین زمان و کمترین شهریه بصورت تضمینی ، پشتیبانی و بازآموزی رایگان و همراه با گواهینامه معتبر ارائه مینماید. مدرس دوره آموزش منشیگری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Administrative-secretary-skills-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه رییس دفتری ، آموزش مدیر دفتری ، آموزش مسئول دفتری</span></a>&nbsp;: یک رییس دفتر حرفه ای باید تجربه کار منشیگری را داشته باشد. اهم وظایف رئیس دفتری شامل مدیریت اداری و تشریفاتی سازمان ، مهارت های کار حرفه ای با کامپیوتر ، مدیریت جلسات سازمان ، درک و بکارگیری مدیریت زمان ، مدیریت تنخواه گردانی ، درک اهمیت و توانایی ایجاد رزومه کاری و.. میباشد. دوره آموزش مسئول دفتری به شما کمک میکند تا انواع روش های ارتباط با دیگران ، زبان بدن و اشاره ، پاسخگویی موثر به تلفن ها و بکارگیری عبارات جادویی در مکالمات تلفنی ، نحوه برخورد حرفه ای با مافوق و ارباب رجوع ، نحوه برنامه ریزی و اولویت بندی فعالیتهای مختلف ، رازهای جذابیت و نفوذ در دیگران را بیاموزید. طبق آمار آموزشگاه پایا، کلیه مدیران هوشمند و آینده نگر شرکت ها و موسسات برای ارتقای پرسنل تحت امر خود اقدام به ثبت نام کارمندانشان در آموزش رئیس دفتری - آموزش مدیر دفتری - آموزش مسئول دفتری می نمایند. مخاطبان دوره آموزش رئیس دفتری و مسئولین دفاتر مدیران عمدتا کسانی هستند که هم اکنون این شغل را دارند. یا بفکر ارتقای شغلی هستند. استاد دوره آموزش رییس دفتری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/speech-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزشگاه فن بیان و مهارتهای ارتباطی Rhetoric and Communication skills training</span></a>&nbsp;: همانطور که می دانیم امروزه داشتن تخصص، دانش و مهارت برای موفقیت الزامیست ولی کافی نیست. و اگر بلد نباشیم ارتباط خوبی با دیگران برقرار نماییم و خواسته ها، ایده ها، خدمات و توانمندیهای خود را بخوبی بیان نماییم، نتایج دلخواه و مطلوبی را نخواهیم گرفت. دوره آموزش فن بیان، سخنرانی و مهارتهای ارتباطی این امکان را به شما می دهد تا بتوانید مهارت های سخنرانی (Public Speaking and Presentation) و فن بیان (Rhetoric) و صحیح صحبت کردن (Speaking Skills) را در خود پرورش دهید. بطور خلاصه فن بیان یعنی هنر خوب حرف زدن و حرف خوب زدن است. در این دوره آموزشی تکنیکهای اعتماد به نفس و رفع خجالت و کم حرفی، تکنیکهای کاربردی فن بیان، داشتن صدایی رسا و گیرا، مدیریت ترس از سخنرانی، نحوه نوشتن متن سخنرانی، روشهای تقویت حافظه، روانشناسی مخاطبین، الگوهای رفتاری و زبان بدن (Body Language)، روش ها و مهارت های برقراری ارتباط و روابط عمومی، ایجاد ارتباط موثر و خوب در جامعه، آداب معاشرت حرفه ای، فنون کسب شخصیت کاریزماتیک یعنی جذابیت، اثرگذاری و الهام بخش بودن را در دوره فن بیان و سخنرانی و مهارتهای ارتباطی فرا می گیرید. ۸۵% عامل پیروزی افراد موفق، مهارتهای ارتباطی، نحوه صحبت کردن و هوش اجتماعی آنهاست. بنابراین فرقی نمی&zwnj;کند که شما چه شغلی دارید، جزو مدیران، منشی ها و رییس دفترها، اساتید دانشگاهها و دانشجویان، مدرسان و مربیان موسسات آموزشی، فروشندگان، بازاریابان تلفنی و حضوری، راهنمای تور گردشگری، مسئول روابط عمومی هستید و یا هر شغل دیگری داشته باشید، بدون شک به فن بیان، قدرت سخنوری و سخنرانی و به طور کلی مهارت های خوب صحبت کردن و برقراری ارتباط نیاز دارید.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Management-certificate-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزش مدیریت آموزشگاه و کارت مدیریت آموزشگاه فنی و حرفه ای</span></a>&nbsp;: مدیر آموزشگاه شغلی از حوزه مدیریت آموزشی است که وظایفی از قبیل برنامه ریزی آموزشی، اجرای قوانین و مقررات، نظارت بر فعالیت های آموزشی آموزشگاه، ارزشیابی دوره های در حال اجرا، مدیریت مالی آموزشگاه، رسیدگی به امور کارآموزان و کارکنان، تهیه گزارش های اداری، نظارت و اعمال مدیریت بر حسن انجام وظایف کلیه کارکنان و مربیان را در بر می گیرد. این شغل با مشاغلی از قبیل مدیریت آموزشگاه های آزاد فنی وحرفه ای مرتبط است. طبق دستورالعمل سازمان آموزش فنی و حرفه ای کشور، گذراندن دوره مدیر آموزشگاه جهت دریافت کارت مدیریت آموزشگاه الزامیست. با شرکت در دوره آموزش مهارت مدیریت آموزشگاه های فنی حرفه ای می توانید در کوتاهترین زمان موفق به گرفتن کارت مدیریت آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n<p>\n	&nbsp;</p>\n<p style=\"box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;\">\n	<a class=\"DLINK-Light-blue-2\" href=\"https://www.payait.com/Coaching-certificate-training.aspx\" style=\"box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;\"><span style=\"box-sizing: border-box; font-weight: bolder;\">آموزش مربیگری آموزشگاه و کارت مربیگری آموزشگاه فنی و حرفه ای</span></a>&nbsp;: شغل مربیگری آموزشگاه به مجموعه ای از وظایف و توانمندی های خاص که از یک مربی در سطح مورد نظر انتظار می رود اطلاق می شود. در حرفه مربی گری اموزشگاه حداقل توانمندی های آموزشی و حرفه ای، رفتارهای عاطفی و مهارت های غیر فنی و اخلاق حرفه ای از مربیان دوره آموزش استاندارد فنی و حرفه ای انتظار می رود. مربی آموزشگاه پس از گذراندن دوره آموزش پداگوژی عمومی باید شایستگی و توانایی انجام کار در محیط ها و شرایط گوناگون را به طور موثر و کارا برابر استاندارد سازمان فنی حرفه ای داشته باشد. مربیگری آموزشگاه فنی و حرفه ای شامل بکارگیری روش ها و فنون تدریس یا پداگوژی، بررسی و بکارگیری اهداف آموزش های فنی و حرفه ای، برنامه ریزی آموزشی، تهیه و تنظیم طرح درس، بکارگیری وسایل کمک آموزشی، اجرای دوره های آموزشی، سنجش و ارزیابی می باشد. استاندارد آموزش شایستگی روش ها و فنون تدریس (پداگوژی) برای آموزش مهارت روش وفنون تدریس، ارزشیابی و ارزیابی کارآموزان و دوره آموزشی و همچنین آیین کلاس داری و یادگیری طراحی و تدوین گردیده است. گذراندن دوره پداگوژی عمومی جهت دریافت کارت مربیگری و تدریس در آموزشگاه های فنی و حرفه ای الزامیست. با شرکت در دوره آموزش مهارت مربیگری آموزشگاه می توانید در کوتاهترین زمان موفق به کسب گواهینامه مربیگری آموزشگاه و گرفتن کارت مربیگری آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n', '<p>\n	مراجعه به آموزشگاه در ساعات&nbsp;</p>\n<p>\n	<span style=\"color:#ff0000;\">صبح ها </span>از ساعت 8 تا 12 ظهر&nbsp;</p>\n<p>\n	<span style=\"color:#ff0000;\">عصر ها</span> 3 الی 19</p>\n<p>\n	&nbsp;</p>\n', '09192183440', '08137591', '08137591', 'corssis248@gmail.com', '6591953977', 'https://www.payait.com/', 'payait_institute', 'Paya_IT', NULL, 'PayaIT', 'Payait1', NULL, 'https://www.youtube.com/channel/UCW3glOL5vP6rhLWWOXKHc5w/?guided_help_flow=5', '<p>\n	آدرس آموزشگاه کامپیوتر پایا: تهران، میدان توحید، خیابان ستارخان، بین باقرخان و پاتریس، پلاک ۱۹۷</p>\n', NULL, NULL, 1, 1, NULL, NULL, NULL, '<p>\n	<a href=\"https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg\"><img alt=\"\" src=\"https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg\" style=\"width: 705px; height: 178px;\" /></a></p>\n<p>\n	<img alt=\"\" src=\"https://www.payait.com/dorepic/wonderful/C-plus-Programming-learning-wonderful.jpg\" style=\"width: 705px; height: 178px;\" /></p>\n', NULL, '1603875241', '1603997959', '6c0ef-fanni.jpg', 'a9cb5-icdl-core-training.jpg', '6e3bf-web-developer-training.jpg', '1c4ff-indesign-training.jpg', '87bec-3dmax-training.jpg', 'c419d-accounting-training.jpg', '850d5-photoshop-training.jpg', 'آموزشگاه کامپیوتر پایا با مجوز رسمی از وزارت کار و سازمان فنی و حرفه ای کشور', NULL, 3, '1606467968', 30);
+(46, 7, 1, 1, 26, 368, 'آموزشگاه کامپیوتر البزر', 'شعبه بروجرد', '<p>\n	<span style="color: rgb(107, 112, 116);font-family: IRANSans-web;text-align: justify;font-family: IRANSans-web, serif !important;">آموزشگاه فنی و حرفه ای پایا با بیش از ۲۰ سال سابقه آموزشی و بیش از ۸۰۰٫۰۰۰ نفر ساعت آموزش عملی موفق تا سال ۲۰۲۰، مهارت آموزی و ارتقای سطح کیفی و مهارتی در زمینه آموزش نرم افزارهای پایه و اداری، آموزش طراحی سایت و برنامه نویسی، آموزش شبکه عملی و سخت افزار عملی، نرم افزارهای گرافیکی، نرم افزارهای فنی و مهندسی و... در حال خدمت رسانی به هموطنان عزیز می باشد. مدیر و موسس آموزشگاه آقای پرویز تریوه می باشند که بعنوان سرگروه اساتید برخی از دوره&zwnj;ها مانند: طراحی سایت، برنامه نویسی، مدیریت و مهارتهای اداری و سازمانی در تهران و شهرستان&zwnj;ها توسط ایشان تدریس می&zwnj;گردد. تمامی دوره&zwnj;های آموزشگاه کامپیوتر پایا دارای تضمین کیفیت آموزشی می&zwnj;باشد. همچنین بنا به درخواست متقاضی، مدرک فنی و حرفه&zwnj;ای و یا مدرک بین المللی اعطاء می&zwnj;گردد.</span></p>\n', '<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/icdl-core-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه ICDL و اخذ مدرک فنی حرفه ای</span></a>&nbsp;: گواهینامه یا مدرک آی سی دی ال ICDL مدرکی است معتبر و بین المللی که نشان دهنده مهارت فرد در کار با کامپیوتر میباشد. اخذ مدرک ICDL سازمان فنی حرفه ای شامل مهارت های هفتگانه بوده و شامل ICDL درجه ۲ و ICDL درجه ۱ میباشد. شرکت در دوره آموزش ICDL و هزینه اخذ مدرک icdl بسیار کم و فوری میباشد. و موجب دریافت سریع مدرک icdl میشود. مدرک icdl فنی حرفه ای قابل ترجمه رسمی میباشد و آنرا تبدیل به مدرک icdl بین المللی می نماید. آموزشگاه کامپیوتر icdl پایا دارای مجوز فنی حرفه ای میباشد. و جزو بهترین آموزشگاههای icdl تهران است.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/icdl-advanced-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه ICDL پیشرفته ویژه بازار کار</span></a>&nbsp;: دوره آموزش آی سی دی ال پیشرفته ICDL Advanced برای کلیه کسانی که می خواهند ICDL را تا سطح پیشرفته یاد بگیرند. جویای کار و شغل مناسب می باشند. و یا در ادارات و موسسات دولتی و غیر دولتی شاغل می باشند. و تمام افرادی که می خواهند با ثبت نام در کلاسهای دوره آموزش کاربردی ICDL حرفه ای، بصورت تضمینی و فشرده یاد بگیرند مناسب است.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Word-Excel-PowerPoint-Access-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه نرم افزار های آفیس شامل آموزش ورد ، آموزش اکسل ، آموزش پاورپوینت ، آموزش اکسس ، آموزش اوت لوک</span></a>&nbsp;: دوره آموزش کاربردی نرم افزارهای Microsoft Office شامل آموزش کاربردی نرم افزار Word فشرده ، آموزش کاربردی نرم افزار Excel پیشرفته ، آموزش کاربردی نرم افزار PowerPoint سریع ، آموزش کاربردی نرم افزار Access ، آموزش کاربردی نرم افزار Outlook میکروسافت میباشد. شما می توانید با ثبت نام در کلاسهای آموزش آفیس آموزشگاه کامپیوتر پایا در کوتاهترین زمان و کمترین شهریه بصورت خصوصی و تضمینی مهارت لازم را بدست آورید. و از یکسال خدمات پشتیبانی رایگان آموزشگاه پایا بهره مند شوید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/ten-finger-typing-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه تایپ ده انگشتی</span></a>&nbsp;: آموزش تایپ فارسی یا آموزش تایپ انگلیسی در دنیای امروز که همه کارها با کامپیوتر انجام می شود امری مهم و اجتناب ناپذیر است. با فراگیری و کسب مهارت در کلاس آموزش تایپ ده انگشتی ، بدون نگاه کردن به کیبورد و افزایش سرعت تایپ، فرصت مناسب و چشمگیری را در کار و تحصیل و ارتباطات، نسبت به دیگران بدست خواهید آورد. شما می توانید با ثبت نام در دوره های آموزش تایپ ۱۰ انگشتی آموزشگاه کامپیوتر پایا در زمان بسیار کوتاه و بصورت تضمینی مهارت مورد نظر را کسب کنید. آموزشگاه تایپ ده انگشتی پایا در کوتاهترین زمان و کمترین شهریه ، بسیار ساده و فشرده همراه با مدرک و گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Accounting-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه حسابداری عملی با نرم افزار حسابداری هلو</span></a>&nbsp;: با شرکت در دوره فشرده آموزش نرم افزار حسابداری هلو کلیه عملیات حسابداری مانند صدور فاکتور، انبار، خرید فروش، سررسید چک ها، گزارشات متنوع و... را در زمینه حسابداری فروشگاهی یا حسابداری شرکتی یا حسابداری تولیدی در مشاغل مختلف فرا خواهید گرفت. کاربری آسان همراه با امکانات گسترده، نرم افزارهای حسابداری هلو را به پرکاربرترین نرم افزار مالی کشور تبدیل کرده است. و توجه کلیه افرادی که هیچگونه سر رشته ای در حسابداری ندارند را بخودش جلب کرده است. آموزشگاه کامپیوتر پایا آموزش حسابداری با نرم افزار هلو را در ۴ جلسه و کمترین شهریه بصورت تضمینی و پشتیبانی رایگان و همراه با گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Professional-Secretarial-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه منشیگری حرفه ای</span></a>&nbsp;: یک منشی حرفه ای فرد مورد اعتماد در امور محرمانه یا خصوصی سازمان میباشد. کسی که کار منشیگری را انجام می دهد باید از عهده وظایفی چون تنظیم برنامه روزانه ، مهارت های ارتباط تلفنی ، توانایی تنظیم و سازماندهی جلسات ، تسلط در نامه نگاری و مکاتبات اداری و بایگانی اسناد ، تنظیم انواع گزارش ها از فعالیت&zwnj;های مختلف ، کار با کامپیوتر و اینترنت ، تایپ متون ، آگاهی از اصول مدیریت و انواع شیوه های مدیریت و مهارت های سازمانی ، مهارت در ارتباطات ، اصول مالی و حسابداری ، مسئولیت پذیری و نظارت برآید. در واقع یک منشی بعنوان معاون مدیر یا دست راست مدیر شناخته می شود. آموزشگاه پایا آموزش منشی گری را در کوتاهترین زمان و کمترین شهریه بصورت تضمینی ، پشتیبانی و بازآموزی رایگان و همراه با گواهینامه معتبر ارائه مینماید. مدرس دوره آموزش منشیگری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Administrative-secretary-skills-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه رییس دفتری ، آموزش مدیر دفتری ، آموزش مسئول دفتری</span></a>&nbsp;: یک رییس دفتر حرفه ای باید تجربه کار منشیگری را داشته باشد. اهم وظایف رئیس دفتری شامل مدیریت اداری و تشریفاتی سازمان ، مهارت های کار حرفه ای با کامپیوتر ، مدیریت جلسات سازمان ، درک و بکارگیری مدیریت زمان ، مدیریت تنخواه گردانی ، درک اهمیت و توانایی ایجاد رزومه کاری و.. میباشد. دوره آموزش مسئول دفتری به شما کمک میکند تا انواع روش های ارتباط با دیگران ، زبان بدن و اشاره ، پاسخگویی موثر به تلفن ها و بکارگیری عبارات جادویی در مکالمات تلفنی ، نحوه برخورد حرفه ای با مافوق و ارباب رجوع ، نحوه برنامه ریزی و اولویت بندی فعالیتهای مختلف ، رازهای جذابیت و نفوذ در دیگران را بیاموزید. طبق آمار آموزشگاه پایا، کلیه مدیران هوشمند و آینده نگر شرکت ها و موسسات برای ارتقای پرسنل تحت امر خود اقدام به ثبت نام کارمندانشان در آموزش رئیس دفتری - آموزش مدیر دفتری - آموزش مسئول دفتری می نمایند. مخاطبان دوره آموزش رئیس دفتری و مسئولین دفاتر مدیران عمدتا کسانی هستند که هم اکنون این شغل را دارند. یا بفکر ارتقای شغلی هستند. استاد دوره آموزش رییس دفتری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/speech-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه فن بیان و مهارتهای ارتباطی Rhetoric and Communication skills training</span></a>&nbsp;: همانطور که می دانیم امروزه داشتن تخصص، دانش و مهارت برای موفقیت الزامیست ولی کافی نیست. و اگر بلد نباشیم ارتباط خوبی با دیگران برقرار نماییم و خواسته ها، ایده ها، خدمات و توانمندیهای خود را بخوبی بیان نماییم، نتایج دلخواه و مطلوبی را نخواهیم گرفت. دوره آموزش فن بیان، سخنرانی و مهارتهای ارتباطی این امکان را به شما می دهد تا بتوانید مهارت های سخنرانی (Public Speaking and Presentation) و فن بیان (Rhetoric) و صحیح صحبت کردن (Speaking Skills) را در خود پرورش دهید. بطور خلاصه فن بیان یعنی هنر خوب حرف زدن و حرف خوب زدن است. در این دوره آموزشی تکنیکهای اعتماد به نفس و رفع خجالت و کم حرفی، تکنیکهای کاربردی فن بیان، داشتن صدایی رسا و گیرا، مدیریت ترس از سخنرانی، نحوه نوشتن متن سخنرانی، روشهای تقویت حافظه، روانشناسی مخاطبین، الگوهای رفتاری و زبان بدن (Body Language)، روش ها و مهارت های برقراری ارتباط و روابط عمومی، ایجاد ارتباط موثر و خوب در جامعه، آداب معاشرت حرفه ای، فنون کسب شخصیت کاریزماتیک یعنی جذابیت، اثرگذاری و الهام بخش بودن را در دوره فن بیان و سخنرانی و مهارتهای ارتباطی فرا می گیرید. ۸۵% عامل پیروزی افراد موفق، مهارتهای ارتباطی، نحوه صحبت کردن و هوش اجتماعی آنهاست. بنابراین فرقی نمی&zwnj;کند که شما چه شغلی دارید، جزو مدیران، منشی ها و رییس دفترها، اساتید دانشگاهها و دانشجویان، مدرسان و مربیان موسسات آموزشی، فروشندگان، بازاریابان تلفنی و حضوری، راهنمای تور گردشگری، مسئول روابط عمومی هستید و یا هر شغل دیگری داشته باشید، بدون شک به فن بیان، قدرت سخنوری و سخنرانی و به طور کلی مهارت های خوب صحبت کردن و برقراری ارتباط نیاز دارید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Management-certificate-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزش مدیریت آموزشگاه و کارت مدیریت آموزشگاه فنی و حرفه ای</span></a>&nbsp;: مدیر آموزشگاه شغلی از حوزه مدیریت آموزشی است که وظایفی از قبیل برنامه ریزی آموزشی، اجرای قوانین و مقررات، نظارت بر فعالیت های آموزشی آموزشگاه، ارزشیابی دوره های در حال اجرا، مدیریت مالی آموزشگاه، رسیدگی به امور کارآموزان و کارکنان، تهیه گزارش های اداری، نظارت و اعمال مدیریت بر حسن انجام وظایف کلیه کارکنان و مربیان را در بر می گیرد. این شغل با مشاغلی از قبیل مدیریت آموزشگاه های آزاد فنی وحرفه ای مرتبط است. طبق دستورالعمل سازمان آموزش فنی و حرفه ای کشور، گذراندن دوره مدیر آموزشگاه جهت دریافت کارت مدیریت آموزشگاه الزامیست. با شرکت در دوره آموزش مهارت مدیریت آموزشگاه های فنی حرفه ای می توانید در کوتاهترین زمان موفق به گرفتن کارت مدیریت آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Coaching-certificate-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزش مربیگری آموزشگاه و کارت مربیگری آموزشگاه فنی و حرفه ای</span></a>&nbsp;: شغل مربیگری آموزشگاه به مجموعه ای از وظایف و توانمندی های خاص که از یک مربی در سطح مورد نظر انتظار می رود اطلاق می شود. در حرفه مربی گری اموزشگاه حداقل توانمندی های آموزشی و حرفه ای، رفتارهای عاطفی و مهارت های غیر فنی و اخلاق حرفه ای از مربیان دوره آموزش استاندارد فنی و حرفه ای انتظار می رود. مربی آموزشگاه پس از گذراندن دوره آموزش پداگوژی عمومی باید شایستگی و توانایی انجام کار در محیط ها و شرایط گوناگون را به طور موثر و کارا برابر استاندارد سازمان فنی حرفه ای داشته باشد. مربیگری آموزشگاه فنی و حرفه ای شامل بکارگیری روش ها و فنون تدریس یا پداگوژی، بررسی و بکارگیری اهداف آموزش های فنی و حرفه ای، برنامه ریزی آموزشی، تهیه و تنظیم طرح درس، بکارگیری وسایل کمک آموزشی، اجرای دوره های آموزشی، سنجش و ارزیابی می باشد. استاندارد آموزش شایستگی روش ها و فنون تدریس (پداگوژی) برای آموزش مهارت روش وفنون تدریس، ارزشیابی و ارزیابی کارآموزان و دوره آموزشی و همچنین آیین کلاس داری و یادگیری طراحی و تدوین گردیده است. گذراندن دوره پداگوژی عمومی جهت دریافت کارت مربیگری و تدریس در آموزشگاه های فنی و حرفه ای الزامیست. با شرکت در دوره آموزش مهارت مربیگری آموزشگاه می توانید در کوتاهترین زمان موفق به کسب گواهینامه مربیگری آموزشگاه و گرفتن کارت مربیگری آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n', '<p>\n	مراجعه به آموزشگاه در ساعات&nbsp;</p>\n<p>\n	<span style="color:#ff0000;">صبح ها </span>از ساعت 8 تا 12 ظهر&nbsp;</p>\n<p>\n	<span style="color:#ff0000;">عصر ها</span> 3 الی 19</p>\n<p>\n	&nbsp;</p>\n', '09192183440', '08137591', '08137591', 'corssis248@gmail.com', '6591953977', 'https://www.payait.com/', 'payait_institute', 'Paya_IT', NULL, 'PayaIT', 'Payait1', NULL, 'https://www.youtube.com/channel/UCW3glOL5vP6rhLWWOXKHc5w/?guided_help_flow=5', '<p>\n	آدرس آموزشگاه کامپیوتر پایا: تهران، میدان توحید، خیابان ستارخان، بین باقرخان و پاتریس، پلاک ۱۹۷</p>\n', NULL, NULL, 1, 1, NULL, NULL, NULL, '<p>\n	<a href="https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg"><img alt="" src="https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg" style="width: 705px; height: 178px;" /></a></p>\n<p>\n	<img alt="" src="https://www.payait.com/dorepic/wonderful/C-plus-Programming-learning-wonderful.jpg" style="width: 705px; height: 178px;" /></p>\n', NULL, '1603875241', '1603997959', '6c0ef-fanni.jpg', 'a9cb5-icdl-core-training.jpg', '6e3bf-web-developer-training.jpg', '1c4ff-indesign-training.jpg', '87bec-3dmax-training.jpg', 'c419d-accounting-training.jpg', '850d5-photoshop-training.jpg', 'آموزشگاه کامپیوتر پایا با مجوز رسمی از وزارت کار و سازمان فنی و حرفه ای کشور', NULL, 3, '1606467968', 30);
 
 -- --------------------------------------------------------
 
@@ -1320,12 +1279,10 @@ INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts
 -- Table structure for table `zgr_jobs_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_jobs_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_jobs_cate` (
-  `jobs_cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `jobs_cate_title` text NOT NULL,
-  PRIMARY KEY (`jobs_cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_jobs_cate` (
+  `jobs_cate_id` int(11) NOT NULL,
+  `jobs_cate_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs_cate`
@@ -1348,13 +1305,11 @@ INSERT INTO `zgr_jobs_cate` (`jobs_cate_id`, `jobs_cate_title`) VALUES
 -- Table structure for table `zgr_jobs_service`
 --
 
-DROP TABLE IF EXISTS `zgr_jobs_service`;
-CREATE TABLE IF NOT EXISTS `zgr_jobs_service` (
-  `jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_jobs_service` (
+  `jobs_service_id` int(11) NOT NULL,
   `jobs_service_title` text NOT NULL,
-  `jobs_service_ico` text NOT NULL,
-  PRIMARY KEY (`jobs_service_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `jobs_service_ico` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs_service`
@@ -1370,13 +1325,11 @@ INSERT INTO `zgr_jobs_service` (`jobs_service_id`, `jobs_service_title`, `jobs_s
 -- Table structure for table `zgr_jobs_sub_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_jobs_sub_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_jobs_sub_cate` (
-  `jobs_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_jobs_sub_cate` (
+  `jobs_sub_cate_id` int(11) NOT NULL,
   `jobs_cate_id` int(11) NOT NULL,
-  `jobs_sub_cate_title` text NOT NULL,
-  PRIMARY KEY (`jobs_sub_cate_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  `jobs_sub_cate_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_jobs_sub_cate`
@@ -1400,9 +1353,8 @@ INSERT INTO `zgr_jobs_sub_cate` (`jobs_sub_cate_id`, `jobs_cate_id`, `jobs_sub_c
 -- Table structure for table `zgr_kala`
 --
 
-DROP TABLE IF EXISTS `zgr_kala`;
-CREATE TABLE IF NOT EXISTS `zgr_kala` (
-  `kala_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_kala` (
+  `kala_id` int(11) NOT NULL,
   `accounts_id` int(11) DEFAULT NULL,
   `shop_id` int(11) DEFAULT NULL,
   `ostan_id` int(11) DEFAULT NULL,
@@ -1420,8 +1372,7 @@ CREATE TABLE IF NOT EXISTS `zgr_kala` (
   `update_date` text,
   `state_id` int(11) DEFAULT NULL,
   `expire` text,
-  `days` int(11) DEFAULT NULL,
-  PRIMARY KEY (`kala_id`)
+  `days` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1430,13 +1381,11 @@ CREATE TABLE IF NOT EXISTS `zgr_kala` (
 -- Table structure for table `zgr_login_attempts`
 --
 
-DROP TABLE IF EXISTS `zgr_login_attempts`;
-CREATE TABLE IF NOT EXISTS `zgr_login_attempts` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_login_attempts` (
+  `id` int(11) UNSIGNED NOT NULL,
   `ip_address` varchar(45) NOT NULL,
   `login` varchar(100) NOT NULL,
-  `time` int(11) UNSIGNED DEFAULT NULL,
-  PRIMARY KEY (`id`)
+  `time` int(11) UNSIGNED DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1445,13 +1394,11 @@ CREATE TABLE IF NOT EXISTS `zgr_login_attempts` (
 -- Table structure for table `zgr_menu`
 --
 
-DROP TABLE IF EXISTS `zgr_menu`;
-CREATE TABLE IF NOT EXISTS `zgr_menu` (
-  `menu_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_menu` (
+  `menu_id` int(11) NOT NULL,
   `menu_title` text NOT NULL,
-  `menu_link` text NOT NULL,
-  PRIMARY KEY (`menu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `menu_link` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_menu`
@@ -1466,16 +1413,14 @@ INSERT INTO `zgr_menu` (`menu_id`, `menu_title`, `menu_link`) VALUES
 -- Table structure for table `zgr_newspaper`
 --
 
-DROP TABLE IF EXISTS `zgr_newspaper`;
-CREATE TABLE IF NOT EXISTS `zgr_newspaper` (
-  `newspaper_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_newspaper` (
+  `newspaper_id` int(11) NOT NULL,
   `newspaper_title` text NOT NULL,
   `newspaper_text` text NOT NULL,
   `newspaper_img` text NOT NULL,
   `newspaper_date` text NOT NULL,
   `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
-  PRIMARY KEY (`newspaper_id`)
+  `expire` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1484,9 +1429,8 @@ CREATE TABLE IF NOT EXISTS `zgr_newspaper` (
 -- Table structure for table `zgr_offers`
 --
 
-DROP TABLE IF EXISTS `zgr_offers`;
-CREATE TABLE IF NOT EXISTS `zgr_offers` (
-  `offers_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_offers` (
+  `offers_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `shop_id` int(11) NOT NULL,
   `kala_id` int(11) NOT NULL,
@@ -1496,8 +1440,7 @@ CREATE TABLE IF NOT EXISTS `zgr_offers` (
   `update_date` text NOT NULL,
   `state_id` int(11) NOT NULL,
   `expire` text NOT NULL,
-  `days` int(11) NOT NULL,
-  PRIMARY KEY (`offers_id`)
+  `days` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1506,11 +1449,9 @@ CREATE TABLE IF NOT EXISTS `zgr_offers` (
 -- Table structure for table `zgr_ostan`
 --
 
-DROP TABLE IF EXISTS `zgr_ostan`;
-CREATE TABLE IF NOT EXISTS `zgr_ostan` (
+CREATE TABLE `zgr_ostan` (
   `ostan_id` int(11) NOT NULL,
-  `ostan_title` text NOT NULL,
-  PRIMARY KEY (`ostan_id`)
+  `ostan_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
@@ -1556,16 +1497,14 @@ INSERT INTO `zgr_ostan` (`ostan_id`, `ostan_title`) VALUES
 -- Table structure for table `zgr_pay`
 --
 
-DROP TABLE IF EXISTS `zgr_pay`;
-CREATE TABLE IF NOT EXISTS `zgr_pay` (
-  `pay_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_pay` (
+  `pay_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `authority` text NOT NULL,
   `mobile` text NOT NULL,
   `state_id` int(11) NOT NULL,
   `amount` bigint(20) NOT NULL,
-  `pay_date` text NOT NULL,
-  PRIMARY KEY (`pay_id`)
+  `pay_date` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1574,12 +1513,10 @@ CREATE TABLE IF NOT EXISTS `zgr_pay` (
 -- Table structure for table `zgr_postion`
 --
 
-DROP TABLE IF EXISTS `zgr_postion`;
-CREATE TABLE IF NOT EXISTS `zgr_postion` (
-  `postion_id` int(11) NOT NULL AUTO_INCREMENT,
-  `postion_title` text NOT NULL,
-  PRIMARY KEY (`postion_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_postion` (
+  `postion_id` int(11) NOT NULL,
+  `postion_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_postion`
@@ -1597,12 +1534,19 @@ INSERT INTO `zgr_postion` (`postion_id`, `postion_title`) VALUES
 -- Table structure for table `zgr_price`
 --
 
-DROP TABLE IF EXISTS `zgr_price`;
-CREATE TABLE IF NOT EXISTS `zgr_price` (
-  `price_id` int(11) NOT NULL AUTO_INCREMENT,
-  `price_amount` int(11) NOT NULL,
-  PRIMARY KEY (`price_id`)
+CREATE TABLE `zgr_price` (
+  `price_id` int(11) NOT NULL,
+  `price_title` text NOT NULL,
+  `price_amount` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_price`
+--
+
+INSERT INTO `zgr_price` (`price_id`, `price_title`, `price_amount`) VALUES
+(1, 'آگهی ها', '1000'),
+(2, 'پتل شغلی', '1000');
 
 -- --------------------------------------------------------
 
@@ -1610,12 +1554,10 @@ CREATE TABLE IF NOT EXISTS `zgr_price` (
 -- Table structure for table `zgr_rel_eghamat_service`
 --
 
-DROP TABLE IF EXISTS `zgr_rel_eghamat_service`;
-CREATE TABLE IF NOT EXISTS `zgr_rel_eghamat_service` (
-  `rel_eghamat_service_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_rel_eghamat_service` (
+  `rel_eghamat_service_id` int(11) NOT NULL,
   `eghamatgah_id` int(11) NOT NULL,
-  `jobs_service_id` int(11) NOT NULL,
-  PRIMARY KEY (`rel_eghamat_service_id`)
+  `jobs_service_id` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1624,13 +1566,11 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_eghamat_service` (
 -- Table structure for table `zgr_rel_jobs_service`
 --
 
-DROP TABLE IF EXISTS `zgr_rel_jobs_service`;
-CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
-  `rel_jobs_service_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_rel_jobs_service` (
+  `rel_jobs_service_id` int(11) NOT NULL,
   `jobs_id` int(11) NOT NULL,
-  `jobs_service_id` int(11) NOT NULL,
-  PRIMARY KEY (`rel_jobs_service_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+  `jobs_service_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -1638,13 +1578,11 @@ CREATE TABLE IF NOT EXISTS `zgr_rel_jobs_service` (
 -- Table structure for table `zgr_secend_menu`
 --
 
-DROP TABLE IF EXISTS `zgr_secend_menu`;
-CREATE TABLE IF NOT EXISTS `zgr_secend_menu` (
-  `smenu_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_secend_menu` (
+  `smenu_id` int(11) NOT NULL,
   `smenu_title` text NOT NULL,
-  `smenu_link` text NOT NULL,
-  PRIMARY KEY (`smenu_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+  `smenu_link` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_secend_menu`
@@ -1664,12 +1602,32 @@ INSERT INTO `zgr_secend_menu` (`smenu_id`, `smenu_title`, `smenu_link`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `zgr_settings`
+--
+
+CREATE TABLE `zgr_settings` (
+  `set_id` int(11) NOT NULL,
+  `api_name` text NOT NULL,
+  `set_name` text NOT NULL,
+  `set_value` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_settings`
+--
+
+INSERT INTO `zgr_settings` (`set_id`, `api_name`, `set_name`, `set_value`) VALUES
+(1, 'زرین پال', 'merchant_id', 'c0afcfa8-7260-11e8-a56a-005056a205be'),
+(2, 'کاوه نگار', 'kavenegar_api', '2F38547A5659585448792B377A6E483449332F537646393958736372442F374B');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `zgr_shop`
 --
 
-DROP TABLE IF EXISTS `zgr_shop`;
-CREATE TABLE IF NOT EXISTS `zgr_shop` (
-  `shop_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_shop` (
+  `shop_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -1687,8 +1645,7 @@ CREATE TABLE IF NOT EXISTS `zgr_shop` (
   `update_date` text,
   `state_id` int(11) DEFAULT NULL,
   `expire` text,
-  `days` int(11) DEFAULT NULL,
-  PRIMARY KEY (`shop_id`)
+  `days` int(11) DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1697,11 +1654,9 @@ CREATE TABLE IF NOT EXISTS `zgr_shop` (
 -- Table structure for table `zgr_shop_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_shop_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_shop_cate` (
-  `shop_cate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shop_cate_title` text NOT NULL,
-  PRIMARY KEY (`shop_cate_id`)
+CREATE TABLE `zgr_shop_cate` (
+  `shop_cate_id` int(11) NOT NULL,
+  `shop_cate_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1710,12 +1665,10 @@ CREATE TABLE IF NOT EXISTS `zgr_shop_cate` (
 -- Table structure for table `zgr_shop_sub_cate`
 --
 
-DROP TABLE IF EXISTS `zgr_shop_sub_cate`;
-CREATE TABLE IF NOT EXISTS `zgr_shop_sub_cate` (
-  `shop_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_shop_sub_cate` (
+  `shop_sub_cate_id` int(11) NOT NULL,
   `shop_cate_id` int(11) NOT NULL,
-  `shop_sub_cate_title` text NOT NULL,
-  PRIMARY KEY (`shop_sub_cate_id`)
+  `shop_sub_cate_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1724,23 +1677,22 @@ CREATE TABLE IF NOT EXISTS `zgr_shop_sub_cate` (
 -- Table structure for table `zgr_show_time`
 --
 
-DROP TABLE IF EXISTS `zgr_show_time`;
-CREATE TABLE IF NOT EXISTS `zgr_show_time` (
-  `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_show_time` (
+  `agahi_show_time_id` int(11) NOT NULL,
+  `agahi_tarefe` text NOT NULL,
   `agahi_show_time_title` text NOT NULL,
-  `agahi_show_time_val` text NOT NULL,
-  PRIMARY KEY (`agahi_show_time_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+  `agahi_show_time_val` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_show_time`
 --
 
-INSERT INTO `zgr_show_time` (`agahi_show_time_id`, `agahi_show_time_title`, `agahi_show_time_val`) VALUES
-(1, 'يك ماهه', '30'),
-(2, 'دو ماهه', '60'),
-(3, 'سه ماهه', '90'),
-(4, 'يكساله', '365');
+INSERT INTO `zgr_show_time` (`agahi_show_time_id`, `agahi_tarefe`, `agahi_show_time_title`, `agahi_show_time_val`) VALUES
+(1, '1000', 'يك ماهه', '30'),
+(2, '2000', 'دو ماهه', '60'),
+(3, '3000', 'سه ماهه', '90'),
+(4, '4000', 'يكساله', '365');
 
 -- --------------------------------------------------------
 
@@ -1748,9 +1700,8 @@ INSERT INTO `zgr_show_time` (`agahi_show_time_id`, `agahi_show_time_title`, `aga
 -- Table structure for table `zgr_site`
 --
 
-DROP TABLE IF EXISTS `zgr_site`;
-CREATE TABLE IF NOT EXISTS `zgr_site` (
-  `site_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_site` (
+  `site_id` int(11) NOT NULL,
   `site_title` text NOT NULL,
   `site_des` text NOT NULL,
   `site_keywords` text NOT NULL,
@@ -1770,16 +1721,15 @@ CREATE TABLE IF NOT EXISTS `zgr_site` (
   `help_car` text NOT NULL,
   `agahi_vip_help` text NOT NULL,
   `agahi_free_help` text NOT NULL,
-  `show_time_free` int(11) NOT NULL,
-  PRIMARY KEY (`site_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `show_time_free` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_site`
 --
 
 INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `site_logo`, `site_icon`, `site_btn_one_title`, `site_btn_one_link`, `site_btn_one_ico`, `site_btn_two_title`, `site_btn_two_link`, `site_btn_two_ico`, `site_ads_text`, `police_text`, `API_KEY_ZARINPAL`, `API_KEY_KAVENEGAR`, `help_agahi`, `help_car`, `agahi_vip_help`, `agahi_free_help`, `show_time_free`) VALUES
-(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style=\"text-align: right;\">\n	این هشدار تست می باشد</p>\n', '', '', '<p>\n	راهنمای ثبت آگهی</p>\n', '<p>\n	راهنمای ثبت وسایل نقلیه</p>\n', '<div class=\"form-group agahi_vip_help_form_group\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;\">\n	<label class=\"col-sm-2 control-label\" style=\"box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;\">راهنمای ثبت آگهی ویژه</label></div>\n<div class=\"form-group agahi_free_help_form_group\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;\">\n	<div class=\"col-sm-10\" style=\"box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 1031px;\">\n		&nbsp;</div>\n</div>\n<p>\n	&nbsp;</p>\n', '<div class=\"form-group agahi_free_help_form_group\" font-size:=\"\" helvetica=\"\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, \">\n	<label class=\"col-sm-2 control-label\" style=\"box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;\">راهنمای ثبت آگهی رایگان</label></div>\n<div class=\"form-group\" font-size:=\"\" helvetica=\"\" style=\"box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, \">\n	&nbsp;</div>\n', 12);
+(1, 'زاگرينو', 'توضيحات زاگرينو', 'تخفيف, گروهي', 'd293e-.jpg', '', 'فروشگاه', 'http://localhost/zagrino/Index', '3ec90-soroush.png', 'انجمن', 'http://localhost/zagrino/Index', '5bb51-ita_icon.png', '', '<p style="text-align: right;">\n	این هشدار تست می باشد</p>\n', '', '', '<p>\n	راهنمای ثبت آگهی</p>\n', '<p>\n	راهنمای ثبت وسایل نقلیه</p>\n', '<div class="form-group agahi_vip_help_form_group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;">\n	<label class="col-sm-2 control-label" style="box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;">راهنمای ثبت آگهی ویژه</label></div>\n<div class="form-group agahi_free_help_form_group" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px;">\n	<div class="col-sm-10" style="box-sizing: border-box; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 1031px;">\n		&nbsp;</div>\n</div>\n<p>\n	&nbsp;</p>\n', '<div class="form-group agahi_free_help_form_group" font-size:="" helvetica="" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, ">\n	<label class="col-sm-2 control-label" style="box-sizing: border-box; font-weight: 700; display: inline-block; max-width: 100%; margin-bottom: 0px; position: relative; min-height: 1px; padding-right: 15px; padding-left: 15px; float: left; width: 206.188px; padding-top: 7px; direction: rtl !important;">راهنمای ثبت آگهی رایگان</label></div>\n<div class="form-group" font-size:="" helvetica="" style="box-sizing: border-box; text-align: right; margin-bottom: 15px; margin-right: -15px; margin-left: -15px; color: rgb(51, 51, 51); font-family: iranyekanwebregular, ">\n	&nbsp;</div>\n', 12);
 
 -- --------------------------------------------------------
 
@@ -1787,13 +1737,11 @@ INSERT INTO `zgr_site` (`site_id`, `site_title`, `site_des`, `site_keywords`, `s
 -- Table structure for table `zgr_slider`
 --
 
-DROP TABLE IF EXISTS `zgr_slider`;
-CREATE TABLE IF NOT EXISTS `zgr_slider` (
-  `slider_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_slider` (
+  `slider_id` int(11) NOT NULL,
   `slider_link` text NOT NULL,
-  `slider_img` text NOT NULL,
-  PRIMARY KEY (`slider_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+  `slider_img` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_slider`
@@ -1810,12 +1758,10 @@ INSERT INTO `zgr_slider` (`slider_id`, `slider_link`, `slider_img`) VALUES
 -- Table structure for table `zgr_state`
 --
 
-DROP TABLE IF EXISTS `zgr_state`;
-CREATE TABLE IF NOT EXISTS `zgr_state` (
-  `state_id` int(11) NOT NULL AUTO_INCREMENT,
-  `state_title` text NOT NULL,
-  PRIMARY KEY (`state_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+CREATE TABLE `zgr_state` (
+  `state_id` int(11) NOT NULL,
+  `state_title` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_state`
@@ -1841,9 +1787,8 @@ INSERT INTO `zgr_state` (`state_id`, `state_title`) VALUES
 -- Table structure for table `zgr_takhfif`
 --
 
-DROP TABLE IF EXISTS `zgr_takhfif`;
-CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
-  `takhfif_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_takhfif` (
+  `takhfif_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `shop_id` int(11) DEFAULT NULL,
   `jobs_id` int(11) DEFAULT NULL,
@@ -1857,8 +1802,7 @@ CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
   `update_date` text NOT NULL,
   `price_id` int(11) NOT NULL,
   `days` int(11) NOT NULL,
-  `expire` text NOT NULL,
-  PRIMARY KEY (`takhfif_id`)
+  `expire` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1867,11 +1811,9 @@ CREATE TABLE IF NOT EXISTS `zgr_takhfif` (
 -- Table structure for table `zgr_takhfif_type`
 --
 
-DROP TABLE IF EXISTS `zgr_takhfif_type`;
-CREATE TABLE IF NOT EXISTS `zgr_takhfif_type` (
-  `takhfif_type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `takhfif_type_title` text NOT NULL,
-  PRIMARY KEY (`takhfif_type_id`)
+CREATE TABLE `zgr_takhfif_type` (
+  `takhfif_type_id` int(11) NOT NULL,
+  `takhfif_type_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1880,13 +1822,11 @@ CREATE TABLE IF NOT EXISTS `zgr_takhfif_type` (
 -- Table structure for table `zgr_text`
 --
 
-DROP TABLE IF EXISTS `zgr_text`;
-CREATE TABLE IF NOT EXISTS `zgr_text` (
-  `text_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_text` (
+  `text_id` int(11) NOT NULL,
   `text_title` text NOT NULL,
-  `text_link` text NOT NULL,
-  PRIMARY KEY (`text_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `text_link` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_text`
@@ -1902,9 +1842,8 @@ INSERT INTO `zgr_text` (`text_id`, `text_title`, `text_link`) VALUES
 -- Table structure for table `zgr_tour`
 --
 
-DROP TABLE IF EXISTS `zgr_tour`;
-CREATE TABLE IF NOT EXISTS `zgr_tour` (
-  `tour_id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_tour` (
+  `tour_id` int(11) NOT NULL,
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
@@ -1934,8 +1873,7 @@ CREATE TABLE IF NOT EXISTS `zgr_tour` (
   `register_date` text,
   `update_date` text,
   `days` int(11) DEFAULT NULL,
-  `expire` text,
-  PRIMARY KEY (`tour_id`)
+  `expire` text
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1944,9 +1882,8 @@ CREATE TABLE IF NOT EXISTS `zgr_tour` (
 -- Table structure for table `zgr_users`
 --
 
-DROP TABLE IF EXISTS `zgr_users`;
-CREATE TABLE IF NOT EXISTS `zgr_users` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_users` (
+  `id` int(11) UNSIGNED NOT NULL,
   `ip_address` varchar(45) NOT NULL,
   `username` varchar(100) DEFAULT NULL,
   `password` varchar(255) NOT NULL,
@@ -1962,9 +1899,8 @@ CREATE TABLE IF NOT EXISTS `zgr_users` (
   `first_name` varchar(50) DEFAULT NULL,
   `last_name` varchar(50) DEFAULT NULL,
   `company` varchar(100) DEFAULT NULL,
-  `phone` varchar(20) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+  `phone` varchar(20) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_users`
@@ -1979,16 +1915,11 @@ INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `em
 -- Table structure for table `zgr_users_groups`
 --
 
-DROP TABLE IF EXISTS `zgr_users_groups`;
-CREATE TABLE IF NOT EXISTS `zgr_users_groups` (
-  `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+CREATE TABLE `zgr_users_groups` (
+  `id` int(11) UNSIGNED NOT NULL,
   `user_id` int(11) UNSIGNED NOT NULL,
-  `group_id` mediumint(8) UNSIGNED NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
-  KEY `fk_users_groups_users1_idx` (`user_id`),
-  KEY `fk_users_groups_groups1_idx` (`group_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+  `group_id` mediumint(8) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `zgr_users_groups`
@@ -1999,6 +1930,706 @@ INSERT INTO `zgr_users_groups` (`id`, `user_id`, `group_id`) VALUES
 (2, 1, 2);
 
 --
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `zgr_accounts`
+--
+ALTER TABLE `zgr_accounts`
+  ADD PRIMARY KEY (`accounts_id`);
+
+--
+-- Indexes for table `zgr_ads`
+--
+ALTER TABLE `zgr_ads`
+  ADD PRIMARY KEY (`ads_id`);
+
+--
+-- Indexes for table `zgr_agahi`
+--
+ALTER TABLE `zgr_agahi`
+  ADD PRIMARY KEY (`agahi_id`);
+
+--
+-- Indexes for table `zgr_agahi_amlak`
+--
+ALTER TABLE `zgr_agahi_amlak`
+  ADD PRIMARY KEY (`agahi_amlak_id`);
+
+--
+-- Indexes for table `zgr_agahi_car`
+--
+ALTER TABLE `zgr_agahi_car`
+  ADD PRIMARY KEY (`agahi_car_id`);
+
+--
+-- Indexes for table `zgr_agahi_cate`
+--
+ALTER TABLE `zgr_agahi_cate`
+  ADD PRIMARY KEY (`agahi_cate_id`);
+
+--
+-- Indexes for table `zgr_agahi_cond_tag`
+--
+ALTER TABLE `zgr_agahi_cond_tag`
+  ADD PRIMARY KEY (`agahi_cond_tag_id`);
+
+--
+-- Indexes for table `zgr_agahi_images`
+--
+ALTER TABLE `zgr_agahi_images`
+  ADD PRIMARY KEY (`agahi_image_id`);
+
+--
+-- Indexes for table `zgr_agahi_message`
+--
+ALTER TABLE `zgr_agahi_message`
+  ADD PRIMARY KEY (`message_id`);
+
+--
+-- Indexes for table `zgr_agahi_pay`
+--
+ALTER TABLE `zgr_agahi_pay`
+  ADD PRIMARY KEY (`agahi_pay_id`);
+
+--
+-- Indexes for table `zgr_agahi_state_kala`
+--
+ALTER TABLE `zgr_agahi_state_kala`
+  ADD PRIMARY KEY (`agahi_state_kala_id`);
+
+--
+-- Indexes for table `zgr_agahi_sub_cate`
+--
+ALTER TABLE `zgr_agahi_sub_cate`
+  ADD PRIMARY KEY (`agahi_sub_cate_id`);
+
+--
+-- Indexes for table `zgr_agahi_tarefe`
+--
+ALTER TABLE `zgr_agahi_tarefe`
+  ADD PRIMARY KEY (`agahi_tarefe_id`);
+
+--
+-- Indexes for table `zgr_amlak_cate`
+--
+ALTER TABLE `zgr_amlak_cate`
+  ADD PRIMARY KEY (`amlak_cate_id`);
+
+--
+-- Indexes for table `zgr_amlak_cond_tag`
+--
+ALTER TABLE `zgr_amlak_cond_tag`
+  ADD PRIMARY KEY (`amlak_cond_tag_id`);
+
+--
+-- Indexes for table `zgr_amlak_tag`
+--
+ALTER TABLE `zgr_amlak_tag`
+  ADD PRIMARY KEY (`amlak_tag_id`);
+
+--
+-- Indexes for table `zgr_car_body`
+--
+ALTER TABLE `zgr_car_body`
+  ADD PRIMARY KEY (`car_body_id`);
+
+--
+-- Indexes for table `zgr_car_cate`
+--
+ALTER TABLE `zgr_car_cate`
+  ADD PRIMARY KEY (`car_cate_id`);
+
+--
+-- Indexes for table `zgr_car_cond_tag`
+--
+ALTER TABLE `zgr_car_cond_tag`
+  ADD PRIMARY KEY (`car_cond_tag_id`);
+
+--
+-- Indexes for table `zgr_car_sokht`
+--
+ALTER TABLE `zgr_car_sokht`
+  ADD PRIMARY KEY (`car_sokht_id`);
+
+--
+-- Indexes for table `zgr_car_state`
+--
+ALTER TABLE `zgr_car_state`
+  ADD PRIMARY KEY (`car_state_id`);
+
+--
+-- Indexes for table `zgr_car_sub_cate`
+--
+ALTER TABLE `zgr_car_sub_cate`
+  ADD PRIMARY KEY (`car_sub_cate_id`);
+
+--
+-- Indexes for table `zgr_car_tag`
+--
+ALTER TABLE `zgr_car_tag`
+  ADD PRIMARY KEY (`car_tag_id`);
+
+--
+-- Indexes for table `zgr_car_type`
+--
+ALTER TABLE `zgr_car_type`
+  ADD PRIMARY KEY (`car_type_id`);
+
+--
+-- Indexes for table `zgr_category`
+--
+ALTER TABLE `zgr_category`
+  ADD PRIMARY KEY (`category_id`);
+
+--
+-- Indexes for table `zgr_city`
+--
+ALTER TABLE `zgr_city`
+  ADD PRIMARY KEY (`city_id`);
+
+--
+-- Indexes for table `zgr_eghamatgah`
+--
+ALTER TABLE `zgr_eghamatgah`
+  ADD PRIMARY KEY (`eghamatgah_id`);
+
+--
+-- Indexes for table `zgr_events`
+--
+ALTER TABLE `zgr_events`
+  ADD PRIMARY KEY (`events_id`);
+
+--
+-- Indexes for table `zgr_events_level`
+--
+ALTER TABLE `zgr_events_level`
+  ADD PRIMARY KEY (`events_level_id`);
+
+--
+-- Indexes for table `zgr_events_run`
+--
+ALTER TABLE `zgr_events_run`
+  ADD PRIMARY KEY (`events_run_id`);
+
+--
+-- Indexes for table `zgr_events_type`
+--
+ALTER TABLE `zgr_events_type`
+  ADD PRIMARY KEY (`events_type_id`);
+
+--
+-- Indexes for table `zgr_footer_menu`
+--
+ALTER TABLE `zgr_footer_menu`
+  ADD PRIMARY KEY (`footer_menu_id`);
+
+--
+-- Indexes for table `zgr_gardeshgari`
+--
+ALTER TABLE `zgr_gardeshgari`
+  ADD PRIMARY KEY (`gardeshgari_id`);
+
+--
+-- Indexes for table `zgr_groups`
+--
+ALTER TABLE `zgr_groups`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `zgr_jobs`
+--
+ALTER TABLE `zgr_jobs`
+  ADD PRIMARY KEY (`jobs_id`);
+
+--
+-- Indexes for table `zgr_jobs_cate`
+--
+ALTER TABLE `zgr_jobs_cate`
+  ADD PRIMARY KEY (`jobs_cate_id`);
+
+--
+-- Indexes for table `zgr_jobs_service`
+--
+ALTER TABLE `zgr_jobs_service`
+  ADD PRIMARY KEY (`jobs_service_id`);
+
+--
+-- Indexes for table `zgr_jobs_sub_cate`
+--
+ALTER TABLE `zgr_jobs_sub_cate`
+  ADD PRIMARY KEY (`jobs_sub_cate_id`);
+
+--
+-- Indexes for table `zgr_kala`
+--
+ALTER TABLE `zgr_kala`
+  ADD PRIMARY KEY (`kala_id`);
+
+--
+-- Indexes for table `zgr_login_attempts`
+--
+ALTER TABLE `zgr_login_attempts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `zgr_menu`
+--
+ALTER TABLE `zgr_menu`
+  ADD PRIMARY KEY (`menu_id`);
+
+--
+-- Indexes for table `zgr_newspaper`
+--
+ALTER TABLE `zgr_newspaper`
+  ADD PRIMARY KEY (`newspaper_id`);
+
+--
+-- Indexes for table `zgr_offers`
+--
+ALTER TABLE `zgr_offers`
+  ADD PRIMARY KEY (`offers_id`);
+
+--
+-- Indexes for table `zgr_ostan`
+--
+ALTER TABLE `zgr_ostan`
+  ADD PRIMARY KEY (`ostan_id`);
+
+--
+-- Indexes for table `zgr_pay`
+--
+ALTER TABLE `zgr_pay`
+  ADD PRIMARY KEY (`pay_id`);
+
+--
+-- Indexes for table `zgr_postion`
+--
+ALTER TABLE `zgr_postion`
+  ADD PRIMARY KEY (`postion_id`);
+
+--
+-- Indexes for table `zgr_price`
+--
+ALTER TABLE `zgr_price`
+  ADD PRIMARY KEY (`price_id`);
+
+--
+-- Indexes for table `zgr_rel_eghamat_service`
+--
+ALTER TABLE `zgr_rel_eghamat_service`
+  ADD PRIMARY KEY (`rel_eghamat_service_id`);
+
+--
+-- Indexes for table `zgr_rel_jobs_service`
+--
+ALTER TABLE `zgr_rel_jobs_service`
+  ADD PRIMARY KEY (`rel_jobs_service_id`);
+
+--
+-- Indexes for table `zgr_secend_menu`
+--
+ALTER TABLE `zgr_secend_menu`
+  ADD PRIMARY KEY (`smenu_id`);
+
+--
+-- Indexes for table `zgr_settings`
+--
+ALTER TABLE `zgr_settings`
+  ADD PRIMARY KEY (`set_id`);
+
+--
+-- Indexes for table `zgr_shop`
+--
+ALTER TABLE `zgr_shop`
+  ADD PRIMARY KEY (`shop_id`);
+
+--
+-- Indexes for table `zgr_shop_cate`
+--
+ALTER TABLE `zgr_shop_cate`
+  ADD PRIMARY KEY (`shop_cate_id`);
+
+--
+-- Indexes for table `zgr_shop_sub_cate`
+--
+ALTER TABLE `zgr_shop_sub_cate`
+  ADD PRIMARY KEY (`shop_sub_cate_id`);
+
+--
+-- Indexes for table `zgr_show_time`
+--
+ALTER TABLE `zgr_show_time`
+  ADD PRIMARY KEY (`agahi_show_time_id`);
+
+--
+-- Indexes for table `zgr_site`
+--
+ALTER TABLE `zgr_site`
+  ADD PRIMARY KEY (`site_id`);
+
+--
+-- Indexes for table `zgr_slider`
+--
+ALTER TABLE `zgr_slider`
+  ADD PRIMARY KEY (`slider_id`);
+
+--
+-- Indexes for table `zgr_state`
+--
+ALTER TABLE `zgr_state`
+  ADD PRIMARY KEY (`state_id`);
+
+--
+-- Indexes for table `zgr_takhfif`
+--
+ALTER TABLE `zgr_takhfif`
+  ADD PRIMARY KEY (`takhfif_id`);
+
+--
+-- Indexes for table `zgr_takhfif_type`
+--
+ALTER TABLE `zgr_takhfif_type`
+  ADD PRIMARY KEY (`takhfif_type_id`);
+
+--
+-- Indexes for table `zgr_text`
+--
+ALTER TABLE `zgr_text`
+  ADD PRIMARY KEY (`text_id`);
+
+--
+-- Indexes for table `zgr_tour`
+--
+ALTER TABLE `zgr_tour`
+  ADD PRIMARY KEY (`tour_id`);
+
+--
+-- Indexes for table `zgr_users`
+--
+ALTER TABLE `zgr_users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `zgr_users_groups`
+--
+ALTER TABLE `zgr_users_groups`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
+  ADD KEY `fk_users_groups_users1_idx` (`user_id`),
+  ADD KEY `fk_users_groups_groups1_idx` (`group_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `zgr_accounts`
+--
+ALTER TABLE `zgr_accounts`
+  MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_ads`
+--
+ALTER TABLE `zgr_ads`
+  MODIFY `ads_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `zgr_agahi`
+--
+ALTER TABLE `zgr_agahi`
+  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_amlak`
+--
+ALTER TABLE `zgr_agahi_amlak`
+  MODIFY `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_car`
+--
+ALTER TABLE `zgr_agahi_car`
+  MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_cate`
+--
+ALTER TABLE `zgr_agahi_cate`
+  MODIFY `agahi_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_cond_tag`
+--
+ALTER TABLE `zgr_agahi_cond_tag`
+  MODIFY `agahi_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_images`
+--
+ALTER TABLE `zgr_agahi_images`
+  MODIFY `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_message`
+--
+ALTER TABLE `zgr_agahi_message`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_pay`
+--
+ALTER TABLE `zgr_agahi_pay`
+  MODIFY `agahi_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_state_kala`
+--
+ALTER TABLE `zgr_agahi_state_kala`
+  MODIFY `agahi_state_kala_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_sub_cate`
+--
+ALTER TABLE `zgr_agahi_sub_cate`
+  MODIFY `agahi_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_agahi_tarefe`
+--
+ALTER TABLE `zgr_agahi_tarefe`
+  MODIFY `agahi_tarefe_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_amlak_cate`
+--
+ALTER TABLE `zgr_amlak_cate`
+  MODIFY `amlak_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_amlak_cond_tag`
+--
+ALTER TABLE `zgr_amlak_cond_tag`
+  MODIFY `amlak_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_amlak_tag`
+--
+ALTER TABLE `zgr_amlak_tag`
+  MODIFY `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_body`
+--
+ALTER TABLE `zgr_car_body`
+  MODIFY `car_body_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_cate`
+--
+ALTER TABLE `zgr_car_cate`
+  MODIFY `car_cate_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_cond_tag`
+--
+ALTER TABLE `zgr_car_cond_tag`
+  MODIFY `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_sokht`
+--
+ALTER TABLE `zgr_car_sokht`
+  MODIFY `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_state`
+--
+ALTER TABLE `zgr_car_state`
+  MODIFY `car_state_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_sub_cate`
+--
+ALTER TABLE `zgr_car_sub_cate`
+  MODIFY `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_tag`
+--
+ALTER TABLE `zgr_car_tag`
+  MODIFY `car_tag_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_type`
+--
+ALTER TABLE `zgr_car_type`
+  MODIFY `car_type_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_category`
+--
+ALTER TABLE `zgr_category`
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_events`
+--
+ALTER TABLE `zgr_events`
+  MODIFY `events_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_events_level`
+--
+ALTER TABLE `zgr_events_level`
+  MODIFY `events_level_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_events_run`
+--
+ALTER TABLE `zgr_events_run`
+  MODIFY `events_run_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_events_type`
+--
+ALTER TABLE `zgr_events_type`
+  MODIFY `events_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_footer_menu`
+--
+ALTER TABLE `zgr_footer_menu`
+  MODIFY `footer_menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `zgr_gardeshgari`
+--
+ALTER TABLE `zgr_gardeshgari`
+  MODIFY `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_groups`
+--
+ALTER TABLE `zgr_groups`
+  MODIFY `id` mediumint(8) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_jobs`
+--
+ALTER TABLE `zgr_jobs`
+  MODIFY `jobs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+--
+-- AUTO_INCREMENT for table `zgr_jobs_cate`
+--
+ALTER TABLE `zgr_jobs_cate`
+  MODIFY `jobs_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `zgr_jobs_service`
+--
+ALTER TABLE `zgr_jobs_service`
+  MODIFY `jobs_service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_jobs_sub_cate`
+--
+ALTER TABLE `zgr_jobs_sub_cate`
+  MODIFY `jobs_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `zgr_kala`
+--
+ALTER TABLE `zgr_kala`
+  MODIFY `kala_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_login_attempts`
+--
+ALTER TABLE `zgr_login_attempts`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_menu`
+--
+ALTER TABLE `zgr_menu`
+  MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_newspaper`
+--
+ALTER TABLE `zgr_newspaper`
+  MODIFY `newspaper_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_offers`
+--
+ALTER TABLE `zgr_offers`
+  MODIFY `offers_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_pay`
+--
+ALTER TABLE `zgr_pay`
+  MODIFY `pay_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_postion`
+--
+ALTER TABLE `zgr_postion`
+  MODIFY `postion_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `zgr_price`
+--
+ALTER TABLE `zgr_price`
+  MODIFY `price_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_rel_eghamat_service`
+--
+ALTER TABLE `zgr_rel_eghamat_service`
+  MODIFY `rel_eghamat_service_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_rel_jobs_service`
+--
+ALTER TABLE `zgr_rel_jobs_service`
+  MODIFY `rel_jobs_service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+--
+-- AUTO_INCREMENT for table `zgr_secend_menu`
+--
+ALTER TABLE `zgr_secend_menu`
+  MODIFY `smenu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `zgr_settings`
+--
+ALTER TABLE `zgr_settings`
+  MODIFY `set_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_shop`
+--
+ALTER TABLE `zgr_shop`
+  MODIFY `shop_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_shop_cate`
+--
+ALTER TABLE `zgr_shop_cate`
+  MODIFY `shop_cate_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_shop_sub_cate`
+--
+ALTER TABLE `zgr_shop_sub_cate`
+  MODIFY `shop_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_show_time`
+--
+ALTER TABLE `zgr_show_time`
+  MODIFY `agahi_show_time_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `zgr_site`
+--
+ALTER TABLE `zgr_site`
+  MODIFY `site_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_slider`
+--
+ALTER TABLE `zgr_slider`
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+--
+-- AUTO_INCREMENT for table `zgr_state`
+--
+ALTER TABLE `zgr_state`
+  MODIFY `state_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+--
+-- AUTO_INCREMENT for table `zgr_takhfif`
+--
+ALTER TABLE `zgr_takhfif`
+  MODIFY `takhfif_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_takhfif_type`
+--
+ALTER TABLE `zgr_takhfif_type`
+  MODIFY `takhfif_type_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_text`
+--
+ALTER TABLE `zgr_text`
+  MODIFY `text_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `zgr_tour`
+--
+ALTER TABLE `zgr_tour`
+  MODIFY `tour_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_users`
+--
+ALTER TABLE `zgr_users`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_users_groups`
+--
+ALTER TABLE `zgr_users_groups`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- Constraints for dumped tables
 --
 
@@ -2008,7 +2639,6 @@ INSERT INTO `zgr_users_groups` (`id`, `user_id`, `group_id`) VALUES
 ALTER TABLE `zgr_users_groups`
   ADD CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `zgr_groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
   ADD CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `zgr_users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
