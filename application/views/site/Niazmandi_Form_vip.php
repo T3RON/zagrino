@@ -28,6 +28,7 @@
 
         <form action="<?= base_url('site/Agahi/VipAgahiForm/register'); ?>" method="post"
             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0" enctype='multipart/form-data'>
+			<?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
 
             <!------------------------------------------------------------------  ثبت آگهی رایگان ------------>
@@ -278,7 +279,6 @@
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
                     <select name="days" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        <option value="none" selected disabled hidden></option>
                         <?php foreach ($show_time as $show_time_value) { ?>
 						<option value="<?= $show_time_value->agahi_show_time_val; ?>"><?= $show_time_value->agahi_show_time_title; ?> قیمت : <?= $show_time_value->agahi_tarefe; ?> ریال</option>
 						

@@ -22,7 +22,7 @@ class Agahi_Payment extends CI_Controller {
     public function agahi() {
 
 		$accounts_id = $this->session->userdata('accounts_id');
-		$agahi_id = $this->uri->segment(4);
+		$agahi_id = $this->uri->segment(5);
 
         $amount =  $this->db->select('price_amount')
 			->get_where('price', array('price_id' => '1'))
@@ -61,8 +61,9 @@ class Agahi_Payment extends CI_Controller {
 
         if ($status !== 'OK' OR $authority === NULL)
         {
-            echo "پرداخت کنسل شد";
-            // payment canceled by user
+            $array_msg = array('title'=>'متاسفانه','text'=>'پرداختی صورت نگرفت','type'=>'error');
+            $this->session->set_flashdata('msg',$array_msg);
+            redirect('site/Agahi/VipAgahiForm/index');
         }else {
             //$ref_id = $this->zarinpal->get_ref_id();
             // payment succeeded, do database stuff

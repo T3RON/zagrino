@@ -7,7 +7,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class VipAgahiForm extends CI_Panel {
+class FormAmlak extends CI_Panel {
     function __construct()
     {
         parent::__construct();
@@ -27,8 +27,6 @@ class VipAgahiForm extends CI_Panel {
         $output['agahi_cate'] = $this->MY_Model->select('agahi_cate');
         $output['ostan'] = $this->MY_Model->select('ostan');
         $output['agahi_state_kala'] = $this->MY_Model->select('agahi_state_kala');
-        $output['agahi_cond_tag'] = $this->MY_Model->select('agahi_cond_tag');
-        $output['show_time'] = $this->MY_Model->select('show_time');
 
 
         $this->load->vars(array(
@@ -37,7 +35,7 @@ class VipAgahiForm extends CI_Panel {
         $output['title'] = "كاربران";
         $output['des'] = "مديريت و بررسي كاربران";
         $output['timeStamp'] = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('site/Niazmandi_Form_vip', $output);
+        $this->load->view('site/Niazmandi_Form_free', $output);
     }
 
     function register() {
@@ -57,15 +55,12 @@ class VipAgahiForm extends CI_Panel {
             'agahi_latitude' =>$this->input->post('agahi_latitude'),
             'agahi_longitude' =>$this->input->post('agahi_longitude'),
             'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
-            'agahi_state_kala_id' =>$this->input->post('agahi_state_kala_id'),
+            'agahi_cond_tag_id' =>$this->input->post('agahi_cond_tag_id'),
             'agahi_address' =>$this->input->post('agahi_address'),
             'agahi_email' =>$this->input->post('agahi_email'),
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
-            'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
             'price_id' =>0,
             'state_id' => 12,
             'days' =>$this->input->post('days'),
@@ -73,10 +68,9 @@ class VipAgahiForm extends CI_Panel {
             
         );
 
-        
-
         $this->form_validation->set_rules('agahi_title','عنوان آگهی','required');
-        $this->form_validation->set_rules('agahi_cate_id','دسته بندي','required');
+        $this->form_validation->set_rules('agahi_tell','شماره تماس','required');
+        $this->form_validation->set_rules('agahi_cate_id',' دسته بندي','required');
         $this->form_validation->set_rules('agahi_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
@@ -91,12 +85,12 @@ class VipAgahiForm extends CI_Panel {
 
         }
         else{
-            $agahi = $this->MY_Model->insert('agahi',$data);
+            $jobs = $this->MY_Model->insert('agahi',$data);
             
-            if($agahi) {
+            if($jobs) {
                 $array_msg = array('title'=>'تبريك','text'=>'آگهی شما با موفقيت درج گرديد','type'=>'success');
                 $this->session->set_flashdata('msg',$array_msg);
-                redirect('site/Agahi/Agahi_Payment/agahi/'.$this->db->insert_id());
+                redirect('site/Agahi/FreeAgahiForm/index');
             }else {
                 $array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال آگهی بوجود آمده','type'=>'error');
                 $this->session->set_flashdata('msg',$array_msg);
