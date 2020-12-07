@@ -24,88 +24,94 @@
         انتخاب نوع خدمت درخواستي
     </div>
 
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
-		<div class="title ">
-			راهنمای ثبت آگهی
-		</div>
-		<?php foreach($site as $site_value) { ?>
-			<?= $site_value->help_agahi; ?>
-		<?php } ?>
-	</div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
+        <div class="title ">
+            راهنمای ثبت آگهی
+        </div>
+        <?php foreach($site as $site_value) { ?>
+        <?= $site_value->help_agahi; ?>
+        <?php } ?>
+    </div>
 
-	<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l p0">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l p0">
 
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
-			<div class="panel panel-default">
-				<div style="text-align:center;" class="panel-heading">آگهي عمومي</div>
-				<div class="panel-body">
-					<div class="col-xs-12 col-md-12">
-						<a href="" class="thumbnail">
-							<img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png" alt="...">
-						</a>
-						<div class="btn-group btn-group-justified" role="group" aria-label="...">
-							<div class="btn-group" role="group">
-								<a href="<?= base_url('site/Agahi/VipAgahiForm'); ?>">
-								<button type="button" class="btn btn-danger">ویژه</button>
-								</a>
-							</div>
-							<div class="btn-group" role="group">
-								<a href="<?= base_url('site/Agahi/FreeAgahiForm'); ?>">
-								<button type="button" class="btn btn-info">معمولی</button>
-								</a>
-							</div>
-						</div>
-					</div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
+            <div class="panel panel-default">
+                <div style="text-align:center;" class="panel-heading">آگهي عمومي</div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-12">
+                        <a href="" class="thumbnail">
+                            <img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png" alt="...">
+                        </a>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/Agahi/VipAgahiForm'); ?>">
+                                    <button type="button" class="btn btn-danger">ویژه</button>
+                                </a>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/Agahi/FreeAgahiForm'); ?>">
+                                    <button type="button" class="btn btn-info">معمولی</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
-				</div>
-			</div>
-		</div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
+            <div class="panel panel-default">
+                <div style="text-align:center;" class="panel-heading">آگهي املاك</div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-12">
+                        <a href="" class="thumbnail">
+                            <img src="<?= base_url(''); ?>/assets/uploads/img/tour.png" alt="...">
+                        </a>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/Agahi/FormAmlak/vip'); ?>">
+                                    <button type="button" class="btn btn-danger">املاک ویژه</button>
+                                </a>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/Agahi/FormAmlak/free'); ?>">
+                                    <button type="button" class="btn btn-info">املاک معمولی</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
-			<div class="panel panel-default">
-				<div style="text-align:center;" class="panel-heading">آگهي املاك</div>
-				<div class="panel-body">
-					<div class="col-xs-12 col-md-12">
-						<a href="<?= base_url('site/panel/Amlak'); ?>" class="thumbnail">
-							<img src="<?= base_url(''); ?>/assets/uploads/img/tour.png" alt="...">
-						</a>
-						<div class="btn-group btn-group-justified" role="group" aria-label="...">
-							<div class="btn-group" role="group">
-								<button type="button" class="btn btn-danger">ویژه</button>
-							</div>
-							<div class="btn-group" role="group">
-								<button type="button" class="btn btn-info">معمولی</button>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
+            <div class="panel panel-default">
+                <div style="text-align:center;" class="panel-heading">آگهي وسايل نقليه</div>
+                <div class="panel-body">
+                    <div class="col-xs-12 col-md-12">
 
-		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 m_15 f_l">
-			<div class="panel panel-default">
-				<div style="text-align:center;" class="panel-heading">آگهي وسايل نقليه</div>
-				<div class="panel-body">
-					<div class="col-xs-12 col-md-12">
-
-						<a href="" class="thumbnail"><img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png" alt="...">
-						</a>
-						<div class="btn-group btn-group-justified" role="group" aria-label="...">
-							<div class="btn-group" role="group">
-								<a href="<?= base_url('site/panel/Car'); ?>"><button type="button" class="btn btn-danger">ثبت ویژه</button></a>
-							</div>
-							<div class="btn-group" role="group">
-								<a href="<?= base_url('site/panel/Car'); ?>"><button type="button" class="btn btn-info">ثبت معمولی</button></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+                        <a href="" class="thumbnail"><img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png"
+                                alt="...">
+                        </a>
+                        <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/panel/Car'); ?>"><button type="button"
+                                        class="btn btn-danger">ثبت ویژه</button></a>
+                            </div>
+                            <div class="btn-group" role="group">
+                                <a href="<?= base_url('site/panel/Car'); ?>"><button type="button"
+                                        class="btn btn-info">ثبت معمولی</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-	</div>
+    </div>
 
 
 </div>
