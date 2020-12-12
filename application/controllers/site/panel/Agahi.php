@@ -50,7 +50,6 @@ class Agahi extends CI_Panel {
         $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
-        $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('agahi_state_kala_id','وضعيت كالا');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
@@ -73,7 +72,6 @@ class Agahi extends CI_Panel {
         $crud->set_relation('agahi_state_kala_id','agahi_state_kala','agahi_state_kala_title');
         $crud->set_relation('agahi_cate_id','agahi_cate','agahi_cate_title');
         $crud->set_relation('agahi_sub_cate_id','agahi_sub_cate','agahi_sub_cate_title');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 

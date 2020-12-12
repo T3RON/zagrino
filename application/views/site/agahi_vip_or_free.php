@@ -96,12 +96,12 @@
                         </a>
                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
                             <div class="btn-group" role="group">
-                                <a href="<?= base_url('site/panel/Car'); ?>"><button type="button"
-                                        class="btn btn-danger">ثبت ویژه</button></a>
+                                <a href="<?= base_url('site/Agahi/FormCar/vip'); ?>"><button type="button"
+                                        class="btn btn-danger">وسیله ویژه</button></a>
                             </div>
                             <div class="btn-group" role="group">
-                                <a href="<?= base_url('site/panel/Car'); ?>"><button type="button"
-                                        class="btn btn-info">ثبت معمولی</button></a>
+                                <a href="<?= base_url('site/Agahi/FormCar/free'); ?>"><button type="button"
+                                        class="btn btn-info">وسیله معمولی</button></a>
                             </div>
                         </div>
                     </div>

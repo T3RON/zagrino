@@ -469,6 +469,7 @@ class MY_Model extends CI_Model {
                     'account_mobile'=> $row->account_mobile,
                     'account_avatar'=> $row->account_avatar,
                     'state_id'=> $row->state_id,
+                    'agahi_tarefe'=> "",
                     'logged_in'=> TRUE
                 );
 

@@ -34,9 +34,11 @@
         </div>
 
 
-
-        <form action="<?= base_url('site/Agahi/FormAmlak/register'); ?>" method="post" enctype='multipart/form-data'
-            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+        <?php if($vip) { ?>
+        <form action="<?= base_url('site/Agahi/FormAmlak/vip_register'); ?>" method="post" enctype='multipart/form-data' class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+        <?php } else { ?>
+            <form action="<?= base_url('site/Agahi/FormAmlak/free_register'); ?>" method="post" enctype='multipart/form-data' class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+        <?php } ?>
             <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
 
@@ -146,7 +148,7 @@
                     <span class="f_l p0"></span>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                    <input id="foroosh_amlak_tozihat_kamel" rows="4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    <input name="amlak_des" id="foroosh_amlak_tozihat_kamel" rows="4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 </div>
             </div>
 
@@ -170,7 +172,7 @@
                     <span class="f_l p0"></span>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                    <input id="foroosh_amlak_phone" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    <input name="amlak_tell" id="foroosh_amlak_phone" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 </div>
             </div>
 
@@ -389,9 +391,29 @@
                     <span class="f_l p0"></span>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-                    <input id="adres_koli" rows="4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    <input name="amlak_address" id="adres_koli" rows="4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                 </div>
             </div>
+            <?php if($vip) { ?>
+            <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild">
+                <div class="t_align fild_title  p0">
+                    <span class="f_r p0"></span>
+                    <label for="fild_in_12" class="p0">مدت زمان نمایش آگهی شما</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select name="days" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <?php foreach ($show_time as $show_time_value) { ?>
+						<option value="<?= $show_time_value->agahi_show_time_val; ?>"><?= $show_time_value->agahi_show_time_title; ?> قیمت : <?= $show_time_value->agahi_tarefe; ?> ریال</option>
+						<?php 
+                            $user_date['agahi_tarefe'] = $show_time_value->agahi_tarefe;
+                            $this->session->set_userdata($user_date);
+                        ?>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
+            <?php } ?>
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
                 آگهی ویژه شش تصویر با درج لینک
@@ -519,6 +541,32 @@
             </div>
 
             <?php }else { ?>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
+                <div class="title_tavajoh ">
+                    توجه
+                </div>
+                <p>
+                    <?php foreach ($site as $site_value) { ?>
+                        <input name="days" value="<?= $site_value->show_time_free; ?>" type="hidden">
+
+                    تعداد روزهای نمایش آگهی رایگان <?= $site_value->show_time_free; ?> می باشد
+                    جهت استفاده از امکانات و تعداد روز های بشتر آگهی ویژه را انتخاب نمایید
+                    <?php } ?>
+
+                </p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_poster p0">
+                        <a href="<?= base_url('site/Agahi/FormAmlak/vip'); ?>">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
+                                <i class="icon-plus f_r"></i>
+                                ثبت آگهی املاک ویژه
+                            </div>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
                 <button class="col-lg-3 col-md-12 col-sm-12 col-xs-12 f_r main_button" type="" href="">
                 ارسال آگهی 
@@ -564,45 +612,44 @@
 
 
 <script type="text/javascript">
-var options = {
-    center: [33.89621114574323, 48.750954837035195],
-    zoom: 18
-}
-
-var map = L.map('map', options);
+var map = L.map("map").fitBounds([
+    [33.89621114574323, 48.750954837035195],
+    [33.89621114574323, 48.750954837035195]
+]);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: 'OSM'
-    })
-    .addTo(map);
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-// map.on('click',
-// 	function(e){
-// 		//var coord = e.latlng.toString().split(',');
-// 		//var lat = coord[0].split('(');
-// 		//var lng = coord[1].split(')');
-// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
-// 		L.marker(e.latlng).addTo(map);
-// 	});
+var currentMarker;
 
-var myMarker = L.marker([33.89621114574323, 48.750954837035195], {
-        title: "89621114574323",
-        alt: "The Big I",
+map.on("click", function(event) {
+    document.getElementById("latitude").value = event.latlng.lat;
+    document.getElementById("longitude").value = event.latlng.lng;
+    if (currentMarker) {
+        currentMarker._icon.style.transition = "transform 0.3s ease-out";
+        currentMarker._shadow.style.transition = "transform 0.3s ease-out";
+
+        currentMarker.setLatLng(event.latlng);
+
+
+        setTimeout(function() {
+            currentMarker._icon.style.transition = null;
+            currentMarker._shadow.style.transition = null;
+        }, 300);
+        return;
+    }
+
+    currentMarker = L.marker(event.latlng, {
         draggable: true
-    })
-    .addTo(map)
-    .on('dragend', function() {
-        var coord = String(myMarker.getLatLng()).split(',');
-        console.log(coord);
-        var lat = coord[0].split('(');
-        var lng = coord[1].split(')');
-        console.log(lng);
-        console.log(lat);
-        document.getElementById("latitude").value = lat[1];
-        document.getElementById("longitude").value = lng[0];
-
-        myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
+    }).addTo(map).on("click", function() {
+        event.originalEvent.stopPropagation();
     });
+});
+
+document.getElementById("done").addEventListener("click", function() {
+    currentMarker = null;
+});
 </script>
 
 

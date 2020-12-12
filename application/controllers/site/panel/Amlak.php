@@ -57,7 +57,6 @@ class Amlak extends CI_Panel {
         $crud->display_as('amlak_tag_id','برچسب');
         $crud->display_as('amlak_cond_tag_id','برچسب شرايط');
         $crud->display_as('state_id','وضعيت آگهي');
-        $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
@@ -79,7 +78,6 @@ class Amlak extends CI_Panel {
         $crud->set_relation('amlak_cate_id','amlak_cate','amlak_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation('amlak_cond_tag_id','amlak_cond_tag','amlak_cond_tag_title');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('amlak_tag_id','amlak_tag','amlak_tag_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 

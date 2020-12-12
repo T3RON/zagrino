@@ -281,7 +281,10 @@
                     <select name="days" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <?php foreach ($show_time as $show_time_value) { ?>
 						<option value="<?= $show_time_value->agahi_show_time_val; ?>"><?= $show_time_value->agahi_show_time_title; ?> قیمت : <?= $show_time_value->agahi_tarefe; ?> ریال</option>
-						
+                        <?php 
+                            $user_date['agahi_tarefe'] = $show_time_value->agahi_tarefe;
+                            $this->session->set_userdata($user_date);
+                        ?>
                         <?php } ?>
                     </select>
                 </div>
@@ -336,45 +339,44 @@
 <!--    Script For This Page     -->
 
 <script type="text/javascript">
-var options = {
-    center: [33.89621114574323, 48.750954837035195],
-    zoom: 18
-}
-
-var map = L.map('map', options);
+var map = L.map("map").fitBounds([
+    [33.89621114574323, 48.750954837035195],
+    [33.89621114574323, 48.750954837035195]
+]);
 
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-        attribution: 'OSM'
-    })
-    .addTo(map);
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-// map.on('click',
-// 	function(e){
-// 		//var coord = e.latlng.toString().split(',');
-// 		//var lat = coord[0].split('(');
-// 		//var lng = coord[1].split(')');
-// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
-// 		L.marker(e.latlng).addTo(map);
-// 	});
+var currentMarker;
 
-var myMarker = L.marker([33.89621114574323, 48.750954837035195], {
-        title: "89621114574323",
-        alt: "The Big I",
+map.on("click", function(event) {
+    document.getElementById("latitude").value = event.latlng.lat;
+    document.getElementById("longitude").value = event.latlng.lng;
+    if (currentMarker) {
+        currentMarker._icon.style.transition = "transform 0.3s ease-out";
+        currentMarker._shadow.style.transition = "transform 0.3s ease-out";
+
+        currentMarker.setLatLng(event.latlng);
+
+
+        setTimeout(function() {
+            currentMarker._icon.style.transition = null;
+            currentMarker._shadow.style.transition = null;
+        }, 300);
+        return;
+    }
+
+    currentMarker = L.marker(event.latlng, {
         draggable: true
-    })
-    .addTo(map)
-    .on('dragend', function() {
-        var coord = String(myMarker.getLatLng()).split(',');
-        console.log(coord);
-        var lat = coord[0].split('(');
-        var lng = coord[1].split(')');
-        console.log(lng);
-        console.log(lat);
-        document.getElementById("latitude").value = lat[1];
-        document.getElementById("longitude").value = lng[0];
-
-        myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
+    }).addTo(map).on("click", function() {
+        event.originalEvent.stopPropagation();
     });
+});
+
+document.getElementById("done").addEventListener("click", function() {
+    currentMarker = null;
+});
 </script>
 
 

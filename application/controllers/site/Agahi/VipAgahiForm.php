@@ -66,7 +66,8 @@ class VipAgahiForm extends CI_Panel {
             'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
             'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
             'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
-            'price_id' =>0,
+            'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
+            'update_date' =>0,
             'state_id' => 12,
             'days' =>$this->input->post('days'),
             'expire' =>$this->calculate($this->input->post('days'))

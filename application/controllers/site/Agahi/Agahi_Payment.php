@@ -23,23 +23,20 @@ class Agahi_Payment extends CI_Controller {
 
 		$accounts_id = $this->session->userdata('accounts_id');
 		$agahi_id = $this->uri->segment(5);
+		$agahi_tarefe =$this->session->userdata('agahi_tarefe');
 
-        $amount =  $this->db->select('price_amount')
-			->get_where('price', array('price_id' => '1'))
-			->row()
-			->price_amount;
 
         $desc = "پرداخت هزینه آگهی ویژه زاگرینو";
         $mobile = $this->db->select('account_mobile')
 			->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
 			->row()
 			->account_mobile;
-        $call_back = base_url('')."site/Agahi/Agahi_Payment/callback_agahi?amount=$amount&mobile=$mobile&state_id=$state_id&accounts_id=$accounts_id&agahi_id=$agahi_id";
+        $call_back = base_url('')."site/Agahi/Agahi_Payment/callback_agahi?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&agahi_id=$agahi_id";
 
 
         $this->zarinpal->sandbox();
 
-        if ($this->zarinpal->request($amount, $desc, $call_back)) {
+        if ($this->zarinpal->request($agahi_tarefe, $desc, $call_back)) {
 
             $authority = $this->zarinpal->get_authority();
             $this->zarinpal->redirect();
