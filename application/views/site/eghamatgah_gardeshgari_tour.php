@@ -82,11 +82,11 @@
                         </a>
                         <div class="btn-group btn-group-justified" role="group" aria-label="...">
                             <div class="btn-group" role="group">
-                                <a href="<?= base_url('site/Agahi/FormCar/vip'); ?>"><button type="button"
+                                <a href="<?= base_url('site/Gardeshgari/Tour/vip'); ?>"><button type="button"
                                         class="btn btn-danger">تور ویژه</button></a>
                             </div>
                             <div class="btn-group" role="group">
-                                <a href="<?= base_url('site/Agahi/FormCar/free'); ?>"><button type="button"
+                                <a href="<?= base_url('site/Gardeshgari/Tour/free'); ?>"><button type="button"
                                         class="btn btn-info">تور معمولی</button></a>
                             </div>
                         </div>

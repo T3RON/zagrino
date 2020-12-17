@@ -6,7 +6,7 @@
  * Time: 04:13 AM
  */
 
-class Eghamatgah_Payment extends CI_Controller {
+class Tour_Payment extends CI_Controller {
 
     function __construct() {
         parent::__construct();
@@ -31,7 +31,7 @@ class Eghamatgah_Payment extends CI_Controller {
 			->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
 			->row()
 			->account_mobile;
-        $call_back = base_url('')."site/Gardeshgari/Eghamatgah_Payment/callback_eghamatgah?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&eghamatgah_id=$eghamatgah_id";
+        $call_back = base_url('')."site/Gardeshgari/Tour_Payment/callback_tour?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&tour_id=$tour_id";
 
 
         $this->zarinpal->sandbox();
@@ -48,19 +48,19 @@ class Eghamatgah_Payment extends CI_Controller {
 
     }
 
-    public function callback_eghamatgah() {
+    public function callback_tour() {
         $amount = $this->input->get('amount', TRUE);;
         $status = $this->input->get('Status', TRUE);
         $authority = $this->input->get('Authority', TRUE);
         $mobile = $this->input->get('mobile', TRUE);
         $accounts_id = $this->input->get('accounts_id', TRUE);
-		$eghamatgah_id = $this->input->get('eghamatgah_id', TRUE);
+		$tour_id = $this->input->get('tour_id', TRUE);
 
         if ($status !== 'OK' OR $authority === NULL)
         {
             $array_msg = array('title'=>'متاسفانه','text'=>'پرداختی صورت نگرفت','type'=>'error');
             $this->session->set_flashdata('msg',$array_msg);
-            redirect('site/Gardeshgari/Eghamatgah/vip');
+            redirect('site/Gardeshgari/Tour/vip');
         }else {
             //$ref_id = $this->zarinpal->get_ref_id();
             // payment succeeded, do database stuff
@@ -71,11 +71,11 @@ class Eghamatgah_Payment extends CI_Controller {
                 'mobile' => $mobile,
                 'Status' => $status,
                 'amount' => $amount,
-                'eghamatgah_id' => $eghamatgah_id,
+                'tour_id' => $tour_id,
                 'pay_date'=> $this->jdf->jdate('l, j F Y',time(),'','GMT')
             );
 
-            $this->Model_Api->Insert("eghamatgah_pay",$data);
+            $this->Model_Api->Insert("tour_pay",$data);
 
 
 
