@@ -4,20 +4,20 @@
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer p0">
-        فرم ثبت اقامتگاه
+        فرم ثبت تور
     </div>
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
             <span>
-                فرم ثبت اقامتگاه
+                فرم ثبت تور
             </span>
         </div>
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
             <div class="title ">
-                راهنمای ثبت اقامتگاه
+                راهنمای ثبت تور
             </div>
             <?php if($vip) { ?>
             <?php foreach ($site as $site_value) { ?>
@@ -56,7 +56,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_title" id="naghlie_mozo" type="text"
+                        <input name="tour_title" id="naghlie_mozo" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -69,11 +69,11 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                        <select name="eghamatgah_type" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <select name="tour_type" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                             <option value="none" selected disabled hidden>...</option>
-                            <option value="آپارتمان">آپارتمان</option>
-                            <option value="ویلایی">ویلایی</option>
-                            <option value="آلاچیق">آلاچیق</option>
+                            <option value="سیاحتی">سیاحتی</option>
+                            <option value="زیارتی">زیارتی</option>
+                            <option value="آلاچیق">تفریحی</option>
 
                         </select>
                     </div>
@@ -119,7 +119,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_tabaghe" id="naghlie_gheimat" type="text"
+                        <input name="tour_mabda" id="naghlie_gheimat" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -130,7 +130,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_des" id="naghlie_tozihat_kamel" rows="4"
+                        <input name="tour_maghsad" id="naghlie_tozihat_kamel" rows="4"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -142,7 +142,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_otagh" id="naghlie_tozihat_kamel" rows="4"
+                        <input name="tour_start" id="naghlie_tozihat_kamel" rows="4"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -154,7 +154,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_conditions" id="naghlie_tozihat_kamel" rows="4"
+                        <input name="tour_finish" id="naghlie_tozihat_kamel" rows="4"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -167,7 +167,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_takht" id="naghlie_mobile_motabar" type="text"
+                        <input name="tour_vasile" id="naghlie_mobile_motabar" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -179,7 +179,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_tahvil" id="naghlie_mobile_motabar" type="text"
+                        <input name="tour_count_night" id="naghlie_mobile_motabar" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -191,7 +191,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_tahvil" id="naghlie_mobile_motabar" type="text"
+                        <input name="tour_email" id="naghlie_mobile_motabar" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -203,7 +203,7 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_takhlie" id="naghlie_mobile_motabar" type="text"
+                        <input name="tour_takht" id="naghlie_mobile_motabar" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
@@ -215,13 +215,34 @@
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="eghamatgah_telephone" id="naghlie_telephone" type="text"
+                        <input name="tour_phone" id="naghlie_telephone" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r fild p0 p0">
+                        <div class="t_align fild_title p0">
+                            <span class="f_r p0"></span>
+                            <label for="adres_koli" class="p0">آدرس</label>
+                            <span class="f_l p0"></span>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
+                            <input name="tour_address" id="adres_koli" rows="4"
+                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        </div>
+                    </div>
 
 
-
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_telephone" class="p0">توضیحات</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <textarea name="tour_des" id="naghlie_telephone" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0"></textarea>
+                    </div>
+                </div>
 
 
 
@@ -229,18 +250,7 @@
 
 
 
-                    <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r fild p0 p0">
-                        <div class="t_align fild_title p0">
-                            <span class="f_r p0"></span>
-                            <label for="adres_koli" class="p0">آدرس</label>
-                            <span class="f_l p0"></span>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
-                            <input name="eghamatgah_address" id="adres_koli" rows="4"
-                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                        </div>
-                    </div>
-
+                
 
                     <?php if($vip) { ?>
                     <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild">
@@ -390,7 +400,7 @@
                     <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
                         <button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r main_button"
                             style="font-size: 20px;go" type="" href="">
-                            ثبت و پرداخت هزینه اقامتگاه ویژه
+                            ثبت و پرداخت هزینه تور ویژه
                         </button>
 
                     </div>
@@ -404,8 +414,8 @@
                             <?php foreach ($site as $site_value) { ?>
                             <input name="days" value="<?= $site_value->show_time_free; ?>" type="hidden">
 
-                            تعداد روزهای نمایش اقامتگاه رایگان <?= $site_value->show_time_free; ?> می باشد
-                            جهت استفاده از امکانات و تعداد روز های بیشتر اقامتگاه12 ویژه را انتخاب نمایید
+                            تعداد روزهای نمایش تور رایگان <?= $site_value->show_time_free; ?> می باشد
+                            جهت استفاده از امکانات و تعداد روز های بیشتر تور ویژه را انتخاب نمایید
                             <?php } ?>
 
                         </p>
@@ -414,7 +424,7 @@
                                 <a href="<?= base_url('site/Agahi/FormCar/vip'); ?>">
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
                                         <i class="icon-plus f_r"></i>
-                                        ثبت  اقامتگاه ویژه
+                                        ثبت  تور ویژه
                                     </div>
                                 </a>
 
@@ -424,7 +434,7 @@
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
                         <button class="col-lg-3 col-md-12 col-sm-12 col-xs-12 f_r main_button" type="" href="">
-                            ارسال و انتشار اقامتگاه
+                            ارسال و انتشار تور
                         </button>
                     </div>
                     <?php } ?>

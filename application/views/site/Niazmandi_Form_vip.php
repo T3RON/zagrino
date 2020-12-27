@@ -292,9 +292,8 @@
 
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_l select_map">
                 <div class="alert alert-info">جهت تعیین موقعیت روی آیکون آبی رنگ کلیک کنید سپس جابه جا نمایید</div>
-
                 <!--Google map-->
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map" id="map"
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map"
                     style="position: relative; overflow: hidden;">
                     <div
                         style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
@@ -304,6 +303,7 @@
                                     <div style="height: 200px;" id="map"></div>
                                     <input name="agahi_latitude" id="latitude" type="hidden">
                                     <input name="agahi_longitude" id="longitude" type="hidden">
+
                                 </div>
                                 <div class="gm-err-title">Oops! Something went wrong.</div>
                                 <div class="gm-err-message">This page didn't load Google Maps correctly. See the

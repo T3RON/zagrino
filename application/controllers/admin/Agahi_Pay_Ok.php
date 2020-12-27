@@ -18,7 +18,7 @@ class Agahi_Pay_OK extends MY_Controller {
 
 		//$crud->where('agahi_pay.agahi_id',$this->uri->segment(4));
 
-        $crud->columns('state_id','Status','pay_date','agahi_id','accounts_id','agahi_pay_id');
+        $crud->columns('Status','pay_date','agahi_id','accounts_id','agahi_pay_id');
         $crud->display_as('agahi_pay_id','شناسه');
         $crud->display_as('accounts_id','کاربر');
         $crud->display_as('agahi_id','آگهی');
@@ -27,11 +27,9 @@ class Agahi_Pay_OK extends MY_Controller {
         $crud->display_as('amount','مبلغ پرداختی');
         $crud->display_as('pay_date','تاریخ پرداخت');
         $crud->display_as('Status',' وضعیت پرداخت');
-        $crud->display_as('state_id',' وضعیت');
 
         $crud->set_relation('accounts_id','accounts','{account_fn} {account_ln}');
         $crud->set_relation('agahi_id','agahi','agahi_title');
-        $crud->set_relation('state_id','state','state_title');
 
 
         $crud->callback_column('Status',array($this,'_callback_change_color'));

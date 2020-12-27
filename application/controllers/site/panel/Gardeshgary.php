@@ -45,7 +45,6 @@ class Gardeshgary extends CI_Panel {
         $crud->display_as('img6','تصوير شماره 6');
 
         $crud->display_as('state_id','وضعيت رويداد');
-        $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
@@ -66,7 +65,6 @@ class Gardeshgary extends CI_Panel {
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
 

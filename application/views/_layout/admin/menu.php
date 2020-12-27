@@ -67,27 +67,16 @@
                             <li><a href="<?= base_url('admin/Acate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
                             <li><a href="<?= base_url('admin/Ascate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a>
                             </li>
-                            <li><a href="<?= base_url('admin/Atarefe'); ?>"><i class="fa fa-circle-o"></i>تعرفه </a>
-                            </li>
-                            <li><a href="<?= base_url('admin/Ashow_time'); ?>"><i class="fa fa-circle-o"></i>زمان
-                                    نمايش</a></li>
+
+
                             <li><a href="<?= base_url('admin/Acond_tag'); ?>"><i class="fa fa-circle-o"></i>برچسب
                                     شرايط</a></li>
                             <li><a href="<?= base_url('admin/Akala_state'); ?>"><i class="fa fa-circle-o"></i>وضعيت
                                     كالا</a></li>
-                            <li class="treeview">
-                                <a href="#"><i class="fa fa-circle-o"></i> پرداختی ها
-                                    <span class="pull-left-container">
-                                        <i class="fa fa-angle-right pull-left"></i>
-                                    </span>
-                                </a>
-                                <ul class="treeview-menu">
-                                    <li><a href="<?= base_url('admin/Agahi_Pay_Ok'); ?>"><i class="fa fa-circle-o"></i>موفق
-                                            </a></li>
-                                    <li><a href="<?= base_url('admin/Agahi_Pay_Nok'); ?>"><i class="fa fa-circle-o"></i>ناموفق
-                                            </a></li>
-                                </ul>
-                            </li>
+
+                            <li><a href="<?= base_url('admin/Agahi_Pay_Ok'); ?>"><i class="fa fa-circle-o"></i>پرداختی ها
+                                </a></li>
+
                         </ul>
                     </li>
                     <li class="treeview">
@@ -100,8 +89,7 @@
                             <li><a href="<?= base_url('admin/Amlak'); ?>"><i class="fa fa-circle-o"></i>ليست املاك </a>
                             </li>
                             <li><a href="<?= base_url('admin/Mcate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
-                            <li><a href="<?= base_url('admin/Mscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a>
-                            </li>
+                    
                             <li><a href="<?= base_url('admin/Mtag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
                             <li><a href="<?= base_url('admin/Mctag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a>
                             </li>

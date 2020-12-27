@@ -25,6 +25,8 @@ class BankMashaghelVizheForm extends CI_Panel {
         $output['site'] = $this->MY_Model->select_single('site','1');
 		$output['jobs_cate'] = $this->MY_Model->select('jobs_cate');
 		$output['ostan'] = $this->MY_Model->select('ostan');
+		$output['show_time'] = $this->MY_Model->select('show_time');
+
 
         $this->load->vars(array(
             'home_page' => TRUE
@@ -59,14 +61,12 @@ class BankMashaghelVizheForm extends CI_Panel {
 			'jobs_instagram' =>$this->input->post('jobs_instagram'),
 			'jobs_telegram' =>$this->input->post('jobs_telegram'),
 			'jobs_address' =>$this->input->post('jobs_address'),
-			'jobs_latitude' =>$this->input->post('jobs_latitude'),
-			'jobs_longitude' =>$this->input->post('jobs_longitude'),
+			'map_latitude' =>$this->input->post('map_latitude'),
+			'map_longitude' =>$this->input->post('map_longitude'),
 			'jobs_sharayet' =>$this->input->post('jobs_sharayet'),
 			'jobs_mojavez' =>$this->input->post('jobs_mojavez'),
 			'jobs_video' =>$this->MY_Model->upload('jobs_video','mp4|mpeg|wmv',10024),
-			'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-			'update_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
-			'state_id' =>2,
+			'state_id' =>12,
 			'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
 			'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
 			'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
@@ -74,9 +74,11 @@ class BankMashaghelVizheForm extends CI_Panel {
 			'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
 			'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
 			'jobs_logo' =>$this->MY_Model->upload('jobs_logo','jpg|png',5024),
-			'price_id' =>0,
-			'days' =>30,
-			'expire' =>time() + (30 * 86400)
+			'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
+            'update_date' =>0,
+            'state_id' => 12,
+            'days' =>$this->input->post('days'),
+            'expire' =>$this->calculate($this->input->post('days'))
 		);
 
 
@@ -85,7 +87,7 @@ class BankMashaghelVizheForm extends CI_Panel {
 		$this->form_validation->set_rules('jobs_sub_cate_id','زير دسته بندي','required');
 		$this->form_validation->set_rules('ostan_id','استان','required');
 		$this->form_validation->set_rules('city_id','شهرستان','required');
-		$this->form_validation->set_rules('jobs_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
+		$this->form_validation->set_rules('map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
 
 
 		if($this->form_validation->run() == FALSE){
@@ -101,7 +103,7 @@ class BankMashaghelVizheForm extends CI_Panel {
 			if($jobs) {
 				$array_msg = array('title'=>'تبريك','text'=>'شغل شما با موفقيت درج گرديد','type'=>'success');
 				$this->session->set_flashdata('msg',$array_msg);
-				redirect('site/work/BankMashaghelVizheForm/index');
+                redirect('site/work/Jobs_Payment/jobs/'.$this->db->insert_id());
 			}else {
 				$array_msg = array('title'=>'خطا','text'=>'مشكلي در ارسال شغل بوجود آمده','type'=>'error');
 				$this->session->set_flashdata('msg',$array_msg);
@@ -115,6 +117,12 @@ class BankMashaghelVizheForm extends CI_Panel {
 
 
 	}
+
+	function calculate($days) {
+        $day =  time() + ($days * 86400);
+        return $day;
+    }  
+ 
 
 	function get_sub_cate() {
 		$jobs_cate_id = $this->input->post('id',TRUE);

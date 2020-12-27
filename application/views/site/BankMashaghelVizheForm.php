@@ -287,7 +287,7 @@
                         <li class="c">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_60">
+                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_60">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/upload.png">
                                     <input name="img1" id="upload_img_60"
@@ -298,7 +298,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_61">
+                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_61">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/upload.png">
                                     <input name="img2" id="upload_img_61"
@@ -309,7 +309,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_62">
+                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_62">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/upload.png">
                                     <input name="img3" id="upload_img_62"
@@ -320,7 +320,7 @@
                         <li class="">
 
                             <div class="img_panel_2 p0">
-                                <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_63">
+                                <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_63">
                                 <div class="f_r img_panel_input_2">
                                     <img src="<?=base_url('')?>assets/site/img/upload.png">
                                     <input name="img4" id="upload_img_63"
@@ -331,7 +331,7 @@
 						<li class="">
 
 							<div class="img_panel_2 p0">
-								<img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_64">
+								<img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_64">
 								<div class="f_r img_panel_input_2">
 									<img src="<?=base_url('')?>assets/site/img/upload.png">
 									<input name="img5" id="upload_img_64"
@@ -342,7 +342,7 @@
 						<li class="">
 
 							<div class="img_panel_2 p0">
-								<img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_65">
+								<img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_65">
 								<div class="f_r img_panel_input_2">
 									<img src="<?=base_url('')?>assets/site/img/upload.png">
 									<input name="img6" id="upload_img_65"
@@ -374,7 +374,7 @@
                             </div>
                         </div>
                         <div class="f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/placeholder.png" id="imgshow_611">
+                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_611">
                             <div class="f_r img_panel_input_2">
                                 <img src="<?=base_url('')?>assets/site/img/upload.png">
                                 <input name="jobs_logo" id="upload_img_611"
@@ -386,12 +386,24 @@
 
 
 
-                <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild kasb_kar_img img_side">
-                    <img id="imgshow_622" src="<?=base_url('')?>assets/site/img/zarin_pal.png" class="img-responsive" alt="">
-                    
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 f_r delete_img">
-                        </div>
-                </div> -->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
+                <div class="t_align fild_title  p0">
+                    <span class="f_r p0"></span>
+                    <label for="fild_in_12" class="p0">مدت زمان نمایش آگهی شما</label>
+                    <span class="f_l p0"></span>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                    <select name="days" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <?php foreach ($show_time as $show_time_value) { ?>
+						<option value="<?= $show_time_value->agahi_show_time_val; ?>"><?= $show_time_value->agahi_show_time_title; ?> قیمت : <?= $show_time_value->agahi_tarefe; ?> ریال</option>
+						<?php 
+                            $user_date['agahi_tarefe'] = $show_time_value->agahi_tarefe;
+                            $this->session->set_userdata($user_date);
+                        ?>
+                        <?php } ?>
+                    </select>
+                </div>
+            </div>
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
@@ -545,8 +557,8 @@
 
 
 
-				<input name="jobs_latitude" id="latitude" type="hidden">
-				<input name="jobs_longitude" id="longitude" type="hidden">
+				<input name="map_latitude" id="latitude" type="hidden">
+				<input name="map_longitude" id="longitude" type="hidden">
 
 
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild form_submit_div">
@@ -588,43 +600,46 @@
 <!--    Script For This Page     -->
 
 
-	<script type="text/javascript">
+<script type="text/javascript">
+var map = L.map("map").fitBounds([
+    [33.89621114574323, 48.750954837035195],
+    [33.89621114574323, 48.750954837035195]
+]);
 
-		var options = {
-			center: [33.89621114574323, 48.750954837035195],
-			zoom: 18
-		}
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
 
-		var map = L.map('map', options);
+var currentMarker;
 
-		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'})
-				.addTo(map);
+map.on("click", function(event) {
+    document.getElementById("latitude").value = event.latlng.lat;
+    document.getElementById("longitude").value = event.latlng.lng;
+    if (currentMarker) {
+        currentMarker._icon.style.transition = "transform 0.3s ease-out";
+        currentMarker._shadow.style.transition = "transform 0.3s ease-out";
 
-		// map.on('click',
-		// 	function(e){
-		// 		//var coord = e.latlng.toString().split(',');
-		// 		//var lat = coord[0].split('(');
-		// 		//var lng = coord[1].split(')');
-		// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
-		// 		L.marker(e.latlng).addTo(map);
-		// 	});
+        currentMarker.setLatLng(event.latlng);
 
-		var myMarker = L.marker([33.89621114574323, 48.750954837035195], {title: "89621114574323", alt: "The Big I", draggable: true})
-				.addTo(map)
-				.on('dragend', function() {
-					var coord = String(myMarker.getLatLng()).split(',');
-					console.log(coord);
-					var lat = coord[0].split('(');
-					var lng = coord[1].split(')');
-					console.log(lng);
-					console.log(lat);
-					document.getElementById("latitude").value = lat[1];
-					document.getElementById("longitude").value = lng[0];
 
-					myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
-				});
+        setTimeout(function() {
+            currentMarker._icon.style.transition = null;
+            currentMarker._shadow.style.transition = null;
+        }, 300);
+        return;
+    }
 
-	</script>
+    currentMarker = L.marker(event.latlng, {
+        draggable: true
+    }).addTo(map).on("click", function() {
+        event.originalEvent.stopPropagation();
+    });
+});
+
+document.getElementById("done").addEventListener("click", function() {
+    currentMarker = null;
+});
+</script>
 
 <script>
 $('document').ready(function() {

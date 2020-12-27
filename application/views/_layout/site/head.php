@@ -202,7 +202,7 @@
                                             </a>
                                         </div>
                                         <div class="col-lg-3 header-pick-modal p0">
-                                            <a href="" onclick="return false;">
+                                            <a href="<?= base_url('site/Roidad/Vof'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/event.svg" alt="">
                                                     <div class="t_align txt p0">

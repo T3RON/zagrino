@@ -36,7 +36,7 @@ class Tour extends CI_Panel {
         $crud->display_as('tour_vasile','نوع مسافرت');
         $crud->display_as('tour_count_night','تعداد شب');
         $crud->display_as('tour_takht','تعداد تخت');
-        $crud->display_as('tour_number','شماره تماس مسئول');
+        $crud->display_as('tour_phone','شماره تماس مسئول');
         $crud->display_as('tour_address','آدرس آژانس');
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
@@ -48,7 +48,7 @@ class Tour extends CI_Panel {
         $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('eghamatgah_email','ايميل آژانس');
         $crud->display_as('state_id','وضعيت تور');
-        $crud->display_as('price_id','هزينه اشتراك');
+        $crud->display_as('tour_email',' پست الکترونیکی');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
@@ -68,7 +68,6 @@ class Tour extends CI_Panel {
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
@@ -77,9 +76,13 @@ class Tour extends CI_Panel {
 
         $this->load->library('gc_dependent_select');
 
-        $crud->unset_add_fields('tour_id');
-        $crud->unset_edit_fields('tour_id');
-     
+        $crud->change_field_type('tour_id', 'hidden');
+        $crud->change_field_type('map_latitude', 'hidden');
+        $crud->change_field_type('map_longitude', 'hidden');
+        $crud->change_field_type('days', 'readonly');
+
+
+
 
 
         $crud->set_field_upload('img1','assets/uploads/img');
@@ -112,7 +115,7 @@ class Tour extends CI_Panel {
         
         $crud->unset_texteditor(
             'tour_type','tour_title','tour_mabda','tour_maghsad','tour_start','tour_finish','tour_vasile','tour_count_night',
-            'tour_takht','tour_number','map_latitude','map_longitude','eghamatgah_email','days','expire',
+            'tour_takht','tour_number','map_latitude','tour_phone','map_longitude','tour_email','days','expire',
             'register_date','update_date'
         );
 

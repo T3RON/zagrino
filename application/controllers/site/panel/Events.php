@@ -8,7 +8,7 @@ include_once(APPPATH.'core/CI_Panel.php');
  */
 
 class Events extends CI_Panel  {
-    {
+ 
     function __construct()
     {
         parent::__construct();
@@ -22,10 +22,10 @@ class Events extends CI_Panel  {
         $crud->set_table('zgr_events');
         $crud->set_subject('شغل');
 
-        $crud->columns('state_id','expire','update_date','register_date','events_type_id','events_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','events_title','accounts_id');
         $crud->display_as('events_id','شناسه');
-        $crud->display_as('events_type_id','نوع رويداد');
-        $crud->display_as('events_run_id',' نوع اجرا');
+        $crud->display_as('events_type','نوع رويداد');
+        $crud->display_as('events_run',' نوع اجرا');
         $crud->display_as('accounts_id','كاربر');
         $crud->display_as('ostan_id','استان');
         $crud->display_as('city_id','شهرستان');
@@ -35,7 +35,7 @@ class Events extends CI_Panel  {
         $crud->display_as('events_start','شروع رويداد');
         $crud->display_as('events_finish','پايان رويداد');
         $crud->display_as('events_capacity','ظرفيت');
-        $crud->display_as('events_level_id','سطح رويداد');
+        $crud->display_as('events_level','سطح رويداد');
         $crud->display_as('events_pro_dec','توضيح تخصصي رويداد');
         $crud->display_as('events_conditons','شرايط رويداد');
         $crud->display_as('img1','تصوير شماره 1');
@@ -49,12 +49,12 @@ class Events extends CI_Panel  {
         $crud->display_as('events_clip','كليپ');
         $crud->display_as('events_link_site','لينك سايت');
         $crud->display_as('events_email','ايميل');
+        $crud->display_as('events_phone','شماره تماس');
         $crud->display_as('events_instagram','اينستاگرام');
         $crud->display_as('events_address','آدرس برگزاري');
         $crud->display_as('map_latitude','طول جغرافيايي');
         $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('state_id','وضعيت رويداد');
-        $crud->display_as('price_id','هزينه اشتراك');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
@@ -74,10 +74,7 @@ class Events extends CI_Panel  {
         $crud->set_relation('ostan_id','ostan','ostan_title');
         $crud->set_relation('city_id','city','city_title');
         $crud->set_relation('state_id','state','state_title');
-        $crud->set_relation('events_type_id','events_type','events_type_title');
-        $crud->set_relation('events_run_id','events_run','events_run_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('price_id','price','price_amount');
 
         
 
@@ -186,16 +183,16 @@ class Events extends CI_Panel  {
 
 
     function out_view($output = null) {
-        $output->menu_top = $this->Menu_Model->select('menu');
-        $output->menu_middel = $this->Menu_Model->select('secend_menu');
-        $output->footer_menu = $this->Menu_Model->select('footer_menu');
-        $output->slider = $this->Menu_Model->select('slider');
-        $output->text = $this->Menu_Model->select('text');
+        $output->menu_top = $this->MY_Model->select('menu');
+        $output->menu_middel = $this->MY_Model->select('secend_menu');
+        $output->footer_menu = $this->MY_Model->select('footer_menu');
+        $output->slider = $this->MY_Model->select('slider');
+        $output->text = $this->MY_Model->select('text');
         $output->site = $this->MY_Model->select_single('site','1');
         $output->title = "رويداد ها";
         $output->des = "مديريت و بررسي رويداد هاي موجود";
         $output->timeStamp = $this->jdf->jdate('l, j F Y',time(),'','GMT');
-        $this->load->view('admin/index',$output);
+        $this->load->view('panel/index',$output);
 
     }
 

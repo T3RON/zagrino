@@ -8,11 +8,18 @@ include_once(APPPATH.'core/CI_Panel.php');
  * Time: 04:13 AM
  */
 
-class Jszlist extends CI_Panel {
+class Jszlist extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
+        $this->load->library('Jdf');
+        $this->load->library('user_agent');
+        $this->load->helper('url');
+        $this->load->helper('form');
+        $this->load->helper('Accesscontrol');
+        $this->load->library('Javascript');
+        $this->load->library('Javascript/Jquery');
+        $this->load->model('MY_Model');
     }
 
     function index()
@@ -20,10 +27,11 @@ class Jszlist extends CI_Panel {
 
         $id = $this->uri->segment('5');
         $id_cate = $this->uri->segment('6');
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->MY_Model->select('menu');
+        $output['menu_middel'] = $this->MY_Model->select('secend_menu');
+        $output['footer_menu'] = $this->MY_Model->select('footer_menu');
+        $output['slider'] = $this->MY_Model->select('slider');
+        $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
         $output['jobs_sub_zero_cate'] = $this->MY_Model->select_single_where('jobs_sub_cate','jobs_cate',$id_cate);
         $output['bank_mashaghel'] = $this->MY_Model->show_join_six_with_order('jobs','jobs_cate','jobs_sub_cate','accounts','ostan','city','state','jobs.state_id','DESC','zgr_jobs.jobs_sub_cate',$id);

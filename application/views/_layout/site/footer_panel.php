@@ -51,7 +51,6 @@
 
 <script src="<?= base_url('') ?>dist/js/persian-date.js"></script>
 <script src="<?= base_url('') ?>dist/js/persian-datepicker.js"></script>
-<!-- Bootstrap 3.3.7 -->
 <!-- <script src="<?=base_url('')?>bower_components/bootstrap/dist/js/bootstrap.min.js"></script> -->
 <!-- DataTables -->
 <script src="<?=base_url('')?>bower_components/datatables.net/js/jquery.dataTables.min.js"></script>
@@ -181,7 +180,7 @@
 </script>
 
 
-<!-- <script type="text/javascript">
+<script type="text/javascript">
         $(document).ready(function(){
  
             $('#ostan_id').change(function(){ 
@@ -207,7 +206,7 @@
             }); 
              
         });
-    </script> -->
+    </script>
 
     
 <script>

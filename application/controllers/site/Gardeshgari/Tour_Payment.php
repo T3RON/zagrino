@@ -19,10 +19,10 @@ class Tour_Payment extends CI_Controller {
         $this->load->library('Zarinpal', ['merchant_id' => $merchant_id]);
     }
 
-    public function eghamatgah() {
+    public function tour() {
 
 		$accounts_id = $this->session->userdata('accounts_id');
-		$eghamatgah_id = $this->uri->segment(5);
+		$tour_id = $this->uri->segment(5);
 		$agahi_tarefe =$this->session->userdata('agahi_tarefe');
 
 

@@ -1,584 +1,1038 @@
-<?php include_once (APPPATH.'views/_layout/site/header.php');?>
-    
-    
-    
-    
-    
-    
-     
-    
-    
-    
-    
-    
+<?php include_once(APPPATH . 'views/_layout/site/head.php'); ?>
 
-    <!-- column-right -->
 
-    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 section_head niazmandiha_form p0 ">
 
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer bg_3f51b5 p0">
-            فرم پنل رویدادها
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 outer p0">
+        فرم ثبت رویداد
+    </div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
+            <span>
+                فرم ثبت رویداد
+            </span>
         </div>
 
-       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 all">
-
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 head_title ">
-               <span>
-                   ثبت فرم پنل رویداد
-               </span>
-           </div>
-
-
-           <form action="" method="" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-
-
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">کد کاربری</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title  p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_nam_neshan" class="p0">برگزار کننده / برگزار کنندگان</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in f_r">
-                       <input id="sefaresh_nam_neshan" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-
-               
-               
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
-                <div class="t_align fild_title p0">
-                     <span class="f_r p0"></span>
-                     <label for="upload_img" class="p0">لوگو</label>
-                     <span class="f_l p0"></span>
-                 </div>
-                   <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
-                       <li class="">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_4">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input id="upload_img_4" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                        </div>
-                       </li>
-                       <li class="">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_40">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input id="upload_img_40" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                        </div>
-                       </li>
-                   </ul>
-               </div>
-
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  f_r fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_makan" class="p0">مکان آگهی</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                       <select id="sefaresh_makan" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                           <option value="none" selected disabled hidden style="color: #dcdcdc">انتخاب شهر</option>
-                           <option value="1">نهاوند</option>
-                           <option value="2">ملایر</option>
-                           <option value="3">کوهانی</option>
-                           <option value="4">جهان آباد</option>
-                       </select>
-                   </div>
-               </div>
-
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">عنوان رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">توضیحات رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
-                   زمان رویداد
-               </div>
-
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">شروع</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">پایان</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               
-               
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">نوع رویداد</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>کنفرانس </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>همایش</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>سمینار</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>نمایشگاه</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>آموزشی </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-2 col-md-3 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>افتتاحیه </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
-               </div>
-               
-               
-               
-               
-               
-
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">نحوه برگزاری</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>آنلاین </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>حضوری</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
-               </div>
-               
-               
-
-               <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild">
-                       <div class="t_align fild_title margin_title p0">
-                           <span class="f_r p0"></span>
-                           <label for="tozihat_text" class="p0">سطح برگزاری</label>
-                           <span class="f_l p0"></span>
-                       </div>
-                       <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in niazmandi_radio ">
-                           <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>عمومی </span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                           <li class="col-lg-4 col-md-4 col-sm-6 col-xs-12 p0">
-                               <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                   <span>تخصصی</span>
-                                   <input type="checkbox" name="">
-                                   <span class="checkmark"></span>
-                               </label>
-                           </li>
-                       </ul>
-                   </div>
-               </div>
-               
-               
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r fild">
-                <div class="t_align fild_title p0">
-                    <span class="f_r p0"></span>
-                    <label for="sefaresh_cod_karbari" class="p0">ظرفیت رویداد</label>
-                    <span class="f_l p0"></span>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                    <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hint">
+            <div class="title ">
+                راهنمای ثبت تور
             </div>
-            
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">تخصصی (شرکت کنندگان)</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">شرایط شرکت کنندگان</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               
-               
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
-                   آگهی ویژه شش تصویر با درج لینک
-                   <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                       حداکثر حجم هر تصویر 10240 کیلوبایت میباشد
-                   </span><span class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                       شما می توانید از قسمت پنل کاربری سفارش بنر بدهید
-                   </span>
-               </div>
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
-                   
-                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_411">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_411" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_422">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_422" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_433">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_433" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_444">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_444" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_455">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_455" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                    <li class="">
-                        
-                 <div class="f_r img_panel_2 p0">
-                     <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_466">
-                     <div class="f_r img_panel_input_2">
-                         <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                         <input id="upload_img_466" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                 </div>
-                    </li>
-                </ul>
-               </div>
-               
-               
-               
-               
+            <?php if($vip) { ?>
+            <?php foreach ($site as $site_value) { ?>
+            <?= $site_value->help_car_vip; ?>
+            <?php } ?>
+            <?php } else { ?>
+            <?php foreach ($site as $site_value) { ?>
+            <?= $site_value->help_car_free; ?>
+            <?php } ?>
+            <?php } ?>
+        </div>
 
 
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                <div class="t_align fild_title p0">
-                     <span class="f_r p0"></span>
-                     <label for="upload_img" class="p0">آپلود پوستر</label>
-                     <span class="f_l p0"></span>
-                 </div>
-                   <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
-                       <li class="">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_477">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input id="upload_img_477" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                        </div>
-                       </li>
-                       
-                   </ul>
-               </div>
-               
-               
+        <?php if($vip) { ?>
+        <form action="<?= base_url('site/Roidad/Roydad/vip_register'); ?>" method="post" enctype='multipart/form-data'
+            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+            <?php } else { ?>
+            <form action="<?= base_url('site/Roidad/Roydad/free_register'); ?>" method="post"
+                enctype='multipart/form-data' class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                <?php } ?>
+                <?php echo validation_errors('<div class="alert alert-danger">','</div>'); ?>
 
 
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
+                <!----------------------------------------------------------------------------------------  فرم ثبت آگهی وسایل نقلیه ----------------------------------------------------------->
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form_midle_title">
+                    <div class="form_midle_title_in">
+                        <span>
+                            فرم ثبت رویداد
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
-                        <label for="upload_img" class="p0">آپلود کلیپ رویداد</label>
+                        <label for="naghlie_mozo" class="p0">عنوان رویداد </label>
                         <span class="f_l p0"></span>
                     </div>
-                   <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
-                       <li class="">
-                        <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 f_r img_panel_2 p0">
-                            <img src="<?=base_url('')?>assets/site/img/logo.png" id="imgshow_47">
-                            <div class="f_r img_panel_input_2">
-                                <img src="<?=base_url('')?>assets/site/img/camera.svg">
-                                <input id="upload_img_47" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn " type="file" multiple=""></div>
-                        </div>
-                       </li>
-                       
-                   </ul>
-               </div>
-               
-               
-               
-               
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">لینک</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">اعلام هزینه رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">آدرس سایت رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">آدرس ایمیل رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">آدرس شبکه های اجتماعی رویداد</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 f_r  fild">
-                   <div class="t_align fild_title p0">
-                       <span class="f_r p0"></span>
-                       <label for="sefaresh_cod_karbari" class="p0">آدرس محل برگزاری</label>
-                       <span class="f_l p0"></span>
-                   </div>
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                       <input id="sefaresh_cod_karbari" type="text" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                   </div>
-               </div>
-               
-              
-
-               <button class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r clear main_button" type="" href="" >
-                   تعیین موقعیت روی نقشه
-               </button>
-
-               <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_r clear select_map">
-                   <!--Google map-->
-                   <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map" id="map_koli" style="position: relative; overflow: hidden;"><div style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);"><div class="gm-err-container"><div class="gm-err-content"><div class="gm-err-icon"><img src="https://maps.gstatic.com/mapfiles/api-3/images/icon_error.png" draggable="false" style="user-select: none;"></div><div class="gm-err-title">Oops! Something went wrong.</div><div class="gm-err-message">This page didn't load Google Maps correctly. See the JavaScript console for technical details.</div></div></div></div></div>
-               </div>
-
-               
-               
-               
-           <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh">
-               <div class="title_tavajoh ">
-                   توجه
-               </div>
-               <p>
-                   شما میتوانید پنل شغلی عادی خود را با پرداخت هزینه ای بسیار مناسب به ویژه تبدیل کنید و از تمام امکانات سایت استفاده کنید
-
-               </p>
-           </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_title" id="naghlie_mozo" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
 
 
-
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild form_submit_div">
-                        <button type="submit" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 form_submit" >
-                   ثبت رویداد
-                        </button>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_tozihat_kamel" class="p0"> نوع رویداد</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_type" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
                 </div>
 
 
 
 
-           </form>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="sefaresh_makan" class="p0">استان</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 
-       </div>
+                        <select id="ostan_id" name="ostan_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+                            <?php foreach($ostan as $ostan_value) { ?>
+                            <option value="<?= $ostan_value->ostan_id; ?>"><?= $ostan_value->ostan_title; ?>
+                            </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="sefaresh_makan" class="p0">شهرستان</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                        <select name="city_id" id="city_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-16 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_gheimat" class="p0">اجرا کننده</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_run" id="naghlie_gheimat" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_tozihat_kamel" class="p0">ظرفیت</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_capacity" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_tozihat_kamel" class="p0"> سطح رویداد</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_level" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_tozihat_kamel" class="p0">شروع رویداد</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_start" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="events_finish" class="p0">پایان رویداد</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_finish" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_mobile_motabar" class="p0"> شرایط</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_conditons" id="naghlie_mobile_motabar" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_mobile_motabar" class="p0"> لینک سایت</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_link_site" id="naghlie_mobile_motabar" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_mobile_motabar" class="p0"> ایمیل سازمان </label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_email" id="naghlie_mobile_motabar" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_mobile_motabar" class="p0">اینستاگرام</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_instagram" id="naghlie_mobile_motabar" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_telephone" class="p0">تلگرام</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_telegram" id="naghlie_telephone" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r fild p0 p0">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="adres_koli" class="p0">آدرس</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in ">
+                        <input name="events_address" id="adres_koli" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_telephone" class="p0">شماره تماس</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="events_phone" id="naghlie_telephone" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    </div>
+                </div>
+                <?php if($vip) { ?>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild">
+                    <div class="t_align fild_title  p0">
+                        <span class="f_r p0"></span>
+                        <label for="fild_in_12" class="p0">مدت زمان نمایش رویداد شما</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
+                        <select name="days" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                            <?php foreach ($show_time as $show_time_value) { ?>
+                            <option value="<?= $show_time_value->agahi_show_time_val; ?>">
+                                <?= $show_time_value->agahi_show_time_title; ?> قیمت :
+                                <?= $show_time_value->agahi_tarefe; ?> ریال</option>
+                            <?php 
+                            $user_date['agahi_tarefe'] = $show_time_value->agahi_tarefe;
+                            $this->session->set_userdata($user_date);
+                        ?>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div>
+                <?php } ?>
+
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r  fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="naghlie_telephone" class="p0">توضیحات</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <textarea name="events_dec" id="naghlie_telephone" type="text"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0"></textarea>
+                    </div>
+                </div>
 
 
 
+                <div class="flex_boxl">
+
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text_title">
+                        آگهی ویژه شش تصویر با درج لینک
+                        <span class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            حداکثر حجم هر تصویر 10240 کیلوبایت میباشد
+                        </span>
+                    </div>
+
+
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r clear fild">
+
+                        <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in img_place ">
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1000">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img1" id="upload_img_1000"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1111">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img2" id="upload_img_1111"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1222">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img3" id="upload_img_1222"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <?php if($vip) { ?>
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1333">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img4" id="upload_img_1333"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1444">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img5" id="upload_img_1444"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="">
+
+                                <div class="f_r img_panel_2 p0">
+                                    <img src="<?= base_url('') ?>assets/site/img/logo.png" id="imgshow_1555">
+                                    <div class="f_r img_panel_input_2">
+                                        <img src="<?= base_url('') ?>assets/site/img/camera.svg">
+                                        <input name="img6" id="upload_img_1555"
+                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 u_i c_btn workout_btn "
+                                            type="file" multiple="">
+                                    </div>
+                                </div>
+                            </li>
+                            <?php } ?>
+                        </ul>
+                    </div>
+
+
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild f_l select_map">
+                        <div class="alert alert-info">جهت تعیین موقعیت روی آیکون آبی رنگ کلیک کنید سپس جابه جا نمایید
+                        </div>
+                        <!--Google map-->
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 map" id="map"
+                            style="position: relative; overflow: hidden;">
+                            <div
+                                style="height: 100%; width: 100%; position: absolute; top: 0px; left: 0px; background-color: rgb(229, 227, 223);">
+                                <div class="gm-err-container">
+                                    <div class="gm-err-content">
+                                        <div class="gm-err-icon">
+                                            <div style="height: 200px;" id="map"></div>
+                                            <input name="map_latitude" id="latitude" type="hidden">
+                                            <input name="map_longitude" id="longitude" type="hidden">
+
+                                        </div>
+                                        <div class="gm-err-title">Oops! Something went wrong.</div>
+                                        <div class="gm-err-message">This page didn't load Google Maps correctly. See the
+                                            JavaScript console for technical details.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <?php if($vip) { ?>
+                    <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
+                        <button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r main_button"
+                            style="font-size: 20px;go" type="" href="">
+                            ثبت و پرداخت هزینه تور ویژه
+                        </button>
+
+                    </div>
+
+                    <?php }else { ?>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 tavajoh ">
+                        <div class="title_tavajoh ">
+                            توجه
+                        </div>
+                        <p>
+                            <?php foreach ($site as $site_value) { ?>
+                            <input name="days" value="<?= $site_value->show_time_free; ?>" type="hidden">
+
+                            تعداد روزهای نمایش تور رایگان <?= $site_value->show_time_free; ?> می باشد
+                            جهت استفاده از امکانات و تعداد روز های بیشتر تور ویژه را انتخاب نمایید
+                            <?php } ?>
+
+                        </p>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 b_m_v p0">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under_poster p0">
+                                <a href="<?= base_url('site/Agahi/FormCar/vip'); ?>">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 sabt f_r ">
+                                        <i class="icon-plus f_r"></i>
+                                        ثبت تور ویژه
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild  pish_namayesh">
+                        <button class="col-lg-3 col-md-12 col-sm-12 col-xs-12 f_r main_button" type="" href="">
+                            ارسال و انتشار تور
+                        </button>
+                    </div>
+                    <?php } ?>
+
+
+
+                </div>
+            </form>
 
     </div>
 
 
-
-
-
-
-
+</div>
 
 
 </div>
-    
-    
-    
-     
-    
-    
-    
-    
-      
-    
-    
-<?php include_once (APPPATH.'views/_layout/site/footer.php'); ?>
+
+
+<?php include_once(APPPATH . 'views/_layout/site/footer.php'); ?>
 
 <!--    Script For This Page     -->
- 
-<script >
-    $('document').ready(function () {
-        $("#upload_img_4").change(function () {
-            if (this.files && this.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#imgshow_4').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
-    });
-</script>
-<script >
-    $('document').ready(function () {
-        $("#upload_img_40").change(function () {
-            if (this.files && this.files[0]) {
-                var reader = new FileReader();
-                reader.onload = function (e) {
-                    $('#imgshow_40').attr('src', e.target.result);
-                }
-                reader.readAsDataURL(this.files[0]);
-            }
-        });
-    });
-</script>
-    
 
-    
-<?php include_once (APPPATH.'views/_layout/site/footer_after.php'); ?>
+<script type="text/javascript">
+var map = L.map("map").fitBounds([
+    [33.89621114574323, 48.750954837035195],
+    [33.89621114574323, 48.750954837035195]
+]);
+
+L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+var currentMarker;
+
+map.on("click", function(event) {
+    document.getElementById("latitude").value = event.latlng.lat;
+    document.getElementById("longitude").value = event.latlng.lng;
+    if (currentMarker) {
+        currentMarker._icon.style.transition = "transform 0.3s ease-out";
+        currentMarker._shadow.style.transition = "transform 0.3s ease-out";
+
+        currentMarker.setLatLng(event.latlng);
+
+
+        setTimeout(function() {
+            currentMarker._icon.style.transition = null;
+            currentMarker._shadow.style.transition = null;
+        }, 300);
+        return;
+    }
+
+    currentMarker = L.marker(event.latlng, {
+        draggable: true
+    }).addTo(map).on("click", function() {
+        event.originalEvent.stopPropagation();
+    });
+});
+
+document.getElementById("done").addEventListener("click", function() {
+    currentMarker = null;
+});
+</script>
+
+<script>
+$('document').ready(function() {
+    $("#upload_img").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_10").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_10').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_11").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_11').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_12").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_12').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_13").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_13').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_14").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_14').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_15").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_15').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_100").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_100').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_111").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_111').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_122").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_122').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_133").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_133').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_144").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_144').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_155").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_155').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_1000").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1000').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1111").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1111').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1222").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1222').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1333").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1333').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1444").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1444').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_1555").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_1555').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_10000").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_10000').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_11111").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_11111').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_12222").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_12222').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_13333").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_13333').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_14444").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_14444').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_15555").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_15555').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_100000").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_100000').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_111111").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_111111').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_122222").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_122222').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_133333").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_133333').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_144444").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_144444').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_155555").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_155555').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+<script>
+$('document').ready(function() {
+    $("#upload_img_144444").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_144444').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+<script>
+$('document').ready(function() {
+    $("#upload_img_155555").change(function() {
+        if (this.files && this.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                $('#imgshow_155555').attr('src', e.target.result);
+            }
+            reader.readAsDataURL(this.files[0]);
+        }
+    });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+    $('#ostan_id').change(function() {
+        var id = $(this).val();
+        $.ajax({
+            url: "<?php echo site_url('site/Agahi/FormCar/get_city');?>",
+            method: "POST",
+            data: {
+                id: id
+            },
+            async: true,
+            dataType: 'json',
+            success: function(data) {
+
+                var html = '';
+                var i;
+                for (i = 0; i < data.length; i++) {
+                    html += '<option value=' + data[i].city_id + '>' + data[i].city_title +
+                        '</option>';
+                }
+                $('#city_id').html(html);
+
+            }
+        });
+        return false;
+    });
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#car_cate_id').change(function() {
+        var id = $(this).val();
+
+        $.ajax({
+            url: "<?php echo site_url('site/Agahi/FormCar/get_sub_cate');?>",
+            method: "POST",
+            data: {
+                id: id
+            },
+            async: true,
+            dataType: 'json',
+            success: function(data) {
+
+                var html = '';
+                var i;
+                for (i = 0; i < data.length; i++) {
+                    html += '<option value=' + data[i].car_sub_cate_id + '>' + data[i]
+                        .car_sub_cate_title + '</option>';
+                }
+                $('#car_sub_cate_id').html(html);
+
+            }
+        });
+        return false;
+    });
+
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $(document).scrollTop($("#pos").offset().top);
+});
+</script>
+
+<?php include_once(APPPATH . 'views/_layout/site/footer_after.php'); ?>

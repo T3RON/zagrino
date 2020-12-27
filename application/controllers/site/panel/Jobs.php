@@ -72,7 +72,6 @@ class Jobs extends CI_Panel {
         $crud->display_as('jobs_longitude','طول جغرافیایی');
         $crud->display_as('jobs_shoar','شعار');
         $crud->display_as('category_id','گروه بندي');
-        $crud->display_as('price_id','قيمت');
         $crud->display_as('jobs_service_id','سرويس ها');
         $crud->display_as('days','تعداد روزهاي نمايش');
         $crud->display_as('expire','تاريخ انقضا');
@@ -101,17 +100,14 @@ class Jobs extends CI_Panel {
 			$crud->unset_add_fields('days');
 			$crud->unset_edit_fields('days');
 
-			$crud->unset_add_fields('price_id');
-			$crud->unset_edit_fields('price_id');
 
 			$crud->unset_add_fields('state_id');
 			$crud->unset_edit_fields('state_id');
 
 			$crud->field_type('jobs_latitude', 'hidden');
 			$crud->field_type('jobs_longitude', 'hidden');
-			$crud->field_type('days', 'hidden');
-			$crud->field_type('price_id', 'hidden');
-			$crud->field_type('state_id', 'hidden');
+            $crud->field_type('days', 'hidden');
+            $crud->field_type('state_id', 'hidden');
 
 
 
@@ -125,7 +121,6 @@ class Jobs extends CI_Panel {
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
         $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
-        $crud->set_relation('price_id','price','price_amount');
         $crud->set_relation('state_id','state','state_title');
 
 

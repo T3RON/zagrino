@@ -75,7 +75,7 @@
 							</div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a
 									href=""><?= $bank_mashaghel_value->jobs_title; ?></a></div>
-							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">آدرس</div>
+							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0"><?= $bank_mashaghel_value->jobs_address; ?></div>
 							<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
 								<button type="button" class="btn_global m0 p0"><img
 										src="<?= base_url('') ?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg"
