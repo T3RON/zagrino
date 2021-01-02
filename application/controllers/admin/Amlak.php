@@ -47,14 +47,15 @@ class Amlak extends MY_Controller {
         $crud->display_as('img6','تصوير شماره 6');
         $crud->display_as('amlak_emtiaz','امتيازات');
         $crud->display_as('amlak_anbari','انباري');
+        $crud->display_as('amlak_tell','شماره تماس');
         $crud->display_as('amlak_asansor','آسانسور');
         $crud->display_as('amlak_address','آدرس');
-        $crud->display_as('amlak_lat','طول جغرافيايي');
-        $crud->display_as('amlak_long','عرض جغرافيايي');
+        $crud->display_as('amlak_latitude','طول جغرافيايي');
+        $crud->display_as('amlak_longitude','عرض جغرافيايي');
         $crud->display_as('amlak_price','قيمت فروش');
         $crud->display_as('state_id','وضعيت آگهي');
-        $crud->display_as('amlak_tag_id','برچسب');
-        $crud->display_as('amlak_cond_tag_id','برچسب شرايط');
+        $crud->display_as('amlak_tag','برچسب');
+        $crud->display_as('amlak_cond_tag','برچسب شرايط');
         $crud->display_as('state_id','وضعيت آگهي');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
@@ -87,9 +88,6 @@ class Amlak extends MY_Controller {
         $crud->set_field_upload('img5','assets/uploads/img');
         $crud->set_field_upload('img6','assets/uploads/img');
 
-        //$crud->set_field_upload('jobs_logo','assets/uploads/img');
-        //$crud->set_field_upload('jobs_video','assets/uploads/videos');
-        //$crud->field_type('username','date');
 
         $crud->callback_before_insert(array($this,'calculate'));
         $crud->callback_column('expire',array($this,'_change_expire_date'));
@@ -100,16 +98,17 @@ class Amlak extends MY_Controller {
         $crud->field_type('register_date', 'hidden', time());
         $crud->field_type('update_date', 'hidden', time());
         $crud->field_type('expire', 'hidden');
+        $crud->field_type('amlak_latitude', 'hidden');
+        $crud->field_type('amlak_longitude', 'hidden');
       
-        //$crud->required_fields('username');
 
         $crud->unset_clone();
         
         $crud->unset_texteditor(
             'amlak_bonga_title','amlak_des','amlak_agahi_dahande','amlak_sanad_state','amlak_mizan_malekiat','amlak_metraj','amlak_rahn_price',
             'amlak_count_room','amlak_tabaghe','amlak_parking','amlak_emtiaz','amlak_anbari','amlak_asansor','amlak_price',
-            'amlak_ejare_price','amlak_sanad_type','amlak_lat','amlak_long',
-            'jobs_update_date','jobs_shoar','jobs_price'
+            'amlak_ejare_price','amlak_sanad_type','amlak_latitude','amlak_longitude',
+            'jobs_update_date','jobs_shoar','amlak_tell','amlak_tag','amlak_cond_tag'
         );
 
   

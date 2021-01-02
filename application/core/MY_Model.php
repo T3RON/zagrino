@@ -8,6 +8,7 @@ class MY_Model extends CI_Model {
         parent::__construct();
         $this->load->database();
         $this->load->library('session');
+        $this->load->library('encrypt');
     }
 
     function select($table) {
@@ -460,24 +461,38 @@ class MY_Model extends CI_Model {
         $login_query = $this->db->get('accounts');
         if ($login_query->num_rows() > 0) {
             $row = $login_query->row();
-         
+            
             if ($row) {
-                $session_data = array(
-                    'accounts_id'=> $row->accounts_id,
-                    'account_fn'=> $row->account_fn,
-                    'account_ln'=> $row->account_ln,
-                    'account_mobile'=> $row->account_mobile,
-                    'account_avatar'=> $row->account_avatar,
-                    'state_id'=> $row->state_id,
-                    'agahi_tarefe'=> "",
-                    'logged_in'=> TRUE
-                );
-
-                $this->session->sess_expiration = '14400';
-                $this->session->set_userdata($session_data);
-        
-                return password_verify($password,$row->account_pass);
-
+                if($password === $this->encrypt->decode($row->account_pass)) {
+                    
+                    $session_data = array(
+                        'accounts_id'=> $row->accounts_id,
+                        'account_fn'=> $row->account_fn,
+                        'account_ln'=> $row->account_ln,
+                        'account_mobile'=> $row->account_mobile,
+                        'account_avatar'=> $row->account_avatar,
+                        'state_id'=> $row->state_id,
+                        'agahi_tarefe'=> "",
+                        'logged_in'=> TRUE
+                    );
+    
+                    $this->session->sess_expiration = '14400';
+                    $this->session->set_userdata($session_data);
+                    return true;
+                }else {
+                    $session_data = array(
+                        'accounts_id'=> '',
+                        'account_fn'=> '',
+                        'account_ln'=> '',
+                        'account_mobile'=> '',
+                        'account_avatar'=> '',
+                        'state_id'=> '',
+                        'logged_in'=> False
+                    );
+                    $this->session->unset_userdata($session_data);
+                    $this->session->sess_destroy();
+                    return false;
+                }
 
             }
 

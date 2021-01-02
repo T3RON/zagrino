@@ -108,14 +108,14 @@ class FormCar extends CI_Panel {
             'agahi_car_color' =>$this->input->post('agahi_car_color'),
             'agahi_car_body_des' =>$this->input->post('agahi_car_body_des'),
             'agahi_car_motor_des' =>$this->input->post('agahi_car_motor_des'), 
-            'car_latitude' =>$this->input->post('car_latitude'), 
-            'car_longitude' =>$this->input->post('car_longitude'), 
+            'map_latitude' =>$this->input->post('map_latitude'), 
+            'map_longitude' =>$this->input->post('map_longitude'), 
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
             'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'img5' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'img6' =>$this->MY_Model->upload('img4','jpg|png',5024),
+            'img5' =>$this->MY_Model->upload('img5','jpg|png',5024),
+            'img6' =>$this->MY_Model->upload('img6','jpg|png',5024),
             'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
             'update_date' =>0,
             'state_id' => 12,
@@ -129,7 +129,7 @@ class FormCar extends CI_Panel {
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
         $this->form_validation->set_rules('agahi_car_mobile','موبایل','required');
-        $this->form_validation->set_rules('car_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
+        $this->form_validation->set_rules('map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
        
        
         if($this->form_validation->run() == FALSE){
@@ -190,14 +190,11 @@ class FormCar extends CI_Panel {
             'agahi_car_color' =>$this->input->post('agahi_car_color'),
             'agahi_car_body_des' =>$this->input->post('agahi_car_body_des'),
             'agahi_car_motor_des' =>$this->input->post('agahi_car_motor_des'), 
-            'car_latitude' =>$this->input->post('car_latitude'), 
-            'car_longitude' =>$this->input->post('car_longitude'), 
+            'map_latitude' =>$this->input->post('car_latitude'), 
+            'map_longitude' =>$this->input->post('car_longitude'), 
             'img1' =>$this->MY_Model->upload('img1','jpg|png',5024),
             'img2' =>$this->MY_Model->upload('img2','jpg|png',5024),
             'img3' =>$this->MY_Model->upload('img3','jpg|png',5024),
-            'img4' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'img5' =>$this->MY_Model->upload('img4','jpg|png',5024),
-            'img6' =>$this->MY_Model->upload('img4','jpg|png',5024),
             'register_date' =>$this->jdf->jdate('l, j F Y',time(),'','GMT'),
             'update_date' =>0,
             'state_id' => 12,
@@ -211,7 +208,7 @@ class FormCar extends CI_Panel {
         $this->form_validation->set_rules('car_sub_cate_id','زير دسته بندي','required');
         $this->form_validation->set_rules('ostan_id','استان','required');
         $this->form_validation->set_rules('city_id','شهرستان','required');
-        $this->form_validation->set_rules('car_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
+        $this->form_validation->set_rules('map_latitude','موقعيت','required',array('required' => '%s خود را روي نقشه مشخص كنيد'));
        
        
         if($this->form_validation->run() == FALSE){

@@ -47,12 +47,13 @@ class Acar extends CI_Panel {
         $crud->display_as('car_sokht_id','نوع سوخت');
         $crud->display_as('agahi_car_pelak','پلاك');
         $crud->display_as('agahi_car_color','رنگ');
+        $crud->display_as('agahi_car_mobile','تلفن همراه');
         $crud->display_as('agahi_car_body_des','توضيح در مورد بدنه');
         $crud->display_as('agahi_car_motor_des','توضيح در مورد موتور');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ بروز رساني');
-        $crud->display_as('agahi_car_lat','طول جغرافيايي');
-        $crud->display_as('agahi_car_long','عرض جغرافيايي');
+        $crud->display_as('map_latitude','طول جغرافيايي');
+        $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('state_id','وضعيت');
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
@@ -60,7 +61,6 @@ class Acar extends CI_Panel {
         $crud->display_as('img4','تصوير شماره 4');
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
-        $crud->display_as('price_id','قيمت ويژة');
         $crud->display_as('agahi_rule_check','قبول قوانين');
         $crud->display_as('expire','تاريخ انقضا');
         $crud->display_as('days','تعداد روزهاي قابل نمايش');
@@ -70,6 +70,40 @@ class Acar extends CI_Panel {
         $this->load->vars(array(
             'home_page' => FALSE
         ));
+
+        
+        @$state_id = $this->db->select('state_id')
+        ->get_where('zgr_agahi_car', array('agahi_car_id' => $this->uri->segment(6)))
+        ->row()
+        ->state_id;
+
+        $crud->callback_before_insert(array($this,'calculate'));
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
+        $crud->field_type('map_latitude', 'hidden');
+        $crud->field_type('map_longitude', 'hidden');
+        $crud->field_type('days', 'readonly');
+        
+        if($state_id == 12 or $state_id == 1) {
+            $crud->field_type('car_tag_id', 'hidden');
+            $crud->field_type('car_cond_tag_id', 'hidden');
+            $crud->field_type('agahi_car_year', 'hidden');
+            $crud->field_type('car_type_id', 'hidden');
+            $crud->field_type('car_body_id', 'hidden');
+            $crud->field_type('agahi_car_karked', 'hidden');
+            $crud->field_type('car_sokht_id', 'hidden');
+            $crud->field_type('agahi_car_pelak', 'hidden');
+            $crud->field_type('agahi_car_body_des', 'hidden');
+            $crud->field_type('agahi_car_motor_des', 'hidden');
+        }
+        
+   
      
         
         $crud->set_relation('ostan_id','ostan','ostan_title');
@@ -93,8 +127,9 @@ class Acar extends CI_Panel {
 
         $crud->unset_add_fields('agahi_car_id');
         $crud->unset_edit_fields('agahi_car_id');
+    
      
-
+        
 
         $crud->set_field_upload('img1','assets/uploads/img');
         $crud->set_field_upload('img2','assets/uploads/img');
@@ -107,17 +142,9 @@ class Acar extends CI_Panel {
         //$crud->set_field_upload('jobs_video','assets/uploads/videos');
         //$crud->field_type('username','date');
 
-        
 
-        $crud->callback_before_insert(array($this,'calculate'));
-        $crud->callback_column('expire',array($this,'_change_expire_date'));
-        $crud->callback_column('register_date',array($this,'_change_reg_date'));
-        $crud->callback_column('update_date',array($this,'_change_reg_date'));
-        $crud->unset_edit_fields('register_date');
-        $crud->unset_add_fields('update_date');
-        $crud->field_type('register_date', 'hidden', time());
-        $crud->field_type('update_date', 'hidden', time());
-        $crud->field_type('expire', 'hidden');
+
+
 
       
         //$crud->required_fields('username');
@@ -127,8 +154,8 @@ class Acar extends CI_Panel {
         
         $crud->unset_texteditor(
             'agahi_car_title','agahi_car_price','agahi_car_tell','agahi_car_year','agahi_car_karked',
-            'agahi_car_pelak','agahi_car_color','agahi_car_lat',
-            'agahi_car_long'
+            'agahi_car_pelak','agahi_car_color','map_latitude',
+            'map_longitude','agahi_car_mobile'
         );
 
 
@@ -216,15 +243,16 @@ class Acar extends CI_Panel {
     public function _change_reg_date($value, $row)
     {
         return '<span style="color:blue;">'.$this->jdf->jdate('l, j F Y',(int)$value,'','GMT').'<span>'; 
-
-        
     }
+
+
+
     function out_view($output = null) {
-        $output->menu_top = $this->Menu_Model->select('menu');
-        $output->menu_middel = $this->Menu_Model->select('secend_menu');
-        $output->footer_menu = $this->Menu_Model->select('footer_menu');
-        $output->slider = $this->Menu_Model->select('slider');
-        $output->text = $this->Menu_Model->select('text');
+        $output->menu_top = $this->MY_Model->select('menu');
+        $output->menu_middel = $this->MY_Model->select('secend_menu');
+        $output->footer_menu = $this->MY_Model->select('footer_menu');
+        $output->slider = $this->MY_Model->select('slider');
+        $output->text = $this->MY_Model->select('text');
         $output->site = $this->MY_Model->select_single('site','1');
         $output->title = "بانك نيازمندي ها";
         $output->des = "مديريت و بررسي نيازمندي موجود";

@@ -31,7 +31,7 @@ class Car_Payment extends CI_Controller {
 			->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
 			->row()
 			->account_mobile;
-        $call_back = base_url('')."site/Agahi/Agahi_Payment/callback_agahi?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&agahi_car_id=$agahi_car_id";
+        $call_back = base_url('')."site/Agahi/Car_Payment/callback_car?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&agahi_car_id=$agahi_car_id";
 
 
         $this->zarinpal->sandbox();
@@ -54,7 +54,7 @@ class Car_Payment extends CI_Controller {
         $authority = $this->input->get('Authority', TRUE);
         $mobile = $this->input->get('mobile', TRUE);
         $accounts_id = $this->input->get('accounts_id', TRUE);
-		$agahi_id = $this->input->get('agahi_car_id', TRUE);
+		$agahi_car_id = $this->input->get('agahi_car_id', TRUE);
 
         if ($status !== 'OK' OR $authority === NULL)
         {

@@ -10,7 +10,7 @@ class Verify extends CI_Controller {
     function __construct()
     {
         parent::__construct();
-        $this->load->model('Menu_Model');
+        $this->load->model('Model_Api');
         $this->load->model('MY_Model');
         $this->load->library('ion_auth');
         $this->load->library('Jdf');
@@ -18,15 +18,17 @@ class Verify extends CI_Controller {
         $this->load->library('Sms');
         $this->load->helper('url');
         $this->load->helper('form');
+        $this->load->library('session');
+        $this->load->library('encrypt');
     }
 
     function index()
     {
-        $output['menu_top'] = $this->Menu_Model->select('menu');
-        $output['slider'] = $this->Menu_Model->select('slider');
-        $output['menu_middel'] = $this->Menu_Model->select('secend_menu');
-        $output['footer_menu'] = $this->Menu_Model->select('footer_menu');
-        $output['text'] = $this->Menu_Model->select('text');
+        $output['menu_top'] = $this->MY_Model->select('menu');
+        $output['slider'] = $this->MY_Model->select('slider');
+        $output['menu_middel'] = $this->MY_Model->select('secend_menu');
+        $output['footer_menu'] = $this->MY_Model->select('footer_menu');
+        $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site',1);
 
         $this->load->vars(array(
@@ -39,15 +41,40 @@ class Verify extends CI_Controller {
     }
 
     function verify() {
-        $data = array( // array assoc
-            'kavenegar_api' => '2B467778366639745851642F4C337148556A6D317334484D6A6B566B31446F615554412F647277357562673D',
-            'receptor' => '09192183440',
-            'number' => '10008003007000',
-            'randomNum' => '4444',
-            'template' => 'verify'
-          );
+        $accounts_id = $this->input->post('accounts_id');
+        $user_code = $this->input->post('rand_code');
+        $account_active_code = $this->db->select('account_active_code')
+            ->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
+            ->row()
+            ->account_active_code;
+
+            $mobile = $this->db->select('account_mobile')
+            ->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
+            ->row()
+            ->account_mobile;
+
+            $password = $this->db->select('account_pass')
+            ->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
+            ->row()
+            ->account_pass;
+
+            if($user_code === $account_active_code) {
           
-          $this->Sms->verify($data);
+            
+                $result = $this->MY_Model->check_login($mobile,$this->encrypt->decode($password));
+
+        
+                if ($result) {
+                    redirect('site/panel/index');
+                } else {
+                    redirect('site/Register');
+                }
+            } else {
+                redirect('site/Register');
+            }
+
+
+        
     
     }
 

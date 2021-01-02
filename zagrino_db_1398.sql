@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 27, 2020 at 07:12 PM
+-- Generation Time: Jan 02, 2021 at 11:23 AM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -19,23 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Database: `zagrino_db_1398`
 --
-
--- --------------------------------------------------------
-
---
--- Table structure for table `car_pay`
---
-
-CREATE TABLE `car_pay` (
-  `car_pay_id` int(11) NOT NULL,
-  `accounts_id` int(11) NOT NULL,
-  `agahi_car_id` int(11) NOT NULL,
-  `authority` text NOT NULL,
-  `mobile` text NOT NULL,
-  `amount` bigint(20) NOT NULL,
-  `pay_date` text NOT NULL,
-  `Status` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -71,7 +54,7 @@ CREATE TABLE `zgr_accounts` (
 --
 
 INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `state_id`, `account_active_code`, `account_avatar`, `account_sex`, `account_age`, `account_about`, `register_date`, `update_date`) VALUES
-(1, 'محمد', 'سيف', '$2y$10$NCf9s1Cs8RR9GqiddgrLAOXIz7qjjFZxZXHIp.5KmDIyQTWBtnZ3y', 'dsd', '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, 2, NULL, '', NULL, NULL, NULL, '1588753827', '');
+(6, NULL, NULL, 'rSAiuqclkhqtSae6LescS2xbLnUxShYzImohhN2zxj315LfRmRBMLsfGwe42HszxiLU6jMpwNHODJ1OJwV3nSQ==', NULL, '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7799', NULL, NULL, NULL, NULL, '1609188136', '');
 
 -- --------------------------------------------------------
 
@@ -136,13 +119,6 @@ CREATE TABLE `zgr_agahi` (
   `expire` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `zgr_agahi`
---
-
-INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_title`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_cond_tag_id`, `agahi_address`, `agahi_email`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `agahi_state_kala_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
-(21, 1, 30, 421, 'فروش پرینتر HP', 1, 1, 'کاملا سالم و بدون کارکرد', '08133245831', '33.89611', ' 48.751836', 1, 'نهاوند', 'corssis248@gmail.com', 'd23b9a3f34146df2189d3dd2314fa9b4.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, NULL, 'سه شنبه, ۱۸ آذر ۱۳۹۹', '0', 90, '1615233774');
-
 -- --------------------------------------------------------
 
 --
@@ -155,8 +131,8 @@ CREATE TABLE `zgr_agahi_amlak` (
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
   `amlak_cate_id` int(11) DEFAULT NULL,
-  `amlak_tag_id` int(11) DEFAULT NULL,
-  `amlak_cond_tag_id` int(11) DEFAULT NULL,
+  `amlak_tag` text,
+  `amlak_cond_tag` text,
   `amlak_price` text,
   `amlak_tell` text,
   `amlak_des` text,
@@ -194,12 +170,9 @@ CREATE TABLE `zgr_agahi_amlak` (
 -- Dumping data for table `zgr_agahi_amlak`
 --
 
-INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `city_id`, `amlak_cate_id`, `amlak_tag_id`, `amlak_cond_tag_id`, `amlak_price`, `amlak_tell`, `amlak_des`, `amlak_bonga_title`, `amlak_agahi_dahande`, `amlak_sanad_state`, `amlak_mizan_malekiat`, `amlak_metraj`, `amlak_sanad_type`, `amlak_ejare_price`, `amlak_rahn_price`, `amlak_count_room`, `amlak_tabaghe`, `amlak_parking`, `amlak_emtiaz`, `amlak_anbari`, `amlak_asansor`, `amlak_address`, `amlak_latitude`, `amlak_longitude`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `register_date`, `update_date`, `expire`, `days`) VALUES
-(7, 1, 18, 270, 2, 2, 2, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', '', 'همدان', 'املاك', 'املاك', '3', '300000', '2222222', '6', '5', '1', 'برق آب گاز تلفن', '1', '1', 'edededededededededededsfdfdf', '33.896121', ' 48.749901', 'ac547655053095fcb28549a7a74c88c1.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'سه شنبه, ۱۸ آذر ۱۳۹۹', '0', '1638994988', 365),
-(8, 1, 7, 100, 2, NULL, NULL, '', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, 'edededededededededededsfdfdf', '33.896128', ' 48.749704', '01e9f656da3abb7d5df540436f8fdf19.jpg', '<p></p>', '9e83171034ddbd34f35329f94ef0edbd.jpg', '<p></p>', '<p></p>', '<p></p>', 12, 'سه شنبه, ۱۸ آذر ۱۳۹۹', '0', '1607459334', NULL),
-(9, 1, 4, 63, 2, NULL, NULL, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, 'edededededededededededsfdfdf', '33.896199', ' 48.750223', 'a49b4a56bc9745c51e1997e92a676acb.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'سه شنبه, ۱۸ آذر ۱۳۹۹', '0', '1608496577', 12),
-(10, 1, 7, 102, 2, NULL, NULL, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, 'edededededededededededsfdfdf', '33.896217', ' 48.748777', 'f0fa565268ab130acd001d981f6f5c78.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'سه شنبه, ۱۸ آذر ۱۳۹۹', '0', '1608496709', 12),
-(11, 1, 5, 277, 1, NULL, NULL, '', '08133245831', '', 'dddddddddddddddddddd', NULL, '', '', '', NULL, '', '', '', '', NULL, '', NULL, NULL, '', '33.896203', ' 48.752068', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'چهارشنبه, ۱۹ آذر ۱۳۹۹', '0', '1610133704', 30);
+INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `city_id`, `amlak_cate_id`, `amlak_tag`, `amlak_cond_tag`, `amlak_price`, `amlak_tell`, `amlak_des`, `amlak_bonga_title`, `amlak_agahi_dahande`, `amlak_sanad_state`, `amlak_mizan_malekiat`, `amlak_metraj`, `amlak_sanad_type`, `amlak_ejare_price`, `amlak_rahn_price`, `amlak_count_room`, `amlak_tabaghe`, `amlak_parking`, `amlak_emtiaz`, `amlak_anbari`, `amlak_asansor`, `amlak_address`, `amlak_latitude`, `amlak_longitude`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `register_date`, `update_date`, `expire`, `days`) VALUES
+(12, 6, 26, 368, 2, '2', '2', '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, 'همدان', 'املاك', 'املاك', '1', '300000', '2222222', '6', '5', '1', 'برق آب گاز تلفن', '1', '1', 'edededededededededededsfdfdf', '33.896108144689926', '48.751406666776056', 'be65af677ab23b3abb5e18ed0b098c64.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 2, 'جمعه, ۱۲ دی ۱۳۹۹', '0', '1641069929', 365),
+(13, 6, 4, 60, 1, NULL, NULL, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, 'edededededededededededsfdfdf', '33.89651779549413', '48.75201812635127', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'جمعه, ۱۲ دی ۱۳۹۹', '0', '1610571400', 12);
 
 -- --------------------------------------------------------
 
@@ -234,8 +207,8 @@ CREATE TABLE `zgr_agahi_car` (
   `agahi_car_motor_des` text,
   `register_date` text NOT NULL,
   `update_date` text NOT NULL,
-  `car_latitude` text NOT NULL,
-  `car_longitude` text NOT NULL,
+  `map_latitude` text NOT NULL,
+  `map_longitude` text NOT NULL,
   `state_id` int(11) NOT NULL,
   `img1` text,
   `img2` text,
@@ -243,7 +216,6 @@ CREATE TABLE `zgr_agahi_car` (
   `img4` text,
   `img5` text,
   `img6` text,
-  `price_id` int(11) DEFAULT NULL,
   `expire` text,
   `days` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -252,8 +224,12 @@ CREATE TABLE `zgr_agahi_car` (
 -- Dumping data for table `zgr_agahi_car`
 --
 
-INSERT INTO `zgr_agahi_car` (`agahi_car_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_car_title`, `car_cate_id`, `car_sub_cate_id`, `car_tag_id`, `car_cond_tag_id`, `agahi_car_price`, `agahi_car_full_des`, `agahi_car_tell`, `agahi_car_mobile`, `agahi_car_address`, `agahi_car_year`, `car_type_id`, `car_body_id`, `agahi_car_karked`, `car_state_id`, `car_sokht_id`, `agahi_car_pelak`, `agahi_car_color`, `agahi_car_body_des`, `agahi_car_motor_des`, `register_date`, `update_date`, `car_latitude`, `car_longitude`, `state_id`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `price_id`, `expire`, `days`) VALUES
-(1, 1, 4, 63, 'dddddddddddddddddddddddddddd', 1, 1, NULL, NULL, '', 'ddddddddddddddd', 'ddddddddddddddd', '0813 322 3907', 'dddddddddddddddddddddd', 'ddddddddddddddd', 3, 1, 'dddddddddddddd', 1, 2, 'dddddddddddddddddddddddddddddddddddddd', 0, 'dddddddddddddd', 'ddddddddddd', 'پنجشنبه, ۲۰ آذر ۱۳۹۹', '0', '33.896299', ' 48.748481', 12, '96223679910365a2d8de541bb7b400c4.jpg', 'b6523f76a3041e64d59c8feea4e69ef5.jpg', '907dab51310ab32f65f2db5904cd7fe3.jpg', '<p></p>', '<p></p>', '<p></p>', NULL, '1615410070', 90);
+INSERT INTO `zgr_agahi_car` (`agahi_car_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_car_title`, `car_cate_id`, `car_sub_cate_id`, `car_tag_id`, `car_cond_tag_id`, `agahi_car_price`, `agahi_car_full_des`, `agahi_car_tell`, `agahi_car_mobile`, `agahi_car_address`, `agahi_car_year`, `car_type_id`, `car_body_id`, `agahi_car_karked`, `car_state_id`, `car_sokht_id`, `agahi_car_pelak`, `agahi_car_color`, `agahi_car_body_des`, `agahi_car_motor_des`, `register_date`, `update_date`, `map_latitude`, `map_longitude`, `state_id`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `expire`, `days`) VALUES
+(2, 6, 26, 368, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\n	بدون رنگ و ضربه دوگانه سوز دارای رینگ و ضبط حرفه ای</p>\n', '08133237591', '<p>\n	09192183440</p>\n', '<p>	خیابان شهرداری</p>', NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, 'جمعه, ۱۲ دی ۱۳۹۹', '1609532663', '<p>\n	33.893787</p>\n', '<p>\n	48.758044</p>\n', 3, 'dd75f0f067f29bad295f01bc681a3083.jpg', '08a7bf3d1c3766be4218c987debbc762.jpg', NULL, NULL, NULL, NULL, '1610539514', 12),
+(3, 6, 26, 368, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', 'بدون رنگ و ضربه دوگانه سوز دارای رینگ و ضبط حرفه ای', '08133237591', '0813 322 3907', 'بروجرد', '1395', 1, 1, '50000', 2, 1, 'ملی', 0, 'جلو و عقب پلمپ', 'عالی', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.89617938850555', '48.75318740869681', 12, '06ce424818b2143de1e58cc4be18610a.jpg', 'd616223401209a9ca571d1c1d024eb16.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1614714118', 60),
+(4, 6, 6, 92, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '', '', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.8962372740067', '48.75235067454129', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124012', 30),
+(5, 6, 5, 275, 'فروش تیبا مدل 95 بدون رنگ ', 2, 2, NULL, NULL, '80000000', 'ddddddddddddddd', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.89631297030406', '48.75328395494553', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124081', 30),
+(6, 6, 17, 232, 'فروش تیبا مدل 95 بدون رنگ ', 2, 2, NULL, NULL, '', '', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.896192746633645', '48.751497849344304', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124146', 30);
 
 -- --------------------------------------------------------
 
@@ -474,7 +450,8 @@ CREATE TABLE `zgr_amlak_pay` (
 
 INSERT INTO `zgr_amlak_pay` (`amlak_pay_id`, `accounts_id`, `agahi_amlak_id`, `authority`, `mobile`, `amount`, `pay_date`, `Status`) VALUES
 (4, 1, 11, '000000000000000000000000000000195622', '09192183440', 4000, 'چهارشنبه, ۱۹ آذر ۱۳۹۹', 'OK'),
-(3, 1, 7, '000000000000000000000000000000193660', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK');
+(3, 1, 7, '000000000000000000000000000000193660', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK'),
+(5, 6, 12, '000000000000000000000000000000265051', '09192183440', 4000, 'جمعه, ۱۲ دی ۱۳۹۹', 'OK');
 
 -- --------------------------------------------------------
 
@@ -537,6 +514,30 @@ CREATE TABLE `zgr_car_cond_tag` (
   `car_cond_tag_id` int(11) NOT NULL,
   `car_cond_tag_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_car_pay`
+--
+
+CREATE TABLE `zgr_car_pay` (
+  `car_pay_id` int(11) NOT NULL,
+  `accounts_id` int(11) NOT NULL,
+  `agahi_car_id` int(11) NOT NULL,
+  `authority` text NOT NULL,
+  `mobile` text NOT NULL,
+  `amount` bigint(20) NOT NULL,
+  `pay_date` text NOT NULL,
+  `Status` text NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_car_pay`
+--
+
+INSERT INTO `zgr_car_pay` (`car_pay_id`, `accounts_id`, `agahi_car_id`, `authority`, `mobile`, `amount`, `pay_date`, `Status`) VALUES
+(1, 6, 6, '000000000000000000000000000000264975', '09192183440', 4000, 'جمعه, ۱۲ دی ۱۳۹۹', 'OK');
 
 -- --------------------------------------------------------
 
@@ -1425,15 +1426,6 @@ CREATE TABLE `zgr_jobs` (
   `days` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
---
--- Dumping data for table `zgr_jobs`
---
-
-INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_list_service`, `jobs_service_id`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `jobs_shoar`, `state_id`, `expire`, `days`) VALUES
-(46, 7, 1, 1, 26, 368, 'آموزشگاه کامپیوتر البزر', 'شعبه بروجرد', '<p>\n	<span style="color: rgb(107, 112, 116);font-family: IRANSans-web;text-align: justify;font-family: IRANSans-web, serif !important;">آموزشگاه فنی و حرفه ای پایا با بیش از ۲۰ سال سابقه آموزشی و بیش از ۸۰۰٫۰۰۰ نفر ساعت آموزش عملی موفق تا سال ۲۰۲۰، مهارت آموزی و ارتقای سطح کیفی و مهارتی در زمینه آموزش نرم افزارهای پایه و اداری، آموزش طراحی سایت و برنامه نویسی، آموزش شبکه عملی و سخت افزار عملی، نرم افزارهای گرافیکی، نرم افزارهای فنی و مهندسی و... در حال خدمت رسانی به هموطنان عزیز می باشد. مدیر و موسس آموزشگاه آقای پرویز تریوه می باشند که بعنوان سرگروه اساتید برخی از دوره&zwnj;ها مانند: طراحی سایت، برنامه نویسی، مدیریت و مهارتهای اداری و سازمانی در تهران و شهرستان&zwnj;ها توسط ایشان تدریس می&zwnj;گردد. تمامی دوره&zwnj;های آموزشگاه کامپیوتر پایا دارای تضمین کیفیت آموزشی می&zwnj;باشد. همچنین بنا به درخواست متقاضی، مدرک فنی و حرفه&zwnj;ای و یا مدرک بین المللی اعطاء می&zwnj;گردد.</span></p>\n', '<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/icdl-core-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه ICDL و اخذ مدرک فنی حرفه ای</span></a>&nbsp;: گواهینامه یا مدرک آی سی دی ال ICDL مدرکی است معتبر و بین المللی که نشان دهنده مهارت فرد در کار با کامپیوتر میباشد. اخذ مدرک ICDL سازمان فنی حرفه ای شامل مهارت های هفتگانه بوده و شامل ICDL درجه ۲ و ICDL درجه ۱ میباشد. شرکت در دوره آموزش ICDL و هزینه اخذ مدرک icdl بسیار کم و فوری میباشد. و موجب دریافت سریع مدرک icdl میشود. مدرک icdl فنی حرفه ای قابل ترجمه رسمی میباشد و آنرا تبدیل به مدرک icdl بین المللی می نماید. آموزشگاه کامپیوتر icdl پایا دارای مجوز فنی حرفه ای میباشد. و جزو بهترین آموزشگاههای icdl تهران است.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/icdl-advanced-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه ICDL پیشرفته ویژه بازار کار</span></a>&nbsp;: دوره آموزش آی سی دی ال پیشرفته ICDL Advanced برای کلیه کسانی که می خواهند ICDL را تا سطح پیشرفته یاد بگیرند. جویای کار و شغل مناسب می باشند. و یا در ادارات و موسسات دولتی و غیر دولتی شاغل می باشند. و تمام افرادی که می خواهند با ثبت نام در کلاسهای دوره آموزش کاربردی ICDL حرفه ای، بصورت تضمینی و فشرده یاد بگیرند مناسب است.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: \'IRANSans-web\'; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Word-Excel-PowerPoint-Access-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه نرم افزار های آفیس شامل آموزش ورد ، آموزش اکسل ، آموزش پاورپوینت ، آموزش اکسس ، آموزش اوت لوک</span></a>&nbsp;: دوره آموزش کاربردی نرم افزارهای Microsoft Office شامل آموزش کاربردی نرم افزار Word فشرده ، آموزش کاربردی نرم افزار Excel پیشرفته ، آموزش کاربردی نرم افزار PowerPoint سریع ، آموزش کاربردی نرم افزار Access ، آموزش کاربردی نرم افزار Outlook میکروسافت میباشد. شما می توانید با ثبت نام در کلاسهای آموزش آفیس آموزشگاه کامپیوتر پایا در کوتاهترین زمان و کمترین شهریه بصورت خصوصی و تضمینی مهارت لازم را بدست آورید. و از یکسال خدمات پشتیبانی رایگان آموزشگاه پایا بهره مند شوید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/ten-finger-typing-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه تایپ ده انگشتی</span></a>&nbsp;: آموزش تایپ فارسی یا آموزش تایپ انگلیسی در دنیای امروز که همه کارها با کامپیوتر انجام می شود امری مهم و اجتناب ناپذیر است. با فراگیری و کسب مهارت در کلاس آموزش تایپ ده انگشتی ، بدون نگاه کردن به کیبورد و افزایش سرعت تایپ، فرصت مناسب و چشمگیری را در کار و تحصیل و ارتباطات، نسبت به دیگران بدست خواهید آورد. شما می توانید با ثبت نام در دوره های آموزش تایپ ۱۰ انگشتی آموزشگاه کامپیوتر پایا در زمان بسیار کوتاه و بصورت تضمینی مهارت مورد نظر را کسب کنید. آموزشگاه تایپ ده انگشتی پایا در کوتاهترین زمان و کمترین شهریه ، بسیار ساده و فشرده همراه با مدرک و گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Accounting-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه حسابداری عملی با نرم افزار حسابداری هلو</span></a>&nbsp;: با شرکت در دوره فشرده آموزش نرم افزار حسابداری هلو کلیه عملیات حسابداری مانند صدور فاکتور، انبار، خرید فروش، سررسید چک ها، گزارشات متنوع و... را در زمینه حسابداری فروشگاهی یا حسابداری شرکتی یا حسابداری تولیدی در مشاغل مختلف فرا خواهید گرفت. کاربری آسان همراه با امکانات گسترده، نرم افزارهای حسابداری هلو را به پرکاربرترین نرم افزار مالی کشور تبدیل کرده است. و توجه کلیه افرادی که هیچگونه سر رشته ای در حسابداری ندارند را بخودش جلب کرده است. آموزشگاه کامپیوتر پایا آموزش حسابداری با نرم افزار هلو را در ۴ جلسه و کمترین شهریه بصورت تضمینی و پشتیبانی رایگان و همراه با گواهینامه معتبر ارائه مینماید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Professional-Secretarial-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه منشیگری حرفه ای</span></a>&nbsp;: یک منشی حرفه ای فرد مورد اعتماد در امور محرمانه یا خصوصی سازمان میباشد. کسی که کار منشیگری را انجام می دهد باید از عهده وظایفی چون تنظیم برنامه روزانه ، مهارت های ارتباط تلفنی ، توانایی تنظیم و سازماندهی جلسات ، تسلط در نامه نگاری و مکاتبات اداری و بایگانی اسناد ، تنظیم انواع گزارش ها از فعالیت&zwnj;های مختلف ، کار با کامپیوتر و اینترنت ، تایپ متون ، آگاهی از اصول مدیریت و انواع شیوه های مدیریت و مهارت های سازمانی ، مهارت در ارتباطات ، اصول مالی و حسابداری ، مسئولیت پذیری و نظارت برآید. در واقع یک منشی بعنوان معاون مدیر یا دست راست مدیر شناخته می شود. آموزشگاه پایا آموزش منشی گری را در کوتاهترین زمان و کمترین شهریه بصورت تضمینی ، پشتیبانی و بازآموزی رایگان و همراه با گواهینامه معتبر ارائه مینماید. مدرس دوره آموزش منشیگری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Administrative-secretary-skills-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه رییس دفتری ، آموزش مدیر دفتری ، آموزش مسئول دفتری</span></a>&nbsp;: یک رییس دفتر حرفه ای باید تجربه کار منشیگری را داشته باشد. اهم وظایف رئیس دفتری شامل مدیریت اداری و تشریفاتی سازمان ، مهارت های کار حرفه ای با کامپیوتر ، مدیریت جلسات سازمان ، درک و بکارگیری مدیریت زمان ، مدیریت تنخواه گردانی ، درک اهمیت و توانایی ایجاد رزومه کاری و.. میباشد. دوره آموزش مسئول دفتری به شما کمک میکند تا انواع روش های ارتباط با دیگران ، زبان بدن و اشاره ، پاسخگویی موثر به تلفن ها و بکارگیری عبارات جادویی در مکالمات تلفنی ، نحوه برخورد حرفه ای با مافوق و ارباب رجوع ، نحوه برنامه ریزی و اولویت بندی فعالیتهای مختلف ، رازهای جذابیت و نفوذ در دیگران را بیاموزید. طبق آمار آموزشگاه پایا، کلیه مدیران هوشمند و آینده نگر شرکت ها و موسسات برای ارتقای پرسنل تحت امر خود اقدام به ثبت نام کارمندانشان در آموزش رئیس دفتری - آموزش مدیر دفتری - آموزش مسئول دفتری می نمایند. مخاطبان دوره آموزش رئیس دفتری و مسئولین دفاتر مدیران عمدتا کسانی هستند که هم اکنون این شغل را دارند. یا بفکر ارتقای شغلی هستند. استاد دوره آموزش رییس دفتری مهندس پرویز تریوه می باشد.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/speech-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزشگاه فن بیان و مهارتهای ارتباطی Rhetoric and Communication skills training</span></a>&nbsp;: همانطور که می دانیم امروزه داشتن تخصص، دانش و مهارت برای موفقیت الزامیست ولی کافی نیست. و اگر بلد نباشیم ارتباط خوبی با دیگران برقرار نماییم و خواسته ها، ایده ها، خدمات و توانمندیهای خود را بخوبی بیان نماییم، نتایج دلخواه و مطلوبی را نخواهیم گرفت. دوره آموزش فن بیان، سخنرانی و مهارتهای ارتباطی این امکان را به شما می دهد تا بتوانید مهارت های سخنرانی (Public Speaking and Presentation) و فن بیان (Rhetoric) و صحیح صحبت کردن (Speaking Skills) را در خود پرورش دهید. بطور خلاصه فن بیان یعنی هنر خوب حرف زدن و حرف خوب زدن است. در این دوره آموزشی تکنیکهای اعتماد به نفس و رفع خجالت و کم حرفی، تکنیکهای کاربردی فن بیان، داشتن صدایی رسا و گیرا، مدیریت ترس از سخنرانی، نحوه نوشتن متن سخنرانی، روشهای تقویت حافظه، روانشناسی مخاطبین، الگوهای رفتاری و زبان بدن (Body Language)، روش ها و مهارت های برقراری ارتباط و روابط عمومی، ایجاد ارتباط موثر و خوب در جامعه، آداب معاشرت حرفه ای، فنون کسب شخصیت کاریزماتیک یعنی جذابیت، اثرگذاری و الهام بخش بودن را در دوره فن بیان و سخنرانی و مهارتهای ارتباطی فرا می گیرید. ۸۵% عامل پیروزی افراد موفق، مهارتهای ارتباطی، نحوه صحبت کردن و هوش اجتماعی آنهاست. بنابراین فرقی نمی&zwnj;کند که شما چه شغلی دارید، جزو مدیران، منشی ها و رییس دفترها، اساتید دانشگاهها و دانشجویان، مدرسان و مربیان موسسات آموزشی، فروشندگان، بازاریابان تلفنی و حضوری، راهنمای تور گردشگری، مسئول روابط عمومی هستید و یا هر شغل دیگری داشته باشید، بدون شک به فن بیان، قدرت سخنوری و سخنرانی و به طور کلی مهارت های خوب صحبت کردن و برقراری ارتباط نیاز دارید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Management-certificate-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزش مدیریت آموزشگاه و کارت مدیریت آموزشگاه فنی و حرفه ای</span></a>&nbsp;: مدیر آموزشگاه شغلی از حوزه مدیریت آموزشی است که وظایفی از قبیل برنامه ریزی آموزشی، اجرای قوانین و مقررات، نظارت بر فعالیت های آموزشی آموزشگاه، ارزشیابی دوره های در حال اجرا، مدیریت مالی آموزشگاه، رسیدگی به امور کارآموزان و کارکنان، تهیه گزارش های اداری، نظارت و اعمال مدیریت بر حسن انجام وظایف کلیه کارکنان و مربیان را در بر می گیرد. این شغل با مشاغلی از قبیل مدیریت آموزشگاه های آزاد فنی وحرفه ای مرتبط است. طبق دستورالعمل سازمان آموزش فنی و حرفه ای کشور، گذراندن دوره مدیر آموزشگاه جهت دریافت کارت مدیریت آموزشگاه الزامیست. با شرکت در دوره آموزش مهارت مدیریت آموزشگاه های فنی حرفه ای می توانید در کوتاهترین زمان موفق به گرفتن کارت مدیریت آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n<p>\n	&nbsp;</p>\n<p style="box-sizing: border-box; margin-top: 0px; margin-bottom: 1rem; color: rgb(77, 74, 74); font-family: IRANSans-Light-web; text-align: justify;">\n	<a class="DLINK-Light-blue-2" href="https://www.payait.com/Coaching-certificate-training.aspx" style="box-sizing: border-box; color: rgb(0, 135, 222); text-decoration-line: none; background-color: transparent; transition: all 0.5s ease-out 0s; cursor: pointer; outline: none !important;"><span style="box-sizing: border-box; font-weight: bolder;">آموزش مربیگری آموزشگاه و کارت مربیگری آموزشگاه فنی و حرفه ای</span></a>&nbsp;: شغل مربیگری آموزشگاه به مجموعه ای از وظایف و توانمندی های خاص که از یک مربی در سطح مورد نظر انتظار می رود اطلاق می شود. در حرفه مربی گری اموزشگاه حداقل توانمندی های آموزشی و حرفه ای، رفتارهای عاطفی و مهارت های غیر فنی و اخلاق حرفه ای از مربیان دوره آموزش استاندارد فنی و حرفه ای انتظار می رود. مربی آموزشگاه پس از گذراندن دوره آموزش پداگوژی عمومی باید شایستگی و توانایی انجام کار در محیط ها و شرایط گوناگون را به طور موثر و کارا برابر استاندارد سازمان فنی حرفه ای داشته باشد. مربیگری آموزشگاه فنی و حرفه ای شامل بکارگیری روش ها و فنون تدریس یا پداگوژی، بررسی و بکارگیری اهداف آموزش های فنی و حرفه ای، برنامه ریزی آموزشی، تهیه و تنظیم طرح درس، بکارگیری وسایل کمک آموزشی، اجرای دوره های آموزشی، سنجش و ارزیابی می باشد. استاندارد آموزش شایستگی روش ها و فنون تدریس (پداگوژی) برای آموزش مهارت روش وفنون تدریس، ارزشیابی و ارزیابی کارآموزان و دوره آموزشی و همچنین آیین کلاس داری و یادگیری طراحی و تدوین گردیده است. گذراندن دوره پداگوژی عمومی جهت دریافت کارت مربیگری و تدریس در آموزشگاه های فنی و حرفه ای الزامیست. با شرکت در دوره آموزش مهارت مربیگری آموزشگاه می توانید در کوتاهترین زمان موفق به کسب گواهینامه مربیگری آموزشگاه و گرفتن کارت مربیگری آموزشگاههای سازمان فنی و حرفه ای شوید.</p>\n', '<p>\n	مراجعه به آموزشگاه در ساعات&nbsp;</p>\n<p>\n	<span style="color:#ff0000;">صبح ها </span>از ساعت 8 تا 12 ظهر&nbsp;</p>\n<p>\n	<span style="color:#ff0000;">عصر ها</span> 3 الی 19</p>\n<p>\n	&nbsp;</p>\n', '09192183440', '08137591', '08137591', 'corssis248@gmail.com', '6591953977', 'https://www.payait.com/', 'payait_institute', 'Paya_IT', NULL, 'PayaIT', 'Payait1', NULL, 'https://www.youtube.com/channel/UCW3glOL5vP6rhLWWOXKHc5w/?guided_help_flow=5', '<p>\n	آدرس آموزشگاه کامپیوتر پایا: تهران، میدان توحید، خیابان ستارخان، بین باقرخان و پاتریس، پلاک ۱۹۷</p>\n', '33.89592736342627', '48.751739214966086', 1, 1, NULL, NULL, NULL, '<p>\n	<a href="https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg"><img alt="" src="https://www.payait.com/dorepic/wonderful/ICDL-learning-wonderful.jpg" style="width: 705px; height: 178px;" /></a></p>\n<p>\n	<img alt="" src="https://www.payait.com/dorepic/wonderful/C-plus-Programming-learning-wonderful.jpg" style="width: 705px; height: 178px;" /></p>\n', NULL, '1603875241', '1603997959', '6c0ef-fanni.jpg', 'a9cb5-icdl-core-training.jpg', '6e3bf-web-developer-training.jpg', '1c4ff-indesign-training.jpg', '87bec-3dmax-training.jpg', 'c419d-accounting-training.jpg', '850d5-photoshop-training.jpg', 'آموزشگاه کامپیوتر پایا با مجوز رسمی از وزارت کار و سازمان فنی و حرفه ای کشور', 3, '1606467968', 30),
-(47, 7, 3, 1, 8, 125, 'dsdsadsad', 'dsadsadsa', 'ddsadsad', NULL, NULL, 'dsadsad', 'dsadasd', NULL, 'dsdasdsad', 'dsadsad', NULL, 'sdadsadsa', 'sadsad', NULL, NULL, NULL, NULL, NULL, 'dsadsad', '33.89592736342627', '48.751739214966086', 0, 0, 'dsadasd', NULL, NULL, 'dsadsadsd', 'e8f84958b11ec5cb0419840d4d857e77.mp4', 'سه شنبه, ۲ دی ۱۳۹۹', 'سه شنبه, ۲ دی ۱۳۹۹', 'd06ca04ec73a374d50053e715f56be36.png', '6bdb9b4da01b8c9bc26e969f66795072.jpg', '171953be0f1b97bb671bc8d9513142b1.jpg', '0d90ca981ac30918ec4deec9ddecb359.jpg', '2cf303b8c77d4c1e4668a59b00d1a578.jpg', 'f4a175a9d16366d2512c51d4578706bc.jpg', '8eeb169367916faabbaa8594590a11b7.jpg', 'dsdsadsa', 2, '1611259139', 30),
-(48, 7, 3, 1, 5, 279, '', 'dsadasd', 'dsadasd', NULL, NULL, 'dsadasd', 'dsadasdas', NULL, 'dasdasdas', 'dsadsa', NULL, 'dsa', 'dasd', NULL, NULL, NULL, NULL, NULL, 'dsadd', '33.89593894055068', '48.75163730503691', 0, 0, 'dsadasd', NULL, NULL, 'dsadasdasd', 'e1f00be55ae9ea5a97ffbce0a61d738d.mp4', 'سه شنبه, ۲ دی ۱۳۹۹', '0', '6d8fba187c7c88819d95a977be73592a.png', 'f89d3f2326b67f1bb918e47ce45430ef.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'dsadas', 12, '1616444001', 90);
-
 -- --------------------------------------------------------
 
 --
@@ -2124,7 +2116,7 @@ CREATE TABLE `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1609095292, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1609532627, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -2149,12 +2141,6 @@ INSERT INTO `zgr_users_groups` (`id`, `user_id`, `group_id`) VALUES
 --
 -- Indexes for dumped tables
 --
-
---
--- Indexes for table `car_pay`
---
-ALTER TABLE `car_pay`
-  ADD PRIMARY KEY (`car_pay_id`);
 
 --
 -- Indexes for table `zgr_accounts`
@@ -2275,6 +2261,12 @@ ALTER TABLE `zgr_car_cate`
 --
 ALTER TABLE `zgr_car_cond_tag`
   ADD PRIMARY KEY (`car_cond_tag_id`);
+
+--
+-- Indexes for table `zgr_car_pay`
+--
+ALTER TABLE `zgr_car_pay`
+  ADD PRIMARY KEY (`car_pay_id`);
 
 --
 -- Indexes for table `zgr_car_sokht`
@@ -2578,15 +2570,10 @@ ALTER TABLE `zgr_users_groups`
 --
 
 --
--- AUTO_INCREMENT for table `car_pay`
---
-ALTER TABLE `car_pay`
-  MODIFY `car_pay_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `zgr_accounts`
 --
 ALTER TABLE `zgr_accounts`
-  MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `zgr_ads`
 --
@@ -2596,17 +2583,17 @@ ALTER TABLE `zgr_ads`
 -- AUTO_INCREMENT for table `zgr_agahi`
 --
 ALTER TABLE `zgr_agahi`
-  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_amlak`
 --
 ALTER TABLE `zgr_agahi_amlak`
-  MODIFY `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `agahi_amlak_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_car`
 --
 ALTER TABLE `zgr_agahi_car`
-  MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_cate`
 --
@@ -2661,7 +2648,7 @@ ALTER TABLE `zgr_amlak_cond_tag`
 -- AUTO_INCREMENT for table `zgr_amlak_pay`
 --
 ALTER TABLE `zgr_amlak_pay`
-  MODIFY `amlak_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `amlak_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `zgr_amlak_tag`
 --
@@ -2682,6 +2669,11 @@ ALTER TABLE `zgr_car_cate`
 --
 ALTER TABLE `zgr_car_cond_tag`
   MODIFY `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `zgr_car_pay`
+--
+ALTER TABLE `zgr_car_pay`
+  MODIFY `car_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `zgr_car_sokht`
 --

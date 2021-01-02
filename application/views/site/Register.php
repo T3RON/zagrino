@@ -1,4 +1,4 @@
-<?php include_once (APPPATH.'views/_layout/site/header.php'); ?>
+<?php include_once (APPPATH.'views/_layout/site/head.php'); ?>
     
     
     
@@ -99,13 +99,7 @@
                                         <span class="checkmark"></span>
                                     </label>
                                 </li>
-                                <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                    <label class="col-lg-12 col-md-12 col-sm-12 col-xs-12 radio_label p0">
-                                        <span>دریافت خبر نامه و نوتیفکیشن</span>
-                                        <input name="recivenews" type="checkbox" name="">
-                                        <span class="checkmark"></span>
-                                    </label>
-                                </li>
+                    
                             </ul>
                 </div>
                     
