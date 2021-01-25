@@ -28,71 +28,62 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 list">
                     <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     <?php foreach ($jobs_sub_cate as $jobs_sub_cate_val) {  ?>
+                        <?php $CI =& get_instance();
+                            if($CI->check_record($jobs_sub_cate_val->jobs_sub_cate_id)) { ?>
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6 p0"><a href="<?= base_url('site/work/Jszlist'); ?>/index/<?= $jobs_sub_cate_val->jobs_sub_cate_id; ?>/<?= $jobs_sub_cate_val->jobs_cate_id; ?>">
                             <?= $jobs_sub_cate_val->jobs_sub_cate_title; ?>
                         </a></li>
+                        <?php } ?>
                     <?php } ?>
                      
                     </ul>
                 </div>
             </div>
             
-            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
-                <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                <?php foreach($bank_mashaghel as $bank_mashaghel_value) { ?>
-                    <li class="col-lg-6 col-md-4 col-sm-4 col-xs-6 p0">
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_bg p0">
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 upper p0">
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 img f_r p0">
-                                <?php if($bank_mashaghel_value->state_id == 2) { ?> 
-                                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 special_out p0">
-                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 special_in p0">ویژه</div>
-                                    </div>
+            <div  id="postList" class="col-lg-9 col-md-9 col-sm-9 col-xs-12 left_side p0">
+            <ul class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                <?php foreach ($jobs as $bank_mashaghel_value) { ?>
+                <?php if ($bank_mashaghel_value['state_id'] != 12) { ?>
+                <?php if ($bank_mashaghel_value['state_id'] == 2) { ?>
+                <a href="<?= base_url('site/work/BankMashaghelVizhe'); ?>/index/<?= $bank_mashaghel_value['jobs_id']; ?>">
+                    <?php } else { ?>
+                    <a
+                        href="<?= base_url('site/work/BankMashaghelRaigan'); ?>/index/<?= $bank_mashaghel_value['jobs_id']; ?>">
+                        <?php } ?>
+                        <li class="col-lg-4 col-md-4 col-sm-4 col-xs-6 p0">
+                            <div class="p0">
+                                <?php if ($bank_mashaghel_value['state_id'] == 2) { ?>
+                                <div class="p0">
+                                    <!-- balaye 30% takhfif class off_in_green ezafe shavad -->
+                                    <div class="vip-tag-r p0">ویژه</div>
+                                </div>
                                 <?php } ?>
-                                    <img src="<?=base_url('')?>assets/uploads/img/<?= $bank_mashaghel_value->jobs_logo; ?>" class="img-responsive" alt="" title="">
-                                    <div class="expired monghazi p0">
-                                        <img class="expiredimg" src="<?=base_url('')?>assets/site/img/monghazi.png">
-                                    </div>
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 c_text f_l p0">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_tag f_r p0"><?= $bank_mashaghel_value->jobs_title; ?></div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_title f_r p0">
-                                    <?= $bank_mashaghel_value->jobs_content; ?>
-                                    </div>
+                                <img src="<?= base_url('') ?>assets/uploads/img/<?= $bank_mashaghel_value['jobs_logo']; ?>"
+                                    class="img_one img-responsive" alt="">
+
+
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 title p0"><a
+                                    href=""><?= $bank_mashaghel_value['jobs_title']; ?></a></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 address p0">
+                                <?= $bank_mashaghel_value['jobs_address']; ?></div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 more_item p0">
+                                <button type="button" class="btn_global m0 p0"><img
+                                        src="<?= base_url('') ?>assets/site/svg/iconfinder_User_Interface-19_2044269.svg"
+                                        class="img-responsive" alt=""></button>
+
+                                <div class="f_l score p0">
+                                    <?= $bank_mashaghel_value['register_date']; ?>
+
                                 </div>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 under p0">
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r right p0">
-                                    <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 color p0">دعوت به همکاری</button>
-                                    <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">معاوضه</button>
-                                    <button type="button" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">نقدی و اقساطی</button>
-                                </div>
-                                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_l left p0">
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Location p0">
-                                        <span><?= $bank_mashaghel_value->city_title; ?></span>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 c_validate p0"><i class="icon-clock"></i>اعتبار
-                                        <span class="c_date p0">5/4/98</span>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_observe f_r p0"><i class="icon-eye"></i>
-                                        <span>
-                                    589
-                                </span>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 c_code f_l p0">کد:
-                                        <span>
-                                    15546
-                                </span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 t_align information">
-                                <button class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">مشاهده جزئيات</button>
-                            </div>
-                        </div>
-                    </li>
+                        </li>
+
+                    </a>
                     <?php } ?>
-                </ul>
+                    <?php } ?>
+            </ul>
+        <?php echo $this->ajax_pagination->create_links(); ?>
                 
                 <div class="hidden-lg hidden-md hidden-sm col-xs-12 title f_r m_p_10 p0">
                     <a href="">

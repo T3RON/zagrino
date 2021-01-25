@@ -10,8 +10,6 @@ License: GNU General Public License v2 or later
 
 @import url("media.css");
 @import url("global.css");
-
-
 .block-box {
     direction: rtl;
     text-align: right;
@@ -21,8 +19,8 @@ License: GNU General Public License v2 or later
     padding: 2px 15px;
     margin-bottom: 5px;
     margin-top: 5px;
-
 }
+
 .block-title {
     direction: rtl;
     font-size: 16px;
@@ -35,10 +33,11 @@ License: GNU General Public License v2 or later
     direction: rtl;
     font-size: 14px;
     padding: 8px;
-	font-family: 'IRANSans-web', serif !important;
+    font-family: 'IRANSans-web', serif !important;
 }
+
 .block-text p {
-	font-family: 'IRANSans-web', serif !important;
+    font-family: 'IRANSans-web', serif !important;
 }
 
 .blk-tb {
@@ -54,9 +53,11 @@ License: GNU General Public License v2 or later
 .r {
     direction: rtl !important;
 }
+
 .space-left {
     margin-left: 5px;
 }
+
 .space-right {
     margin-right: 5px;
 }
@@ -74,18 +75,16 @@ License: GNU General Public License v2 or later
     white-space: nowrap;
     overflow: hidden;
 }
- 
 
 .vip-tag-r {
-    background: #ec1e25;
     background: #ec1e25;
     color: #fff;
     position: absolute !important;
     text-align: center;
-	right: 0;
-    border-radius: 20px;
-    padding: 0 12px !important;
-
+    right: 11px;
+    top: 13px;
+    border-radius: 17px;
+    padding: 0 3px !important;
 }
 
 .vip-tag-g {
@@ -98,21 +97,27 @@ License: GNU General Public License v2 or later
     padding: 0 12px !important;
 }
 
+
 /* -- header --*/
+
 thead.tbl-style tr th {
-text-align: center !important;
+    text-align: center !important;
 }
+
 .span_show {
-    color:blue;
+    color: blue;
 }
+
 .err {
     color: red;
     font-weight: bold;
 }
+
 .succ {
     color: green;
     font-weight: bold;
 }
+
 .top_header {
     padding: 5px 0 !important;
     font-size: 12px!important;
@@ -215,10 +220,19 @@ text-align: center !important;
     height: 130px;
 }
 
+.img_one {
+    margin: 0 auto;
+    height: 180px !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 4px;
+}
+
 .header .logo_slider .background_img {
     position: absolute;
     z-index: 5;
-    width: 150px;
+    width: 238px;
     height: 150px;
 }
 
@@ -230,15 +244,15 @@ text-align: center !important;
 
 .header .logo_slider .logo .img {
     z-index: 9;
-    height: 120px;
+    height: 122px;
     margin: 0 15px!important;
-    width: 120px;
+    width: 202px;
     position: absolute;
 }
 
 .header .logo_slider .logo .img img {
     height: 120px;
-    width: 120px;
+    width: 215px;
 }
 
 .header .logo_slider .text_holder {
@@ -518,11 +532,14 @@ text-align: center !important;
 .banks_jobs .left_side ul li .title a,
 .similar_jobs .list_item ul li .title a {
     color: unset !important;
+    font-weight: 800;
+    font-size: 16px;
 }
 
 .banks_jobs .left_side ul li .address,
 .similar_jobs .list_item ul li .address {
     font-size: 14px;
+    overflow: hidden;
     color: #99a0a9;
     border-bottom: 1px solid #f4f6f8;
 }
@@ -687,9 +704,9 @@ text-align: center !important;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .upper img {
-    height: 140px;
     border-radius: 10px;
-} 
+}
+
 .expiredimg {
     height: 67px !important;
     width: 67px !important;
@@ -697,8 +714,8 @@ text-align: center !important;
     align-items: center;
     justify-content: center;
     margin-top: 41px !important;
-   
 }
+
 .Agahiha_Niazmandiha .left_side ul li .under button {
     border: 1px solid #848484;
     text-align: center;
@@ -731,11 +748,11 @@ text-align: center !important;
 }
 
 .Agahiha_Niazmandiha .left_side ul li .upper .c_text .c_tag {
-    background: #e9ebec;
     border-radius: 20px;
     padding: 0 5px!important;
     font-size: 14px;
     text-align: center;
+    font-weight: bolder;
     margin: 3px 0 0 0!important;
 }
 
@@ -747,15 +764,18 @@ text-align: center !important;
     overflow-y: hidden;
     text-overflow: ellipsis;
 }
+
 .header-pick-modal {
     background: #fff;
     padding: 0 20px !important;
     border-radius: 5px;
     color: #fff;
 }
+
 .header-pick-modal:hover {
     background: #f5f5f5;
 }
+
 .header-pick-modal img {
     width: 50px;
     margin-top: 7px;
@@ -831,6 +851,7 @@ text-align: center !important;
     border-bottom: 1px solid #f4f6f8;
     white-space: nowrap;
     overflow: hidden;
+    font-weight: bolder;
     text-overflow: ellipsis;
 }
 
@@ -1014,6 +1035,19 @@ text-align: center !important;
 
 .Bank_Resane .left_side .Bank_left_right ul li .section .text_on {
     padding: 15px 0 !important;
+}
+
+.fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 .Bank_Resane .left_side .Bank_left_right ul li .section .text_on button,
@@ -1404,19 +1438,18 @@ footer .second_section .copyRight_l span {
 }
 
 .b_m_v .border_box .flex_box .right_side .img_swiper .special_out {
-	position: absolute;
-	border-radius: 0 0 0 14px;
-	top: 5px;
-	right: 6px;
+    position: absolute;
+    border-radius: 0 0 0 14px;
+    top: 5px;
+    right: 6px;
 }
 
 .b_m_v .border_box .flex_box .right_side .img_swiper .special_out .special_in {
     background: #ec1e25;
     color: #fff;
     text-align: center;
-	right: 0;
+    right: 0;
     border-radius: 20px;
-
     padding: 5px!important;
 }
 
@@ -2252,9 +2285,11 @@ a {
 
 
 /* -------users_point-------- */
+
 .users_point {
     direction: rtl !important;
 }
+
 .users_point .section_1 {
     color: #939aa4;
     margin: 5px 0;
@@ -3717,23 +3752,27 @@ form .fild select {
     font-size: 14px;
     text-align: center;
 }
+
 .v-slider-frame {
-    float:right !important;
-    with:100% !important;
-  height: 50px;
-  overflow: hidden;
-  text-align: center;
+    float: right !important;
+    with: 100% !important;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
 }
+
 ul.v-slides {
-  list-style-type: none;
-  transform: translateY(50px);
-  padding:0;
+    list-style-type: none;
+    transform: translateY(50px);
+    padding: 0;
 }
+
 .v-slide {
-  font-size: 15px;
-  line-height: 50px;
-  color: #000;
+    font-size: 15px;
+    line-height: 50px;
+    color: #000;
 }
+
 .veri_code_niazmandi {
     background: #e9ebec;
     border-radius: 20px;
@@ -3906,8 +3945,6 @@ ul.v-slides {
     width: 100%!important
 }
 
-
-
 .ta_r {
     text-align: center!important;
     font-size: 14px!important;
@@ -3924,7 +3961,34 @@ ul.v-slides {
 
 .monghazi {
     width: 100%;
-    top: 0px;
+    top: 10px;
+    right: -81px;
+    position: absolute;
+    padding: 0 3px 3px 3px !important;
+    border-radius: 0 0 0 14px;
+}
+
+.monghazi_index {
+    width: 100%;
+    top: -14px;
+    right: -50px;
+    position: absolute;
+    padding: 0 3px 3px 3px !important;
+    border-radius: 0 0 0 14px;
+}
+
+.monghazi_events {
+    width: 100%;
+    top: -2px;
+    right: -89px;
+    position: absolute;
+    padding: 0 3px 3px 3px !important;
+    border-radius: 0 0 0 14px;
+}
+
+.monghazi_show {
+    top: -34px;
+    right: 7px;
     position: absolute;
     padding: 0 3px 3px 3px !important;
     border-radius: 0 0 0 14px;

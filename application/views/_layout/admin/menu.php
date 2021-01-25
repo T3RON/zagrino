@@ -108,17 +108,7 @@
                             <li><a href="<?= base_url('admin/Ccate'); ?>"><i class="fa fa-circle-o"></i>گروه </a></li>
                             <li><a href="<?= base_url('admin/Cscate'); ?>"><i class="fa fa-circle-o"></i>زير گروه</a>
                             </li>
-                            <li><a href="<?= base_url('admin/Cctag'); ?>"><i class="fa fa-circle-o"></i>برچسب شرايط</a>
-                            </li>
-                            <li><a href="<?= base_url('admin/Ctag'); ?>"><i class="fa fa-circle-o"></i>برچسب</a></li>
-                            <li><a href="<?= base_url('admin/Ctype'); ?>"><i class="fa fa-circle-o"></i>نوع وسيله</a>
-                            </li>
-                            <li><a href="<?= base_url('admin/Cstate'); ?>"><i class="fa fa-circle-o"></i>وضعيت وسيله</a>
-                            </li>
-                            <li><a href="<?= base_url('admin/Csokht'); ?>"><i class="fa fa-circle-o"></i>نوع سوخت</a>
-                            </li>
-                            <li><a href="<?= base_url('admin/Cbody'); ?>"><i class="fa fa-circle-o"></i>نوع بدنه</a>
-                            </li>
+                
                         </ul>
                     </li>
                 </ul>

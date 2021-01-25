@@ -153,18 +153,18 @@
                         </a>
                     </div>
 
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                     <!-- Modal -->
+                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
                         aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
 
                                 <div class="modal-body">
                                     <div class="row">
-                                        <div class="col-lg-4 header-pick-modal p0">
+                                        <div class="col-lg-3 header-pick-modal p0">
 
 
-                                            <a href="" onclick="return false;">
+                                            <a href="<?= base_url('site/Gardeshgari/Vof'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/family.svg" alt="">
                                                     <div class="t_align txt p0">
@@ -173,7 +173,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
+                                        <div class="col-lg-3 header-pick-modal p0">
 
 
                                             <a href="<?= base_url('site/work/Vof'); ?>">
@@ -185,7 +185,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
+                                        <!-- <div class="col-lg-4 header-pick-modal p0">
                                             <a href="<?= base_url('site/takhfif/Takhfif'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/sale.svg" alt="">
@@ -194,9 +194,9 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                        </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
-                                            <a href="" onclick="return false;">
+                                        </div> -->
+                                        <div class="col-lg-3 header-pick-modal p0">
+                                            <a href="<?= base_url('site/Agahi/Vof'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/blog.svg" alt="">
                                                     <div class="t_align txt p0">
@@ -205,8 +205,8 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
-                                            <a href="" onclick="return false;">
+                                        <div class="col-lg-3 header-pick-modal p0">
+                                            <a href="<?= base_url('site/Roidad/Vof'); ?>">
                                                 <div class="t_align all">
                                                     <img src="<?=base_url('')?>assets/site/svg/event.svg" alt="">
                                                     <div class="t_align txt p0">
@@ -215,7 +215,7 @@
                                                 </div>
                                             </a>
                                         </div>
-                                        <div class="col-lg-4 header-pick-modal p0">
+                                        <!-- <div class="col-lg-4 header-pick-modal p0">
 
 
                                             <a href="" onclick="return false;">
@@ -226,7 +226,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> -->
 
                                     </div>
 
@@ -368,14 +368,14 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_06" class="nav-link active">
                                 <div class="title">
                                     باشگاه مشتریان
                                     <div class="d_n"></div>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_07" class="nav-link active">
                                 <div class="title">
@@ -384,30 +384,30 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_08" class="nav-link active">
                                 <div class="title">
                                     اعلان ها
                                     <div class="d_n"></div>
                                 </div>
                             </a>
-                        </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        </li> -->
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_09" class="nav-link active">
                                 <div class="title">
                                     دعوت از دوستان
                                     <div class="d_n"></div>
                                 </div>
                             </a>
-                        </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        </li> -->
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_10" class="nav-link active">
                                 <div class="title">
                                     خدمات زاگرس زوم
                                     <div class="d_n"></div>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_11" class="nav-link active">
                                 <div class="title">
@@ -416,14 +416,14 @@
                                 </div>
                             </a>
                         </li>
-                        <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
+                        <!-- <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_12" class="nav-link active">
                                 <div class="title">
                                     گزارش تخلف
                                     <div class="d_n"></div>
                                 </div>
                             </a>
-                        </li>
+                        </li> -->
                         <li class="col-lg-12 col-md-12 col-sm-12 col-xs-6">
                             <a href="#panel_13" class="nav-link active">
                                 <div class="title">

@@ -53,7 +53,7 @@
                             <div style="text-align:center;" class="panel-heading">آگهي وسايل نقليه</div>
                             <div class="panel-body">
                                 <div class="col-xs-12 col-md-12">
-                                    <a href="<?= base_url('site/panel/Car'); ?>" class="thumbnail">
+                                    <a href="<?= base_url('site/panel/Acar'); ?>" class="thumbnail">
                                         <img src="<?= base_url(''); ?>/assets/uploads/img/tourism.png" alt="...">
                                     </a>
                                 </div>

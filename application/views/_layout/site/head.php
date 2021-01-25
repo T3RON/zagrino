@@ -262,7 +262,7 @@
             </div>
             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 logo_slider p0">
 
-                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-6 logo f_r m0">
+                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6 logo f_r m0">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 background_img p0 m0">
                         <img src="<?=base_url('')?>assets/site/img/background_logo.png" class="img-responsive" alt="">
                     </div>

@@ -145,7 +145,7 @@
                     <span class="f_l p0"></span>
                 </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                    <select id="fild_in_12" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                    <select name="agahi_state_kala_id" id="fild_in_12" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                         <option value="none" selected disabled hidden></option>
                         <option value="1">عادی</option>
                         

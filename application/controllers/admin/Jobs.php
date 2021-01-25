@@ -14,13 +14,12 @@ class Jobs extends MY_Controller {
 
     function index()
     {
-
         $crud = new grocery_CRUD();
 
         $crud->set_table('zgr_jobs');
         $crud->set_subject('شغل');
 
-        $crud->columns('state_id','expire','update_date','register_date','jobs_title','accounts_id');
+        $crud->columns('state_id','expire','update_date','register_date','jobs_title');
         $crud->display_as('jobs_id','شناسه');
         $crud->display_as('jobs_cate_id','گروه بندي');
         $crud->display_as('jobs_sub_cate_id',' زير گروه بندي');
@@ -45,13 +44,12 @@ class Jobs extends MY_Controller {
         $crud->display_as('jobs_pinterest','پينترست');
         $crud->display_as('jobs_youtube','يوتوب');
         $crud->display_as('jobs_address','آدرس');
-        $crud->display_as('jobs_latitude','طول جغرافيايي');
-        $crud->display_as('jobs_longitude','عرض جغرافيايي');
+        $crud->display_as('map_latitude','طول جغرافيايي');
+        $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('jobs_feature','توضيحات بيشتر');
         $crud->display_as('jobs_count_namayandegi','تعداد نمايندگي ها');
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
         $crud->display_as('jobs_sharayet','شرايط فروش');
-        $crud->display_as('jobs_list_service','ليست خدمات و سرويس');
         $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
         $crud->display_as('jobs_mojavez','مجوز ها');
         $crud->display_as('jobs_video','ويدئو');
@@ -77,10 +75,9 @@ class Jobs extends MY_Controller {
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         
-        $crud->add_action('افزودن تصوير', '', 'Jobs_images/index', 'fa-photo');
+//$crud->add_action('افزودن تصوير', '', 'Jobs_images/index', 'fa-photo');
 
         $this->load->library('gc_dependent_select');
 
@@ -121,8 +118,8 @@ class Jobs extends MY_Controller {
         $crud->unset_texteditor(
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
-            'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','expire','jobs_latitude','jobs_longitude'
+            'jobs_count_namayandegi','jobs_count_namayandegi_in_city','register_date',
+            'update_date','jobs_shoar','expire','map_latitude','map_longitude'
         );
 
        

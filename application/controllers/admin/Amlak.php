@@ -68,8 +68,6 @@ class Amlak extends MY_Controller {
         $crud->set_relation('state_id','state','state_title');
         $crud->set_relation('amlak_cate_id','amlak_cate','amlak_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('amlak_cond_tag_id','amlak_cond_tag','amlak_cond_tag_title');
-        $crud->set_relation('amlak_tag_id','amlak_tag','amlak_tag_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         

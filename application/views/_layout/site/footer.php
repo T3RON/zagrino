@@ -187,54 +187,7 @@
     });
 </script>
 
-<script type="text/javascript">
-    $(document).ready(function() {
-        $('#butsave').on('click', function() {
-            var email = $('#email').val();
-            var mobile = $('#mobile').val();
-            var text = $('#text').val();
-            var sec_code = $('#sec_code').val();
-            var re_sec_code = $('#re_sec_code').val();
-            var agahi_id = $('#agahi_id').val();
-            var accounts_id = $('#accounts_id').val();
-            if(email!="" && mobile!="" && text!="" && sec_code!=""){
-                $("#submit_message").attr("disabled", "disabled");
-                $.ajax({
-                    url: "<?php echo base_url('');?>site/Agahi/AgahiShow/send_message",
-                    type: "POST",
-                    data: {
-                        email: email,
-                        mobile: mobile,
-                        text: text,
-                        sec_code: sec_code,
-                        re_sec_code: re_sec_code,
-                        agahi_id: agahi_id,
-						accounts_id: accounts_id
-                    },
-                    cache: false,
-                    success: function(dataResult){
-                        var dataResult = JSON.parse(dataResult);
-                        if(dataResult.statusCode==200){
-                            $("#butsave").removeAttr("disabled");
-                            $('#fupForm').find('input:text').val('');
-                            $("#success").show();
-                            $('#success').html('نظر شما با موفقیت ارسال گردید !');
-                        }
-                        else if(dataResult.statusCode==201){
-                            alert("مشکلی بوجود آمده بعدا امتحان نمایید");
-                        }
 
-                    }
-                });
-            }
-            else{
-                alert('Please fill all the field !');
-            }
-        });
-    });
-
-
-</script>
 
 <script>
 	jQuery.noConflict()(function ($) { // this was missing for me

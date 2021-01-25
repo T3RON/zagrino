@@ -750,39 +750,39 @@
 
 
 <script type="text/javascript">
+        var map = L.map("map").fitBounds([
+            [<?= $bank_mashaghel_value->map_latitude; ?>, <?= $bank_mashaghel_value->map_longitude; ?>]
+        ]);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+        var marker = L.marker([<?= $bank_mashaghel_value->map_latitude; ?>, <?= $bank_mashaghel_value->map_longitude; ?>]).addTo(map);
+        var currentMarker;
 
-var options = {
-    center: [<?= $bank_mashaghel_value->jobs_latitude; ?>, <?= $bank_mashaghel_value->jobs_longitude; ?>],
-    zoom: 18
-}
+        map.on("click", function(event) {
+            document.getElementById("latitude").value = event.latlng.lat;
+            document.getElementById("longitude").value = event.latlng.lng;
+            if (currentMarker) {
+                currentMarker._icon.style.transition = "transform 0.3s ease-out";
+                currentMarker._shadow.style.transition = "transform 0.3s ease-out";
 
-var map = L.map('map', options);
+                currentMarker.setLatLng(event.latlng);
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: 'OSM'})
-.addTo(map);
 
-// map.on('click', 
-// 	function(e){
-// 		//var coord = e.latlng.toString().split(',');
-// 		//var lat = coord[0].split('(');
-// 		//var lng = coord[1].split(')');
-// 		//alert("You clicked the map at LAT: " + lat[1] + " and LONG: " + lng[0]);
-// 		L.marker(e.latlng).addTo(map);
-// 	});
+                setTimeout(function() {
+                    currentMarker._icon.style.transition = null;
+                    currentMarker._shadow.style.transition = null;
+                }, 300);
+                return;
+            }
 
-var myMarker = L.marker([<?= $bank_mashaghel_value->jobs_latitude; ?>, <?= $bank_mashaghel_value->jobs_longitude; ?>], {title: "<?= $bank_mashaghel_value->jobs_title; ?>", alt: "The Big I", draggable: true})
-.addTo(map)
-.on('dragend', function() {
-    var coord = String(myMarker.getLatLng()).split(',');
-    console.log(coord);
-    var lat = coord[0].split('(');
-    console.log(lat);
-    var lng = coord[1].split(')');
-    console.log(lng);
-    myMarker.bindPopup("Moved to: " + lat[1] + ", " + lng[0] + ".");
-});
+        });
 
-</script>
+        document.getElementById("done").addEventListener("click", function() {
+            currentMarker = null;
+        });
+        </script>
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 users_point title_global p0">
 

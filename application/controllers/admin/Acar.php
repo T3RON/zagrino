@@ -33,12 +33,6 @@ class Acar extends MY_Controller {
         $crud->set_relation('car_cate_id','car_cate','car_cate_title');
         $crud->set_relation('car_sub_cate_id','car_sub_cate','car_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('agahi_car_tag_conditions_id','agahi_car_tag_conditions','agahi_car_tag_conditions_title');
-        $crud->set_relation('agahi_car_tag_id','agahi_car_tag','agahi_car_tag_title');
-        $crud->set_relation('agahi_car_type_id','agahi_car_type','agahi_car_type_title');
-        $crud->set_relation('agahi_car_body_type_id','agahi_car_body_type','agahi_car_body_type_title');
-        $crud->set_relation('agahi_car_state_id','agahi_car_state','agahi_agahi_car_state_title');
-        $crud->set_relation('agahi_car_sokht_id','agahi_car_sokht','agahi_car_sokht_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         

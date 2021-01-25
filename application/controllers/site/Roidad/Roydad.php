@@ -25,15 +25,9 @@ class Roydad extends CI_Panel {
         $output['slider'] = $this->MY_Model->select('slider');
         $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['car_cate'] = $this->MY_Model->select('car_cate');
-        $output['car_state'] = $this->MY_Model->select('car_state');
-        $output['car_sokht'] = $this->MY_Model->select('car_sokht');
-        $output['car_type'] = $this->MY_Model->select('car_type');
-        $output['car_body'] = $this->MY_Model->select('car_body');
         $output['ostan'] = $this->MY_Model->select('ostan');
-        $output['agahi_state_kala'] = $this->MY_Model->select('agahi_state_kala');
         $output['show_time'] = $this->MY_Model->select('show_time');
-        $output['car_state'] = $this->MY_Model->select('car_state');
+        $output['events_cate'] = $this->MY_Model->select('events_cate');
         $output['vip'] = true;
      
 
@@ -55,15 +49,9 @@ class Roydad extends CI_Panel {
         $output['slider'] = $this->MY_Model->select('slider');
         $output['text'] = $this->MY_Model->select('text');
         $output['site'] = $this->MY_Model->select_single('site','1');
-        $output['car_cate'] = $this->MY_Model->select('car_cate');
-        $output['car_state'] = $this->MY_Model->select('car_state');
-        $output['car_sokht'] = $this->MY_Model->select('car_sokht');
-        $output['car_type'] = $this->MY_Model->select('car_type');
-        $output['car_body'] = $this->MY_Model->select('car_body');
         $output['ostan'] = $this->MY_Model->select('ostan');
-        $output['agahi_state_kala'] = $this->MY_Model->select('agahi_state_kala');
         $output['show_time'] = $this->MY_Model->select('show_time');
-        $output['car_state'] = $this->MY_Model->select('car_state');
+        $output['events_cate'] = $this->MY_Model->select('events_cate');
         $output['vip'] = false;
      
 
@@ -87,6 +75,7 @@ class Roydad extends CI_Panel {
             'accounts_id' =>$this->session->userdata('accounts_id'),
             'ostan_id' =>$this->input->post('ostan_id'),
             'city_id' =>$this->input->post('city_id'),
+            'events_cate_id' =>$this->input->post('events_cate_id'),
             'events_title' =>$this->input->post('events_title'),
             'events_dec' =>$this->input->post('events_dec'),
             'events_start' =>$this->input->post('events_start'),
@@ -164,6 +153,7 @@ class Roydad extends CI_Panel {
             'accounts_id' =>$this->session->userdata('accounts_id'),
             'ostan_id' =>$this->input->post('ostan_id'),
             'city_id' =>$this->input->post('city_id'),
+            'events_cate_id' =>$this->input->post('events_cate_id'),
             'events_title' =>$this->input->post('events_title'),
             'events_dec' =>$this->input->post('events_dec'),
             'events_start' =>$this->input->post('events_start'),

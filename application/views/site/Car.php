@@ -138,20 +138,20 @@
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 f_r  fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_tozihat_kamel" class="p0">توضیحات کامل</label>
                         <span class="f_l p0"></span>
                     </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
-                        <input name="agahi_car_full_des" id="naghlie_tozihat_kamel" rows="4"
-                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        <textarea name="agahi_car_full_des" id="naghlie_tozihat_kamel" rows="4"
+                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0"></textarea>
                     </div>
                 </div>
 
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_mobile_motabar" class="p0">موبایل معتبر</label>
@@ -163,7 +163,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_telephone" class="p0">تلفن</label>
@@ -176,49 +176,41 @@
                 </div>
 
 
-                <div class="col-lg-6 col-md-10 col-sm-9 col-xs-7 f_r fild">
+     
+
+                
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
-                        <label for="naghlie_gorooh" class="p0">وضعیت وسیله</label>
+                        <label for="khodro_noe_pelak" class="p0">وضعیت وسیله</label>
                         <span class="f_l p0"></span>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                        <select name="car_state_id" id="naghlie_gorooh"
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="car_state" id="khodro_noe_pelak" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <option value="none" selected disabled hidden></option>
-                            <?php foreach($car_state as $car_state_value) { ?>
-                            <option value="<?= $car_state_value->car_state_id; ?>">
-                                <?= $car_state_value->car_state_title; ?>
-                            </option>
-                            <?php } ?>
-                        </select>
                     </div>
                 </div>
 
 
                 <?php if($vip) { ?>
 
-                <div class="col-lg-6 col-md-10 col-sm-9 col-xs-7 f_r clear fild">
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
-                        <label for="naghlie_gorooh" class="p0">نوع سوخت</label>
+                        <label for="khodro_noe_pelak" class="p0">نوع سوخت</label>
                         <span class="f_l p0"></span>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                        <select name="car_sokht_id" id="naghlie_gorooh"
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="car_sokht" id="khodro_noe_pelak" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <option value="none" selected disabled hidden></option>
-                            <?php foreach($car_sokht as $car_sokht_value) { ?>
-                            <option value="<?= $car_sokht_value->car_sokht_id; ?>">
-                                <?= $car_sokht_value->car_sokht_title; ?>
-                            </option>
-                            <?php } ?>
-                        </select>
                     </div>
                 </div>
 
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r sale_sakht fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 sale_sakht fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_sale_sakht" class="p0">سال ساخت</label>
@@ -230,47 +222,34 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-10 col-sm-9 col-xs-7 f_r clear fild">
+
+
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
-                        <label for="naghlie_gorooh" class="p0">نوع سیله</label>
+                        <label for="khodro_noe_pelak" class="p0">نوع وسیله</label>
                         <span class="f_l p0"></span>
                     </div>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                        <select name="car_type_id" id="naghlie_gorooh"
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                        <input name="car_type" id="khodro_noe_pelak" type="text"
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                            <option value="none" selected disabled hidden></option>
-                            <?php foreach($car_type as $car_type_value) { ?>
-                            <option value="<?= $car_type_value->car_type_id; ?>"><?= $car_type_value->car_type_title; ?>
-                            </option>
-                            <?php } ?>
-                        </select>
                     </div>
                 </div>
 
                 <div class="flex_boxl">
-                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r flex_box_in p0">
 
-                        <div class="col-lg-12 col-md-10 col-sm-9 col-xs-7 f_r fild">
-                            <div class="t_align fild_title p0">
-                                <span class="f_r p0"></span>
-                                <label for="naghlie_gorooh" class="p0">نوع بدنه</label>
-                                <span class="f_l p0"></span>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
-                                <select name="car_body_id" id="naghlie_gorooh"
-                                    class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
-                                    <option value="none" selected disabled hidden></option>
-                                    <?php foreach($car_body as $car_body_value) { ?>
-                                    <option value="<?= $car_body_value->car_body_id; ?>">
-                                        <?= $car_body_value->car_body_title; ?>
-                                    </option>
-                                    <?php } ?>
-                                </select>
-                            </div>
+
+                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
+                        <div class="t_align fild_title p0">
+                            <span class="f_r p0"></span>
+                            <label for="khodro_noe_pelak" class="p0">نوع بدنه</label>
+                            <span class="f_l p0"></span>
                         </div>
-
-
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in">
+                            <input name="car_body" id="khodro_noe_pelak" type="text"
+                                class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+                        </div>
                     </div>
 
 

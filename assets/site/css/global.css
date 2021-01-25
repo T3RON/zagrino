@@ -458,119 +458,122 @@ form .fild .radio_label input {
     cursor: pointer;
 }
 
+
 /* ------- filld -------- */
 
 .frm .fild {
-	padding: 10px 5px 10px 5px!important;
-	line-height: 2.5;
+    padding: 10px 5px 10px 5px!important;
+    line-height: 2.5;
 }
 
 .frm .fild .fild_title {
-	color: rgba(128, 128, 128, 0.71);
-	position: absolute;
-	background: #fff;
-	line-height: 0.5;
-	z-index: 6;
-	margin: -2px 15px;
-	font-size: 14px;
+    color: rgba(128, 128, 128, 0.71);
+    position: absolute;
+    background: #fff;
+    line-height: 0.5;
+    z-index: 6;
+    margin: -2px 15px;
+    font-size: 14px;
 }
 
 .frm .fild .fild_title span {
-	background: #e7ebee;
-	height: 5px;
-	width: 5px;
-	border-radius: 20px;
+    background: #e7ebee;
+    height: 5px;
+    width: 5px;
+    border-radius: 20px;
 }
 
 .frm .fild .fild_title label {
-	padding: 0 10px !important;
+    padding: 0 10px !important;
 }
 
 .frm .fild .fild_in {
-	border: 1px solid #E7EBEE;
-	border-radius: 20px;
-	padding: 5px 15px;
-	position: relative;
+    border: 1px solid #E7EBEE;
+    border-radius: 20px;
+    padding: 5px 15px;
+    position: relative;
 }
 
 .frm .select {
-	padding: 10px 25px 10px 10px !important;
+    padding: 10px 25px 10px 10px !important;
 }
 
 .frm .fild .fild_in input {
-	border: none;
-	background: transparent;
-	transition: opacity 0.2s 0.2s ease;
-	-webkit-transition: opacity 0.2s 0.2s ease;
-	-moz-transition: opacity 0.2s 0.2s ease;
-	-o-transition: opacity 0.2s 0.2s ease;
+    border: none;
+    background: transparent;
+    transition: opacity 0.2s 0.2s ease;
+    -webkit-transition: opacity 0.2s 0.2s ease;
+    -moz-transition: opacity 0.2s 0.2s ease;
+    -o-transition: opacity 0.2s 0.2s ease;
 }
 
 .frm .text_title {
-	padding: 20px 20px !important;
+    padding: 20px 20px !important;
 }
 
 
 /* --------------- check_mark_style --*/
 
 .frm .fild .radio_label .checkmark {
-	position: absolute;
-	top: 6px;
-	right: 0;
-	height: 15px;
-	width: 15px;
-	background-color: #eee;
-	border-radius: 50%;
+    position: absolute;
+    top: 6px;
+    right: 0;
+    height: 15px;
+    width: 15px;
+    background-color: #eee;
+    border-radius: 50%;
 }
 
 .frm .fild .radio_label:hover input~.checkmark {
-	background-color: #ccc;
+    background-color: #ccc;
 }
 
 .frm .fild .radio_label input:checked~.checkmark {
-	background-color: #fff;
-	border: 1px solid #4454ff;
+    background-color: #fff;
+    border: 1px solid #4454ff;
 }
 
 .frm .fild .radio_label .checkmark:after {
-	content: "";
-	position: absolute;
-	display: none;
+    content: "";
+    position: absolute;
+    display: none;
 }
 
 .frm .fild .radio_label input:checked~.checkmark:after {
-	display: block;
+    display: block;
 }
 
 .frm .fild .radio_label .checkmark:after {
-	top: 2px;
-	left: 2px;
-	width: 9px;
-	height: 9px;
-	border-radius: 50%;
-	background: #4454ff;
+    top: 2px;
+    left: 2px;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #4454ff;
 }
 
 .frm .fild .radio_label {
-	text-align: center;
-	float: right;
-	display: block;
-	position: relative;
-	cursor: pointer;
-	font-size: 14px;
-	color: #939aa4;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	margin-bottom: 0!important;
+    text-align: center;
+    float: right;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 14px;
+    color: #939aa4;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-bottom: 0!important;
 }
 
 .frm .fild .radio_label input {
-	position: absolute;
-	opacity: 0;
-	cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
 }
+
+
 /* --------------- Custom_style --*/
 
 .display_none {
@@ -716,7 +719,7 @@ form .fild .radio_label input {
 .section_head .right_side ul {
     text-align: right;
     line-height: 2;
-	direction: rtl;
+    direction: rtl;
 }
 
 .section_head .right_side ul li a {
@@ -763,15 +766,31 @@ form .fild .radio_label input {
 
 .section_head .left_side ul li {
     float: right;
-    padding: 6px !important;
+    padding: 2px !important;
     line-height: 2;
+    /* height: 300px; */
 }
 
-.section_head .left_side ul li img {
+.section_head .left_side .channel ul li {
+    float: right;
+    padding: 2px !important;
+    line-height: 2;
+    height: auto !important;
+}
+
+.img_one {
     margin: 0 auto;
+    height: 180px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+.ico-img {
+    margin: 0 auto !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
 }
 
 .section_head .left_side ul li .Location {

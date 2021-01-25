@@ -34,7 +34,7 @@
                             پنل آگهي
                         </li>
 
-                        <li style="margin-bottom:5px;"
+                        <!-- <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$takhfif != "0" ) { ?>
                             <a href="<?= base_url('site/panel/Choose_gardeshgari'); ?>">
@@ -50,7 +50,7 @@
                                 class="badge badge-pill badge-primary">شما تخفيفات نداريد</span>
                             <?php } ?>
                             پنل تخفيفات
-                        </li>
+                        </li> -->
 
 
                         <li style="margin-bottom:5px;"
@@ -83,7 +83,7 @@
                             خدمات گردشگري
                         </li>
 
-                        <li style="margin-bottom:5px;"
+                        <!-- <li style="margin-bottom:5px;"
                             class="list-group-item d-flex justify-content-between align-items-center">
                             <?php if((int)$shop != "0" ) { ?>
                             <a href="#">
@@ -99,7 +99,7 @@
                                 class="badge badge-pill badge-primary">شما فروشگاه نداريد</span>
                             <?php } ?>
                             فروشگاه
-                        </li>
+                        </li> -->
 
 
                         <li style="margin-bottom:5px;"

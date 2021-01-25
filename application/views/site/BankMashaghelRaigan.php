@@ -182,6 +182,7 @@
                 <!-- Swiper -->
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0 swiper-container swiper_bankMashaghel">
                     <div class="swiper-wrapper">
+                    <?php if($bank_mashaghel_value->img1 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -195,6 +196,8 @@
 
                             </li>
                         </div>
+                        <?php } ?>
+                        <?php if($bank_mashaghel_value->img2 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -207,6 +210,8 @@
 
                             </li>
                         </div>
+                        <?php } ?>
+                        <?php if($bank_mashaghel_value->img3 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -220,6 +225,8 @@
 
                             </li>
                         </div>
+                        <?php } ?>
+                        <?php if($bank_mashaghel_value->img4 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -232,6 +239,8 @@
 
                             </li>
                         </div>
+                        <?php } ?>
+                        <?php if($bank_mashaghel_value->img5 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -245,6 +254,8 @@
 
                             </li>
                         </div>
+                        <?php } ?>
+                        <?php if($bank_mashaghel_value->img6 != "<p></p>") { ?>
                         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 p0 swiper-slide">
                             <li class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
 
@@ -258,7 +269,7 @@
 
                             </li>
                         </div>
-
+                        <?php } ?>
 
                     </div>
                     <!-- Add Arrows -->
@@ -408,40 +419,39 @@
 
 
 <script type="text/javascript">
-var map = L.map("map").fitBounds([
-    [<?= $bank_mashaghel_value->map_latitude; ?>, <?= $bank_mashaghel_value->map_longitude; ?>]
-]);
+        var map = L.map("map").fitBounds([
+            [<?= $bank_mashaghel_value->map_latitude; ?>, <?= $bank_mashaghel_value->map_longitude; ?>]
+        ]);
+        L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors',
+            maxZoom: 18
+        }).addTo(map);
+        var marker = L.marker([<?= $bank_mashaghel_value->map_latitude; ?>, <?= $bank_mashaghel_value->map_longitude; ?>]).addTo(map);
+        var currentMarker;
 
-L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
+        map.on("click", function(event) {
+            document.getElementById("latitude").value = event.latlng.lat;
+            document.getElementById("longitude").value = event.latlng.lng;
+            if (currentMarker) {
+                currentMarker._icon.style.transition = "transform 0.3s ease-out";
+                currentMarker._shadow.style.transition = "transform 0.3s ease-out";
 
-var currentMarker;
-
-map.on("click", function(event) {
-    document.getElementById("latitude").value = event.latlng.lat;
-    document.getElementById("longitude").value = event.latlng.lng;
-    if (currentMarker) {
-        currentMarker._icon.style.transition = "transform 0.3s ease-out";
-        currentMarker._shadow.style.transition = "transform 0.3s ease-out";
-
-        currentMarker.setLatLng(event.latlng);
-
-
-        setTimeout(function() {
-            currentMarker._icon.style.transition = null;
-            currentMarker._shadow.style.transition = null;
-        }, 300);
-        return;
-    }
+                currentMarker.setLatLng(event.latlng);
 
 
-});
+                setTimeout(function() {
+                    currentMarker._icon.style.transition = null;
+                    currentMarker._shadow.style.transition = null;
+                }, 300);
+                return;
+            }
 
-document.getElementById("done").addEventListener("click", function() {
-    currentMarker = null;
-});
-</script>
+        });
+
+        document.getElementById("done").addEventListener("click", function() {
+            currentMarker = null;
+        });
+        </script>
 
 
 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 users_point title_global p0">

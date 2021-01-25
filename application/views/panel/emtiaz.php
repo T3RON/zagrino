@@ -23,7 +23,13 @@
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 m_15 f_l">
                     <div class="panel panel-default">
                         <div class="panel-body">
-                           امتیاز کاربری شما : <span style="color: green;font-size: 16px;">23</span> می باشد
+                           امتیاز کاربری شما : <span style="color: green;font-size: 16px;"><?= $rate_user; ?></span> می باشد
+                        </div>
+                    </div>
+
+                    <div class="panel panel-default">
+                        <div style="color:red" class="panel-body">
+                           با ثبت هر آگهی و خدمات ویژه در سامانه امتیاز کسب کنید و در قرعه کشی های ما با بالابردن امتیاز خود شانس برنده شدن خود را افزایش دهید
                         </div>
                     </div>
                 </div>

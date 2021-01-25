@@ -11,6 +11,7 @@ class Jobs_Payment extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Model_Api');
+        $this->load->model('MY_Model');
 		$this->load->library('Jdf');
         $merchant_id = $this->db->select('set_value')
             ->get_where('zgr_settings', array('set_id' => '1'))
@@ -31,7 +32,7 @@ class Jobs_Payment extends CI_Controller {
 			->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
 			->row()
 			->account_mobile;
-        $call_back = base_url('')."site/work/Jobs_Payment/callback_jobs?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&jobs_id=$jobss_id";
+        $call_back = base_url('')."site/work/Jobs_Payment/callback_jobs?amount=$agahi_tarefe&mobile=$mobile&accounts_id=$accounts_id&jobs_id=$jobs_id";
 
 
         $this->zarinpal->sandbox();
@@ -77,7 +78,16 @@ class Jobs_Payment extends CI_Controller {
 
             $this->Model_Api->Insert("jobs_pay",$data);
 
+            $user_rate = $this->db->select('accounts_rate_user')
+            ->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
+            ->row()
+            ->accounts_rate_user;
+            $user_rate++;
+            $rate_data = array(
+                'accounts_rate_user' => $user_rate
+            );
 
+            $this->MY_Model->update("accounts",$accounts_id,$rate_data);
 
 			redirect('site/panel/Jobs');
 

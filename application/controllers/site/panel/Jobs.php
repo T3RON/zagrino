@@ -48,13 +48,12 @@ class Jobs extends CI_Panel {
         $crud->display_as('jobs_pinterest','پينترست');
         $crud->display_as('jobs_youtube','يوتوب');
         $crud->display_as('jobs_address','آدرس');
-        $crud->display_as('jobs_map_latitude','طول جغرافيايي');
-        $crud->display_as('jobs_map_longitude','عرض جغرافيايي');
+        $crud->display_as('map_latitude','طول جغرافيايي');
+        $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('jobs_feature','توضيحات بيشتر');
         $crud->display_as('jobs_count_namayandegi','تعداد نمايندگي ها');
         $crud->display_as('jobs_count_namayandegi_in_city','تعداد نمايندگي شهر');
         $crud->display_as('jobs_sharayet','شرايط فروش');
-        $crud->display_as('jobs_list_service','ليست خدمات و سرويس');
         $crud->display_as('jobs_lohe_taghdir','لوحه تقدير ها');
         $crud->display_as('jobs_mojavez','مجوز ها');
         $crud->display_as('jobs_video','ويدئو');
@@ -76,38 +75,37 @@ class Jobs extends CI_Panel {
         $crud->display_as('days','تعداد روزهاي نمايش');
         $crud->display_as('expire','تاريخ انقضا');
 
-        $crud->where('zgr_jobs.accounts_id',$this->session->userdata('accounts_id'));
+
+        $crud->where('zgr_jobs.accounts_id =',$this->session->userdata('accounts_id'));
         $crud->unset_clone();
         $crud->unset_add();
 
 
-        if($this->session->userdata('state_id') != 2) {
-            $crud->unset_edit();
+        @$state_id = $this->db->select('state_id')
+        ->get_where('zgr_jobs', array('jobs_id' => $this->uri->segment(6)))
+        ->row()
+        ->state_id;
+
+
+        $crud->field_type('map_latitude', 'hidden');
+        $crud->field_type('map_longitude', 'hidden');
+        $crud->callback_column('expire',array($this,'_change_expire_date'));
+        $crud->callback_column('register_date',array($this,'_change_reg_date'));
+        $crud->callback_column('update_date',array($this,'_change_reg_date'));
+        $crud->unset_edit_fields('register_date');
+        $crud->unset_add_fields('update_date');
+        $crud->field_type('register_date', 'hidden', time());
+        $crud->field_type('update_date', 'hidden', time());
+        $crud->field_type('expire', 'hidden');
+        $crud->field_type('days', 'readonly');
+
+        if($state_id == 12 or $state_id == 1) {
+           
+            $crud->field_type('days', 'readonly');
+            $crud->field_type('state_id', 'readonly');
         }
-
-			$crud->unset_add_fields('jobs_id');
-			$crud->unset_edit_fields('jobs_id');
-
-			$crud->unset_add_fields('jobs_latitude');
-			$crud->unset_edit_fields('jobs_latitude');
-
-			$crud->unset_add_fields('jobs_longitude');
-			$crud->unset_edit_fields('jobs_longitude');
-
-			$crud->unset_add_fields('days');
-			$crud->unset_edit_fields('days');
-
-			$crud->unset_add_fields('days');
-			$crud->unset_edit_fields('days');
-
-
-			$crud->unset_add_fields('state_id');
-			$crud->unset_edit_fields('state_id');
-
-			$crud->field_type('jobs_latitude', 'hidden');
-			$crud->field_type('jobs_longitude', 'hidden');
-            $crud->field_type('days', 'hidden');
-            $crud->field_type('state_id', 'hidden');
+  
+		
 
 
 
@@ -120,7 +118,6 @@ class Jobs extends CI_Panel {
         $crud->set_relation('jobs_cate_id','jobs_cate','jobs_cate_title');
         $crud->set_relation('jobs_sub_cate_id','jobs_sub_cate','jobs_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
         $crud->set_relation('state_id','state','state_title');
 
 
@@ -164,7 +161,7 @@ class Jobs extends CI_Panel {
             'jobs_title','jobs_shobe','jobs_mobile','jobs_tell','jobs_fax','jobs_email','jobs_code_posti','jobs_website',
             'jobs_instagram','jobs_telegram','jobs_whatsapp','jobs_facebook','jobs_tw','jobs_pinterest','jobs_youtube',
             'jobs_count_namayandegi','jobs_count_namayandegi_in_city','jobs_register_date',
-            'jobs_update_date','jobs_shoar','jobs_price','expire','jobs_map_latitude','jobs_map_longitude'
+            'jobs_update_date','jobs_shoar','jobs_price','expire','map_latitude','map_longitude'
         );
 
        

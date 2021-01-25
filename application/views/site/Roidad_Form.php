@@ -167,8 +167,25 @@
                     </div>
                 </div>
 
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild">
+                    <div class="t_align fild_title p0">
+                        <span class="f_r p0"></span>
+                        <label for="sefaresh_makan" class="p0">دسته بندی</label>
+                        <span class="f_l p0"></span>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 fild_in select">
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                        <select id="events_cate_id" name="ostan_id" class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
+
+                            <?php foreach($events_cate as $events_cate_value) { ?>
+                            <option value="<?= $events_cate_value->events_cate_id; ?>"><?= $events_cate_value->events_cate_title; ?>
+                            </option>
+                            <?php } ?>
+                        </select>
+                    </div>
+                </div> 
+
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_mobile_motabar" class="p0"> شرایط</label>
@@ -180,7 +197,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_mobile_motabar" class="p0"> لینک سایت</label>
@@ -192,7 +209,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_mobile_motabar" class="p0"> ایمیل سازمان </label>
@@ -204,7 +221,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_mobile_motabar" class="p0">اینستاگرام</label>
@@ -216,7 +233,7 @@
                     </div>
                 </div>
 
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 f_r  fild">
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12  fild">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="naghlie_telephone" class="p0">تلگرام</label>
@@ -227,7 +244,7 @@
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 f_r fild p0 p0">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild p0 p0">
                     <div class="t_align fild_title p0">
                         <span class="f_r p0"></span>
                         <label for="adres_koli" class="p0">آدرس</label>
@@ -250,6 +267,8 @@
                             class="col-lg-12 col-md-12 col-sm-12 col-xs-12 p0">
                     </div>
                 </div>
+
+
                 <?php if($vip) { ?>
                 <div class="col-lg-6 col-md-12 col-sm-12 col-xs-12 fild">
                     <div class="t_align fild_title  p0">

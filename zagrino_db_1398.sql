@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 02, 2021 at 11:23 AM
+-- Generation Time: Jan 25, 2021 at 07:38 PM
 -- Server version: 5.7.14
 -- PHP Version: 7.0.10
 
@@ -37,6 +37,7 @@ CREATE TABLE `zgr_accounts` (
   `account_codemeli` text,
   `account_codeposti` text,
   `account_address` text,
+  `accounts_rate_user` int(11) NOT NULL,
   `ostan_id` int(11) DEFAULT NULL,
   `city_id` int(11) DEFAULT NULL,
   `state_id` int(11) DEFAULT NULL,
@@ -53,8 +54,9 @@ CREATE TABLE `zgr_accounts` (
 -- Dumping data for table `zgr_accounts`
 --
 
-INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `ostan_id`, `city_id`, `state_id`, `account_active_code`, `account_avatar`, `account_sex`, `account_age`, `account_about`, `register_date`, `update_date`) VALUES
-(6, NULL, NULL, 'rSAiuqclkhqtSae6LescS2xbLnUxShYzImohhN2zxj315LfRmRBMLsfGwe42HszxiLU6jMpwNHODJ1OJwV3nSQ==', NULL, '09192183440', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '7799', NULL, NULL, NULL, NULL, '1609188136', '');
+INSERT INTO `zgr_accounts` (`accounts_id`, `account_fn`, `account_ln`, `account_pass`, `account_email`, `account_mobile`, `account_tell`, `account_codemeli`, `account_codeposti`, `account_address`, `accounts_rate_user`, `ostan_id`, `city_id`, `state_id`, `account_active_code`, `account_avatar`, `account_sex`, `account_age`, `account_about`, `register_date`, `update_date`) VALUES
+(1, 'محمد', 'سیف', 'rSAiuqclkhqtSae6LescS2xbLnUxShYzImohhN2zxj315LfRmRBMLsfGwe42HszxiLU6jMpwNHODJ1OJwV3nSQ==', 'seif4847@gmail.com', '09192183440', '08133237591', NULL, NULL, NULL, 5, NULL, NULL, NULL, '7799', NULL, NULL, NULL, NULL, '1609188136', ''),
+(7, 'علی', 'نظری', 'rSAiuqclkhqtSae6LescS2xbLnUxShYzImohhN2zxj315LfRmRBMLsfGwe42HszxiLU6jMpwNHODJ1OJwV3nSQ==', 'seif4847@gmail.com', '09352161110', '08133237591', NULL, NULL, NULL, 1, NULL, NULL, NULL, '7799', NULL, NULL, NULL, NULL, '1609188136', '');
 
 -- --------------------------------------------------------
 
@@ -100,8 +102,8 @@ CREATE TABLE `zgr_agahi` (
   `agahi_sub_cate_id` int(11) DEFAULT NULL,
   `agahi_des` text,
   `agahi_tell` text,
-  `agahi_latitude` text,
-  `agahi_longitude` text,
+  `agahi_latitude` varchar(255) DEFAULT NULL,
+  `agahi_longitude` varchar(255) DEFAULT NULL,
   `agahi_cond_tag_id` int(11) DEFAULT NULL,
   `agahi_address` text,
   `agahi_email` text,
@@ -112,12 +114,22 @@ CREATE TABLE `zgr_agahi` (
   `img5` text,
   `img6` text,
   `state_id` int(11) DEFAULT NULL,
+  `veiws` bigint(20) NOT NULL,
   `agahi_state_kala_id` int(11) DEFAULT NULL,
   `register_date` text,
   `update_date` text,
   `days` int(11) NOT NULL,
   `expire` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_agahi`
+--
+
+INSERT INTO `zgr_agahi` (`agahi_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_title`, `agahi_cate_id`, `agahi_sub_cate_id`, `agahi_des`, `agahi_tell`, `agahi_latitude`, `agahi_longitude`, `agahi_cond_tag_id`, `agahi_address`, `agahi_email`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `veiws`, `agahi_state_kala_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
+(23, 1, 30, 422, '<p>\n	dsdsadasdsad</p>\n', 1, 1, '<p>\n	این توضیح تست می باشد</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '33.896215010357054', '48.75171239656366', 1, '<p>\n	نهاوند</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '7bf7b1deb69712c03e07b3be1bd0d66d.jpg', '1aaf35fc6e4cc52c04a8e064eae8042e.jpg', '1c512a71d43c2b9edb3856d9f10a6e92.jpg', '<p></p>', '<p></p>', '<p></p>', 4, 0, 1, 'سه شنبه, ۱۶ دی ۱۳۹۹', '1609962078', 90, '1608668768'),
+(24, 1, 17, 247, '<p>\n	dsdsadasdsad</p>\n', 2, 2, '<p>\n	tytytyty</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '33.89651245218198', '48.751691284978826', 1, '<p>\n	jjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjj</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '7a4a8188aa76edad7fec753ed3ec2621.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '6d43425d1178c9fb8fe9a9b480c8dff6.jpg', 1, 0, 1, 'دوشنبه, ۲۲ دی ۱۳۹۹', '1610392207', 90, '1618167698'),
+(25, 1, 8, 120, '<p>\n	الان</p>\n', 1, 2, '<p>\n	tttttttttttttttttttttttttttt</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '33.89629507848025', '48.75251198426591', 1, '<p>\n	tttttttttttttttttttttttt</p>\n', '<p>\n	corssis248@gmail.com</p>\n', '6798fd6a30b875bb9558c4e5114ac294.jpg', 'dab4ed24270c4cc0dceaa3daaf62e82b.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 2, 0, 1, 'دوشنبه, ۲۲ دی ۱۳۹۹', '1610392194', 60, '1615575849');
 
 -- --------------------------------------------------------
 
@@ -160,6 +172,7 @@ CREATE TABLE `zgr_agahi_amlak` (
   `img5` text,
   `img6` text,
   `state_id` int(11) DEFAULT NULL,
+  `veiws` bigint(20) NOT NULL,
   `register_date` text,
   `update_date` text,
   `expire` text,
@@ -170,9 +183,9 @@ CREATE TABLE `zgr_agahi_amlak` (
 -- Dumping data for table `zgr_agahi_amlak`
 --
 
-INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `city_id`, `amlak_cate_id`, `amlak_tag`, `amlak_cond_tag`, `amlak_price`, `amlak_tell`, `amlak_des`, `amlak_bonga_title`, `amlak_agahi_dahande`, `amlak_sanad_state`, `amlak_mizan_malekiat`, `amlak_metraj`, `amlak_sanad_type`, `amlak_ejare_price`, `amlak_rahn_price`, `amlak_count_room`, `amlak_tabaghe`, `amlak_parking`, `amlak_emtiaz`, `amlak_anbari`, `amlak_asansor`, `amlak_address`, `amlak_latitude`, `amlak_longitude`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `register_date`, `update_date`, `expire`, `days`) VALUES
-(12, 6, 26, 368, 2, '2', '2', '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, 'همدان', 'املاك', 'املاك', '1', '300000', '2222222', '6', '5', '1', 'برق آب گاز تلفن', '1', '1', 'edededededededededededsfdfdf', '33.896108144689926', '48.751406666776056', 'be65af677ab23b3abb5e18ed0b098c64.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 2, 'جمعه, ۱۲ دی ۱۳۹۹', '0', '1641069929', 365),
-(13, 6, 4, 60, 1, NULL, NULL, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, 'edededededededededededsfdfdf', '33.89651779549413', '48.75201812635127', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 12, 'جمعه, ۱۲ دی ۱۳۹۹', '0', '1610571400', 12);
+INSERT INTO `zgr_agahi_amlak` (`agahi_amlak_id`, `accounts_id`, `ostan_id`, `city_id`, `amlak_cate_id`, `amlak_tag`, `amlak_cond_tag`, `amlak_price`, `amlak_tell`, `amlak_des`, `amlak_bonga_title`, `amlak_agahi_dahande`, `amlak_sanad_state`, `amlak_mizan_malekiat`, `amlak_metraj`, `amlak_sanad_type`, `amlak_ejare_price`, `amlak_rahn_price`, `amlak_count_room`, `amlak_tabaghe`, `amlak_parking`, `amlak_emtiaz`, `amlak_anbari`, `amlak_asansor`, `amlak_address`, `amlak_latitude`, `amlak_longitude`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `state_id`, `veiws`, `register_date`, `update_date`, `expire`, `days`) VALUES
+(12, 1, 26, 368, 2, '2', '2', '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, 'همدان', 'املاك', 'املاك', '1', '300000', '2222222', '6', '5', '1', 'برق آب گاز تلفن', '1', '1', 'edededededededededededsfdfdf', '33.896108144689926', '48.751406666776056', 'be65af677ab23b3abb5e18ed0b098c64.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 2, 0, 'جمعه, ۱۲ دی ۱۳۹۹', '0', '1641069929', 365),
+(13, 7, 4, 60, 1, NULL, NULL, '60000000000', '08133245831', 'املاك', 'املاكاملاكاملاكاملاكاملاكاملاكاملاكاملاكاملاك', NULL, NULL, NULL, 'املاك', NULL, '300000', '2222222', NULL, NULL, NULL, NULL, NULL, NULL, '<p>\n	edededededededededededsfdfdf</p>\n', '33.89651779549413', '48.75201812635127', '3cd20-10ff628c8d6d89b269ad7fc2ed4a8ad409dadbc1_1606398230.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 4, 0, 'جمعه, ۱۲ دی ۱۳۹۹', '1610996885', '1610571400', 12);
 
 -- --------------------------------------------------------
 
@@ -188,19 +201,19 @@ CREATE TABLE `zgr_agahi_car` (
   `agahi_car_title` text NOT NULL,
   `car_cate_id` int(11) DEFAULT NULL,
   `car_sub_cate_id` int(11) DEFAULT NULL,
-  `car_tag_id` int(11) DEFAULT NULL,
-  `car_cond_tag_id` int(11) DEFAULT NULL,
+  `car_tag` text,
+  `car_cond_tag` text,
   `agahi_car_price` text,
   `agahi_car_full_des` text,
   `agahi_car_tell` text,
   `agahi_car_mobile` text,
   `agahi_car_address` text,
   `agahi_car_year` text,
-  `car_type_id` int(11) DEFAULT NULL,
-  `car_body_id` int(11) DEFAULT NULL,
+  `car_type` text,
+  `car_body` text,
   `agahi_car_karked` text,
-  `car_state_id` int(11) DEFAULT NULL,
-  `car_sokht_id` int(11) DEFAULT NULL,
+  `car_state` text,
+  `car_sokht` text,
   `agahi_car_pelak` text,
   `agahi_car_color` int(11) DEFAULT NULL,
   `agahi_car_body_des` text,
@@ -210,6 +223,7 @@ CREATE TABLE `zgr_agahi_car` (
   `map_latitude` text NOT NULL,
   `map_longitude` text NOT NULL,
   `state_id` int(11) NOT NULL,
+  `veiws` bigint(20) DEFAULT NULL,
   `img1` text,
   `img2` text,
   `img3` text,
@@ -224,12 +238,19 @@ CREATE TABLE `zgr_agahi_car` (
 -- Dumping data for table `zgr_agahi_car`
 --
 
-INSERT INTO `zgr_agahi_car` (`agahi_car_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_car_title`, `car_cate_id`, `car_sub_cate_id`, `car_tag_id`, `car_cond_tag_id`, `agahi_car_price`, `agahi_car_full_des`, `agahi_car_tell`, `agahi_car_mobile`, `agahi_car_address`, `agahi_car_year`, `car_type_id`, `car_body_id`, `agahi_car_karked`, `car_state_id`, `car_sokht_id`, `agahi_car_pelak`, `agahi_car_color`, `agahi_car_body_des`, `agahi_car_motor_des`, `register_date`, `update_date`, `map_latitude`, `map_longitude`, `state_id`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `expire`, `days`) VALUES
-(2, 6, 26, 368, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\n	بدون رنگ و ضربه دوگانه سوز دارای رینگ و ضبط حرفه ای</p>\n', '08133237591', '<p>\n	09192183440</p>\n', '<p>	خیابان شهرداری</p>', NULL, NULL, NULL, NULL, 2, NULL, NULL, NULL, NULL, NULL, 'جمعه, ۱۲ دی ۱۳۹۹', '1609532663', '<p>\n	33.893787</p>\n', '<p>\n	48.758044</p>\n', 3, 'dd75f0f067f29bad295f01bc681a3083.jpg', '08a7bf3d1c3766be4218c987debbc762.jpg', NULL, NULL, NULL, NULL, '1610539514', 12),
-(3, 6, 26, 368, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', 'بدون رنگ و ضربه دوگانه سوز دارای رینگ و ضبط حرفه ای', '08133237591', '0813 322 3907', 'بروجرد', '1395', 1, 1, '50000', 2, 1, 'ملی', 0, 'جلو و عقب پلمپ', 'عالی', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.89617938850555', '48.75318740869681', 12, '06ce424818b2143de1e58cc4be18610a.jpg', 'd616223401209a9ca571d1c1d024eb16.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1614714118', 60),
-(4, 6, 6, 92, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '', '', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.8962372740067', '48.75235067454129', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124012', 30),
-(5, 6, 5, 275, 'فروش تیبا مدل 95 بدون رنگ ', 2, 2, NULL, NULL, '80000000', 'ddddddddddddddd', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.89631297030406', '48.75328395494553', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124081', 30),
-(6, 6, 17, 232, 'فروش تیبا مدل 95 بدون رنگ ', 2, 2, NULL, NULL, '', '', '08133237591', '0813 322 3907', '', '', NULL, NULL, '', NULL, NULL, '', 0, '', '', 'جمعه, ۱۲ دی ۱۳۹۹', '0', '33.896192746633645', '48.751497849344304', 12, '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1612124146', 30);
+INSERT INTO `zgr_agahi_car` (`agahi_car_id`, `accounts_id`, `ostan_id`, `city_id`, `agahi_car_title`, `car_cate_id`, `car_sub_cate_id`, `car_tag`, `car_cond_tag`, `agahi_car_price`, `agahi_car_full_des`, `agahi_car_tell`, `agahi_car_mobile`, `agahi_car_address`, `agahi_car_year`, `car_type`, `car_body`, `agahi_car_karked`, `car_state`, `car_sokht`, `agahi_car_pelak`, `agahi_car_color`, `agahi_car_body_des`, `agahi_car_motor_des`, `register_date`, `update_date`, `map_latitude`, `map_longitude`, `state_id`, `veiws`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `expire`, `days`) VALUES
+(14, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\n	سالم</p>\n', '08133237591', '0813 322 3907', '<p>\n	dddddddddddddddddddddd</p>\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883264', '33.896410065279085', '48.752699725932885', 1, NULL, '330954c4c487311b26d2064bb6f8f72c.jpg', '330954c4c487311b26d2064bb6f8f72c.jpg', '330954c4c487311b26d2064bb6f8f72c.jpg', NULL, NULL, NULL, '1611919867', 12),
+(15, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\n	سالم</p>\n', '08133237591', '0813 322 3907', '<p>\n	خیابان شهرداری</p>\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883233', '33.89642349374512', '48.752608537123216', 1, NULL, '0451b0207c54b5868c9df69c7a7fd8a1.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919997', 12),
+(16, 7, 30, 421, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\n	sssssssssss</p>\n', '08133237591', '0813 322 3907', '<p>\n	ssss</p>\n', 'ss', 'sss', 'sss', 'sss', '18', 'ssssss', 'sss', 0, '<p>\n	sss</p>\n', '<p>\n	sss</p>\n', 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610911183', '33.89607801523991', '48.75184147831243', 2, NULL, 'f3a9735b62fc55f328f3a304434e2459.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1618687055', 90),
+(17, 1, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	dddddddddddddddddddddd</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883264', '33.896410065279085', '48.752699725932885', 1, NULL, '330954c4c487311b26d2064bb6f8f72c.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919867', 12),
+(18, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	خیابان شهرداری</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883233', '33.89642349374512', '48.752608537123216', 1, NULL, '0451b0207c54b5868c9df69c7a7fd8a1.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919997', 12),
+(19, 1, 30, 421, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\r\n	sssssssssss</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	ssss</p>\r\n', 'ss', 'sss', 'sss', 'sss', '18', 'ssssss', 'sss', 0, '<p>\r\n	sss</p>\r\n', '<p>\r\n	sss</p>\r\n', 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610911183', '33.89607801523991', '48.75184147831243', 2, NULL, 'f3a9735b62fc55f328f3a304434e2459.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1618687055', 90),
+(20, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	dddddddddddddddddddddd</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883264', '33.896410065279085', '48.752699725932885', 1, NULL, '330954c4c487311b26d2064bb6f8f72c.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919867', 12),
+(21, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	خیابان شهرداری</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883233', '33.89642349374512', '48.752608537123216', 1, NULL, '0451b0207c54b5868c9df69c7a7fd8a1.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919997', 12),
+(22, 7, 30, 421, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\r\n	sssssssssss</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	ssss</p>\r\n', 'ss', 'sss', 'sss', 'sss', '18', 'ssssss', 'sss', 0, '<p>\r\n	sss</p>\r\n', '<p>\r\n	sss</p>\r\n', 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610911183', '33.89607801523991', '48.75184147831243', 2, NULL, 'f3a9735b62fc55f328f3a304434e2459.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1618687055', 90),
+(23, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	dddddddddddddddddddddd</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883264', '33.896410065279085', '48.752699725932885', 1, NULL, '330954c4c487311b26d2064bb6f8f72c.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919867', 12),
+(24, 7, 26, 368, 'پژو پارس', 2, 2, NULL, NULL, '80000000', '<p>\r\n	سالم</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	خیابان شهرداری</p>\r\n', NULL, NULL, NULL, NULL, '18', NULL, NULL, NULL, NULL, NULL, 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610883233', '33.89642349374512', '48.752608537123216', 1, NULL, '0451b0207c54b5868c9df69c7a7fd8a1.jpg', '<p></p>', '<p></p>', NULL, NULL, NULL, '1611919997', 12),
+(25, 1, 30, 421, 'فروش تیبا مدل 95 بدون رنگ ', 1, 1, NULL, NULL, '80000000', '<p>\r\n	sssssssssss</p>\r\n', '08133237591', '0813 322 3907', '<p>\r\n	ssss</p>\r\n', 'ss', 'sss', 'sss', 'sss', '18', 'ssssss', 'sss', 0, '<p>\r\n	sss</p>\r\n', '<p>\r\n	sss</p>\r\n', 'یکشنبه, ۲۸ دی ۱۳۹۹', '1610911183', '33.89607801523991', '48.75184147831243', 2, NULL, 'f3a9735b62fc55f328f3a304434e2459.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '1618687055', 90);
 
 -- --------------------------------------------------------
 
@@ -283,32 +304,6 @@ CREATE TABLE `zgr_agahi_images` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zgr_agahi_message`
---
-
-CREATE TABLE `zgr_agahi_message` (
-  `message_id` int(11) NOT NULL,
-  `agahi_id` int(11) NOT NULL,
-  `accounts_id` int(11) NOT NULL,
-  `message_email` text NOT NULL,
-  `message_text` text NOT NULL,
-  `message_mobile` text NOT NULL,
-  `state_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_agahi_message`
---
-
-INSERT INTO `zgr_agahi_message` (`message_id`, `agahi_id`, `accounts_id`, `message_email`, `message_text`, `message_mobile`, `state_id`) VALUES
-(16, 1, 1, 'corssis248@gmail.com', 'سلام تست می باشد', '08133223907', 0),
-(17, 1, 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 0),
-(18, 1, 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 0),
-(19, 1, 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10);
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `zgr_agahi_pay`
 --
 
@@ -338,7 +333,10 @@ INSERT INTO `zgr_agahi_pay` (`agahi_pay_id`, `accounts_id`, `agahi_id`, `authori
 (8, 1, 18, '000000000000000000000000000000185653', '09192183440', 1000, 'یکشنبه, ۱۶ آذر ۱۳۹۹', 'OK'),
 (9, 1, 20, '000000000000000000000000000000193609', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK'),
 (10, 1, 20, '000000000000000000000000000000193609', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK'),
-(11, 1, 21, '000000000000000000000000000000193618', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK');
+(11, 1, 21, '000000000000000000000000000000193618', '09192183440', 4000, 'سه شنبه, ۱۸ آذر ۱۳۹۹', 'OK'),
+(12, 7, 23, '000000000000000000000000000000276959', '09352161110', 4000, 'سه شنبه, ۱۶ دی ۱۳۹۹', 'OK'),
+(13, 1, 24, '000000000000000000000000000000294926', '09192183440', 4000, 'دوشنبه, ۲۲ دی ۱۳۹۹', 'OK'),
+(14, 1, 25, '000000000000000000000000000000294928', '09192183440', 4000, 'دوشنبه, ۲۲ دی ۱۳۹۹', 'OK');
 
 -- --------------------------------------------------------
 
@@ -375,7 +373,7 @@ CREATE TABLE `zgr_agahi_sub_cate` (
 --
 
 INSERT INTO `zgr_agahi_sub_cate` (`agahi_sub_cate_id`, `agahi_cate_id`, `agahi_sub_cate_title`) VALUES
-(1, 1, 'رايانه'),
+(1, 1, 'سگ'),
 (2, 2, 'رايانه');
 
 -- --------------------------------------------------------
@@ -467,27 +465,6 @@ CREATE TABLE `zgr_amlak_tag` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zgr_car_body`
---
-
-CREATE TABLE `zgr_car_body` (
-  `car_body_id` int(11) NOT NULL,
-  `car_body_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_car_body`
---
-
-INSERT INTO `zgr_car_body` (`car_body_id`, `car_body_title`) VALUES
-(1, 'کوپه'),
-(2, 'فست بک'),
-(3, 'سدان'),
-(4, 'شاسی‌بلند');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `zgr_car_cate`
 --
 
@@ -503,17 +480,6 @@ CREATE TABLE `zgr_car_cate` (
 INSERT INTO `zgr_car_cate` (`car_cate_id`, `car_cate_title`) VALUES
 (1, 'سایپا'),
 (2, 'ایرانخودرو');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_car_cond_tag`
---
-
-CREATE TABLE `zgr_car_cond_tag` (
-  `car_cond_tag_id` int(11) NOT NULL,
-  `car_cond_tag_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -537,48 +503,12 @@ CREATE TABLE `zgr_car_pay` (
 --
 
 INSERT INTO `zgr_car_pay` (`car_pay_id`, `accounts_id`, `agahi_car_id`, `authority`, `mobile`, `amount`, `pay_date`, `Status`) VALUES
-(1, 6, 6, '000000000000000000000000000000264975', '09192183440', 4000, 'جمعه, ۱۲ دی ۱۳۹۹', 'OK');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_car_sokht`
---
-
-CREATE TABLE `zgr_car_sokht` (
-  `car_sokht_id` int(11) NOT NULL,
-  `car_sokht_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_car_sokht`
---
-
-INSERT INTO `zgr_car_sokht` (`car_sokht_id`, `car_sokht_title`) VALUES
-(1, 'بنزین'),
-(2, 'دوگانه سوز'),
-(3, 'گازوئیل');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_car_state`
---
-
-CREATE TABLE `zgr_car_state` (
-  `car_state_id` int(11) NOT NULL,
-  `car_state_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_car_state`
---
-
-INSERT INTO `zgr_car_state` (`car_state_id`, `car_state_title`) VALUES
-(1, 'صفر'),
-(2, 'در حد'),
-(3, 'کارکرده'),
-(4, 'اوراقی');
+(1, 6, 6, '000000000000000000000000000000264975', '09192183440', 4000, 'جمعه, ۱۲ دی ۱۳۹۹', 'OK'),
+(2, 1, 7, '000000000000000000000000000000274286', '09192183440', 4000, 'دوشنبه, ۱۵ دی ۱۳۹۹', 'OK'),
+(3, 1, 7, '000000000000000000000000000000274286', '09192183440', 4000, 'دوشنبه, ۱۵ دی ۱۳۹۹', 'OK'),
+(4, 1, 7, '000000000000000000000000000000274286', '09192183440', 4000, 'دوشنبه, ۱۵ دی ۱۳۹۹', 'OK'),
+(5, 1, 16, '000000000000000000000000000000304578', '09192183440', 4000, 'یکشنبه, ۲۸ دی ۱۳۹۹', 'OK'),
+(6, 1, 16, '000000000000000000000000000000304578', '09192183440', 4000, 'یکشنبه, ۲۸ دی ۱۳۹۹', 'OK');
 
 -- --------------------------------------------------------
 
@@ -599,38 +529,6 @@ CREATE TABLE `zgr_car_sub_cate` (
 INSERT INTO `zgr_car_sub_cate` (`car_sub_cate_id`, `car_cate_id`, `car_sub_cate_title`) VALUES
 (1, 1, 'تیبا'),
 (2, 2, 'پژو پاس');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_car_tag`
---
-
-CREATE TABLE `zgr_car_tag` (
-  `car_tag_id` int(11) NOT NULL,
-  `car_tag_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_car_type`
---
-
-CREATE TABLE `zgr_car_type` (
-  `car_type_id` int(11) NOT NULL,
-  `car_type_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_car_type`
---
-
-INSERT INTO `zgr_car_type` (`car_type_id`, `car_type_title`) VALUES
-(1, 'سواری'),
-(2, 'وانت بار'),
-(3, 'تراکتور'),
-(4, 'نیسان');
 
 -- --------------------------------------------------------
 
@@ -1132,6 +1030,7 @@ CREATE TABLE `zgr_eghamatgah` (
   `map_latitude` text,
   `map_longitude` text,
   `state_id` int(11) DEFAULT NULL,
+  `veiws` bigint(20) NOT NULL,
   `register_date` text,
   `update_date` text,
   `days` int(11) DEFAULT NULL,
@@ -1142,13 +1041,13 @@ CREATE TABLE `zgr_eghamatgah` (
 -- Dumping data for table `zgr_eghamatgah`
 --
 
-INSERT INTO `zgr_eghamatgah` (`eghamatgah_id`, `accounts_id`, `ostan_id`, `city_id`, `eghamatgah_title`, `eghamatgah_des`, `eghamatgah_tabaghe`, `eghamatgah_type`, `eghamatgah_otagh`, `eghamatgah_conditions`, `eghamatgah_takht`, `eghamatgah_tahvil`, `eghamatgah_takhlie`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `eghamatgah_address`, `eghamatgah_telephone`, `map_latitude`, `map_longitude`, `state_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
-(1, '1', 17, 232, 'ssssssssssssssssssssss', 's', 0, 'آپارتمان', 0, 's', 0, 's', 's', '39dc51f6f6559b474859d6edc7d668a3.jpg', 'fbf14e66c472d7754e8944041dfa6ae3.jpg', '5d2629a21a5c298964fc5f6bf98f3787.jpg', '<p></p>', '<p></p>', '<p></p>', '', 's', '33.89632810960982', '48.75149248566381', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 12, '1608834409'),
-(2, '1', 18, 271, 'ssssssssssssssssssssss', 's', 0, 'ویلایی', 0, 's', 0, 's', 's', '639605e5708e19d4ee59c47a059ee2c6.jpg', 'd0832fade78215e8dea96b2749d9e00a.jpg', 'ead25d2eadb9f02e145cc5dc8adf0572.jpg', '<p></p>', '<p></p>', '<p></p>', '', 's', '33.89608231883708', '48.75159439559302', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 12, '1608834581'),
-(3, '1', 17, 261, 'ssssssssssssssssssssss', 's', 0, 'ویلایی', 0, 'ww', 0, 's', 's', 'd3957ccaf41791910e1df0260c3144a4.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.89620076156388', '48.752012762670766', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 60, '1612981925'),
-(4, '1', 8, 121, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '4e2ecf60936339f52ba277969aee708e.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.896227477947214', '48.74904664736307', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574457'),
-(5, '1', 17, 232, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '12c0c8001b3df0895a43117d94a9220a.jpg', '82bb7b6594041084ff30ac3117970b9e.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.8964216169111', '48.75090784449106', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574486'),
-(6, '1', 14, 206, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '852ae73941dc2e15b68ad8ddc09e9ea6.jpg', 'd6faf73e8e59408c00b957e874d541bc.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.896310298709544', '48.7516963055222', 12, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574686');
+INSERT INTO `zgr_eghamatgah` (`eghamatgah_id`, `accounts_id`, `ostan_id`, `city_id`, `eghamatgah_title`, `eghamatgah_des`, `eghamatgah_tabaghe`, `eghamatgah_type`, `eghamatgah_otagh`, `eghamatgah_conditions`, `eghamatgah_takht`, `eghamatgah_tahvil`, `eghamatgah_takhlie`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `eghamatgah_address`, `eghamatgah_telephone`, `map_latitude`, `map_longitude`, `state_id`, `veiws`, `register_date`, `update_date`, `days`, `expire`) VALUES
+(1, '1', 17, 232, 'ssssssssssssssssssssss', 's', 0, 'آپارتمان', 0, 's', 0, 's', 's', '39dc51f6f6559b474859d6edc7d668a3.jpg', 'fbf14e66c472d7754e8944041dfa6ae3.jpg', '5d2629a21a5c298964fc5f6bf98f3787.jpg', '<p></p>', '<p></p>', '<p></p>', '', 's', '33.89632810960982', '48.75149248566381', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 12, '1608834409'),
+(2, '1', 18, 271, 'ssssssssssssssssssssss', 's', 0, 'ویلایی', 0, 's', 0, 's', 's', '639605e5708e19d4ee59c47a059ee2c6.jpg', 'd0832fade78215e8dea96b2749d9e00a.jpg', 'ead25d2eadb9f02e145cc5dc8adf0572.jpg', '<p></p>', '<p></p>', '<p></p>', '', 's', '33.89608231883708', '48.75159439559302', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 12, '1608834581'),
+(3, '1', 17, 261, 'ssssssssssssssssssssss', 's', 0, 'ویلایی', 0, 'ww', 0, 's', 's', 'd3957ccaf41791910e1df0260c3144a4.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.89620076156388', '48.752012762670766', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 60, '1612981925'),
+(4, '1', 8, 121, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '4e2ecf60936339f52ba277969aee708e.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.896227477947214', '48.74904664736307', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574457'),
+(5, '1', 17, 232, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '12c0c8001b3df0895a43117d94a9220a.jpg', '82bb7b6594041084ff30ac3117970b9e.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.8964216169111', '48.75090784449106', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574486'),
+(6, '1', 14, 206, 'ww', 'dsd', 0, 'ویلایی', 0, 's', 0, 's', 'dddddddddddddddddd', '852ae73941dc2e15b68ad8ddc09e9ea6.jpg', 'd6faf73e8e59408c00b957e874d541bc.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', 'rewewewe', '0813 322 3907', '33.896310298709544', '48.7516963055222', 12, 0, 'شنبه, ۲۲ آذر ۱۳۹۹', '0', 90, '1615574686');
 
 -- --------------------------------------------------------
 
@@ -1185,6 +1084,7 @@ CREATE TABLE `zgr_events` (
   `accounts_id` int(11) NOT NULL,
   `ostan_id` int(11) NOT NULL,
   `city_id` int(11) NOT NULL,
+  `events_cate_id` int(11) NOT NULL,
   `events_title` text NOT NULL,
   `events_dec` text NOT NULL,
   `events_start` text NOT NULL,
@@ -1212,6 +1112,7 @@ CREATE TABLE `zgr_events` (
   `register_date` text NOT NULL,
   `update_date` text NOT NULL,
   `state_id` int(11) NOT NULL,
+  `veiws` bigint(20) NOT NULL,
   `expire` text NOT NULL,
   `days` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
@@ -1220,19 +1121,29 @@ CREATE TABLE `zgr_events` (
 -- Dumping data for table `zgr_events`
 --
 
-INSERT INTO `zgr_events` (`events_id`, `accounts_id`, `ostan_id`, `city_id`, `events_title`, `events_dec`, `events_start`, `events_finish`, `events_type`, `events_run`, `events_capacity`, `events_level`, `events_conditons`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `events_clip`, `events_link_site`, `events_email`, `events_instagram`, `events_telegram`, `events_address`, `events_phone`, `map_latitude`, `map_longitude`, `register_date`, `update_date`, `state_id`, `expire`, `days`) VALUES
-(1, 1, 7, 105, 'dsadasdas', 'dsadasdasd', 'dsadasd', 'dasdasd', 'ddasdas', 'dsadsadsad', 'dsadasd', 'dsadasd', 'sdadasd', '<p></p>', '<p></p>', '<p></p>', '523386813a7819b0cca5cde4c36628b6.jpg', '5b989b338ee7e2d60dcc45c18d5e2ac6.jpg', '9349e7955a9af9f4e8175e50d34e8087.jpg', '', 'asdasdasda', 'dasdas', 'asdsad', 'dasdas', 'dasdasd', 'dsadasd', '33.8961393139048', '48.75109557330799', 'سه شنبه, ۲ دی ۱۳۹۹', '0', 12, '1640200203', 365);
+INSERT INTO `zgr_events` (`events_id`, `accounts_id`, `ostan_id`, `city_id`, `events_cate_id`, `events_title`, `events_dec`, `events_start`, `events_finish`, `events_type`, `events_run`, `events_capacity`, `events_level`, `events_conditons`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `events_clip`, `events_link_site`, `events_email`, `events_instagram`, `events_telegram`, `events_address`, `events_phone`, `map_latitude`, `map_longitude`, `register_date`, `update_date`, `state_id`, `veiws`, `expire`, `days`) VALUES
+(1, 1, 7, 105, 1, 'dsadasdas', 'dsadasdasd', 'dsadasd', 'dasdasd', 'ddasdas', 'dsadsadsad', 'dsadasd', 'dsadasd', 'sdadasd', '523386813a7819b0cca5cde4c36628b6.jpg', '523386813a7819b0cca5cde4c36628b6.jpg', '523386813a7819b0cca5cde4c36628b6.jpg', '523386813a7819b0cca5cde4c36628b6.jpg', '5b989b338ee7e2d60dcc45c18d5e2ac6.jpg', '9349e7955a9af9f4e8175e50d34e8087.jpg', '', 'asdasdasda', 'dasdas', 'asdsad', 'dasdas', 'dasdasd', 'dsadasd', '33.8961393139048', '48.75109557330799', 'سه شنبه, ۲ دی ۱۳۹۹', '0', 4, 0, '1609185492', 365);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `zgr_events_level`
+-- Table structure for table `zgr_events_cate`
 --
 
-CREATE TABLE `zgr_events_level` (
-  `events_level_id` int(11) NOT NULL,
-  `events_level_title` text NOT NULL
+CREATE TABLE `zgr_events_cate` (
+  `events_cate_id` int(11) NOT NULL,
+  `events_cate_title` text NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_events_cate`
+--
+
+INSERT INTO `zgr_events_cate` (`events_cate_id`, `events_cate_title`) VALUES
+(1, 'ورزشی'),
+(2, 'تفریحی'),
+(3, 'مذهبی'),
+(4, 'خبری');
 
 -- --------------------------------------------------------
 
@@ -1257,43 +1168,6 @@ CREATE TABLE `zgr_events_pay` (
 
 INSERT INTO `zgr_events_pay` (`events_pay_id`, `accounts_id`, `events_id`, `authority`, `mobile`, `amount`, `pay_date`, `Status`) VALUES
 (1, 1, 1, '000000000000000000000000000000236513', '09192183440', 4000, 'سه شنبه, ۲ دی ۱۳۹۹', 'OK');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_events_run`
---
-
-CREATE TABLE `zgr_events_run` (
-  `events_run_id` int(11) NOT NULL,
-  `events_run_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_events_run`
---
-
-INSERT INTO `zgr_events_run` (`events_run_id`, `events_run_title`) VALUES
-(1, 'حضوري'),
-(2, 'غير حضوري');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `zgr_events_type`
---
-
-CREATE TABLE `zgr_events_type` (
-  `events_type_id` int(11) NOT NULL,
-  `events_type_title` text NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `zgr_events_type`
---
-
-INSERT INTO `zgr_events_type` (`events_type_id`, `events_type_title`) VALUES
-(1, 'سازماني');
 
 -- --------------------------------------------------------
 
@@ -1350,6 +1224,13 @@ CREATE TABLE `zgr_gardeshgari` (
   `days` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `zgr_gardeshgari`
+--
+
+INSERT INTO `zgr_gardeshgari` (`gardeshgari_id`, `accounts_id`, `ostan_id`, `city_id`, `gardeshgari_title`, `gardeshgari_des`, `gardeshgari_ghedmat`, `gardeshgari_conditons`, `gardeshgari_best_time`, `gardeshgari_address`, `map_latitude`, `map_longitude`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `register_date`, `update_date`, `state_id`, `expire`, `days`) VALUES
+(1, 1, 2, 3, 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', '7bf7b1deb69712c03e07b3be1bd0d66d.jpg', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 'حمام حاج آقا تراب', 4, '', 12);
+
 -- --------------------------------------------------------
 
 --
@@ -1403,12 +1284,10 @@ CREATE TABLE `zgr_jobs` (
   `jobs_youtube` text,
   `jobs_address` text,
   `map_latitude` text,
-  `map_longitude` varchar(100) DEFAULT NULL,
+  `map_longitude` text,
   `jobs_count_namayandegi` int(11) DEFAULT NULL,
   `jobs_count_namayandegi_in_city` int(11) DEFAULT NULL,
   `jobs_sharayet` text,
-  `jobs_list_service` text,
-  `jobs_service_id` int(11) DEFAULT NULL,
   `jobs_mojavez` text,
   `jobs_video` text,
   `register_date` text,
@@ -1422,9 +1301,25 @@ CREATE TABLE `zgr_jobs` (
   `img6` text NOT NULL,
   `jobs_shoar` text,
   `state_id` int(11) DEFAULT NULL,
+  `veiws` bigint(20) NOT NULL,
   `expire` text NOT NULL,
   `days` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_jobs`
+--
+
+INSERT INTO `zgr_jobs` (`jobs_id`, `jobs_cate_id`, `jobs_sub_cate_id`, `accounts_id`, `ostan_id`, `city_id`, `jobs_title`, `jobs_shobe`, `jobs_content`, `jobs_feature`, `jobs_work_titme`, `jobs_mobile`, `jobs_tell`, `jobs_fax`, `jobs_email`, `jobs_code_posti`, `jobs_website`, `jobs_instagram`, `jobs_telegram`, `jobs_whatsapp`, `jobs_facebook`, `jobs_tw`, `jobs_pinterest`, `jobs_youtube`, `jobs_address`, `map_latitude`, `map_longitude`, `jobs_count_namayandegi`, `jobs_count_namayandegi_in_city`, `jobs_sharayet`, `jobs_mojavez`, `jobs_video`, `register_date`, `update_date`, `jobs_logo`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `jobs_shoar`, `state_id`, `veiws`, `expire`, `days`) VALUES
+(49, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 2, 0, '1617380927', 90),
+(50, 2, 2, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', '<p>\n	خدمات رایانه ای</p>\n', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, '<p>\n	بروجرد</p>\n', '<p>\n	33.637031875739815</p>\n', '48.651988853806905', 1, 1, '<p>\n	بدون شرایط</p>\n', '<p>\n	جواز کسب رایانه ای</p>\n', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '1609608009', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 2, 0, '1617380927', 90),
+(51, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', '<p>\n	خدمات رایانه ای</p>\n', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, '<p>\n	بروجرد</p>\n', '33.637031875739815', '48.651988853806905', 1, 1, '<p>\n	بدون شرایط</p>\n', '<p>\n	جواز کسب رایانه ای</p>\n', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '1609792881', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 1, 0, '1617380927', 90),
+(52, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 12, 0, '1617380927', 90),
+(53, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 12, 0, '1617380927', 90),
+(54, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 12, 0, '1617380927', 90),
+(55, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 12, 0, '1617380927', 90),
+(56, 7, 1, 1, 30, 421, 'کافی نت شهر', 'کافی نت شهر', 'خدمات رایانه ای', NULL, NULL, '09192183440', '08133237591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, NULL, NULL, NULL, NULL, 'بروجرد', '33.637031875739815', '48.651988853806905', 1, 1, 'بدون شرایط', 'جواز کسب رایانه ای', 'ff4f8b142c8ebd3bcda20c2ff202ec0a.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '496f1e5c3b4f155e0f66de695808efed.jpg', 'a1485c373a5be74d44a4bb12b82b3282.jpg', 'e30ef2420d5e8f7773889b41ce656a65.jpg', '49e891e2645046fccd5fc9d8e66f4373.jpg', '2c80ea8f7839d7437248072c817a0d7d.jpg', '3f1aecb589160f5717005a75b2e8182e.jpg', '3137682b11684aeb9b0deb633f69ac63.jpg', 'خدمات تخصصی رایانه ای', 12, 0, '1617380927', 90),
+(57, 7, 4, 7, 17, 247, 'feffdfdsffds', 'fdsfdsf', 'sdfdfdsf', NULL, 'fdsfsd', '0813 322 3907', '08137591', NULL, 'corssis248@gmail.com', '6591953977', NULL, 'اينستاگرام', 'تلگرام', NULL, 'فيسبوك', 'توِيتر', 'پينترست', 'يوتوب', 'بروجرد', '', '', 1, 1, 'fdsfsdf', 'fdsfdsf', 'f40e5397bbcddc7c0ad1c22e2efcf5ac.mp4', 'شنبه, ۱۳ دی ۱۳۹۹', '0', '20a0f325d330fe5419268be9ea526355.jpg', '22aa35a872b09f11e2ac8d5c1f991546.jpg', '34f48a0c717f7df47020b4aff18e984c.jpg', '7c9cb6448aa62ff9dbee88afc9fee87c.jpg', '1966f1dd7d5591d4a6f43c75a35c31a6.jpg', '', '', 'fsdfsdfdsf', 2, 0, '1612198303', 30);
 
 -- --------------------------------------------------------
 
@@ -1474,7 +1369,9 @@ CREATE TABLE `zgr_jobs_pay` (
 --
 
 INSERT INTO `zgr_jobs_pay` (`jobs_pay_id`, `accounts_id`, `jobs_id`, `authority`, `mobile`, `amount`, `pay_date`, `Status`) VALUES
-(1, 1, 0, '000000000000000000000000000000236668', '09192183440', 4000, 'سه شنبه, ۲ دی ۱۳۹۹', 'OK');
+(1, 1, 0, '000000000000000000000000000000236668', '09192183440', 4000, 'سه شنبه, ۲ دی ۱۳۹۹', 'OK'),
+(2, 6, 0, '000000000000000000000000000000267390', '09192183440', 4000, 'شنبه, ۱۳ دی ۱۳۹۹', 'OK'),
+(3, 7, 0, '000000000000000000000000000000267407', '09352161110', 4000, 'شنبه, ۱۳ دی ۱۳۹۹', 'OK');
 
 -- --------------------------------------------------------
 
@@ -1583,6 +1480,40 @@ CREATE TABLE `zgr_menu` (
 
 INSERT INTO `zgr_menu` (`menu_id`, `menu_title`, `menu_link`) VALUES
 (1, 'صفحه نخست', 'http://localhost/zagrino/Index');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `zgr_message`
+--
+
+CREATE TABLE `zgr_message` (
+  `message_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL,
+  `message_tag` text NOT NULL,
+  `accounts_id` int(11) NOT NULL,
+  `message_email` text NOT NULL,
+  `message_text` text NOT NULL,
+  `message_mobile` text NOT NULL,
+  `state_id` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `zgr_message`
+--
+
+INSERT INTO `zgr_message` (`message_id`, `id`, `message_tag`, `accounts_id`, `message_email`, `message_text`, `message_mobile`, `state_id`) VALUES
+(16, 1, '', 1, 'corssis248@gmail.com', 'سلام تست می باشد', '08133223907', 0),
+(17, 1, '', 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 0),
+(18, 1, '', 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 0),
+(19, 1, '', 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(20, 23, '', 23, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(21, 24, '', 24, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(22, 25, 'Agahi', 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(23, 12, 'Amlak', 12, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(24, 13, 'Amlak', 13, 'corssis248@gmail.com', 'sasa', '0813 322 3907', 10),
+(25, 13, 'Amlak', 7, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10),
+(26, 17, 'Car', 1, 'corssis248@gmail.com', 'dsd', '0813 322 3907', 10);
 
 -- --------------------------------------------------------
 
@@ -1927,9 +1858,9 @@ CREATE TABLE `zgr_slider` (
 --
 
 INSERT INTO `zgr_slider` (`slider_id`, `slider_link`, `slider_img`) VALUES
-(5, 'http://localhost/zagrino/admin/Slider/index/add', '35600-3.jpg'),
-(4, 'http://localhost/zagrino/admin/Slider/index/add', 'bc2b4-1.0.jpg'),
-(6, 'http://localhost/zagrino/admin/Slider/index/add', 'e7f6b-2.jpg');
+(9, '', '5cade-photo_-_-.jpg'),
+(8, '', 'a6a3b-photo_-_-.jpg'),
+(7, '', 'e2290-photo_-_-.jpg');
 
 -- --------------------------------------------------------
 
@@ -2048,6 +1979,7 @@ CREATE TABLE `zgr_tour` (
   `map_longitude` text,
   `tour_email` text,
   `state_id` int(11) DEFAULT NULL,
+  `veiws` bigint(20) NOT NULL,
   `register_date` text,
   `update_date` text,
   `days` int(11) DEFAULT NULL,
@@ -2058,8 +1990,8 @@ CREATE TABLE `zgr_tour` (
 -- Dumping data for table `zgr_tour`
 --
 
-INSERT INTO `zgr_tour` (`tour_id`, `accounts_id`, `ostan_id`, `city_id`, `tour_type`, `tour_title`, `tour_des`, `tour_mabda`, `tour_maghsad`, `tour_start`, `tour_finish`, `tour_vasile`, `tour_count_night`, `tour_takht`, `tour_phone`, `tour_address`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `map_latitude`, `map_longitude`, `tour_email`, `state_id`, `register_date`, `update_date`, `days`, `expire`) VALUES
-(1, 1, 3, 51, 'سیاحتی', 'fffffffffffffffffff', '<p>\n	ssssssssssssssssssssss</p>\n', 'sdsdddddddddddddddd', 'dddddddddddddddddd', 'ddddddddd', 'dddddddd', 'ddddddddddddddd', '2', 2, '0813 322 3907', '<p>\n	33.89594072168941</p>\n', 'e30c407e5dc157940a7724c4ee641f6c.jpg', '1ebf74051672e941c0185412ab7436b6.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, '48.75132084788833', 'corssis248@gmail.com', 12, 'جمعه, ۲۸ آذر ۱۳۹۹', '1608808080', 60, '1613474355');
+INSERT INTO `zgr_tour` (`tour_id`, `accounts_id`, `ostan_id`, `city_id`, `tour_type`, `tour_title`, `tour_des`, `tour_mabda`, `tour_maghsad`, `tour_start`, `tour_finish`, `tour_vasile`, `tour_count_night`, `tour_takht`, `tour_phone`, `tour_address`, `img1`, `img2`, `img3`, `img4`, `img5`, `img6`, `map_latitude`, `map_longitude`, `tour_email`, `state_id`, `veiws`, `register_date`, `update_date`, `days`, `expire`) VALUES
+(1, 1, 3, 51, 'سیاحتی', 'fffffffffffffffffff', '<p>\n	ssssssssssssssssssssss</p>\n', 'sdsdddddddddddddddd', 'dddddddddddddddddd', 'ddddddddd', 'dddddddd', 'ddddddddddddddd', '2', 2, '0813 322 3907', '<p>\n	33.89594072168941</p>\n', 'e30c407e5dc157940a7724c4ee641f6c.jpg', '1ebf74051672e941c0185412ab7436b6.jpg', '<p></p>', '<p></p>', '<p></p>', '<p></p>', NULL, '48.75132084788833', 'corssis248@gmail.com', 2, 0, 'جمعه, ۲۸ آذر ۱۳۹۹', '1608808080', 60, '1613474355');
 
 -- --------------------------------------------------------
 
@@ -2116,7 +2048,7 @@ CREATE TABLE `zgr_users` (
 --
 
 INSERT INTO `zgr_users` (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES
-(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1609532627, 1, 'Admin', 'istrator', 'ADMIN', '0');
+(1, '127.0.0.1', 'administrator', '$2a$07$SeBknntpZror9uyftVopmu61qg0ms8Qv1yV6FG.kQOSM.9QhmTo36', '', 'admin@admin.com', '', NULL, NULL, NULL, 1268889823, 1611312724, 1, 'Admin', 'istrator', 'ADMIN', '0');
 
 -- --------------------------------------------------------
 
@@ -2182,19 +2114,15 @@ ALTER TABLE `zgr_agahi_cate`
 -- Indexes for table `zgr_agahi_cond_tag`
 --
 ALTER TABLE `zgr_agahi_cond_tag`
-  ADD PRIMARY KEY (`agahi_cond_tag_id`);
+  ADD PRIMARY KEY (`agahi_cond_tag_id`),
+  ADD UNIQUE KEY `agahi_cond_tag_id` (`agahi_cond_tag_id`),
+  ADD KEY `agahi_cond_tag_id_2` (`agahi_cond_tag_id`);
 
 --
 -- Indexes for table `zgr_agahi_images`
 --
 ALTER TABLE `zgr_agahi_images`
   ADD PRIMARY KEY (`agahi_image_id`);
-
---
--- Indexes for table `zgr_agahi_message`
---
-ALTER TABLE `zgr_agahi_message`
-  ADD PRIMARY KEY (`message_id`);
 
 --
 -- Indexes for table `zgr_agahi_pay`
@@ -2245,22 +2173,10 @@ ALTER TABLE `zgr_amlak_tag`
   ADD PRIMARY KEY (`amlak_tag_id`);
 
 --
--- Indexes for table `zgr_car_body`
---
-ALTER TABLE `zgr_car_body`
-  ADD PRIMARY KEY (`car_body_id`);
-
---
 -- Indexes for table `zgr_car_cate`
 --
 ALTER TABLE `zgr_car_cate`
   ADD PRIMARY KEY (`car_cate_id`);
-
---
--- Indexes for table `zgr_car_cond_tag`
---
-ALTER TABLE `zgr_car_cond_tag`
-  ADD PRIMARY KEY (`car_cond_tag_id`);
 
 --
 -- Indexes for table `zgr_car_pay`
@@ -2269,34 +2185,10 @@ ALTER TABLE `zgr_car_pay`
   ADD PRIMARY KEY (`car_pay_id`);
 
 --
--- Indexes for table `zgr_car_sokht`
---
-ALTER TABLE `zgr_car_sokht`
-  ADD PRIMARY KEY (`car_sokht_id`);
-
---
--- Indexes for table `zgr_car_state`
---
-ALTER TABLE `zgr_car_state`
-  ADD PRIMARY KEY (`car_state_id`);
-
---
 -- Indexes for table `zgr_car_sub_cate`
 --
 ALTER TABLE `zgr_car_sub_cate`
   ADD PRIMARY KEY (`car_sub_cate_id`);
-
---
--- Indexes for table `zgr_car_tag`
---
-ALTER TABLE `zgr_car_tag`
-  ADD PRIMARY KEY (`car_tag_id`);
-
---
--- Indexes for table `zgr_car_type`
---
-ALTER TABLE `zgr_car_type`
-  ADD PRIMARY KEY (`car_type_id`);
 
 --
 -- Indexes for table `zgr_category`
@@ -2329,28 +2221,16 @@ ALTER TABLE `zgr_events`
   ADD PRIMARY KEY (`events_id`);
 
 --
--- Indexes for table `zgr_events_level`
+-- Indexes for table `zgr_events_cate`
 --
-ALTER TABLE `zgr_events_level`
-  ADD PRIMARY KEY (`events_level_id`);
+ALTER TABLE `zgr_events_cate`
+  ADD PRIMARY KEY (`events_cate_id`);
 
 --
 -- Indexes for table `zgr_events_pay`
 --
 ALTER TABLE `zgr_events_pay`
   ADD PRIMARY KEY (`events_pay_id`);
-
---
--- Indexes for table `zgr_events_run`
---
-ALTER TABLE `zgr_events_run`
-  ADD PRIMARY KEY (`events_run_id`);
-
---
--- Indexes for table `zgr_events_type`
---
-ALTER TABLE `zgr_events_type`
-  ADD PRIMARY KEY (`events_type_id`);
 
 --
 -- Indexes for table `zgr_footer_menu`
@@ -2417,6 +2297,12 @@ ALTER TABLE `zgr_login_attempts`
 --
 ALTER TABLE `zgr_menu`
   ADD PRIMARY KEY (`menu_id`);
+
+--
+-- Indexes for table `zgr_message`
+--
+ALTER TABLE `zgr_message`
+  ADD PRIMARY KEY (`message_id`);
 
 --
 -- Indexes for table `zgr_newspaper`
@@ -2573,7 +2459,7 @@ ALTER TABLE `zgr_users_groups`
 -- AUTO_INCREMENT for table `zgr_accounts`
 --
 ALTER TABLE `zgr_accounts`
-  MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `accounts_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `zgr_ads`
 --
@@ -2583,7 +2469,7 @@ ALTER TABLE `zgr_ads`
 -- AUTO_INCREMENT for table `zgr_agahi`
 --
 ALTER TABLE `zgr_agahi`
-  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `agahi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_amlak`
 --
@@ -2593,7 +2479,7 @@ ALTER TABLE `zgr_agahi_amlak`
 -- AUTO_INCREMENT for table `zgr_agahi_car`
 --
 ALTER TABLE `zgr_agahi_car`
-  MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `agahi_car_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_cate`
 --
@@ -2610,15 +2496,10 @@ ALTER TABLE `zgr_agahi_cond_tag`
 ALTER TABLE `zgr_agahi_images`
   MODIFY `agahi_image_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `zgr_agahi_message`
---
-ALTER TABLE `zgr_agahi_message`
-  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
---
 -- AUTO_INCREMENT for table `zgr_agahi_pay`
 --
 ALTER TABLE `zgr_agahi_pay`
-  MODIFY `agahi_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `agahi_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `zgr_agahi_state_kala`
 --
@@ -2655,50 +2536,20 @@ ALTER TABLE `zgr_amlak_pay`
 ALTER TABLE `zgr_amlak_tag`
   MODIFY `amlak_tag_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `zgr_car_body`
---
-ALTER TABLE `zgr_car_body`
-  MODIFY `car_body_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
---
 -- AUTO_INCREMENT for table `zgr_car_cate`
 --
 ALTER TABLE `zgr_car_cate`
   MODIFY `car_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
--- AUTO_INCREMENT for table `zgr_car_cond_tag`
---
-ALTER TABLE `zgr_car_cond_tag`
-  MODIFY `car_cond_tag_id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `zgr_car_pay`
 --
 ALTER TABLE `zgr_car_pay`
-  MODIFY `car_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `zgr_car_sokht`
---
-ALTER TABLE `zgr_car_sokht`
-  MODIFY `car_sokht_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `zgr_car_state`
---
-ALTER TABLE `zgr_car_state`
-  MODIFY `car_state_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `car_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `zgr_car_sub_cate`
 --
 ALTER TABLE `zgr_car_sub_cate`
   MODIFY `car_sub_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `zgr_car_tag`
---
-ALTER TABLE `zgr_car_tag`
-  MODIFY `car_tag_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `zgr_car_type`
---
-ALTER TABLE `zgr_car_type`
-  MODIFY `car_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `zgr_category`
 --
@@ -2720,25 +2571,15 @@ ALTER TABLE `zgr_eghamatgah_pay`
 ALTER TABLE `zgr_events`
   MODIFY `events_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT for table `zgr_events_level`
+-- AUTO_INCREMENT for table `zgr_events_cate`
 --
-ALTER TABLE `zgr_events_level`
-  MODIFY `events_level_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `zgr_events_cate`
+  MODIFY `events_cate_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `zgr_events_pay`
 --
 ALTER TABLE `zgr_events_pay`
   MODIFY `events_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
--- AUTO_INCREMENT for table `zgr_events_run`
---
-ALTER TABLE `zgr_events_run`
-  MODIFY `events_run_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
---
--- AUTO_INCREMENT for table `zgr_events_type`
---
-ALTER TABLE `zgr_events_type`
-  MODIFY `events_type_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `zgr_footer_menu`
 --
@@ -2748,7 +2589,7 @@ ALTER TABLE `zgr_footer_menu`
 -- AUTO_INCREMENT for table `zgr_gardeshgari`
 --
 ALTER TABLE `zgr_gardeshgari`
-  MODIFY `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `gardeshgari_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `zgr_groups`
 --
@@ -2758,7 +2599,7 @@ ALTER TABLE `zgr_groups`
 -- AUTO_INCREMENT for table `zgr_jobs`
 --
 ALTER TABLE `zgr_jobs`
-  MODIFY `jobs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
+  MODIFY `jobs_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 --
 -- AUTO_INCREMENT for table `zgr_jobs_cate`
 --
@@ -2768,7 +2609,7 @@ ALTER TABLE `zgr_jobs_cate`
 -- AUTO_INCREMENT for table `zgr_jobs_pay`
 --
 ALTER TABLE `zgr_jobs_pay`
-  MODIFY `jobs_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `jobs_pay_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `zgr_jobs_service`
 --
@@ -2794,6 +2635,11 @@ ALTER TABLE `zgr_login_attempts`
 --
 ALTER TABLE `zgr_menu`
   MODIFY `menu_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `zgr_message`
+--
+ALTER TABLE `zgr_message`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 --
 -- AUTO_INCREMENT for table `zgr_newspaper`
 --
@@ -2868,7 +2714,7 @@ ALTER TABLE `zgr_site`
 -- AUTO_INCREMENT for table `zgr_slider`
 --
 ALTER TABLE `zgr_slider`
-  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `slider_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `zgr_state`
 --

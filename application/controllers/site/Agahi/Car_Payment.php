@@ -11,6 +11,7 @@ class Car_Payment extends CI_Controller {
     function __construct() {
         parent::__construct();
         $this->load->model('Model_Api');
+        $this->load->model('MY_Model');
 		$this->load->library('Jdf');
         $merchant_id = $this->db->select('set_value')
             ->get_where('zgr_settings', array('set_id' => '1'))
@@ -75,9 +76,20 @@ class Car_Payment extends CI_Controller {
                 'pay_date'=> $this->jdf->jdate('l, j F Y',time(),'','GMT')
             );
 
+
+
             $this->Model_Api->Insert("car_pay",$data);
 
+            $user_rate = $this->db->select('accounts_rate_user')
+            ->get_where('zgr_accounts', array('accounts_id' => $accounts_id))
+            ->row()
+            ->accounts_rate_user;
+            $user_rate++;
+            $rate_data = array(
+                'accounts_rate_user' => $user_rate
+            );
 
+            $this->MY_Model->update("accounts",$accounts_id,$rate_data);
 
 			redirect('site/panel/Acar');
 

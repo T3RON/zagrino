@@ -32,10 +32,10 @@ class Car extends MY_Controller {
         $crud->display_as('agahi_car_full_des','توضيحات كامل');
         $crud->display_as('agahi_car_year','سال ساخت');
         $crud->display_as('agahi_car_karked','كاركرد');
-        $crud->display_as('car_type_id','نوع وسيله');
-        $crud->display_as('car_body_id','نوع بدنه');
-        $crud->display_as('car_state_id','وضعيت وسيله');
-        $crud->display_as('car_sokht_id','نوع سوخت');
+        $crud->display_as('car_type','نوع وسيله');
+        $crud->display_as('car_body','نوع بدنه');
+        $crud->display_as('car_state','وضعيت وسيله');
+        $crud->display_as('car_sokht','نوع سوخت');
         $crud->display_as('agahi_car_pelak','پلاك');
         $crud->display_as('agahi_car_color','رنگ');
         $crud->display_as('agahi_car_tell','شماره تماس');
@@ -46,7 +46,7 @@ class Car extends MY_Controller {
         $crud->display_as('map_longitude','عرض جغرافيايي');
         $crud->display_as('agahi_car_price','قيمت فروش');
         $crud->display_as('state_id','وضعيت آگهي');
-        $crud->display_as('car_tag_id','برچسب');
+        $crud->display_as('car_tag','برچسب');
         $crud->display_as('img1','تصوير شماره 1');
         $crud->display_as('img2','تصوير شماره 2');
         $crud->display_as('img3','تصوير شماره 3');
@@ -54,7 +54,7 @@ class Car extends MY_Controller {
         $crud->display_as('img5','تصوير شماره 5');
         $crud->display_as('img6','تصوير شماره 6');
         $crud->display_as('agahi_car_mobile','تلفن همراه');
-        $crud->display_as('car_cond_tag_id','برچسب شرايط');
+        $crud->display_as('car_cond_tag','برچسب شرايط');
         $crud->display_as('register_date','تاريخ ثبت');
         $crud->display_as('update_date','تاريخ آپديت');
         $crud->display_as('days','تعداد روزهاي نمايش');
@@ -67,12 +67,6 @@ class Car extends MY_Controller {
         $crud->set_relation('car_cate_id','car_cate','car_cate_title');
         $crud->set_relation('car_sub_cate_id','car_sub_cate','car_sub_cate_title');
         $crud->set_relation('accounts_id','accounts','account_mobile');
-        $crud->set_relation('car_cond_tag_id','car_cond_tag','car_cond_tag_title');
-        $crud->set_relation('car_tag_id','car_tag','car_tag_title');
-        $crud->set_relation('car_type_id','car_type','car_type_title');
-        $crud->set_relation('car_body_id','car_body','car_body_title');
-        $crud->set_relation('car_state_id','car_state','car_state_title');
-        $crud->set_relation('car_sokht_id','car_sokht','car_sokht_title');
         //$crud->set_relation_n_n('jobs_service_id', 'rel_jobs_service', 'jobs_service', 'jobs_id', 'jobs_service_id', 'jobs_service_title');
 
         $crud->set_field_upload('img1','assets/uploads/img');
@@ -113,8 +107,8 @@ class Car extends MY_Controller {
         
         $crud->unset_texteditor(
             'agahi_car_title','agahi_car_price','agahi_car_tell','agahi_car_year','agahi_car_karked',
-            'agahi_car_pelak','agahi_car_color','map_latitude',
-            'map_longitude','agahi_car_mobile'
+            'agahi_car_pelak','agahi_car_color','map_latitude','car_tag','car_cond_tag',
+            'map_longitude','agahi_car_mobile','car_type','car_body','car_state','car_sokht'
         );
 
   

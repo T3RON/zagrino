@@ -26,7 +26,10 @@ class Emtiaz extends CI_Panel {
         $output['site'] = $this->MY_Model->select_single('site','1');
 
 
-
+        $output['rate_user'] = $this->db->select('accounts_rate_user')
+        ->get_where('zgr_accounts', array('accounts_id' => $this->session->userdata('accounts_id')))
+        ->row()
+        ->accounts_rate_user;
  
         $this->load->vars(array(
             'home_page' => TRUE
